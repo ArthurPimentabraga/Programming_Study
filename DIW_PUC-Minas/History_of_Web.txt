@@ -1,0 +1,23 @@
+A Web é o ambiente que nos permite acessar informações transmitidas na rede(a internet) e traduzi-los em forma de hipertextos(textos, imagens, sons...).
+A evulução da web não tem momentos exatos na história, mas pode ser dividido em partes: 
+	1.0-> Neste momento a web era acessada com uma única possibilidade, a leitura, acesso de informações;
+	2.0-> Agora passou a ser possível a leitura e escrita, ou seja, qualquer um poderia transmitir informações, seja por blogs, hashtags(ou tag), posts...
+	3.0-> Neste ponto a web começou a ter um valor semântico, ou seja, a própria web através de seus algoritmos... passou a dar significado e entender as 
+		informações que estavam sendo escritas nela mesma, possibilitando assim uma maior facilidade para encontrar conteúdos... Semantic Search, 
+		Semantic Databases...
+	4.0->Será a Web Simbiótica, ou seja, a interação Humano e Maquina será constante, a IA entra em jogo com assistentes integrados a sistemas de busca, 
+		chats automatizados, assistentes virtuais...
+
+Com a web em constante evolução surgiu o problema das tecnologias ultrapassadas. Sites utilizando tecnologias antigas não podendo ser visitados por browsers novos
+é um exemplo. Assim foi criada a W3C(World Wide Web Consortium), uma comunidade internacional que define padrões da Web a serem seguidos, aumentando assim a % de
+público alvo à serem atingidos pelas tecnologias. Exemplo: Protocolo HTTP, HTML e CSS, SVG, Ajax, XML, RDF...
+
+Resumindo a W3C gerencia os padrões da Web.
+
+W3C tem um processo de aprovação de tecnologias:
+	1º WD-> Working Draft, é um documento da tecnologia proposta, fase de review, mudanças nesse rascunho...;  
+	-Director's approval - ou seja, precisa passar pela aprovação da diretoria da W3C;
+	2º CR-> Candidate Release, após a aprovação, o mesmo se torna um candidato a ser padronizado;
+	-Director's approval
+	3º PR-> Proposed Recomendation, nessa fase a tecnologia já começa a aparecer na web e ganhar força no mercado;
+	4º REC-> Recomendation, enfim se torna uma tecnologia recomendade, um forma padronizada.

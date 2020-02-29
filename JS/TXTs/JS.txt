@@ -1,3 +1,10 @@
 É responsável pela interação do site com o usuário;
 -Node.js é o javascrit utilizado fora dos navegadores;
--ECMAScript é uma padronização de linguagem de scripts, ou seja, JavaScript, JScript e ActionScript seguem a ECMAScript, porém cada um tem suas particularidades;
+-ECMAScript é uma padronização de linguagem de scripts, ou seja, JavaScript, JScript e ActionScript 
+    seguem a ECMAScript, porém cada um tem suas particularidades;
+
+----------------------------------------------------------------------------------------------------
+
+Comandos->
+    confirm: exibe uma caixa igual o alert, porém pedindo confirmação;
+    prompt: Mesma caixa, porém com um textbox para ser preenchido;
