@@ -1,0 +1,18 @@
+Tudo conteúdo desta documentação é resumido no material que achei necessário escrever p/ não 
+esquecer :)
+
+
+///Manipulação de arquivos:
+    .rar -> Comando: unrar x (nome do arquivo) ;
+    .tar.xz -> tar -Jxf (nome do arquivo) ;
+    .tar.gz -> tar -xvzf (nome do arquivo) ;
+
+
+///Caracteres adicionais para comandos:
+    -h -> Lista os dados de uma forma mais humana, mais fácil de entendimento;
+
+///Comandos Básicos:
+    mkdir -> criar diretório;
+    touch (nome do arquivo)-> criar arquivo;
+    autoremove -> remove programas obsoletos;
+    autoclean -> limpa o cache do apt;
