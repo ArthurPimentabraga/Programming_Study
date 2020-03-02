@@ -7,8 +7,12 @@ esquecer :)
     .tar.xz -> tar -Jxf (nome do arquivo) ;
     .tar.gz -> tar -xvzf (nome do arquivo) ;
 
+-----------------------------------------------------------------------------------------------------
+
 ///Caracteres adicionais para comandos:
     -h -> Lista os dados de uma forma mais humana, mais fácil de entendimento;
+
+-----------------------------------------------------------------------------------------------------
 
 ///Comandos Básicos:
     mkdir -> criar diretório;

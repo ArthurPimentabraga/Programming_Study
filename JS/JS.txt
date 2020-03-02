@@ -5,6 +5,10 @@
 
 ----------------------------------------------------------------------------------------------------
 
-Comandos->
-    confirm: exibe uma caixa igual o alert, porém pedindo confirmação;
-    prompt: Mesma caixa, porém com um textbox para ser preenchido;
+Comandos:
+    confirm -> exibe uma caixa igual o alert, porém pedindo confirmação;
+    prompt -> Mesma caixa, porém com um textbox para ser preenchido;
+
+----------------------------------------------------------------------------------------------------
+
+Lembretes:
