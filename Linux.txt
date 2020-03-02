@@ -1,12 +1,11 @@
 Tudo conteúdo desta documentação é resumido no material que achei necessário escrever p/ não 
 esquecer :)
 
-
 ///Manipulação de arquivos:
-    .rar -> Comando: unrar x (nome do arquivo) ;
+    .rar -> unrar x (nome do arquivo) ;
+    .zip -> unzip (nome do arquivo) ;
     .tar.xz -> tar -Jxf (nome do arquivo) ;
     .tar.gz -> tar -xvzf (nome do arquivo) ;
-
 
 ///Caracteres adicionais para comandos:
     -h -> Lista os dados de uma forma mais humana, mais fácil de entendimento;
@@ -16,3 +15,5 @@ esquecer :)
     touch (nome do arquivo)-> criar arquivo;
     autoremove -> remove programas obsoletos;
     autoclean -> limpa o cache do apt;
+    cat (nome do arquivo) -> mostra o conteúdo do arquivo de texto no terminal;
+    nano (nome do arquivo) -> edita um arquivo de texto no terminal;

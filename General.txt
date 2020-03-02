@@ -1,3 +1,7 @@
-Biblioteca-> É um conjunto de códigos que será utilizado como ferramenta no desenvolvimento do projeto. Lembrando que no caso da biblioteca você utiliza só o que te interessa naquele projeto.
-Framework-> É uma abstração de códigos e conjuntos de códigos feito para realizar seus projetos nele. Porém para ser utilizado, o desenvolvedor necessita saber como ele funciona, seguir suas regras, 
+Biblioteca-> É um conjunto de códigos que será utilizado como ferramenta no desenvolvimento do projeto. 
+    Lembrando que no caso da biblioteca você utiliza só o que te interessa naquele projeto.
+Framework-> É uma abstração de códigos e conjuntos de códigos feito para realizar seus projetos nele. 
+    Porém para ser utilizado, o desenvolvedor necessita saber como ele funciona, seguir suas regras, 
     o sistema tem que ser desenvolvido pensando nele.
+path-> É uma variável de ambiente no sistema operacional, ou seja, define uma variável para um diretório,
+    podendo assim acessar um executável, por exemplo, sem ter que indicar o caminho completo;
