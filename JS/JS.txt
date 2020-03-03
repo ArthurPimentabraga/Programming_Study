@@ -8,7 +8,25 @@
 Comandos:
     confirm -> exibe uma caixa igual o alert, porém pedindo confirmação;
     prompt -> Mesma caixa, porém com um textbox para ser preenchido;
+    typeof (var ou valor) -> Descobrir o tipo da variável (terminal node);
+    Number.parseInt(var) -> Converção de variável, podendo ser para int, float...;
+    Number(var) -> Converte para número, o js que decide qual tipo, float ou int;
+    String(var) ou var.ToString() -> Converter para string;
+    
+----------------------------------------------------------------------------------------------------
+
+Significados:
+    number -> Infinity ->
+        -> NaN ->
+
+    undefined->
+    null->
+
+    ""->
+    ''->
+    ´´->
 
 ----------------------------------------------------------------------------------------------------
 
 Lembretes:
+    - O sinal de + pode concatenar e somar, depende do tipo da variável. O prompt sempre retorna string;
