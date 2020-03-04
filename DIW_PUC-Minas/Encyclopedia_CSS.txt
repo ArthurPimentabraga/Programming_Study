@@ -1,0 +1,32 @@
+///Seletores
+    Pseudo-Classe-> O seletor indica estados ou situações de elementos HTML. 
+        Ex: p:First-of-typy{} or p:actived{} or p:hover{} ...;
+    
+    Pseudo-Elemento-> Seletor que indica PARTES do elemento HTML para serem manipuladas.
+        Ex: p::first-letter{} (modifica a 1º letra de cada parágrafo) or p::after{} ...;
+
+    Universal-> Modifica todos os elementos css da pág.
+        Ex: *{margin:0} (todos os elementos ficam com margin 0);
+
+///Combinações de Seletores
+    p, ul{} -> todos os p e ul receberão tais manipulações;
+    li.active -> todos os elementos li que tiverem a class .active receberão tais manipulações;
+    div p{} -> todos os elementos p que são descendentes de uma div receberão tais manipulações;
+    div>p{} -> todos os elementos p que são filhos de uma div receberão tais manipulações, ou seja,
+        o p precisa ser a primeira tag dentro de div;
+    li.active + li{} -> o próximo elemento li depois do li que contém a class active receberá tais 
+        manipulações;
+    li.active ~ li{} -> os próximos elementos li depois do li que contém a class active receberá tais 
+        manipulações;
+
+///Prioridades de Seletores
+    A prioridade é dada pela ordem de leitura, a especificidade e pela caracteristica !important;
+    -Na ordem prevalece a última;
+    -Na especificidade, de maior para menor: comando inline - id - class - elemento HTML
+        Para calcular a especificidade pode dar +1 ponto para cada surgimento deles.
+        Ex: #wrapper li{} -> especificidade de 0,1,0,1 <- este é prioridade 
+            li.active{} -> especificidade de 0,0,1,1
+    -Se colocado o !important no modificador css, ele se torna prioridade;
+
+
+------------------------------------------------------------------------------------------------------
