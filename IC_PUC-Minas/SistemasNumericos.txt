@@ -1,0 +1,24 @@
+///Sistemas Numéricos
+    Decimal-> Uma contagem representada por um numeral. Ex: 11, onze, XI. 
+        Base: 10^posição. Ex: 11 = 10^1 + 10^0; (A posição começa da direita para a esquerda);
+    Binário-> Representação em bits. bit = 0 ou 1. Byte = conjunto de 8bits; 
+        Base: 2; 0 = Desligado e 1 = Ligado;
+    Octal->
+    Hexadecimal->
+
+///Converção de base 10 p/ qualquer outra
+    -Dividir o nº decimal pela base que deseja converter. A divisão deve ser feita sempre inteira e só 
+        acaba até chegar em um cociente menor que a base escolhida. Pegue o último cociente e todos os 
+        restos e de baixo para cima escreva; 
+        Ex: decimal(61) -> binário. Resultado: 111101 = 61
+            61 | 2
+             1  30 | 2
+                 0   15 | 2
+                      1   7 | 2
+                          1   3 | 2
+                              1   1
+
+///Converção de binário p/ decimal
+    -Só pegar o numeral(bit) multiplicar pela base 2 e elevar a base à posição do bit no byte, e somar 
+        todos os resultados;
+    Ex: 111101 -> (1*2^5)+(1*2^4)+(1*2^3)+(1*2^2)+(0*2^1)+(1*2^0) = 61
