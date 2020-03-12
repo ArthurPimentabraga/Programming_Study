@@ -18,7 +18,10 @@
                           1   3 | 2
                               1   1
 
-///Converção de binário p/ decimal
-    -Só pegar o numeral(bit) multiplicar pela base 2 e elevar a base à posição do bit no byte, e somar 
-        todos os resultados;
+///Converção de binário p/ qualquer base
+    -Só pegar o numeral(bit) multiplicar pela base e elevar a base à posição do bit no byte, e somar 
+        todos os resultados. No caso de base octa e hexa, as posições vão ser divididas em grupos 
+        que são: 0,1,2 - 0,1,2,3 respectivamente;
     Ex: 111101 -> (1*2^5)+(1*2^4)+(1*2^3)+(1*2^2)+(0*2^1)+(1*2^0) = 61
+
+OBS: A MELHOR COISA É: CONVERTER PARA BINÁRIO, PARA CONVERTER P/ BASE DESEJADA;

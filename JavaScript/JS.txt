@@ -15,7 +15,8 @@ Comandos:
     .toFixed(nº) -> nº de casas decimais;
     .replace('','') -> troca algo por algo. Ex: . por , em um double; 
     .toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) -> formata por uma string 
-        localizada, ou seja, formata um int qualquer em uma "moeda". Ex: 1500 -> RS1,500,00; 
+        localizada, ou seja, formata um int qualquer em uma "moeda". Ex: 1500 -> RS1,500,00;
+         
 ----------------------------------------------------------------------------------------------------
 
 Significados:
