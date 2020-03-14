@@ -30,7 +30,14 @@ Significados:
     ''->
     ``-> usa para placeholder ${};
 
+    === -> Operador de igualdade restrita, ou seja, ele verifica se os dois valores são idênticos,
+        em valor e no tipo da variável. Diferente do == que so verifica o valor;
+
 ----------------------------------------------------------------------------------------------------
 
 Lembretes:
     - O sinal de + pode concatenar e somar, depende do tipo da variável. O prompt sempre retorna string;
+
+----------------------------------------------------------------------------------------------------
+
+///Document Object Model 
