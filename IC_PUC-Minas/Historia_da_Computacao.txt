@@ -11,7 +11,8 @@
 -1960: Importante para software-> começaram a surgir os primeiros softwares;
 -Década de 60 (paradigma Batch) marcada pelos computadores gigantes que realizavam uma função por vez, nada de mult-processamento, e precisando ser operado por 
 	humanos;
--Década de 70 (paradigma Time-sharing) marcada pelos serviços do computador poderem ser compartilhados entre muitos usuários;
+-Década de 70 (paradigma Time-sharing) marcada pelos serviços de hadware do computador poderem ser compartilhados entre muitos usuários. Ou seja, terminais burros 
+	eram ligados à um computador e requisitavam seus serviços de processamento, memória...;
 -Década de 80 (pc) revolucionária, surgiram os microcomputadores, ou computadores individuais;
 -Década de 90 (rede), muitos já tinham pc, ai então surgiu a rede, a interligação desses computadores p/ transmissão de info...
 -Década de 2000 marcada pela computação móvel(celulares...), paradigma Ubiqua, de acesso à informação em qualquer lugar e em qualquer momento, tornando dependente da 
