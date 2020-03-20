@@ -1,6 +1,7 @@
 ///Seletores
     Pseudo-Classe-> O seletor indica estados ou situações de elementos HTML. 
         Ex: p:First-of-typy{} or p:actived{} or p:hover{} ...;
+        -.class:nth-child(9) -> pega o 9º elemento daquela classe;
     
     Pseudo-Elemento-> Seletor que indica PARTES do elemento HTML para serem manipuladas.
         Ex: p::first-letter{} (modifica a 1º letra de cada parágrafo) or p::after{} ...;
@@ -90,10 +91,39 @@
             física (hardware) pela razão de pixel do dispositivo(encontrado na especificação do 
             mesmo). As viewport == a resolução lógica == aos Breakpoints;
 
+------------------------------------------------------------------------------------------------------
 
+///FlexBox and Grid
+    +FlexBox: Indicado para criar layout que se comportem em uma única dimenção, seja linha ou coluna.
+        Quando se deseja juntar linhas e colunas é utilizado o grid. Com o layout flex não precisa 
+        se preocupar com quantidade de itens, quebras de linhas... Já faz isso tudo automaticamente.
 
+        -Códigos padrões para o flexbox: 
+            -display:flex; -> "ativa" o modo flex;
+            -flex-wrap: wrap; -> Quebra de linha (mas também existem tipos para esconder o item...);
+            -justify-content: space-between; -> cria espaçamentos entre os itens;
+            -align-items: center; -> alinha os itens no centro;
+    
+    +Grid: A diferença do grid para o flex é que ele é multidimensional. Ou seja, podemos fazer com que 
+        1 item ocupe o lugar de dois em uma coluna ou linha, como se mesclasse as células do excel;
 
+        -Códigos padrões para o grid:
+            -display: grid; -> "ativa" o modo grid;
+            -grid-template-columns: repeat(3, 1fr); -> quantidade e tamanho de colunas em um grid. Neste 
+                caso será um grid com 3col, e todas do mesmo tamanho. Também pode ser escrito assim:
+                (1fr 2fr 1fr), o que significa que serão 3 colunas porém a 2º ocupara o lugar de 2;
+            -max-width: XXXpx; -> define o tamanho da largura do grid;
+            -grid-gap: XXpx; define o espaçamento entre itens;
 
+            -grid-column and grid-row -> especifica em qual linha e coluna (de qual linha até qual  
+                linha ele vai também) um item em específico vai ficar; 
 
+------------------------------------------------------------------------------------------------------
 
+///Menu for Mobile
+    +O menu responsivo pode ser feito basicamente com um checkbox, com labels(em icons) controlando 
+        ele. O css irá, por meio de uma MediaQuery, dar "show e hide"(display: block and none;)
+        para mostrar e esconder as labels. E verificando se o CheckBox está ativo ou não, o css 
+        mostrará ou esconderá o menu vertical.
 
+------------------------------------------------------------------------------------------------------
