@@ -1,0 +1,3 @@
+///Commands and codes
+
+    .substring(x,x) -> "Corta" um string de um caracter inicial(posicional) até outro.  
