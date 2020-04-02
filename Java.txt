@@ -1,3 +1,5 @@
 ///Commands and codes
 
-    .substring(x,x) -> "Corta" um string de um caracter inicial(posicional) até outro.  
+    .substring(x,x) -> "Corta" um string de um caracter inicial(posicional) até outro.
+    .chatAt(x) -> Retorna o caracter da string na posição escolhida dentro do parênteses;
+    .replace(x,x) -> Troca determinados caracteres de uma string por outros caracteres; 
