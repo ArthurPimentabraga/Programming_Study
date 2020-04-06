@@ -8,12 +8,12 @@
 <body>
     <h1>Hello World</h1>
     <p>Salve Salve</p>
-
+    <p id="pi"><strong>Parágrafo 2</strong></p>
     <script>
-       var n1 = parseInt(window.prompt("Digite um nº"));
-       var n2 = parseInt(window.prompt("Digite outro nº"));
-       var soma = n1 + n2;
-       window.alert(`A soma dos dois nº é: ${soma}`);
+        var loc = window.location.href;
+        window.document.write(loc);
+        var hello = document.getElementById('p#pi');
+        window.document.write(hello.innerText);
     </script>
 </body>
 </html>

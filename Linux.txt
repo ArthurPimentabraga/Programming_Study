@@ -21,3 +21,5 @@ esquecer :)
     autoclean -> limpa o cache do apt;
     cat (nome do arquivo) -> mostra o conteúdo do arquivo de texto no terminal;
     nano (nome do arquivo) -> edita um arquivo de texto no terminal;
+    rm -rf (nome do arquivo) -> Remove diretório;
+    rm (nome do arquivo) -> Remove arquivo;

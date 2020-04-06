@@ -2,8 +2,12 @@
 -Node.js é o javascrit utilizado fora dos navegadores;
 -ECMAScript é uma padronização de linguagem de scripts, ou seja, JavaScript, JScript e ActionScript 
     seguem a ECMAScript, porém cada um tem suas particularidades;
+-Uma linguagem de scrips não é usada para construir uma aplicação por completo, e sim para dar 
+    interatividade, de elementos já existentes, com o usuário;
+-A execução do JavaScript é feita pelo navegadore, ou seja, evita uma sobrecarga de requisições 
+    para o servidor;
 
-----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
 
 Comandos:
     confirm -> exibe uma caixa igual o alert, porém pedindo confirmação;
@@ -17,7 +21,7 @@ Comandos:
     .toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) -> formata por uma string 
         localizada, ou seja, formata um int qualquer em uma "moeda". Ex: 1500 -> RS1,500,00;
          
-----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
 
 Significados:
     number -> Infinity ->
@@ -33,11 +37,23 @@ Significados:
     === -> Operador de igualdade restrita, ou seja, ele verifica se os dois valores são idênticos,
         em valor e no tipo da variável. Diferente do == que so verifica o valor;
 
-----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
 
 Lembretes:
     - O sinal de + pode concatenar e somar, depende do tipo da variável. O prompt sempre retorna string;
 
-----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
 
 ///Document Object Model 
+    -DOM é um conjunto de objetos do navegador que nos permite ter acesso aos componentes internos do nosso site, sejam 
+        eles: tags HTML, a localização atual no meu site(em que página o usuário está no momento), o histórico de navegação 
+        no site...
+    -O acesso à tais componentes é feito de diversas forma, só é necessário respeitar a hierarquia da árvore DOM(os 
+        componentem tem uma hierarquia, ou seja, a raiz é "windows", tem vários filhos como "location", "history", 
+        "Document"... Document por sua vez tem seu filho "HTML", que por sua vez tem seus filhos "HEAD" e "BODY", que tem 
+        seus filhos que são as tag html....);
+    -Em "Document" o acesso pode ser feito por nome das tags, id, class, querySelectors...
+        Ex: windows.document.QuerySelector('div#menu'); Ele vai selecionar a div que contém o id == menu;
+        Ex: windows.document.getElementsById('menu'); Ele vai selecionar o elemento que contém o id == menu;
+        Ex: windows.location.href; Captura a URL atual;
+
