@@ -1,11 +1,13 @@
 É responsável pela interação do site com o usuário;
--Node.js é o javascrit utilizado fora dos navegadores;
+-Node.js é um interpretador javascrit fora dos navegadores
+    BRILHANTE - Em vez de gastar recursos computacionais do cliente fazendo com que o js seja executado no navegador, o js
+    passa a ser executado server-side. E ainda exige menos recursos computacionais dos servidores, pois ele utiliza 
+    somente uma thread(EventLoop) para tratar as requisições. Sem contar que o EventLoop não espera o retorno das 
+    E/S(entrada e saída), ou seja, ele não para de trarar as requisições para esperar as operações serem concluidass;
 -ECMAScript é uma padronização de linguagem de scripts, ou seja, JavaScript, JScript e ActionScript 
     seguem a ECMAScript, porém cada um tem suas particularidades;
 -Uma linguagem de scrips não é usada para construir uma aplicação por completo, e sim para dar 
     interatividade, de elementos já existentes, com o usuário;
--A execução do JavaScript é feita pelo navegadore, ou seja, evita uma sobrecarga de requisições 
-    para o servidor;
 
 ----------------------------------------------------------------------------------------------------------------------------
 
@@ -13,6 +15,7 @@ Comandos:
     confirm -> exibe uma caixa igual o alert, porém pedindo confirmação;
     prompt -> Mesma caixa, porém com um textbox para ser preenchido;
     typeof (var ou valor) -> Descobrir o tipo da variável (terminal node);
+
     Number.parseInt(var) -> Converção de variável, podendo ser para int, float...;
     Number(var) -> Converte para número, o js que decide qual tipo, float ou int;
     String(var) ou var.ToString() -> Converter para string;
@@ -24,15 +27,16 @@ Comandos:
 ----------------------------------------------------------------------------------------------------------------------------
 
 Significados:
-    number -> Infinity ->
-        -> NaN ->
+    number -> Infinity and -Infinity-> pega o maior e o menor nº possível de se guardar em uma variável;
+           -> NaN -> "Not a Number", se comparado com uma variável, retorna true ou false para NaN; 
 
-    undefined->
-    null->
+    undefined-> Quando nenhum valor é atribuido à variável;
+    null->Quando o valor da variável é vazia. Muito usado quando quer "limpar" o valor da mesma, nesse caso a variável 
+        passa a ter o valor null;
 
-    ""->
-    ''->
-    ``-> usa para placeholder ${};
+    "" e ''-> Qualquer uma, porém se for juntar html com js, sempre usar uma para cada. Precisa ter essa diferença; 
+    ``-> 1ºuso: usa para placeholder ${}(placeholder é para incluir var dentro de um string por ex);
+         2ºuso: quando queros dar quebra de linha para uma string, com `` o "Enter" funciona;
 
     === -> Operador de igualdade restrita, ou seja, ele verifica se os dois valores são idênticos,
         em valor e no tipo da variável. Diferente do == que so verifica o valor;
