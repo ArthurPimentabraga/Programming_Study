@@ -1,0 +1,40 @@
+///Business Model Canvas 
+    +Oque é: Uma forma mais visual e organizada de planejar o seu empreendimento(Em bloco). O modelo de negócios vai mais a 
+    fundo em dados no mercado, abrange mais tópicos... Porém o canvas é de fácil entendimento e visualização, levanta 
+    hipóteses sobre o projeto e é fácil de todos os envolvidos(funcionários, investidores...);
+
+    +Benefícios:
+        -Ajuda a determinar a viabilidade de um projeto em um mercado específico;
+        -Orienta o empreendedor na organização das atividades de planejamento;
+        -Ajuda na obtenção de financiamento;
+
+    +Formado por 9 blocos, divididos em 4 tópicos:
+        +Para quem? -> 
+            - Seguimento de mercado: Quais os tipos de cliente;
+            - Canais: Quais os canais em que vamos entregar nossa proposta de valor para o cliente;
+            - Relacionamento com clientes: Como vamos ter contato com eles, como ele entra em contato para resolver um 
+                problema...
+
+        +O que? Valor -> É a proposta de valor;
+
+        +Como? -> 
+            - Recursos chaves: Quais recursos são essenciais para o funcionamento do meu projeto(devs, servers...);
+            - Atividades chaves: Quais atividades são essenciais para // // //(Produção dos produtos, Análise de cliente...);
+            - Parceiros chaves: Quais empresas, e possíveis parceiros são essenciais para o // // //;
+ 
+        +Quanto? ->
+            - Receita; 
+            - Custos;
+
+///Pitch
+    +Apresentar meu projeto em uma paresentação(4min);
+    +Objetivo de covencer a banca ou o investidor que vale a pena investir nesse projeto;
+    +Exaltar diferenciais;
+
+    +Tópicos gerais:
+        - Problema
+        - Solução
+        - Mercado (mas pode incluir no problema, ou junto com outro tópico)
+        - Modelo de negócios(renda...)
+        - Diferenciais
+        - Equipe
