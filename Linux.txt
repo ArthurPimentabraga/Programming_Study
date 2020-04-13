@@ -1,18 +1,24 @@
 Tudo conteúdo desta documentação é resumido no material que achei necessário escrever p/ não 
 esquecer :)
 
+///Entendendo Linux
+    +Kernel-> é o núcleo do sistema operacional, responsável por fazer as interações de hardware e software;    
+    +Gnome-> (GUI) Graphical user interface and set of computer desktop applications for users of the Linux; 
+
+---------------------------------------------------------------------------------------------------------------------------
+
 ///Manipulação de arquivos:
     .rar -> unrar x (nome do arquivo) ;
     .zip -> unzip (nome do arquivo) ;
     .tar.xz -> tar -Jxf (nome do arquivo) ;
     .tar.gz -> tar -xvzf (nome do arquivo) ;
 
------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 
 ///Caracteres adicionais para comandos:
     -h -> Lista os dados de uma forma mais humana, mais fácil de entendimento;
 
------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------
 
 ///Comandos Básicos:
     mkdir -> criar diretório;

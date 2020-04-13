@@ -11,7 +11,7 @@
 
 ----------------------------------------------------------------------------------------------------------------------------
 
-Comandos:
+Commands and codes:
     confirm -> exibe uma caixa igual o alert, porém pedindo confirmação;
     prompt -> Mesma caixa, porém com um textbox para ser preenchido;
     typeof (var ou valor) -> Descobrir o tipo da variável (terminal node);
@@ -25,6 +25,12 @@ Comandos:
         localizada, ou seja, formata um int qualquer em uma "moeda". Ex: 1500 -> RS1,500,00;
 
     ** -> Operador que eleva o 1ª nª pelo 2ª;
+
+    .sort() -> ordena os valores de um array;
+    .pop() -> remove o último valor do array, e também o retorna;
+    .push(value) -> acrescenta uma posição final no array e insere o valor nele;
+    .shift() -> remove o primeiro valor do array, também retornando-o;
+    .unshift(value) -> acrescenta uma posição no início do array e insere o valor nele;
          
 ----------------------------------------------------------------------------------------------------------------------------
 
@@ -65,4 +71,7 @@ Lembretes:
         Ex: windows.document.QuerySelector('div#menu'); Ele vai selecionar a div que contém o id == menu;
         Ex: windows.document.getElementsById('menu'); Ele vai selecionar o elemento que contém o id == menu;
         Ex: windows.location.href; Captura a URL atual;
-
+    -Eventos DOM é tudo o que pode acontecer com um elemento específico. 
+        Ex: quando o mouse passar em cima desse elemento(click, mouseenter, mouseout, mousemove)...
+    
+    .addEventListener('event', function); -> Cria o evento para determinado elemento sem ter que setar no HTML; 

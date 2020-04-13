@@ -6,14 +6,19 @@
     <title>ex001</title>
 </head>
 <body>
-    <h1>Hello World</h1>
-    <p>Salve Salve</p>
-    <p id="pi"><strong>Parágrafo 2</strong></p>
+    <div id="area" onclick="clicar()" onmouseover="entrou()"style="width: 100px; height: 100px; background-color: blue; cursor: pointer;">
+        Clique-me!
+    </div>
     <script>
-        var loc = window.location.href;
-        window.document.write(loc);
-        var hello = document.getElementById('p#pi');
-        window.document.write(hello.innerText);
+        var a = document.getElementById('area');
+
+        function clicar(){
+            a.innerText = "Clicou :)";
+        }
+
+        function entrou(){
+            a.style.backgroundColor = 'red';
+        }
     </script>
 </body>
 </html>
