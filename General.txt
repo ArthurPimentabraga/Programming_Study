@@ -15,3 +15,7 @@ Micro Serviços -> Quando se fala que um sistma trabalha com micro serviços que
     em pequenos serviços, pequenas tarefas que trabalham idividualmente ou em conjunto. Dessa forma facilida trabalhar 
     em cada parte de um sistema muito grande, ou dividir a equipe em casa micro serviço. Porém "gerenciar" esse sistema
     como um todo se torma muito mais complexo. Um micro serviço pode, ou não, ser uma API;
+
+Diferença int e Interge -> O 'int' é a forma primitiva da variável que representa somente um valor. Já o 'Interger' é uma 
+    classe Wrapper, ou seja, representa um tipo primitivo, no caso o 'int'. Já que estamos tipando uma variável com uma 
+    classe, podemos usar métodos para o nosso inteiro; 
