@@ -57,6 +57,8 @@ Lembretes:
         uma letra tem uma posição, um "valor", então "a" é > que "b", "a" é > "A", "Dezena" é > que "Dez" por ter mais 
         caracteres...
 
+    - Pode usar 'For in' para loops com arrays, é mais simplificado;
+
 ----------------------------------------------------------------------------------------------------------------------------
 
 ///Document Object Model 
