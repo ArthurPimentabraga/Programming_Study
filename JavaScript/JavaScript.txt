@@ -1,9 +1,4 @@
 É responsável pela interação do site com o usuário;
--Node.js é um interpretador javascrit fora dos navegadores
-    BRILHANTE - Em vez de gastar recursos computacionais do cliente fazendo com que o js seja executado no navegador, o js
-    passa a ser executado server-side. E ainda exige menos recursos computacionais dos servidores, pois ele utiliza 
-    somente uma thread(EventLoop) para tratar as requisições. Sem contar que o EventLoop não espera o retorno das 
-    E/S(entrada e saída), ou seja, ele não para de trarar as requisições para esperar as operações serem concluidass;
 -ECMAScript é uma padronização de linguagem de scripts, ou seja, JavaScript, JScript e ActionScript 
     seguem a ECMAScript, porém cada um tem suas particularidades;
 -Uma linguagem de scrips não é usada para construir uma aplicação por completo, e sim para dar 
