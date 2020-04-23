@@ -8,8 +8,8 @@ esquecer :)
 
 ### Understanding Linux
 
-- Kernel-> é o núcleo do sistema operacional, responsável por fazer as interações de hardware e software;   
-- Gnome-> (GUI) Graphical user interface and set of computer desktop applications for users of the Linux; 
+- **Kernel ->** é o núcleo do sistema operacional, responsável por fazer as interações de hardware e software;   
+- **Gnome ->** (GUI) Graphical user interface and set of computer desktop applications for users of the Linux; 
 
 ---
 

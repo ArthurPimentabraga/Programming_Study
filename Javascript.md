@@ -18,7 +18,7 @@ author: Arthur P. Braga
 - prompt -> Mesma caixa, porém com um textbox para ser preenchido;
 - typeof (var ou valor) -> Descobrir o tipo da variável (terminal node);
 
-```javascript
+```Javascript
 Number.parseInt(var) -> Converção de variável, podendo ser para int, float...;
 Number(var) -> Converte para número, o js que decide qual tipo, float ou int;
 String(var) ou var.ToString() -> Converter para string;
@@ -34,15 +34,23 @@ var**var -> Operador que eleva o 1º nº pelo 2º;
 .push(value) -> acrescenta uma posição final no array e insere o valor nele;
 .shift() -> remove o primeiro valor do array, também retornando-o;
 .unshift(value) -> acrescenta uma posição no início do array e insere o valor nele;
+
+.forEach(item) -> passa por cada item de um vetor; 
+```
+
+*Função de forma reduzida↓*
+
+```javascript
+id.evento = (parm) => bloco de comandos;
 ```
 
 ----------------------------------------------------------------------------------------------------------------------------
 
 ### Meanings
 
-- Infinity and -Infinity-> pega o maior e o menor nº possível de se guardar em uma variável;
+- **Infinity and -Infinity ->** pega o maior e o menor nº possível de se guardar em uma variável;
 
-- NaN -> "Not a Number", ou seja, se tentar fazer uma operação com uma letra, por exemplo, retornará NaN; 
+- **NaN ->** "Not a Number", ou seja, se tentar fazer uma operação com uma letra, por exemplo, retornará NaN; 
 
 - " " e ' '-> Qualquer uma, porém se for juntar html com js, sempre usar uma para cada. Precisa ter essa diferença; 
 
@@ -91,3 +99,8 @@ var**var -> Operador que eleva o 1º nº pelo 2º;
 .addEventListener('event', function); -> Cria o evento para determinado elemento sem ter que setar no HTML; 
 ```
 
+---
+
+### Form
+
+- Eventos podem ser inseridos no form para diversas finalidades, como o evento input (oninput) que seria chamado a cada mínima alteraçao no campo. Um exemplo prático é fazer com que se o usuário digitar um caracter inválido para aquele campo, o mesmo é excluido ou aparece uma mensagem de erro. Outros eventos: focus, blur, change....
