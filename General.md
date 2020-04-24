@@ -7,7 +7,7 @@ author: Arthur P. Braga
 
 - **Biblioteca ->** É um conjunto de códigos que será utilizado como ferramenta no desenvolvimento do projeto. Lembrando que no caso da biblioteca você utiliza só o que te interessa naquele projeto;
 
-- **Framework ->** É uma abstração de códigos e conjuntos de códigos feito para realizar seus projetos nele. Porém para ser utilizado, o desenvolvedor necessita saber como ele funciona, seguir suas regras, o sistema tem que ser desenvolvido pensando nele;
+- **Framework ->** É uma "Super Biblioteca", uma abstração de códigos e conjuntos de códigos feito para realizar seus projetos nele. Porém para ser utilizado, o desenvolvedor necessita saber como ele funciona, seguir suas regras, o sistema tem que ser desenvolvido pensando nele;
 
 - **path ->** É uma variável de ambiente no sistema operacional, ou seja, define uma variável para um diretório, podendo assim acessar um executável, por exemplo, sem ter que indicar o caminho completo;
 
@@ -29,4 +29,4 @@ author: Arthur P. Braga
 
 - **GET and POST ->** em um formulário web é a forma de transmitir os dados para a página de tratamento, de uma forma visível(na URL - GET) ou não(POST - encapsulada ao corpo da requisição). Mas no contexto de API, são métodos de requisição, para retornar dados e enviar dados, respectivamente. Neste contexto também existem o PUT(update) e DELETE(deletar); 
 
-- **JSON ->** 
+- **JSON ->** É simplesmente um formato de documento usado para transferência de dados pela internet. String;

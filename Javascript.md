@@ -36,6 +36,9 @@ var**var -> Operador que eleva o 1º nº pelo 2º;
 .unshift(value) -> acrescenta uma posição no início do array e insere o valor nele;
 
 .forEach(item) -> passa por cada item de um vetor; 
+
+JSON.stringify() -> converte um objeto em String;
+JSON.parse() -> converte a String de um obj em um obj novamente;
 ```
 
 *Função de forma reduzida↓*
@@ -104,3 +107,18 @@ id.evento = (parm) => bloco de comandos;
 ### Form
 
 - Eventos podem ser inseridos no form para diversas finalidades, como o evento input (oninput) que seria chamado a cada mínima alteraçao no campo. Um exemplo prático é fazer com que se o usuário digitar um caracter inválido para aquele campo, o mesmo é excluido ou aparece uma mensagem de erro. Outros eventos: focus, blur, change....
+
+---
+
+### Others
+
+- Uma boa técnica é armazenar um dado localmente no navegador do usuário, desta forma pode se criar "interações" que facilitam a vida do mesmo, como deixar armazenado seu login para que todas vez que for logar no site já estar preenchido para ele.
+
+  - Existem duas formas de armazenamento local 
+
+  ```javascript
+  localStorage.getItem('chave'), setItem('chave',valor), removeItem('chave') ou clear() 
+  	(recuperar, armazenar, remover e limpar todos os dados, respectivamente);
+  sessionStorage.// // // //
+  ```
+  - A diferença é que localStorage salva por tempo indeterminado, já o session salva somente naquela sessão;

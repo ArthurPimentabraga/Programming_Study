@@ -23,6 +23,8 @@ author: Arthur P. Braga
 
 - Tem um ecossistema muito grande, ou seja, tem biblioteca para praticamente tudo que você quiser fazer.
 
+---
+
 ### General
 
 - Módulos -> É uma forma de se quebrar o código em vários arquivos, organizando-o para que não fique tudo junto em um único grande arquivo. A forma de se utilizar se parece com o instanciamento de classes.
@@ -31,4 +33,23 @@ author: Arthur P. Braga
 >2º Depois é só receber essa exportação em uma variável no arquivo principal.
 >		var nome = requice("local do arquivo");
 >3º E Se quiser acessar uma function expecífica -> nome.function;
+
+- Só para lembrar como o node funciona, coloquei esse pequeno código conectando no módulo 'http' do node (o que é bem 'cru', o express é mais robusto) e criando um servidor node usando a porta 8080:
+
+```javascript
+var http = require('http');
+http.createServer(function (request, asnwer) {
+    asnwer.end("<h1>Funfou</h1>");
+}).listen(8080);
+```
+
+---
+
+### Express and NPM
+
+- O **Express.js** é um framework de desenvolvimento back-end com Node.js. É vantagem usar ele por ser muito mais robusto que o módulo http do node, que só contém o básico para se trabalhar com http.
+
+- O **npm** é o gerenciador de pacotes do node (node package manager). Com ele é possível se utilizar qualquer biblioteca node em seu projeto.
+
+> npm init -> Para iniciar um projeto Node.js e criar o arquivo json com as info do seu projeto.
 
