@@ -53,9 +53,13 @@ id.evento = (parm) => bloco de comandos;
 
 - **Infinity and -Infinity ->** pega o maior e o menor nº possível de se guardar em uma variável;
 
-- **NaN ->** "Not a Number", ou seja, se tentar fazer uma operação com uma letra, por exemplo, retornará NaN; 
+- NaN ->** "Not a Number", ou seja, se tentar fazer uma operação com uma letra, por exemplo, retornará NaN; 
+
+  
 
 - " " e ' '-> Qualquer uma, porém se for juntar html com js, sempre usar uma para cada. Precisa ter essa diferença; 
+
+  
 
 - Acento grave -> 
 
@@ -63,8 +67,14 @@ id.evento = (parm) => bloco de comandos;
   >
   > 2ºuso: quando queros dar quebra de linha para uma string, com `` o "Enter" funciona;
 
+  
+
 - === -> Operador de igualdade restrita, ou seja, ele verifica se os dois valores são idênticos,
       em valor e no tipo da variável. Diferente do == que so verifica o valor;
+  
+  
+  
+- var and let -> A diferença é que uma variável 'var' é visível para toda função (e somente dentro dela), já uma variável 'let' só é visível dentro de um bloco de comandos, como por exemplo um laço de repetição;  
 
 ----------------------------------------------------------------------------------------------------------------------------
 

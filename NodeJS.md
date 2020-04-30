@@ -53,3 +53,14 @@ http.createServer(function (request, asnwer) {
 
 > npm init -> Para iniciar um projeto Node.js e criar o arquivo json com as info do seu projeto.
 
+---
+
+### EJS (Embedded JavaScript templating)
+
+- Modelo de Javascript incorporado, é um "motor" de templates(view engine), é responsável por renderizar, exibir HTML nas rotas criadas em Node
+- Além disso ele permite que possamos incorporar JS dentro do HTML, como passar o valor das variáveis, estruturas condicionais, laços de repetição...;
+
+> - Para passar o valor das variáveis no HTML é só passar as variáveis em um objeto no método render do express, e no html.ejs você puxa elas onde quiser com a tag coluna grega <%= var %>
+> - Para usar condicionais é tipo no php, coluna grega sem '=' -> ex: <% if(){ %>
+
+ 
