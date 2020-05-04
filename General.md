@@ -30,3 +30,6 @@ author: Arthur P. Braga
 - **GET and POST ->** em um formulário web é a forma de transmitir os dados para a página de tratamento, de uma forma visível(na URL - GET) ou não(POST - encapsulada ao corpo da requisição). Mas no contexto de API, são métodos de requisição, para retornar dados e enviar dados, respectivamente. Neste contexto também existem o PUT(update) e DELETE(deletar); 
 
 - **JSON ->** É simplesmente um formato de documento usado para transferência de dados pela internet. String;
+
+- **VPS vs Hospedagem compartilhada ->**
+- **Deploy ->**  

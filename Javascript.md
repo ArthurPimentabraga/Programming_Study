@@ -35,7 +35,7 @@ var**var -> Operador que eleva o 1º nº pelo 2º;
 .shift() -> remove o primeiro valor do array, também retornando-o;
 .unshift(value) -> acrescenta uma posição no início do array e insere o valor nele;
 
-.forEach(item) -> passa por cada item de um vetor; 
+.forEach() -> ele passa por cada item de um vetor, podendo executar um função para cada um por exemplo (array.forEach(function(){})) Bom para listagem de dados; 
 
 JSON.stringify() -> converte um objeto em String;
 JSON.parse() -> converte a String de um obj em um obj novamente;

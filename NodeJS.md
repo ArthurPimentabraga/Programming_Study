@@ -63,4 +63,8 @@ http.createServer(function (request, asnwer) {
 > - Para passar o valor das variáveis no HTML é só passar as variáveis em um objeto no método render do express, e no html.ejs você puxa elas onde quiser com a tag coluna grega <%= var %>
 > - Para usar condicionais é tipo no php, coluna grega sem '=' -> ex: <% if(){ %>
 
- 
+---
+
+### Notes
+
+- Pastas: views -> html; public -> arquivos estáticos(img, css...). O express já vai procurar os arquivos respectivos dentro destas pastas, um padrão de nomenclatura já;
