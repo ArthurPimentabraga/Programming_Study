@@ -132,3 +132,17 @@ id.evento = (parm) => bloco de comandos;
   sessionStorage.// // // //
   ```
   - A diferença é que localStorage salva por tempo indeterminado, já o session salva somente naquela sessão;
+
+---
+
+### JQuery
+
+- JQuery é uma biblioteca javascript que como qualquer outra biblioteca oferece uma forma mais simplificada de código.
+- Simplifica muito a vida do programador, pois além de ser uma biblioteca, com muitos métodos prontos... já existe muito conteúdo pronto na internet, muitas funcionalidades e componentes já criados que você pode fazer uso.
+
+> document.getElementbyId = $(document or css selectors...)
+>
+> .append() -> para criar html;
+> .prop() -> para buscar a enviar propriedades para tags html...
+> .toggleClass() -> adiciona e remove classes css de um elemento HTML;
+> .filter() .add() ... -> usados para selecionar quais receberão tais propriedades...;

@@ -5,23 +5,15 @@ author: Arthur P. Braga
 
 ### What is
 
-- Node.js é um interpretador Javascrit fora dos navegadores. *Para Javascript Vanilla cada navegador tem seu interpretador, no caso do Chrome é o V8.* 
-  
-  
-  
-- Com o Node.js é possível criar aplicações back-end como em Java, PHP... Aplicações desktop, mobile... Não fica restrito apenas à aplicações front-end web;
-  
-  
-  
-- BRILHANTE - Exige menos recursos computacionais dos servidores (barateando), pois ele utiliza somente uma thread(EventLoop) para tratar as requisições. Sem contar que o EventLoop não espera o retorno das E/S(entrada e saída), ou seja, ele não para de trarar as requisições para esperar as operações serem concluidas(deixando suas aplicações mais rápidas);
+Node.js é um interpretador Javascrit fora dos navegadores. *Para Javascript Vanilla cada navegador tem seu interpretador, no caso do Chrome é o V8.* 
 
-  
+Com o Node.js é possível criar aplicações back-end como em Java, PHP... Aplicações desktop, mobile... Não fica restrito apenas à aplicações front-end web;
 
-- Outra vantagem é que ele usa Javascript, ou seja, pode ser usada a mesma linguagem tanto para o front quanto para o back;  
+BRILHANTE - Exige menos recursos computacionais dos servidores (barateando), pois ele utiliza somente uma thread(EventLoop) para tratar as requisições. Sem contar que o EventLoop não espera o retorno das E/S(entrada e saída), ou seja, ele não para de trarar as requisições para esperar as operações serem concluidas(deixando suas aplicações mais rápidas);
 
-  
+Outra vantagem é que ele usa Javascript, ou seja, pode ser usada a mesma linguagem tanto para o front quanto para o back;  
 
-- Tem um ecossistema muito grande, ou seja, tem biblioteca para praticamente tudo que você quiser fazer.
+Tem um ecossistema muito grande, ou seja, tem biblioteca para praticamente tudo que você quiser fazer.
 
 ---
 
@@ -57,8 +49,9 @@ http.createServer(function (request, asnwer) {
 
 ### EJS (Embedded JavaScript templating)
 
-- Modelo de Javascript incorporado, é um "motor" de templates(view engine), é responsável por renderizar, exibir HTML nas rotas criadas em Node
-- Além disso ele permite que possamos incorporar JS dentro do HTML, como passar o valor das variáveis, estruturas condicionais, laços de repetição...;
+Modelo de Javascript incorporado, é um "motor" de templates(view engine), é responsável por renderizar, exibir HTML nas rotas criadas em Node. 
+
+Além disso ele permite que possamos incorporar JS dentro do HTML, como passar o valor das variáveis, estruturas condicionais, laços de repetição...;
 
 > - Para passar o valor das variáveis no HTML é só passar as variáveis em um objeto no método render do express, e no html.ejs você puxa elas onde quiser com a tag coluna grega <%= var %>
 > - Para usar condicionais é tipo no php, coluna grega sem '=' -> ex: <% if(){ %>
@@ -68,3 +61,6 @@ http.createServer(function (request, asnwer) {
 ### Notes
 
 - Pastas: views -> html; public -> arquivos estáticos(img, css...). O express já vai procurar os arquivos respectivos dentro destas pastas, um padrão de nomenclatura já;
+- **Partials ->** Reutilização de código html. Igual se faz em php, ou cria componentes em ionic. É só criar um arquivo .ejs colocar seu html dentro (como um navbar...) e chamar nas suas páginas: <%- include ('diretório da partial')%>;
+- **Body-Parser ->** Essa biblioteca permite receber os dados codificados de formulários, JSON, XML... e decodifica-los em uma estrutura js, retornando eles em: req.body.;
+
