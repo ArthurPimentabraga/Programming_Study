@@ -30,8 +30,8 @@ Tem um ecossistema muito grande, ou seja, tem biblioteca para praticamente tudo 
 
 ```javascript
 var http = require('http');
-http.createServer(function (request, asnwer) {
-    asnwer.end("<h1>Funfou</h1>");
+http.createServer(function (req, res) {
+    res.end("<h1>Funfou</h1>");
 }).listen(8080);
 ```
 
@@ -60,7 +60,6 @@ Além disso ele permite que possamos incorporar JS dentro do HTML, como passar o
 
 ### Notes
 
-- Pastas: views -> html; public -> arquivos estáticos(img, css...). O express já vai procurar os arquivos respectivos dentro destas pastas, um padrão de nomenclatura já;
+- **Pastas ->** views -> html || public -> arquivos estáticos(img, css...). O express já vai procurar os arquivos respectivos dentro destas pastas, um padrão de nomenclatura já;
 - **Partials ->** Reutilização de código html. Igual se faz em php, ou cria componentes em ionic. É só criar um arquivo .ejs colocar seu html dentro (como um navbar...) e chamar nas suas páginas: <%- include ('diretório da partial')%>;
 - **Body-Parser ->** Essa biblioteca permite receber os dados codificados de formulários, JSON, XML... e decodifica-los em uma estrutura js, retornando eles em: req.body.;
-

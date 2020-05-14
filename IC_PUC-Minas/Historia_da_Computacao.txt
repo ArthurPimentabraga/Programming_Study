@@ -1,20 +1,25 @@
--Ábaco: Primeiro dispositivo computacional da humanidade;
--Até 1930 só tínhamos o sonho de um dispositivo que fizesse as contas... automaticamente para nós. E em 1930, o MIT criou o 1º computador analógico;
--1939 foi criado o 1º computador digital (ABC - Atanasoff Berry Computer). Utilizada válvulas p/ os circuitos lógicos. Sua contrução ofi abandonada em 1942;
--1943: Alan Turning criou o computador Colossus 1, usado juntamente com outros 9, p/ decifrar códigos alemães na guerra. Filme: O jogo da imitação;
--1946: primeiro grande computador eletrônico (ENIAC - Electronic Numeric Integrator Analyser and Calculator);
--1950: von Neumann, Arthur Burks e Herman Goldstine desenvolveram a lógica de circuitos(processadores, binário...);
--1951: Escala industrial com a lógica de Von Neumann, computador UNIVAC 1;
--1953: Lançado o computador IBM 701;
--1954: Lançado o maior sucesso de vendas da década, o IBM 650;
--1959: Fim dos computadores à válvula;
--1960: Importante para software-> começaram a surgir os primeiros softwares;
--Década de 60 (paradigma Batch) marcada pelos computadores gigantes que realizavam uma função por vez, nada de mult-processamento, e precisando ser operado por 
-	humanos;
--Década de 70 (paradigma Time-sharing) marcada pelos serviços de hadware do computador poderem ser compartilhados entre muitos usuários. Ou seja, terminais burros 
-	eram ligados à um computador e requisitavam seus serviços de processamento, memória...;
--Década de 80 (pc) revolucionária, surgiram os microcomputadores, ou computadores individuais;
--Década de 90 (rede), muitos já tinham pc, ai então surgiu a rede, a interligação desses computadores p/ transmissão de info...
--Década de 2000 marcada pela computação móvel(celulares...), paradigma Ubiqua, de acesso à informação em qualquer lugar e em qualquer momento, tornando dependente da 
-	informação. (Rege até os dias atuais);
--A tendência é que essa computação que vemos, suma, e dê lugar para o paradigma da computação pervasiva, onde a tecnologia está embutida em tudo, e nem à enxergamos;
+---
+title: History of computing
+author: Arthur P. Braga
+---
+
+- Ábaco: Primeiro dispositivo computacional da humanidade;
+- Até 1930 só tínhamos o sonho de um dispositivo que fizesse as contas... automaticamente para nós. E em 1930, o MIT criou o 1º computador analógico;
+- 1939 foi criado o 1º computador digital (ABC - Atanasoff Berry Computer). Utilizadas válvulas p/ os circuitos lógicos. Sua construção foi abandonada em 1942;
+- 1943: Alan Turning criou o computador Colossus 1, usado juntamente com outros 9, p/ decifrar códigos alemães na guerra. Filme: O jogo da imitação;
+- 1946: primeiro grande computador eletrônico (ENIAC - Electronic Numeric Integrator Analyser and Calculator);
+- 1950: von Neumann, Arthur Burks e Herman Goldstine desenvolveram a lógica de circuitos(processadores, binário...);
+- 1951: Escala industrial com a lógica de Von Neumann, computador UNIVAC 1;
+- 1953: Lançado o computador IBM 701;
+- 1954: Lançado o maior sucesso de vendas da década, o IBM 650;
+- 1959: Fim dos computadores à válvula;
+
+#### Paradigmas
+
+- 1960: Importante para software -> começaram a surgir os primeiros softwares;
+- Década de 60 (paradigma Batch) marcada pelos computadores gigantes que realizavam uma função por vez, nada de mult-processamento, e precisando ser operado por  humanos;
+- Década de 70 (paradigma Time-sharing) marcada pelos serviços de hadware do computador poderem ser compartilhados entre muitos usuários. Ou seja, terminais burros eram ligados à um computador e requisitavam seus serviços de processamento, memória...;
+- Década de 80 (pc) revolucionária, surgiram os microcomputadores, ou computadores individuais;
+- Década de 90 (rede), muitos já tinham pc, ai então surgiu a rede, a interligação desses computadores p/ transmissão de info...
+- Década de 2000 marcada pela computação móvel(celulares...  paradigma Ubiqua), de acesso à informação em qualquer lugar e em qualquer momento, tornando dependente da informação. (Rege até os dias atuais);
+- A tendência é que essa computação que vemos, suma, e dê lugar para o paradigma da computação pervasiva, onde a tecnologia está embutida em tudo, e nem à enxergamos;

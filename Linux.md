@@ -3,13 +3,10 @@ title: Linux
 author: Arthur P. Braga
 ---
 
-Tudo conteúdo desta documentação é resumido no material que achei necessário escrever p/ não 
-esquecer :)
-
 ### Understanding Linux
 
 - **Kernel ->** é o núcleo do sistema operacional, responsável por fazer as interações de hardware e software;   
-- **Gnome ->** (GUI) Graphical user interface and set of computer desktop applications for users of the Linux; 
+- **Gnome ->** Uma das (GUI) Graphical user interface and set of computer desktop applications for users of the Linux; 
 
 ---
 

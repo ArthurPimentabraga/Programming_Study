@@ -1,42 +1,60 @@
-///Sistemas Numéricos
-    Decimal-> Uma contagem representada por um numeral. Ex: 11, onze, XI. 
-        Base: 10^posição. Ex: 11 = 10^1 + 10^0; (A posição começa da direita para a esquerda);
-    Binário-> Representação em bits. bit = 0 ou 1. Byte = conjunto de 8bits; 
-        Base: 2; 0 = Desligado e 1 = Ligado;
-    Octal->
-    Hexadecimal->
+---
+title: Numbers Systems
+author: Arthur P. Braga
+---
 
-///Converção de base 10 p/ qualquer outra
-    -Dividir o nº decimal pela base que deseja converter. A divisão deve ser feita sempre inteira e só 
-        acaba até chegar em um cociente menor que a base escolhida. Pegue o último cociente e todos os 
-        restos e de baixo para cima escreva; 
-        Ex: decimal(61) -> binário. Resultado: 111101 = 61
-            61 | 2
-             1  30 | 2
-                 0   15 | 2
-                      1   7 | 2
-                          1   3 | 2
-                              1   1
+### Sistemas Numéricos
 
-///Converção de qualquer base p/ decimal
-    -Só pegar o numeral(bit) multiplicar pela base e elevar a base à posição do numeral no número.
-    Ex: 111101 -> (1*2^5)+(1*2^4)+(1*2^3)+(1*2^2)+(0*2^1)+(1*2^0) = 61 
-    Ex: 9C1 -> (9*16^2)... = 2497
+- **Decimal ->** Uma contagem representada por um numeral. 
 
-OBS: A MELHOR COISA É: CONVERTER PARA BINÁRIO, PARA CONVERTER P/ BASE DESEJADA;
-OBS2: Para simplificar, em vez de multiplicarmos cada numeral pela base e elevarmos à posição,
-    podemos visualizar assim: Posição-> 3,2,1,0 || Já elevado-> 8,4,2,1
+  ​	Ex: 11, onze, XI. Base: 10^posição. Ex: 11 = 10^1 + 10^0; (A posição começa da direita para a esquerda);
 
-///Converção de binário para Hexa e Octal
-    -Hexa: Um hexa ocupa 4 bits para cada respectivo numeral. Ou seja, as posições serão 3,2,1,0.
-    -Octal: Ocupa 3 bits. Logo: 2,1,0.
-    -Separamos os bits do binário em grupos para que sejam somados com as posições que tiverem o valor
-        "ligado" = 1. (somar os já elevados); 
-    Ex: 010100 para octal -> 010|100 = 2|4 = 24 em octal;  
+- **Binário ->** Representação em bits. bit = 0 ou 1. Byte = conjunto de 8bits;
 
-///Conversão de Hexa e Octal para binário
-    -Pegamos as posições já elevadas com os respectivos 4 e 3 bits de posição utilizados e somamos os   
-        números necessários para igualar a cada numeral do hexa ou octal. Os números utilizados na soma
-        terão o valor "ligado" = 1, os que não forem utilizados serão "desligados" = 0;
-    Ex: 4,2,1(já elevados)  24(octal) -> 2 = 0,1,0 || 4 = 1,0,0 || Resultado= 010100
-    
+  ​	Base: 2; 0 = Desligado e 1 = Ligado;
+
+- **Também temos Octal e Hexadecimal;**
+
+---
+
+### Converção de base 10 p/ qualquer outra
+
+- Dividir o nº decimal pela base que deseja converter. A divisão deve ser feita sempre inteira e só
+- acaba até chegar em um cociente menor que a base escolhida. Pegue o último cociente e todos os restos e de baixo para cima escreva; 
+          Ex: decimal(61) -> binário. Resultado: 111101 = 61
+              61 | 2
+               1  30 | 2
+                   0   15 | 2
+                        1   7 | 2
+                            1   3 | 2
+                                1   1
+
+---
+
+### Converção de qualquer base p/ decimal
+
+- Só pegar o numeral(bit) multiplicar pela base e elevar a base à posição do numeral no número.
+      Ex: 111101 -> (1*2^5)+(1*2^4)+(1*2^3)+(1*2^2)+(0*2^1)+(1*2^0) = 61 
+      Ex: 9C1 -> (9*16^2)... = 2497
+
+*OBS: A MELHOR COISA É: CONVERTER PARA BINÁRIO, PARA CONVERTER P/ BASE DESEJADA;*
+*OBS2: Para simplificar, em vez de multiplicarmos cada numeral pela base e elevarmos à posição, podemos visualizar assim: Posição-> 3,2,1,0 || Já elevado-> 8,4,2,1*
+
+---
+
+### Converção de binário para Hexa e Octal
+
+- Hexa: Um hexa ocupa 4 bits para cada respectivo numeral. Ou seja, as posições serão 3,2,1,0.
+- Octal: Ocupa 3 bits. Logo: 2,1,0.
+
+Separamos os bits do binário em grupos para que sejam somados com as posições que tiverem o valor "ligado" = 1. (somar os já elevados); 
+
+​	Ex: 010100 para octal -> 010|100 = 2|4 = 24 em octal;  
+
+---
+
+### Conversão de Hexa e Octal para binário
+
+- Pegamos as posições já elevadas com os respectivos 4 e 3 bits de posição utilizados e somamos os números necessários para igualar a cada numeral do hexa ou octal. Os números utilizados na soma terão o valor "ligado" = 1, os que não forem utilizados serão "desligados" = 0;
+      Ex: 4,2,1(já elevados)  24(octal) -> 2 = 0,1,0 || 4 = 1,0,0 || Resultado= 010100
+      
