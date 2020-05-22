@@ -58,6 +58,19 @@ Além disso ele permite que possamos incorporar JS dentro do HTML, como passar o
 
 ---
 
+### Sequelize 
+
+É uma biblioteca javascript que permite a manipulação do banco de dados SQL inteiramente por javascript. 
+
+Ex: INSERT INTO user ........		->		user.Criar({name: ' ', pwd: ' '........});
+
+```shell
+$ npm install --save sequelize
+$ npm install --save mysql2 (biblioteca para se trabalhar com mysql usando sequelize)
+```
+
+---
+
 ### Notes
 
 - **Pastas ->** views -> html || public -> arquivos estáticos(img, css...). O express já vai procurar os arquivos respectivos dentro destas pastas, um padrão de nomenclatura já;

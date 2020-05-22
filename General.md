@@ -31,6 +31,6 @@ author: Arthur P. Braga
 
 - **JSON ->** É simplesmente um formato de documento usado para transferência de dados pela internet. String;
 
-- **VPS vs Hospedagem compartilhada ->** 
+- **VPS vs Hospedagem compartilhada ->** No caso da VPS (Virtual Private Server) você aluga um computador só para seu serviço, ou seja, a empresa de hospedagem vai fornecer uma maquina para uso privado da sua aplicação, e isso permite com que você faça qualquer alteração e configuração do servidor que quiser (tudo do seu jeito). Já a hospedagem compartilhada são várias aplicações (sites...) rodando no mesmo servidor, na mesma máquina da empresa, logo não tem direito de fazer suas próprias configurações;  
 
-- **Deploy ->**  
+- **Deploy ->**  Colocar a aplicação no "ar", em um servidor de produção;

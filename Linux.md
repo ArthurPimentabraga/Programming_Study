@@ -26,12 +26,25 @@ author: Arthur P. Braga
 - pwd -> Exibe o diretório atual;
 
 - mkdir -> criar diretório;
+
 - touch (nome do arquivo)-> criar arquivo;
+
 - autoremove -> remove programas obsoletos;
+
 - autoclean -> limpa o cache do apt;
+
 - cat (nome do arquivo) -> mostra o conteúdo do arquivo de texto no terminal;
+
 - nano (nome do arquivo) -> edita um arquivo de texto no terminal;
+
 - rm -rf (nome do arquivo) -> Remove diretório;
+
 - rm (nome do arquivo) -> Remove arquivo;
+
 - cp -> Copia o conteúdo do arquivo
-- mv (diretório1)(diretório2)-> move arquivos de um diretório para outro 
+
+- mv (arquivos_origem) (local_destino) -> move arquivos de um diretório para outro 
+
+- free -> uso do hd
+
+- df -> Uso da memóra ram
