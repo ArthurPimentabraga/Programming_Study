@@ -147,3 +147,17 @@ id.evento = (parm) => bloco de comandos;
 > .prop() -> para buscar a enviar propriedades para tags html...
 > .toggleClass() -> adiciona e remove classes css de um elemento HTML;
 > .filter() .add() ... -> usados para selecionar quais receberão tais propriedades...;
+
+---
+
+### AJAX (Asynchronous Javascript and XML)
+
+#### What is
+
+São chamadas assincrônas em javascript para a troca de dados (não necessáriamente em XML). Ou seja, não precisa esperar a resposta do servidor. Cria-se um dinamismo muito grande na utilização da aplicação. Não é uma tecnologia, mas sim a combinação de várias, é uma forma de se utilizar o JS. 
+
+Exemplo: Quando digitamos algo em um campo de texto e enquanto digitamos aparecem sugestões para completar nosso texto. Ou no Gmail quando pedimos a listagem de algum tipo de tag, como por exemplo os spans, ele lista sem recarregar a página (atualizações sem refrash). E no Gmail novamente ele salva as mensagens escritas enquanto digitamos (enquanto digitamos ele faz requisições no server para o salvamento).
+
+#### How works
+
+A partir da primeira requisição feita para a página pelo navegador, alguns dados já são enviados para o client-side, e "tratados" no navegador.
