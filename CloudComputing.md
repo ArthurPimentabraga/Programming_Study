@@ -57,3 +57,17 @@ A computação em nuvem oferece uma ampla variedade de serviços, ferramentas e 
 5. Benefícios;
 6. Onde é utilizada hoje;
 7. Previsões para o futuro da Cloud Computing;
+
+---
+
+### Microsoft Azure (PaaS)
+
+A Microsoft Azure é uma plataforma que disponibiliza serviços e ferramentas baseadas nos conceitos da Cloud Computing. Mais especificamente o modelo PaaS, como já foi citado anteriormente. Ou seja, uma plataforma destinada a ajudar no processo de desenvolvimento de uma aplicação, seja ela qual for: mobile, web ou desktop. 
+
+Exemplos de serviços disponibilizados pela Azure:
+
+- Virtual Machine (Máquina virtual): Como se fosse uma duplicata virtual de um computador, ou seja, o desenvolvedor consegue "rodar" qualquer aplicação, instalar qualquer serviço... sem a preocupação com hardware;
+- SQL Database: O desenvolvedor tem acesso total ao banco de dados, e com a vantagem de não precisar se preocupar com o gerenciamento do servidor, hardware, entre outros; 
+- Machine Learning: O desenvolvedor consegue acrescentar algoritmos em Python ou R nessa ferramenta para ajudar em sua aplicação;
+
+Esses foram apenas três das mais diversas ferramentas e serviços disponibilizados pela Microsoft Azure para ajudar no desenvolvimento de um aplicação e projeto.

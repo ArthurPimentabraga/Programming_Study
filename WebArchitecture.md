@@ -37,10 +37,10 @@ esquema://user:pass@host:porta/caminho?query#fragmento
 
 Ex: https://localhost:8080/index.html?id=15
 
-- Esquema: https (protocolo http) -> podendo ser ftp², telnet...;
+- Esquema: https (protocolo http) -> podendo ser FTP², telnet...;
 - Host: localhost -> outro exemplo poderia ser www.google.com;
 - Porta:  8080;
-- Caminha: index.html;
+- Caminho: index.html;
 - Query: id=15 -> neste caso está passando o valor do parâmetro id;
 
 Ex2: ftp://user:pass@server.net:21/documentos/arquivo.zip
@@ -72,11 +72,11 @@ Ex: urn:isbn:978-1-491-91866-1
 
 #### What is
 
-É um dos protocolos de transferência do modelo TCP/IP (UDP no caso do HTTP v3) que permite a transferência de dados da internet. Onde o ambiente cliente, através de uma requisição, receba as informações desejadas (a resposta), em formato de hipertextos, pelo servidor. 
+É um dos protocolos de transferência do modelo TCP/IP (UDP no caso do HTTP v3) que permite a transferência de dados da internet. Onde o ambiente cliente, através de uma requisição, recebe as informações desejadas (a resposta), em formato de hipertextos, pelo servidor. 
 
 #### Methods
 
-
+GET, POST, DELETE, PATCH, PUT...
 
 #### Notes
 

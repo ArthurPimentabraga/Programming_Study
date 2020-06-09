@@ -76,3 +76,4 @@ $ npm install --save mysql2 (biblioteca para se trabalhar com mysql usando seque
 - **Pastas ->** views -> html || public -> arquivos estáticos(img, css...). O express já vai procurar os arquivos respectivos dentro destas pastas, um padrão de nomenclatura já;
 - **Partials ->** Reutilização de código html. Igual se faz em php, ou cria componentes em ionic. É só criar um arquivo .ejs colocar seu html dentro (como um navbar...) e chamar nas suas páginas: <%- include ('diretório da partial')%>;
 - **Body-Parser ->** Essa biblioteca permite receber os dados codificados de formulários, JSON, XML... e decodifica-los em uma estrutura js, retornando eles em: req.body.;
+- **module-alias -> ** Pacote para customizar paths no NodeJS. Acaba com './../../../../';

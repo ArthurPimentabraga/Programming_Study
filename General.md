@@ -17,7 +17,9 @@ author: Arthur P. Braga
 
 - **REST ->** São normas, padrões para a criação de uma API, por exemplo, o tratamento de erros...;
 
-- **API Restful ->** É uma API construída seguindo a arquitetura REST; 
+- **API Restful ->** É uma API construída seguindo regorosamente a arquitetura REST;
+
+- **API RestLike -> ** É uma API que segue parcialmente a arquitetura REST; 
 
 - **Micro Serviços ->** Quando se fala que um sistema trabalha com micro serviços quer dizer que o sistema como um todo é quebrado em pequenos serviços, pequenas tarefas que trabalham individualmente ou em conjunto. Dessa forma facilida trabalhar em cada parte de um sistema muito grande, ou dividir a equipe em cada micro serviço. Porém "gerenciar" esse sistema como um todo se torma muito mais complexo. Um micro serviço pode, ou não, ser uma API;
 
@@ -34,3 +36,7 @@ author: Arthur P. Braga
 - **VPS vs Hospedagem compartilhada ->** No caso da VPS (Virtual Private Server) você aluga um computador só para seu serviço, ou seja, a empresa de hospedagem vai fornecer uma maquina para uso privado da sua aplicação, e isso permite com que você faça qualquer alteração e configuração do servidor que quiser (tudo do seu jeito). Já a hospedagem compartilhada são várias aplicações (sites...) rodando no mesmo servidor, na mesma máquina da empresa, logo não tem direito de fazer suas próprias configurações;  
 
 - **Deploy ->**  Colocar a aplicação no "ar", em um servidor de produção;
+
+- **Design Patter -> ** 
+
+- **Callback -> ** Função de retorno, ou "me liga depois", é uma função que só será executada quando um determinado código chegar ao estado desejado;
