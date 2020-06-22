@@ -62,12 +62,18 @@ Além disso ele permite que possamos incorporar JS dentro do HTML, como passar o
 
 É uma biblioteca javascript que permite a manipulação do banco de dados SQL inteiramente por javascript. 
 
-Ex: INSERT INTO user ........		->		user.Criar({name: ' ', pwd: ' '........});
+Ex: INSERT INTO user ........		->		user.create({name: ' ', pwd: ' '........});
 
 ```shell
 $ npm install --save sequelize
 $ npm install --save mysql2 (biblioteca para se trabalhar com mysql usando sequelize)
 ```
+
+---
+
+### Knex
+
+Show de bola pqp
 
 ---
 
@@ -77,3 +83,6 @@ $ npm install --save mysql2 (biblioteca para se trabalhar com mysql usando seque
 - **Partials ->** Reutilização de código html. Igual se faz em php, ou cria componentes em ionic. É só criar um arquivo .ejs colocar seu html dentro (como um navbar...) e chamar nas suas páginas: <%- include ('diretório da partial')%>;
 - **Body-Parser ->** Essa biblioteca permite receber os dados codificados de formulários, JSON, XML... e decodifica-los em uma estrutura js, retornando eles em: req.body.;
 - **module-alias -> ** Pacote para customizar paths no NodeJS. Acaba com './../../../../';
+- **bcrypt ->** Biblioteca para encriptamento e criação de hash de senha;
+- **Redis -> ** Para salvamento de sessões, para não salvar na memória do servidor;
+- **Middleware -> ** Fica entre a requisição e a resposta, ou seja, podem ser funções que fazem o intermédio entre a requisição e a resposta desejada. Ex: Uma função para verificar se a sessão foi iniciada, se sim ele permite o usuário acessar tal página;

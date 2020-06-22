@@ -40,3 +40,5 @@ author: Arthur P. Braga
 - **Design Patter -> ** 
 
 - **Callback -> ** Função de retorno, ou "me liga depois", é uma função que só será executada quando um determinado código chegar ao estado desejado;
+
+- **Cookies -> **
