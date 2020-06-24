@@ -73,7 +73,19 @@ $ npm install --save mysql2 (biblioteca para se trabalhar com mysql usando seque
 
 ### Knex
 
-Show de bola pqp
+**Migrations:**
+
+```shell
+npx knex migrate:make migration_name
+npx knex migrate:latest
+```
+
+**Seeds:**
+
+```shell
+npx knex seed:make sedd_name
+npx knex seed:run
+```
 
 ---
 
@@ -86,3 +98,4 @@ Show de bola pqp
 - **bcrypt ->** Biblioteca para encriptamento e criação de hash de senha;
 - **Redis -> ** Para salvamento de sessões, para não salvar na memória do servidor;
 - **Middleware -> ** Fica entre a requisição e a resposta, ou seja, podem ser funções que fazem o intermédio entre a requisição e a resposta desejada. Ex: Uma função para verificar se a sessão foi iniciada, se sim ele permite o usuário acessar tal página;
+- **SPF -> ** Structured Page Fragments

@@ -19,3 +19,11 @@ git add -i -> opção interativa para add arquivos modificados no commit.
 
 git reset -- -> reseta o repositório para o estado do último commit;
 ```
+
+- Caso esqueça de fazer pull: 
+
+```shell
+git stash save
+git stash apply
+```
+
