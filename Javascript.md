@@ -74,7 +74,7 @@ id.evento = (parm) => bloco de comandos;
   
   
   
-- var and let -> A diferença é que uma variável 'var' é visível para toda função (e somente dentro dela), já uma variável 'let' só é visível dentro de um bloco de comandos, como por exemplo um laço de repetição;  
+- var and let -> A diferença é que uma variável 'var' tem escopo global e local. E a variável 'let' tem escopo global, local e bloco. Ou seja, o 'let', se declarado dentro de um bloco (if, loop...), só é válido dentro dele.
 
 ----------------------------------------------------------------------------------------------------------------------------
 
