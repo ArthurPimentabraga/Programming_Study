@@ -68,7 +68,7 @@ Ex: urn:isbn:978-1-491-91866-1
 
 ---
 
-###  Protocol HTTP - Hypertext Transfer Protocol
+### Protocol HTTP - Hypertext Transfer Protocol
 
 #### What is
 
@@ -84,18 +84,10 @@ No corpo da resposta é informado o "code status", por exemplo o 404, 200...
 
 E existe um padrão para os propósitos: https://http.cat/
 
-| Código |    Propósito     |
-| :----: | :--------------: |
-|  1xx   |  informacional   |
-|  2xx   |     Sucesso      |
-|  3xx   | Redirecionamento |
-|  4xx   | Erro no cliente  |
-|  5xx   | Erro no servidor |
-
-
-
-
-
-
-
- 
+| Código | Propósito        |
+|:------:|:----------------:|
+| 1xx    | informacional    |
+| 2xx    | Sucesso          |
+| 3xx    | Redirecionamento |
+| 4xx    | Erro no cliente  |
+| 5xx    | Erro no servidor |

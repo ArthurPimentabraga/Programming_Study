@@ -9,21 +9,13 @@ author: Arthur P. Braga
 
 - **Framework ->** É uma "Super Biblioteca", uma abstração de códigos e conjuntos de códigos feito para realizar seus projetos nele. Porém para ser utilizado, o desenvolvedor necessita saber como ele funciona, seguir suas regras, o sistema tem que ser desenvolvido pensando nele;
 
-  
-
-- **path ->** É uma variável de ambiente no sistema operacional, ou seja, define uma variável para um diretório, podendo assim acessar um executável, por exemplo, sem ter que indicar o caminho completo;
-
-  
+- 
 
 - **REST ->** São normas, padrões para a criação de uma API, por exemplo, o tratamento de erros...;
 
-- **API Restful ->** É uma API construída seguindo regorosamente a arquitetura REST;
-
-- **API RestLike -> ** É uma API que segue parcialmente a arquitetura REST; 
+- **Restful ->** É uma API construída seguindo a arquitetura REST;
 
 - **Micro Serviços ->** Quando se fala que um sistema trabalha com micro serviços quer dizer que o sistema como um todo é quebrado em pequenos serviços, pequenas tarefas que trabalham individualmente ou em conjunto. Dessa forma facilida trabalhar em cada parte de um sistema muito grande, ou dividir a equipe em cada micro serviço. Porém "gerenciar" esse sistema como um todo se torma muito mais complexo. Um micro serviço pode, ou não, ser uma API;
-
-  
 
 - **Diferença int e Interge ->** O 'int' é a forma primitiva da variável que representa somente um valor. Já o 'Interger' é uma classe Wrapper, ou seja, representa um tipo primitivo, no caso o 'int'. Já que estamos tipando uma variável com uma classe, podemos usar métodos para o nosso inteiro;
 
@@ -37,8 +29,8 @@ author: Arthur P. Braga
 
 - **Deploy ->**  Colocar a aplicação no "ar", em um servidor de produção;
 
-- **Design Patter -> ** 
+- **Design Patter ->** 
 
-- **Callback -> ** Função de retorno, ou "me liga depois", é uma função que só será executada quando um determinado código chegar ao estado desejado;
+- **Callback ->** Função de retorno, ou "me liga depois", é uma função que só será executada quando um determinado código chegar ao estado desejado;
 
-- **Cookies -> **
+- **Cookies ->** 

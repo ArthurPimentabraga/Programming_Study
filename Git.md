@@ -3,7 +3,7 @@ title: Git
 author: Arthur P. Braga
 ---
 
-### Git Commands    
+### Git Commands
 
 ```shell
 --amend -> quando se deseja modificar a mens do commit. (Escrever outro commit com a mens certa colocando esse comando no final);
@@ -26,4 +26,3 @@ git reset -- -> reseta o repositório para o estado do último commit;
 git stash save
 git stash apply
 ```
-

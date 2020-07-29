@@ -48,3 +48,43 @@ author: Arthur P. Braga
 - free -> uso do hd
 
 - df -> Uso da memóra ram
+
+---
+
+### Maratona Linux
+
+##### Estrutura (diretórios)
+
+**/boot ->** Tudo relacionado ao boot do sistema;
+
+**/bin ->** Binários do sistema. Todos os path de ambiente...
+
+**/etc ->** Todos os arquivos de configuração do sistema (host e hostname, por exemplo);
+
+**/dev ->** Representa todos os dispositivos conectados ao pc, pendrive, hd... contém arquivos essenciais para tais dispositivos;
+
+**/home ->** Arquivos pessoais, documentos, fotos, vídeos...
+
+**/lib ->** Contém as bibliotecas do sistema;
+
+**/lost+found ->** "Achados e perdidos", qualquer arquivo corrompido encontrado será enviado para esse diretório;
+
+**/media ->** Mídias removíveis;
+
+**/mnt ->** Montagem de sistemas temporários;
+
+**/opt ->** Pacotes opcionais. Pacotes que não são padrões do SO. Ex: Google Chrome;
+
+**/proc ->** Contém info do Kernel e processos que estão rodando;
+
+**/root ->** Diretório home para o super usuário;
+
+**/run ->** Arquivos temp de aplicativos;
+
+**/srv ->** Serviços de dados
+
+**/tmp ->** Arquivos temporários;
+
+**/usr ->** Arquivos e aplicativos usados pelo usuário;
+
+**/var ->** Arquivos de dados variáveis. Arquivos de log;

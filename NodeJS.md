@@ -20,11 +20,16 @@ Tem um ecossistema muito grande, ou seja, tem biblioteca para praticamente tudo 
 ### General
 
 - Módulos -> É uma forma de se quebrar o código em vários arquivos, organizando-o para que não fique tudo junto em um único grande arquivo. A forma de se utilizar se parece com o instanciamento de classes.
->1º Precisa exportar as functions que quer utilizar no arquivo principal. 
->		module.exports = function ou = {function, function} para mais de uma função;
->2º Depois é só receber essa exportação em uma variável no arquivo principal.
->		var nome = requice("local do arquivo");
->3º E Se quiser acessar uma function expecífica -> nome.function;
+  
+  > 1º Precisa exportar as functions que quer utilizar no arquivo principal. 
+  > 
+  >        module.exports = function ou = {function, function} para mais de uma função;
+  > 
+  > 2º Depois é só receber essa exportação em uma variável no arquivo principal.
+  > 
+  >        var nome = requice("local do arquivo");
+  > 
+  > 3º E Se quiser acessar uma function expecífica -> nome.function;
 
 - Só para lembrar como o node funciona, coloquei esse pequeno código conectando no módulo 'http' do node (o que é bem 'cru', o express é mais robusto) e criando um servidor node usando a porta 8080:
 
@@ -58,11 +63,11 @@ Além disso ele permite que possamos incorporar JS dentro do HTML, como passar o
 
 ---
 
-### Sequelize 
+### Sequelize
 
 É uma biblioteca javascript que permite a manipulação do banco de dados SQL inteiramente por javascript. 
 
-Ex: INSERT INTO user ........		->		user.create({name: ' ', pwd: ' '........});
+Ex: INSERT INTO user ........        ->        user.create({name: ' ', pwd: ' '........});
 
 ```shell
 $ npm install --save sequelize
@@ -94,8 +99,8 @@ npx knex seed:run
 - **Pastas ->** views -> html || public -> arquivos estáticos(img, css...). O express já vai procurar os arquivos respectivos dentro destas pastas, um padrão de nomenclatura já;
 - **Partials ->** Reutilização de código html. Igual se faz em php, ou cria componentes em ionic. É só criar um arquivo .ejs colocar seu html dentro (como um navbar...) e chamar nas suas páginas: <%- include ('diretório da partial')%>;
 - **Body-Parser ->** Essa biblioteca permite receber os dados codificados de formulários, JSON, XML... e decodifica-los em uma estrutura js, retornando eles em: req.body.;
-- **module-alias -> ** Pacote para customizar paths no NodeJS. Acaba com './../../../../';
+- **module-alias ->** Pacote para customizar paths no NodeJS. Acaba com './../../../../';
 - **bcrypt ->** Biblioteca para encriptamento e criação de hash de senha;
-- **Redis -> ** Para salvamento de sessões, para não salvar na memória do servidor;
-- **Middleware -> ** Fica entre a requisição e a resposta, ou seja, podem ser funções que fazem o intermédio entre a requisição e a resposta desejada. Ex: Uma função para verificar se a sessão foi iniciada, se sim ele permite o usuário acessar tal página;
-- **SPF -> ** Structured Page Fragments
+- **Redis ->** Para salvamento de sessões, para não salvar na memória do servidor;
+- **Middleware ->** Fica entre a requisição e a resposta, ou seja, podem ser funções que fazem o intermédio entre a requisição e a resposta desejada. Ex: Uma função para verificar se a sessão foi iniciada, se sim ele permite o usuário acessar tal página;
+- **SPF ->** Structured Page Fragments
