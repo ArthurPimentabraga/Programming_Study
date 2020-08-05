@@ -46,8 +46,6 @@ A computação em nuvem oferece uma ampla variedade de serviços, ferramentas e 
 
 - A ideia da computação em nuvem pode ter surgido lá na década de 60 com John McCarthy e o paradigma Time-Sharing(computação por tempo compartilhado), quando os recursos computacionais podiam ser compartilhados em vários lugares (ligados por um terminal) e só pagavam pelo que utilizou; 
 
-
-
 **Possíveis tópicos para o seminário (podendo juntar alguns):**
 
 1. O que é Cloud Computing;

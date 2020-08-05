@@ -3,14 +3,14 @@ title: Java
 author: Arthur P. Braga
 ---
 
-###  Java Compilation
+### Java Compilation
 
 O programa Java é compilado por uma forma intermediária denominada bytecode, que é interpretada pela JVM (Máquina Virtuai Java - já está junto com JDK). Por isso tal linguagem é tão independente de plataforma,  pois qualquer sistema que tiver uma JVM é capaz de rodar Java;
 
 1. O compilador do Java (javac - tbm vêm no JDK) converte o código fonte (arquivo .java) em bytecodes  (arquivos .class);
-2.  A JVM armazena os bytecodes na memória RAM;
-3.  Enquanto os bytecodes são executados, os mesmos são verificados para certificar que não há violação de segurança Java. O Java certifica que os programas Java que chegam pela rede não vão danificar os arquivos ou sistema(como vírus worms);
-4.  A JVM executa os bytecodes no programa;
+2. A JVM armazena os bytecodes na memória RAM;
+3. Enquanto os bytecodes são executados, os mesmos são verificados para certificar que não há violação de segurança Java. O Java certifica que os programas Java que chegam pela rede não vão danificar os arquivos ou sistema(como vírus worms);
+4. A JVM executa os bytecodes no programa;
 
 **Bytecodes ->** representam as tarefas a serem executadas na execução do programa;
 
@@ -29,4 +29,3 @@ O programa Java é compilado por uma forma intermediária denominada bytecode, q
 Arrays.asList() -> Converte um array em uma lista;
 .contains(x) -> Verifica se contém o x em uma lista, por exemplo;  
 ```
-
