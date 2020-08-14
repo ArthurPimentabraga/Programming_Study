@@ -55,25 +55,18 @@ id.evento = (parm) => bloco de comandos;
 
 - **NaN ->** "Not a Number", ou seja, se tentar fazer uma operação com uma letra, por exemplo, retornará NaN; 
 
-  
-
 - " " e ' '-> Qualquer uma, porém se for juntar html com js, sempre usar uma para cada. Precisa ter essa diferença; 
 
-  
-
 - Acento grave -> 
-
+  
   > 1º uso: usa para placeholder ${} (placeholder é para incluir var dentro de um string por ex);
-  >
+  > 
   > 2º uso: quando queros dar quebra de linha para uma string, com `` o "Enter" funciona;
 
-  
-
 - === -> Operador de igualdade restrita, ou seja, ele verifica se os dois valores são idênticos,
+  
       em valor e no tipo da variável. Diferente do == que só verifica o valor;
-  
-  
-  
+
 - var and let -> A diferença é que uma variável 'var' tem escopo global e local. E a variável 'let' tem escopo global, local e bloco. Ou seja, o 'let', se declarado dentro de um bloco (if, loop...), só é válido dentro dele.
 
 ----------------------------------------------------------------------------------------------------------------------------
@@ -90,25 +83,19 @@ id.evento = (parm) => bloco de comandos;
 
 - DOM é um conjunto de objetos do navegador que nos permite ter acesso aos componentes internos do nosso site, sejam eles: tags HTML, a localização atual no meu site(em que página o usuário está no momento), o histórico de navegação no site...
 
-  
-
 - O acesso à tais componentes é feito de diversas forma, só é necessário respeitar a hierarquia da árvore DOM(os componentem tem uma hierarquia, ou seja, a raiz é "windows", que tem vários filhos como "location", "history", "Document"... Document por sua vez tem seu filho "HTML", que por sua vez tem seus filhos "HEAD" e "BODY", que tem seus filhos que são as tag html....);
 
-  
-
 - Em "Document" o acesso pode ser feito por nome das tags, id, class, querySelectors...
-
+  
   - Ex: windows.document.QuerySelector('div#menu'); Ele vai selecionar a div que contém o id == menu;
   - Ex: windows.document.getElementsById('menu'); Ele vai selecionar o elemento que contém o id == menu;
   - Ex: windows.location.href; Captura a URL atual;
 
-  
-
 - Eventos DOM é tudo o que pode acontecer com um elemento específico. 
-
+  
   - Ex: quando o mouse passar em cima desse elemento(click, mouseenter, mouseout, mousemove)...
 
-```    javascript
+```javascript
 .addEventListener('event', function); -> Cria o evento para determinado elemento sem ter que setar no HTML; 
 ```
 
@@ -124,14 +111,15 @@ id.evento = (parm) => bloco de comandos;
 ### Others
 
 - Uma boa técnica é armazenar um dado localmente no navegador do usuário, desta forma pode se criar "interações" que facilitam a vida do mesmo, como deixar armazenado seu login para que todas vez que for logar no site já estar preenchido para ele.
-
+  
   - Existem duas formas de armazenamento local 
-
+  
   ```javascript
   localStorage.getItem('chave'), setItem('chave',valor), removeItem('chave') ou clear() 
-  	(recuperar, armazenar, remover e limpar todos os dados, respectivamente);
+      (recuperar, armazenar, remover e limpar todos os dados, respectivamente);
   sessionStorage.// // // //
   ```
+  
   - A diferença é que localStorage salva por tempo indeterminado, já o session salva somente naquela sessão;
 
 ---
@@ -142,7 +130,7 @@ id.evento = (parm) => bloco de comandos;
 - Simplifica muito a vida do programador, pois além de ser uma biblioteca, com muitos métodos prontos... já existe muito conteúdo pronto na internet, muitas funcionalidades e componentes já criados que você pode fazer uso.
 
 > document.getElementbyId = $(document or css selectors...)
->
+> 
 > .append() -> para criar html;
 > .prop() -> para buscar a enviar propriedades para tags html...
 > .toggleClass() -> adiciona e remove classes css de um elemento HTML;

@@ -1,8 +1,42 @@
 ---
-title: Cálculo 1 (Disciplina PUC-Minas)
+title: Cálculo 1 (PUC-Minas - 2º Período)
 author: Arthur P. Braga
 ---
 
 ### Notes
 
-1ª Aula -> Potenciação, Radiciação, Produtos Notáveis (a²-2ab+b²), Racionalização e Linguagem de intervalos (conjuntos numéricos);
+**1ª Aula ->** (Revisão Ensino Médio) -> Potenciação, Radiciação, Produtos Notáveis (a²-2ab+b²), Racionalização e Linguagem de intervalos (conjuntos numéricos);
+
+---
+
+**2ª Aula ->** Noções básicas de **funções** (relação de dependência, lembrar da conta de luz)
+
+    X -> Conjunto Domínio (x é variável independente)
+
+    Y -> Conjunto Imagem ("os pares", variável dependente), contradomínio todos os valores de Y; 
+
+    *Para ser função toda variável dependênte precisa de relacionar com uma variável independente.*
+
+- Intercepto de X -> (X, 0)
+
+- Intercepto de Y -> (0, Y)
+
+- Crescimento e decrescimento de uma função.
+
+---
+
+**3ª Aula ->** Domínio de uma função real - Restrições || Restrições de domínio || Função composta e inversa (Só pra usar nas derivadas, não vai ser cobrada em prova)
+
+- Domínio = Real (D = R)
+  
+  - Todas as polinomiais;
+  
+  - Todas as funções com raiz com índice ímpar;
+
+- Função Injetora -> Cada elemento de X tem um único par em Y. E pode sobrar em Y;
+
+- Função Sobrejetora -> Não sobra elemento em Y;
+
+- Função Bijetora -> Injetora e Bijetora ao mesmo tempo. Cada elemento de X tem um único par em Y e não sobra elementos em Y.
+
+- **Taxa de variação média ->** deltaY / deltaX = y2-y1 / x2-x1
