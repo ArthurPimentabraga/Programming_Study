@@ -3,6 +3,8 @@ title: Introdução à Sistemas Inteligentes (Puc-Minas - 2º Período)
 author: Arthur P. Braga
 ---
 
+## Unity 1
+
 ### What is
 
 Um algoritmo pode ser considerado uma inteligencia artificial no momento em que começa a tomar decisões, baseado em dados, de alto nível. Por que se não todo algoritmo de tomada de decisão poderia ser considerado uma IA.
@@ -27,6 +29,20 @@ Existem 4 paradigmas que definem como uma IA pode ser criada e desenvolvida. Atr
 
 ### Applications and techniques
 
+##### Jogos Digitais
 
+- **Estados finitos ->** Pacman, não é um exemplo de sistema inteligente, porque tem um padrão de comportamento dos fantasmas (estados de comportamento finitos);
 
+- As dificuldades do jogo podem se **adaptar ao nível do jogador** para ter uma crescente dificuldade na mesma proporção que o jogador fica melhor no jogo 
 
+- **Dynamic Scripting ->** O sistema cria uma séria de "regras" (scripts) e testa os mesmos com o jogador, se determinado script teve uma resposta positiva, ele o usa mais vezes. Ex: Em um jogo de luta se o script de *atacar e recuar* quando o jogador está no meio da tela funcionar, ele usa esse script mais vezes (esse script ganhou pontos);
+
+- **Previsão ->** O sistema pode estudar seus padrões de jogabilidade para, por exemplo, saber aonde você irá chutar no fifa.
+
+##### Música
+
+Possibilidades:
+
+Descobrir quais musicas você pode gostar de ouvir || Reconhecimento de musica || Composição de musica (Uma IA já criou o final de uma sinfonia inacabada) || Você canta a musica e o app reconhece a musica || Até ajustar o timbre da voz do cantor para ficar afinado
+
+##### Saúde

@@ -40,3 +40,25 @@ author: Arthur P. Braga
 - Função Bijetora -> Injetora e Bijetora ao mesmo tempo. Cada elemento de X tem um único par em Y e não sobra elementos em Y.
 
 - **Taxa de variação média ->** deltaY / deltaX = y2-y1 / x2-x1
+
+---
+
+**4ª Aula->** Início de Funções e Modelos - Funções Polinomiais 
+
+- **Função Polinomiais:** O grau da função corresponde ao grau do polinômio, ou seja, depende do grau do maior expoente;
+  
+  - 1º Grau: Y= f(x) = ax+b
+    
+    - a -> coeficiente angular
+    
+    - b -> coeficiente linear
+  
+  - 2º Grau: Y= f(x) = ax²+bx+c    com a diferente de 0
+    
+    - Se a > 0 a parábola vai ser para cima, se a < 0 para baixo;
+
+- **Função Constante:** 
+
+---
+
+**5ª Aula ->** Continuidade de funções polinomiais

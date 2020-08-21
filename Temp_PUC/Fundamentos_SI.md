@@ -19,16 +19,16 @@ author: Arthur P. Braga
 
 **3ª Aula ->** UPS (como a TI ajudou nessa empresa - Atividade) || Montagem de grupos
 
-    UPS -> Logistica (Aérea e terrestre)
+---
 
-        Concorrentes: Fedex e Airborne Express
+**4ª Aula ->** Tipos de organizações || Gestão centralizada e descentralizada || Estrutura formal e informal || Estrutura Funcional (Divisional e Matricial)
 
-        Tecnologias: Etiquetas com as info - Melhor rota - Sensores nos veículos (como economizou gasolina?) - DIAD (computador de mão, acessa as redes, rotas, infos dos pacotes) - Aplicação de gerenciamento de estoque
+- Vertical: hierarquia
 
-1. Quais são as entradas, os processamentos e as saídas no sistema de rastreamento de pacotes da UPS?
+- Horizontal: departamentalização
 
-2. Quais tecnologias são utilizadas pela UPS? Como elas estão relacionadas à estratégia de negócios da empresa?
+MPEs realizam a informatização buscando a melhoria da qualidade das informações, redução de custos e modernização.
 
-3. Quais objetivos organizacionais estratégicos são visados pelos sistemas de informação da UPS?
+---
 
-4. O que aconteceria se os sistemas de informação da UPS não estivessem disponíveis
+**5ª Aula ->** Conversa com ex-aluno sobre trabalho fora do Brasil
