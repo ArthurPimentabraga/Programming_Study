@@ -27,14 +27,12 @@ book: Organização estruturada de computadores - Tanenbaum
   - Vantagens: Execução mais rápida! || Uma vez traduzido, o código original pode ser descartado da memória, ficando somente o programa objeto e podendo executar o programa diretamente. 
   
   - Desvantagens: Não portabilidade do código executável entre as diferentes plataformas || Para ser utilizado o código precisa passar por muitos níveis de compilação || Processo de correção ou alteração do código requer que ele seja novamente recompilado.
-    
-    
+
+- Montadores: 
   
-  - Montadores: 
-    
-    - Linguagem de montagem = Assembly || Montador = Assembler;
-  
-  - Compiladores: A única diferença é o uso de linguagem de alto nível (Java, C#) em vez de linguagem de montagem (Assembly)
+  - Linguagem de montagem = Assembly || Montador = Assembler;
+
+- Compiladores: A única diferença é o uso de linguagem de alto nível (Java, C#) em vez de linguagem de montagem (Assembly)
   
   **Compilação** (traduzir p/ linguagem de máquina), **Ligação** (ligá-lo a vários outros programas em linguagem de máquina dos quais ele dependa), **Carga** (Carrega-lo na memória principal) e **Execução** (Alocar o processador e transferir o controle dele para o programa a ser executado)
 
@@ -44,15 +42,13 @@ book: Organização estruturada de computadores - Tanenbaum
   
   - Desvantagens: Execução mais lenta do programa || Necessita sempre ser lido o código original para ser executado;
 
-
-
 *Ciclo de instrução: Busca e executa. Saber interpretar uma instrução em hexa, por exemplo - Tabela OP CODE*
 
-
-
-
-
 pergunta: O que seria exatamente o programa objeto gerado pelos tradutores? O programa já convertido para a linguagem de máquina, a linguagem alvo?
+
+---
+
+**4ª Aula ->** Conversão de bases || Introdução à sistemas lógicos (portas lógicas...)
 
 ---
 

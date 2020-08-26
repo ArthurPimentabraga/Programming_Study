@@ -32,3 +32,14 @@ MPEs realizam a informatização buscando a melhoria da qualidade das informaç�
 ---
 
 **5ª Aula ->** Conversa com ex-aluno sobre trabalho fora do Brasil
+
+---
+
+**6ª Aula ->** Funções Empresariais (4 em específico) || Níveis de uma organização e tomadas de decisão || Organograma || Buy or Build || Tipos de sistemas de informação empresariais (SPTs, SIGs, SADs...) || Função do SI nas empresas
+
+- Financeiro → Patrimônio Líquido = Ativos - passivos;
+- Recursos Humanos → Toda a administração de pessoas;
+- Vendas e marketing → Todo esse processo (embalagem, concorrentes...) e os 4ps do marketing. Processos do marketing;
+- Produção-Operação → SCM, gestão fiscal...
+
+*Um processo de negócio é um conjunto de atividades relacionadas que define como tarefas organizacionais vão ser executadas.*

@@ -47,18 +47,34 @@ author: Arthur P. Braga
 
 - **Função Polinomiais:** O grau da função corresponde ao grau do polinômio, ou seja, depende do grau do maior expoente;
   
-  - 1º Grau: Y= f(x) = ax+b
+  - 1º Grau: Y= f(x) = ax+b ou função Linear
     
     - a -> coeficiente angular
     
     - b -> coeficiente linear
   
-  - 2º Grau: Y= f(x) = ax²+bx+c    com a diferente de 0
+  - 2º Grau: Y= f(x) = ax²+bx+c ou função Quadrática
     
     - Se a > 0 a parábola vai ser para cima, se a < 0 para baixo;
+  
+  - 3º Grau: Y= f(x) = ax³+bx²+cx+d ou função Cúbica
+  
+  - 4º Grau: Y= f(x) = ax4+bx³+cx²+dx+e
 
 - **Função Constante:** 
 
 ---
 
 **5ª Aula ->** Continuidade de funções polinomiais
+
+**6ª Aula ->** Correção de exercício || Início de outra lista de funções
+
+**7ª Aula ->** Continuidade de funções polinomiais
+
+- **Funções Racionais:** Y= f(x) = P(x) / Q(x) onde esses dois são polinômios.
+  
+  - D = R - {0} - pois Q(x) não pode ser 0 (denominador não pode ser 0)
+  
+  - Gráfico = hipérbole
+
+- **Funções Algébricas:** Dada por uma operação algébrica (adição, subtração...). Geralmente aparecem como raizes;
