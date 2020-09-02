@@ -30,6 +30,6 @@ public static int mult(int n1, int n2){
 }
 ```
 
-
-
 ---
+
+**7ª Aula ->** Busca binária (pesquisa sequencial) e debate te atividades

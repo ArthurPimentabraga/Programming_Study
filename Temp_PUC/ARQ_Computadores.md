@@ -52,6 +52,13 @@ pergunta: O que seria exatamente o programa objeto gerado pelos tradutores? O pr
 
 ---
 
+**5ª Aula ->** Continuação de sistemas numéricos (*conversão e operações de bases*) **Conversão de nº decimais** || Sinal Magnitude || Complemento-2 (sinais positivos e negativos) || Padrão IEEE 754
+
+- Foram feitos os exercícios 1,2 e 3 de ARQ em aula
+- **Exercícios 1, 4 e 9 ctz que vai cair na prova (2,6 e 7)**
+
+---
+
 ### Meanings
 
 - **Barramento:** É um **caminho elétrico** comum que liga e permite a comunicação entre dispositivos de hardware (processador, memórias, controladores...). Grupos funcionais dos barramentos: dados, endereços e controle; 

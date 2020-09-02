@@ -46,3 +46,31 @@ Possibilidades:
 Descobrir quais musicas você pode gostar de ouvir || Reconhecimento de musica || Composição de musica (Uma IA já criou o final de uma sinfonia inacabada) || Você canta a musica e o app reconhece a musica || Até ajustar o timbre da voz do cantor para ficar afinado
 
 ##### Saúde
+
+Sistemas para contribuir no diagnóstico médico || Monitoramento de paciente (sem precisar estar na UTI, por exemplo) || "Alerta" de epidemia || Visão computacional é muito utilizada para tudo isso (auxilia muito em laboratório também...)
+
+##### Setor Financeiro
+
+Análise do fluxo de caixa da empresa... para saber se ainda **gera valor**, se compensa continuar como sócio... (Técnica: Buy & Hold) || (Técnica: Day Trade) Comprar na baixa e vender na alta, ai tenta fazer uma análise para ver quando vai crescer e quando vai cair || Análise de risco de um cliente no banco, por exemplo
+
+##### Transporte Aéreo
+
+Aeronaves autonomas (Controle do pouco e decolagem) || Redução de custos (config de malha aérea...) || Atrasos e cancelamentos de voos (previsão de atrasos para tomada de decisão antecipada) || Conforto e atendimento (assistentes virtuais, reconhecimento facial para alinhar o passageiro com sua bagagem) || Segurança (Analisar dados de voo para prever situações criticas, identificar falhas no sistema...)
+
+##### Computação Evolutiva
+
+Ramo que utiliza a evolução biológica para fazer uma evolução computacional.<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/algoritmoGenetico.png" alt="">
+
+##### Aprendizado de máquina
+
+- **Online:** A IA está aprendendo enquanto faz uma tarefa. Por exemplo: um carro autonomo está "dirigindo" e encontra um pedestre atravessando fora da faixa, e após isso diminui sua velocidade;
+
+- **Offline:** Aprende e depois vai para o funcionamento. Aprende com dados primeiro;
+
+- **Supervisionado:** Aprende com exemplo, ou seja, "treina" a IA com base em um conjunto de dados. Desse modo é possível ela analisar os padrões de comportamento para fazer previsões, por exemplo. O problema é que nesse modelo a IA fica limitada a esses dados, e a um cenário onde há algum tipo de padrão. Por isso a importância de escolher o modelo certo para o cenário certo.
+  
+  - Criação de modelos -> Uso dos modelos -> Sistemas inteligentes
+
+- **Não supervisionado:** E se não houver padrões? Ai pode ser usada a técnica de recompensas (freedbacks), ou seja, a IA faz determinada ação e se aquilo ajudou, se foi positivo ela recebe esse feedback para fazer isso com mais frequência. Ex: O robô aspirador, se em um local da casa estiver mais sujo todos os dias, ele vai passar la com mais frequência.
+
+Técnicas de aprendizagem: Matemática e Estatísticas - Rede Neural - Deep Learning (conjunto de redes neurais) 

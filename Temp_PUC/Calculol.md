@@ -78,3 +78,15 @@ author: Arthur P. Braga
   - Gráfico = hipérbole
 
 - **Funções Algébricas:** Dada por uma operação algébrica (adição, subtração...). Geralmente aparecem como raizes;
+
+---
+
+**8ª Aula ->** Correção de atividade || Funções Exponenciais
+
+- **Função Exponencial:** Y= f(x) = b.a^x+c
+  
+  - Ver vídeo aula :)
+
+---
+
+**9ª Aula ->** Continuação de função exponencial
