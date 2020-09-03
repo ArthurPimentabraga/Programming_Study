@@ -33,3 +33,19 @@ public static int mult(int n1, int n2){
 ---
 
 **7ª Aula ->** Busca binária (pesquisa sequencial) e debate te atividades
+
+---
+
+**8ª Aula ->** Introdução a análise de complexidade de algoritmos
+
+- Regras precisas;
+
+- Cobrir todos os pontos de parada;
+
+- Consumir o menor nº de recurso no menor tempo possível;
+
+*Técnica de força bruta pra preencher um sudoku levaria 750.000.000 anos*
+
+Para saber o custo de um algoritmo você executa um programa e mede o tempo.
+
+**Passos:** Para que serve o algoritmo -> Qual a operação mais importante -> Quanto tempo se gasta?

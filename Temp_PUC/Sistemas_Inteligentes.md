@@ -35,7 +35,7 @@ Existem 4 paradigmas que definem como uma IA pode ser criada e desenvolvida. Atr
 
 - As dificuldades do jogo podem se **adaptar ao nível do jogador** para ter uma crescente dificuldade na mesma proporção que o jogador fica melhor no jogo 
 
-- **Dynamic Scripting ->** O sistema cria uma séria de "regras" (scripts) e testa os mesmos com o jogador, se determinado script teve uma resposta positiva, ele o usa mais vezes. Ex: Em um jogo de luta se o script de *atacar e recuar* quando o jogador está no meio da tela funcionar, ele usa esse script mais vezes (esse script ganhou pontos);
+- **Dynamic Scripting ->** O sistema cria uma série de "regras" (scripts) e testa os mesmos com o jogador, se determinado script teve uma resposta positiva, ele o usa mais vezes. Ex: Em um jogo de luta se o script de *atacar e recuar* quando o jogador está no meio da tela funcionar, ele usa esse script mais vezes (esse script ganhou pontos);
 
 - **Previsão ->** O sistema pode estudar seus padrões de jogabilidade para, por exemplo, saber aonde você irá chutar no fifa.
 
@@ -55,13 +55,15 @@ Análise do fluxo de caixa da empresa... para saber se ainda **gera valor**, se 
 
 ##### Transporte Aéreo
 
-Aeronaves autonomas (Controle do pouco e decolagem) || Redução de custos (config de malha aérea...) || Atrasos e cancelamentos de voos (previsão de atrasos para tomada de decisão antecipada) || Conforto e atendimento (assistentes virtuais, reconhecimento facial para alinhar o passageiro com sua bagagem) || Segurança (Analisar dados de voo para prever situações criticas, identificar falhas no sistema...)
+Aeronaves autônomas (Controle do pouso e decolagem) || Redução de custos (config de malha aérea...) || Atrasos e cancelamentos de voos (previsão de atrasos para tomada de decisão antecipada) || Conforto e atendimento (assistentes virtuais, reconhecimento facial para alinhar o passageiro com sua bagagem) || Segurança (Analisar dados de voo para prever situações criticas, identificar falhas no sistema...)
 
-##### Computação Evolutiva
+---
+
+### Computação Evolutiva
 
 Ramo que utiliza a evolução biológica para fazer uma evolução computacional.<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/algoritmoGenetico.png" alt="">
 
-##### Aprendizado de máquina
+### Aprendizado de máquina
 
 - **Online:** A IA está aprendendo enquanto faz uma tarefa. Por exemplo: um carro autonomo está "dirigindo" e encontra um pedestre atravessando fora da faixa, e após isso diminui sua velocidade;
 
@@ -74,3 +76,15 @@ Ramo que utiliza a evolução biológica para fazer uma evolução computacional
 - **Não supervisionado:** E se não houver padrões? Ai pode ser usada a técnica de recompensas (freedbacks), ou seja, a IA faz determinada ação e se aquilo ajudou, se foi positivo ela recebe esse feedback para fazer isso com mais frequência. Ex: O robô aspirador, se em um local da casa estiver mais sujo todos os dias, ele vai passar la com mais frequência.
 
 Técnicas de aprendizagem: Matemática e Estatísticas - Rede Neural - Deep Learning (conjunto de redes neurais) 
+
+---
+
+### Agentes Inteligentes & IA na Sociedade
+
+*O objetivo direciona a racionalidade - agente racional percebe e age sobre o ambiente.*
+
+O **agente** percebe o mundo, através de sensores, e produz uma ação através de atuadores.
+
+**Exemplo de sensores e atuadores:** Em um programa de diagnóstico médico, por exemplo, o sensor seria o teclado, por onde o médico entraria com os dados, e o atuador seria a tela do computador exibindo uma mensagem na tela.
+
+**Sistemas de regras - Exemplo**: se a água do chuveiro estiver muito fria -> aumentar a temperatura
