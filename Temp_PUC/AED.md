@@ -46,6 +46,24 @@ public static int mult(int n1, int n2){
 
 *Técnica de força bruta pra preencher um sudoku levaria 750.000.000 anos*
 
-Para saber o custo de um algoritmo você executa um programa e mede o tempo.
+Para saber o custo de um algoritmo você pode executar um programa e medir o tempo.
 
-**Passos:** Para que serve o algoritmo -> Qual a operação mais importante -> Quanto tempo se gasta?
+**Passos:** Para que serve o algoritmo -> Qual a operação mais importante -> Quanto tempo se gasta? (equação) IMPORTANTE!!!!!
+
+Existem três cenários: 
+
+- Pior caso -> f(n) = n
+
+- Melhor caso -> f(n) = 1
+
+- Caso Médio -> f(n) = (n+1)/2.
+
+Todos se relacionando com a quantidade de trabalho que foi necessário para alcançar o objetivo; 
+
+---
+
+**9ª Aula ->** Exemplos de análise de complexidade de algoritmos
+
+<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Analise_Algoritmo.png" alt="">
+
+f(n) = 2*(n-1) ou f(n) = 2n - 2 

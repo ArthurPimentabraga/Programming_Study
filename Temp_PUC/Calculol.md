@@ -25,13 +25,19 @@ author: Arthur P. Braga
 
 ---
 
-**3ª Aula ->** Domínio de uma função real - Restrições || Restrições de domínio || Função composta e inversa (Só pra usar nas derivadas, não vai ser cobrada em prova)
+**3ª Aula ->** Domínio de uma função real - Restrições || **Restrições de domínio** || Função composta e inversa (Só pra usar nas derivadas, não vai ser cobrada em prova)
 
-- Domínio = Real (D = R)
+- **Restrições de Domínio:** 
   
-  - Todas as polinomiais;
+  1. Expressões comuns (todas as polinomiais) ou Função com raiz de índice ímpar -> **Domínio = Real (D = R)**;
   
-  - Todas as funções com raiz com índice ímpar;
+  2. Função com **fração** -> Toda expressão do denominador != 0;
+  
+  3. Função com **raiz de índice par** -> Toda expressão dentro da raiz >= 0;
+  
+  4. Fração com **denominador** com raiz de **índice par** -> Toda expressão dentro da raiz > 0;
+  
+  
 
 - Função Injetora -> Cada elemento de X tem um único par em Y. E pode sobrar em Y;
 
@@ -43,31 +49,44 @@ author: Arthur P. Braga
 
 ---
 
-**4ª Aula->** Início de Funções e Modelos - Funções Polinomiais 
+**4ª Aula->** Início de Funções e Modelos - **Funções Polinomiais**
 
 - **Função Polinomiais:** O grau da função corresponde ao grau do polinômio, ou seja, depende do grau do maior expoente;
   
-  - 1º Grau: Y= f(x) = ax+b ou função Linear
+  - 1º Grau: **Y= f(x) = ax+b** ou função Linear
     
-    - a -> coeficiente angular
+    - a -> coeficiente angular;
     
-    - b -> coeficiente linear
+    - b -> coeficiente linear;
+    
+    - **-b/a** <- Como achar onde toca o eixo X no gráfico;
   
-  - 2º Grau: Y= f(x) = ax²+bx+c ou função Quadrática
+  *O valor fixo, ou seja, o independente (no caso do 1º grau seria b, no 2º grau c...) é onde toca o eixo y*
+  
+  - 2º Grau: **Y= f(x) = ax²+bx+c** ou função Quadrática
     
-    - Se a > 0 a parábola vai ser para cima, se a < 0 para baixo;
+    - Se **a > 0** a parábola vai ser para **cima**, se **a < 0** para **baixo**;
+    - Se você já possuir a função, é fácil montar o gráfico. Só precisa calcular as **raízes**, e o **vértice** da função (o **C** você já tem). 
+    - Soma das raízes: **-b/a**;
+    - Produto das raízes: **c/a**;
   
   - 3º Grau: Y= f(x) = ax³+bx²+cx+d ou função Cúbica
   
   - 4º Grau: Y= f(x) = ax4+bx³+cx²+dx+e
 
-- **Função Constante:** 
+- **Função Constante**
+
+Notes:
+
+*Forma fatorada da equação: a(x-x')(x-x'')*
 
 ---
 
 **5ª Aula ->** Continuidade de funções polinomiais
 
 **6ª Aula ->** Correção de exercício || Início de outra lista de funções
+
+---
 
 **7ª Aula ->** Continuidade de funções polinomiais
 
@@ -83,9 +102,15 @@ author: Arthur P. Braga
 
 **8ª Aula ->** Correção de atividade || Funções Exponenciais
 
-- **Função Exponencial:** Y= f(x) = b.a^x+c
+- Função Exponencial: **Y= f(x) = b.a^x+c**
   
-  - Ver vídeo aula :)
+  - Condições: **a > 0** e **a != 0**;
+  
+  - Quando a > 1 o gráfico ficará crescente;
+  
+  - Quando 0 < a < 1 o gráfico ficará decrescente;
+  
+  - A linha do gráfico nunca vai tocar no eixo 0 (não há valor de X que faça o Y dar 0);
 
 ---
 
