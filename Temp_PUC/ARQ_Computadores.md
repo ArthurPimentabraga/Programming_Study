@@ -59,6 +59,10 @@ pergunta: O que seria exatamente o programa objeto gerado pelos tradutores? O pr
 
 ---
 
+**6ª Aula ->** Abertura XII Scap
+
+---
+
 ### Meanings
 
 - **Barramento:** É um **caminho elétrico** comum que liga e permite a comunicação entre dispositivos de hardware (processador, memórias, controladores...). Grupos funcionais dos barramentos: dados, endereços e controle; 

@@ -36,8 +36,6 @@ author: Arthur P. Braga
   3. Função com **raiz de índice par** -> Toda expressão dentro da raiz >= 0;
   
   4. Fração com **denominador** com raiz de **índice par** -> Toda expressão dentro da raiz > 0;
-  
-  
 
 - Função Injetora -> Cada elemento de X tem um único par em Y. E pode sobrar em Y;
 
@@ -115,3 +113,17 @@ Notes:
 ---
 
 **9ª Aula ->** Continuação de função exponencial
+
+---
+
+**10ª Aula ->** **Logaritmos** 
+
+Conceito: Operação criada para descobrir expoente (logaritmo = expoente). Uma maneira para facilitar as operações matemáticas. 10^0 = 1 || 10¹ = 10 || 10^0,301 = 2.
+
+<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Logaritmo.png" alt="">
+
+<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Ex3Logaritmo.png" alt="">
+
+Condição de existência do logaritmo: **b > 0** || **a > 0** || **!= 1**
+
+<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/DominioDeLog.png" alt="">

@@ -88,3 +88,53 @@ O **agente** percebe o mundo, através de sensores, e produz uma ação através
 **Exemplo de sensores e atuadores:** Em um programa de diagnóstico médico, por exemplo, o sensor seria o teclado, por onde o médico entraria com os dados, e o atuador seria a tela do computador exibindo uma mensagem na tela.
 
 **Sistemas de regras - Exemplo**: se a água do chuveiro estiver muito fria -> aumentar a temperatura
+
+##### Tipos de agentes
+
+- Agente reativo -> tabela de regras (if else - regras definidas);
+
+- baseado em modelo -> armazena o modelo probabilisco no agente para ele tomar a decisão mais adequada. Ou seja, passa as informações pra ele, e o mesmo decide qual a melhor ação baseada nessas infos;
+
+- Baseado em objetivo -> É definido um objetivo para o agente e ele tomará decisões, escolherá suas ações para alcançar tal objetivo;
+
+- Baseado em utilidade -> Você não sabe onde quer chegar (não tem objetivo fixo), mas tem uma medida de performace das ações do agente. Ex: quero que meu drone economize energia nas ações e tarefas que ele realize. Dessa forma ele faz de tudo para economizar energia, como procurar um caminho mais curto, que evite obstáculo...
+
+- Sistema multiagente -> agentes comuns mas que podem se comunicar. Dessa forma os agentes podem se coordenar para atingir um objetivo em comum com maior eficiência, por exemplo.
+
+*Pode combinar os tipos de agentes no seu sistema*
+
+---
+
+### IA na Sociedade
+
+##### Democratização da IA
+
+APIs :)
+
+**Na sociedade ->** Como a IA é utilizada na sociedade. Ex: Uma tecnologia para visão computacional foi usada em máquinas de guerra, sad example :(.
+
+**IA pode criar erros ocultos** como Chatbots com posturas preconceituosas, veículos autônomos que podem sacrificar vidas...
+
+**IA pode levar à perda de habilidade e pensamento crítico**, ou seja, motoristas perdendo as habilidades nas ruas, o senso de decisão das pessoas diminui com os algoritmos de recomendação...
+
+**IAs podem ser manipuladas**, podem ser invadidas. Ex: Algoritmos de recomendação podem privilegiar alguns produtos ou pessoas...
+
+**IAs podem institucionalizar viéses**, ou seja, algoritmos que aprendem com uma base de dados, estão limitados à esses dados e tomam características desses dados. Ex: algoritmo recomenda só currículos de homens para vagas de engenharia...
+
+**IAs podem causar perda de empatia**, ou seja, serviços podem se tornar muito automatizados e com pouca interação pessoal (chatbots).
+
+**IAs podem causar perda de controle**. Eles tomam decisões, é preto no branco, ou seja, o sentimento humano, os dilemas humanos não entram nessa equação. Uma IA deixaria de tirar uma vida inocente, sendo que essa tarefa foi dada à ela?
+
+**IAs podem ter implicações sociais muito além do seu negócio**, ou seja, ela pode aprender para se tornar mais inteligente e fazer além do que foi diretamente programada.
+
+**Empregados ainda precisam ter seus papeis**, ou seja, a IA não pode tomar totalmente o lugar do trabalhador. Ela pode causar perda de empregos, mas pode criar novos empregos.
+
+**A tecnologia deve honrar os direitos fundamentais, a segurança e privacidade pessoal**.
+
+---
+
+---
+
+---
+
+## Unity 2
