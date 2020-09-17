@@ -93,3 +93,19 @@ f(n) = 2*(n-1) ou f(n) = 2n - 2
 - Algoritmos **exponenciais**: O(2^n) Não são úteis sob o ponto de vista prático. Sempre que n dobra, o tempo é elevado ao quadrado. Ex: Força bruta;
 
 - Complexidade **Fatorial**: O(n!) Comportamento muito pior do que O(2^n). Ou seja, em vez de 2x2x2x2... vai ser 2x3x4x6.... Ex: Para o nº 40 em um algoritmo desse, executado no PC mais poderoso do mundo demoraria SÉCULOS; 
+
+---
+
+**11ª Aula ->** Estrutura de dados
+
+**Memória principal ->** "imenso array" de bytes.
+
+Declaração de variável é uma abstração dos endereços de memória.
+
+Cada variável tem seu nome, endereço e valor;
+
+**Ponteiros ->** É uma variável que armazena um endereço de memória. Usado com Strings, por exemplo. Ou seja, como o tamanho da String depende, e pode variar muito, ele só faz uma referência para a área da memória que caiba a String.
+
+*Tipos básicos: valores copiados - Objetos: referência*
+
+**Alocação dinâmica de memória:** Ele reserva um espaço para um ponteiro, para futuramente poder fazer uma referência. 

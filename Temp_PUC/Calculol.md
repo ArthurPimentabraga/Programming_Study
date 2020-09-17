@@ -120,10 +120,38 @@ Notes:
 
 Conceito: Operação criada para descobrir expoente (logaritmo = expoente). Uma maneira para facilitar as operações matemáticas. 10^0 = 1 || 10¹ = 10 || 10^0,301 = 2.
 
-<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Logaritmo.png" alt="">
+<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Logaritmo.png" alt="" width="389"> 
 
-<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Ex3Logaritmo.png" alt="">
+<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Ex3Logaritmo.png" alt="" width="390">
 
 Condição de existência do logaritmo: **b > 0** || **a > 0** || **!= 1**
 
-<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/DominioDeLog.png" alt="">
+<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/DominioDeLog.png" alt="" width="389">
+
+**Propriedades:**
+
+1. Log de um nº na mesma base é sempre 1;
+
+2. Peteleco para multiplicar o expoente pelo log;
+
+3. Se a base estiver com um expoente, taca o expoente dividindo pelo nº que ta multiplicando o log (se não tiver nº, considera como 1);
+
+4. Log de 1 em qualquer base é igual a 0;
+
+5. "A" elevado ao log de "C" na base "A" é igual a "C";
+
+[Explicação Fácil e Rápida I Aprenda I Logaritmo - YouTube](https://youtu.be/k2XkYEUH9nA)
+
+---
+
+**10ª Aula ->** Equações logarítmicas || Função logaritmica
+
+---
+
+**11ª Aula ->** Realização de 2 exercícios da lista || Razões trigonométricas || Medidas de angulos (Grau e radiano)
+
+*Medidas dos lados dos triângulos!*
+
+<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Razoestrigonometricas.png" alt="" width="536">
+
+![13.275 – Matemática – Seno, Coseno e Tangente | ☻Mega Arquivo](https://megaarquivo.files.wordpress.com/2017/05/tabela-trigonometrica-para-angulos-notaveis.jpg)

@@ -3,7 +3,7 @@ title: Introdução à Sistemas Inteligentes (Puc-Minas - 2º Período)
 author: Arthur P. Braga
 ---
 
-## Unity 1
+# Unity 1
 
 ### What is
 
@@ -137,4 +137,39 @@ APIs :)
 
 ---
 
-## Unity 2
+# Unity 2
+
+### Data Science - What is?
+
+**O profissional de Data Science:** *Extrasão de conhecimento a partir dos dados!*
+
+- **Conhecimento de Computação:**  
+  que irá permitir ao profissional manipular corretamente os dados, criar programas que automatizem o processamento desses dados, utilizar algoritmos para extrair conhecimentos dos dados e criar modelos e soluções a partir do conhecimento extraído desses dados.
+- **Conhecimento de Estatística:**  
+  que irá permitir ao profissional explorar e compreender os dados e construir modelos a partir desses dados.
+- **Conhecimento do Domínio:**  
+  que permitirá ao profissional entender o problema a ser atacado e compreender o significado dos dados.
+
+*É aplicado em TUDO, na área da saúde, das finanças, E-commerce, CRM...*
+
+**Processo da Ciência de Dados:**
+
+1. Fazer uma pergunta interessante - Definição do problema (O que quero com os dados?). Tal pergunta deve ser bem formulada, deve ser uma pergunta orientada à dados, ou seja, utilizando dados eu posso resolver tal problema, tal pergunta;
+   
+   - Transformar o problema, ou desejo de negócio em uma pergunta orientada à dados -> É necessário uma análise de fatos e julgamentos com base no negócio da empresa e pensando também nos dados disponíveis.
+     
+     - Fatos: Coleta os dados "óbvios" para aquela análise, dados diretamente relacionados;
+     
+     - Julgamentos: Precisa pensar em fatores relacionados de forma indireta. Suposições que podem influênciar no cenário e agregar na análise.
+     
+     - Exemplo: Devolução de Produtos -> Fatos: Defeito na envoltura, fora da validade, produto estragado, fora de especificação... Julgamentos: Quem fabrica a envoltura? Quem comercializa? Como o produto foi estocado? Como é transportado? e por ai vai. 
+
+2. Coletar os dados - Fase que pode enriquecer os dados também, com terceiros;
+
+3. Explorar os dados - Fazer uma limpeza nos dados, ver o que ta faltando...
+
+4. Modelar os dados - Contruir modelos (estátisticos, redes neurais...) são os modelos que vão tentar extrair conhecimento dos dados, responder nossas perguntas iniciais...
+
+5. Comunicar e visualizar os resultados - Com dashboards, qualquer interface ou modo de aprensentar os resultados.
+
+**Tipos de dados:** 
