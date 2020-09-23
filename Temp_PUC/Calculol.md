@@ -155,3 +155,19 @@ Condição de existência do logaritmo: **b > 0** || **a > 0** || **!= 1**
 <img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Razoestrigonometricas.png" alt="" width="536">
 
 ![13.275 – Matemática – Seno, Coseno e Tangente | ☻Mega Arquivo](https://megaarquivo.files.wordpress.com/2017/05/tabela-trigonometrica-para-angulos-notaveis.jpg)
+
+---
+
+**12ª Aula ->** Funções trigonométricas (ou circulares) || **Círculo trigonométrico** || Redução ao 1º quadrante || Modelo geral para a função seno e cosseno
+
+Função Seno: **f(x) = SenX** (Os valores do SenX são dados no eixo Y)
+
+Função Cosseno: **f(x) = CosX** (Os valores do CosX são dados no eixo X)
+
+Função Tangente: **f(x) = TgX** || **TgX = SenX/CosX** (Não vai usar muito)
+
+<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Formulas_circulo_trigonometrico.png" alt="" width="449">
+
+---
+
+**13ª Aula ->** Correção de lista de logarítmos || Resolução de exercícios de função trigonométrica

@@ -159,3 +159,9 @@ Aplicativos integrados são sistemas que abrangem TODA a empresa (todos os níve
 - **SCM** - Supply Chain Management (sistemas de gestão da cadeia de suprimentos) -> 
 
 - **CRM** - Customer Relationship Management (sistemas de gestão do relacionamento com o cliente) -> 
+
+---
+
+**10ª Aula ->** Atividade artigo ERPs
+
+**11ª Aula ->** 1º Conexão FSI

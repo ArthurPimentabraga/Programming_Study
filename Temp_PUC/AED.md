@@ -80,7 +80,7 @@ f(n) = 2*(n-1) ou f(n) = 2n - 2
 
 - Complexidade **fixa ou constante** (melhor caso possível, porém limitado): Uma complexidade constante executa um nº fixo de vezes independente do tamanho de n (da quant de dados). Ex: Um array ordenado que pega o maior elemento. Ex2: Fazer uma troca de dois nº de posição em um array;
 
-- Complexidade **logarítmica**: Resolve problemas transformando-os em problemas menores. Se o algoritmo resolve diviindo o problema a cada passo. Ex: Busca binária;
+- Complexidade **logarítmica**: Resolve problemas transformando-os em problemas menores. Se o algoritmo resolve divindo o problema a cada passo. Ex: Busca binária;
 
 - Complexidade **Linear**: Um trabalho é realizado sobre cada elemento de entrada. Ex: Procurar um elemento em um array desordenado;
 
@@ -109,3 +109,29 @@ Cada variável tem seu nome, endereço e valor;
 *Tipos básicos: valores copiados - Objetos: referência*
 
 **Alocação dinâmica de memória:** Ele reserva um espaço para um ponteiro, para futuramente poder fazer uma referência. 
+
+---
+
+**12ª Aula ->** Estruturas de dados -> **Filas**
+
+*Dados "ordenados" por chegada - first in first out (FIFO)*
+
+Exemplos em sistemas:
+
+- Atendimento Bancário;
+
+- Pedidos de reservas na biblioteca;
+
+- Processamento de alteração de matrículas;
+
+- Venda de ingressos.
+
+**Fila estática:** Tem um tamanho fixo, podendo ou não estar totalmente ocupado. Um vetor pode ser usado para representar uma fila simples, mas não é uma fila, pois não tem regra (qualquer um pode sair a qualquer hora....).
+
+Para isso precisa de um vetor e duas variáveis (capacidade do vetor e quantidade contida ele).
+
+*Os valores sempre vão entrar atrás da posição do ultimo valor (que será a variável qtd).*
+
+Valor de escape: valor que nunca terá seu lugar na fila.
+
+**Fila dinâmica (encadeiada):** Não tem uma previsão da memória total necessária e nem previsão da quatidade de alterações necessárias quando se retira um valor. 

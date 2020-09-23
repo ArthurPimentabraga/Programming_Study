@@ -48,14 +48,14 @@ pergunta: O que seria exatamente o programa objeto gerado pelos tradutores? O pr
 
 ---
 
-**4ª Aula ->** Conversão de bases || Introdução à sistemas lógicos (portas lógicas...)
+**4ª Aula ->** Conversão de bases || Introdução à sistemas lógicos (portas lógicas...) || Portas lógicas
 
 ---
 
 **5ª Aula ->** Continuação de sistemas numéricos (*conversão e operações de bases*) **Conversão de nº decimais** || Sinal Magnitude || Complemento-2 (sinais positivos e negativos) || Padrão/formato IEEE 754
 
 - Foram feitos os exercícios 1,2 e 3 de ARQ em aula
-- **Exercícios 1, 4 e 9 ctz que vai cair na prova (2,6 e 7 talvez)**
+- **Exercícios 1, 4, 9, 12 ,13, 22, 23, 27 ctz que vai cair na prova (2,6, 7, 14, 24 talvez)(11 não cai)**
 
 ---
 
@@ -64,6 +64,10 @@ pergunta: O que seria exatamente o programa objeto gerado pelos tradutores? O pr
 ---
 
 **7ª Aula ->** Continuação do Padrão IEEE 754 (32 bits) - Números PF: 32, 64 e 128 bits || 
+
+---
+
+ **8ª Aula ->** Circuitos Lógicos || Mintermos
 
 ---
 
