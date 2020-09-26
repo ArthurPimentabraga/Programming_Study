@@ -91,15 +91,55 @@ O **agente** percebe o mundo, através de sensores, e produz uma ação através
 
 ##### Tipos de agentes
 
-- Agente reativo -> tabela de regras (if else - regras definidas);
+- **Agente reativo simples ->** seleciona ações com base na percepção atual, ignorando o restante do histórico de percepções.
+  
+  Ex: aspirador de pó.
+  
+  **Características**
+  
+  - Utiliza regras de condição ação (pré definidas)  
+    ***if* *X* *then* *Y***
+  - Depende apenas da percepção atual.
 
-- baseado em modelo -> armazena o modelo probabilisco no agente para ele tomar a decisão mais adequada. Ou seja, passa as informações pra ele, e o mesmo decide qual a melhor ação baseada nessas infos;
+- **Baseado em modelos ->** possui um estado interno, que dependa do histórico de percepções (modelo do mundo em que atua). Ou seja, com esse modelo ele pode ter dados probabilísticos que ajudam a tomar melhores decisões. 
+  
+  **Características**
+  
+  - Possui um modelo de como o mundo funciona evolui sem o agente.
+  - Possui um modelo de como as suas ações podem afetar o mundo.
+  - Mistura a percepção atual com o modelo antes de agir.
+  - Pode utilizar histórico de percepções para "compreender" como o mundo evolui.
+  
+  *Um agente baseado em modelos pode ajustar gradativamente o modelo que ele tem do mundo na medida em que vai explorando o ambiente.*
 
-- Baseado em objetivo -> É definido um objetivo para o agente e ele tomará decisões, escolherá suas ações para alcançar tal objetivo;
+- Baseado em objetivo -> É definido um objetivo para o agente e ele tomará decisões, escolherá suas ações para alcançar tal objetivo.
+  
+  **Características**
+  
+  - Possui um modelo de como o mundo funciona evolui sem o agente.
+  - Possui um modelo de como as suas ações podem afetar o mundo
+  - Utiliza objetivos, ao invés de regras de condição-ação, para escolher uma ação ***que o leve na direção de seu objetivo***.
+  - Um objetivo então poderá ser definido como sendo um estado do ambiente que se deseja alcançar.
 
-- Baseado em utilidade -> Você não sabe onde quer chegar (não tem objetivo fixo), mas tem uma medida de performace das ações do agente. Ex: quero que meu drone economize energia nas ações e tarefas que ele realize. Dessa forma ele faz de tudo para economizar energia, como procurar um caminho mais curto, que evite obstáculo...
+- **Baseado em utilidade ->** *Medida de performace das ações do agente*. 
+  
+  **Características**
+  
+  - Utiliza uma medida de desempenho (utilidade) ao invés de objetivos que permitem apenas uma distinção binária.
+  - Ao contrário do objetivo, uma medida de utilidade não precisa estar relacionado com um estado final do ambiente, mas com uma ***medida de desempenho do agente***.
+  - Exemplos incluem: um carro autônomo pode definir como medida de performance o tempo, a distância, ou medidas mais abstratas como menor consumo de combustível. Dessa forma, o carro autônomo irá escolher a ação que irá maximizar a medida de utilidade desejada.
 
-- Sistema multiagente -> agentes comuns mas que podem se comunicar. Dessa forma os agentes podem se coordenar para atingir um objetivo em comum com maior eficiência, por exemplo.
+- **Sistema multiagente ->** agentes comuns mas que podem se comunicar. Dessa forma os agentes podem se coordenar para atingir um objetivo em comum com maior eficiência, por exemplo.
+
+- **Agente com Aprendizagem ->** pode ser dividido em quatro componentes: 
+  
+  - **Elemento de Aprendizado**: responsável pelo aperfeiçoamento do elemento de desempenho.
+  
+  - **Elemento de Desempenho**: qualquer um dos outros tipos de agente completo que se deseja ajustar.
+  
+  - **Crítico**: indica para o elemento de aprendizado se o agente está obtendo sucesso, baseado em um padrão de desempenho.
+  
+  - **Gerador de Problemas**: sugerir ações que levaram a experiências novas e informativas (explorar novas possibilidades).
 
 *Pode combinar os tipos de agentes no seu sistema*
 
@@ -111,7 +151,7 @@ O **agente** percebe o mundo, através de sensores, e produz uma ação através
 
 APIs :)
 
-**Na sociedade ->** Como a IA é utilizada na sociedade. Ex: Uma tecnologia para visão computacional foi usada em máquinas de guerra, sad example :(.
+**Na sociedade ->** Como a IA é utilizada na sociedade. Ex: Uma tecnologia para visão computacional foi usada em máquinas de guerra, *sad example :(*.
 
 **IA pode criar erros ocultos** como Chatbots com posturas preconceituosas, veículos autônomos que podem sacrificar vidas...
 
@@ -170,6 +210,88 @@ APIs :)
 
 4. Modelar os dados - Contruir modelos (estátisticos, redes neurais...) são os modelos que vão tentar extrair conhecimento dos dados, responder nossas perguntas iniciais...
 
-5. Comunicar e visualizar os resultados - Com dashboards, qualquer interface ou modo de aprensentar os resultados.
+5. Comunicar e visualizar os resultados - Com dashboards, qualquer interface ou modo de apresentar os resultados.
 
-**Tipos de dados:** 
+---
+
+### Análise Exploratória e Preparação de dados
+
+##### Tipos de dados:
+
+**Dados Quantitativos:** Numéricos
+
+- **Normalizados:** Variam dentro de um limite, ou seja, vão variar somente dentro daquele limite. Muito usado com taxas [0...1].
+
+- **Não normalizados:** Podem variar, não podemos garantir que estarão dentro de um limite. Ex: Idade, peso, altura...
+
+- **Escala intervalar:** São aqueles dados que não podem ter uma razão entre eles. Ex: Graus Celsius e Fahrenhit (não da para tirar razão entre eles, pois não tem um zero absoluto, ou uma relação direta das temperaturas. Só se converter um para outro). *Esse tipo só pode ser "não normalizado".*
+
+- **Escala racional:** Dados que podem ter uma razão entre eles. Possuem um zero absoluto, um significado absoluto. Ex: nº de consultas em um hospital. *Esse tipo pode ser normalizado.* 
+
+**Dados Qualitativos:** Não Numéricos
+
+- **Dados Binominais/Binários:** Dois valores. Ex: Sintoma de febre: sim/não.
+  
+  - **Binominais simétricos:** Ambos os valores possuem a mesma relevância. Ex: Masculino/Feminino (Se não é um, é outro).
+  
+  - **Binominais assimétricos:** Apenas o valor positivo é relevante. Ex: Assistiu um filme (Se ele assistiu tal filme, saber disso é importante, para uma recomendação por exemplo. Mas se ele não assistiu não quer dizer que não gostou, simplesmente ninguém consegue assistir todos os filmes do mundo ou de uma base de dados).
+    
+    - Dica: Dados esparsos. Ex: Termos de um documento (tu não vai levar em conta todas as palavras do dicionário, e sim quais apareceram no documento). Ex2: Sintomas de doenças, ou seja, existem centenas de sintomas, mas só será relevante as que o paciente teve.
+
+- **Dados Polinomiais/Categóricos não ordinais:** Uma ou mais palavras que não são ordenadas naturalmente. Ex: Setor: Limpeza, laticínios, cosméticos... 
+
+- **Dados Categóricos ordinais:** Palavras que são ordenadas naturalmente. Ex: Faixa etária: criança, jovem, adulto, idoso.
+
+##### Estatística descritiva
+
+*Técnicas para descrever e sumarizar um conjunto de dados. Ou seja, organizar os dados.*
+
+**Medidas e propriedades:**
+
+- **Frequência:** Nº de vezes que o dado acontece no conjunto.
+  
+  - Frequência absoluta: Quantas vezes ele aparece. 
+  
+  - Frequência relativa: É a frequência em relação ao todo. Ex: em um conjunto de 18 números, o 11 apareceu 3 vezes. Então sua frequência relativa = 3/18 = 0.17 = 17%.
+
+- **Média:** Para mexermos com média é necessário cuidado, precisamos retirar o maior e o menor valor do conjunto, pois se forem muito discrepantes, vão alterar o nosso resultado.
+
+- **Mediana:** Se o conjunto for par -> média dos dois elementos do meio.
+
+- **Moda:** Valor mais frequênte.
+
+- **Percentil:** São medidas que dividem o conjunto de dados em 100 partes (conjunto ordenado). Cada parte com uma porcentagem aproximadamente igual. 
+  
+  - Ex: Conjunto -> {1,2,3,4,4,5,6,6,7,8} || 5º percentil = 4.
+
+- **Quartil:** [O que é Quartil (Medidas Separatrizes) #74 - YouTube](https://youtu.be/qlBk00ismYE)
+
+**Medidas de Espalhamento:**
+
+- **Intervalo** = valor máx - valor min;
+
+- **Variância:** O quanto aquilo está variando em relação à média. Mais longe e mais perto da média. 
+
+<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/variancia.png" alt="" width="355"> X = média
+
+- **Desvio padrão:** O quão confiável é aquela variância. Ou seja, o quanto os valores que foram utilizados para calcular aquela variância vão se diferenciar.  Cálculo => raíz quadrada da variância.
+
+- **Desvio médio absoluto:** subtrai cara elemento pela média, soma esses módulos e depois divide por n;
+
+- **Desvio mediano absoluto:** pega a mediana de todos os módulos (dado - média);
+
+- **Intervalo interquertil:** quartil75% - quartil25%;
+
+##### Processo ETL (Extract-Transform-Load)
+
+*Business Intelligence -> Conjunto de conceitos e metodologias que, fazendo uso de dados e acontecimentos (fatos), apoia a tomada de decisões em um negócio. Tais técnicas basicamente são focadas em extrair informações úteis de múltiplas e volumosas fontes de dados brutos e Sistematizados.*
+
+*KDD - Knowledge Discovery in Databases*
+
+**Processo ETL:**
+
+- Extrair: Buscar os dados. Externos e/ou Operacionais. (TXT, Banco de Dados, Redes Sociais, Excel....) Também é feita a limpeza desses dados; 
+
+- Transformar: Sumarizar, Aprimorar, organizar os dados... (padronizar nomenclatura, cálculos necessários...);
+
+- Carregar: Carregar em um repositório de destino, organizar esses dados em algum lugar. Pode fazer um pré-processamento para confirmar que está tudo correto. Tipicamente o processo é feito em lotes.

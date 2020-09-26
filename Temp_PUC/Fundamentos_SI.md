@@ -165,3 +165,5 @@ Aplicativos integrados são sistemas que abrangem TODA a empresa (todos os níve
 **10ª Aula ->** Atividade artigo ERPs
 
 **11ª Aula ->** 1º Conexão FSI
+
+**12ª Aula ->** Continuação do 1º Conexão FSI

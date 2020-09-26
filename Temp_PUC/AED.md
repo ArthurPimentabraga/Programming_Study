@@ -74,7 +74,7 @@ f(n) = 2*(n-1) ou f(n) = 2n - 2
 
 - **Comportamento assintótico**:  É o comportamento das funções de custo para valores grandes de n. Assintota.
 
-- **Ordem de complexidade - O(n)**. Uma função vai ser da ordem de complexidade da outra com ela tem o mesmo comportamento que essa outra. Essa ordem de complexidade é aproximadamente o limite em que tal algoritmo é "viável".
+- **Ordem de complexidade - O(n)**. Uma função vai ser da ordem de complexidade da outra quando ela tem o mesmo comportamento que essa outra. Essa ordem de complexidade é aproximadamente o limite em que tal algoritmo é "viável".
 
 **Classes de complexidade**
 
@@ -134,4 +134,40 @@ Para isso precisa de um vetor e duas variáveis (capacidade do vetor e quantidad
 
 Valor de escape: valor que nunca terá seu lugar na fila.
 
-**Fila dinâmica (encadeiada):** Não tem uma previsão da memória total necessária e nem previsão da quatidade de alterações necessárias quando se retira um valor. 
+---
+
+**13ª Aula ->** Continuação de Filas
+
+**Filas Dinâmicas (ou encadeadas):** Seus elementos são inseridos e retirados ao longo da execução do programa - dinamicamente. Não tem uma previsão da memória total necessária e nem previsão da quatidade de alterações necessárias quando se retira um valor.
+
+- O elemento da fila inclui uma referência para o próximo elemento (ponteiro). Logo pode-se criar um novo elemento e apontar para outro.
+
+- *Potencialmente infinito*
+
+---
+
+**14ª Aula ->** Listas encadeadas
+
+*Interligação de elementos - Pode ter um ordenamento ou não.*
+
+- Não há uma regra de inserção e retirada;
+
+- Difícil de prever a demanda de memória total necessária.
+
+Ex: Lista de trabalhos - Controle de processos em um SO...
+
+*A estrutura da fila e da lista é a mesma, o que muda é a regra!*
+
+**Métodos de lista:** Inserir - Deletar - Localizar - Concatenar listas
+
+- **Localizar:** 
+  
+  1. A partir do início, avançar i posições na lista.
+  
+  2. Localizar pelo valor.
+
+- **Retirar da posição i:** Primeiro a gente precisa localizar. 
+
+**Listas duplamente encadeadas:**
+
+*Passa a ter duas referencias por elemento. - Dois apontadores, um para o próximo elemente, e outro para o anterior.*
