@@ -61,13 +61,15 @@ pergunta: O que seria exatamente o programa objeto gerado pelos tradutores? O pr
 
 **6ª Aula ->** Abertura XII Scap
 
+**7ª Aula ->** Continuação do Padrão IEEE 754 (32 bits) - Números PF: 32, 64 e 128 bits
+
+ **8ª Aula ->** Circuitos Lógicos || Mintermos e Maxtermos
+
 ---
 
-**7ª Aula ->** Continuação do Padrão IEEE 754 (32 bits) - Números PF: 32, 64 e 128 bits || 
+**9ª Aula ->** Multiplexador || Decodificador  || Somadores || Clock? || Início de memórias
 
----
-
- **8ª Aula ->** Circuitos Lógicos || Mintermos
+**Multiplexador:** seleciona as informações de duas ou mais fontes de dados num único canal.
 
 ---
 

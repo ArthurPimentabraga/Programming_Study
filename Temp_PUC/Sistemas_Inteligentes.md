@@ -276,7 +276,7 @@ APIs :)
 
 - **Desvio padrão:** O quão confiável é aquela variância. Ou seja, o quanto os valores que foram utilizados para calcular aquela variância vão se diferenciar.  Cálculo => raíz quadrada da variância.
 
-- **Desvio médio absoluto:** subtrai cara elemento pela média, soma esses módulos e depois divide por n;
+- **Desvio médio absoluto:** subtrai cada elemento pela média, soma esses módulos e depois divide por n;
 
 - **Desvio mediano absoluto:** pega a mediana de todos os módulos (dado - média);
 

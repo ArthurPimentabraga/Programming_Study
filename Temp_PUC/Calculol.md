@@ -154,7 +154,7 @@ Condição de existência do logaritmo: **b > 0** || **a > 0** || **!= 1**
 
 <img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Razoestrigonometricas.png" alt="" width="536">
 
-![13.275 – Matemática – Seno, Coseno e Tangente | ☻Mega Arquivo](https://megaarquivo.files.wordpress.com/2017/05/tabela-trigonometrica-para-angulos-notaveis.jpg)
+![13.275 – Matemática – Seno, Coseno e Tangente | ☻Mega Arquivo](https://megaarquivo.files.wordpress.com/2017/05/tabela-trigonometrica-para-angulos-notaveis.jpg)<img title="" src="https://i.pinimg.com/474x/a5/aa/8d/a5aa8db213b1292c9330b1839de9adc0.jpg" alt="Círculo Trigonométrico - Toda Matéria | Funções trigonométricas, Circulo  trigonometrico, Funções matematica" width="255">
 
 ---
 
@@ -171,3 +171,59 @@ Função Tangente: **f(x) = TgX** || **TgX = SenX/CosX** (Não vai usar muito)
 ---
 
 **13ª Aula ->** Correção de lista de logarítmos || Resolução de exercícios de função trigonométrica
+
+---
+
+**14ª Aula ->** Limites
+
+*Limite é para entender o conceito de derivada - Derivada é um limite.*
+
+Analisar o comportamento da função f definida por f(x)=x^2-x+2 para valores de x **próximos** de 2.
+
+*O limite da função tal quando x tende a tal é igual a tal nº*
+
+- Limite lateral pela esquerda = x < 2
+
+- Limite lateral pela direita = x > 2
+
+Se os limites laterais forem diferentes não existe limite para aquela função quando x -tende a tal valor. Se forem iguais há o limite para aquela função.
+
+*imagem = limite -> contínua*
+
+**Propriedades dos limites:**
+
+<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/propriedades_Limites.png" alt="" width="476">
+
+<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/mais_propriedades_limites.png" alt="">
+
+Usando a substituição direta da para achar o limite só substituindo os valores.
+
+só pode usar substituição direta se a função for polinomial.
+
+**Essas são duas maneira, lateral e substituição direta.**
+
+---
+
+**15ª Aula ->** Continuação de limites
+
+Formas fatoradas:
+
+<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/forma_fatorada.png" alt="" width="363">
+
+**Formas indeterminadas - 0/0** -> Fatora a equação que da pra descobrir o limite.
+
+**Limites infinitos - n/0** -> Faz os limites laterais da função para resolver.
+
+**Limites nos extremos do domínio (eixo X)** -> Quando o limite de X tente ao infinito
+
+Se temos uma polinomial, e ela tende ao infino, pode desprezar tudo e manter só os termos de maior grau da equação.
+
+
+
+
+
+Estudar assintota - x tendendo a infino - Tem ou não assintota? (como saber isso)
+
+---
+
+**16ª Aula ->** 
