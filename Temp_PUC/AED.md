@@ -171,3 +171,31 @@ Ex: Lista de trabalhos - Controle de processos em um SO...
 **Listas duplamente encadeadas:**
 
 *Passa a ter duas referencias por elemento. - Dois apontadores, um para o próximo elemente, e outro para o anterior.*
+
+---
+
+**15ª Aula ->** Pilhas
+
+*Estrutura empilhada, ou seja, coloca e retira dados somente por cima.*
+
+*LIFO (last in, first out)*
+
+**Usos**:
+
+- Analogia clássica: pilha de pratos (Não faz diferença se você pegar o 1º dado, ou o último, ou qualquer outro);
+
+- Chamadas de funções;
+
+- Crtl+Z;
+
+- Debug;
+
+- Inversões (pois o ultimo q entra é o primeiro que sai).
+
+*Pode criar um contador para limitar o uso de memória.*
+
+
+
+**Notação polonesa reversa (pós-fixa):** modo como escreve as operações para o computador interpretar corretamente (a operação vem depois dos números).
+
+Para usar a notação polonesa precisa de duas pilhas, uma para criar a equação polonesa e outra para resolver.
