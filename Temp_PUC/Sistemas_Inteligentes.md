@@ -295,3 +295,37 @@ APIs :)
 - Transformar: Sumarizar, Aprimorar, organizar os dados... (padronizar nomenclatura, cálculos necessários...);
 
 - Carregar: Carregar em um repositório de destino, organizar esses dados em algum lugar. Pode fazer um pré-processamento para confirmar que está tudo correto. Tipicamente o processo é feito em lotes.
+
+##### Machine Learning
+
+*É o estudo de algoritmos que melhora a medida da experiência - O sistema aprende através de dados reais.*
+
+Tomam suas proprias decisoes, decidem se suas ações foram boas, e se "auto melhoram".
+
+<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/MachineLearning.png" alt="">
+
+**Estilos de aprendizado:**
+
+- Supervisionado -> São dados que já contém as "respostas", uma base de dados rotulada, ou seja, ele pega os dados já com os padrões... e começa a definir regras em cima deles. Muito usado para previsão, recomendação...
+
+- Não supervisionado -> Identifica os padrões nos dados. Ex: Agrupamento de semelhantes, segmentar grupos de clientes...
+
+- Semisupervisionado -> Combina os dois anteriores. Metade rotulada, e a outra metade ele rotula de forma não supervisionada com o que aprendeu anteriormente.
+
+- Por reforço -> Não são definidas nenhuma regra, somente uma medida de desempenho, um objetivo. Ex: muito usado em games.
+
+- Deep Learning (Aprendizado profundo) -> Quando os dados não tem características muito bem definidas, é usado redes neurais, deep learning. É um algoritmo com várias camadas, muito bem estruturado e mais complexo que consiguirá extrair características mais definidas dos dados. *Um modelo mais complexo para objetivo mais complexo.*
+
+**Principais tarefas de  Machine Learning**
+
+- Descritivas: Analisar dados passados para entender como aquilo funciona.
+  
+  - Agrupamento (Clustering): Segmente automaticamente a base de dados em grupos por suas similaridades e diferenças. Ex: Campanhas de marketing direcionadas, email padrão direcionado para determinados clientes... *K-means*
+  
+  - Associação: Encontrar padrões frequentes, associações... *Quem compra A compra B em 60% das vezes*. Ex: Comércio eletrônico com recomendação de produtos, super mercados... *Apriori*
+
+- Preditivas: 
+  
+  - Classificação: Faz a classificação das classes de elementos dos nossos dados. Ou seja, ele extraí as características de cada elemento, e faz a análise. Ex: Identificar qual o objeto em uma foto. *Árvore de decisões*
+  
+  - Regressão: Técnicas estatísticas para estimar a relação entre variáveis ou atributos para prever valores futuros. (lembrar de função - é usado para calcular os possíveis valores). *Redes neurais*

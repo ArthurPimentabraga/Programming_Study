@@ -73,6 +73,42 @@ pergunta: O que seria exatamente o programa objeto gerado pelos tradutores? O pr
 
 ---
 
+**10ª Aula ->** Tipos de memória (olhar nos slides) (A comparação de características das memórias vai cair na prova)
+
+- NV (não voláteis): Somente Leitura
+  
+  - ROM -> Gravadas durante a fabricação
+  
+  - PROM -> ROM Programável (śo uma vez) e precisa de equipamento especial para programar; 
+  
+  - (UV)EPROM -> (UV Erasable PROM) Apagada (erased) por UV (ultra violeta)
+  
+  - EEPROM -> Apagada eletricamente
+  
+  - UV-PROM -> 
+  
+  - FLASH ->
+    
+    - Flash NOR ->
+    
+    - Flash NAND ->
+
+- V (voláteis): RAM (Acesso à qualquer posição). Leitura e escrita. Armazenamento temporário.
+  
+  - RAM Estática - SRAM (porta lógica) ->
+  
+  - RAM Dinâmica -  -> 
+
+Regeneração (refreshing): 
+
+DDR (explicação): 
+
+Tecnologia Optane: 
+
+<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/hierarquiaMemoria.png" alt="" width="425">
+
+---
+
 ### Meanings
 
 - **Barramento:** É um **caminho elétrico** comum que liga e permite a comunicação entre dispositivos de hardware (processador, memórias, controladores...). Grupos funcionais dos barramentos: dados, endereços e controle; 

@@ -29,6 +29,8 @@ author: Arthur P. Braga
 
 MPEs realizam a informatização buscando a melhoria da qualidade das informações, redução de custos e modernização.
 
+ESTUDAR ESSA AULA!!!!!!!!! :)
+
 ---
 
 **5ª Aula ->** Conversa com ex-aluno sobre trabalho fora do Brasil
@@ -114,7 +116,7 @@ Análise ética (quando confrontado):
 
 **Perguntas:**
 
-1. Sabe se que hoje estamos passando por um momento de enfrentamento referente ao covid e com isso a tecnologia vem como uma aliada muito forte tanto quanto a demanda de tempo quanto a tecnologia envolvida para solucionar a vacina, referente a isso como enfrentaríamos esse tal momento sem a tecnologia como aporte principal? 
+1. Sabe-se que hoje estamos passando por um momento de enfrentamento referente ao covid e com isso a tecnologia vem como uma aliada muito forte tanto quanto a demanda de tempo quanto a tecnologia envolvida para solucionar a vacina, referente a isso como enfrentaríamos esse tal momento sem a tecnologia como aporte principal? 
 
 2. Com a tecnologia as fronteiras da educação e de muitas outras áreas foram quase extintas. vocês acreditam que sem a tecnologia teriam tantas pessoas com educação básica hoje? ;) 
 
@@ -152,13 +154,15 @@ Aplicativos integrados são sistemas que abrangem TODA a empresa (todos os níve
 
         **Estilos de implantação:** Big-bang, Small-bang e Em fases.
 
-        **Valor exmpresarial deles:** Extinção de tarefas reduntantes, administração sênior... 
+        **Valor empresarial deles:** Extinção de tarefas reduntantes, administração sênior... 
 
         **Fatores desfavoráveis:** Custos altos, Não fornece vantagem competitiva (está disponível para todos), Tempo de implantação longo.
 
 - **SCM** - Supply Chain Management (sistemas de gestão da cadeia de suprimentos) -> 
 
 - **CRM** - Customer Relationship Management (sistemas de gestão do relacionamento com o cliente) -> 
+
+Estudar SPTs, SIGs, SADs...
 
 ---
 
@@ -167,3 +171,11 @@ Aplicativos integrados são sistemas que abrangem TODA a empresa (todos os níve
 **11ª Aula ->** 1º Conexão FSI
 
 **12ª Aula ->** Continuação do 1º Conexão FSI
+
+**13ª Aula ->** Continuação das apresentações do trabalho de extensão
+
+---
+
+**14ª Aula ->** 
+
+Prova: Tudo visto até agora :)

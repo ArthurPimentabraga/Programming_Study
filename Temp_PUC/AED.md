@@ -194,8 +194,28 @@ Ex: Lista de trabalhos - Controle de processos em um SO...
 
 *Pode criar um contador para limitar o uso de memória.*
 
-
-
 **Notação polonesa reversa (pós-fixa):** modo como escreve as operações para o computador interpretar corretamente (a operação vem depois dos números).
 
 Para usar a notação polonesa precisa de duas pilhas, uma para criar a equação polonesa e outra para resolver.
+
+---
+
+**16ª Aula ->** Árvores
+
+Todas as estruturas anteriores eram *lineares* (seguir em linha reta vai passar por todos os dados) - As arvores são estruturas não-lineares, existem **caminhos** à se seguir, **com hierarquia**.
+
+Exemplos: Estrutura de diretório do Unix S2; Git S2
+
+*nodos (nós) ou vértices = elementos de uma árvore*
+
+**Grau de um nodo:** Quantidade de descendentes diretos que ele tem. Elementos de grau 0 = folha;
+
+**Nível de um nodo:** Distância do nodo até a raiz.
+
+**Altura de um nodo:** Distância do nodo a folha mais distânte (pior caso de complexidade).
+
+**Subárvore:** Conjunto de elementos com uma raiz comum
+
+É uma estrutura recursiva, pois uma arvore é uma raiz e suas subárvores, e uma subárvore é uma árvore.
+
+**Árvore binária de busca:** Cada nodo só tem até dois filhos e os valores à esquerda são sempre menores que os valores à direita.
