@@ -23,6 +23,10 @@ author: Arthur P. Braga
 
 **4ª Aula ->** Tipos de organizações || Gestão centralizada e descentralizada || Estrutura formal e informal || Estrutura Funcional (Divisional e Matricial)
 
+[gestão centralizada e descentralizada - Pesquisa Google](https://www.google.com/search?q=gest%C3%A3o+centralizada+e+descentralizada&oq=gest%C3%A3o+centrali&aqs=chrome.2.69i57j0l7.4364j0j1&sourceid=chrome&ie=UTF-8)
+
+http://marcusmarques.com.br/pequenas-e-medias-empresas/estrutura-organizacional-conheca-tres-tipos-existentes/
+
 - Vertical: hierarquia
 
 - Horizontal: departamentalização
@@ -46,19 +50,31 @@ ESTUDAR ESSA AULA!!!!!!!!! :)
 
 *Um processo de negócio é um conjunto de atividades relacionadas que define como tarefas organizacionais vão ser executadas.*
 
+- SPT: Sistema de processamento de transações. Os Sistemas de Processamento de Transação (SPTs) são sistemas de suporte para atividades do dia a dia da organização que servem o nível operacional como monitorando as atividades diárias ou normais de uma empresa, controle de estoque, contabilidade, sistemas de cobrança e pagamento de contas, folha de pagamento, atendimento a clientes, fluxo de materiais, entre outros. É o mais antigo tipo de sistema de informação e tem como principal objetivo responder a questões rotineiras e acompanhar o fluxo de transações através da organização. Os SPTs capacitam as organizações a executar suas atividades mais importantes de maneira mais eficiente. Uma transação consiste na troca de valores que afetam a lucratividade ou o ganho global de uma organização.Portanto, esses sistemas são valiosas fontes de dados para o nível operacional da empresa e também para os níveis mais elevados da empresa.
+
+- SIG: Sistema de Informação Gerencial. São processos utilizados para transformar dados em informações que auxiliem no processo decisório da empresa. *É um sistema que disponibiliza a informação certa, para a pessoa certa, no lugar certo, na hora certa, da forma correta e com o custo certo.* Os SIGs possuem uma multiplicidade de produtos de informação, que são apresentadas através de relatórios, que ajudam os gerentes com o fornecimento de dados e informações para a tomada de decisões.
+
+- SAD: Sistema de Apoio a Decisão. *“…a eficácia empresarial está sendo seriamente prejudicada por sistemas que, simplesmente, produzem enormes quantidades de dados e informações que não são trabalhados e utilizados”*. Ou seja, um SIG não é muito bem utilizado para micro e pequenas empresas, logo evoluiram para o SAD. A função principal do SAD é apoiar o processo de tomada de decisão em áreas de planejamento estratégico, controle gerencial e controle operacional.
+
+**Organograma:** É um gráfico que representa a estrutura formal de uma organização. Ou seja, é a representação gráfica clássica de uma estrutura organizacional. Define funções, grupos de trabalho e até os principais projetos que transitam pela empresa
+
 ---
 
 **7ª Aula ->** Conquistando vantagem competitiva com os sistemas de informação || Atividade (artigo)
 
-- **4 forças de Michael Porter**
+- **5 forças de Michael Porter** - https://rockcontent.com/br/blog/5-forcas-de-porter/
   
-  - Novos entrantes no mercado
+  - Ameaça de entrada de novos concorrentes;
   
-  - Produtos substitutos
+  - Ameaça de produtos substitutos;
   
-  - Clientes
+  - Poder de negociação dos clientes;
   
-  - Fornecedores
+  - Poder de negociação dos fornecedores;
+  
+  - Rivalidade entre concorrentes;
+
+*São os pilares de uma empresa, e se algum mudar, deve-se reavaliar seu posicionamento estratégico. A possibilidade de avaliar com clareza fatores que são imutáveis — independente do tamanho e segmento da empresa — facilita o processo de identificação de falhas e possíveis oportunidades, as quais podem ser exploradas como um diferencial competitivo, garantindo o sucesso do negóci https://rockcontent.com/br/blog/5-forcas-de-porter/o.*
 
 *A pergunta de 1 milhão -> Como a gente pode melhorar esses processos com tecnologia?*
 
@@ -88,7 +104,7 @@ ESTUDAR ESSA AULA!!!!!!!!! :)
 
 **Impacto da internet:** Acesso fácil à informação (acesso a preços...) o poder de barganha aumenta || Acesso direto aos fornecedores (da pra saber qual é melhor... mais facilmente) || Reduz a barreira de entrada no mercado || Amplia a abrangencia geográfica do mercado, ou seja, mais concorrencia > melhoria dos produtos e processos.... 
 
-**Benchmarking:** processo que compara processos igual em empresas diferentes para ver como melhorar;
+**Benchmarking:** processo que compara processos iguais em empresas diferentes para ver como melhorar;
 
 **BPM (Business process management):** Abordagem cujo objetivo é a melhoria contínua dos processos de negócio;
 
@@ -158,11 +174,29 @@ Aplicativos integrados são sistemas que abrangem TODA a empresa (todos os níve
 
         **Fatores desfavoráveis:** Custos altos, Não fornece vantagem competitiva (está disponível para todos), Tempo de implantação longo.
 
-- **SCM** - Supply Chain Management (sistemas de gestão da cadeia de suprimentos) -> 
+- **SCM** - Supply Chain Management (sistemas de gestão da cadeia de suprimentos) -> É a gestão do produto da fonte até o consumidor, desde a matéria prima até estoque e entrega. Interliga fornecedores, instalações industriais, centros de distribuição, varejistas, clientes....
+  
+  - Determina a quantidade de um produto específico a ser fabricado em dado período, sintonizando oferta e demanda;
+  
+  - Estabelecer níveis de 
+  
+  - estoque para matéria-primas e produtos acabados;
+  
+  - Determinar onde armazenar os artigos acabados;
+  
+  - Identificar o meio de transporte a ser utilizado para a entrega, melhorando o serviço, reduzindo tempo de entrega...
 
-- **CRM** - Customer Relationship Management (sistemas de gestão do relacionamento com o cliente) -> 
+*Todas as empresas envolvidas precisam contribuir com seus dados e info.*
 
-Estudar SPTs, SIGs, SADs...
+- **CRM** - Customer Relationship Management (sistemas de gestão do relacionamento com o cliente) -> Não da mais para competir só com base no preço, não da mais para ter um marketing de massa (uma única frase em todos os meios), precisa ser um marketing personalizado para cada cliente. O CRM é a combinação de processos de negócio e tecnologia com o objetivo de entender os clientes mediante a várias perspectiva: quem são?, o que fazem?, do que gostam?.... Aplicação para fidelização de cliente, aumento da satisfação dos mesmos.... 
+
+                                <img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Vantagens_CRM.png" alt="" width="394">
+
+*Ciclo de vida do cliente: Adquirir -> Aprimorar -> Reter*
+
+*Cross-sell: Soraia sempre compra pipoca quando vai no cinema -> Duas pipocas por uma. Ou Promoção de pipoca + refri + chocolate.*
+
+*Up-sell: Ela sempre compra uma pipoca -> promoção para comprar uma pipoca maior.*
 
 ---
 
@@ -176,6 +210,6 @@ Estudar SPTs, SIGs, SADs...
 
 ---
 
-**14ª Aula ->** 
+**14ª Aula ->** SCM e CRM (9ª Aula)
 
-Prova: Tudo visto até agora :)
+**15ª Aula ->** 1ª Prova

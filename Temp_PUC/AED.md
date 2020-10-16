@@ -214,8 +214,26 @@ Exemplos: Estrutura de diretório do Unix S2; Git S2
 
 **Altura de um nodo:** Distância do nodo a folha mais distânte (pior caso de complexidade).
 
-**Subárvore:** Conjunto de elementos com uma raiz comum
+**Subárvore:** Conjunto de elementos com uma raiz comum.
 
 É uma estrutura recursiva, pois uma arvore é uma raiz e suas subárvores, e uma subárvore é uma árvore.
 
 **Árvore binária de busca:** Cada nodo só tem até dois filhos e os valores à esquerda são sempre menores que os valores à direita.
+
+---
+
+**17ª Aula ->** Continuação de árvores || Atividade avaliativa
+
+**18ª Aula ->** Código de árvore
+
+---
+
+**19ª Aula ->** Continuação de código de árvore  || Árvores Balanceadas AVL
+
+**Árvores Balanceadas AVL:** Busca rápida, mas só em uma estrutura 
+
+bem balanceada, bem comportada (mal comportada ele aproxima de O(n), uma busca sequencial).
+
+*Uma árvore balanceada tenta manter as alturas das duas dubávores equilibradas.*
+
+Uma árvore balanceado precisa ser criada já balanciando, não da pra balancear depois de preenchida.
