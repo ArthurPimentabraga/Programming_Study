@@ -4,6 +4,18 @@ author: Arthur P. Braga
 book: Organização estruturada de computadores - Tanenbaum
 ---
 
+### Meanings
+
+- **Barramento:** É um **caminho elétrico** comum que liga e permite a comunicação entre dispositivos de hardware (processador, memórias, controladores...). Grupos funcionais dos barramentos: dados, endereços e controle;
+
+- **Registradores:** É uma combinação de *flip-flops* (variante de memória 1bit, amazena o valor de transição do bit, ou seja, de 0 para 1 ou vice-versa). Tal combinação permite armazenar valores superiores à 1bit. (memórias internas na CPU);
+
+- **Controladores:**
+
+- **Pilhas:** É uma área de alocação de variáveis, ou seja, enquanto o programa está rodando ele empilha, armazena suas variáveis necessárias para execução de determinado processo neste local da memória, e quando o processo acaba este bloco da memória é desempilhado, desalocado;
+
+---
+
 ### General
 
 **1ª Aula ->** Apresentação e falou o básico de arquitetura computacional, como arquiteturas x86 (mais antiga, 32 bits...) e ARM;
@@ -27,6 +39,8 @@ book: Organização estruturada de computadores - Tanenbaum
   - Vantagens: Execução mais rápida! || Uma vez traduzido, o código original pode ser descartado da memória, ficando somente o programa objeto e podendo executar o programa diretamente. 
   
   - Desvantagens: Não portabilidade do código executável entre as diferentes plataformas || Para ser utilizado o código precisa passar por muitos níveis de compilação || Processo de correção ou alteração do código requer que ele seja novamente recompilado.
+
+*No caso de montadores e compiladores, eles são tipos de tradutores, porém depende da linguagem fonte.*
 
 - Montadores: 
   
@@ -54,7 +68,10 @@ pergunta: O que seria exatamente o programa objeto gerado pelos tradutores? O pr
 
 **5ª Aula ->** Continuação de sistemas numéricos (*conversão e operações de bases*) **Conversão de nº decimais** || Sinal Magnitude || Complemento-2 (sinais positivos e negativos) || Padrão/formato IEEE 754
 
+- Complemento-2 -> [Complemento de dois: funcionamento e exemplos - FilipeFlop](https://www.filipeflop.com/blog/complemento-de-dois/)
+
 - Foram feitos os exercícios 1,2 e 3 de ARQ em aula
+
 - **Exercícios 1, 4, 9, 12 ,13, 22, 23, 27 ctz que vai cair na prova (2,6, 7, 14, 24 talvez)(11 não cai)**
 
 ---
@@ -69,7 +86,13 @@ pergunta: O que seria exatamente o programa objeto gerado pelos tradutores? O pr
 
 **9ª Aula ->** Multiplexador || Decodificador  || Somadores || Clock? || Início de memórias
 
-**Multiplexador:** seleciona as informações de duas ou mais fontes de dados num único canal.
+**Multiplexador:** Seleciona as informações de duas ou mais fontes de dados num único canal. *Pag 125 - Tanenbaum.*
+
+**Decodificador:** Um descodificador ou decodificador é um circuito combinatório,  isto é, converte um código binário de entrada de N bits de entrada em M linha de saída, de modo que cada linha de saída será ativada por uma única combinação das possíveis de entrada. *Pag 126 - Tanenbaum*.
+
+**Comparadores:** Compara duas palavras de entrada. *Pag 126 - Tanenbaum*.
+
+**Somadores:** Adição de bits. *Pag 126 - Tanenbaum*.
 
 ---
 
@@ -103,18 +126,8 @@ Regeneração (refreshing):
 
 DDR (explicação): 
 
-Tecnologia Optane: 
-
-<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/hierarquiaMemoria.png" alt="" width="425">
+Tecnologia Optane: <img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/hierarquiaMemoria.png" alt="" width="675">
 
 ---
 
-### Meanings
-
-- **Barramento:** É um **caminho elétrico** comum que liga e permite a comunicação entre dispositivos de hardware (processador, memórias, controladores...). Grupos funcionais dos barramentos: dados, endereços e controle; 
-
-- **Registradores:** É uma combinação de *flip-flops* (variante de memória 1bit, amazena o valor de transição do bit, ou seja, de 0 para 1 ou vice-versa). Tal combinação permite armazenar valores superiores à 1bit. (memórias internas na CPU);
-
-- **Controladores:** 
-
-- **Pilhas:** É uma área de alocação de variáveis, ou seja, enquanto o programa está rodando ele empilha, armazena suas variáveis necessárias para execução de determinado processo neste local da memória, e quando o processo acaba este bloco da memória é desempilhado, desalocado; 
+**11ª Aula ->** Prova

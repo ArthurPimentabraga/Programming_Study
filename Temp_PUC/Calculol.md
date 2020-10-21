@@ -239,3 +239,23 @@ Assintota Horizontal -> Fazer o limite do x -> + e - infinito
 ---
 
 **17ª Aula ->** 1ª Prova :0
+
+---
+
+**18ª Aula ->** Continuidade de uma função (finalização de limites)
+
+1. f(c) é definida
+
+2. lim f(x) com x -> c  || existe
+
+3. lim f(x) = f(c)
+
+*imagem = limite -> contínua* (os limites laterais precisam ser iguais a imagem)
+
+1. Acha a imagem 
+
+2. Depois os limites laterais
+
+---
+
+**19ª Aula ->** Introdução ao estudo de **derivadas**

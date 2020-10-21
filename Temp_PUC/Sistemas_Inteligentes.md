@@ -329,3 +329,7 @@ Tomam suas proprias decisoes, decidem se suas ações foram boas, e se "auto mel
   - Classificação: Faz a classificação das classes de elementos dos nossos dados. Ou seja, ele extraí as características de cada elemento, e faz a análise. Ex: Identificar qual o objeto em uma foto. *Árvore de decisões*
   
   - Regressão: Técnicas estatísticas para estimar a relação entre variáveis ou atributos para prever valores futuros. (lembrar de função - é usado para calcular os possíveis valores). *Redes neurais*
+
+**Árvore de decisão**
+
+Tomada de decisão - Classificação
