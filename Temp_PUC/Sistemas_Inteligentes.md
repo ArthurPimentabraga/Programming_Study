@@ -332,4 +332,19 @@ Tomam suas proprias decisoes, decidem se suas ações foram boas, e se "auto mel
 
 **Árvore de decisão**
 
-Tomada de decisão - Classificação
+Tomada de decisão - Classificação - Técnica Preditiva
+
+**Clustering ou Agrupamento - K-means**
+
+*Cluster:* Coleção de objetos similares, e dissimilares a outros objetos pertencentes a outros clusters.
+
+*Clustering (análise de agrupamento):* Técnica para separar os objeots em grupos com base na similaridade, e em seguida atribuir rótulos a cada grupo.
+
+- ***hard clustering***: cada registro pertence a um cluster.
+- ***soft clustering***: cada registro possui uma probabilidade de pertencer a um ou mais *clusters*.
+
+Os algoritmos de agrupamento variam na forma como eles distribuem os *clusters* no espaço de dados. Os métodos de agrupamento podem ser:
+
+- **Modelos baseado em centróides (ou modelos de particionamento):** A similaridade dos elementos é definida em termos de sua proximidade de um ponto de dados com o centróide dos clusters. O algoritmo de agrupamento K-Means é um algoritmo mais popular dessa categoria.
+- **Modelos de densidade:** Esses modelos examinam a densidade de diferentes regiões do espaço de dados e atribui os pontos em regiões de mesma densidade pertencem ao mesmo cluster. O DBSCAN é um algoritmo clássico de agrupamento por densidade.
+- **Modelos hierárquicos (de conectividade):** Podem ser aglomerativos ou divisórios. Na abordagem aglomerativa, todos os pontos de dados começam em clusters separados e, em seguida, vão sendo agregados pela menor distância. Nos métodos divisórios, todos os pontos de dados são classificados como um único cluster e particionados pela maior distância. AGNES é um algoritmo famoso que utiliza a abordagem aglomerativa.

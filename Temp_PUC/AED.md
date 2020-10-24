@@ -237,3 +237,11 @@ bem balanceada, bem comportada (mal comportada ele aproxima de O(n), uma busca s
 *Uma árvore balanceada tenta manter as alturas das duas dubávores equilibradas.*
 
 Uma árvore balanceado precisa ser criada já balanciando, não da pra balancear depois de preenchida.
+
+---
+
+**20ª Aula ->** Filas de prioridades
+
+**Heap (amontoado - pirâmide - árvore binária completa):** Para criar uma fila que tenha alguma prioridade (o primeiro a sair é o menor elemento, por exemplo), se faz uma heap, onde o mais prioritário é a raiz. O nº de operações necessárias para se organizar uma heap é  muito menor (O(log2 de n)) que uma estrutura de fila simples (O(n)).
+
+*Existe uma correspondência entre uma árvore binária e um vetor.* Sendo x uma posição, os filhos estão a uma distância x dele.

@@ -218,4 +218,10 @@ Aplicativos integrados são sistemas que abrangem TODA a empresa (todos os níve
 
 **16ª Aula ->** Infraestrutura de TI (hardware e software - Cliente/servidor...)
 
-- Virtualização: permite que em uma mesma máquina sejam executadassimultaneamente doisou maisambientes distintos e isolados. Esseconceito de virtualização remonta aos antigos mainframes, que deviam ser divididos por vários usuários em ambientes de aplicação completamente diferentes. O interesse na virtualização não se atém somente ao fato de permitir o uso de um mesmo sistema por vários usuários concomitantemente, mas os principais interesses são a segurança, confiabilidade e disponibilidade, custo, adaptabilidade, balanceamento de carga esuporte a aplicações legadas.
+- Virtualização: permite que em uma mesma máquina sejam executadas simultaneamente dois ou mais ambientes distintos e isolados. Esse conceito de virtualização remonta aos antigos mainframes, que deviam ser divididos por vários usuários em ambientes de aplicação completamente diferentes. O interesse na virtualização não se atém somente ao fato de permitir o uso de um mesmo sistema por vários usuários concomitantemente, mas os principais interesses são a segurança, confiabilidade e disponibilidade, custo, adaptabilidade, balanceamento de carga esuporte a aplicações legadas.
+
+[O que é virtualização?](https://www.redhat.com/pt-br/topics/virtualization/what-is-virtualization)
+
+---
+
+**17ª Aula ->** 2º Conexão FSI
