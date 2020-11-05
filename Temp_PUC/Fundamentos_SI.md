@@ -225,3 +225,52 @@ Aplicativos integrados são sistemas que abrangem TODA a empresa (todos os níve
 ---
 
 **17ª Aula ->** 2º Conexão FSI
+
+---
+
+**18ª Aula ->** Continuação do 2º Conexão FSI || Segurança 
+
+**Pilares da segurança da informação:**
+
+- Disponibilidade;
+
+- Confidencialidade;
+
+- Integridade.
+
+**Vulnerabilidade:**
+
+- Softwares mal-intencionados: Vírus, Worms, Cavalo de troia, Spyware... || Hacker, spoofing, sniffer. || Ataques de recusa de serviço (DoS - Denial of Service) || Roubo de identidade (phishing é uma forma de spoofing - pharming é uma técnica de phishing) || Fraude do clique;
+
+- Ameaças internas: funcionários;
+
+**Perícia forense computacional:** procedimento científico de coleta, exame, análise... de dados mantidos em meios de armazenamento digital, de tal maneira que as informações possam ser usadas como prova em juízo.
+
+**Estabelecer uma estrutura para segurança e controle:**
+
+- Controles gerais -> controle de software, hardware, operações do computador...
+
+- Controles de aplicação -> processamento de folha de pagamento ou pedidos...
+
+- Avaliação de risco -> determina o nível de risco de uma empresa caso uma atividade ou um processo específico não sejam controlados adequadamento.
+
+- Uma vez identificado os principais riscos , será necessário desenvolver uma política de segurança par proteger esses ativos.
+
+- Plano de recuperação de desastres
+
+- Plano de continuidade dos negócios
+
+- Auditoria de sistemas de informação
+
+**Tecnologias e ferramentas para garantir a segurança dos recursos de informação:**
+
+- Autenticação (two factor, por exemplo);
+- Firewalls;
+- Sistemas de detecção de intrusão - Software antivírus - Sistemas unificados de gestão de ameaças (UTM);
+- Segurança em redes sem fio;
+- Criptografia;
+- Segurança em nuvem
+
+---
+
+**19ª Aula ->** Continuação da 2ª apresentação de extensão

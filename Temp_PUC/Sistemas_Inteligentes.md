@@ -334,6 +334,13 @@ Tomam suas proprias decisoes, decidem se suas ações foram boas, e se "auto mel
 
 Tomada de decisão - Classificação - Técnica Preditiva
 
+- cada nó é um atributo da base de dados.
+
+- nós folha são do tipo do atributo-classe (ou rótulo,
+  label),
+
+<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Arvore_Decisoria.png" alt="">
+
 **Clustering ou Agrupamento - K-means**
 
 *Cluster:* Coleção de objetos similares, e dissimilares a outros objetos pertencentes a outros clusters.

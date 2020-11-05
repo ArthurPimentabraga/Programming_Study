@@ -131,3 +131,81 @@ Tecnologia Optane: <img title="" src="file:///home/arthurbraga/Documentos/Progra
 ---
 
 **11ª Aula ->** Prova
+
+---
+
+**12ª Aula ->**  Banda passante de memória (BPM) || Mais um pouco de explicação de memória || Memória Cache
+
+**BPM** = LB * f 
+
+- LB (largura do barramento de dados (memória))
+
+- f (frequência da banda de memória)
+
+**Memória Cache:** está entre a CPU e a mamória principal. Ou seja, a CPU procura na cache antes de procurar na principal, por isso mais rápido acesso. Caso não encontre o que deseja na memória cache, é feita uma busca parcial antes para o bloco da memória principal.
+
+**Taxa de acerto/erro da cache:** t = c + (1-h)*m
+
+- t = tempo médio de acesso médio
+
+- c = tempo de acesso a cache
+
+- m = tempo de acesso a memória
+
+- h = taca de acerto ("hit ratio")
+
+**Write back:** escrita de volta. A memória é atualizada quando não há mais espaço. E a info contida nela vai para a próxima memória. Ex: cache -> principal;
+
+**Mapeamento direto:** para cada dado existem um ID, logo para verificar se tal dado está em tal memória é comparado os IDs da memória em questão, com o ID do dado que eu desejo. ID = endereço de memória. 
+
+<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Mapeamento_Cache.png" alt="" width="605">
+
+---
+
+**13ª Aula ->** Mais memória || Instruções
+
+**Memória virtual (overlay automático):** combina memória principal e secundária para permitir executar programas maiores que a memória principal. Pode se imaginar o swap do linux, só que um pouco mais amplo. 
+
+**Paginação**
+	- Substituição de páginas: desempenho - simplificação: EAT = (1-p).m+p.d
+		- p = taxa de falta de páginas
+		- m = tempo de acesso à memória
+		- d = tempo de tratamento de falta de página
+		- EAT = 
+
+**Instruções:** 
+	- **ISA:** Arquitetura de conjunto de instruções;
+	- 4bits + 6bits + 6bits = 16bits (opcode + referência ao operando + Referência ao operando);
+	- **Ciclo de instrução:** 
+	- Ciclo de instrução resumido: Busca e execução;
+	- **Ciclo de execução:** 
+
+**Paralelismo:** 
+	- Nível de instrução:
+	- Nível de processador: 
+		- SIMD: 
+		- MIMD: 
+	- Sistemas multiprocessador: tem a mesma memória e é fortemente acoplado.
+		- NUMA: 
+	- Multicore e multithread: 
+
+*Pipeline:*
+	- Pipeline de cinco estágios:
+	- **Superpipeline:**
+
+**Arquitetura superescalar:** 
+
+Sistemas fracamente acoplados: sistemas ligados a rede, sem estarem ligados fisicamente, diretamente. Multicomputadores.
+
+	- Sistemas em rede; clusters; Grid; 
+
+
+**Tipos de desempenho:**
+	- Tempo de execução (latência):
+	- Vazão (Banda passante do processador): 
+	- BPM (Banda passante de memória): BPM = LB*f
+
+*O tempo de execução é o inverso do desempenho.* 
+
+Programas de BenchMarks -> testar o desempenho.
+

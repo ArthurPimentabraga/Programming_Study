@@ -259,3 +259,21 @@ Assintota Horizontal -> Fazer o limite do x -> + e - infinito
 ---
 
 **19ª Aula ->** Introdução ao estudo de **derivadas**
+
+**20ª Aula ->** Derivando por limites || Regras de derivação 
+
+**21ª Aula ->** Regras de derivação
+
+**22ª Aula ->** Continuação de regras de derivação || Regra do produto e cadeia
+
+
+
+Estudar:
+
+1. Limites
+
+2. Derivadas
+
+3. Regras de derivação
+
+4. Derivando por limites
