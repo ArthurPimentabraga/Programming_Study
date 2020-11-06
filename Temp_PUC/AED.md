@@ -249,15 +249,16 @@ Uma árvore balanceado precisa ser criada já balanciando, não da pra balancear
 ---
 
 **21ª Aula ->** Mapas, dicionários e skiplists
-Mapas: Vai mapear! kkk traça caminhos para localizar.
 
-	- Estrutura de amazenamento *associativo*.
-	- Usa identificador para seus valores: Par key-value(object) (k,v) é conhecido como entrada de dados. Todas as operações são baseadas na key;
-	- Vantagem: é possivel de indexar os mesmos dados por atributos diferentes, utilizando múltiplos mapas (id sendo o nome, ou matricula...);
+**Mapas:** Vai mapear! kkk traça caminhos para localizar.
+
+- Estrutura de amazenamento *associativo*.
+- Usa identificador para seus valores: Par key-value(object) (k,v) é conhecido como entrada de dados. Todas as operações são baseadas na key;
+- Vantagem: é possivel de indexar os mesmos dados por atributos diferentes, utilizando múltiplos mapas (id sendo o nome, ou matricula...);
 
 Dicionários: É a msm coisa do mapa, porém dicionário pode ter chave duplicada.
 
-	- Exemplo: Agrupamento de objetos. Atributos multivalorados (um livro pode ter varios autores).
+- Exemplo: Agrupamento de objetos. Atributos multivalorados (um livro pode ter varios autores).
 
 Se a estrutura não precisa ser ordenada:
 *Podemos implementar com uma lista duplamente encadeada e/ou Arrays*
@@ -266,38 +267,49 @@ Se precisa ser ordenado:
 Da pra usar lista duplament encadeada tbm, mas não possiblitará a busca binária.*
 
 Skip Lists: Estrutura de dados composta que permite implementar estruturas de dicionário com mais eficiencia nas operações.
-	- Se utiliza o fator aleatório para obter bons desempenhos nas operações;
-	- Por ser composta ela usa 2 ou + estruturas para produzir uma;
-	- É uma lista de listas. A 1ª lista do conjunto tem todos os dados ordenados. E o resto das listas contém um subconjunto aleatório dos dados
-		Cada lista precisa ter dois sentinelas (valores -infinito e +infinito)
-		Para cada item de uma lista, temos o sentinela de uma outra lista LDE (lista duplamente encadeada);
+- Se utiliza o fator aleatório para obter bons desempenhos nas operações;
+- Por ser composta ela usa 2 ou + estruturas para produzir uma;
+- É uma lista de listas. A 1ª lista do conjunto tem todos os dados ordenados. E o resto das listas contém um subconjunto aleatório dos dados
+Cada lista precisa ter dois sentinelas (valores -infinito e +infinito)
+Para cada item de uma lista, temos o sentinela de uma outra lista LDE (lista duplamente encadeada);
 
 ---
 
-**22ª Aula ->** Continuação de Skip lists || 
+**22ª Aula ->** Continuação de Skip lists || Tabela Hash
  Skip List depende do aleatório!
 
-	- A quantidade de listas é log2 n;
-	- Gasta mais memória, mas a velocidade de busca é maior;
+- A quantidade de listas é log2 n;
+- Gasta mais memória, mas a velocidade de busca é maior;
 
 **Tabela hash(picadinho):** Ela não vai comparar ninguém, ou seja, não tem busca sequencial, nem árvore binária... tbm chamado de tabelas de dispersão. Transformação aritmética da chave de pesquisa. Usa função com o id do dado, o resultado é o endereço do dado na tabela (tabela imagem). Ou seja, endereçamento direto, vai direto no endereço que ele quer.
-	- O problema é que ela é bijetora, ou seja, para cada elemento de um, só tem um correspondente, só um resultado. Logo não tem como ter id duplicado ou que seus resultados vão ser iguais;
-	- Os metodos de inserção e busca é a mesma;
-	- Colisão: duas chaves vão para a mesma posição. Precisa trata-las.
+- O problema é que ela é bijetora, ou seja, para cada elemento de um, só tem um correspondente, só um resultado. Logo não tem como ter id duplicado ou que seus resultados vão ser iguais;
+- Os metodos de inserção e busca é a mesma;
+- Colisão: duas chaves vão para a mesma posição. Precisa trata-las.
 
 **Paradoxo do aniversário:** Cenário onde a gente acha q a probabilidade do resultado da conta ser igual é muito pequena, mas na vdd é bem grande. 
 
 **Funções hash comuns:** 
-	- f(x)=x, o problema é o uso de espaços ociosos. Ex: quando usa nº de matrícula, cpf...
-	- f(x) = x % N (N=tamanho da tabela), o problema é que de o valor de entrada for par o resto vai ser par, e a mesma coisa para valores ímpares, e isso prejudica a probabilidade. Além do perído de dar restos iguais. Recomenda-se escolher para N um nº primo. Se o dado não for numérico -> Transformação (unicode), mas precisa prestar atenção em casos de anagrama, nesse caso utiliza peso para os caracteres, suas posições...
-	- Extrair dígitos da key.
-	- Quebrar a key. Ex: elevar a key ao quadrado, e depois, extrair dígitos. 
+- f(x)=x, o problema é o uso de espaços ociosos. Ex: quando usa nº de matrícula, cpf...
+- f(x) = x % N (N=tamanho da tabela), o problema é que de o valor de entrada for par o resto vai ser par, e a mesma coisa para valores ímpares, e isso prejudica a probabilidade. Além do perído de dar restos iguais. Recomenda-se escolher para N um nº primo. Se o dado não for numérico -> Transformação (unicode), mas precisa prestar atenção em casos de anagrama, nesse caso utiliza peso para os caracteres, suas posições...
+- Extrair dígitos da key.
+- Quebrar a key. Ex: elevar a key ao quadrado, e depois, extrair dígitos. 
 
 **Tratamento de colisões:**
 
-	- Lista encadeada (ou endereçamento aberto): cria uma lista de listas, ou seja, para cada posição vc insere o dado em uma lista endereçada com aquela posição.
-	- Utilização de lugares vazios na própria tabela: 
+- Lista encadeada (ou endereçamento aberto): cria uma lista de listas, ou seja, para cada posição vc insere o dado em uma lista endereçada com aquela posição.
+- Utilização de lugares vazios na própria tabela: Tendo lugares vazios na tabela, quando ocorre um conflito o dado é armazenado no lugar vazio. *Usado quando tem-se uma boa estimativa inicial da quantidade de registros a ser armazenada.* Métodos para busca de posição vazia:
+  - Sondagem linear: procurar a próxima posição livre - vai somando 1 para ir verificando as próximas posições. Nesse caso para fazer a busca do elemento desejado, caso o resultado da função não dê a posição do elemento desejado, a gente precisa fazer uma busca sequencial até achar. *Em case de busca por elemento inesistente é feita a busca sequencial até achar uma posição vazia.*;
+  - Sondagem quadrática: Em vez de procurar linearmente, a posição a ser sondada é determinada pelo quadrado da tentativa. Ex: h j(x) = (h(x) + j^2) % N || j = tentativa;
+    - Duplo hash (double hashing): Para aumentar ainda mais a dispersão das tentativas de busca por posições vazias a gente escolhe uma 2ª função hash -> h(x,i) = (h(x) + i*h(x)) % N || i = tentativa;
+
+**Remoção de elemento em tabela hash:** No caso de endereçamento aberto não pode excluir o elemento "de verdade", pois pode dar ferrar com a busca de um elemento. Logo o elemento precisa ter um atributo "boolean valido;" = marca de remoção, logo na busca ele não vai existir se a marca for false, e não vai ser considerado null na busca e por isso nao ferra o processo. 
+
+*A tabela hash tem uma tendencia à ficar "bagunçada" ao longo do tempo, logo é recomendável fazer a reorganização da tabela de tempos em tempos. Para isso você cria uma nova tabela e percorre a antiga verificando um a um e vendo se está válido, se está na posição adequada...*
+
+*Tabela hash não serve muito para dados ordenados!*
 
 ---
 
 **23ª Aula ->** Continuação de tabela hash
+
+**24ª Aula ->** Continuação de tabela hash

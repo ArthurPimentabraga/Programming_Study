@@ -244,7 +244,7 @@ Aplicativos integrados são sistemas que abrangem TODA a empresa (todos os níve
 
 - Ameaças internas: funcionários;
 
-**Perícia forense computacional:** procedimento científico de coleta, exame, análise... de dados mantidos em meios de armazenamento digital, de tal maneira que as informações possam ser usadas como prova em juízo.
+##### **Perícia forense computacional:** procedimento científico de coleta, exame, análise... de dados mantidos em meios de armazenamento digital, de tal maneira que as informações possam ser usadas como prova em juízo.
 
 **Estabelecer uma estrutura para segurança e controle:**
 
