@@ -264,16 +264,18 @@ Assintota Horizontal -> Fazer o limite do x -> + e - infinito
 
 **21ª Aula ->** Regras de derivação
 
-**22ª Aula ->** Continuação de regras de derivação || Regra do produto e cadeia
+**22ª Aula ->** Continuação de regras de derivação || **Regra do produto e cadeia**
 
-
+**23ª Aula ->** Continuação de regra de cadeia || Derivada Sucessiva - Implícita e Explícita
 
 Estudar:
 
-1. Limites
-
-2. Derivadas
-
-3. Regras de derivação
-
-4. Derivando por limites
+- [ ] Limites (acabar com continuidade)
+- [ ] Derivadas
+  - [ ] Regras de derivação 
+    - [ ] Regra do produto
+    - [ ] Regra da cadeia
+    - [ ] ...
+  - [ ] Derivada sucessiva (1ª ordem, 2ª ordem... nª ordem)
+  - [ ] Derivada Implícita e Explícita
+- [ ] Derivando por limites

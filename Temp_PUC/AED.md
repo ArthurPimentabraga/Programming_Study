@@ -296,13 +296,13 @@ Para cada item de uma lista, temos o sentinela de uma outra lista LDE (lista dup
 
 **Tratamento de colisões:**
 
-- Lista encadeada (ou endereçamento aberto): cria uma lista de listas, ou seja, para cada posição vc insere o dado em uma lista endereçada com aquela posição.
+- Lista encadeada: cria uma lista de listas, ou seja, para cada posição vc insere o dado em uma lista endereçada com aquela posição.
 - Utilização de lugares vazios na própria tabela: Tendo lugares vazios na tabela, quando ocorre um conflito o dado é armazenado no lugar vazio. *Usado quando tem-se uma boa estimativa inicial da quantidade de registros a ser armazenada.* Métodos para busca de posição vazia:
   - Sondagem linear: procurar a próxima posição livre - vai somando 1 para ir verificando as próximas posições. Nesse caso para fazer a busca do elemento desejado, caso o resultado da função não dê a posição do elemento desejado, a gente precisa fazer uma busca sequencial até achar. *Em case de busca por elemento inesistente é feita a busca sequencial até achar uma posição vazia.*;
-  - Sondagem quadrática: Em vez de procurar linearmente, a posição a ser sondada é determinada pelo quadrado da tentativa. Ex: h j(x) = (h(x) + j^2) % N || j = tentativa;
+  - Sondagem quadrática: Em vez de procurar linearmente, a posição a ser sondada, é determinada pelo quadrado da tentativa. Ex: h j(x) = (h(x) + j^2) % N || j = tentativa;
     - Duplo hash (double hashing): Para aumentar ainda mais a dispersão das tentativas de busca por posições vazias a gente escolhe uma 2ª função hash -> h(x,i) = (h(x) + i*h(x)) % N || i = tentativa;
 
-**Remoção de elemento em tabela hash:** No caso de endereçamento aberto não pode excluir o elemento "de verdade", pois pode dar ferrar com a busca de um elemento. Logo o elemento precisa ter um atributo "boolean valido;" = marca de remoção, logo na busca ele não vai existir se a marca for false, e não vai ser considerado null na busca e por isso nao ferra o processo. 
+**Remoção de elemento em tabela hash:** No caso de endereçamento aberto não pode excluir o çelemento "de verdade", pois pode dar ferrar com a busca de um elemento. Logo o elemento precisa ter um atributo "boolean valido;" = marca de remoção, logo na busca ele não vai existir se a marca for false, e não vai ser considerado null na busca e por isso nao ferra o processo. 
 
 *A tabela hash tem uma tendencia à ficar "bagunçada" ao longo do tempo, logo é recomendável fazer a reorganização da tabela de tempos em tempos. Para isso você cria uma nova tabela e percorre a antiga verificando um a um e vendo se está válido, se está na posição adequada...*
 

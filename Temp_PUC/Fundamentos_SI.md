@@ -274,3 +274,30 @@ Aplicativos integrados são sistemas que abrangem TODA a empresa (todos os níve
 ---
 
 **19ª Aula ->** Continuação da 2ª apresentação de extensão
+
+---
+
+**20ª Aula ->** Comércio eletrônico: mercados/mercadorias digitais
+
+**E-commerce:** É o uso da internet para conduzir um negócio. *m-commerce = mobile-commerce.*
+
+- Ubiquidade: a tecnologia web estar disponivel a qualquer parte e a qualquer momento. Redução de custo de transação para o consumidor...
+- Alcance global: atravessa fronteiras culturais e nacionais, abrange todo o planeta;
+- Padrões universais: padroes técnicos para pagamento e troca de dados facilita tudo. reduz custos...
+- Riqueza: grande distribuição de conteúdo, mesagens, divulgação...
+- Interatividade: Consequentemente tem uma interatividade mais com os clientes.
+- Densidade da informação: Grande densidade de informações e detalhamento de produtos, avaliações, diferença de preços...
+- Personalização/customização: personalização de marketing, customização de produtos, tudo focado nos cliente individualmente (isso é excencial hoje);
+- Tecnologia social: A tecnologia ajuda/suporta a geração de conteúdos e redes sociais.
+
+*Redução da **assimetria de informação** , ou seja, ambas as partes (vendedor e consumidor) estão cientes de tudo sobre a transação. || **Determinação diâmica de preços**...*
+
+**Classificações:**
+
+- **B2C** (Business to consumer): Venda de serviço/produto diretamente com o consumidor;
+- **B2B** (Business to business): Serviços/produtos de empresa para empresas;
+- **C2C** (Consumer to consumer): Ambas as partes do negócio são consumidores finais. Ex: Mercado livre.
+
+**Modelos de receita** do comércio eletrônico, ex: venda de produtos, anúncios, taxa de transação (TripAdvisor, Decolar...), Receita de afiliação (sites enviam visitantes para outros sites)...
+
+*O e-commerce deve estar integrado ao CRM (ex: lista de desejos do cliente, marketing personalizado...) e ao SCM (ex: acompanhamento da entrega)*
