@@ -230,9 +230,7 @@ Exemplos: Estrutura de diretório do Unix S2; Git S2
 
 **19ª Aula ->** Continuação de código de árvore  || Árvores Balanceadas AVL
 
-**Árvores Balanceadas AVL:** Busca rápida, mas só em uma estrutura 
-
-bem balanceada, bem comportada (mal comportada ele aproxima de O(n), uma busca sequencial).
+**Árvores Balanceadas AVL:** Busca rápida, mas só em uma estrutura bem balanceada, bem comportada (mal comportada ele aproxima de O(n), uma busca sequencial).
 
 *Uma árvore balanceada tenta manter as alturas das duas dubávores equilibradas.*
 

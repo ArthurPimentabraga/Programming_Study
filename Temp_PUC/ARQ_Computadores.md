@@ -197,15 +197,41 @@ Tecnologia Optane: <img title="" src="file:///home/arthurbraga/Documentos/Progra
 
 Sistemas fracamente acoplados: sistemas ligados a rede, sem estarem ligados fisicamente, diretamente. Multicomputadores.
 
-	- Sistemas em rede; clusters; Grid; 
-
+- Sistemas em rede; clusters; Grid; 
 
 **Tipos de desempenho:**
-	- Tempo de execução (latência):
-	- Vazão (Banda passante do processador): 
-	- BPM (Banda passante de memória): BPM = LB*f
+
+- Tempo de execução (latência):
+- Vazão (Banda passante do processador): 
+- BPM (Banda passante de memória): BPM = LB*f
 
 *O tempo de execução é o inverso do desempenho.* 
 
 Programas de BenchMarks -> testar o desempenho.
+
+---
+
+**14ª Aula ->** Dispositivos de E/S
+
+Controladore/adaptador: controla os comandos, informa o disco, o bloco...
+
+Comandos/endereços: hexa? - Comunicação UCP
+
+Métodos de E/S: por programa (polling)
+
+Device Drive: 
+
+Barramentos ISA - Vesa:
+
+Barramentos PCI - PCI Express: 
+
+Arquitetura InfiniBand:
+
+*Calcular a banda de transmição (Ex7 Lista2 AC)*
+
+Serial ATA ou SATA: 
+
+RAIDs níveis: 
+
+
 

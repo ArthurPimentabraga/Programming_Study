@@ -268,6 +268,8 @@ Assintota Horizontal -> Fazer o limite do x -> + e - infinito
 
 **23ª Aula ->** Continuação de regra de cadeia || Derivada Sucessiva - Implícita e Explícita
 
+**24ª Aula ->** Olhar topicos com o pedro
+
 Estudar:
 
 - [ ] Limites (acabar com continuidade)
