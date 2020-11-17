@@ -311,3 +311,17 @@ Para cada item de uma lista, temos o sentinela de uma outra lista LDE (lista dup
 **23ª Aula ->** Continuação de tabela hash
 
 **24ª Aula ->** Continuação de tabela hash
+
+---
+
+**25ª Aula - Lab ->** Ordenação: Métodos básicos
+
+Ordenação estável (ex: dois numeros iguais, se um estiver atrás, sempre tem q ficar atrás), posicional, por comparação.
+
+**Por comparação:** 
+
+- Custos: nº de comparações, complexidade...
+- Bubblesort: Vai jogando os maiores valores para o final do vetor. Comparando a posição relativa do elemeto atual com o próximo elemento. Toda vez que encontra uma posição relativa correta, tu volta pro inicio e faz com outro elemento. O(n) para vetor ja ordenado, e O(n²) para ter que ordenar.
+- Ordenação por seleção: Pega a ordem de grandeza de cada elemento e coloca na posição adequada. Menor elemento -> coloca na posição 0 -> 2º menor elemento -> coloca na posição 1.... O(n²), porém poucas trocas, "pouco recurso computacional". Esse método não é estável.
+- Ordenação por inserção: Olha para a posição anterior, se for menor tu troca. O(n²). Esse método é estável.
+

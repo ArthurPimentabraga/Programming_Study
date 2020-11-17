@@ -158,7 +158,7 @@ Tecnologia Optane: <img title="" src="file:///home/arthurbraga/Documentos/Progra
 
 **Mapeamento direto:** para cada dado existem um ID, logo para verificar se tal dado está em tal memória é comparado os IDs da memória em questão, com o ID do dado que eu desejo. ID = endereço de memória. 
 
-<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Mapeamento_Cache.png" alt="" width="605">
+![](../imgs/Mapeamento_Cache.png)
 
 ---
 
@@ -169,7 +169,7 @@ Tecnologia Optane: <img title="" src="file:///home/arthurbraga/Documentos/Progra
 **Paginação**
 	- Substituição de páginas: desempenho - simplificação: EAT = (1-p).m+p.d
 		- p = taxa de falta de páginas
-		- m = tempo de acesso à memória
+		- m = tempo de acesso à memória RAM
 		- d = tempo de tratamento de falta de página
 		- EAT = 
 
@@ -233,5 +233,18 @@ Serial ATA ou SATA:
 
 RAIDs níveis: 
 
+---
 
+Questão Rafa:
 
+1. Barramento de dados: Transporta toda informação interna do computador, sejam elas dados e códigos de programas;
+2. Barramento de endereços: Transporta a localização, o endereço de memória onde se deseja ler ou escrever dados;
+3. Barramento de controle: Controla as ações dos barramentos anteriores. Agrupa um conjunto de sinais elétricos de controle do sistema. Ex: sinais para indicar se tais dados que circulam no barramento de dados é para escrita ou leitura;
+4. Barramento:  É um **caminho elétrico** comum que liga e permite a comunicação entre dispositivos de hardware (processador, memórias, controladores...);
+5. Registrador de endereço de memória (MAR):  Quando uma operação precisa ser realizada com algum dado que está na memória principal, o endereço desse dado é passado para o MAR;
+6. Registrador de buffer de memória (MBR): utilizado para armazenar temporariamente os dados que foram lidos da memória ou dados que serão escritos na memória;
+7. Contador de programa (PC): Registrados da CPU que indica qual é a posição atual na sequência de execução de um processo;
+8. Registrador de instrução (IR): Recebe as instruções da memória principal e passa para a unidade de controle. (Registrador = É uma combinação de *flip-flops* (variante de memória 1bit, amazena o valor de transição do bit, ou seja, de 0 para 1 ou vice-versa). Tal combinação permite armazenar valores superiores à 1bit. (memórias internas na CPU);
+9. Ciclo de instrução: É o ciclo em que o computador lê e processa uma instrução da sua memória principal ou pela sequência de ações que a a CPU realiza;
+10. Ciclo de busca: É um dos dois processos do ciclo de instrução. Para executar o ciclo de instrução, primeiro é preciso fazer a busca dos dados necessários para a operação, sejam dados para servirem de entrada ou para o armazenamento na memória;
+11. Clico de execução: É o outro processos do ciclo de instrução. Após fazer a busca dos dados necessários a CPU já sabe exatamente qual operação deve executar, com quais dados e o que fazer com o resultado.

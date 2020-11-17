@@ -154,7 +154,7 @@ Condição de existência do logaritmo: **b > 0** || **a > 0** || **!= 1**
 
 *Medidas dos lados dos triângulos!*
 
-<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Razoestrigonometricas.png" alt="" width="536">
+![oi](../imgs/Razoestrigonometricas.png)
 
 ![13.275 – Matemática – Seno, Coseno e Tangente | ☻Mega Arquivo](https://megaarquivo.files.wordpress.com/2017/05/tabela-trigonometrica-para-angulos-notaveis.jpg)<img title="" src="https://i.pinimg.com/474x/a5/aa/8d/a5aa8db213b1292c9330b1839de9adc0.jpg" alt="Círculo Trigonométrico - Toda Matéria | Funções trigonométricas, Circulo  trigonometrico, Funções matematica" width="255">
 
@@ -168,7 +168,7 @@ Função Cosseno: **f(x) = CosX** (Os valores do CosX são dados no eixo X)
 
 Função Tangente: **f(x) = TgX** || **TgX = SenX/CosX** (Não vai usar muito)
 
-<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Formulas_circulo_trigonometrico.png" alt="" width="449">
+![](../imgs/Formulas_circulo_trigonometrico.png)
 
 ---
 
@@ -210,7 +210,7 @@ só pode usar substituição direta se a função for polinomial.
 
 Formas fatoradas:
 
-<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/forma_fatorada.png" alt="" width="363">
+![](../imgs/forma_fatorada.png)
 
 **Formas indeterminadas - 0/0** -> Fatora a equação que da pra descobrir o limite.
 
@@ -270,9 +270,29 @@ Assintota Horizontal -> Fazer o limite do x -> + e - infinito
 
 **24ª Aula ->** Olhar topicos com o pedro
 
+---
+
+**25ª Aula ->** Aplicações de derivada
+
+- Taxas relacionadas: Taxa = derivada. Relacionadas = mais de uma grandexa para existir uma relação. Se a gente tem a avariação de uma variável, a gente consegue descobre a variação de outra variável. Ex: a área cresce, logo o raio cresce. Descobrir o raio no ponto em que a área for 9km^2;
+
+- Regra L'Hopital: 
+
+- Estudo completo do gráfico: 
+
+- Otimização: 
+
+---
+
+**Derivada:** 
+
+*Geometricamente, a derivada representa a inclinação da reta tangente num dado ponto.* 
+
+
+
 Estudar:
 
-- [ ] Limites (acabar com continuidade)
+- [x] Limites (acabar com continuidade)
 - [ ] Derivadas
   - [ ] Regras de derivação 
     - [ ] Regra do produto

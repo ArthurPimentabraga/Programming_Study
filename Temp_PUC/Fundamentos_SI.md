@@ -301,3 +301,7 @@ Aplicativos integrados são sistemas que abrangem TODA a empresa (todos os níve
 **Modelos de receita** do comércio eletrônico, ex: venda de produtos, anúncios, taxa de transação (TripAdvisor, Decolar...), Receita de afiliação (sites enviam visitantes para outros sites)...
 
 *O e-commerce deve estar integrado ao CRM (ex: lista de desejos do cliente, marketing personalizado...) e ao SCM (ex: acompanhamento da entrega)*
+
+---
+
+**21ª e 22ª Aula ->** Apresentação do trabalho de comércio eletrônico
