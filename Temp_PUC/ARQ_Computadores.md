@@ -7,12 +7,12 @@ book: Organização estruturada de computadores - Tanenbaum
 ### Meanings
 
 - **Barramento:** É um **caminho elétrico** comum que liga e permite a comunicação entre dispositivos de hardware (processador, memórias, controladores...). Grupos funcionais dos barramentos: dados, endereços e controle;
-
 - **Registradores:** É uma combinação de *flip-flops* (variante de memória 1bit, amazena o valor de transição do bit, ou seja, de 0 para 1 ou vice-versa). Tal combinação permite armazenar valores superiores à 1bit. (memórias internas na CPU);
-
 - **Controladores:**
-
 - **Pilhas:** É uma área de alocação de variáveis, ou seja, enquanto o programa está rodando ele empilha, armazena suas variáveis necessárias para execução de determinado processo neste local da memória, e quando o processo acaba este bloco da memória é desempilhado, desalocado;
+- **Opcodes:** 
+
+https://mixmisturado.com/diferenca-entre-opcode-e-bytecode/#:~:text=Opcode%20%C3%A9%20um%20tipo%20de%20instru%C3%A7%C3%A3o%20em%20linguagem%20de%20m%C3%A1quina.
 
 ---
 
@@ -167,31 +167,54 @@ Tecnologia Optane: <img title="" src="file:///home/arthurbraga/Documentos/Progra
 **Memória virtual (overlay automático):** combina memória principal e secundária para permitir executar programas maiores que a memória principal. Pode se imaginar o swap do linux, só que um pouco mais amplo. 
 
 **Paginação**
-	- Substituição de páginas: desempenho - simplificação: EAT = (1-p).m+p.d
-		- p = taxa de falta de páginas
-		- m = tempo de acesso à memória RAM
-		- d = tempo de tratamento de falta de página
-		- EAT = 
 
-**Instruções:** 
-	- **ISA:** Arquitetura de conjunto de instruções;
-	- 4bits + 6bits + 6bits = 16bits (opcode + referência ao operando + Referência ao operando);
-	- **Ciclo de instrução:** 
-	- Ciclo de instrução resumido: Busca e execução;
-	- **Ciclo de execução:** 
+- Substituição de páginas: desempenho - simplificação: EAT = (1-p).m+p.d
+  - p = taxa de falta de páginas
+  - m = tempo de acesso à memória RAM
+  - d = tempo de tratamento de falta de página
+  - EAT = 
+
+### Instruções:
+
+- **ISA:** Arquitetura de conjunto de instruções;
+  - RISC x CISC: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  - FISC (pós-RISC - Convergência RISC e CISC):
+- 4bits + 6bits + 6bits = 16bits (opcode + referência ao operando + Referência ao operando);
+- **Ciclo de instrução:** 
+- Ciclo de instrução resumido: Busca e execução;
+- **Ciclo de execução:** 
+
+Formato de instrução: 
+
+- Instrução sem endereço: OPCODE
+- Com endereço: OPCODE + endereço A 
+- Com dois endereços: OP. + A + B
+- Com três endereços: OP. + A + B + C
+
+![](../imgs/Formato_Instrucao_ARQ.png)
+
+*Matéria de Opcode ta no início do arquivo!*
+
+**Deslocamento e rotação de input:** 
+
+**Diferença entre endereçamento imediato, direto e indireto:** 
+
+- indireto: O endereço da instrução aponta para outro endereço com o operando desejado;
 
 **Paralelismo:** 
-	- Nível de instrução:
-	- Nível de processador: 
-		- SIMD: 
-		- MIMD: 
-	- Sistemas multiprocessador: tem a mesma memória e é fortemente acoplado.
-		- NUMA: 
-	- Multicore e multithread: 
+
+- Nível de instrução:
+- Nível de processador: 
+  - SIMD: 
+  - MIMD: 
+- Sistemas multiprocessador: tem a mesma memória e é fortemente acoplado.
+  - NUMA: 
+  - Multicore e multithread: 
 
 *Pipeline:*
-	- Pipeline de cinco estágios:
-	- **Superpipeline:**
+
+- Pipeline de cinco estágios:
+- **Superpipeline:**
 
 **Arquitetura superescalar:** 
 
@@ -235,16 +258,22 @@ RAIDs níveis:
 
 ---
 
+**15ª Aula ->** Continuação de instruções
+
+- 
+
+---
+
 Questão Rafa:
 
-1. Barramento de dados: Transporta toda informação interna do computador, sejam elas dados e códigos de programas;
+1. **Barramento de dados:** Transporta toda informação interna do computador, sejam elas dados e códigos de programas;
 2. Barramento de endereços: Transporta a localização, o endereço de memória onde se deseja ler ou escrever dados;
-3. Barramento de controle: Controla as ações dos barramentos anteriores. Agrupa um conjunto de sinais elétricos de controle do sistema. Ex: sinais para indicar se tais dados que circulam no barramento de dados é para escrita ou leitura;
-4. Barramento:  É um **caminho elétrico** comum que liga e permite a comunicação entre dispositivos de hardware (processador, memórias, controladores...);
-5. Registrador de endereço de memória (MAR):  Quando uma operação precisa ser realizada com algum dado que está na memória principal, o endereço desse dado é passado para o MAR;
-6. Registrador de buffer de memória (MBR): utilizado para armazenar temporariamente os dados que foram lidos da memória ou dados que serão escritos na memória;
-7. Contador de programa (PC): Registrados da CPU que indica qual é a posição atual na sequência de execução de um processo;
-8. Registrador de instrução (IR): Recebe as instruções da memória principal e passa para a unidade de controle. (Registrador = É uma combinação de *flip-flops* (variante de memória 1bit, amazena o valor de transição do bit, ou seja, de 0 para 1 ou vice-versa). Tal combinação permite armazenar valores superiores à 1bit. (memórias internas na CPU);
-9. Ciclo de instrução: É o ciclo em que o computador lê e processa uma instrução da sua memória principal ou pela sequência de ações que a a CPU realiza;
-10. Ciclo de busca: É um dos dois processos do ciclo de instrução. Para executar o ciclo de instrução, primeiro é preciso fazer a busca dos dados necessários para a operação, sejam dados para servirem de entrada ou para o armazenamento na memória;
-11. Clico de execução: É o outro processos do ciclo de instrução. Após fazer a busca dos dados necessários a CPU já sabe exatamente qual operação deve executar, com quais dados e o que fazer com o resultado.
+3. **Barramento de controle:** Controla as ações dos barramentos anteriores. Agrupa um conjunto de sinais elétricos de controle do sistema. Ex: sinais para indicar se tais dados que circulam no barramento de dados é para escrita ou leitura;
+4. **Barramento:**  É um **caminho elétrico** comum que liga e permite a comunicação entre dispositivos de hardware (processador, memórias, controladores...);
+5. **Registrador de endereço de memória (MAR):**  Quando uma operação precisa ser realizada com algum dado que está na memória principal, o endereço desse dado é passado para o MAR;
+6. **Registrador de buffer de memória (MBR):** utilizado para armazenar temporariamente os dados que foram lidos da memória ou dados que serão escritos na memória;
+7. **Contador de programa (PC):** Registrados da CPU que indica qual é a posição atual na sequência de execução de um processo;
+8. **Registrador de instrução (IR):** Recebe as instruções da memória principal e passa para a unidade de controle. (Registrador = É uma combinação de *flip-flops* (variante de memória 1bit, amazena o valor de transição do bit, ou seja, de 0 para 1 ou vice-versa). Tal combinação permite armazenar valores superiores à 1bit. (memórias internas na CPU);
+9. **Ciclo de instrução:** É o ciclo em que o computador lê e processa uma instrução da sua memória principal ou pela sequência de ações que a a CPU realiza;
+10. **Ciclo de busca:** É um dos dois processos do ciclo de instrução. Para executar o ciclo de instrução, primeiro é preciso fazer a busca dos dados necessários para a operação, sejam dados para servirem de entrada ou para o armazenamento na memória;
+11. **Clico de execução:** É o outro processos do ciclo de instrução. Após fazer a busca dos dados necessários a CPU já sabe exatamente qual operação deve executar, com quais dados e o que fazer com o resultado.

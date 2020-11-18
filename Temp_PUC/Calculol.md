@@ -275,12 +275,13 @@ Assintota Horizontal -> Fazer o limite do x -> + e - infinito
 **25ª Aula ->** Aplicações de derivada
 
 - Taxas relacionadas: Taxa = derivada. Relacionadas = mais de uma grandexa para existir uma relação. Se a gente tem a avariação de uma variável, a gente consegue descobre a variação de outra variável. Ex: a área cresce, logo o raio cresce. Descobrir o raio no ponto em que a área for 9km^2;
-
-- Regra L'Hopital: 
-
+- Regra L'Hopital: Para calcular limites fracionarios cujos numeradores e denominadores se aproximam de zero ou +- infinito. Cuja substituição direta dá 0/0 e infinito/infitino.
 - Estudo completo do gráfico: 
-
 - Otimização: 
+
+---
+
+**26ª Aula ->** Revisão de Taxas || Regra de L'Hopital
 
 ---
 
