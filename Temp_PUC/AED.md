@@ -320,8 +320,20 @@ Ordenação estável (ex: dois numeros iguais, se um estiver atrás, sempre tem 
 
 **Por comparação:** 
 
-- Custos: nº de comparações, complexidade...
-- Bubblesort: Vai jogando os maiores valores para o final do vetor. Comparando a posição relativa do elemeto atual com o próximo elemento. Toda vez que encontra uma posição relativa correta, tu volta pro inicio e faz com outro elemento. O(n) para vetor ja ordenado, e O(n²) para ter que ordenar.
-- Ordenação por seleção: Pega a ordem de grandeza de cada elemento e coloca na posição adequada. Menor elemento -> coloca na posição 0 -> 2º menor elemento -> coloca na posição 1.... O(n²), porém poucas trocas, "pouco recurso computacional". Esse método não é estável.
-- Ordenação por inserção: Olha para a posição anterior, se for menor tu troca. O(n²). Esse método é estável.
+Custos: nº de comparações, complexidade...
+
+- **BubbleSort:** Vai jogando os maiores valores para o final do vetor. Comparando a posição relativa do elemeto atual com o próximo elemento. Toda vez que encontra uma posição relativa correta, tu volta pro inicio e faz com outro elemento. **O(n)** para vetor ja ordenado, e **O(n²)** para ter que ordenar.
+- **SelectSort:** Pega a ordem de grandeza de cada elemento e coloca na posição adequada. Menor elemento -> coloca na posição 0 -> 2º menor elemento -> coloca na posição 1.... **O(n²)**, porém poucas trocas, "pouco recurso computacional". Esse método não é estável.
+- **InsertSort:** Olha para todas as posições anteriores, se for menor tu troca. **O(n²)**. Esse método é estável.
+- **ShellSort:** Antes de ordenar por inserção (um por um) ele faz uma ordenação parcial para deixar o vetor mais longe do pior caso possível. Vai ficar mais ordenado para a ordenação por inserção. *Em vez de olhar posição por posição, ele compara de 3 em 3 posições para trás, por exemplo. Logo a ideia, na verdade, é ordenar subsequencias, pedaços do vetor (ordenação parcial).* A ordem de complexidade depende, é menor do que O(n²), mas o quão menor não tem como saber. **Método não estável**.
+  - Diminuição progressiva do valor do gap (pulo - intervalo de comparação) até que chegue em 1. Ex: Roda o vetor com gap=4, depois roda com gap=2, depois gap=1.
+  - Para um gap eficiente -> h(i) = h(i-1)*3+1
+  - Tamanho moderado do vetor. Se o vetor for muito pequeno, pode implementar os métodos anteriores, se for MUITO grande, ai esse método para de compensar. Precisa ser no meio termo para compensar.
+- **MergeSort:** Recursivamente ele divide o vetor, até ficar pequeno o bastante, ordena os subvetores rapidamente, e depois intercala para o vetor final. Para intercalar no final, como é recursivo, ele volta o caminho contrário da divisão. O problema é: se o vetor for muito grande, vai ter muita recursividade, logo MUITA memória necessária para ser utilizado. E pior, para a intercalação, precisamos criar um vetor aux. Intercalação = **O(n)** e Recursividade = **O(log2)**  OU SEJA O(n*log₂n). **Método estável.** 
+
+---
+
+**26ª Aula ->** Continuação de ordenação
+
+
 

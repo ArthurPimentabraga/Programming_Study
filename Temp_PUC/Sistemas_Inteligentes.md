@@ -355,3 +355,60 @@ Os algoritmos de agrupamento variam na forma como eles distribuem os *clusters*
 - **Modelos baseado em centróides (ou modelos de particionamento):** A similaridade dos elementos é definida em termos de sua proximidade de um ponto de dados com o centróide dos clusters. O algoritmo de agrupamento K-Means é um algoritmo mais popular dessa categoria.
 - **Modelos de densidade:** Esses modelos examinam a densidade de diferentes regiões do espaço de dados e atribui os pontos em regiões de mesma densidade pertencem ao mesmo cluster. O DBSCAN é um algoritmo clássico de agrupamento por densidade.
 - **Modelos hierárquicos (de conectividade):** Podem ser aglomerativos ou divisórios. Na abordagem aglomerativa, todos os pontos de dados começam em clusters separados e, em seguida, vão sendo agregados pela menor distância. Nos métodos divisórios, todos os pontos de dados são classificados como um único cluster e particionados pela maior distância. AGNES é um algoritmo famoso que utiliza a abordagem aglomerativa.
+
+---
+
+---
+
+---
+
+# Unity 4
+
+### IS Canvas
+
+*Uma ferramenta para facilitar a visualização do uso da IA no negócio.*
+
+*Só isso mesmo :)*
+
+---
+
+---
+
+---
+
+# Unity 5
+
+### Tipos de Chatbot
+
+**Awareness (nível de consciência):** Menu/Buttons --> Reconhecimento de palavras chave --> Contextual.
+
+- **Menu/button chatbots**: são o tipo mais básico de chatbot. Eles funcionam como se fossem uma árvore de decisão em que cada pergunta exige uma resposta entre um menu de opções. Por exemplo, o [Chatbot da Localiza (Links para um site externo.)](https://api.whatsapp.com/send?phone=558009792020) para aluguel de carro.
+- ***Keyword recognition chatbots*** **(reconhecedores de palavra chave)**: Ao contrário dos chatbots menus, este conseguem capturar o que o usuário digita e responder apropriadamente, desde que encontre palavras chave que identifiquem a intenção do locutor.
+- **Chatbots contextuais** são os mais avançados, e utilizam aprendizado de máquina para lembrar conversas de usuários e aprender com o tempo. Em teoria, um chatbot contextual poderia se lembrar de suas preferências e antecipá-las. Você poderia pedir Pizza em sua Pizzaria favorita simplesmente falando. "Olá, o de sempre!". Segundo a Nama, empresa que desenvolveu o [chatbot da Magazine Luiza (Links para um site externo.)](https://simple.nama.ai/post/lu-o-chatbot-da-magazine-luiza-que-e-queridinho-do-publico), por exemplo eles utilizaram **Deep Learning**, **NLP** (Natural Language Processing) para a Lu "entender a linguagem natural, compreender gírias e até mesmo erros de português".
+
+**Tipos de chatbots de negócios:**
+
+- ***Support chatbot*** são construídos para serem especialistas em um domínio específico. São capazes de manter conversação.
+- ***Skills chatbots*** não necessitam de ciência do contexto, e funcionam no modelo *single-turn*. Eles respondem a comandos.
+- ***Assistant chatbots\*** estão no nível intermediário entre os *support chatbots* e os *skills chatbots*, e podem versar sobre diferentes tópicos.
+
+### Elementos dos Chatbots
+
+**Intenções**
+
+Uma intenção é um objetivo específico ou ideia que o usuário deseja transmitir em uma mensagem. Por exemplo, ao dizer "obrigado" a intenção do usuário é agradecer. Sendo assim a intenção para a frase poderia ser “agradecimento”.
+
+**Entidades**
+
+Uma entidade é o substantivo relacionado à intenção do usuário. Ele permite identificar o assunto de que trata a mensagem. Por exemplo, a mensagem "atualizar prontuário", a entidade a que a mensagem se refere é "prontuário", enquanto a intenção é a "atualização" deste prontuário.
+
+**Diálogo**
+
+No diálogo é onde se cria as respostas que o chatbot irá retornar para uma mensagem, uma vez que identificar uma intenção e uma entidade. O diálogo define o fluxo da conversa.
+
+### Jornada do usuário
+
+A jornada do usuário é o ponto de partida de qualquer design de diálogo. Ela exibe os passos que se espera que o usuário execute para alcançar seu objetivo. Por exemplo. Considere a jornada simplificada de um usuário solicitando uma consulta médica.
+
+![](../imgs/jornada_usuario_SI.png)
+
