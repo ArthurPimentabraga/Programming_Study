@@ -329,11 +329,14 @@ Custos: nº de comparações, complexidade...
   - Diminuição progressiva do valor do gap (pulo - intervalo de comparação) até que chegue em 1. Ex: Roda o vetor com gap=4, depois roda com gap=2, depois gap=1.
   - Para um gap eficiente -> h(i) = h(i-1)*3+1
   - Tamanho moderado do vetor. Se o vetor for muito pequeno, pode implementar os métodos anteriores, se for MUITO grande, ai esse método para de compensar. Precisa ser no meio termo para compensar.
-- **MergeSort:** Recursivamente ele divide o vetor, até ficar pequeno o bastante, ordena os subvetores rapidamente, e depois intercala para o vetor final. Para intercalar no final, como é recursivo, ele volta o caminho contrário da divisão. O problema é: se o vetor for muito grande, vai ter muita recursividade, logo MUITA memória necessária para ser utilizado. E pior, para a intercalação, precisamos criar um vetor aux. Intercalação = **O(n)** e Recursividade = **O(log2)**  OU SEJA O(n*log₂n). **Método estável.** 
+- **MergeSort:** Recursivamente ele divide o vetor, até ficar pequeno o bastante, ordena os subvetores rapidamente, e depois intercala para o vetor final. Para intercalar no final, como é recursivo, ele volta o caminho contrário da divisão. O problema é: se o vetor for muito grande, vai ter muita recursividade, logo MUITA memória necessária para ser utilizado. E pior, para a intercalação, precisamos criar um vetor aux. Intercalação = **O(n)** e Recursividade = **O(log n)**  OU SEJA O(n*log₂n). **Método estável.** 
+- **HeapSort (PEDIR LUCILA):** Utiliza Heap, logo o primeiro que sai (o 1º da lista) é o que tem maior prioridade. Se já tem uma heap no sistema, vale a pena usar. **Complexidade = Construir: O(n) || Refazer: O(log n) -> O(n log n). Método não estável.** 
+- **QuickSort:** Define um pivô e separa o vetor, os menores uma um lado do pivô, e os maiores para o outro lado do pivô. Ex de pivô: último elemento do conjunto. Uma vez feita a divisão, nunca mais vai comparar os elementos da esquerda com os da direita. Depois, de forma recursiva, faz o mesmo processo para os lados, até q sobre só o próximo pivô e um elemento. **Particionamento: O(n) || Recursividade: O(log n) -> O(n log n).** Problema: Má escolha do pivô pode levar o algoritmo a O(n²). Pode não se comportar bem em vetores "quase ordenados". Pior caso: vetor já ordenado. **Método não estável.**
+  - Recomendação de Cormem: escolher 3 posições aleatórias e escolher como pivô a mediana destas posições.
 
 ---
 
-**26ª Aula ->** Continuação de ordenação
+**26ª e 27ª Aula ->** Continuação de ordenação
 
 
 

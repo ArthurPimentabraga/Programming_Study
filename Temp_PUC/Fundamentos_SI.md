@@ -305,3 +305,7 @@ Aplicativos integrados são sistemas que abrangem TODA a empresa (todos os níve
 ---
 
 **21ª e 22ª Aula ->** Apresentação do trabalho de comércio eletrônico
+
+---
+
+**23ª Aula ->** Continuação de apresentação do trabalho de comércio eletrônico || 
