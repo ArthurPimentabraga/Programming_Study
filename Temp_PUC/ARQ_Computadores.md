@@ -12,6 +12,10 @@ book: Organização estruturada de computadores - Tanenbaum
 - **Pilhas:** É uma área de alocação de variáveis, ou seja, enquanto o programa está rodando ele empilha, armazena suas variáveis necessárias para execução de determinado processo neste local da memória, e quando o processo acaba este bloco da memória é desempilhado, desalocado;
 - **Opcodes:** 
 
+*Pilha -> PUSH coloca - POP tira (e troca no vetor doa valores inicias) - MULT multiplica os dois valores do top - ADD soma //*
+
+sizeof
+
 https://mixmisturado.com/diferenca-entre-opcode-e-bytecode/#:~:text=Opcode%20%C3%A9%20um%20tipo%20de%20instru%C3%A7%C3%A3o%20em%20linguagem%20de%20m%C3%A1quina.
 
 ---
@@ -260,14 +264,14 @@ RAIDs níveis:
 
 **15ª Aula ->** Continuação de instruções
 
-- 
+**16ª Aula ->** Dúvidas Lista 2 e Trabalho prático
 
 ---
 
 Questão Rafa:
 
 1. **Barramento de dados:** Transporta toda informação interna do computador, sejam elas dados e códigos de programas;
-2. Barramento de endereços: Transporta a localização, o endereço de memória onde se deseja ler ou escrever dados;
+2. **Barramento de endereços:** Transporta a localização, o endereço de memória onde se deseja ler ou escrever dados;
 3. **Barramento de controle:** Controla as ações dos barramentos anteriores. Agrupa um conjunto de sinais elétricos de controle do sistema. Ex: sinais para indicar se tais dados que circulam no barramento de dados é para escrita ou leitura;
 4. **Barramento:**  É um **caminho elétrico** comum que liga e permite a comunicação entre dispositivos de hardware (processador, memórias, controladores...);
 5. **Registrador de endereço de memória (MAR):**  Quando uma operação precisa ser realizada com algum dado que está na memória principal, o endereço desse dado é passado para o MAR;

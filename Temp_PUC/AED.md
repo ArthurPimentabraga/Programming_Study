@@ -331,8 +331,17 @@ Custos: nº de comparações, complexidade...
   - Tamanho moderado do vetor. Se o vetor for muito pequeno, pode implementar os métodos anteriores, se for MUITO grande, ai esse método para de compensar. Precisa ser no meio termo para compensar.
 - **MergeSort:** Recursivamente ele divide o vetor, até ficar pequeno o bastante, ordena os subvetores rapidamente, e depois intercala para o vetor final. Para intercalar no final, como é recursivo, ele volta o caminho contrário da divisão. O problema é: se o vetor for muito grande, vai ter muita recursividade, logo MUITA memória necessária para ser utilizado. E pior, para a intercalação, precisamos criar um vetor aux. Intercalação = **O(n)** e Recursividade = **O(log n)**  OU SEJA O(n*log₂n). **Método estável.** 
 - **HeapSort:** Utiliza Heap, logo o primeiro que sai (o 1º da lista) é o que tem maior prioridade. Se já tem uma heap no sistema, vale a pena usar. **Complexidade = Construir: O(n) || Refazer: O(log n) -> O(n log n). Método não estável.** (Filhos de uma posição -> 2i+1)
-- **QuickSort:** Define um pivô e separa o vetor, os menores uma um lado do pivô, e os maiores para o outro lado do pivô. Ex de pivô: último elemento do conjunto. Uma vez feita a divisão, nunca mais vai comparar os elementos da esquerda com os da direita. Depois, de forma recursiva, faz o mesmo processo para os lados, até q sobre só o próximo pivô e um elemento. **Particionamento: O(n) || Recursividade: O(log n) -> O(n log n).** Problema: Má escolha do pivô pode levar o algoritmo a O(n²). Pode não se comportar bem em vetores "quase ordenados". Pior caso: vetor já ordenado. **Método não estável.**
+- **QuickSort:** Define um pivô e separa o vetor, os menores para um lado do pivô, e os maiores para o outro lado do pivô. Ex de pivô: último elemento do conjunto. Uma vez feita a divisão, nunca mais vai comparar os elementos da esquerda com os da direita. Depois, de forma recursiva, faz o mesmo processo para os lados, até q sobre só o próximo pivô e um elemento. **Particionamento: O(n) || Recursividade: O(log n) -> O(n log n).** Problema: Má escolha do pivô pode levar o algoritmo a O(n²). Pode não se comportar bem em vetores "quase ordenados". Pior caso: vetor já ordenado. **Método não estável.**
   - Recomendação de Cormem: escolher 3 posições aleatórias e escolher como pivô a mediana destas posições.
+
+**Ordenação posicional:**
+
+Determina as posições parciais ou finais dos dados realizando um pré-processamento.
+
+- **Ordenação por contagem:** Bom para quando sabemos que tem repetição de valor. Faz a contagem da quant de cada valor... Ai a soma do valor com a quantidade é a posição inicial desse valor no vetor final. **Complexidade ->** **O(n)** (2*n para ser exato ou até 4n) || **Espaço ->** Ocupa memória por ter que criar um vetor aux e a tabela de contagem, e se os dados não se reperitem vc ainda terá 3 vetores do mesmo tamanho || **Estabilidade ->** True;
+- **RadixSort ou ordenação digital:** Raiz - parte principal - ex: INFORmação INFORmatica... 
+  - **LSD ->** Mini hash para cada nº da chave, ordenando uma casa decimal por vez (direita para a esquerda). 2 problemas, cada posição tem uma lista de elementos (pode necessitar de espaço) e dependendo da key, para pegar o decimal individualmente pode aumentar a complexidade. Outro problema é que essa ordenação é boa para nº mas para ordem alfabetica nem tanto. **Complexidade ->** O(n);
+  - **MSD ->** Esquerda para a direita, ou seja, pega o maior (most) valor primeiro. Exemplo dado na aula foi para ordem alfabetica. Utiliza recursividade, para cada posição que tem uma lista com mais de um elemento (empates), ele cria outro vetor e faz o mesmo processo para a prox letra dos nomes. Pode usar memória PARA UM CARALHO (depende de quantos empates vai ter). **Complexidade ->** O(n) (n * a pior quantidade de empates).
 
 ---
 
@@ -340,4 +349,8 @@ Custos: nº de comparações, complexidade...
 
 **28ª Aula ->** Explicação do trabalho || Revisão de estrutura de ordenação || Dúvidas
 
+**29ª Aula ->** Ordenação posicional
+
 DROZDEK, Adam. Estrutura de dados e algoritmos em C++
+
+TP - PROVA - Exercicio avaliativo (2 questões - 1ª teorica qual algoritmo.. - 2ª passo a passo de um algoritmo)

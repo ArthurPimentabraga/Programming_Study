@@ -274,19 +274,21 @@ Assintota Horizontal -> Fazer o limite do x -> + e - infinito
 
 **25ª Aula ->** Aplicações de derivada
 
-- Taxas relacionadas: Taxa = derivada. Relacionadas = mais de uma grandexa para existir uma relação. Se a gente tem a avariação de uma variável, a gente consegue descobre a variação de outra variável. Ex: a área cresce, logo o raio cresce. Descobrir o raio no ponto em que a área for 9km^2;
+- **Taxas relacionadas:** Taxa = derivada. Relacionadas = mais de uma grandexa para existir uma relação. Se a gente tem a avariação de uma variável, a gente consegue descobre a variação de outra variável. Ex: a área cresce, logo o raio cresce. Descobrir o raio no ponto em que a área for 9km^2;
 - Regra L'Hopital: Para calcular limites fracionarios cujos numeradores e denominadores se aproximam de zero ou +- infinito. Cuja substituição direta dá 0/0 e infinito/infitino.
-- Estudo completo do gráfico: 
+- **Estudo completo do gráfico:** 
   - Mínimos e Máximos: As derivadas desses pontos = 0 (zero). Coeficiente angular = 0 (zero). 
     - **Como encontrar:** através da derivada da função. Quando derivar, e achar uma função de 2º grau, as raizes da função são chamados de pontos críticos. Para o ponto ser mínimo ou máximo, ele tem que ser um ponto crítico.
     - **Como saber se é MIN ou MAX:** 1ª Opção Teste da derivada primeira -> Antes do ponto critico a função é crescente, e depois é decrescente = MAX. E ao contrário é MIN. 2ª Opção Teste da derivada segunda -> Olhar concavidade.
-- Otimização: 
+- **Otimização:** 
 
 ---
 
 **26ª Aula ->** Revisão de Taxas || Regra de L'Hopital
 
 **27ª Aula ->** Mínimos e Máximos
+
+**28ª Aula ->** 
 
 ---
 
