@@ -288,7 +288,9 @@ Assintota Horizontal -> Fazer o limite do x -> + e - infinito
 
 **27ª Aula ->** Mínimos e Máximos
 
-**28ª Aula ->** 
+**28ª Aula ->** Estudo completo da função
+
+**29ª Aula ->** Continuação de estudo completo da função ||  
 
 ---
 

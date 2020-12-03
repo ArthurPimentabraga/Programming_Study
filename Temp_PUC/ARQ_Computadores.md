@@ -12,7 +12,7 @@ book: Organização estruturada de computadores - Tanenbaum
 - **Pilhas:** É uma área de alocação de variáveis, ou seja, enquanto o programa está rodando ele empilha, armazena suas variáveis necessárias para execução de determinado processo neste local da memória, e quando o processo acaba este bloco da memória é desempilhado, desalocado;
 - **Opcodes:** 
 
-*Pilha -> PUSH coloca - POP tira (e troca no vetor doa valores inicias) - MULT multiplica os dois valores do top - ADD soma //*
+*Pilha -> PUSH coloca - POP tira (e troca no vetor dos valores inicias) - MULT multiplica os dois valores do top - ADD soma //*
 
 sizeof
 
@@ -156,7 +156,7 @@ Tecnologia Optane: <img title="" src="file:///home/arthurbraga/Documentos/Progra
 
 - m = tempo de acesso a memória
 
-- h = taca de acerto ("hit ratio")
+- h = taxa de acerto ("hit ratio")
 
 **Write back:** escrita de volta. A memória é atualizada quando não há mais espaço. E a info contida nela vai para a próxima memória. Ex: cache -> principal;
 
@@ -281,3 +281,13 @@ Questão Rafa:
 9. **Ciclo de instrução:** É o ciclo em que o computador lê e processa uma instrução da sua memória principal ou pela sequência de ações que a a CPU realiza;
 10. **Ciclo de busca:** É um dos dois processos do ciclo de instrução. Para executar o ciclo de instrução, primeiro é preciso fazer a busca dos dados necessários para a operação, sejam dados para servirem de entrada ou para o armazenamento na memória;
 11. **Clico de execução:** É o outro processos do ciclo de instrução. Após fazer a busca dos dados necessários a CPU já sabe exatamente qual operação deve executar, com quais dados e o que fazer com o resultado.
+
+ai pai, quando puder dar uma olhada, por favor... Qualquer coisa a gente conversa também
+
+o video ficou com um formato meio ruim, tamo tentando consertar aqui, mas é só dar um zoom 
+
+ai depois que você ver tudo, só preciso pegar seu feedback
+
+19- {  15 }
+
+x = 2 | y = 3 | z = 40 
