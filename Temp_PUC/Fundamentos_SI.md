@@ -313,3 +313,5 @@ Aplicativos integrados são sistemas que abrangem TODA a empresa (todos os níve
 ![](../imgs/PlanoSI_ResolucaoProblemas.png)
 
 *Metodologias ágeis!*
+
+Prova a partir da aula 16

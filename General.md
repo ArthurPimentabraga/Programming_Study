@@ -9,8 +9,6 @@ author: Arthur P. Braga
 
 - **Framework ->** É uma "Super Biblioteca", uma abstração de códigos e conjuntos de códigos feito para realizar seus projetos nele. Porém para ser utilizado, o desenvolvedor necessita saber como ele funciona, seguir suas regras, o sistema tem que ser desenvolvido pensando nele;
 
-- 
-
 - **REST ->** São normas, padrões para a criação de uma API, por exemplo, o tratamento de erros...;
 
 - **Restful ->** É uma API construída seguindo a arquitetura REST;

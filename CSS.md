@@ -88,8 +88,8 @@ A prioridade é dada pela ordem de leitura, a especificidade e pela caracteristi
           - Z-> Define os limites da escala(zoom) que o usuário pode dar. Não é usado pq o mesmo pode ter algum problema visual e querer dar muito zoom, por exemplo; 
 
 ```html
-          <meta name="viewport" content="width=device-width", initial-scale=1">
-          ```
+<meta name="viewport" content="width=device-width", initial-scale=1">
+```
 
 - Breakpoints: São os pontos de mudança de layout usado em MediaQueries. Em outras palavras é o tamanho de tela(hardware) que informamos à tag media para quando um dispositivo estiver naquela resolução, usar o css adequado. Porém em dispositivos menores, o tamanho da resolução da tela(resolução lógica) não é a mesma que do hardware (os Breakpoints usam a resolução lógica).
   - Já existem Breakpoints prontos na web, mas tem como calcular. Basta dividir a resolução física (hardware) pela razão de pixel do dispositivo(encontrado na especificação do mesmo). As viewport == a resolução lógica == aos Breakpoints;

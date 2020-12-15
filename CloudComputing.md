@@ -4,17 +4,17 @@ author: Arthur P. Braga
 Comment: Esse resumo foi baseado na matéria da Rockcontent https://rockcontent.com/blog/cloud-computing/
 ---
 
-### What is
+## What is
 
 É o uso da conectividade, da internet para prover recursos, conteúdos, informações... por qualquer dispositivo, seja ele um computador, tablet, celular, etc. Prover tais recursos sem a necessidade de download, instalação ou acesso à qualquer software ou arquivo do computador, tudo podendo ser acessado pelo navegador. E conexão com a internet :)
 
 Exemplos: Google Docs, SalesForce(aplicativos de négocio em nuvem), Netflix, Spotify, Youtube, Google Stadia(streaming de jogos) entre muitos outros. 
 
-**Limitação: ** Hoje muito da computação é limitada em downloads, hardwares, sistemas operacionais (com cloud é possível utilizar serviços que não fique limitado à um sistema operacional, olha que foda)... 
+**Limitação: ** Hoje muito da computação é limitada em downloads, hardwares, sistemas operacionais (com cloud é possível utilizar serviços que não fique limitado à um sistema operacional, olha que foda)...
 
 ---
 
-### Benefits
+## Benefits
 
 **Tudo abaixo foi copiado de uma matéria da rockcontent**!
 
