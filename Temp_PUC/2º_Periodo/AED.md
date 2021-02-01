@@ -1,5 +1,5 @@
 ---
-	title: Algoritmos e Estrutura de Dados (Puc-Minas - 2º Período)
+title: Algoritmos e Estrutura de Dados (Puc-Minas - 2º Período)
 author: Arthur P. Braga
 ---
 
