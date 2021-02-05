@@ -1,6 +1,7 @@
 ---
 title: Programação Orientada à Objetos
 author: Arthur P. Braga
+description: Mesclado com anotações da matéria que tive na PUC.
 ---
 
 ## General
@@ -27,14 +28,7 @@ author: Arthur P. Braga
 
 ## Vantagens
 
-- Mais seguro (divide o sistema e permite modificar um sem alterar o outro);
-
-- Oportuno (Pode mexer em várias partes do sistema simultanêamente);
-
-- Atualizar é mais fácil;
-
+- Modularidade - Consequentemente mais seguro, pois divide o sistema e permite modificar um lugar sem alterar o outro;
+- Manutenção facilitada;
 - Extensível;
-
-- Reutilizável;
-
-- Natural;
+- Reutilizável.
