@@ -5,6 +5,8 @@ author: Arthur P. Braga
 
 ## Notes
 
+*Todas as anotações relacionadas ao material online da disciplina será escrito na aula respectiva aos vídeos sujeridos.*
+
 ---
 
 ## Aula 1 - 03/02
@@ -19,3 +21,46 @@ author: Arthur P. Braga
 
 *Vídeos sugeridos na aula anterior: Todos da unidade 1*
 
+#### Introdução à BD
+
+Antigamente era usado a **"Abordagem isolada de arquivos"**. Os dados eram armazenados em arquivos individuais, cada sistema tinha sua base particular, isolada (sem comunicação direta entre eles - sem uum controle centralizado). E com alto risco de uma base ter características diferentes das outras (sem um padrão). Segue alguns problemas desse padrão antigo:
+
+- Redundância de dados;
+- Inconsistência de dados;
+- Dificuldade de aproveitamente dos dados existentes em novas aplicações.
+
+Pela existência desses problemas/dificuldades/limitações foi criada a tecnologia da **abordagem integrada de banco de dados** (abordagem atual).
+
+<img src="../../imgs/Sistema-BD.png" alt="Sistema-BD" style="width:75%" />
+
+#### Conceitos
+
+- **Catálogo** (meta dados): possui dados a respeito de como aquele banco está estruturado (tabelas, atributos, índices...) para organização interna do sistema;
+- **DDL** (Data Definition Language): Comandos para criação de estruturas. Ex: Create table, indices, relacionamentos...;
+- **DML** (Data Manipulation Language): Comandos para manipulação do conteúdo do banco. Ex: Inserts, deletes...
+  - **Procedural**: Necessário especificar QUAL dado é necessário e COMO obtê-lo.
+  - **Não-Procedural**: Não define COMO os dados serão acessados. Padrão SQL.
+
+#### SGBD
+
+Sistema Gerenciador de Banco de Dados **(SGBD - DBMS)**: Software que administra o banco. Possui funções de recuperar dados, alterá-los... Criar e manter um banco de dados.
+
+#### Cargos
+
+- DBA
+- Admin. de BD
+
+#### Arquitetura de 3 níveis
+
+- **Nível físico:** 
+- **Nível Conceitual: ** 
+- **Visão 1, 2...:** 
+
+#### Etapas usuais de um projeto de BD
+
+1. **Levantamento dos requisitos:** 
+2. **Projeto conceitual: ** 
+3. **Projeto lógico:** 
+4. **Projeto físico:** 
+
+ 

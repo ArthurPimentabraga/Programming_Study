@@ -21,5 +21,12 @@ author: Arthur P. Braga
 
 ---
 
-## Aula 1 - 05/02
+## Aula 2 - 05/02
 
+#### Criação de um sisteminha do jogo de dados (Par ou Ímpar)
+
+*Só pra ter uma ideia de POO.* 
+
+---
+
+## Aula 3 - 11/02
