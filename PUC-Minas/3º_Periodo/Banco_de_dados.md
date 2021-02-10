@@ -41,10 +41,6 @@ Pela existência desses problemas/dificuldades/limitações foi criada a tecnolo
   - **Procedural**: Necessário especificar QUAL dado é necessário e COMO obtê-lo.
   - **Não-Procedural**: Não define COMO os dados serão acessados. Padrão SQL.
 
-#### SGBD
-
-Sistema Gerenciador de Banco de Dados **(SGBD - DBMS)**: Software que administra o banco. Possui funções de recuperar dados, alterá-los... Criar e manter um banco de dados.
-
 #### Cargos
 
 - DBA
@@ -52,15 +48,35 @@ Sistema Gerenciador de Banco de Dados **(SGBD - DBMS)**: Software que administra
 
 #### Arquitetura de 3 níveis
 
-- **Nível físico:** 
-- **Nível Conceitual: ** 
-- **Visão 1, 2...:** 
+- Nível físico: 
+- Nível Conceitual:  
+- Visão 1, 2...: 
 
 #### Etapas usuais de um projeto de BD
 
-1. **Levantamento dos requisitos:** 
-2. **Projeto conceitual: ** 
-3. **Projeto lógico:** 
-4. **Projeto físico:** 
+1. Levantamento dos requisitos: 
+2. Projeto conceitual:  
+3. Projeto lógico: 
+4. Projeto físico: 
 
- 
+#### SGBD
+
+Sistema Gerenciador de Banco de Dados **(SGBD - DBMS)**: Software que administra o banco. Possui funções de recuperar dados, alterá-los... Criar e manter um banco de dados. *Facilita o desenvolvimento. Proporciona um ambiente conveniente e eficiente para manter um BD.*
+
+##### Propriedades do SGBD
+
+- Integridade
+- Segurança
+- Backup e Recuperação (Restore)
+- Concorrência: Acesso múltiplo sem inconsistências nos dados. Ex: E-Commerce (dados real-time para os clientes).
+- Monitoramento: Ajuda a avaliar o comportamento a cada momento (caso de instabilidades no sistema...).
+- Natureza autodescritiva do sistema de BD: Não tem apenas o BD, mas definições/descrições de suas restrições (catálogo)...
+- Isolamento entre os Programas e os dados - Independência dos dados.
+- Suporte para as múltiplas visões de dados: Permissões de solicitação de dados...
+- Compartilhamento de dados e o processamento de transação multiusuário: Controla o fluxo de dados mesmo com vários usuários armazenando e solicitando dados. 
+  - **Transação:** processo que inclui um ou mais acessos/operações ao BD. Ex: Transação bancária, são necessárias duas ações, débito em uma conta, e crédito em outra. A transação gerencia tudo para que todas as operações sejam feitas completamente, ou executa um rollback se necessário... 
+- Controle de acesso e autorização.
+- Controle de redundância.
+- Persistência de dados
+- Múltiplas interfaces para os usuários
+- Armazenamento de estruturas para processamento eficiente de consultas (Índices...)

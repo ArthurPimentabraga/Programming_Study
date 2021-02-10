@@ -7,7 +7,7 @@ author: Arthur P. Braga
 
 - **Kernel ->** é o núcleo do sistema operacional, responsável por fazer as interações de hardware e software;   
 - **Gnome ->** Uma das (GUI) Graphical user interface and set of computer desktop applications for users of the Linux; 
-- **Shell ->** Interpretador de linhas de comando;
+- **Shell ->** Interpretador de linhas de comando, comunica com o kernel para execução dos comandos solicitados;
 
 ---
 
