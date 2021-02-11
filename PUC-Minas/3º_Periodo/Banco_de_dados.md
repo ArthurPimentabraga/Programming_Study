@@ -17,7 +17,7 @@ author: Arthur P. Braga
 
 ---
 
-## Aula 2 - 10/02
+## Aula 2 - 10/02 - Unidade 1
 
 *Vídeos sugeridos na aula anterior: Todos da unidade 1*
 
@@ -41,10 +41,11 @@ Pela existência desses problemas/dificuldades/limitações foi criada a tecnolo
   - **Procedural**: Necessário especificar QUAL dado é necessário e COMO obtê-lo.
   - **Não-Procedural**: Não define COMO os dados serão acessados. Padrão SQL.
 
-#### Cargos
+#### Funções/Cargos
 
-- DBA
-- Admin. de BD
+- Admin. de dados (**AD**): Atua na parte lógica, conceitual, modela o banco de dados de acordo com as necessidade do négocio. Precisa saber muito sobre a organização, sobre o funcionamento do negócio;
+- Admin. de BD (**DBA**): Atua na parte física do BD, vai implementar ele fisicamente com o SGBD escolhido;
+- Analista de sistemas (**desenvolvedores**): Faz a conexão com o sistema, todas as queries... Desenvolve a aplicação que irá usar o BD e permitir os usuários finais a acessar, armazenar e modificar seus dados. E em algum momento trabalha com os outros dois, pois faz levantamento dos requisitos do usuário final e o sistema faz relação com o lógico e o físico.
 
 #### Arquitetura de 3 níveis
 
@@ -80,3 +81,9 @@ Sistema Gerenciador de Banco de Dados **(SGBD - DBMS)**: Software que administra
 - Persistência de dados
 - Múltiplas interfaces para os usuários
 - Armazenamento de estruturas para processamento eficiente de consultas (Índices...)
+
+---
+
+## Aula 3 - 
+
+*Vídeos sugeridos na aula anterior: Os dois primeiros vídeos da unidade 2*
