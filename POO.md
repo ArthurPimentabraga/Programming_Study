@@ -28,7 +28,7 @@ description: Mesclado com anotações da matéria que tive na PUC.
 
 ## Vantagens
 
-- Modularidade - Consequentemente mais seguro, pois divide o sistema e permite modificar um lugar sem alterar o outro;
+- Modularidade - Consequentemente mais seguro, pois divide o sistema e permite modificar um lugar sem alterar o outro. Facilitando o desenvolvimento e reúso da solução;
 - Manutenção facilitada;
 - Extensível;
 - Reutilizável.

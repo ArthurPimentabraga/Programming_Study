@@ -30,3 +30,43 @@ author: Arthur P. Braga
 ---
 
 ## Aula 3 - 11/02
+
+#### Fundamentos de POO
+
+*Orientação por objetos abstrai o mundo real utilizando objetos que interagem entre si.*
+
+**Análise orientada para objetos** (OOA/AOO): Examina os requisitos de um sistema de uma perspectiva de classes e objetos, usando o vocabulário do domínio do problema.
+
+**Projeto orientado por objetos** (OOD/DOO): Projeto no qual o processo da decomposibilidade em objetos é utilizado e modelos físicos e lógicos de objetos são descritos.
+
+**Programação orientada por objetos** (OOP/POO): Implementar o planejamento.
+
+- POO, segundo *Alan Kay:*
+  - Troca de mensagens
+  - Proteção e retenção local e ocultamento do estado ou processo
+  - Associação tardia e dinâmica de tudo o que for possível
+
+**Procedural x POO**
+
+- Procedural: Instruções executadas em um fluxo que visa o desempenho de uma tarefa específica.
+- POO: Conjunto de objetos que interagem entre si, porém preserva sua individualidade e tem um papel específico na execução de uma tarefa.
+
+#### Análise e projeto OO
+
+**Tipo abstrato de dados** (TDA): reúne na mesma estrutura, informações sobre dados, e comportamento de uma entidade representada a partir do mundo real.
+
+**Classe**: Descrição padronizada de um tipo abstrato de dados. Modela um conjunto de entidades do mundo real que possuem características e comportamentos semelhantes.  É o esquema/representação/modelo de uma "entidade genéria".Constituída por atributos e métodos. Ex: Classe caneta, classe carro... 
+
+**Objeto:** É a instância de uma classe, é um "exemplar" daquela classe. Ex: Classe usuário - Objeto João.
+
+---
+
+## Aula 3 - 12/02
+
+#### Exercício de modelação de classe
+
+**UML**: Linguagem de modelagem universal.
+
+---
+
+## Aula 4 

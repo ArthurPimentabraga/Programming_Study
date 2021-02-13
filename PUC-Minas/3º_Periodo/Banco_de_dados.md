@@ -49,16 +49,19 @@ Pela existência desses problemas/dificuldades/limitações foi criada a tecnolo
 
 #### Arquitetura de 3 níveis
 
-- Nível físico: 
-- Nível Conceitual:  
-- Visão 1, 2...: 
+- **Nível físico:** Principal nível de atuação do DBA. Nível mais baixo, descreve COMO os dados estão armazenados. Trata da estrutura do BD, uso de índices...
+  - Independência física: Quando alterações no nível físico não provocam modificações no conceitual.
+- **Nível Conceitual:** Principal nível de atuação do AD. Baseado na modelagem dos dados. Descreve os dados, seus relacionamentos...
+  - Independência lógica: Quando alteraçĩoes no nível conceitual não provocam modificações no visão.
+- **Visão 1, 2...:** Visão de cada usuário, podendo ser um desenvolvedor, o usuário final... 
+  - Exemplo um sistema de folha de pagamento, o usuário final consegue ter acesso aos dados através do sistema, sem acessar diretamente o BD.
 
 #### Etapas usuais de um projeto de BD
 
-1. Levantamento dos requisitos: 
-2. Projeto conceitual:  
-3. Projeto lógico: 
-4. Projeto físico: 
+1. Levantamento dos requisitos (Requisitos da aplicação).
+2. Projeto conceitual (MER).
+3. Projeto lógico (Modelo relacional, OO...).
+4. Projeto físico (Implementação).
 
 #### SGBD
 
