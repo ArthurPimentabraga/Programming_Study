@@ -23,7 +23,7 @@ author: Arthur P. Braga
 
 #### Introdução à BD
 
-Antigamente era usado a **"Abordagem isolada de arquivos"**. Os dados eram armazenados em arquivos individuais, cada sistema tinha sua base particular, isolada (sem comunicação direta entre eles - sem uum controle centralizado). E com alto risco de uma base ter características diferentes das outras (sem um padrão). Segue alguns problemas desse padrão antigo:
+Antigamente era usado a **"Abordagem isolada de arquivos"**. Os dados eram armazenados em arquivos individuais, cada sistema tinha sua base particular, isolada (sem comunicação direta entre eles - sem um controle centralizado). E consequentemente com alto risco de uma base ter características diferentes das outras (até na tipagem e estrutura dos dados). Segue alguns problemas desse padrão antigo:
 
 - Redundância de dados;
 - Inconsistência de dados;
@@ -35,7 +35,7 @@ Pela existência desses problemas/dificuldades/limitações foi criada a tecnolo
 
 #### Conceitos
 
-- **Catálogo** (meta dados): possui dados a respeito de como aquele banco está estruturado (tabelas, atributos, índices...) para organização interna do sistema;
+- **Catálogo** (metadados): possui dados a respeito de como aquele banco está estruturado (tabelas, atributos, índices...) para organização interna do sistema;
 - **DDL** (Data Definition Language): Comandos para criação de estruturas. Ex: Create table, indices, relacionamentos...;
 - **DML** (Data Manipulation Language): Comandos para manipulação do conteúdo do banco. Ex: Inserts, deletes...
   - **Procedural**: Necessário especificar QUAL dado é necessário e COMO obtê-lo.
@@ -52,7 +52,7 @@ Pela existência desses problemas/dificuldades/limitações foi criada a tecnolo
 - **Nível físico:** Principal nível de atuação do DBA. Nível mais baixo, descreve COMO os dados estão armazenados. Trata da estrutura do BD, uso de índices...
   - Independência física: Quando alterações no nível físico não provocam modificações no conceitual.
 - **Nível Conceitual:** Principal nível de atuação do AD. Baseado na modelagem dos dados. Descreve os dados, seus relacionamentos...
-  - Independência lógica: Quando alteraçĩoes no nível conceitual não provocam modificações no visão.
+  - Independência lógica: Quando alterações no nível conceitual não provocam modificações no visão.
 - **Visão 1, 2...:** Visão de cada usuário, podendo ser um desenvolvedor, o usuário final... 
   - Exemplo um sistema de folha de pagamento, o usuário final consegue ter acesso aos dados através do sistema, sem acessar diretamente o BD.
 
@@ -72,7 +72,7 @@ Sistema Gerenciador de Banco de Dados **(SGBD - DBMS)**: Software que administra
 - Integridade
 - Segurança
 - Backup e Recuperação (Restore)
-- Concorrência: Acesso múltiplo sem inconsistências nos dados. Ex: E-Commerce (dados real-time para os clientes).
+- Concorrência: Acesso múltiplo sem inconsistências nos dados. Ex: E-Commerce (se um cliente compra o último item do estoque, essa informação já é acessível para todos os outros usuarios).
 - Monitoramento: Ajuda a avaliar o comportamento a cada momento (caso de instabilidades no sistema...).
 - Natureza autodescritiva do sistema de BD: Não tem apenas o BD, mas definições/descrições de suas restrições (catálogo)...
 - Isolamento entre os Programas e os dados - Independência dos dados.
