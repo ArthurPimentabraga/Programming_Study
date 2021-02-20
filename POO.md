@@ -10,7 +10,7 @@ description: Mesclado com anotações da matéria que tive na PUC.
 - **Classe Abstrata ->** Nunca será instânciada. É uma classe criada para ser herdada. Ex: Uma classe abstrata "animal" é herdada pelas classes "cachorro", "gato"...
 - **Interface ->** É um conjunto de métodos públicos sem implementação. Ou seja, é criada para seus métodos serem herdados, porém todo código dos mesmos será feito nas classes que herdarem dessa interface, tornando os métodos exclusivos e diferentes para cada classe. Ex: Uma interface com os métodos "ligar" e "acelerar", e ambas as classes "carro" e "moto" herdam dessa interface, porém o código do "ligar" e ''acelerar" será feito nas classes "carro" e "moto" separadamente;  
 - **Single responsibility ->** Um conceito de POO. Seu sistema deve dividir cada camada, por exemplo, com cada uma contendo seu objetivo único. Ou seja, nenhuma camada ou parte do sistema, pode fazer outra coisa além do que foi destinada a fazer;
-- **Getter, Setter and Contructor ->** 
+- **Getter, Setter and Contructor ->**   
 
 ---
 
