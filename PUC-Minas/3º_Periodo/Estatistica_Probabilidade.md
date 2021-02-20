@@ -5,6 +5,8 @@ author: Arthur P. Braga
 
 ## Notes
 
+Ta tudo no caderno :)
+
 ---
 
 ## Aula 1 - 09/02

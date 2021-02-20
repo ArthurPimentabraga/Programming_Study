@@ -8,3 +8,12 @@ author: Arthur P. Braga
 ---
 
 ## Aula 1 - 12/02
+
+#### Montagem dos grupos e ideia
+
+---
+
+## Aula 2 - 19/02
+
+#### Revisão da ideia com os professores
+

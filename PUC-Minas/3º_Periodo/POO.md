@@ -43,7 +43,7 @@ author: Arthur P. Braga
 
 - POO, segundo *Alan Kay:*
   - Troca de mensagens
-  - Proteção e retenção local e ocultamento do estado ou processo
+  - Proteção e retenção local e ocultamento do estado (dados) ou processo
   - Associação tardia e dinâmica de tudo o que for possível
 
 **Procedural x POO**
@@ -69,4 +69,44 @@ author: Arthur P. Braga
 
 ---
 
-## Aula 4 
+## Aula 4 - 18/02
+
+#### Modularidade
+
+É a divisão do sistema em partes distintas. Um módulo é um **grupo de comandos** com uma **função/propósito** bem definida e o mais **idependente** possível em relação ao resto do algoritmo. *Unidade identificável na compilação.*
+
+Consequentemente mais seguro, pois divide o sistema e permite modificar um lugar sem alterar o outro. Facilitando o desenvolvimento e reúso da solução;
+
+##### Coesão
+
+As classes precisam ser coesas, não pode ter pontas soltas (precisa ter ligação com o sistema, e de forma lógica/inteligente). Um sistema com alta coesão:
+
+- Facilita e acelera a manutenção;
+- Reduz efeitos colaterais e propagação de erros;
+- Dependência deve ser intra-modular: uso e dependência resumidas ao máximo nas estruturas internas ao módulo.
+
+##### Abstração 
+
+Uma classe deve incluir somente os atributos de importância em um contexto particular. Precisa ter os atributos (dados) necessários para a utilização daquela entidade no sistema. 
+
+- Conceito da caixa-preta: Entrada e saída bem conhecidas, mas com detalhes ocultos.
+- A ideia principal é não ser necessário saber os detalhes do funcionamento de um objeto para utilizá-lo.
+
+#### Encapsulamento
+
+**Proteger!** É o princípio da ocultação de informação e do conceito de caixa preta. Seguir regras (validações) para manter os dados...
+
+- Proteger os dados do acesso direto a partir de um código externo (oculta). Garantindo que as regras sejam seguidas, permitindo o acesso e uso deles somente da forma correta/definida.
+- Os atributos de uma classe só deveriam ser acessador e modificados por meio de seus métodos, deixando os atributos sempre 'private'. Geralmente usando getters e setters (métodos de acesso) para retornar e setar os valores. Isso impede alterações indevidas, por exemplo.
+
+---
+
+## Aula 5 - 19/02
+
+#### Getters and Setters
+
+#### Atividade prática
+
+---
+
+## Aula 6 - 
