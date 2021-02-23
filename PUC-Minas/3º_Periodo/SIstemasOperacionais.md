@@ -60,7 +60,7 @@ Primeira aula do semestre ja começa com uma abertura de fogos de artifício com
 
 - **Chamadas de sistema:** Procedimentos disponibilizados pela API do SO para request de serviços pelos usuários (programas -> programadores). 
   - API do windows -> Win32.
-  - POSIX: padrão definido pela IEEE .....................................
+  - POSIX: padrão definido pela IEEE para a manutenção de compatibilidade entre sistemas.
   - Programas de sistema/utilitário (config. de rede, gerenciador de arquivos...) usam chamadas de sistema.
 - Ambiente operacional = interface gráfica para o usuário final;
 
@@ -72,7 +72,7 @@ Primeira aula do semestre ja começa com uma abertura de fogos de artifício com
 
 #### Arquitetura de SO
 
-**Sistemas monolíticos:** Estrutura única, masisa, *"só o main"*. É executado um único programa em modo núcleo, com uma coleção de rotinas (métodos). 
+**Sistemas monolíticos:** Estrutura única, masisa, *a grosso modo é só o main*. É executado um único programa em modo núcleo, com uma coleção de rotinas (métodos). 
 
 - Se ta tudo junto e misturado todas as rotinas estão sempre disponíveis e visíveis. 
 - Manutenção e entendimento complicado.
@@ -89,9 +89,9 @@ Primeira aula do semestre ja começa com uma abertura de fogos de artifício com
 **Microkernel:** É um Kernel que executa só as funções básicas. É o kernel menor possível. 
 
 - Só é usado como modo kernel. Para comunicação com o hardware.
-- As outras coisas são executadas como serviço. *"Tudo terceirizado"*.
+- As outras coisas são executadas como serviço. *"Tudo terceirizado - User mode"*.
 
-**Sistemas cliente/servidor:** Sistemas em rede. Variação de microkernel.
+**Sistemas cliente/servidor:** Sistemas em rede. Variação de microkernel, por ser a mesma ideia de delegar/distribuir as funções. Algumas funções vão ser providas pela rede, vindas de outro computador.
 
 - Prestadores de serviço (servidores) e usuários de serviço (consumidores). Ex: Lab da puc, Teams...
 - Comunicação por meio de mensagens, entre as máquinas da rede (Client, Process server, File server...).
@@ -107,16 +107,14 @@ Primeira aula do semestre ja começa com uma abertura de fogos de artifício com
   - Necessidade de execução de múltiplos servidores;
   - Isolar servidores -> isolar falhas;
   - Computação em nuvem (lembrar da AWS).
+- Exonúcleos: Divisão do hadware em vários kernels (núcleos) - Computação em nuvem geralmente é assim, a cada solicitação de criação de uma máquina, os recursos do hardware são divididos e parte dele é usado em cada nova máquina. 
 
+---
 
+## Aula 4 - 22/02
 
+#### Diferença entre arquitetura Android - Linux - Win
 
+#### Histórico resumido e desafios atuais
 
-
-
-
-
-
-
-
-
+- Multiprogramação e Time-sharing (slide)

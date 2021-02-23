@@ -87,6 +87,6 @@ Sistema Gerenciador de Banco de Dados **(SGBD - DBMS)**: Software que administra
 
 ---
 
-## Aula 3 - 
+## Aula 3 - 24/02
 
 *Vídeos sugeridos na aula anterior: Os dois primeiros vídeos da unidade 2*
