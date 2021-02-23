@@ -85,4 +85,4 @@ Processos bem definidos, esquematisados e bem pensados (otimizados da melhor for
 
 <img src="../../imgs/Modelos_Processos.png">
 
-Com foco nos dois primeiros.
+Com foco nos dois primeiros. 
