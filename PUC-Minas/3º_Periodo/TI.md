@@ -1,6 +1,6 @@
 ---
 title: Trabalho interdisciplinar: aplicações para processos de negócio (Puc-Minas - 3º Período)
-author: Arthur P. Braga
+author: Arthur P. Braga, Pedro H. Faria
 ---
 
 ## Notes
@@ -16,4 +16,3 @@ author: Arthur P. Braga
 ## Aula 2 - 19/02
 
 #### Revisão da ideia com os professores
-
