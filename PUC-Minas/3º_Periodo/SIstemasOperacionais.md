@@ -90,6 +90,8 @@ Primeira aula do semestre ja começa com uma abertura de fogos de artifício com
 
 - Só é usado como modo kernel. Para comunicação com o hardware.
 - As outras coisas são executadas como serviço. *"Tudo terceirizado - User mode"*.
+- Como alternativa para diminuir ao máximo o tamanho da parte principal do sistema, delegando o resto, deixando com os serviços (programas/utilitários/softwares). O sistema é composto em cima do microkernel.
+- Muito dificil achar hoje, nem o kernel linux é definido como microkernel.
 
 **Sistemas cliente/servidor:** Sistemas em rede. Variação de microkernel, por ser a mesma ideia de delegar/distribuir as funções. Algumas funções vão ser providas pela rede, vindas de outro computador.
 
@@ -115,6 +117,21 @@ Primeira aula do semestre ja começa com uma abertura de fogos de artifício com
 
 #### Diferença entre arquitetura Android - Linux - Win
 
-#### Histórico resumido e desafios atuais
+#### Histórico resumido
 
 - Multiprogramação e Time-sharing (slide)
+
+---
+
+## Aula 5 - 24/02
+
+#### Continuação do histórico
+
+Por que e o que desencadeou a evolução do TCP/IP e a rede?
+
+#### Desafios atuais
+
+- Compatibilidade: Compatibilizar dados. Linux mantem dados de uma forma diferente que o Windows, por exemplo. Outro exemplo: SO conversar com server (hoje utiliza protocolos de rede pra isso).
+- Portabilidade: Um sistema ser capaz de executar em mais de um local (hardware). Ex: Android tem alta portabilidade.
+- Abertura: Sistemas abertos são mais facilmente compativeis e portateis. Mais dificil fazer um SO conversar com outro fechado. Os protocolos de rede (TCP>HTTP...), por serem abertos, possibilitam a grande escala de comunicação entre sistemas que temos hoje. Foi quase que necessário tais protocolos serem aberto para isso. 
+- Escalabilidade: Capacidade de um sistema crescer.

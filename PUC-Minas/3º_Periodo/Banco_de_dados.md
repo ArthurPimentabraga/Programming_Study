@@ -38,8 +38,8 @@ Pela existência desses problemas/dificuldades/limitações foi criada a tecnolo
 - **Catálogo** (metadados): possui dados a respeito de como aquele banco está estruturado (tabelas, atributos, índices...) para organização interna do sistema;
 - **DDL** (Data Definition Language): Comandos para criação de estruturas. Ex: Create table, indices, relacionamentos...;
 - **DML** (Data Manipulation Language): Comandos para manipulação do conteúdo do banco. Ex: Inserts, deletes...
-  - **Procedural**: Necessário especificar QUAL dado é necessário e COMO obtê-lo.
-  - **Não-Procedural**: Não define COMO os dados serão acessados. Padrão SQL.
+  - **Procedural**: Necessário especificar QUAL dado é necessário e COMO obtê-lo. 
+  - **Não-Procedural**: Não define COMO os dados serão acessados. Padrão SQL. Ex: Select básico.
 
 #### Funções/Cargos
 
@@ -90,3 +90,7 @@ Sistema Gerenciador de Banco de Dados **(SGBD - DBMS)**: Software que administra
 ## Aula 3 - 24/02
 
 *Vídeos sugeridos na aula anterior: Os dois primeiros vídeos da unidade 2*
+
+#### Revisão da unidade 1
+
+#### Início de ER
