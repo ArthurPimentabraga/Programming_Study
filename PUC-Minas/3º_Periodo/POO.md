@@ -61,7 +61,7 @@ author: Arthur P. Braga
 
 ---
 
-## Aula 3 - 12/02
+## Aula 4 - 12/02
 
 #### Exercício de modelação de classe
 
@@ -69,7 +69,7 @@ author: Arthur P. Braga
 
 ---
 
-## Aula 4 - 18/02
+## Aula 5 - 18/02
 
 #### Modularidade
 
@@ -101,7 +101,7 @@ Uma classe deve incluir somente os atributos de importância em um contexto part
 
 ---
 
-## Aula 5 - 19/02
+## Aula 6 - 19/02
 
 #### Getters and Setters
 
@@ -109,4 +109,10 @@ Uma classe deve incluir somente os atributos de importância em um contexto part
 
 ---
 
-## Aula 6 - 
+## Aula 7 - 25-02
+
+#### Revisão/Discussão da atividade proposta
+
+#### Construtor
+
+Método especial responsável pela implementação de ações necessárias para criar um objeto. Instruções pré-definidas para que uma classe sempre seja criada de maneira válida.

@@ -5,8 +5,6 @@ author: Arthur P. Braga
 
 ## Notes
 
-Todas as anotações relacionadas ao material online da disciplina será escrito na aula respectiva aos vídeos sujeridos.
-
 Baixar: BizAgi
 
 ---
@@ -19,7 +17,7 @@ BPMs (Business Process Management System): O Gerenciamento de Processos de Negó
 
 ---
 
-## Aula 2 - 22/02 - Processos
+## Aula 2 - EAD
 
 #### Conceito de processos
 
@@ -61,28 +59,47 @@ Componentes que podemos identificar em todos os processos. Matéria prima, forne
 
 4. Tarefas: Atividades simples incluidas em um processo. Não tem como dividir mais, não existem outros subprocessos abaixo dessa atividade.
 
-#### Modelagem de processos
-
-**O que é:** Conjunto de atividades envolvidas na criação de representações de processos de negócio existentes ou que ainda serão propostos. Propósito: ter uma pespectiva completa do processo, uma representação completa e precisa sobre seu funcionamento. Permite compreender, comunicar e gerenciar componentes de processos de negócio.
-
-**Modelo:** Representação simplificada de uma coisa, conceito ou atividade. Simplificação da realidade. Ex: Maquete de um prédio, uma planta baixa...
-
-**Modelo de negócio:** Visão simplificada do negócio. Permite compreende-lo, e identificar problemas e melhorias.
-
-**Notação:** É um conjunto padronizado de símbolos e regras que determinam o significado desses símbolos. Com o objetivo de facilitar o entendimento do modelo por todos os envolvidos no negócio. Exemplo de notação voltado à negócio: BPMN, fluxograma, EPC, UML...
-
 ---
 
-## Aula 2 - 22/02
+## Aula 2 - 22/02 - "Presencial"
 
 #### Visão sistêmica dos processos
 
-Pode-se definir como uma  capacidade que o profissional tem que o permite ver a empresa como um  todo, e diante disso consegue identificar os **processos**, como  funcionam, como os setores se integram, como é a produção e a entrega  dos produtos ou serviços ao consumidor e ao mercado.
+Pode-se definir como uma capacidade que o profissional tem que o permite ver a empresa como um  todo, e diante disso consegue identificar os **processos**, como  funcionam, como os setores se integram, como é a produção e a entrega  dos produtos ou serviços ao consumidor e ao mercado.
 
 <img src="../../imgs/Visao_Sistemica_Processos.png">
 
 Processos bem definidos, esquematisados e bem pensados (otimizados da melhor forma...) podem definir o sucesso de um negócio.
 
+---
+
+## Aula 3 - EAD
+
+#### Modelagem de processos
+
+**O que é:** Conjunto de atividades envolvidas na criação de representações de processos de negócio existentes ou que ainda serão propostos. Propósito: ter uma pespectiva completa do processo, uma representação completa e precisa sobre seu funcionamento. *O nível de detalhamento varia entre organizações.* Permite compreender, comunicar e gerenciar componentes de processos de negócio.
+
+**Modelo:** Representação simplificada de uma coisa, conceito ou atividade. Simplificação da realidade. Ex: Maquete de um prédio, uma planta baixa...
+
+**Níveis de detalhamento**
+
+- Diagrama: Visão macro.
+- Mapa: Mais detalhado que o diagrama.
+- Modelo: Mesmo tendo um nível de detalhamento considerável, ele normalmente objetiva a simulação.
+
+**Modelo de negócio:** Visão simplificada do negócio. Permite compreende-lo, e identificar problemas e melhorias. Servindo de objeto de análise.
+
 <img src="../../imgs/Modelos_Processos.png">
 
 Com foco nos dois primeiros. 
+
+#### Notação BPMN
+
+BPMN **(Business Process Model and Notation)**: desenvolviva especificamente para representar **processos**.
+
+**O que é notação:** É um conjunto padronizado de símbolos e regras que determinam o significado desses símbolos. Com o objetivo de facilitar o entendimento do modelo por todos os envolvidos no negócio. Exemplo de notação voltado à negócio: BPMN, fluxograma, EPC, UML...
+
+**Principais características:**
+
+- Ícones organizados em conujuntos descritivos e analíticos para atender a diferentes necessidades de utilização
+- Permite indicação de eventos de ínicio, intermediário e fim; comunicação intranegócio e colaboração internegócio.
