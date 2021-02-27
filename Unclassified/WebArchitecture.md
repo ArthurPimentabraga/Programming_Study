@@ -7,7 +7,7 @@ author: Arthur P. Braga
 
 O ambiente cliente faz uma requisição para o servidor (podendo estar no seu próprio computador, XAMPP... ou não) que o entrega uma resposta, como por exemplo uma página web;
 
-<img src="imgs/AmbienteServidor.png" alt="AmbienteServidor"/>
+<img src="../imgs/AmbienteServidor.png" alt="AmbienteServidor"/>
 
 - **Servidor Web ->** é o software que faz toda a orquestração da interação do usuário com os recursos que estão no *ambiente servidor*, sendo eles o servidor de arquivos(html, css, js...), o *servidor de aplicações*, ou seja, todo seu back end, *servidores de serviços*(APIs) e o servidor de banco de dados;
 
