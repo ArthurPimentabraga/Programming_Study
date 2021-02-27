@@ -2,7 +2,7 @@
 
 <h3 align="center">Programming study</h3>
 
-<p style="text-align: justify;">Em uma aula minha professora citou a seguinte frase: "De nada adianta a evolução tecnológica se não for utilizada em benefício da sociedade". Desde então estudo mais que nunca para contribuir e fazer a diferença em prol da sociedade, e creio que esse também é o objetivo de muitos. Que tal nos ajudarmos com isso? A muito tempo, para estudar, faço meus resumos e tento escrever uma explicação sobre os assuntos e tecnologias que estudo <a href="https://www.youtube.com/watch?v=ks0lH-4H0sA&t=284s">(Técnica Feynman)</a>, além de resumos das disciplinas da faculdade. Alguns colegas acharam interessante a ideia e queriam fazer o mesmo e contribuir. Logo, criei esse repositório e convido a todos para nos ajudarmos, compartilhando nossos conhecimentos sobre a área de tecnologia, sejam eles quais for!</p>
+Em uma aula minha professora citou a seguinte frase: "De nada adianta a evolução tecnológica se não for utilizada em benefício da sociedade". Desde então estudo mais que nunca para contribuir e fazer a diferença em prol da sociedade, e creio que esse também é o objetivo de muitos. Que tal nos ajudarmos com isso? A muito tempo, para estudar, faço meus resumos e tento escrever uma explicação sobre os assuntos e tecnologias que estudo [(Técnica Feynman)](https://www.youtube.com/watch?v=ks0lH-4H0sA&t=284s), além de resumos das disciplinas da faculdade. Alguns colegas acharam interessante a ideia e queriam fazer o mesmo e contribuir. Logo, criei esse repositório e convido a todos para nos ajudarmos, compartilhando nossos conhecimentos sobre a área de tecnologia, sejam eles quais for!
 
 ---
 
@@ -19,7 +19,7 @@
 
 > Aqui está a listagem de todo nosso conteúdo. O link o redirecionará para o arquivo respectivo. **Se sua contribuição incluir um novo arquivo, adicione a listagem do mesmo aqui para todos saberem a existência dele, e facilitar o acesso ao mesmo.**
 
-### Business
+### Negócios
 
 | **Title** | Link      |
 | --------- | ---------------- |
@@ -37,7 +37,7 @@
 | --------- | ---------------- | 
 | Quarkus | [Click here :nerd_face:](Frameworks/Quarkus.md) |
 
-### Libs
+### Bibliotecas
 
 | **Title** | Link 
 | --------- | ---------------- | 
