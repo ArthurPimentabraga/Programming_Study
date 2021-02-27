@@ -61,7 +61,9 @@ Aeronaves autônomas (Controle do pouso e decolagem) || Redução de custos (con
 
 ### Computação Evolutiva
 
-Ramo que utiliza a evolução biológica para fazer uma evolução computacional.<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/algoritmoGenetico.png" alt="">
+Ramo que utiliza a evolução biológica para fazer uma evolução computacional.
+
+<img title="" src="../../imgs/2_Periodo/Sistemas_Inteligentes/algoritmoGenetico.png" alt="" width="70%">
 
 ### Aprendizado de máquina
 
@@ -272,7 +274,7 @@ APIs :)
 
 - **Variância:** O quanto aquilo está variando em relação à média. Mais longe e mais perto da média. 
 
-<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/variancia.png" alt="" width="355"> X = média
+<img title="" src="../../imgs/2_Periodo/Sistemas_Inteligentes/variancia.png" alt="" width="70%">X = média
 
 - **Desvio padrão:** O quão confiável é aquela variância. Ou seja, o quanto os valores que foram utilizados para calcular aquela variância vão se diferenciar.  Cálculo => raíz quadrada da variância.
 
@@ -302,7 +304,7 @@ APIs :)
 
 Tomam suas proprias decisoes, decidem se suas ações foram boas, e se "auto melhoram".
 
-<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/MachineLearning.png" alt="">
+<img title="" src="../../imgs/2_Periodo/Sistemas_Inteligentes/MachineLearning.png" alt="" width="70%">
 
 **Estilos de aprendizado:**
 
@@ -339,7 +341,7 @@ Tomada de decisão - Classificação - Técnica Preditiva
 - nós folha são do tipo do atributo-classe (ou rótulo,
   label),
 
-<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Arvore_Decisoria.png" alt="">
+<img title="" src="../../imgs/2_Periodo/Sistemas_Inteligentes/Arvore_Decisoria.png" alt="" width="70%">
 
 **Clustering ou Agrupamento - K-means**
 
@@ -410,5 +412,4 @@ No diálogo é onde se cria as respostas que o chatbot irá retornar para uma me
 
 A jornada do usuário é o ponto de partida de qualquer design de diálogo. Ela exibe os passos que se espera que o usuário execute para alcançar seu objetivo. Por exemplo. Considere a jornada simplificada de um usuário solicitando uma consulta médica.
 
-![](../imgs/jornada_usuario_SI.png)
-
+<img title="" src="../../imgs/2_Periodo/Sistemas_Inteligentes/jornada_usuario_SI.png" alt="" width="70%">

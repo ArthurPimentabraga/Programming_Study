@@ -37,7 +37,7 @@ Primeira aula do semestre ja começa com uma abertura de fogos de artifício com
 
 #### Estrutura de um SO
 
-<img src="../../imgs/Estrutura-SO.png" style="width:60%"/>
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Estrutura-SO.png" style="width:60%"/>
 
 - Software básico: Configurações (coisas básicas do sistema).
 
@@ -68,7 +68,7 @@ Primeira aula do semestre ja começa com uma abertura de fogos de artifício com
 
 *SO é como Sauron, faz tudo nas sombras, a gente só vê a interface gráfica.*
 
-<img src="../../imgs/Estrutura-Basica-SO.png" style="width:40%">
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Estrutura-Basica-SO.png" style="width:40%">
 
 #### Arquitetura de SO
 

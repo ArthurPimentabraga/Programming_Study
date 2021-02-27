@@ -31,7 +31,7 @@ Antigamente era usado a **"Abordagem isolada de arquivos"**. Os dados eram armaz
 
 Pela existência desses problemas/dificuldades/limitações foi criada a tecnologia da **abordagem integrada de banco de dados** (abordagem atual).
 
-<img src="../../imgs/Sistema-BD.png" alt="Sistema-BD" style="width:75%" />
+<img src="../../imgs/3_Periodo/Banco_Dados/Sistema-BD.png" alt="Sistema-BD" style="width:75%" />
 
 #### Conceitos
 
@@ -93,4 +93,26 @@ Sistema Gerenciador de Banco de Dados **(SGBD - DBMS)**: Software que administra
 
 #### Revisão da unidade 1
 
-#### Início de ER
+#### Modelagem de dados
+
+Coleção de ferramentas conceituais para descrição dos dados, seus relacionamentos e restrições. Permite organizar uma estrutura bem definida e estabelecer regras.
+
+- Antigamente utilizava um modelo hierárquico: Estrutura de árvore. Possui limitações de relacionamento (muitos <-> muitos)
+- Modelo de rede: O problema anterior é resolvido com esse modelo (é uma evolução do anterior), que baseia-se em ponteiros. O problema é que essa estrutura não é muito trivial.
+
+#### MER
+
+*Modelo de Entidade-Relacionamento*
+
+É uma boa forma de representar os requisitos funcionais levantados na análise inicial. E também possui grande capacidade semântica, facilitando a compreensão pelo usuário leigo, por exemplo.
+
+- Entidades: objetos do mundo real (Ex: Cliente), estruturas abstratas de informação (Ex: Nota fiscal). Representação: Retângulo.
+- Atributos: Dados que identificam e descrevem as Entidades. Ex: Fornecedor -> Codigo; Nome; CNPJ... Representação: Elipse.
+  - Simples: Indivisíveis. Ex: CPF, preço, altura...
+  - Composto: Divisível em subpartes. Ex: Endereço -> Cep; Cidade; Estado.
+  - Monovalorados: Único para uma dada entidade. Ex: CPF, nome, altura...
+  - Multivalorados: Múltiplos valores para uma dada entidade. Representação: Elipse dupla. Ex: Telefones e endereços. 
+  - Derivados: Computados/Calculados a partir de outros atributos ou entidades. Representação: Elipse pontilhada. Ex: Idade, IMC, total da nota fiscal...
+  - Atributo chave (PK): Identificador da entidade, dados únicos por entidade. Representação: Atributo grifado. *Podem ter mais de um atributo chave.*
+  - Chave composta: Vários atributos formam uma chave. Ex: Nº da nota fiscal + nº do item; Nº da agência + nº da conta.
+- Relacionamento: 

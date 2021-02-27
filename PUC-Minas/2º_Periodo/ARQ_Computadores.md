@@ -130,7 +130,7 @@ Regeneração (refreshing):
 
 DDR (explicação): 
 
-Tecnologia Optane: <img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/hierarquiaMemoria.png" alt="" width="675">
+Tecnologia Optane: <img title="" src="../../imgs/2_Periodo/ARQ_Computadores/hierarquiaMemoria.png" alt="" width="70%">
 
 ---
 
@@ -162,7 +162,7 @@ Tecnologia Optane: <img title="" src="file:///home/arthurbraga/Documentos/Progra
 
 **Mapeamento direto:** para cada dado existem um ID, logo para verificar se tal dado está em tal memória é comparado os IDs da memória em questão, com o ID do dado que eu desejo. ID = endereço de memória. 
 
-![](../imgs/Mapeamento_Cache.png)
+<img title="" src="../../imgs/2_Periodo/ARQ_Computadores/Mapeamento_Cache.png" alt="" width="70%">
 
 ---
 
@@ -195,7 +195,7 @@ Formato de instrução:
 - Com dois endereços: OP. + A + B
 - Com três endereços: OP. + A + B + C
 
-![](../imgs/Formato_Instrucao_ARQ.png)
+<img title="" src="../../imgs/2_Periodo/ARQ_Computadores/Formato_Instrucao_ARQ.png" alt="" width="70%">
 
 *Matéria de Opcode ta no início do arquivo!*
 
@@ -268,7 +268,7 @@ RAIDs níveis:
 
 ---
 
-Questão Rafa:
+Questões:
 
 1. **Barramento de dados:** Transporta toda informação interna do computador, sejam elas dados e códigos de programas;
 2. **Barramento de endereços:** Transporta a localização, o endereço de memória onde se deseja ler ou escrever dados;

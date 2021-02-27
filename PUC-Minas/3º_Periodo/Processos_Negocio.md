@@ -67,7 +67,7 @@ Componentes que podemos identificar em todos os processos. Matéria prima, forne
 
 Pode-se definir como uma capacidade que o profissional tem que o permite ver a empresa como um  todo, e diante disso consegue identificar os **processos**, como  funcionam, como os setores se integram, como é a produção e a entrega  dos produtos ou serviços ao consumidor e ao mercado.
 
-<img src="../../imgs/Visao_Sistemica_Processos.png">
+<img src="../../imgs/3_Periodo/Processos_Negocio/Visao_Sistemica_Processos.png">
 
 Processos bem definidos, esquematisados e bem pensados (otimizados da melhor forma...) podem definir o sucesso de um negócio.
 
@@ -89,7 +89,7 @@ Processos bem definidos, esquematisados e bem pensados (otimizados da melhor for
 
 **Modelo de negócio:** Visão simplificada do negócio. Permite compreende-lo, e identificar problemas e melhorias. Servindo de objeto de análise.
 
-<img src="../../imgs/Modelos_Processos.png">
+<img src="../../imgs/3_Periodo/Processos_Negocio/Modelos_Processos.png">
 
 Com foco nos dois primeiros. 
 

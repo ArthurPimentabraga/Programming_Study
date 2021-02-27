@@ -5,6 +5,12 @@ author: Arthur P. Braga
 
 ## Notes
 
+#### Pensar na hora de modelar a classe:
+
+1. Atributo ou método?
+2. static? final?
+3. Visibilidade
+
 ---
 
 ## Aula 1 - 04/02
@@ -109,10 +115,42 @@ Uma classe deve incluir somente os atributos de importância em um contexto part
 
 ---
 
-## Aula 7 - 25-02
+## Aula 7 - 25/02
 
 #### Revisão/Discussão da atividade proposta
 
 #### Construtor
 
 Método especial responsável pela implementação de ações necessárias para criar um objeto. Instruções pré-definidas para que uma classe sempre seja criada de maneira válida.
+
+---
+
+## Aula 8 - 26/02
+
+#### Atributos 'de classe' - static
+
+Atributos que dizem respeito à toda coleção de objetos, e não a um objeto específico. Compartilhado por todos os objetos daquela classe.
+
+- Escopo local (delimitado pela visibilidade declarada);
+- Tempo de vida global (vai ficar vivo enquanto o programa rodar);
+- Inicializado pelo 1º objeto ou pelo carregamento da classe.
+
+Úteis para implementar contadores ou identificadores de autoincremento. Também usado para constantes (**Economia de memória**). Declarados com a palavra chave **'static'**.
+
+Exemplos: Armazenar última matrícula de um aluno cadastrado no sistema, poderia servir para criar a próxima (levando em consideração que a matrícula é uma sequência).
+
+*Atributos finais ou selados (final): Não podem mudar de valor após inicializados.* 
+
+*Nomenclatura em maiúsculo quando a variável é 'static final'.*
+
+#### Métodos 'de classe' - static
+
+São funções que não  dependem de nenhuma variável de instância, quando invocados executam uma função sem a dependência do conteúdo de um objeto ou a execução da  instância de uma classe, conseguindo chamar direto qualquer **método** da classe.
+
+**Obs:** Se uma classe só possui métodos e atributos estáticos, logo ela é considerada uma **classe estática**, nunca irá precisar de instância. Ex: System, Math (Libs de funções) - Integer.parseInt (Manipulação de tipos) - Conversor de medidas...
+
+---
+
+## Aula 9 - 04/03
+
+#### Destrutores

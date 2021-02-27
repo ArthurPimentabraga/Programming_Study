@@ -100,7 +100,7 @@ ESTUDAR ESSA AULA!!!!!!!!! :)
   
   - Intimidade com o cliente e o fornecedor: Usar SI para desenvolver laços mais fortes com o cliente e fornecedores e conquistar sua lealdade;
 
-<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Cadeia_Valor.png" alt="">
+<img title="" src="../../imgs/2_Periodo/Fundamentos_SI/Cadeia_Valor.png" alt="" width="70%">
 
 **Impacto da internet:** Acesso fácil à informação (acesso a preços...) o poder de barganha aumenta || Acesso direto aos fornecedores (da pra saber qual é melhor... mais facilmente) || Reduz a barreira de entrada no mercado || Amplia a abrangencia geográfica do mercado, ou seja, mais concorrencia > melhoria dos produtos e processos.... 
 
@@ -126,7 +126,7 @@ Análise ética (quando confrontado):
 
 **As cinco dimensões morais da era da informação**:
 
-<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Modelo_Etico.png" alt="">
+<img title="" src="../../imgs/2_Periodo/Fundamentos_SI/Modelo_Etico.png" alt="" width="70%">
 
 ##### Debate :)
 
@@ -190,7 +190,7 @@ Aplicativos integrados são sistemas que abrangem TODA a empresa (todos os níve
 
 - **CRM** - Customer Relationship Management (sistemas de gestão do relacionamento com o cliente) -> Não da mais para competir só com base no preço, não da mais para ter um marketing de massa (uma única frase em todos os meios), precisa ser um marketing personalizado para cada cliente. O CRM é a combinação de processos de negócio e tecnologia com o objetivo de entender os clientes mediante a várias perspectiva: quem são?, o que fazem?, do que gostam?.... Aplicação para fidelização de cliente, aumento da satisfação dos mesmos.... 
 
-                                <img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Vantagens_CRM.png" alt="" width="394">
+<img title="" src="../../imgs/2_Periodo/Fundamentos_SI/Vantagens_CRM.png" alt="" width="70%">
 
 *Ciclo de vida do cliente: Adquirir -> Aprimorar -> Reter*
 
@@ -310,7 +310,7 @@ Aplicativos integrados são sistemas que abrangem TODA a empresa (todos os níve
 
 **24ª Aula ->** Como desenvolver sistemas de informação e gerenciar projetos
 
-![](../imgs/PlanoSI_ResolucaoProblemas.png)
+<img title="" src="../../imgs/2_Periodo/Fundamentos_SI/PlanoSI_ResolucaoProblemas.png" alt="" width="70%">
 
 *Metodologias ágeis!*
 

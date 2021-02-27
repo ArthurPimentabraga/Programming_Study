@@ -64,7 +64,7 @@ Todos se relacionando com a quantidade de trabalho que foi necessário para alca
 
 **9ª Aula ->** Exemplos de análise de complexidade de algoritmos
 
-<img title="" src="file:///home/arthurbraga/Documentos/Programming_Study/imgs/Analise_Algoritmo.png" alt="">
+<img title="" src="../../imgs/2_Periodo/AED/Analise_Algoritmo.png" alt="" width="70%">
 
 f(n) = 2*(n-1) ou f(n) = 2n - 2 
 
