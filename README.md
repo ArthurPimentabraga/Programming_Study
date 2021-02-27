@@ -54,9 +54,3 @@
 | **Title** | Link 
 | --------- | ---------------- | 
 | Linux | [Click here :nerd_face:](Sistemas_Operacionais/Linux.md) |
-
-### Sistemas Operacionais
-
-| **Title** | Link 
-| --------- | ---------------- | 
-| Linux | [Click here :nerd_face:](Sistemas_Operacionais/Linux.md) |
