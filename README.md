@@ -2,19 +2,22 @@
 
 <h3 align="center">Programming study</h3>
 
-<p style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book. It has survived not  only five centuries, but also the leap into electronic typesetting,  remaining essentially unchanged.</p>
+<p style="text-align: justify;">Em uma aula minha professora citou a seguinte frase: "De nada adianta a evolução tecnológica se não for utilizada em benefício da sociedade". Desde então estudo mais que nunca para contribuir e fazer a diferença em prol da sociedade, e creio que esse também é o objetivo de muitos. Que tal nos ajudarmos com isso? A muito tempo, para estudar, faço meus resumos e tento escrever uma explicação sobre os assuntos e tecnologias que estudo <a href="https://www.youtube.com/watch?v=ks0lH-4H0sA&t=284s">(Técnica Feynman)</a>, além de resumos das disciplinas da faculdade. Alguns colegas acharam interessante a ideia e queriam fazer o mesmo e contribuir. Logo, criei esse repositório e convido a todos para nos ajudarmos, compartilhando nossos conhecimentos sobre a área de tecnologia, sejam eles quais for!</p>
 
 ---
 
 <h3 align="center">Como contribuir</h3>
 
-> Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book. It has survived not  only five centuries, but also the leap into electronic typesetting,  remaining essentially unchanged.
+> 1. Clone o repositório e crie uma branch para sua contribuição;
+> 2. Abra um *Pull request* para a *Master* descrevendo suas modificações brevemente.
+> 
+> *Obs: Se desejar, dê uma olhada nas *Issues* criadas, são alguns tópicos que desejamos um aperfeiçoamento, ou tecnologias novas que ainda não temos no repositório.* 
 
 ---
 
 <h3 align="center">Links</h3>
 
-> Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book. It has survived not  only five centuries, but also the leap into electronic typesetting,  remaining essentially unchanged.
+> Aqui está a listagem de todo nosso conteúdo. O link o redirecionará para o arquivo respectivo. **Se sua contribuição incluir um novo arquivo, adicione a listagem do mesmo aqui para todos saberem a existência dele, e facilitar o acesso ao mesmo.**
 
 ### Business
 
