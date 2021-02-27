@@ -16,31 +16,31 @@
 
 > Lorem Ipsum is simply dummy text of the printing and  typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of  type and scrambled it to make a type specimen book. It has survived not  only five centuries, but also the leap into electronic typesetting,  remaining essentially unchanged.
 
-##### Business
+### Business
 
 | **Title** | Link      |
 | --------- | ---------------- |
 | Business | [Click here :nerd_face:](Business/Business.txt) |
 
-##### Ferramentas
+### Ferramentas
 
 | **Title** | Link 
 | --------- | ---------------- | 
 | Git | [Click here :nerd_face:](Ferramentas/Git.md) |
 
-##### Frameworks
+### Frameworks
 
 | **Title** | Link 
 | --------- | ---------------- | 
 | Quarkus | [Click here :nerd_face:](Frameworks/Quarkus.md) |
 
-##### Libs
+### Libs
 
 | **Title** | Link 
 | --------- | ---------------- | 
 | React | [Click here :nerd_face:](Libs/React.md) |
 
-##### Linguagens
+### Linguagens
 
 | **Title** | Link 
 | --------- | ---------------- | 
@@ -49,13 +49,13 @@
 | Java | [Click here :nerd_face:](Linguagens/Java.md) |
 | Javascript | [Click here :nerd_face:](Linguagens/Javascript.md) |
 
-##### Sistemas Operacionais
+### Sistemas Operacionais
 
 | **Title** | Link 
 | --------- | ---------------- | 
 | Linux | [Click here :nerd_face:](Sistemas_Operacionais/Linux.md) |
 
-##### Sistemas Operacionais
+### Sistemas Operacionais
 
 | **Title** | Link 
 | --------- | ---------------- | 
