@@ -3,7 +3,7 @@ title: Git
 author: Arthur P. Braga
 ---
 
-### Git Commands
+## Git Commands
 
 ```shell
 --amend -> quando se deseja modificar a mens do commit. (Escrever outro commit com a mens certa colocando esse comando no final);

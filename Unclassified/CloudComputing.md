@@ -32,7 +32,7 @@ Além disso, podemos citar a qualidade da segurança, a atualização automátic
 
 ---
 
-### How works
+## How works
 
 A Cloud Computing utiliza um servidor remoto para os usuários poderem acessar seu serviço em qualquer lugar do mundo, ou seja, é feita uma centralização do acesso de todos os usuários em um único local. E tal servidor contém todos os recursos, programas e dados necessários para se utilizar seu serviço. 
 
@@ -42,7 +42,7 @@ A computação em nuvem oferece uma ampla variedade de serviços, ferramentas e 
 
 ---
 
-### Notes
+## Notes
 
 - A ideia da computação em nuvem pode ter surgido lá na década de 60 com John McCarthy e o paradigma Time-Sharing(computação por tempo compartilhado), quando os recursos computacionais podiam ser compartilhados em vários lugares (ligados por um terminal) e só pagavam pelo que utilizou; 
 
@@ -58,7 +58,7 @@ A computação em nuvem oferece uma ampla variedade de serviços, ferramentas e 
 
 ---
 
-### Microsoft Azure (PaaS)
+## Microsoft Azure (PaaS)
 
 A Microsoft Azure é uma plataforma que disponibiliza serviços e ferramentas baseadas nos conceitos da Cloud Computing. Mais especificamente o modelo PaaS, como já foi citado anteriormente. Ou seja, uma plataforma destinada a ajudar no processo de desenvolvimento de uma aplicação, seja ela qual for: mobile, web ou desktop. 
 

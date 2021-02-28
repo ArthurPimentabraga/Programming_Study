@@ -3,7 +3,7 @@ title: NodeJs
 author: Arthur P. Braga
 ---
 
-### What is
+## What is
 
 Node.js é um interpretador Javascrit fora dos navegadores. *Para Javascript Vanilla cada navegador tem seu interpretador, no caso do Chrome é o V8.* 
 
@@ -17,7 +17,7 @@ Tem um ecossistema muito grande, ou seja, tem biblioteca para praticamente tudo 
 
 ---
 
-### General
+## General
 
 - Módulos -> É uma forma de se quebrar o código em vários arquivos, organizando-o para que não fique tudo junto em um único grande arquivo. A forma de se utilizar se parece com o instanciamento de classes.
   
@@ -42,7 +42,7 @@ http.createServer(function (req, res) {
 
 ---
 
-### Express and NPM
+## Express and NPM
 
 - O **Express.js** é um framework de desenvolvimento back-end com Node.js. É vantagem usar ele por ser muito mais robusto que o módulo http do node, que só contém o básico para se trabalhar com http.
 
@@ -52,7 +52,7 @@ http.createServer(function (req, res) {
 
 ---
 
-### EJS (Embedded JavaScript templating)
+## EJS (Embedded JavaScript templating)
 
 Modelo de Javascript incorporado, é um "motor" de templates(view engine), é responsável por renderizar, exibir HTML nas rotas criadas em Node. 
 
@@ -63,7 +63,7 @@ Além disso ele permite que possamos incorporar JS dentro do HTML, como passar o
 
 ---
 
-### Sequelize
+## Sequelize
 
 É uma biblioteca javascript que permite a manipulação do banco de dados SQL inteiramente por javascript. 
 
@@ -76,7 +76,7 @@ $ npm install --save mysql2 (biblioteca para se trabalhar com mysql usando seque
 
 ---
 
-### Knex
+## Knex
 
 **Migrations:**
 
@@ -94,7 +94,7 @@ npx knex seed:run
 
 ---
 
-### Notes
+## Notes
 
 - **Pastas ->** views -> html || public -> arquivos estáticos(img, css...). O express já vai procurar os arquivos respectivos dentro destas pastas, um padrão de nomenclatura já;
 - **Partials ->** Reutilização de código html. Igual se faz em php, ou cria componentes em ionic. É só criar um arquivo .ejs colocar seu html dentro (como um navbar...) e chamar nas suas páginas: <%- include ('diretório da partial')%>;

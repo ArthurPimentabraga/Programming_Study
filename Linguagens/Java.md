@@ -3,7 +3,7 @@ title: Java
 author: Arthur P. Braga
 ---
 
-### Java Compilation
+## Java Compilation
 
 O programa Java é compilado por uma forma intermediária denominada bytecode, que é interpretada pela JVM (Máquina Virtuai Java - já está junto com JDK). Por isso tal linguagem é tão independente de plataforma,  pois qualquer sistema que tiver uma JVM é capaz de rodar Java;
 
@@ -16,7 +16,7 @@ O programa Java é compilado por uma forma intermediária denominada bytecode, q
 
 ---
 
-### Commands and codes
+## Commands and codes
 
 ```java
 .substring(x,x) -> "Corta" um string de um caracter inicial(posicional) até outro.

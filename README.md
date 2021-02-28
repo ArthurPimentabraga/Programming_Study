@@ -27,26 +27,26 @@ Em uma aula minha professora citou a seguinte frase: "De nada adianta a evolu√ß√
 
 ### Ferramentas
 
-| **Title** | Link 
-| --------- | ---------------- | 
+| **Title** | Link |
+| --------- | ---------------- |
 | Git | [Click here :nerd_face:](Ferramentas/Git.md) |
 
 ### Frameworks
 
-| **Title** | Link 
-| --------- | ---------------- | 
+| **Title** | Link |
+| --------- | ---------------- |
 | Quarkus | [Click here :nerd_face:](Frameworks/Quarkus.md) |
 
 ### Bibliotecas
 
-| **Title** | Link 
-| --------- | ---------------- | 
+| **Title** | Link |
+| --------- | ---------------- |
 | React | [Click here :nerd_face:](Libs/React.md) |
 
 ### Linguagens
 
-| **Title** | Link 
-| --------- | ---------------- | 
+| **Title** | Link |
+| --------- | ---------------- |
 | CSS | [Click here :nerd_face:](Linguagens/CSS.md) |
 | HTML | [Click here :nerd_face:](Linguagens/HTML.md) |
 | Java | [Click here :nerd_face:](Linguagens/Java.md) |
@@ -54,6 +54,6 @@ Em uma aula minha professora citou a seguinte frase: "De nada adianta a evolu√ß√
 
 ### Sistemas Operacionais
 
-| **Title** | Link 
-| --------- | ---------------- | 
+| **Title** | Link |
+| --------- | ---------------- |
 | Linux | [Click here :nerd_face:](Sistemas_Operacionais/Linux.md) |

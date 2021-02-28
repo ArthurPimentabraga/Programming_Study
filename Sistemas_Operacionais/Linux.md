@@ -3,7 +3,7 @@ title: Linux
 author: Arthur P. Braga
 ---
 
-#### Understanding Linux
+## Understanding Linux
 
 - **Kernel ->** é o núcleo do sistema operacional, responsável por fazer as interações de hardware e software;   
 - **Gnome ->** Uma das (GUI) Graphical user interface and set of computer desktop applications for users of the Linux; 
@@ -11,7 +11,7 @@ author: Arthur P. Braga
 
 ---
 
-#### File Manipulation
+## File Manipulation
 
 - .rar -> unrar x (nome do arquivo) ;
 - .zip -> unzip (nome do arquivo) ;
@@ -21,7 +21,7 @@ author: Arthur P. Braga
 
 ---------------------------------------------------------------------------------------------------------------------------
 
-#### Basic Commands
+## Basic Commands
 
 - pwd -> Exibe o diretório atual;
 

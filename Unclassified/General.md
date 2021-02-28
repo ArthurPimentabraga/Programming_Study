@@ -3,7 +3,7 @@ title: General of programming
 author: Arthur P. Braga
 ---
 
-### Programer dictionary
+## Programer dictionary
 
 - **Biblioteca ->** É um conjunto de códigos que será utilizado como ferramenta no desenvolvimento do projeto. Lembrando que no caso da biblioteca você utiliza só o que te interessa naquele projeto;
 

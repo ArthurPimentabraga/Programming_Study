@@ -3,7 +3,7 @@ title: Javascript
 author: Arthur P. Braga
 ---
 
-### What is
+## What is
 
 - É responsável pela interação do site com o usuário;
 - É interpretado no navegador;
@@ -12,7 +12,7 @@ author: Arthur P. Braga
 
 ----------------------------------------------------------------------------------------------------------------------------
 
-### Commands and codes:
+## Commands and codes:
 
 - confirm -> exibe uma caixa igual o alert, porém pedindo confirmação;
 - prompt -> Mesma caixa, porém com um textbox para ser preenchido;
@@ -49,7 +49,7 @@ id.evento = (parm) => bloco de comandos;
 
 ----------------------------------------------------------------------------------------------------------------------------
 
-### Meanings
+## Meanings
 
 - **Infinity and -Infinity ->** pega o maior e o menor nº possível de se guardar em uma variável;
 
@@ -71,7 +71,7 @@ id.evento = (parm) => bloco de comandos;
 
 ----------------------------------------------------------------------------------------------------------------------------
 
-### Notes
+## Notes
 
 - O sinal de + pode concatenar e somar, depende do tipo da variável. O prompt sempre retorna string;
 - Operadores relacionais como ">" também funcionam em letras, as letras só representam os bytes em nosso pc, logo uma letra tem uma posição, um "valor", então "a" é > que "b" || "a" é > "A" || "Dezena" é > que "Dez" por ter mais caracteres...
@@ -79,11 +79,11 @@ id.evento = (parm) => bloco de comandos;
 
 ----------------------------------------------------------------------------------------------------------------------------
 
-### Document Object Model
+## Document Object Model
 
-- DOM é um conjunto de objetos do navegador que nos permite ter acesso aos componentes internos do nosso site, sejam eles: tags HTML, a localização atual no meu site(em que página o usuário está no momento), o histórico de navegação no site...
+DOM é um conjunto de objetos do navegador que nos permite ter acesso aos componentes internos do nosso site, sejam eles: tags HTML, a localização atual no meu site(em que página o usuário está no momento), o histórico de navegação no site...
 
-- O acesso à tais componentes é feito de diversas forma, só é necessário respeitar a hierarquia da árvore DOM(os componentem tem uma hierarquia, ou seja, a raiz é "windows", que tem vários filhos como "location", "history", "Document"... Document por sua vez tem seu filho "HTML", que por sua vez tem seus filhos "HEAD" e "BODY", que tem seus filhos que são as tag html....);
+O acesso à tais componentes é feito de diversas forma, só é necessário respeitar a hierarquia da árvore DOM(os componentem tem uma hierarquia, ou seja, a raiz é "windows", que tem vários filhos como "location", "history", "Document"... Document por sua vez tem seu filho "HTML", que por sua vez tem seus filhos "HEAD" e "BODY", que tem seus filhos que são as tag html....);
 
 - Em "Document" o acesso pode ser feito por nome das tags, id, class, querySelectors...
   
@@ -101,33 +101,35 @@ id.evento = (parm) => bloco de comandos;
 
 ---
 
-### Form
+## Form
 
-- Eventos podem ser inseridos no form para diversas finalidades, como o evento input (oninput) que seria chamado a cada mínima alteraçao no campo. Um exemplo prático é fazer com que se o usuário digitar um caracter inválido para aquele campo, o mesmo é excluido ou aparece uma mensagem de erro. Outros eventos: focus, blur, change....
+Eventos podem ser inseridos no form para diversas finalidades, como o evento input (oninput) que seria chamado a cada mínima alteraçao no campo. Um exemplo prático é fazer com que se o usuário digitar um caracter inválido para aquele campo, o mesmo é excluido ou aparece uma mensagem de erro. Outros eventos: focus, blur, change....
+
 - Muito bom para validação de formulário;
 
 ---
 
-### Others
+## Others
 
-- Uma boa técnica é armazenar um dado localmente no navegador do usuário, desta forma pode se criar "interações" que facilitam a vida do mesmo, como deixar armazenado seu login para que todas vez que for logar no site já estar preenchido para ele.
-  
-  - Existem duas formas de armazenamento local 
-  
-  ```javascript
-  localStorage.getItem('chave'), setItem('chave',valor), removeItem('chave') ou clear() 
-      (recuperar, armazenar, remover e limpar todos os dados, respectivamente);
-  sessionStorage.// // // //
-  ```
-  
-  - A diferença é que localStorage salva por tempo indeterminado, já o session salva somente naquela sessão;
+Uma boa técnica é armazenar um dado localmente no navegador do usuário, desta forma pode se criar "interações" que facilitam a vida do mesmo, como deixar armazenado seu login para que todas vez que for logar no site já estar preenchido para ele.
+
+- Existem duas formas de armazenamento local 
+
+```javascript
+localStorage.getItem('chave'), setItem('chave',valor), removeItem('chave') ou clear() 
+    (recuperar, armazenar, remover e limpar todos os dados, respectivamente);
+sessionStorage.// // // //
+```
+
+- A diferença é que localStorage salva por tempo indeterminado, já o session salva somente naquela sessão;
 
 ---
 
 ### JQuery
 
-- JQuery é uma biblioteca javascript que como qualquer outra biblioteca oferece uma forma mais simplificada de código.
-- Simplifica muito a vida do programador, pois além de ser uma biblioteca, com muitos métodos prontos... já existe muito conteúdo pronto na internet, muitas funcionalidades e componentes já criados que você pode fazer uso.
+JQuery é uma biblioteca javascript que como qualquer outra biblioteca oferece uma forma mais simplificada de código.
+
+Simplifica muito a vida do programador, pois além de ser uma biblioteca, com muitos métodos prontos... já existe muito conteúdo pronto na internet, muitas funcionalidades e componentes já criados que você pode fazer uso.
 
 > document.getElementbyId = $(document or css selectors...)
 > 

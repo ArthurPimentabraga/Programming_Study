@@ -3,7 +3,7 @@ title: Web Architecture and HTTP
 author: Arthur P. Braga
 ---
 
-### General Architecture Web
+## General Architecture Web
 
 O ambiente cliente faz uma requisição para o servidor (podendo estar no seu próprio computador, XAMPP... ou não) que o entrega uma resposta, como por exemplo uma página web;
 
@@ -23,7 +23,7 @@ O ambiente cliente faz uma requisição para o servidor (podendo estar no seu pr
 
 ---
 
-### URI, URL e URN
+## URI, URL e URN
 
 #### URI -> Uniform Resource Identifier
 
@@ -68,7 +68,7 @@ Ex: urn:isbn:978-1-491-91866-1
 
 ---
 
-### Protocol HTTP - Hypertext Transfer Protocol
+## Protocol HTTP - Hypertext Transfer Protocol
 
 #### What is
 

@@ -100,14 +100,14 @@ Coleção de ferramentas conceituais para descrição dos dados, seus relacionam
 - Antigamente utilizava um modelo hierárquico: Estrutura de árvore. Possui limitações de relacionamento (muitos <-> muitos)
 - Modelo de rede: O problema anterior é resolvido com esse modelo (é uma evolução do anterior), que baseia-se em ponteiros. O problema é que essa estrutura não é muito trivial.
 
-#### MER
+#### DER
 
-*Modelo de Entidade-Relacionamento*
+*Diagrama de Entidade-Relacionamento*
 
 É uma boa forma de representar os requisitos funcionais levantados na análise inicial. E também possui grande capacidade semântica, facilitando a compreensão pelo usuário leigo, por exemplo.
 
-- Entidades: objetos do mundo real (Ex: Cliente), estruturas abstratas de informação (Ex: Nota fiscal). Representação: Retângulo.
-- Atributos: Dados que identificam e descrevem as Entidades. Ex: Fornecedor -> Codigo; Nome; CNPJ... Representação: Elipse.
+- **Entidades**: objetos do mundo real (Ex: Cliente), estruturas abstratas de informação (Ex: Nota fiscal). Representação: Retângulo.
+- **Atributos**: Dados que identificam e descrevem as Entidades. Ex: Fornecedor -> Codigo; Nome; CNPJ... Representação: Elipse.
   - Simples: Indivisíveis. Ex: CPF, preço, altura...
   - Composto: Divisível em subpartes. Ex: Endereço -> Cep; Cidade; Estado.
   - Monovalorados: Único para uma dada entidade. Ex: CPF, nome, altura...
@@ -115,4 +115,12 @@ Coleção de ferramentas conceituais para descrição dos dados, seus relacionam
   - Derivados: Computados/Calculados a partir de outros atributos ou entidades. Representação: Elipse pontilhada. Ex: Idade, IMC, total da nota fiscal...
   - Atributo chave (PK): Identificador da entidade, dados únicos por entidade. Representação: Atributo grifado. *Podem ter mais de um atributo chave.*
   - Chave composta: Vários atributos formam uma chave. Ex: Nº da nota fiscal + nº do item; Nº da agência + nº da conta.
-- Relacionamento: 
+- **Relacionamento**: Associação entre entidades. Representaçã: Losango.
+  - Cardinalidade: Propriedade que expressa o número de ocorrências de uma entidade para outra.
+    - Um-para-Um: Técnico e Time;
+    - Um-para-Muitos: Proprietário e veículo;
+    - Muitos-para-Um: Veículo e proprietário;
+    - Muitos-para-Muitos: Paciente e Médico, Professor e aluno.
+  - Totalidade (obrigatoriedade): Especifica se a existênciade uma entidade depende de seu relacionamento como outra. Ex: Sócio e dependente.
+    - Pode ser parcial (opcional) ou total (obrigatório).
+  - Relacionamento recursivo: Uma ocorrência de uma entidade se relaciona com outra(s) ocorrência(s) da mesma entidade. A mesma entidade participa mais de uma vez em um tipo de relacionamento em papéis diferentes. Ex: Música pode possuir várias versões que também são músicas.
