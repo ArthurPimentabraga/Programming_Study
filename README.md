@@ -11,7 +11,9 @@ Em uma aula minha professora citou a seguinte frase: "De nada adianta a evoluç�
 > 1. Clone o repositório e crie uma branch para sua contribuição;
 > 2. Abra um *Pull request* para a *Master* descrevendo suas modificações brevemente.
 > 
-> *Obs: Se desejar, dê uma olhada nas *Issues* criadas, são alguns tópicos que desejamos um aperfeiçoamento, ou tecnologias novas que ainda não temos no repositório.* 
+> *Obs1: Se desejar, dê uma olhada nas *Issues* criadas, são alguns tópicos que desejamos um aperfeiçoamento, ou tecnologias novas que ainda não temos no repositório.* 
+> 
+> *Obs2: Esse repositório contém um diretório para imagens, que por sua vez contém vários sub-diretórios para uma boa organização. Caso necessite, pode utiliza-la, só pedimos que sempre mantenha essa organização, ou seja, salve a foto no diretório respectivo do seu conteúdo.*
 
 ---
 
