@@ -145,7 +145,7 @@ Exemplos: Armazenar última matrícula de um aluno cadastrado no sistema, poderi
 
 #### Métodos 'de classe' - static
 
-São funções que não  dependem de nenhuma variável de instância, quando invocados executam uma função sem a dependência do conteúdo de um objeto ou a execução da  instância de uma classe, conseguindo chamar direto qualquer **método** da classe.
+São funções que não dependem de nenhuma variável de instância, quando invocados executam uma função sem a dependência do conteúdo de um objeto ou a execução da  instância de uma classe, conseguindo chamar direto qualquer **método** da classe.
 
 **Obs:** Se uma classe só possui métodos e atributos estáticos, logo ela é considerada uma **classe estática**, nunca irá precisar de instância. Ex: System, Math (Libs de funções) - Integer.parseInt (Manipulação de tipos) - Conversor de medidas...
 

@@ -124,3 +124,52 @@ Coleção de ferramentas conceituais para descrição dos dados, seus relacionam
   - Totalidade (obrigatoriedade): Especifica se a existênciade uma entidade depende de seu relacionamento como outra. Ex: Sócio e dependente.
     - Pode ser parcial (opcional) ou total (obrigatório).
   - Relacionamento recursivo: Uma ocorrência de uma entidade se relaciona com outra(s) ocorrência(s) da mesma entidade. A mesma entidade participa mais de uma vez em um tipo de relacionamento em papéis diferentes. Ex: Música pode possuir várias versões que também são músicas.
+
+
+
+*Modelo Entidade - Relacionamento Estendido*
+
+→ Entidades fracas
+
+- sem chave própria (depende da entidade forte)
+- instâncias identificadas por meio de relacionamento com entidades de outro tipo (identificador, junto com os valores de alguns atributos(chave parcial)
+- retângulo duplo
+- agência de um banco é um exemplo de uma entidade fraca
+
+→ Atributo do relacionamento
+
+- relacionamento entre entidades e não específica de uma entidade
+
+→ Grau de relacionamento
+
+- número de tipos de entidades participantes de um tipo de relacionamento
+- binários em sua maioria (grau 2)
+- entidades atuam com um determinado papel nesse relacionamento
+
+→ MER Estendido: Generalização e Especialização
+
+- generalização: definição de um tipo de entidade genérica (super-classe ou super-tipo) a partir de um conjunto de entidade
+
+    → pessoa é uma generalização de pessoa física ou jurídica
+
+- especialização: processo de definição de um conjunto de subclasses (sub-tipos) de um tipo de entidade
+
+    → cliente especial é uma especialização de cliente
+
+- uma entidade de sub-tipo herda todos os atributos e relacionamentos de seu super-tipo
+- uma entidade de sub-tipo pode possuir seus próprios atributos e relacionamentos específicos
+- restrições
+
+    → disjunção: sub-tipos podem ser disjuntos ou sobrepostos. Cada entidade do super-tipo pode pertencer no máximo a um sub-tipo de especialização - ou você é um, ou você é outro - (OU exclusivo -XOR), representado por um circulo com um 'd'dentro
+
+    → sobreposto: super-tipos podem ser total ou parcial. Cada entidade do super-tipo pode pertencer a mais do que um sup-tipo (OU inclusivo -E/OU), representado por um circulo com um 'o' (overlap) ou 's' (sobreposto) dentro.
+
+    - parcial (linha simples): podem não pertencer a um sub-tipo
+    - total (linha dupla): tem de pertencer a pelo menos um sub-tipo
+
+    → combinações possíveis:
+
+    - disjunto/ parcial
+    - disjunto / total
+    - sobreposto / parcial
+    - sobreposto / total

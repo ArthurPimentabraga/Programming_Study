@@ -23,7 +23,7 @@ BPMs (Business Process Management System): O Gerenciamento de Processos de Negó
 
 Um processo é um conjunto de atividades que por meio de uma sequência lógica transforma matéria prima (recursos disponíveis) em um produto final (agregação de valor, seja por serviço ou produto). *Transforma entradas em saídas.* Uma sequência de atividades para chegar em um resultado final. Entrega valor aos cliente, direto ou indiretamente. Ex: Fábrica de carros - Entrada: matéria prima | Processo: Linha de montagem | Saída: Carro pronto para uso. Ex2: Algoritmo. Ex3: Processo revolucionário do McDonalds.
 
-**Instância:** *É cada instância de um processo, cada execução de um processo. Ex: Cara carro que está na linha de montagem é uma intância daquele processo.*
+**Instância:** *É cada instância de um processo, cada execução de um processo. Ex: Cada carro que está na linha de montagem é uma instância daquele processo.*
 
 #### Tipos de processos
 
@@ -49,7 +49,7 @@ Componentes que podemos identificar em todos os processos. Matéria prima, forne
 - Materiais e equipamentos: Parte mecânica de um motor. Produtos tangíveis.
 - Materiais processados: Iogurte, queijo... (que passam por processos industriais). Geralmente denominados como materiais de bens.
 
-#### Hierarquiade processos
+#### Hierarquia de processos
 
 1. Macroprocessos: Visão geral, de cima. Overview geral dos processos chaves da organização. 
 
@@ -103,3 +103,21 @@ BPMN **(Business Process Model and Notation)**: desenvolviva especificamente par
 
 - Ícones organizados em conujuntos descritivos e analíticos para atender a diferentes necessidades de utilização
 - Permite indicação de eventos de ínicio, intermediário e fim; comunicação intranegócio e colaboração internegócio.
+
+---
+
+## Aula 3 - 01/03 - "Presencial"
+
+<img src="../../imgs/3_Periodo/Processos_Negocio/3Categorias_Processos.png">
+
+#### 5W2H
+
+É uma espécie de *checklist* de atividades específicas que devem ser desenvolvidas com o máximo de clareza e eficiência por todos os envolvidos em um projeto. Essa sopa de caracteres corresponde, na verdade, às iniciais (em inglês) das sete diretrizes que, quando bem estabelecidas, eliminam quaisquer dúvidas que possam aparecer ao longo  de um processo ou de uma atividade. São elas:
+
+- **W**hat (o que será feito?)
+- **W**hy (por que será feito?)
+- **W**here (onde será feito?)
+- **W**hen (quando será feito?)
+- **W**ho (por quem será feito?)
+- **H**ow (como será feito?)
+- **H**ow much(quanto vai custar?)
