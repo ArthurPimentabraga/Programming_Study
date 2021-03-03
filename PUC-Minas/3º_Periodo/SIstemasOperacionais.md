@@ -133,5 +133,105 @@ Por que e o que desencadeou a evolução do TCP/IP e a rede?
 
 - Compatibilidade: Compatibilizar dados. Linux mantem dados de uma forma diferente que o Windows, por exemplo. Outro exemplo: SO conversar com server (hoje utiliza protocolos de rede pra isso).
 - Portabilidade: Um sistema ser capaz de executar em mais de um local (hardware). Ex: Android tem alta portabilidade.
-- Abertura: Sistemas abertos são mais facilmente compativeis e portateis. Mais dificil fazer um SO conversar com outro fechado. Os protocolos de rede (TCP>HTTP...), por serem abertos, possibilitam a grande escala de comunicação entre sistemas que temos hoje. Foi quase que necessário tais protocolos serem aberto para isso. 
+- Abertura: Sistemas abertos são mais facilmente compativeis e portateis. Mais dificil fazer um SO conversar com outro fechado. Os protocolos de rede (TCP>>HTTP...), por serem abertos, possibilitam a grande escala de comunicação entre sistemas que temos hoje. Foi quase que necessário tais protocolos serem aberto para isso. 
 - Escalabilidade: Capacidade de um sistema crescer.
+
+---
+
+## Aula 6 - 01/02
+
+#### Processos: Conceitos
+
+É um programa em execução. Programa é o código fonte, mas quando começa a executar ele começa a ser tratado pelo SO como um processo. *Para execução é necessário estar na memória principal.*
+
+Conceito central de SO
+- Execução de tarefas solicitadas pelo usuário;
+- Tudo ocorre a partir de necessidades dos processos. Tudo gira em torno dos processos.
+
+Estrutura básica de um processo na memória principal: 
+
+1. Pilha: Os últimos passos do algoritmo são executados primeiro, ou seja, as "dependências", os métodos chamados em uma parte do algoritmo, é executada primeiro que a parte do código onde foi chamada; 
+2. Dados; 
+3. Código (parte mais baixa, ou seja o primeiro a ser executado).
+
+##### Multiprogramação 
+
+Uma das principais tarefas do SO, ele precisa gerenciar qual programa vai executar primeiro e por quanto tempo. Por mais que parece estar tudo sendo executado ao mesmo tempo, não está, só é muito rápido. Pseudoparalelismo ou Paralelismo em multiprocessadores (nesse caso também tem que decidir em qual processador irá executar).
+
+- Controle simultâneo de diversas tarefas
+  - Alternância por bloqueio e prioridade
+  - Retomada de execução
+
+##### Estados de um processo
+
+- Ciclo de vida na gerência de processos
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/CicloVida_GerenciaProcessos.png" style="width:70%">
+
+##### Bloco de controle do processo (PCB)
+
+- Armazena informações associadas a um processo
+  - Estado do processo
+  - Registradores : contador de programa, acumuladores, ponteiro de pilha, base e limite de memória
+  - Prioridade
+  - Contabilidade
+
+- Tabela de processos
+
+##### Troca de contexto
+
+- Multiprogramação, alternância e troca de conceitos
+
+Trabalho prático, em cima disso 
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/TrocaContexto.png" style="width:70%">
+
+##### Pseudoparalelismo
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Pseudoparalelismo.png" style="width:70%">
+
+#### Threads: Conceitos
+
+- Unidade básica de utilização da cpu
+
+- Modelo de processo tradicional: monothreads
+
+- Processo multithread:
+  - divisão de tarefas em fluxos independentes
+  - pode realizar mais de uma tarefa concorrentemente, ou simultaneamente
+  - qual sua importancia?
+    - responsividade
+    - compartilhamento e economia de recursos
+    - ganha de tempo
+    - aproveitamento de arquiteturas multiprocessadas
+    - exemplo 1: editor de texto
+      - usuário digita o texto
+      - verificação ortográfica / correção automática
+      - formatação de páginas não visíveis
+      - cópias de segurança
+    - exemplo 2: servidor web
+      - despachante
+      - trabalhadores
+
+- É um fluxo de controle de execução
+
+  ​										monothread                      				     multithread
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Thread.png" style="width:70%">
+
+##### Modelo de threads no SO
+
+- Processos leves (LWP)
+  - ciclo de vida equivalente
+
+- Possuem contador de programa, registradores e pilhas próprias
+
+- Compartilham código e dados mais leves para criar e destruir
+
+Implementação e gerencia de threads
+
+- SO deve decidir como gerenciar threads
+  - espaço de usuário (muitos para um)
+  - espaço do núcleo - kernel (um para um)
+  - hibrido (muitos para muitos
+
