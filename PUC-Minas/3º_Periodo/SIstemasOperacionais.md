@@ -140,7 +140,7 @@ Por que e o que desencadeou a evolução do TCP/IP e a rede?
 
 ## Aula 6 - 01/02
 
-#### Processos: Conceitos
+#### Processos
 
 É um programa em execução. Programa é o código fonte, mas quando começa a executar ele começa a ser tratado pelo SO como um processo. *Para execução é necessário estar na memória principal.*
 
@@ -156,7 +156,7 @@ Estrutura básica de um processo na memória principal:
 
 ##### Multiprogramação 
 
-Uma das principais tarefas do SO, ele precisa gerenciar qual programa vai executar primeiro e por quanto tempo. Por mais que parece estar tudo sendo executado ao mesmo tempo, não está, só é muito rápido. Pseudoparalelismo ou Paralelismo em multiprocessadores (nesse caso também tem que decidir em qual processador irá executar).
+Em um sistema de multiprogramação a CPU fica se alternando entre a execução de vários processos. Uma das principais tarefas do SO, ele precisa gerenciar qual programa vai executar primeiro e por quanto tempo. Por mais que parece estar tudo sendo executado ao mesmo tempo, não está, só é muito rápido. Pseudoparalelismo ou Paralelismo em multiprocessadores (nesse caso também tem que decidir em qual processador irá executar).
 
 - Controle simultâneo de diversas tarefas
   - Alternância por bloqueio e prioridade
@@ -164,74 +164,141 @@ Uma das principais tarefas do SO, ele precisa gerenciar qual programa vai execut
 
 ##### Estados de um processo
 
-- Ciclo de vida na gerência de processos
+- Ciclo de vida na gerência de processos (Boi psicodélico)
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/CicloVida_GerenciaProcessos.png" style="width:70%">
 
+*Só vai para o bloqueio quando o processo "pede algo que não é dele", algo externo.*
+
 ##### Bloco de controle do processo (PCB)
 
-- Armazena informações associadas a um processo
-  - Estado do processo
-  - Registradores : contador de programa, acumuladores, ponteiro de pilha, base e limite de memória
-  - Prioridade
-  - Contabilidade
+Objeto de sistema para representar um processo. Armazena informações associadas a um processo:
 
-- Tabela de processos
+- Estado do processo (Pronto, espera...);
+- Registradores : contador de programa, acumuladores, ponteiro de pilha, base, limite e endereço de memória;
+- Prioridade;
+- Contabilidade (Tempo que passou no bloqueio, tempo de processado...).
+
+Tabela de processos: Basicamente uma tabela hash de PCB, para na hora de precisar de algo ele localizar rapidamente.
 
 ##### Troca de contexto
 
-- Multiprogramação, alternância e troca de conceitos
-
-Trabalho prático, em cima disso 
+- Multiprogramação, alternância e troca de contexto
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/TrocaContexto.png" style="width:70%">
 
 ##### Pseudoparalelismo
 
+Parece que os processos estão sendo executados em paralelo, ao mesmo tempo, mas não é dessa forma que ocorre, há a troca de contexto, troca de processos em execução. E só parece estar executando ao mesmo tempo porque é muito rápido.
+
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Pseudoparalelismo.png" style="width:70%">
 
-#### Threads: Conceitos
+#### Threads
 
-- Unidade básica de utilização da cpu
+Unidade básica de utilização/controle da cpu. É uma forma de um processo dividir a si mesmo em duas ou mais tarefas (multithread) que podem ser executadas concorrencialmente.
 
-- Modelo de processo tradicional: monothreads
+Modelo de processo tradicional: Fluxo de controle único -> monothreads.
 
-- Processo multithread:
-  - divisão de tarefas em fluxos independentes
-  - pode realizar mais de uma tarefa concorrentemente, ou simultaneamente
-  - qual sua importancia?
-    - responsividade
-    - compartilhamento e economia de recursos
-    - ganha de tempo
-    - aproveitamento de arquiteturas multiprocessadas
-    - exemplo 1: editor de texto
-      - usuário digita o texto
-      - verificação ortográfica / correção automática
-      - formatação de páginas não visíveis
-      - cópias de segurança
-    - exemplo 2: servidor web
-      - despachante
-      - trabalhadores
+Processo multithread:
+- Divisão de tarefas em fluxos independentes;
+- Pode realizar mais de uma tarefa concorrentemente, ou simultaneamente.
 
-- É um fluxo de controle de execução
+##### Qual sua importancia?
 
-  ​										monothread                      				     multithread
+  - Responsividade (execução de vários processos ao mesmo tempo, muito importânte em jogos);
+      - Compartilhamento e economia de recursos (compartilhamento/economia de código...). Por outro lado temos maior consumo de recursos de gerência (overhead);
+  - Aproveitamento de arquiteturas multiprocessadas (vários núcleos de processamento, por exemplo);
+  - Como consequência de tudo isso, temos o ganho de tempo;
+
+*Exemplo 1: Editor de texto. Em single-thread, cada processo abaixo seria executado após a finalização do anterior. Com multithreads tudo isso trabalha de forma concorrencial.*
+
+- *Usuário digita o texto;*
+   - *Verificação ortográfica/correção automática;*
+- *Formatação de páginas não visíveis;*
+- *Cópias de segurança.*
+  
+
+*Exemplo 2: Servidor web.*
+
+  - *Despachante;*
+  - *Trabalhadores.*
+    
+
+*Exemplo 3: Save de arquivo, pode utilizar uma thread para ir salvando o arquivo aos poucos.*
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Thread.png" style="width:70%">
 
 ##### Modelo de threads no SO
 
-- Processos leves (LWP)
-  - ciclo de vida equivalente
+- Processos leves (LWP);
+  - ciclo de vida equivalente.
+- Possuem contador de programa, registradores e pilhas próprias;
+- Compartilham código e dados;
+- Mais leves para criar e destruir.
 
-- Possuem contador de programa, registradores e pilhas próprias
+---
 
-- Compartilham código e dados mais leves para criar e destruir
+## Aula 7 - 03/03
 
-Implementação e gerencia de threads
+#### Implementação e gerencia de threads
 
-- SO deve decidir como gerenciar threads
-  - espaço de usuário (muitos para um)
-  - espaço do núcleo - kernel (um para um)
-  - hibrido (muitos para muitos
+SO deve decidir como gerenciar threads
 
+- **Espaço de usuário (muitos para um).** Outras threads são implementadas pelo processo e gerenciadas por ele. O próprio executável gerencias as threads usadas por ele. *Ex: Java, Linux*;
+  - Como consequência a gerência dos processos, por parte do SO, é mais simplificado;
+  - Não necessita alternar de processo para trocar de thread;
+  - Como quem cuida das threads é o processo, não há paralelismo de fato. Somente as threads internas desse programa.
+- **Espaço do núcleo - kernel (um para um).** Cada thread do processo é associada a uma thread de kernel.
+  - Maior concorrência, paralelismo real em multiprocessadores;
+  - Maior consumo de recursos de gerência (overhead). Atraso na criação de uma thread, tabela de threads...
+  - Paralelismo real: suposta melhora de desempenho;
+  - *Importância de limitar o nº de threads possíveis: um software malicioso pode sair criando várias threads, usando todos os recursos, e derrubar o sistema.*
+- **Hibrido (muitos para muitos).** Tenta resolver o problema de gestão com uma threadpool
+  - Thread pool:
+    - Criar várias threads na inicialização e alocá-las em um banco;
+    - Tarefas novas: “acordam” threadsdo banco;
+    - Se há falta de threads: espera.
+  - Agilidade;
+  - Flexibilidade;
+  - Controle de recursos.
+
+#### Escalonamento de processos (e/ou threads)
+
+Problema: Não há pro livres para todos.
+
+Objetivo: Manter os processadores/núcleos ocupados e finalizar as tarefas o quanto antes.
+
+##### Escalonador
+
+Decide quem será o próximo processo da *fila de prontos a executar*. Segue regras para determinar as escolhas (Algoritmo de escalonamento).
+
+- Escalonamento não-preemptivo:
+  - Menos custoso, porque: O processo retém a CPU - Sem decisão ativa do escalonador
+- Escalonamento preemptivo:
+  - O processo pode ser temporariamente suspenso - Decisão ativa do escalonador
+
+##### Tipos de sistema
+
+*Tudo depende do sistema de destino, seus objetivos!*
+
+- Sistemas em lote: Os processos são processados em lote. Não há interação contínua com os usuários. Tarefas periódicas. Comum em computadores de grande porte.
+- Sistemas interativos: Interação contínua com os usuários. Ex: Sistemas web em geral, equipamentos pessoais... 
+- Sistemas de tempo real: Necessidade de interação, mas também de restrições de prazos. Ex: Controle de sinais de trânsito, radar de aeroporto, monitoramento no geral; 
+
+##### Critérios/Objetivos do escalonamento
+
+Se aplica em **todos os sistemas**!
+
+- Justiça: Dar a cada processo uma fração justa da CPU;
+- Política: Sistema deve cumprir regras estabelecidas;
+- Equilíbrio: Todas as partes do sistema computacional devem estar ocupadas.
+
+Se aplica em nos **sistemas em lote**!
+
+
+
+Se aplica em nos **sistemas interativos**!
+
+
+
+Se aplica em nos **sistemas de tempo real**!

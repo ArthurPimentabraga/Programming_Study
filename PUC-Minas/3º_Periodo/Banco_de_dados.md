@@ -125,6 +125,24 @@ Coleção de ferramentas conceituais para descrição dos dados, seus relacionam
     - Pode ser parcial (opcional) ou total (obrigatório).
   - Relacionamento recursivo: Uma ocorrência de uma entidade se relaciona com outra(s) ocorrência(s) da mesma entidade. A mesma entidade participa mais de uma vez em um tipo de relacionamento em papéis diferentes. Ex: Música pode possuir várias versões que também são músicas.
 
+---
+
+## Aula 4 - 03/03
+
+#### Exercício de modelagem
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 *Modelo Entidade - Relacionamento Estendido*
