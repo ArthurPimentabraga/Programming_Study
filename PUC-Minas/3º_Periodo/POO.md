@@ -153,4 +153,35 @@ São funções que não dependem de nenhuma variável de instância, quando invo
 
 ## Aula 9 - 04/03
 
-#### Destrutores
+#### Relacionamento entre classes
+
+Objetos compostos
+
+Geralmente objetos não funcionam sozinhos, usam e comunicam com outros objetos. Isso leva á: 
+
+- Reduzir custos - Aumentar confiabilidade - Modularidade => alto grau de reusabilidade.
+
+##### Associação
+
+Objeto usa outro, mas não tem relação de pertinência, um não pertence à outro. Ex: Um trem usa uma estrada
+
+##### Agregação
+
+Objeto definido em termos dos seus componentes (um contém). Ex: Turma contém alunos.
+
+- A existência da "parte" faz sentido, mesmo não existindo o "todo". Ex: Alunos -> Turma; Atleta -> Time.
+- Representação UML: Losango (no lado do "todo").
+
+##### Composição
+
+O objeto é formado por outros objetos (está contido). Dependência do tempo de vida entre parte e todo, um só existe se o outro existir (Relacionamento mais forte). Ex: Um livro é formado por capítulos; Um pedido é formado por vários itens.
+
+- A existencia da parte não faz sentido sem o todo!
+- Representação UML:  Losango preenchido (no lado do "todo");
+- Se o objeto todo for apagado, as partes também são.
+
+---
+
+## Aula 9 - 04/03
+
+#### Cardinalidade
