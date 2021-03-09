@@ -248,15 +248,16 @@ SO deve decidir como gerenciar threads
   - Como consequência a gerência dos processos, por parte do SO, é mais simplificado;
   - Não necessita alternar de processo para trocar de thread;
   - Como quem cuida das threads é o processo, não há paralelismo de fato. Somente as threads internas desse programa.
+  - Como o SO não reconhece as threads, ele pode bloquear um processo inteiro e todas suas threads mesmo quando alguma delas poderia executar.
 - **Espaço do núcleo - kernel (um para um).** Cada thread do processo é associada a uma thread de kernel.
   - Maior concorrência, paralelismo real em multiprocessadores;
   - Maior consumo de recursos de gerência (overhead). Atraso na criação de uma thread, tabela de threads...
   - Paralelismo real: suposta melhora de desempenho;
   - *Importância de limitar o nº de threads possíveis: um software malicioso pode sair criando várias threads, usando todos os recursos, e derrubar o sistema.*
-- **Hibrido (muitos para muitos).** Tenta resolver o problema de gestão com uma threadpool
+- **Hibrido (muitos para muitos).** Tenta resolver o problema de gestão com uma threadpool.
   - Thread pool:
     - Criar várias threads na inicialização e alocá-las em um banco;
-    - Tarefas novas: “acordam” threadsdo banco;
+    - Tarefas novas: “acordam” threads do banco;
     - Se há falta de threads: espera.
   - Agilidade;
   - Flexibilidade;
@@ -272,18 +273,18 @@ Objetivo: Manter os processadores/núcleos ocupados e finalizar as tarefas o qua
 
 Decide quem será o próximo processo da *fila de prontos a executar*. Segue regras para determinar as escolhas (Algoritmo de escalonamento).
 
-- Escalonamento não-preemptivo:
+- Escalonamento não-preemptivo: Quando um processo em execução **não** pode ser interrompido pelo S.O. Ou seja, espera um processo acabar para começar o outro.
   - Menos custoso, porque: O processo retém a CPU - Sem decisão ativa do escalonador
-- Escalonamento preemptivo:
+- Escalonamento preemptivo: O S.O. pode interromper a execução de um processo. Ou seja, em uma tentativa de aumentar a vazão, ele pode interromper os processos e começar a executar outro, e assim vai.
   - O processo pode ser temporariamente suspenso - Decisão ativa do escalonador
 
 ##### Tipos de sistema
 
 *Tudo depende do sistema de destino, seus objetivos!*
 
-- Sistemas em lote: Os processos são processados em lote. Não há interação contínua com os usuários. Tarefas periódicas. Comum em computadores de grande porte.
-- Sistemas interativos: Interação contínua com os usuários. Ex: Sistemas web em geral, equipamentos pessoais... 
-- Sistemas de tempo real: Necessidade de interação, mas também de restrições de prazos. Ex: Controle de sinais de trânsito, radar de aeroporto, monitoramento no geral; 
+- Sistemas em **lote**: Os processos são processados em lote. Não há interação contínua com os usuários. Tarefas periódicas. Comum em computadores de grande porte.
+- Sistemas **interativos**: Interação contínua com os usuários. Determinada solicitação tem uma resposta instantânea. Ex: Sistemas web em geral, equipamentos pessoais, IDEs, Teams (sincroniza audio e video sem parar)... 
+- Sistemas de **tempo real**: Necessidade de interação, mas também de restrições de prazos. Ex: Controle de sinais de trânsito, radar de aeroporto, monitoramento no geral. *Acontece no tempo do "mundo"*. 
 
 ##### Critérios/Objetivos do escalonamento
 
@@ -302,3 +303,61 @@ Se aplica em nos **sistemas interativos**!
 
 
 Se aplica em nos **sistemas de tempo real**!
+
+
+
+---
+
+## Aula 8 - 08/03
+
+#### Algoritmos de Escalonamento
+
+##### FCFS
+
+Fila de processos. Bem simples, porém o ponto negativo é que não é justo, um processo relativamente pequeno pode demorar muito para ser executado, por estar no fim da fila por exemplo. Consequentemente uma vazão pequena.
+
+- Tipicamente usado em sistemas em lote;
+- Não-preemptivo.
+
+##### SJF
+
+Tarefa mais curta primeiro (**shortest job first**). Ordenar os processos pelo tempo de execução (trabalho necessário). Consequentemente a vazão aumenta. O problema é saber por quanto tempo o processo será executado :) Funciona melhor com tarefas previsíveis, ou seja, que dê para calcular um tempo previsto de processamento, tarefas específicas que são sempre executadas (pegar o tempo médio...).
+
+- Também usado em sistemas em lote;
+- Também não-preemptivo.
+
+##### SRT
+
+Menor tempo restante (***Shortest remaining time***). Variação do SJF. na chegada de outro processo, é avaliado o tempo de execução do novo processo, se for menor que o tempo restante do processo atual, o escalonador interrompe o processo, e o novo processo começa a ser executada. Se o novo processo tiver um tempo maior, a fila é reorganizada (geralmente usando método de inserção).
+
+- O problema é se começar a chegar muitos processos novos. Tem que tomar cuidado para não ficar no "Adiamento infinito" - *starvation*. Para isso pode ser feito o agendamento de tarefas longas (exemplo de política de emergência).
+- Preemptivo.
+- Também usado em sistemas em lote;
+
+#### Prioridades - S.Interativos
+
+Nos sistemas interativos o objetivo é executar as tarefas mais **importantes** primeiro. Diferente dos em lote que o objetivo é finalizar os processos mais repidamente. Logo precisamos definir prioridades.
+
+- Preemptivo.
+
+Simplesmente é atribuido um valor numérico ("etiqueta") a cada processo, para na hora da execução ser visivél qual é prioritário.
+
+- Prioridades - Valores estáticos: regra pré-definida por fatores externos;
+- Prioridades - Valores dinâmicos: em geral, modificados pelo SO para bom andamento do sistema.
+
+##### Round-robin
+
+Ou escalonamento circular. Esse algoritmo atribui a cada processo um tempo máximo para processamento: **quantum**. Ou seja, ao fim do quantum, o processo sofre preempção. Com isso conseguimos aplicar justiça ao nosso algoritmo.
+
+- Tamanho do quantum: Responsividade x Desperdício. Um quantum grande pode fazer a resposta demorar, e um pequeno pode ser um desperdício pelo fato de ter que trocar de processo, e isso gasta tempo.
+- Em consequência o quantum chega a ser insignificante..................
+
+*O retorno médio pode ser maior, porém o tempo de resposta é maior!* É a socialização do processador.
+
+##### Filas de prioridades
+
+Precisamos de prioridades para os processos, logo é feita uma mesclagem de round-robin com prioridades. Processos com prioridade igual são executados em round-robin, o resto segue na prioridade.
+
+- Importânica + justiça.
+
+gerenciador de empacotador de pedidos

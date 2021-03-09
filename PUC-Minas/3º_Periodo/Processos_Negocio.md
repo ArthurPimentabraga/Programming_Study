@@ -101,7 +101,7 @@ BPMN **(Business Process Model and Notation)**: desenvolviva especificamente par
 
 **Principais características:**
 
-- Ícones organizados em conujuntos descritivos e analíticos para atender a diferentes necessidades de utilização
+- Ícones organizados em conjuntos descritivos e analíticos para atender a diferentes necessidades de utilização
 - Permite indicação de eventos de ínicio, intermediário e fim; comunicação intranegócio e colaboração internegócio.
 
 ---
@@ -121,3 +121,52 @@ BPMN **(Business Process Model and Notation)**: desenvolviva especificamente par
 - **W**ho (por quem será feito?)
 - **H**ow (como será feito?)
 - **H**ow much(quanto vai custar?)
+
+*Só registra ações da empresa, não do cliente.*
+
+---
+
+## Aula 4 - 08/03 - EAD
+
+#### Categoria Swinlanes
+
+Contém as simbologias Piscinas e Raias:
+
+<img src="../../imgs/3_Periodo/Processos_Negocio/Swinlanes_Example.png" style="width:70%">
+
+##### Piscinas (Pools)
+
+Representação BPMN: Caixa retangular. Representam processos e participante. *Cada piscina contém um único processo!* 
+
+- Piscinas Caixa-branca (White-box pool) acomodam representação dos processos, em seu interior.
+- Piscinas Caixa-preta (Black-box pool) apresentam um participante ou processo que não se deseja representar, por ser desconhecido ou que ainda não se conhece. *Fica vazia, sem objeto dentro dela.*
+
+##### Raias (Lanes)
+
+São subdivisões dentro de uma pscina de processo. Organizam e categorizam as atividades, e atribuem determinados papéis para a execução das atividades. Representam participante, papel, área e funções de atores do processo. Ou seja, somente as funções e papeis de cada participante ficaram somente na sua respectiva raia.
+
+#### Atividades
+
+Atividade é a representação daquilo que é **executado** dentro de um processo. Representação BPMN: Quadrado.
+
+- Consome tempo para ser executada;
+- Envolve um ou mais recursos da organização;
+- Requer algum tipo de entrada;
+- Produz uma ou mais saídas.
+
+Temos dois tipos de símbolos:
+
+- Tarefa: atividade atômica. 
+- Subprocesso: conjunto de tarefas. **Representação BPMN: Quadrado +.**
+
+<img src="../../imgs/3_Periodo/Processos_Negocio/Tarefas_Simbologia.png" style="width:70%">
+<img src="../../imgs/3_Periodo/Processos_Negocio/Tarefas_Simbologia2.png" style="width:70%">
+
+---
+
+## Aula 4 - 08/03 - "Presencial"
+
+#### Eventos
+
+#### Gateway
+
