@@ -131,63 +131,48 @@ Coleção de ferramentas conceituais para descrição dos dados, seus relacionam
 
 #### Exercício de modelagem
 
+---
 
+## Aula 5 - 10/03
 
+#### Relacionamento Estendido
 
+##### Entidades fracas
 
+- Sem chave própria (depende da entidade forte). Possúi uma chave parcial;
+- Instâncias identificadas por meio de relacionamento com entidades de outro tipo (identificador, junto com os valores de alguns atributos(chave parcial);
+- Representação: Retângulo duplo;
+- Ex: Banco (Entidade forte) - Agência (Entidade fraca)
 
+##### Atributo do relacionamento
 
+Relacionamento entre entidades e não específica de uma entidade.
 
+##### Grau de relacionamento
 
+- Número de tipos de entidades participantes de um tipo de relacionamento;
+- Binários, em sua maioria (grau 2). Podendo ser também ternários (3 entidades ligadas à um relacionamento);
+- Entidades atuam com um determinado papel nesse relacionamento.
 
+##### MER Estendido: Generalização e Especialização
 
+- Generalização: definição de um tipo de entidade genérica (super-classe ou super-tipo) a partir de um conjunto de entidade. Ex: Pessoa é uma generalização de pessoa física ou jurídica
 
+- Especialização: processo de definição de um conjunto de subclasses (sub-tipos) de um tipo de entidade. Ex: Cliente especial é uma especialização de cliente
 
+```markdown
+Uma entidade de sub-tipo herda todos os atributos e relacionamentos de seu super-tipo;
+Uma entidade de sub-tipo pode possuir seus próprios atributos e relacionamentos específicos.
+```
 
-
-*Modelo Entidade - Relacionamento Estendido*
-
-→ Entidades fracas
-
-- sem chave própria (depende da entidade forte)
-- instâncias identificadas por meio de relacionamento com entidades de outro tipo (identificador, junto com os valores de alguns atributos(chave parcial)
-- retângulo duplo
-- agência de um banco é um exemplo de uma entidade fraca
-
-→ Atributo do relacionamento
-
-- relacionamento entre entidades e não específica de uma entidade
-
-→ Grau de relacionamento
-
-- número de tipos de entidades participantes de um tipo de relacionamento
-- binários em sua maioria (grau 2)
-- entidades atuam com um determinado papel nesse relacionamento
-
-→ MER Estendido: Generalização e Especialização
-
-- generalização: definição de um tipo de entidade genérica (super-classe ou super-tipo) a partir de um conjunto de entidade
-
-    → pessoa é uma generalização de pessoa física ou jurídica
-
-- especialização: processo de definição de um conjunto de subclasses (sub-tipos) de um tipo de entidade
-
-    → cliente especial é uma especialização de cliente
-
-- uma entidade de sub-tipo herda todos os atributos e relacionamentos de seu super-tipo
-- uma entidade de sub-tipo pode possuir seus próprios atributos e relacionamentos específicos
-- restrições
-
-    → disjunção: sub-tipos podem ser disjuntos ou sobrepostos. Cada entidade do super-tipo pode pertencer no máximo a um sub-tipo de especialização - ou você é um, ou você é outro - (OU exclusivo -XOR), representado por um circulo com um 'd'dentro
-
-    → sobreposto: super-tipos podem ser total ou parcial. Cada entidade do super-tipo pode pertencer a mais do que um sup-tipo (OU inclusivo -E/OU), representado por um circulo com um 'o' (overlap) ou 's' (sobreposto) dentro.
-
-    - parcial (linha simples): podem não pertencer a um sub-tipo
-    - total (linha dupla): tem de pertencer a pelo menos um sub-tipo
-
-    → combinações possíveis:
-
-    - disjunto/ parcial
-    - disjunto / total
-    - sobreposto / parcial
-    - sobreposto / total
+- Restrições
+- Disjunção: sub-tipos podem ser disjuntos ou sobrepostos. Cada entidade do super-tipo pode pertencer no máximo a um sub-tipo de especialização - ou você é um, ou você é outro - (OU exclusivo -XOR), representado por um circulo com um 'd'dentro;
+    - Sobreposto: super-tipos podem ser total ou parcial. Cada entidade do super-tipo pode pertencer a mais do que um sup-tipo (OU inclusivo - E/OU), representado por um circulo com um 'o' (overlap) ou 's' (sobreposto) dentro.
+- Parcial (linha simples): podem não pertencer a um sub-tipo;
+        - Total (linha dupla): tem de pertencer a pelo menos um sub-tipo.
+- Combinações possíveis:
+    
+        - Disjunto/ parcial
+    - Disjunto / total
+        - Sobreposto / parcial
+    - Sobreposto / total
