@@ -265,17 +265,19 @@ SO deve decidir como gerenciar threads
 
 #### Escalonamento de processos (e/ou threads)
 
-Problema: Não há pro livres para todos.
+Multiprogramação: muitos processos ou threadsaptos a executar.
+
+Problema: Não há processadores/núcleos livres para todos.
 
 Objetivo: Manter os processadores/núcleos ocupados e finalizar as tarefas o quanto antes.
 
 ##### Escalonador
 
-Decide quem será o próximo processo da *fila de prontos a executar*. Segue regras para determinar as escolhas (Algoritmo de escalonamento).
+Ou scheduler, decide quem será o próximo processo da *fila de prontos a executar*. O algoritmo de escalonamento segue regras para determinar as escolhas.
 
-- Escalonamento não-preemptivo: Quando um processo em execução **não** pode ser interrompido pelo S.O. Ou seja, espera um processo acabar para começar o outro.
+- Escalonamento **não-preemptivo**: Quando um processo em execução **não** pode ser interrompido pelo S.O. Ou seja, espera um processo acabar para começar o outro.
   - Menos custoso, porque: O processo retém a CPU - Sem decisão ativa do escalonador
-- Escalonamento preemptivo: O S.O. pode interromper a execução de um processo. Ou seja, em uma tentativa de aumentar a vazão, ele pode interromper os processos e começar a executar outro, e assim vai.
+- Escalonamento **preemptivo**: O S.O. pode interromper a execução de um processo. Ou seja, em uma tentativa de aumentar a vazão, ele pode interromper os processos e começar a executar outro, e assim vai.
   - O processo pode ser temporariamente suspenso - Decisão ativa do escalonador
 
 ##### Tipos de sistema
@@ -285,6 +287,9 @@ Decide quem será o próximo processo da *fila de prontos a executar*. Segue reg
 - Sistemas em **lote**: Os processos são processados em lote. Não há interação contínua com os usuários. Tarefas periódicas. Comum em computadores de grande porte.
 - Sistemas **interativos**: Interação contínua com os usuários. Determinada solicitação tem uma resposta instantânea. Ex: Sistemas web em geral, equipamentos pessoais, IDEs, Teams (sincroniza audio e video sem parar)... 
 - Sistemas de **tempo real**: Necessidade de interação, mas também de restrições de prazos. Ex: Controle de sinais de trânsito, radar de aeroporto, monitoramento no geral. *Acontece no tempo do "mundo"*. 
+  - Hard real-time: Sistemas em que prejuízos (não cumprimento de prazo por exemplo) não são aceitáveis, o erro pode ser catastrófico. Ex: Controle de sinais de trânsito.
+  - Soft real-time: quando os prejuizos, é aceitável. Ex: Um jogo da uma travada leve.
+  - Tem como característica ciclos curtos.
 
 ##### Critérios/Objetivos do escalonamento
 
@@ -296,21 +301,25 @@ Se aplica em **todos os sistemas**!
 
 Se aplica em nos **sistemas em lote**!
 
-
+- Vazão (Thorughput): Número de tarefas executadas por unidade de tempo;
+- Tempo de retorno: Tempo entre submissão de um processo e seu término;
+- Uso da CPU: Manter a CPU trabalhando o tempo todo.
 
 Se aplica em nos **sistemas interativos**!
 
-
+- Tempo de resposta: Tempo de resposta a um (primeiro) pedido;
+- Proporcionalidade: Tempo de atendimento de uma requisição em relação à expectativa do usuário.
 
 Se aplica em nos **sistemas de tempo real**!
 
-
+- Cumprimento de prazos: Evitar perda de dados;
+- Previsibilidade: Regularidade e tempo de execução de tarefas repetitiva. Disivão do processo em tarefas/threads com comportamento previsível.
 
 ---
 
 ## Aula 8 - 08/03
 
-#### Algoritmos de Escalonamento
+#### Algoritmos de Escalonamento - Em lote
 
 ##### FCFS
 
@@ -334,7 +343,7 @@ Menor tempo restante (***Shortest remaining time***). Variação do SJF. na cheg
 - Preemptivo.
 - Também usado em sistemas em lote;
 
-#### Prioridades - S.Interativos
+#### S.Interativos - Prioridades
 
 Nos sistemas interativos o objetivo é executar as tarefas mais **importantes** primeiro. Diferente dos em lote que o objetivo é finalizar os processos mais repidamente. Logo precisamos definir prioridades.
 
@@ -360,4 +369,27 @@ Precisamos de prioridades para os processos, logo é feita uma mesclagem de roun
 
 - Importânica + justiça.
 
-gerenciador de empacotador de pedidos
+Simulador de escalonamento de prioridades -> gerenciador de empacotador de pedidos.
+
+---
+
+## Aula 8 - 10/03
+
+#### Exercício de fila de prioridades
+
+<img src="../../imgs/3_Periodo/POO/Fila_Prioridades.png" style="width:45%"><img src="../../imgs/3_Periodo/POO/Resultado_Fila_Prioridade.png" style="width:55%">
+
+#### Sistemas de tempo real
+
+Cenário ideial: processos homogêneos com eventos periódicos.
+
+Antes de aceitar o processo precisa decidir se é possível escalonar em tempo real. Isso é calculado: 
+
+<img src="../../imgs/3_Periodo/POO/Calculo_Possibilidade_Escalonamento.png" style="width:55%">
+
+##### Taxa monotônica - RMS
+
+"Nada muda". Nesse algoritmo cada processo tem prioridade fixa relativa à sua frequência. *Frequencia = período/total*
+
+<img src="../../imgs/3_Periodo/POO/Taxa_Monotonica.png" style="width:55%">
+

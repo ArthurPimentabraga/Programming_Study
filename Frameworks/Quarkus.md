@@ -7,7 +7,7 @@ author: Arthur P. Braga
 
 Quarkus é um framework Java nativo em Kubernetes, adaptado para GraalVM, e desenvolvido para JVMs e compilação nativa. Projeto OpenSource mantido pela Red Hat. Ele otimiza essa linguagem especificamente para containers, fazendo com que essa tecnologia seja uma plataforma eficaz para ambientes **serverless**, de **nuvem** e **Kubernetes**. 
 
-Por causa da compatibilidade avançada com o GraalVM é possível desenvolver uma aplicação com compilação nativa, ou seja, ao invés da compilação padrão do java onde o código é compilado  em formato bytecode, armazenado na memória RAM e transformado em código binário, o GraalVM  compila o código direto para binário. Nesse processo, a GraalVM aplica uma série de otimizações bem agressiva. Somando essas otimizações, a retirada das classes inúteis, com a compilação do código para nativo, o resultado final é um arquivo executável pequeno, rápido de executar e com baixo consumo de memória.
+Por causa da compatibilidade avançada com o GraalVM é possível desenvolver uma aplicação com compilação nativa, ou seja, ao invés da compilação padrão do java onde o código é compilado em formato bytecode, armazenado na memória RAM e transformado em código binário, o GraalVM  compila o código direto para binário. Nesse processo, a GraalVM aplica uma série de otimizações bem agressiva. Somando essas otimizações, a retirada das classes inúteis, com a compilação do código para nativo, o resultado final é um arquivo executável pequeno, rápido de executar e com baixo consumo de memória.
 
 ### Secondary meanings
 
