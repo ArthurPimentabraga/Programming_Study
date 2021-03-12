@@ -377,7 +377,7 @@ Simulador de escalonamento de prioridades -> gerenciador de empacotador de pedid
 
 #### Exercício de fila de prioridades
 
-<img src="../../imgs/3_Periodo/POO/Fila_Prioridades.png" style="width:45%"><img src="../../imgs/3_Periodo/POO/Resultado_Fila_Prioridade.png" style="width:55%">
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Fila_Prioridades.png" style="width:45%"><img src="../../imgs/3_Periodo/Sistemas_Operacionais/Resultado_Fila_Prioridade.png" style="width:55%">
 
 #### Sistemas de tempo real
 
@@ -385,11 +385,11 @@ Cenário ideial: processos homogêneos com eventos periódicos.
 
 Antes de aceitar o processo precisa decidir se é possível escalonar em tempo real. Isso é calculado: 
 
-<img src="../../imgs/3_Periodo/POO/Calculo_Possibilidade_Escalonamento.png" style="width:55%">
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Calculo_Possibilidade_Escalonamento.png" style="width:55%">
 
 ##### Taxa monotônica - RMS
 
 "Nada muda". Nesse algoritmo cada processo tem prioridade fixa relativa à sua frequência. *Frequencia = período/total*
 
-<img src="../../imgs/3_Periodo/POO/Taxa_Monotonica.png" style="width:55%">
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Taxa_Monotonica.png" style="width:55%">
 

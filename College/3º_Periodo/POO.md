@@ -1,7 +1,5 @@
----
 title: Programação Orientada por Objetos (Puc-Minas - 3º Período)
 author: Arthur P. Braga
----
 
 ## Notes
 
@@ -185,3 +183,39 @@ O objeto é formado por outros objetos (está contido). Dependência do tempo de
 ## Aula 9 - 04/03
 
 #### Cardinalidade
+
+##### Um para um
+
+Único objeto de cada lado. Ex: Curso tem um coordenador.
+
+<img src="../../imgs/3_Periodo/POO/Cardinalidade_1to1.png">
+
+##### Um para muitos
+
+Um dos lados pode ter múltiplos objetos. Ex: Um departamento possui muitos professores, mas um professor está alocado a um departamento apenas.
+
+<img src="../../imgs/3_Periodo/POO/Cardinalidade_1ton.png">
+
+##### Muitos para muitos
+
+Podem haver múltiplos objetos em ambos os lados. Ex: Um aluno pode realizar emprestimos de vários livros. Cada livro pode, a seu tempo, ser emprestado para vários alunos.
+
+<img src="../../imgs/3_Periodo/POO/Cardinalidade_NtoN.png">
+
+Pode gerar uma classe de associação. Ex: Empréstimo.
+
+<img src="../../imgs/3_Periodo/POO/ClasseRelacionamento.png">
+
+##### Cardinalidade na UML
+
+<img src="../../imgs/3_Periodo/POO/CardinalidadeUML.png">
+
+##### Implementação de relações
+
+Unidirecional ou bidirecional?
+- Unidirecionais sugerem a implementação de atributos apenas na origem (uma das partes);
+- Em alguns casos exigem análise mais aprofundada.
+
+---
+
+## Aula 10 - 11/03

@@ -126,7 +126,7 @@ BPMN **(Business Process Model and Notation)**: desenvolviva especificamente par
 
 ---
 
-## Aula 4 - 08/03 - EAD
+## Aula 4 - EAD
 
 #### Categoria Swinlanes
 
@@ -154,7 +154,7 @@ Atividade é a representação daquilo que é **executado** dentro de um process
 - Requer algum tipo de entrada;
 - Produz uma ou mais saídas.
 
-Temos dois tipos de símbolos:
+Símbolos:
 
 - Tarefa: atividade atômica. 
 - Subprocesso: conjunto de tarefas. **Representação BPMN: Quadrado +.**
@@ -166,7 +166,14 @@ Temos dois tipos de símbolos:
 
 ## Aula 4 - 08/03 - "Presencial"
 
+#### Exercício prático
+
+---
+
+## Aula 5 - EAD
+
 #### Eventos
 
-#### Gateway
+Podem iniciar, suspender o fluxo ou finalizar um processo.
 
+<img src="../../imgs/3_Periodo/Processos_Negocio/Eventos.png" style="width:70%">
