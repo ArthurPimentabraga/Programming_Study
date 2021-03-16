@@ -260,3 +260,11 @@ utilizado quando, em um ponto do fluxo, são ativados um ou mais caminhos, dentr
   ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/177ddee5-65b1-401c-aa07-72523be32be0/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/177ddee5-65b1-401c-aa07-72523be32be0/Untitled.png)
 
 - obs: colaborações de white-box pool "tocam" na borda da atividade pertencente a mesma e de black-box pool "tocam" somente a borda da piscina
+
+---
+
+## Aula 6 - 15/03 - "Presencial"
+
+#### Exercício avaliativo 
+
+https://camunda.com/bpmn/reference/#events-escalation

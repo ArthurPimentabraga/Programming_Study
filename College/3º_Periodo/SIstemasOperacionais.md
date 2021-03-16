@@ -389,7 +389,61 @@ Antes de aceitar o processo precisa decidir se é possível escalonar em tempo r
 
 ##### Taxa monotônica - RMS
 
-"Nada muda". Nesse algoritmo cada processo tem prioridade fixa relativa à sua frequência. *Frequencia = período/total*
+"Nada muda". Nesse algoritmo cada processo tem prioridade fixa relativa à sua frequência. *Frequencia = período/total*. Ou seja, quem for executar mais vezes, com um ciclo mais curto, tem prioridade.
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Taxa_Monotonica.png" style="width:55%">
 
+---
+
+## Aula 9 - 15/03
+
+#### Continuação - Sistemas tempo real
+
+##### EDF
+
+Prazo final primeiro (Earliest deadline first). A prioridade é quem vai encerrar primeiro. É dinâmico.
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/EDF.png" style="width:55%">
+
+##### RMS x EDF
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/RMFxEDF.png" style="width:55%">
+
+RMS: Dependendo das cargas... por causa da prioridade, um processo ou outro pode perder prazo. *O calculo para decidir se vai executar um processo, ou nao, só diz se é possível executar ele, mas não garante o cumprimento dos prazos.*
+
+Porém o EDF é mais complicado, exige mais do sistema...
+
+#### Escalonamento em multiprocessadores
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Multiprocessador.png" style="width:55%">
+
+**Multicomputadores**: CPUs estreitamente acopladas que não compartilham memória.
+
+- Escalonamento "simples", pois cada CPU é independente, logo é só distribuir as tarefas;
+- Tem que saber fazer o balanceamento da carga e distribuição de processos.
+
+**Multiprocessadores**: Sistema de computadores no qual duas oumais CPUs compartilham acesso total a uma RAM comum. 
+
+- Questão bidimesional, qual precesso? Em qual processador?
+- Tem que gerenciar se os processadores vão processar tal processo de forma independente (um único processador pra ele), ou relacionado (mais de um processador para o processo).
+- Cenário "simples": Tempo compartilhado.
+  - Considerar processos e threads como independentes;
+  - Estrutura única de escalonamento;
+  - Eventos e interrupções: uso do algoritmo escolhido.
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Fila_Multiprocessador.png" style="width:55%">
+
+Sobre o exemplo de cima:
+
+- Simples e eficiente;
+- Permite o balanceamente entre processadores;
+- Tempo compartilhado em processadores;
+- Porém, para essa eficiência toda os processos precisam estar independentes, se tiver dependência, perde um pouco de eficiência. 
+- Porém 2, quando muda processos de processador, é perdido a cache, consequentemente eficiência. 
+
+##### Escalonamento pro afinidade
+
+Força o aproveitamento de cache dividindo os processos por processador antes de começar a execução.
+
+- Essa afinidade por ser manual (usuário) ou do algoritmo (SO);
+- Cada CPU usa a regra do algoritmo definido.
