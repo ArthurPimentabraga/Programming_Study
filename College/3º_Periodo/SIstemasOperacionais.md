@@ -441,9 +441,87 @@ Sobre o exemplo de cima:
 - Porém, para essa eficiência toda os processos precisam estar independentes, se tiver dependência, perde um pouco de eficiência. 
 - Porém 2, quando muda processos de processador, é perdido a cache, consequentemente eficiência. 
 
-##### Escalonamento pro afinidade
+##### Escalonamento por afinidade
 
 Força o aproveitamento de cache dividindo os processos por processador antes de começar a execução.
 
 - Essa afinidade por ser manual (usuário) ou do algoritmo (SO);
 - Cada CPU usa a regra do algoritmo definido.
+
+---
+
+## Aula 10 - 17/03
+
+#### Continuação de multiprocessadores
+
+##### Escalonamento por compartilhamento de espaço
+
+- Não preemptivo;
+- Quant. de threads x nº de CPUs livres;
+- FCFS para gerenciar fila de pedidos por CPUs
+
+*Mais comum em servidores e em sistemas em lote.*
+
+##### Escalonamento de bando
+
+Gang scheduling. Mistura escalonamento de tempo (round-robin) com escalonamento de espaço. 
+
+- Evitar perda de desempenho por comunicação bloqueada.
+- Escalonamento síncrono
+  - Todos os membros do bando executam simultaneamente em tempo compartilhado
+  - Todos os membros do bando iniciam e terminam ao mesmo tempo seus quanta
+  - A cada quantum, todas as CPUs são reescalonadas
+
+#### Comunicação e sincronização entre processos e threads
+
+##### SO e cenário atual
+
+Cenário comum: multiprogramação, tempo compartilhado, paralelismo real, multithreading.
+
+- Colaboração 
+- Dependência
+- Concorrência de theads
+
+##### CPI
+
+Comunicação interprocessos. Comunicação e sincronização de acesso de processos a recursos são fundamentais para evitar problemas:
+
+- Inconsistência de dados. Ex: Processo de débito e crédito na conta do banco ao mesmo tempo, com saldo inconsistênte no final;
+- Dados usados em duplicidade.
+
+##### Condição de corrida
+
+Quando dois ou mias processos compartilham recursos e o resultado final depende de uma ordem.
+
+**Região crítica:** 
+
+**Exclusão mútua:** 
+
+Princípios da boa exclusão mútua:
+
+1. asd
+2. asd
+3. asd
+4. ads
+
+##### Espera ocupada
+
+Busy waiting. 
+
+Alternativa 1: Desabilitar interrupções antes do processo começar a executar, e habilita ao sair (ao finalizar).
+
+- Não segue o 4º princípio (Espera indefinida);
+- Segurança comprometida;
+- Pode ser usado pelo próprio SO. Ex: Enquanto aloca memória, ninguém pede mais nada.
+
+Alternativa 2: Variável de bloqueio. Usar variável boolean, enquanto ela for false, o processo fica em "stand-by", assim que ela ficar true o processo segue o fluxo.
+
+O problema que essa lógica não funciona, porque o 1º processo pode fazer boolean = true antes de executar seu processo, e o outro começar a executar logo em seguida. 
+
+Alternativa 3: Alternância estrita. Variável controla quem tem o direito de executar naquele turno. A ação é de ceder a vez, não de tomar. Só no final da execução do 1º processo que essa variável muda seu valor para que o 2º comece a executar.
+
+- Funciona, mas não garante desempenho;
+- Bloqueio desnecessário. O sistema sempre vai executar no tempo do processo mais lento.
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/BusyWaiting.png" style="width:55%">
+

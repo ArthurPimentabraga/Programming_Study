@@ -180,7 +180,7 @@ O objeto é formado por outros objetos (está contido). Dependência do tempo de
 
 ---
 
-## Aula 9 - 04/03
+## Aula 10 - 05/03
 
 #### Cardinalidade
 
@@ -213,11 +213,11 @@ Pode gerar uma classe de associação. Ex: Empréstimo.
 ##### Implementação de relações
 
 Unidirecional ou bidirecional?
-- Unidirecionais sugerem a implementação de atributos apenas na origem (uma das partes);
+- Unidirecionais sugerem a implementação de atributos apenas na origem (uma das partes). Ou seja, somente uma das partes vai ter uma referência da outra parte;
 - Em alguns casos exigem análise mais aprofundada.
 
 ---
 
-## Aula 10 - 11/03
+## Aula 11 - 11/03
 
 #### Exercícios de implementação e UML

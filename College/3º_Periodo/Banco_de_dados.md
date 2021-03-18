@@ -140,7 +140,7 @@ Coleção de ferramentas conceituais para descrição dos dados, seus relacionam
 ##### Entidades fracas
 
 - Sem chave própria (depende da entidade forte). Possúi uma chave parcial;
-- Instâncias identificadas por meio de relacionamento com entidades de outro tipo (identificador, junto com os valores de alguns atributos(chave parcial);
+- Instâncias identificadas por meio de relacionamento com entidades de outro tipo (identificador, junto com os valores de alguns atributos (chave parcial);
 - Representação: Retângulo duplo;
 - Ex: Banco (Entidade forte) - Agência (Entidade fraca)
 
@@ -165,18 +165,20 @@ Uma entidade de sub-tipo herda todos os atributos e relacionamentos de seu super
 Uma entidade de sub-tipo pode possuir seus próprios atributos e relacionamentos específicos.
 ```
 
-- Restrições
+Restrições
+
 - Disjunção: sub-tipos podem ser disjuntos ou sobrepostos. Cada entidade do super-tipo pode pertencer no máximo a um sub-tipo de especialização - ou você é um, ou você é outro - (OU exclusivo -XOR), representado por um circulo com um 'd'dentro;
-  
-- Sobreposto: super-tipos podem ser total ou parcial. Cada entidade do super-tipo pode pertencer a mais do que um sup-tipo (OU inclusivo - E/OU), representado por um circulo com um 'o' (overlap) ou 's' (sobreposto) dentro.
+- Sobreposto:  Cada entidade do super-tipo pode pertencer a mais do que um sup-tipo (OU inclusivo - E/OU), representado por um circulo com um 'o' (overlap) ou 's' (sobreposto) dentro.
+- Super-tipos podem ser total ou parcial.
     - Parcial (linha simples): podem não pertencer a um sub-tipo;
     - Total (linha dupla): tem de pertencer a pelo menos um sub-tipo.
 - Combinações possíveis:
   
-  - Disjunto/ parcial
+  - Disjunto / parcial
   - Disjunto / total
   - Sobreposto / parcial
   - Sobreposto / total
 
-#### Aula
+---
 
+## Aula 6 - 17/03
