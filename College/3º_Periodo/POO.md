@@ -1,5 +1,7 @@
-title: Programação Orientada por Objetos (Puc-Minas - 3º Período)
+---
+title: Programação orientada por objetos (Puc-Minas - 3º Período)
 author: Arthur P. Braga
+---
 
 ## Notes
 
@@ -8,6 +10,7 @@ author: Arthur P. Braga
 1. Atributo ou método?
 2. static? final?
 3. Visibilidade
+4. Revisa o fluxo de sistema
 
 ---
 
@@ -19,7 +22,7 @@ author: Arthur P. Braga
 
 - **Valor**: Dado atribuido a uma posição na memória para ser operado/usado. Valor é usado no programa. Valor representa um dado contido em uma posição na memória.
 - **Variável**: Nome dado à representação do valor. "Ponteiro para o valor".
-- **Tipo da variável**: Indica como a variável vai ser usada. Também indica quanto espaço vai usar na mamória.
+- **Tipo da variável**: Indica como a variável vai ser usada. Também indica quanto espaço vai usar na memória.
 - **Vetores e matrizes**: Para alocar mais de uma variável, criar um conjunto de variáveis, do mesmo tipo e relacionadas.
 - **Métodos**: Conjunto de instruções com uma finalidade.
 
@@ -59,7 +62,7 @@ author: Arthur P. Braga
 
 **Tipo abstrato de dados** (TDA): reúne na mesma estrutura, informações sobre dados, e comportamento de uma entidade representada a partir do mundo real.
 
-**Classe**: Descrição padronizada de um tipo abstrato de dados. Modela um conjunto de entidades do mundo real que possuem características e comportamentos semelhantes.  É o esquema/representação/modelo de uma "entidade genéria".Constituída por atributos e métodos. Ex: Classe caneta, classe carro... 
+**Classe**: Descrição padronizada de um tipo abstrato de dados. Modela um conjunto de entidades do mundo real que possuem características e comportamentos semelhantes.  É o esquema/representação/modelo de uma "entidade genéria". Constituída por atributos e métodos. Ex: Classe caneta, classe carro... 
 
 **Objeto:** É a instância de uma classe, é um "exemplar" daquela classe. Ex: Classe usuário - Objeto João.
 
@@ -91,10 +94,10 @@ As classes precisam ser coesas, não pode ter pontas soltas (precisa ter ligaç�
 
 ##### Abstração 
 
-Uma classe deve incluir somente os atributos de importância em um contexto particular. Precisa ter os atributos (dados) necessários para a utilização daquela entidade no sistema. 
+Uma classe deve incluir somente os atributos de importância em um contexto **particular**. Precisa ter os atributos (dados) necessários para a utilização daquela entidade no sistema. 
 
 - Conceito da caixa-preta: Entrada e saída bem conhecidas, mas com detalhes ocultos.
-- A ideia principal é não ser necessário saber os detalhes do funcionamento de um objeto para utilizá-lo.
+- *A ideia principal é não ser necessário saber os detalhes do funcionamento de um objeto para utilizá-lo.*
 
 #### Encapsulamento
 
@@ -137,13 +140,13 @@ Atributos que dizem respeito à toda coleção de objetos, e não a um objeto es
 
 Exemplos: Armazenar última matrícula de um aluno cadastrado no sistema, poderia servir para criar a próxima (levando em consideração que a matrícula é uma sequência).
 
-*Atributos finais ou selados (final): Não podem mudar de valor após inicializados.* 
+**Atributos finais ou selados (final):** Não podem mudar de valor após inicializados.*
 
 *Nomenclatura em maiúsculo quando a variável é 'static final'.*
 
 #### Métodos 'de classe' - static
 
-São funções que não dependem de nenhuma variável de instância, quando invocados executam uma função sem a dependência do conteúdo de um objeto ou a execução da  instância de uma classe, conseguindo chamar direto qualquer **método** da classe.
+São funções que não dependem de nenhuma variável de instância, quando invocados executam uma função sem a dependência do conteúdo de um objeto ou a execução da instância de uma classe, conseguindo chamar direto qualquer **método** da classe.
 
 **Obs:** Se uma classe só possui métodos e atributos estáticos, logo ela é considerada uma **classe estática**, nunca irá precisar de instância. Ex: System, Math (Libs de funções) - Integer.parseInt (Manipulação de tipos) - Conversor de medidas...
 
@@ -161,7 +164,7 @@ Geralmente objetos não funcionam sozinhos, usam e comunicam com outros objetos.
 
 ##### Associação
 
-Objeto usa outro, mas não tem relação de pertinência, um não pertence à outro. Ex: Um trem usa uma estrada
+Objeto usa outro, mas não tem relação de pertinência, um não pertence à outro. Ex: Um carro usa uma estrada
 
 ##### Agregação
 
@@ -221,3 +224,10 @@ Unidirecional ou bidirecional?
 ## Aula 11 - 11/03
 
 #### Exercícios de implementação e UML
+
+---
+
+## Aula 12 - 18/03
+
+#### Revisão do exercício para prova
+
