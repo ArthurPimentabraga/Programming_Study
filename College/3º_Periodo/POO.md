@@ -223,11 +223,50 @@ Unidirecional ou bidirecional?
 
 ## Aula 11 - 11/03
 
+#### Modularidade - Acoplamento
+
+Cenário ideal: Manter baixo acoplamento.
+
+##### Indicadores
+
+- Tamanho da classe, quanto maior, mais coisas ela está fazendo. *Quantidade de parâmetros e métodos públicos*. Geralmente quando tem mais métodos, significa que tem mais objetos utilizando/dependendo dela;
+- Visibilidade. Uso de parâmetros x Uso de variáveis globais. Mesmo os parâmetros sendo um possível indicador de acoplamento, usar parâmetros é ainda mais desacoplado que a chamada de variáveis globais por outras classes... 
+- Flexibilidade. Facilidade na chamada (Especialização - Subclasse).
+
+#### Destrutores
+
+##### Coletor de lixo
+
+Processo que libera automaticamente memória que não está sendo mais utilizada. Java -> Garbage collector.
+
+- Eliminam a necessidade de se desalocar memória explicitamente ("manualmente");
+- Eliminam o vazamento de memória;
+- Eliminam referências pendentes (dangling - Ponteiros que não estão apontando pra ninguém).
+
+##### Destructors
+
+São métodos especiais invocados quando um objeto é finalizado, para garantir que não ficará nenhum resto mortal do objeto.
+
+- Só há um destrutor por classe;
+- Um destrutor não tem parâmetros;
+- Não deve ser chamado diretamente. É chamado de forma indireta (quando um objeto é finalizado);
+- É autônomo.
+
+Objetivo principal: Liberação de recursos usados pelo objeto. Ex: Memória, conexão de rede, conexão com banco de dados...
+
+A classe Object em Java tem um método **finalize**. Ele é executado automaticamente quando a área do objeto da classe que a contem estiver para ser liberada pelo coletor.
+
+Pode escrever o finalize para sua própria classe, passando regras de finalização particulares da sua classe. Ex: close() pro Scanner...
+
+---
+
+## Aula 12 - 12/03
+
 #### Exercícios de implementação e UML
 
 ---
 
-## Aula 12 - 18/03
+## Aula 13 - 18/03
 
 #### Revisão do exercício para prova
 
