@@ -167,7 +167,7 @@ Uma entidade de sub-tipo pode possuir seus próprios atributos e relacionamentos
 
 Restrições
 
-- Disjunção: sub-tipos podem ser disjuntos ou sobrepostos. Cada entidade do super-tipo pode pertencer no máximo a um sub-tipo de especialização - ou você é um, ou você é outro - (OU exclusivo -XOR), representado por um circulo com um 'd'dentro;
+- Disjunção: sub-tipos podem ser disjuntos ou sobrepostos. Cada entidade do super-tipo pode pertencer no máximo a um sub-tipo de especialização - ou você é um, ou você é outro - (OU exclusivo -XOR), representado por um circulo com um 'd' dentro;
 - Sobreposto:  Cada entidade do super-tipo pode pertencer a mais do que um sup-tipo (OU inclusivo - E/OU), representado por um circulo com um 'o' (overlap) ou 's' (sobreposto) dentro.
 - Super-tipos podem ser total ou parcial.
     - Parcial (linha simples): podem não pertencer a um sub-tipo;

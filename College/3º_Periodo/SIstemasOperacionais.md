@@ -359,7 +359,7 @@ Simplesmente é atribuido um valor numérico ("etiqueta") a cada processo, para 
 Ou escalonamento circular. Esse algoritmo atribui a cada processo um tempo máximo para processamento: **quantum**. Ou seja, ao fim do quantum, o processo sofre preempção. Com isso conseguimos aplicar justiça ao nosso algoritmo.
 
 - Tamanho do quantum: Responsividade x Desperdício. Um quantum grande pode fazer a resposta demorar, e um pequeno pode ser um desperdício pelo fato de ter que trocar de processo, e isso gasta tempo.
-- Em consequência o quantum chega a ser insignificante..................
+- Em consequência o quantum chega a ser insignificante, pois o menor processo sempre vai ser o que finaliza primeiro, logo todos os demais devem ser executados naquele tempo (tempo de execução do menor processo). 
 
 *O retorno médio pode ser maior, porém o tempo de resposta é maior!* É a socialização do processador.
 
@@ -489,24 +489,28 @@ Comunicação interprocessos. Comunicação e sincronização de acesso de proce
 - Inconsistência de dados. Ex: Processo de débito e crédito na conta do banco ao mesmo tempo, com saldo inconsistênte no final;
 - Dados usados em duplicidade.
 
+*Regiões críticas > Condições de corrida > Necessidadede exclusão mútua.*
+
 ##### Condição de corrida
 
-Quando dois ou mias processos compartilham recursos e o resultado final depende de uma ordem.
+Quando dois ou mais processos compartilham recursos e o resultado final depende de uma ordem de execução.
 
-**Região crítica:** 
+**Região crítica:** Trecho(s) dos processos nos quais os dados compartilhados são acessados. Potencialmente perigosos.
 
-**Exclusão mútua:** 
+**Exclusão mútua:** Mecanismo para garantir que, se um processo está em sua região crítica, outros processos serão impedidos de estar em suas regiões crítica.
 
 Princípios da boa exclusão mútua:
 
-1. asd
-2. asd
-3. asd
-4. ads
+1. Somente um processo pode estar naregiãocrítica a cada momento;
+2. Nãos e pode fazer suposições sobre velocidade e ordem de execução de processos;
+3. Nenhum processo fora da região crítica pode impedir outros processos de entrarem em suas regiões críticas;
+4. Um processo não pode esperar indefinidamente para entrar em sua região crítica.
+
+*Obs: 1 e 2 são obrigatórios, ou não funciona. 3 e 4 são desejados, ou teremos alguns problemas.*
 
 ##### Espera ocupada
 
-Busy waiting. 
+Busy waiting. Sem ajuda ou interferência do SO. Não há estado de bloqueio nem chamadas de sistema. Processo que não pode adentrar a região crítica gasta o tempo de processador inutilmente até o fim do quantum
 
 Alternativa 1: Desabilitar interrupções antes do processo começar a executar, e habilita ao sair (ao finalizar).
 
@@ -525,3 +529,62 @@ Alternativa 3: Alternância estrita. Variável controla quem tem o direito de ex
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/BusyWaiting.png" style="width:55%">
 
+---
+
+## Aula 11 - 22/03
+
+#### Sleep/Wakeup
+
+Chamadas de sistema para que o processo peça a ida ao bloqueio. Vai dormir se o processo **depender** de outro recurso. Ou quando o sleep é por período, por um tempo pré-determinado. *Recurso provido pelo SO.*
+
+É importânte pelo fato de não ocupar o processador!
+
+##### Produtores e consumidores
+
+Modelo clássico de CPI. É um cenário metafórico.
+
+*Buffer: Área de memória limitada e compartilhada. Alguém coloca para alguem tirar.*
+
+Produtores de itens (escrevem na memória) e Consumidores de itens (retiram na memória). Streamming é um exemplo, não precisa de uma grande quantidade de memória para ver tal filme, o sistema vai enviando os dados e a placa de vídeo para lendo e retirando da memória ao exibir o filme. 
+
+Basicamente o produtor libera a operação do consumidor, e vice-versa.
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Produtor-Consumidor.png" style="width:70%">
+
+Porém, essa única verificação (if(ocnt==0)) pode ocupar o tempo do *quantum* e não mandar o consumidor dormir na hora devida. Consequêntemente o sistema trava, vai chegar um ponto que ambos vão estar dormindo. Uma hora isso vai acontecer (Lei de Murphy).
+
+#### Semáforos
+
+Resolve o problema anterior. Variáveis (de sistema) especiais para controlar o número de sinais pendentes. Só permite duas operações indivisíveis (não tem como dividir a operação no meio, tem q começar e terminar): 
+
+- Up (Incrementar o sinal);
+- Down (Testar o sinal).
+
+O semáforo é oferecido por meio de chamadas de sistema (essas operações são executadas assim). Ou seja, operação em modo kernel, e sem interrupções do sistema (detalhe que resolve o problema anterior).
+
+Algumas linguagens de programação de alto nível, o semáforo é disponibilizado por meio de bibliotecas. No caso do Java, o semáforo é controlado pela JVM.
+
+Comportamento geral:
+
+- Down: Tenta decrementar o contador. Se tiver 0 manda o processo apra o bloqueio;
+- Up: incrementa o contador e libera processos pendentes.
+
+##### Mutex
+
+Mutual exclusion é um semáforo simplificado: valores 0 ou 1 apenas. *Semáforo binário*.
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Semaforo.png" style="width:70%">
+
+##### Produtor/Consumidor com semáforo
+
+Precisa proteger em três cenários:
+
+1. Buffer cheio (produtor) - Produtor não pode executar;
+2. Buffer vazio (consumidor) - Consumidor não pode executar;
+3. Escrita/retirada do buffer (ambos).
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!LISTA DO TRATAMENTO DOS 3 CENÁRIOS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+É Eficiente e elegante (simples). Porém deve ser realizada com extremo cuidado, tracing e depuração de erros é muito difícil.
+
+*Tracing: Logs para mapear bug.*

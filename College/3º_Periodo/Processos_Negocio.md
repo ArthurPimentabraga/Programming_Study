@@ -212,13 +212,13 @@ utilizado quando, em um ponto do fluxo, são ativados um ou mais caminhos, dentr
 
   → podem ser, também, entrada e saída de uma atividade
 
-  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c741184-b35c-41ca-be9e-d248c472ed9c/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c741184-b35c-41ca-be9e-d248c472ed9c/Untitled.png)
+  <img src="../../imgs/3_Periodo/Processos_Negocio/Dados_Entrada_Saida.png" style="width:50%">
 
 - Depósito de dados:
 
   → representa um depósito de dados (tabela banco de dados, arquivos, etc.)
 
-  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a1821e44-3e7c-46b6-8fc8-d11e8d0faa86/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a1821e44-3e7c-46b6-8fc8-d11e8d0faa86/Untitled.png)
+  <img src="../../imgs/3_Periodo/Processos_Negocio/Dados_Armazenamento.png" style="width:50%">
 
 ### Objetos de conexão
 
@@ -226,7 +226,7 @@ utilizado quando, em um ponto do fluxo, são ativados um ou mais caminhos, dentr
 - fluxo de mensagem: mostram a troca de mensagens entre Participantes, entre si por meio de setas tracejadas (vídeo "Colaboração")
 - associações: usadas para associar objetos aos fluxos, linha tracejada podendo ser uma seta ou não (artefatos), dependendo do objeto
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5a96a640-57b7-4ef5-bdd5-9c775d02b011/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5a96a640-57b7-4ef5-bdd5-9c775d02b011/Untitled.png)
+<img src="../../imgs/3_Periodo/Processos_Negocio/Arrow_Associacao.png" style="width:70%">
 
 ### Artefatos
 
@@ -235,7 +235,7 @@ utilizado quando, em um ponto do fluxo, são ativados um ou mais caminhos, dentr
 - text annotation: mecanismo que oferece informação adicional para o leitor do diagrama. É vinculado a uma associação
 - group: agrupamento de elementos gráficos que estão dentro da mesma categoria (potilhado)
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3e8a47a0-336e-4b65-856b-7b7a302ad9a0/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3e8a47a0-336e-4b65-856b-7b7a302ad9a0/Untitled.png)
+<img src="../../imgs/3_Periodo/Processos_Negocio/Artefato_Group.png" style="width:60%">
 
 ### Colaboração
 
@@ -249,15 +249,15 @@ utilizado quando, em um ponto do fluxo, são ativados um ou mais caminhos, dentr
 
   → Exemplo de black-box pool:
 
-  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b28d4a50-6cac-43c3-b1a2-b85863af156e/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b28d4a50-6cac-43c3-b1a2-b85863af156e/Untitled.png)
+  <img src="../../imgs/3_Periodo/Processos_Negocio/BlackBox.png" style="width:70%">
 
   → exemplo de white-box pool:
 
-  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/666459c0-185c-486e-a405-f797e0c7c697/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/666459c0-185c-486e-a405-f797e0c7c697/Untitled.png)
+  <img src="../../imgs/3_Periodo/Processos_Negocio/WhiteBox.png" style="width:70%">
 
   → exemplo de white-box pool e black-box pool:
 
-  ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/177ddee5-65b1-401c-aa07-72523be32be0/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/177ddee5-65b1-401c-aa07-72523be32be0/Untitled.png)
+  <img src="../../imgs/3_Periodo/Processos_Negocio/BlackBoxAndWhiteBox.png" style="width:70%">
 
 - obs: colaborações de white-box pool "tocam" na borda da atividade pertencente a mesma e de black-box pool "tocam" somente a borda da piscina
 
