@@ -106,7 +106,7 @@ pergunta: O que seria exatamente o programa objeto gerado pelos tradutores? O pr
   
   - ROM -> Gravadas durante a fabricação
   
-  - PROM -> ROM Programável (śo uma vez) e precisa de equipamento especial para programar; 
+  - PROM -> ROM Programável (só uma vez) e precisa de equipamento especial para programar; 
   
   - (UV)EPROM -> (UV Erasable PROM) Apagada (erased) por UV (ultra violeta)
   

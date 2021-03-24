@@ -255,6 +255,7 @@ SO deve decidir como gerenciar threads
   - Paralelismo real: suposta melhora de desempenho;
   - *Importância de limitar o nº de threads possíveis: um software malicioso pode sair criando várias threads, usando todos os recursos, e derrubar o sistema.*
 - **Hibrido (muitos para muitos).** Tenta resolver o problema de gestão com uma threadpool.
+  - Criar uma *thread* custa um pouco caro. Manter controle de todas ativas não é uma tarefa tão simples. Ter um objeto que gerencie isso ajuda muito, e com ele viabiliza usar *threads* de execução mais curta, já que o custo é minimizado por não ter que ficar criando e destruindo várias *threads*.
   - Thread pool:
     - Criar várias threads na inicialização e alocá-las em um banco;
     - Tarefas novas: “acordam” threads do banco;
@@ -265,7 +266,7 @@ SO deve decidir como gerenciar threads
 
 #### Escalonamento de processos (e/ou threads)
 
-Multiprogramação: muitos processos ou threadsaptos a executar.
+Multiprogramação: muitos processos ou threads aptos a executar.
 
 Problema: Não há processadores/núcleos livres para todos.
 
@@ -288,7 +289,7 @@ Ou scheduler, decide quem será o próximo processo da *fila de prontos a execut
 - Sistemas **interativos**: Interação contínua com os usuários. Determinada solicitação tem uma resposta instantânea. Ex: Sistemas web em geral, equipamentos pessoais, IDEs, Teams (sincroniza audio e video sem parar)... 
 - Sistemas de **tempo real**: Necessidade de interação, mas também de restrições de prazos. Ex: Controle de sinais de trânsito, radar de aeroporto, monitoramento no geral. *Acontece no tempo do "mundo"*. 
   - Hard real-time: Sistemas em que prejuízos (não cumprimento de prazo por exemplo) não são aceitáveis, o erro pode ser catastrófico. Ex: Controle de sinais de trânsito.
-  - Soft real-time: quando os prejuizos, é aceitável. Ex: Um jogo da uma travada leve.
+  - Soft real-time: quando os prejuizos são aceitável. Ex: Um jogo da uma travada leve.
   - Tem como característica ciclos curtos.
 
 ##### Critérios/Objetivos do escalonamento
@@ -332,16 +333,14 @@ Fila de processos. Bem simples, porém o ponto negativo é que não é justo, um
 
 Tarefa mais curta primeiro (**shortest job first**). Ordenar os processos pelo tempo de execução (trabalho necessário). Consequentemente a vazão aumenta. O problema é saber por quanto tempo o processo será executado :) Funciona melhor com tarefas previsíveis, ou seja, que dê para calcular um tempo previsto de processamento, tarefas específicas que são sempre executadas (pegar o tempo médio...).
 
-- Também usado em sistemas em lote;
 - Também não-preemptivo.
 
 ##### SRT
 
-Menor tempo restante (***Shortest remaining time***). Variação do SJF. na chegada de outro processo, é avaliado o tempo de execução do novo processo, se for menor que o tempo restante do processo atual, o escalonador interrompe o processo, e o novo processo começa a ser executada. Se o novo processo tiver um tempo maior, a fila é reorganizada (geralmente usando método de inserção).
+Menor tempo restante (***Shortest remaining time***). Variação do SJF. na chegada de outro processo, é avaliado o tempo de execução do novo processo, se for menor que o tempo restante do processo atual, o escalonador interrompe o processo, e o novo processo começa a ser executado. Se o novo processo tiver um tempo maior, a fila é reorganizada (geralmente usando método de inserção).
 
 - O problema é se começar a chegar muitos processos novos. Tem que tomar cuidado para não ficar no "Adiamento infinito" - *starvation*. Para isso pode ser feito o agendamento de tarefas longas (exemplo de política de emergência).
 - Preemptivo.
-- Também usado em sistemas em lote;
 
 #### S.Interativos - Prioridades
 
@@ -365,11 +364,9 @@ Ou escalonamento circular. Esse algoritmo atribui a cada processo um tempo máxi
 
 ##### Filas de prioridades
 
-Precisamos de prioridades para os processos, logo é feita uma mesclagem de round-robin com prioridades. Processos com prioridade igual são executados em round-robin, o resto segue na prioridade.
+Precisamos de prioridades para os processos, logo é feita uma mesclagem de round-robin com prioridades. Processos com prioridades iguais são executados em round-robin, o resto segue na prioridade.
 
 - Importânica + justiça.
-
-Simulador de escalonamento de prioridades -> gerenciador de empacotador de pedidos.
 
 ---
 
@@ -422,11 +419,15 @@ Porém o EDF é mais complicado, exige mais do sistema...
 - Escalonamento "simples", pois cada CPU é independente, logo é só distribuir as tarefas;
 - Tem que saber fazer o balanceamento da carga e distribuição de processos.
 
-**Multiprocessadores**: Sistema de computadores no qual duas oumais CPUs compartilham acesso total a uma RAM comum. 
+**Multiprocessadores**: Sistema de computadores no qual duas ou mais CPUs compartilham acesso total a uma RAM comum. 
 
-- Questão bidimesional, qual precesso? Em qual processador?
+- Questão bidimesional, qual processo? E em qual processador?
 - Tem que gerenciar se os processadores vão processar tal processo de forma independente (um único processador pra ele), ou relacionado (mais de um processador para o processo).
-- Cenário "simples": Tempo compartilhado.
+
+Cenário "simples": 
+
+##### Tempo compartilhado.
+
   - Considerar processos e threads como independentes;
   - Estrutura única de escalonamento;
   - Eventos e interrupções: uso do algoritmo escolhido.
@@ -436,7 +437,7 @@ Porém o EDF é mais complicado, exige mais do sistema...
 Sobre o exemplo de cima:
 
 - Simples e eficiente;
-- Permite o balanceamente entre processadores;
+- Permite o balanceamento entre processadores;
 - Tempo compartilhado em processadores;
 - Porém, para essa eficiência toda os processos precisam estar independentes, se tiver dependência, perde um pouco de eficiência. 
 - Porém 2, quando muda processos de processador, é perdido a cache, consequentemente eficiência. 
@@ -456,11 +457,17 @@ Força o aproveitamento de cache dividindo os processos por processador antes de
 
 ##### Escalonamento por compartilhamento de espaço
 
+Threads que se comunicam muito devem ser executadas ao mesmo tempo. Quando threads são inicializadas juntas, cada uma é alocada para uma única CPU. Inicialização deve esperar até que haja CPUs suficientes.
+
 - Não preemptivo;
 - Quant. de threads x nº de CPUs livres;
 - FCFS para gerenciar fila de pedidos por CPUs
 
 *Mais comum em servidores e em sistemas em lote.*
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Escalonamento_CompatilhamentoEspaco.png" style="width:55%">
+
+Cada grupo equivale à um processo, ou seja, threads inicializadas juntas, que compartilham espaço de memória (buscam nos mesmos endereços) e são executadas em CPUs reservadas à cada uma.
 
 ##### Escalonamento de bando
 
@@ -471,6 +478,8 @@ Gang scheduling. Mistura escalonamento de tempo (round-robin) com escalonamento 
   - Todos os membros do bando executam simultaneamente em tempo compartilhado
   - Todos os membros do bando iniciam e terminam ao mesmo tempo seus quanta
   - A cada quantum, todas as CPUs são reescalonadas
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Escalonamento_Bando.png" style="width:55%">
 
 #### Comunicação e sincronização entre processos e threads
 
@@ -489,7 +498,7 @@ Comunicação interprocessos. Comunicação e sincronização de acesso de proce
 - Inconsistência de dados. Ex: Processo de débito e crédito na conta do banco ao mesmo tempo, com saldo inconsistênte no final;
 - Dados usados em duplicidade.
 
-*Regiões críticas > Condições de corrida > Necessidadede exclusão mútua.*
+*Regiões críticas > Condições de corrida > Necessidade de exclusão mútua.*
 
 ##### Condição de corrida
 
@@ -501,8 +510,8 @@ Quando dois ou mais processos compartilham recursos e o resultado final depende 
 
 Princípios da boa exclusão mútua:
 
-1. Somente um processo pode estar naregiãocrítica a cada momento;
-2. Nãos e pode fazer suposições sobre velocidade e ordem de execução de processos;
+1. Somente um processo pode estar na região crítica a cada momento;
+2. Não se pode fazer suposições sobre velocidade e ordem de execução de processos (Lei de Murphy);
 3. Nenhum processo fora da região crítica pode impedir outros processos de entrarem em suas regiões críticas;
 4. Um processo não pode esperar indefinidamente para entrar em sua região crítica.
 
@@ -510,7 +519,7 @@ Princípios da boa exclusão mútua:
 
 ##### Espera ocupada
 
-Busy waiting. Sem ajuda ou interferência do SO. Não há estado de bloqueio nem chamadas de sistema. Processo que não pode adentrar a região crítica gasta o tempo de processador inutilmente até o fim do quantum
+Busy waiting. Sem ajuda ou interferência do SO. Não há estado de bloqueio nem chamadas de sistema. Processo que não pode adentrar a região crítica gasta o tempo de processador inutilmente até o fim do quantum.
 
 Alternativa 1: Desabilitar interrupções antes do processo começar a executar, e habilita ao sair (ao finalizar).
 
@@ -521,6 +530,8 @@ Alternativa 1: Desabilitar interrupções antes do processo começar a executar,
 Alternativa 2: Variável de bloqueio. Usar variável boolean, enquanto ela for false, o processo fica em "stand-by", assim que ela ficar true o processo segue o fluxo.
 
 O problema que essa lógica não funciona, porque o 1º processo pode fazer boolean = true antes de executar seu processo, e o outro começar a executar logo em seguida. 
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Variavel_Bloqueio.png" style="width:55%">
 
 Alternativa 3: Alternância estrita. Variável controla quem tem o direito de executar naquele turno. A ação é de ceder a vez, não de tomar. Só no final da execução do 1º processo que essa variável muda seu valor para que o 2º comece a executar.
 
@@ -545,28 +556,28 @@ Modelo clássico de CPI. É um cenário metafórico.
 
 *Buffer: Área de memória limitada e compartilhada. Alguém coloca para alguem tirar.*
 
-Produtores de itens (escrevem na memória) e Consumidores de itens (retiram na memória). Streamming é um exemplo, não precisa de uma grande quantidade de memória para ver tal filme, o sistema vai enviando os dados e a placa de vídeo para lendo e retirando da memória ao exibir o filme. 
+Produtores de itens (escrevem na memória) e Consumidores de itens (retiram na memória). Streamming é um exemplo, não precisa de uma grande quantidade de memória para ver tal filme, o sistema vai enviando os dados e a placa de vídeo vai lendo e retirando da memória ao exibir o filme. 
 
 Basicamente o produtor libera a operação do consumidor, e vice-versa.
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Produtor-Consumidor.png" style="width:70%">
 
-Porém, essa única verificação (if(ocnt==0)) pode ocupar o tempo do *quantum* e não mandar o consumidor dormir na hora devida. Consequêntemente o sistema trava, vai chegar um ponto que ambos vão estar dormindo. Uma hora isso vai acontecer (Lei de Murphy).
+Porém, essa única verificação - if(cont==0) - pode ocupar o tempo do *quantum* e não mandar o consumidor dormir na hora devida. Consequêntemente o sistema trava, vai chegar um ponto que ambos vão estar dormindo. Uma hora isso vai acontecer (Lei de Murphy).
 
 #### Semáforos
 
-Resolve o problema anterior. Variáveis (de sistema) especiais para controlar o número de sinais pendentes. Só permite duas operações indivisíveis (não tem como dividir a operação no meio, tem q começar e terminar): 
+Resolve o problema anterior. Variáveis especiais (de sistema) para controlar o número de sinais pendentes. Só permite duas operações indivisíveis (não tem como dividir a operação no meio, tem q começar e terminar): 
 
 - Up (Incrementar o sinal);
 - Down (Testar o sinal).
 
 O semáforo é oferecido por meio de chamadas de sistema (essas operações são executadas assim). Ou seja, operação em modo kernel, e sem interrupções do sistema (detalhe que resolve o problema anterior).
 
-Algumas linguagens de programação de alto nível, o semáforo é disponibilizado por meio de bibliotecas. No caso do Java, o semáforo é controlado pela JVM.
+Algumas linguagens de programação de alto nível o semáforo é disponibilizado por meio de bibliotecas. No caso do Java, o semáforo é controlado pela JVM.
 
 Comportamento geral:
 
-- Down: Tenta decrementar o contador. Se tiver 0 manda o processo apra o bloqueio;
+- Down: Tenta decrementar o contador. Se tiver 0 manda o processo para o bloqueio;
 - Up: incrementa o contador e libera processos pendentes.
 
 ##### Mutex
