@@ -276,3 +276,20 @@ Pode escrever o finalize para sua própria classe, passando regras de finalizaç
 
 #### Prova
 
+---
+
+## Aula 15 - 26/03
+
+#### Especialização / Herança
+
+Reaproveitamento de código. Mais alto nível de abstração. Especializar uma classe genérica. Ex: Um professor é uma *pessoa*. Um aluno é uma *pessoa*.
+
+Essa especialização tradicionalmente é implementada por meio do mecanismo de herança - Classe mãe e classe filha.
+
+> Classes filhas herdam métodos e atributos públicos ou protegidos da classe mãe.
+>
+> Classes filhas podem sobrescrever métodos herdados -> especialização - @Override  
+
+<img src="../../imgs/3_Periodo/POO/Heranca-UML.png" style="width:90%">
+
+*Todo construtor da classe filha chama o da mãe, só devemos escolher qual construtor usar!* A palavra *super* representa o construtor da classe mãe, e eles são diferenciados pela parametrização.

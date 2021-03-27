@@ -596,6 +596,89 @@ Precisa proteger em três cenários:
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!LISTA DO TRATAMENTO DOS 3 CENÁRIOS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Mutex.png" style="width:70%">
+
 É Eficiente e elegante (simples). Porém deve ser realizada com extremo cuidado, tracing e depuração de erros é muito difícil.
 
-*Tracing: Logs para mapear bug.*
+*Tracing: Logs para mapear bug.* 
+
+---
+
+## Aula 12 - 24/03
+
+#### Monitores
+
+Solução de alto nível de abstração, provida pela linguagem. Determina uma região como região monitorada, e que terá dados e códigos compartilhados por threads. Somente um processo pode estar ativo em um monitor em um instante de tempo.
+
+Esquema geral:
+
+- Variáveis de condição para controlar a espera;
+- Dois sinais: wait e signal (libera a variável);
+- Signal é sempre a última instrução do monitor.
+
+<img title="pseudo-codigo" src="../../imgs/3_Periodo/Sistemas_Operacionais/Monitor.png" style="width:90%">
+
+Diferente do Sleep/Wakup as operações de "dormir e acordar" estão no monitor, logo ele já controla tudo para você.
+
+Em resumo:
+
+- Garante uma exclusão mutua "automática";
+- Solução simples;
+- Menos probabilidade de erro, pela linguagem fazer o controle, e não nós;
+- Mas depende da linguagem de programação, nem toda tem.
+
+#### Problemas clássicos - CPI
+
+São cenários que modelam problemas recorrentes em SO e outros sistemas de software.
+
+##### Leitores e escritores
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Leitores-Escritores.png" style="width:70%">
+
+Professor é escritor, e aluno é leitor.
+
+Outro exemplo é uma reunião no teams. Uma tela compartilhada é manipulada pelo proprietário, e somente visualizada pelos outros da reunião.
+
+Premissa apra solução básica: Leitores novos podem entrar se já há um ou mais leitores. Escritores entram se os dados estiverem totalmente liberados.
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Solucao-Semaforo.png" style="width:70%">
+
+O problema é que para o escritor entrar, os leitores precisam abandonar, e isso não garante a execução do escritor, pois pode estar sempre chegando um novo leitor, e os dados nunca vão ser liberados. (Starvation)
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Solucao-PrioridadeEscritores.png" style="width:70%">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- Fila de prioridade
+  - nível 1: prazo para empacotamento(min);
+  - nível 2: total de produtos do pedido (carga de processamento);
+- Classe de dados:
+  - Pedido (conjunto de pacotes)
+  - Pacote (conjunto de até 20 produtos - Neste caso) 
+    - prioridade
+  - Produto
+
+Dúvidas:
+
+Independente se o pacote preenche os 5000cm³ ele ainda levará 5s para o processamento?
+
+Os exemplos de prazo para empacotamento, são realmente só um exemplo? 
+
+Os 5s de produção do pacote são para o volume de 5000cm³, ou para cada unidade de 250cm³?
+
