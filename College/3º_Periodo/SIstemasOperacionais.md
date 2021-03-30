@@ -324,7 +324,7 @@ Se aplica em nos **sistemas de tempo real**!
 
 ##### FCFS
 
-Fila de processos. Bem simples, porém o ponto negativo é que não é justo, um processo relativamente pequeno pode demorar muito para ser executado, por estar no fim da fila por exemplo. Consequentemente uma vazão pequena.
+First come, first served. Fila de processos. Bem simples, porém o ponto negativo é que não é justo, um processo relativamente pequeno pode demorar muito para ser executado, por estar no fim da fila por exemplo. Consequentemente uma vazão pequena.
 
 - Tipicamente usado em sistemas em lote;
 - Não-preemptivo.

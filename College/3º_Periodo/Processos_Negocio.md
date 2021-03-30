@@ -268,3 +268,9 @@ utilizado quando, em um ponto do fluxo, são ativados um ou mais caminhos, dentr
 #### Exercício avaliativo 
 
 https://camunda.com/bpmn/reference/#events-escalation
+
+---
+
+## Aula 7 - 29/03 - "Presencial"
+
+#### Exercício avaliativo 
