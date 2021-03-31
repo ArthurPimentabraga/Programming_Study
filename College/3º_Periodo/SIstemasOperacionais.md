@@ -337,7 +337,7 @@ Tarefa mais curta primeiro (**shortest job first**). Ordenar os processos pelo t
 
 ##### SRT
 
-Menor tempo restante (***Shortest remaining time***). Variação do SJF. na chegada de outro processo, é avaliado o tempo de execução do novo processo, se for menor que o tempo restante do processo atual, o escalonador interrompe o processo, e o novo processo começa a ser executado. Se o novo processo tiver um tempo maior, a fila é reorganizada (geralmente usando método de inserção).
+Menor tempo restante (***Shortest remaining time***). Variação do SJF. na chegada de outro processo, é avaliado o tempo de execução do novo processo, se for menor que o tempo restante do processo atual, o escalona-dor interrompe o processo, e o novo processo começa a ser executado. Se o novo processo tiver um tempo maior, a fila é reorganizada (geralmente usando método de inserção).
 
 - O problema é se começar a chegar muitos processos novos. Tem que tomar cuidado para não ficar no "Adiamento infinito" - *starvation*. Para isso pode ser feito o agendamento de tarefas longas (exemplo de política de emergência).
 - Preemptivo.
@@ -647,15 +647,27 @@ O problema é que para o escritor entrar, os leitores precisam abandonar, e isso
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Solucao-PrioridadeEscritores.png" style="width:70%">
 
+---
 
+## Aula 13 - 29/03
 
+#### Jantar dos filósofos
 
+Metáfora para demonstrar a efetividade do uso de semáforos.
 
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Jantar_Filosofos_Cenario.png" style="width:70%">
 
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Jantar_Filosofos_Ilustracao.png" style="width:70%">
 
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Solucao_Aparente.png" style="width:50%">
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!     CÓDIGO     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
 
+1. Thinking = processando;
+2. Eating = Usando recursos compartilhados - Mexendo nos dados;
+3. Hungry = Estado de espera.
 
+Modelo para situações de competição por acesso exclusivo a recursos compartilhados. Ex: Uso de várias fontes de dados para gerar um relatório.
 
 
 
