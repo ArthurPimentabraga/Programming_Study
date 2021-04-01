@@ -344,7 +344,7 @@ Menor tempo restante (***Shortest remaining time***). Variação do SJF. na cheg
 
 #### S.Interativos - Prioridades
 
-Nos sistemas interativos o objetivo é executar as tarefas mais **importantes** primeiro. Diferente dos em lote que o objetivo é finalizar os processos mais repidamente. Logo precisamos definir prioridades.
+Nos sistemas interativos o objetivo é executar as tarefas mais **importantes** primeiro. Diferente dos em lote que o objetivo é finalizar os processos mais rapidamente. Logo precisamos definir prioridades.
 
 - Preemptivo.
 
@@ -663,34 +663,76 @@ Metáfora para demonstrar a efetividade do uso de semáforos.
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!     CÓDIGO     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
 
-1. Thinking = processando;
+1. Thinking = processando, executando;
 2. Eating = Usando recursos compartilhados - Mexendo nos dados;
-3. Hungry = Estado de espera.
+3. Hungry = Estado de espera. 
+
+> Thinking >> Hungry >> Eating. Precisa passar pelo estado de espera para usar os dados.
 
 Modelo para situações de competição por acesso exclusivo a recursos compartilhados. Ex: Uso de várias fontes de dados para gerar um relatório.
 
+---
 
+## Aula 14 - 31/03
 
+#### Deadlocks
 
+>  Cenário atual: Multiprogramação || Multithreading || Compartilhamento e concorrência por recursos
+>  E alguns desses recursos são exclusivos, ou seja, há uma necessidade de sincronização e espera.
 
+Situação na qual nenhum processo em um grupo consegue avançar, todos estão bloqueados, esperando. Ex: Programa congelado.
 
+> !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Lei de trens do Kansas !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Deadlocks.png" style="width:80%">
 
+Felizmente só ocorre deadlock quando as 4 coisas acontecem ao mesmo tempo:
 
-- Fila de prioridade
-  - nível 1: prazo para empacotamento(min);
-  - nível 2: total de produtos do pedido (carga de processamento);
-- Classe de dados:
-  - Pedido (conjunto de pacotes)
-  - Pacote (conjunto de até 20 produtos - Neste caso) 
-    - prioridade
-  - Produto
+- Exclusão mútua;
+- Retenção e espera (hold and wait) - Um processo tem um recurso, outro processo tem outro recurso, ambos precisam do recurso do outro, mas ninguém sede;
+- Sem possibilidade de preempção;
+- Espera circular.
 
-Dúvidas:
+##### Prevenção de deadlocks
 
-Independente se o pacote preenche os 5000cm³ ele ainda levará 5s para o processamento?
+O SO tenta impedir pelo menos uma das 4 condições de ocorrência.
 
-Os exemplos de prazo para empacotamento, são realmente só um exemplo? 
+- Prevenir a espera circular: Protocolos obrigando uma espera linear.
+  - Ex: Numerar os recursos e só permitir alocação ordenada. 
+  - Fácil para o sistema, difício para o programador :) Logo ninguém vai querer programa para esse sistema. Ex: Windows phone.
 
-Os 5s de produção do pacote são para o volume de 5000cm³, ou para cada unidade de 250cm³?
+Ou seja, prevenir o deadlock não da certo, é muito custoso, e acaba dando errado :)
+
+##### Evitar os deadlocks
+
+Não fiz nada para prevenir, ela pode acontecer, porém vou tomar atitudes para minimizar a chance de acontecer.
+
+Conceito de **estado seguro** do sistema: SO pode alocar recursos a um processo se puder garantir que não acontecerá um deadlock, ou seja, descobrir se vai ter falta de recurso. Se for o caso, coloca o processo para dormir até ser seguro.
+
+1. Alternativa: Usando grafos. Monta ele, e analisa. Se for perigoso, faz o fluxo explicado acima.
+2. <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Grafos_Alocacao.png" style="width:80%">
+
+Na prática é muito complicado também.
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Estado_Seguro.png" style="width:80%">
+
+Ou seja, evitar deadlock também é muito caro, SO não vai fazer isso também.
+
+##### Detecção e recuperação de deadlocks
+
+Depois que acontecerem, tentar solucionar o problema causado por um deadlock. Destravar o sistema e recuperar o estado consistente.
+
+Alternativas para recuperação:
+
+- Se possível -> Suspensão e preempção do processo que está travado. Geralmente não da, pois não da pra parar algo no meio;
+- Retrocesso (backtracking). Andar para trás, CTRL+Z do sistema até o momento anterior ao problemático;
+- Eliminação de processos, matar os programas. E torcer para matar o cara certo. Ou vai matar quem chegou por último (fez menos coisas e é menos provável de ser o problemático), ou quem chegou primeiro (fez e ta usando muita coisa, mais provável de ser ele, porém vai ter que refazer muita coisa).
+
+Ou seja, tudo isso pode custoso também :):
+
+##### Algoritmo do avestruz
+
+Linux e Windows utilizam. Enfia a cabeça na areia e finja que não há nenhum problema. O custo das alternativas para lidar com os deadlocks é considerado alto para o sistema. Confiam que o programador faz programas sem deadlocks (usando semáforos corretamente). Ou te avisa que o programa não ta respondendo e tu resolve o que fazer.
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Algoritmo_Avestruz.png" style="width:50%">
 

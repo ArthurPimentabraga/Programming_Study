@@ -51,7 +51,7 @@ Pela existência desses problemas/dificuldades/limitações foi criada a tecnolo
 
 - **Nível físico:** Principal nível de atuação do DBA. Nível mais baixo, descreve COMO os dados estão armazenados. Trata da estrutura do BD, uso de índices...
   - Independência física: Quando alterações no nível físico não provocam modificações no conceitual.
-- **Nível Conceitual:** Principal nível de atuação do AD. Baseado na modelagem dos dados. Descreve os dados, seus relacionamentos...
+- **Nível Conceitual:** Principal nível de atuação do AD. Baseado na modelagem dos dados. Descreve os dados, seus relacionamentos... Que queremos armazenar e estruturar.
   - Independência lógica: Quando alterações no nível conceitual não provocam modificações no visão.
 - **Visão 1, 2...:** Visão de cada usuário, podendo ser um desenvolvedor, o usuário final... 
   - Exemplo um sistema de folha de pagamento, o usuário final consegue ter acesso aos dados através do sistema, sem acessar diretamente o BD.
@@ -181,4 +181,7 @@ Restrições
 
 ---
 
-## Aula 6 - 17/03
+## Aula 6 - 31/03
+
+#### Modelo relacional
+
