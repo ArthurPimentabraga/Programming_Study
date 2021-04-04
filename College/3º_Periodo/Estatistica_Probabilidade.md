@@ -20,3 +20,9 @@ Ta tudo no caderno :)
 ## Aula 2 - 23/02
 
 *Vídeos sugeridos na aula anterior: Modulo 1 -> aula 2 e aula 3, com foco na 3.*
+
+---
+
+![image-20210404143338889](../../imgs/3_Periodo/image-20210404143338889.png)
+
+![image-20210404143615043](../../imgs/3_Periodo/image-20210404143615043.png)

@@ -1,5 +1,5 @@
 ---
-title: Sistemas Operacionais (Puc-Minas - 3º Período)
+ title: Sistemas Operacionais (Puc-Minas - 3º Período)
 author: Arthur P. Braga
 ---
 
@@ -109,7 +109,8 @@ Primeira aula do semestre ja começa com uma abertura de fogos de artifício com
   - Necessidade de execução de múltiplos servidores;
   - Isolar servidores -> isolar falhas;
   - Computação em nuvem (lembrar da AWS).
-- Exonúcleos: Divisão do hadware em vários kernels (núcleos) - Computação em nuvem geralmente é assim, a cada solicitação de criação de uma máquina, os recursos do hardware são divididos e parte dele é usado em cada nova máquina. 
+
+**Exonúcleos:** Em vez de clonar a máquina real, como nas VMs, outra estratégia é dividi-la ou dar a cada usuário um subconjunto de recursos. Divisão do hadware em vários kernels (núcleos) - Computação em nuvem geralmente é assim, a cada solicitação de criação de uma máquina, os recursos do hardware são divididos e parte dele é usado em cada nova máquina. 
 
 ---
 
@@ -362,6 +363,8 @@ Ou escalonamento circular. Esse algoritmo atribui a cada processo um tempo máxi
 
 *O retorno médio pode ser maior, porém o tempo de resposta é maior!* É a socialização do processador.
 
+![image-20210402112416167](../../imgs/3_Periodo/image-20210402112416167.png)
+
 ##### Filas de prioridades
 
 Precisamos de prioridades para os processos, logo é feita uma mesclagem de round-robin com prioridades. Processos com prioridades iguais são executados em round-robin, o resto segue na prioridade.
@@ -374,7 +377,7 @@ Precisamos de prioridades para os processos, logo é feita uma mesclagem de roun
 
 #### Exercício de fila de prioridades
 
-<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Fila_Prioridades.png" style="width:45%"><img src="../../imgs/3_Periodo/Sistemas_Operacionais/Resultado_Fila_Prioridade.png" style="width:55%">
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Fila_Prioridades.png" style="width:45%"><img src="../../imgs/3_Periodo/Sistemas_Operacionais/Resultado_Fila_Prioridade.png" style="width:%"> 
 
 #### Sistemas de tempo real
 
@@ -388,7 +391,7 @@ Antes de aceitar o processo precisa decidir se é possível escalonar em tempo r
 
 "Nada muda". Nesse algoritmo cada processo tem prioridade fixa relativa à sua frequência. *Frequencia = período/total*. Ou seja, quem for executar mais vezes, com um ciclo mais curto, tem prioridade.
 
-<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Taxa_Monotonica.png" style="width:55%">
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Taxa_Monotonica.png" style="width:70%">
 
 ---
 
@@ -432,7 +435,7 @@ Cenário "simples":
   - Estrutura única de escalonamento;
   - Eventos e interrupções: uso do algoritmo escolhido.
 
-<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Fila_Multiprocessador.png" style="width:55%">
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Fila_Multiprocessador.png" style="width:70%">
 
 Sobre o exemplo de cima:
 
@@ -566,7 +569,7 @@ Porém, essa única verificação - if(cont==0) - pode ocupar o tempo do *quantu
 
 #### Semáforos
 
-Resolve o problema anterior. Variáveis especiais (de sistema) para controlar o número de sinais pendentes. Só permite duas operações indivisíveis (não tem como dividir a operação no meio, tem q começar e terminar): 
+Resolve o problema anterior. Variáveis especiais (de sistema) para controlar o número de sinais pendentes. Só permite duas operações indivisíveis (não tem como dividir a operação no meio, tem que começar e terminar): 
 
 - Up (Incrementar o sinal);
 - Down (Testar o sinal).
@@ -639,7 +642,7 @@ Professor é escritor, e aluno é leitor.
 
 Outro exemplo é uma reunião no teams. Uma tela compartilhada é manipulada pelo proprietário, e somente visualizada pelos outros da reunião.
 
-Premissa apra solução básica: Leitores novos podem entrar se já há um ou mais leitores. Escritores entram se os dados estiverem totalmente liberados.
+Premissa para solução básica: Leitores novos podem entrar se já há um ou mais leitores. Escritores entram se os dados estiverem totalmente liberados.
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Solucao-Semaforo.png" style="width:70%">
 
@@ -736,3 +739,90 @@ Linux e Windows utilizam. Enfia a cabeça na areia e finja que não há nenhum p
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Algoritmo_Avestruz.png" style="width:50%">
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Chamadas de sistema são procedimentos disponibilizados pela API do sistema operacional para a requisição de serviços por parte dos usuários (programas).
+
+   Somente no modo kernel é possível a comunicação com o hardware, logo é preciso uma chamada de sistema para o kernel executar (em modo kernel) a operação desejada. Por exemplo, alocação de memória, uso de periféricos, criação e finalização de processos, entre outros.
+
+2. No sistema de tempo compartilhado é necessário que os processos sejam independêntes para uma boa eficiência. Logo, precisamos de um PCB para representar e armazenar todas as informações associadas a cada processo de forma independênte.
+
+3. Processos que estão em *bloqueio* estão esperando "algo que não é dele", ou seja, ele tem algum impedimento, esperando algo recurso externo à esse processo para poder continuar sua execução. Processos que estão na fila de prontos já estão totalmente prontos para serem executados, sem nenhum impedimento.
+
+4. **Arquitetura monolítica:** Estrutura única, masisa, a grosso modo é só o *main.* É executado um único programa em modo kernel, com uma coleção de rotinas (métodos). Se ta tudo junto e misturado, todas as rotinas estão sempre disponíveise visíveis para todos. A desvantagem disso tudo é que um grande bloco de código dificulta o entendimento e manutenção do sistema, e uma falha boba pode derrubar todo o SO. 
+
+   - Exemplo: Microsoft MS-DOS.
+
+   **Sistemas em camadas:** Divide o Kernel em camadas independentes, com funções específicas. Existe uma hierarquia entre essas camadas, e a comunicação entre elas depende da hierarquia. A vantagem é que essa hierarquia proporciona uma maior segurança. Por outro lado pelo mesmo motivo essa arquitetura tende a ser mais lenta, pois a comunicação tem que trafegar entre várias camadas para alcançar seus objetivos.
+
+   - Exemplo: MULTICS - Deu origem ao UNIX. Hoje nenhum SO é inteiramente arquitetado dessa forma, geralmente esse tipo de arquitetura é usado como subsistemas.
+
+   **Microkernel:** É um Kernel que executa só as funções básicas, *é o kernel menor possível.* A ideia é só é usado como modo kernel, ou seja, para comunicação com o hardware, as outras coisas são executadas como serviço. *"Tudo terceirizado - User mode"*. Como alternativa para diminuir ao máximo o tamanho da parte principal do sistema, delegando o resto, deixando com os serviços (programas/utilitários/softwares). O sistema é composto em cima do microkernel. 
+
+   - Exemplo: Minix. Apesar de ter alguns exemplos ainda é dificil achar hoje. O kernel linux pode ser considerado como microkernel, mas para muitos essa definição não se aplica.
+
+   **Cliente/Servidor:** Sistemas em rede. Variação de microkernel por ser a mesma ideia de delegar/distribuir as funções. Algumas funções vão ser providas pela rede, vindas de outro computador. Ou seja, temos os prestadores de serviço (servidores) e usuários de serviço (consumidores). Comunicação por meio de mensagens, entre as máquinas da rede (Client, Process server, File server...). 
+
+   - Praticamente todo SI que usamos hoje é um cliente/servidor, pela "onipresença da rede". Sistema na web e computação em nuvem. Exemplos: Laboratório da PUC, Microsoft Teams, entre muitos outros.
+
+   **Máquinas virtuais (VM):** Cópia exata do hardware, basicamente faz a tradução do hardware desejado, para o hardware "real" da máquina que está rodando. Tradicionalmente utilizada para possibilitar compatibilidade entre sistemas. 
+
+   - Exemplos: Java roda em um VM; Emulador; Muito utilizado em computação em nuvem.
+
+   **Exonúcleos:** Em vez de *clonar* a máquina como na arquitetura anterior, esse sistema divide o hardware em vários kernels, da para cada usuário um subconjunto de recursos. 
+
+   - Computação em nuvem geralmente é assim, a cada solicitação de criação de uma máquina, os recursos do hardware são divididos e parte dele é usado em cada nova máquina.
+
+5. Um sistema de tempo real é caracterizado pela necessidade de cumprimento de prazos, ou seja, possui restrição para a execução dos processos. Exemplo: Controle de sinais de trânsito, radas de aeroporto, entre outros. É muito comum em sistemas de monitoramento. Podemos dizer que a execução de processos nesse sistema *acontece no tempo do "mundo".*
+
+   Antes da execução dos processos em um sistema de tempo real serem executados, é calculada a possibilidade de sua execução, para saber se é possível cumprir os prazos necessários daquele sistema. Logo, só é escalonável quando há previsibilidade do tempo de execução e chegada das tarefas, para que se possa determinar se o conjunto de processos pode ser executado, ou não no tempo previsto. Em outras palavras, determinar se o conjunto de processos é escalonável, ou não.
+
+6. Thread é uma forma de um processo dividir a si mesmo em duas ou mais tarefas que podem ser executadas concorrencialemente. Ou seja, dividimos as tarefas para serem executadas em threads diferentes, que por sua vez possuem seus próprios recursos, como registradores, pilhas... mas acessam os mesmo dados e recursos.
+
+   Dessa forma podemos fazer com que vários processos sejam executados ao mesmo tempo, com compartilhamento e economia de recursos (apesar de ter um maior consumo de recursos de gerência). Como consequência de tudo isso, temos o ganho de tempo na execução dos processos.
+
+   Exemplo: Os navegadores (browsers). Podemos fazer o download de vários arquivos e ainda continuar interagindo e trafegando entre as páginas da web enquanto esses arquivos estão sendo carregados.
+
+7. a) Alternância estrita
+
+   Essa abordagem funciona e é simples de implementar, porém não garante desempenho, o sistema sempre vai executar no tempo do processo mais lento, ocupando o processador de forma inútil.
+
+   b) Semáforos
+
+   As únicas duas operações possível são executadas em modo kernal, e sem interrupções do sistema, ou seja, essas duas operações são indivisíveis, uma vez iniciada, ela é finalizada. É eficiente e simples de implementar, porém deve ser realizada com extremo cuidado, pois qualquer erro mínimo de lógica pode fazer o sistema não funcionar, além de ser difícil de fazer o tracing e depuração desses erros.
+
+   c) Monitores
+
+   Monitores são uma solução com um alto nível de abstração e providas pela linguagem, ou seja, basicamente nós determinamos uma região critica como região monitorada, e o monitor já garante uma exclusão mútua "automática", sem a possibilidade de erro lógico de implementação, pois a linguagem que faz esse controle. O ponto negativo é que depende da linguagem de programação, nem todas possuem monitores.
+
+8. 

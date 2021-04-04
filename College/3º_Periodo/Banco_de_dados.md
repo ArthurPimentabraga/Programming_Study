@@ -139,7 +139,7 @@ Coleção de ferramentas conceituais para descrição dos dados, seus relacionam
 
 ##### Entidades fracas
 
-- Sem chave própria (depende da entidade forte). Possúi uma chave parcial;
+- Sem chave própria (depende da entidade forte). Possui uma chave parcial;
 - Instâncias identificadas por meio de relacionamento com entidades de outro tipo (identificador, junto com os valores de alguns atributos (chave parcial);
 - Representação: Retângulo duplo;
 - Ex: Banco (Entidade forte) - Agência (Entidade fraca)
