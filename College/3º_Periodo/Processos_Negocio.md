@@ -274,3 +274,10 @@ https://camunda.com/bpmn/reference/#events-escalation
 ## Aula 7 - 29/03 - "Presencial"
 
 #### Exercício avaliativo 
+
+---
+
+## Aula 8 - 05/04 - "Presencial"
+
+#### Exercício avaliativo - Cadeia de valores
+

@@ -77,6 +77,7 @@ Primeira aula do semestre ja começa com uma abertura de fogos de artifício com
 - Se ta tudo junto e misturado todas as rotinas estão sempre disponíveis e visíveis. 
 - Manutenção e entendimento complicado.
 - Uma falha boba pode derrubar o SO todo.
+- Exemplo: Microsoft MS-DOS.
 
 **Sistemas em camadas:** Dividir o Kernel em camadas independentes, com funções específicas.
 
@@ -91,7 +92,7 @@ Primeira aula do semestre ja começa com uma abertura de fogos de artifício com
 - Só é usado como modo kernel. Para comunicação com o hardware.
 - As outras coisas são executadas como serviço. *"Tudo terceirizado - User mode"*.
 - Como alternativa para diminuir ao máximo o tamanho da parte principal do sistema, delegando o resto, deixando com os serviços (programas/utilitários/softwares). O sistema é composto em cima do microkernel.
-- Muito dificil achar hoje, nem o kernel linux é definido como microkernel.
+- Exemplo: Minix. Apesar de ter alguns exemplos ainda é dificil achar hoje. O kernel linux pode ser considerado como microkernel, mas para muitos essa definição não se aplica.
 
 **Sistemas cliente/servidor:** Sistemas em rede. Variação de microkernel, por ser a mesma ideia de delegar/distribuir as funções. Algumas funções vão ser providas pela rede, vindas de outro computador.
 
@@ -739,90 +740,102 @@ Linux e Windows utilizam. Enfia a cabeça na areia e finja que não há nenhum p
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Algoritmo_Avestruz.png" style="width:50%">
 
+---
 
+## Aula 15 - 05/04
 
+#### Dúvidas para prova
 
+---
 
+## Revisão
 
+#### Pergunta 1
 
+**O que é uma chamada de sistema? Qual a relação entre chamadas de sistema e execução em modo kernel?**
 
+Chamadas de sistema são procedimentos disponibilizados pela API do sistema operacional para a requisição de serviços por parte dos usuários (programas). Somente no modo kernel é possível a comunicação com o hardware, logo é preciso uma chamada de sistema para o kernel executar (em modo kernel) a operação desejada. Por exemplo, alocação de memória, uso de periféricos, criação e finalização de processos, entre outros.
 
+#### Pergunta 2
 
+**Por que é necessário um bloco de controle do processo (PCB) para cada processo nos sistemas de tempo compartilhado?**
 
+No sistema de tempo compartilhado é necessário que os processos sejam independêntes para uma boa eficiência. Logo, precisamos de um PCB para representar e armazenar todas as informações associadas a cada processo de forma independênte.
 
+#### Pergunta 3
 
+**Qual a diferença entre processos que estão em bloqueio e processos na fila de prontos?**
 
+Processos que estão em bloqueio estão esperando "algo que não é dele", ou seja, ele tem algum impedimento, esperando algo recurso externo à esse processo para poder continuar sua execução. Processos que estão na fila de prontos já estão totalmente prontos para serem executados, sem nenhum impedimento.
 
+#### Pergunta 4
 
+**Escolha duas arquiteturas de sistemas operacionais e faça um resumo sobre elas, apontando vantagens, desvantagens e exemplos de uso de cada uma. (ou faça sobre todas, melhor ainda!)**
 
+- Arquitetura monolítica: Estrutura única, masisa, a grosso modo é só o main. É executado um único programa em modo kernel, com uma coleção de rotinas (métodos). Se ta tudo junto e misturado, todas as rotinas estão sempre disponíveise visíveis para todos. A desvantagem disso tudo é que um grande bloco de código dificulta o entendimento e manutenção do sistema, e uma falha boba pode derrubar todo o SO. 
+  - Exemplo: Microsoft MS-DOS.
+- Sistemas em camadas: Divide o Kernel em camadas independentes, com funções específicas. Existe uma hierarquia entre essas camadas, e a comunicação entre elas depende da hierarquia. A vantagem é que essa hierarquia proporciona uma maior segurança. Por outro lado pelo mesmo motivo essa arquitetura tende a ser mais lenta, pois a comunicação tem que trafegar entre várias camadas para alcançar seus objetivos.
+  - Exemplo: MULTICS - Deu origem ao UNIX. Hoje nenhum SO é inteiramente arquitetado dessa forma, geralmente esse tipo de arquitetura é usado como subsistemas.
+- Microkernel: É um Kernel que executa só as funções básicas, é o kernel menor possível. A ideia é só é usado como modo kernel, ou seja, para comunicação com o hardware, as outras coisas são executadas como serviço. "Tudo terceirizado - User mode". Como alternativa para diminuir ao máximo o tamanho da parte principal do sistema, delegando o resto, deixando com os serviços (programas/utilitários/softwares). O sistema é composto em cima do microkernel.
+  - Exemplo: Minix. Apesar de ter alguns exemplos ainda é dificil achar hoje. O kernel linux pode ser considerado como microkernel, mas para muitos essa definição não se aplica.
+- Cliente/Servidor: Sistemas em rede. Variação de microkernel por ser a mesma ideia de delegar/distribuir as funções. Algumas funções vão ser providas pela rede, vindas de outro computador. Ou seja, temos os prestadores de serviço (servidores) e usuários de serviço (consumidores). Comunicação por meio de mensagens, entre as máquinas da rede (Client, Process server, File server...). Praticamente todo SI que usamos hoje é um cliente/servidor, pela "onipresença da rede". Sistema na web e computação em
+  nuvem. 
+  - Exemplos: Laboratório da PUC, Microsoft Teams, entre
+    muitos outros.
+- Máquinas virtuais (VM): Cópia exata do hardware, basicamente faz a tradução do hardware desejado, para o hardware "real" da máquina que está rodando. Tradicionalmente utilizada para possibilitar compatibilidade entre sistemas.
+  - Exemplos: Java roda em um VM; Emulador; Muito utilizado em
+    computação em nuvem.
+- Exonúcleos: Em vez de clonar a máquina como na arquitetura anterior, esse sistema divide o hardware em vários kernels, da para cada usuário um subconjunto de recursos. 
+  - Computação em nuvem geralmente é assim, a cada solicitação de criação de uma máquina, os recursos do hardware são divididos e parte dele é usado em cada nova máquina.
 
+#### Pergunta 5
 
+**O que é um sistema de tempo real? Quando dizemos que um sistema de tempo real é escalonável?**
 
+Um sistema de tempo real é caracterizado pela necessidade de cumprimento de prazos, ou seja, possui restrição para a execução dos processos. Exemplo: Controle de sinais de trânsito, radas de aeroporto, entre outros. É muito comum em sistemas de monitoramento. Podemos dizer que a execução de processos nesse sistema acontece no tempo do "mundo". 
 
+Antes da execução dos processos em um sistema de tempo real serem executados, é calculada a possibilidade de sua execução, para saber se é possível cumprir os prazos necessários daquele sistema. Logo, só é escalonável quando há previsibilidade do tempo de execução e chegada das tarefas, para que se possa determinar se o conjunto de processos pode ser executado, ou não no tempo previsto. Em outras palavras, determinar se o conjunto de processos é escalonável, ou não.
 
+A soma dos requisidos de tempo real não podem dar mais que 1, pq se der mais não vai conseguir cumprir o prazo.
 
+#### Pergunta 6
 
+**Considere um sistema de tempo real com duas chamadas de voz de periodicidade de 5ms cada, com tempo de uso de CPU de 1ms por chamada, e um stream de vídeo de periodicidade 33ms com tempo de CPU de 11ms por execução. Mostre como ficariam os 3 primeiros ciclos de execução destes processos em um sistema usando RMS e EDF.**
 
+![image-20210405204138617](../../imgs/3_Periodo/image-20210405204138617.png)
 
+#### Pergunta 7
 
+**Como threads podem ajudar um programa a executar mais eficientemente? Dê um exemplo, evitando os que já foram mencionados em sala de aula.**
 
+Thread é uma forma de um processo dividir a si mesmo em duas ou mais tarefas que podem ser executadas concorrencialemente. Ou seja, dividimos as tarefas para serem executadas em threads diferentes, que por sua vez possuem seus próprios recursos, como registradores, pilhas... mas acessam os mesmo dados e recursos. 
 
+Dessa forma podemos fazer com que vários processos sejam executados ao mesmo tempo, com compartilhamento e economia de recursos (apesar de ter um maior consumo de recursos de gerência). Como consequência de tudo isso, temos o ganho de tempo na execução dos processos. 
 
+Exemplo: Os navegadores (browsers). Podemos fazer o download de vários arquivos e ainda continuar interagindo e trafegando entre as páginas da web enquanto esses arquivos estão sendo carregados.
 
+#### Pergunta 8
 
+**Aponte uma vantagem e uma desvantagem de cada abordagem para a implementação de exclusões mútuas:**
 
-1. Chamadas de sistema são procedimentos disponibilizados pela API do sistema operacional para a requisição de serviços por parte dos usuários (programas).
+a) Alternância estrita
 
-   Somente no modo kernel é possível a comunicação com o hardware, logo é preciso uma chamada de sistema para o kernel executar (em modo kernel) a operação desejada. Por exemplo, alocação de memória, uso de periféricos, criação e finalização de processos, entre outros.
+Essa abordagem funciona e é simples de implementar, porém não garante desempenho, o sistema sempre vai executar no tempo do processo mais lento, ocupando o processador de forma inútil.
 
-2. No sistema de tempo compartilhado é necessário que os processos sejam independêntes para uma boa eficiência. Logo, precisamos de um PCB para representar e armazenar todas as informações associadas a cada processo de forma independênte.
+b) Semáforos
 
-3. Processos que estão em *bloqueio* estão esperando "algo que não é dele", ou seja, ele tem algum impedimento, esperando algo recurso externo à esse processo para poder continuar sua execução. Processos que estão na fila de prontos já estão totalmente prontos para serem executados, sem nenhum impedimento.
+ As únicas duas operações possível são executadas em modo kernal, e sem interrupções do sistema, ou seja, essas duas operações são indivisíveis, uma vez iniciada, ela é finalizada. É eficiente e simples de implementar, porém deve ser realizada com extremo cuidado, pois qualquer erro mínimo de lógica pode fazer o sistema não funcionar, além de ser difícil de fazer o tracing e depuração desses erros.
 
-4. **Arquitetura monolítica:** Estrutura única, masisa, a grosso modo é só o *main.* É executado um único programa em modo kernel, com uma coleção de rotinas (métodos). Se ta tudo junto e misturado, todas as rotinas estão sempre disponíveise visíveis para todos. A desvantagem disso tudo é que um grande bloco de código dificulta o entendimento e manutenção do sistema, e uma falha boba pode derrubar todo o SO. 
+c) Monitores
 
-   - Exemplo: Microsoft MS-DOS.
+Monitores são uma solução com um alto nível de abstração e providas pela linguagem, ou seja, basicamente nós determinamos uma região critica como região monitorada, e o monitor já garante uma exclusão mútua "automática", sem a possibilidade de erro lógico de implementação, pois a linguagem que faz esse controle. O ponto negativo é que depende da linguagem de programação, nem todas possuem monitores.
 
-   **Sistemas em camadas:** Divide o Kernel em camadas independentes, com funções específicas. Existe uma hierarquia entre essas camadas, e a comunicação entre elas depende da hierarquia. A vantagem é que essa hierarquia proporciona uma maior segurança. Por outro lado pelo mesmo motivo essa arquitetura tende a ser mais lenta, pois a comunicação tem que trafegar entre várias camadas para alcançar seus objetivos.
+#### Pergunta 9
 
-   - Exemplo: MULTICS - Deu origem ao UNIX. Hoje nenhum SO é inteiramente arquitetado dessa forma, geralmente esse tipo de arquitetura é usado como subsistemas.
+**Analise a descrição dos sistemas de software a seguir e relacione cada um dos sistemas a um modelo de comunicação interprocessos estudado, apresentando as características similares em cada caso.**
 
-   **Microkernel:** É um Kernel que executa só as funções básicas, *é o kernel menor possível.* A ideia é só é usado como modo kernel, ou seja, para comunicação com o hardware, as outras coisas são executadas como serviço. *"Tudo terceirizado - User mode"*. Como alternativa para diminuir ao máximo o tamanho da parte principal do sistema, delegando o resto, deixando com os serviços (programas/utilitários/softwares). O sistema é composto em cima do microkernel. 
+**a) A receita federal libera mensalmente um novo lote de restituição de imposto de renda. Cerca de 25 milhões de contribuintes têm interesse em verificar, via Web, se suas restituições foram liberadas.** 
 
-   - Exemplo: Minix. Apesar de ter alguns exemplos ainda é dificil achar hoje. O kernel linux pode ser considerado como microkernel, mas para muitos essa definição não se aplica.
+**b) Para o cômputo do resultado das eleições, devem ser enviados ao servidor e somados ao resultado os resultados parciais de todas as seções eleitorais do país. Os eleitores, a imprensa e os próprios candidatos podem consultar o resultado em tempo real.** 
 
-   **Cliente/Servidor:** Sistemas em rede. Variação de microkernel por ser a mesma ideia de delegar/distribuir as funções. Algumas funções vão ser providas pela rede, vindas de outro computador. Ou seja, temos os prestadores de serviço (servidores) e usuários de serviço (consumidores). Comunicação por meio de mensagens, entre as máquinas da rede (Client, Process server, File server...). 
-
-   - Praticamente todo SI que usamos hoje é um cliente/servidor, pela "onipresença da rede". Sistema na web e computação em nuvem. Exemplos: Laboratório da PUC, Microsoft Teams, entre muitos outros.
-
-   **Máquinas virtuais (VM):** Cópia exata do hardware, basicamente faz a tradução do hardware desejado, para o hardware "real" da máquina que está rodando. Tradicionalmente utilizada para possibilitar compatibilidade entre sistemas. 
-
-   - Exemplos: Java roda em um VM; Emulador; Muito utilizado em computação em nuvem.
-
-   **Exonúcleos:** Em vez de *clonar* a máquina como na arquitetura anterior, esse sistema divide o hardware em vários kernels, da para cada usuário um subconjunto de recursos. 
-
-   - Computação em nuvem geralmente é assim, a cada solicitação de criação de uma máquina, os recursos do hardware são divididos e parte dele é usado em cada nova máquina.
-
-5. Um sistema de tempo real é caracterizado pela necessidade de cumprimento de prazos, ou seja, possui restrição para a execução dos processos. Exemplo: Controle de sinais de trânsito, radas de aeroporto, entre outros. É muito comum em sistemas de monitoramento. Podemos dizer que a execução de processos nesse sistema *acontece no tempo do "mundo".*
-
-   Antes da execução dos processos em um sistema de tempo real serem executados, é calculada a possibilidade de sua execução, para saber se é possível cumprir os prazos necessários daquele sistema. Logo, só é escalonável quando há previsibilidade do tempo de execução e chegada das tarefas, para que se possa determinar se o conjunto de processos pode ser executado, ou não no tempo previsto. Em outras palavras, determinar se o conjunto de processos é escalonável, ou não.
-
-6. Thread é uma forma de um processo dividir a si mesmo em duas ou mais tarefas que podem ser executadas concorrencialemente. Ou seja, dividimos as tarefas para serem executadas em threads diferentes, que por sua vez possuem seus próprios recursos, como registradores, pilhas... mas acessam os mesmo dados e recursos.
-
-   Dessa forma podemos fazer com que vários processos sejam executados ao mesmo tempo, com compartilhamento e economia de recursos (apesar de ter um maior consumo de recursos de gerência). Como consequência de tudo isso, temos o ganho de tempo na execução dos processos.
-
-   Exemplo: Os navegadores (browsers). Podemos fazer o download de vários arquivos e ainda continuar interagindo e trafegando entre as páginas da web enquanto esses arquivos estão sendo carregados.
-
-7. a) Alternância estrita
-
-   Essa abordagem funciona e é simples de implementar, porém não garante desempenho, o sistema sempre vai executar no tempo do processo mais lento, ocupando o processador de forma inútil.
-
-   b) Semáforos
-
-   As únicas duas operações possível são executadas em modo kernal, e sem interrupções do sistema, ou seja, essas duas operações são indivisíveis, uma vez iniciada, ela é finalizada. É eficiente e simples de implementar, porém deve ser realizada com extremo cuidado, pois qualquer erro mínimo de lógica pode fazer o sistema não funcionar, além de ser difícil de fazer o tracing e depuração desses erros.
-
-   c) Monitores
-
-   Monitores são uma solução com um alto nível de abstração e providas pela linguagem, ou seja, basicamente nós determinamos uma região critica como região monitorada, e o monitor já garante uma exclusão mútua "automática", sem a possibilidade de erro lógico de implementação, pois a linguagem que faz esse controle. O ponto negativo é que depende da linguagem de programação, nem todas possuem monitores.
-
-8. 
+**c) Um gravador de discos Blu-ray deve ler dados do HD do sistema a uma taxa tal que permita que a escrita no disco óptico seja feita sem interrupções.** 
