@@ -185,3 +185,12 @@ Restrições
 
 #### Modelo relacional
 
+---
+
+## Aula 7 - 07/04
+
+![image-20210407195604770](../../imgs/3_Periodo/image-20210407195604770.png)
+
+![image-20210407200047022](../../imgs/3_Periodo/image-20210407200047022.png)
+
+![image-20210407201032124](../../imgs/3_Periodo/image-20210407201032124.png)
