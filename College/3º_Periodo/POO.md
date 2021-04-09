@@ -293,3 +293,16 @@ Essa especialização tradicionalmente é implementada por meio do mecanismo de 
 <img src="../../imgs/3_Periodo/POO/Heranca-UML.png" style="width:90%">
 
 *Todo construtor da classe filha chama o da mãe, só devemos escolher qual construtor usar!* A palavra *super* representa o construtor da classe mãe, e eles são diferenciados pela parametrização.
+
+---
+
+## Aula 16 - 08/04
+
+#### Exercício prático
+
+---
+
+## Aula 17 - 09/04
+
+#### Polimorfismo
+
