@@ -306,3 +306,4 @@ Essa especialização tradicionalmente é implementada por meio do mecanismo de 
 
 #### Polimorfismo
 
+Método abstract: É o **método** de uma classe **abstrata** que não possui implementação. Na classe **abstrata**, é definido o **método abstrato** com palavra reservada abstract e sua assinatura. Isso é implementado quando o código depende 100% de particulares/regras das classes filhas.
