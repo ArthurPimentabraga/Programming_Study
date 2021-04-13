@@ -194,3 +194,13 @@ Restrições
 ![image-20210407200047022](../../imgs/3_Periodo/image-20210407200047022.png)
 
 ![image-20210407201032124](../../imgs/3_Periodo/image-20210407201032124.png)
+
+#### Integridade Referencial
+
+![image-20210412182925042](../../imgs/3_Periodo/image-20210412182925042.png)
+
+![image-20210412183622623](../../imgs/3_Periodo/image-20210412183622623.png)
+
+![image-20210412184432729](../../imgs/3_Periodo/image-20210412184432729.png)
+
+![image-20210412184611141](../../imgs/3_Periodo/image-20210412184611141.png)

@@ -281,3 +281,7 @@ https://camunda.com/bpmn/reference/#events-escalation
 
 #### Exercício avaliativo - Cadeia de valores
 
+---
+
+## Aula 9 - 12/04 - "Presencial"
+

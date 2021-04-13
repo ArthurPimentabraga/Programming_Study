@@ -839,3 +839,12 @@ Monitores são uma solução com um alto nível de abstração e providas pela l
 **b) Para o cômputo do resultado das eleições, devem ser enviados ao servidor e somados ao resultado os resultados parciais de todas as seções eleitorais do país. Os eleitores, a imprensa e os próprios candidatos podem consultar o resultado em tempo real.** 
 
 **c) Um gravador de discos Blu-ray deve ler dados do HD do sistema a uma taxa tal que permita que a escrita no disco óptico seja feita sem interrupções.** 
+
+---
+
+## Aula 16 - 12/04
+
+#### Implementação prática de threads
+
+Classe Thread do java :)
+
