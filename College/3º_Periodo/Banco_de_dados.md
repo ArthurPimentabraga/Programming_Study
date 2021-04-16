@@ -204,3 +204,29 @@ Restrições
 ![image-20210412184432729](../../imgs/3_Periodo/image-20210412184432729.png)
 
 ![image-20210412184611141](../../imgs/3_Periodo/image-20210412184611141.png)
+
+#### Normalização
+
+![image-20210414175943051](../../imgs/3_Periodo/image-20210414175943051.png)
+
+![image-20210414180102274](../../imgs/3_Periodo/image-20210414180102274.png)
+
+![image-20210414180240917](../../imgs/3_Periodo/image-20210414180240917.png)
+
+![image-20210414180306610](../../imgs/3_Periodo/image-20210414180306610.png)
+
+![image-20210414181354636](../../imgs/3_Periodo/image-20210414181354636.png)
+
+![image-20210414181456137](../../imgs/3_Periodo/image-20210414181456137.png)
+
+![image-20210414181800047](../../imgs/3_Periodo/image-20210414181800047.png)
+
+![image-20210414182046335](../../imgs/3_Periodo/image-20210414182046335.png)
+
+![image-20210414182226549](../../imgs/3_Periodo/image-20210414182226549.png)
+
+![image-20210414182335516](../../imgs/3_Periodo/image-20210414182335516.png)
+
+![image-20210414182457309](../../imgs/3_Periodo/image-20210414182457309.png)
+
+![image-20210414182621506](../../imgs/3_Periodo/image-20210414182621506.png)

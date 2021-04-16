@@ -306,4 +306,55 @@ Essa especialização tradicionalmente é implementada por meio do mecanismo de 
 
 #### Polimorfismo
 
-Método abstract: É o **método** de uma classe **abstrata** que não possui implementação. Na classe **abstrata**, é definido o **método abstrato** com palavra reservada abstract e sua assinatura. Isso é implementado quando o código depende 100% de particulares/regras das classes filhas.
+Definimos Polimorfismo como um princípio a partir do qual as classes derivadas de uma única classe base são capazes de invocar os métodos que, embora apresentem a mesma assinatura, comportam-se de maneira diferente para cada uma das classes derivadas.
+
+Com o **Polimorfismo**, os mesmos atributos e objetos podem ser utilizados em objetos distintos, porém, com implementações lógicas diferentes.
+
+Em outras palavras: O polimorfismo permite que referências de tipos de classes mais abstratas representem o comportamento das classes concretas que referenciam. Assim, é possível tratar vários tipos de maneira homogênea. O termo polimorfismo é originário do grego e significa "muitas formas". 
+
+**Método abstract:** É o método de uma classe **abstrata** que não possui implementação. Na classe **abstrata**, é definido o **método abstrato** com palavra reservada abstract e sua assinatura. Isso é implementado quando o código depende 100% de particulares/regras das classes filhas. *É só uma ideia*.
+
+---
+
+## Aula 18 - 15/04
+
+#### Exercício prático
+
+---
+
+## Aula 19 - 16/04
+
+#### Herança múltipla
+
+Capacidade de uma classe herdar de duas ou mais superclasses. Ou seja, combinar características de várias classes na definição de uma nova classe.
+
+*Exemplo hipotético: Uma pessoa é um mamífero e um bípede.*
+
+![image-20210416200715502](../../imgs/3_Periodo/image-20210416200715502.png)
+
+*O que é foodtruck? Herança múltipla das calsses Caminhão e Restaurante :)*
+
+- Porém se herda de duas, depende de duas, ou seja, aumenta o acoplamento.
+
+- Outro problema é a ambiguidade, piora o encapsulamento: 
+
+![image-20210416202157077](../../imgs/3_Periodo/image-20210416202157077.png)
+
+Mesmo se vc fizer um Override para unificar esse avançar, isso é ruim pois piora a abstração, muda a regra fixa da classe mãe.
+
+E...
+
+![image-20210416203207530](../../imgs/3_Periodo/image-20210416203207530.png)
+
+##### Problema do diamante
+
+Qual equals ele vai  usar?
+
+![The perfect tyoe of Generalization And Specialization In Class Diagram](../../imgs/3_Periodo/class-multiple-inheritance-diamond.png)
+
+##### Solução
+
+Java nem permite herança multipla :)
+
+![image-20210416203849075](../../imgs/3_Periodo/image-20210416203849075.png)
+
