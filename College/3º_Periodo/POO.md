@@ -354,7 +354,9 @@ Qual equals ele vai  usar?
 
 ##### Solução
 
-Java nem permite herança multipla :)
+*O ornitorrinco é a prova de uma herança divina. Ou seja, há solução :)*
+
+Porém, nem Java nem permite herança multipla :)
 
 ![image-20210416203849075](../../imgs/3_Periodo/image-20210416203849075.png)
 
