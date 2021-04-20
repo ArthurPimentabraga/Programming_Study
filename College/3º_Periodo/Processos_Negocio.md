@@ -285,3 +285,12 @@ https://camunda.com/bpmn/reference/#events-escalation
 
 ## Aula 9 - 12/04 - "Presencial"
 
+#### Exercício avaliativo
+
+---
+
+## Aula 10 - 19/04 - "Presencial"
+
+**Visão**: Plenjamento à longo prazo, mas não é um passo a passo, é para inspirar.
+
+#### Exercício avaliativo - Erros na Gestão de Processos

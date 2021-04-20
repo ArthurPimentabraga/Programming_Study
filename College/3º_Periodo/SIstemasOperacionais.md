@@ -848,3 +848,58 @@ Monitores são uma solução com um alto nível de abstração e providas pela l
 
 Classe Thread do java :)
 
+##### Sincronização de threads
+
+É necessário tratar os cenários com disputa, concorrência de threads. Se dois consumidores quiserem, ao mesmo tempo, acessar os mesmos recursos e dados, vai dar pau.
+
+Basicamente utiliza-se semáforo, monitores... 
+
+---
+
+## Aula 17 - 19/04
+
+#### Gerência de memória
+
+![image-20210419200757388](../../imgs/3_Periodo/image-20210419200757388.png)
+
+Gerência de trocas -> Ta usando muito uma variável específica, então o sistema joga para a cache, entre outros exemplos.
+
+![image-20210419202035737](../../imgs/3_Periodo/image-20210419202035737.png)
+
+O SO para fazer qualquer coisa na memória, precisa de todos os tópicos acima, ou seja, depende do processador. 
+
+##### Conceitos
+
+![image-20210419202523873](../../imgs/3_Periodo/image-20210419202523873.png)
+
+- P = Pilha
+- D = Dados 
+- C = Código
+
+Cada processo tem essas três áreas de forma independênte, cada processo só sabe dele mesmo.
+
+![image-20210419202735264](../../imgs/3_Periodo/image-20210419202735264.png)
+
+Para um processo entrar em execução, ele precisa estar na memória principal, na memória fisica.
+
+![image-20210419202906630](../../imgs/3_Periodo/image-20210419202906630.png)
+
+A primeira coisa que o SO precisa fazer é o endereçamento de memória para começar a executar o procesos em algum endereço da memória principal. A **MMU** que faz a tradução, o mapeamento do endereço lógico para o físico.
+
+#### Técnicas básicas - Gerência M. Principal
+
+##### Monoprogramação
+
+Somente um processo executa por vez. E temos dois processos na memória (SO + 1 processo).
+
+- Endereçamento simplificado: registrador de base -> Somar o valor da base ao endereço lógico
+
+Exemplo: ![image-20210419203427975](../../imgs/3_Periodo/image-20210419203427975.png)
+
+- Gerência simples, quse inexistente. Porém ineficiênte.
+
+##### Partições fixas
+
+![image-20210419203614474](../../imgs/3_Periodo/image-20210419203614474.png)
+
+![image-20210419203857887](../../imgs/3_Periodo/image-20210419203857887.png)inint
