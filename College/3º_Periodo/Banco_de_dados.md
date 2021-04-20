@@ -189,44 +189,44 @@ Restrições
 
 ## Aula 7 - 07/04
 
-![image-20210407195604770](../../imgs/3_Periodo/image-20210407195604770.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Relacao_dominio.png" style="width:80%">
 
-![image-20210407200047022](../../imgs/3_Periodo/image-20210407200047022.png)
-
-![image-20210407201032124](../../imgs/3_Periodo/image-20210407201032124.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Restricoes_chave.png" style="width:80%">
 
 #### Integridade Referencial
 
-![image-20210412182925042](../../imgs/3_Periodo/image-20210412182925042.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Restricoes_Integridade.png" style="width:80%">
 
-![image-20210412183622623](../../imgs/3_Periodo/image-20210412183622623.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Unique-Key.png" style="width:80%">
 
-![image-20210412184432729](../../imgs/3_Periodo/image-20210412184432729.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Integridade_referencial.png" style="width:80%">
 
-![image-20210412184611141](../../imgs/3_Periodo/image-20210412184611141.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Automatismo_integridade.png" style="width:80%">
+
+<img src="../../imgs/3_Periodo/Banco_Dados/Automatismo_Contexto.png" style="width:80%">
 
 #### Normalização
 
-![image-20210414175943051](../../imgs/3_Periodo/image-20210414175943051.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Normalizacao.png" style="width:80%">
 
-![image-20210414180102274](../../imgs/3_Periodo/image-20210414180102274.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/1Forma_Normal.png" style="width:80%">
 
-![image-20210414180240917](../../imgs/3_Periodo/image-20210414180240917.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Exemplo_1Forma_Normal.png" style="width:80%">
 
-![image-20210414180306610](../../imgs/3_Periodo/image-20210414180306610.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Dependencia_Funcional.png" style="width:80%">
 
-![image-20210414181354636](../../imgs/3_Periodo/image-20210414181354636.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/2Forma_Normal.png" style="width:80%">
 
-![image-20210414181456137](../../imgs/3_Periodo/image-20210414181456137.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Exemplo_2Forma.png" style="width:80%">
 
-![image-20210414181800047](../../imgs/3_Periodo/image-20210414181800047.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Exemplo2_2Forma.png" style="width:80%">
 
-![image-20210414182046335](../../imgs/3_Periodo/image-20210414182046335.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/3Forma_Normal.png" style="width:80%">
 
-![image-20210414182226549](../../imgs/3_Periodo/image-20210414182226549.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Exemplo_3Forma.png" style="width:80%">
 
-![image-20210414182335516](../../imgs/3_Periodo/image-20210414182335516.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Continuacao_3Forma.png" style="width:80%">
 
-![image-20210414182457309](../../imgs/3_Periodo/image-20210414182457309.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Boyce_Codd.png" style="width:80%">
 
-![image-20210414182621506](../../imgs/3_Periodo/image-20210414182621506.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Exemplo_BoyceCodd.png" style="width:80%">

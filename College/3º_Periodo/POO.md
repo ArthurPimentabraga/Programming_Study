@@ -330,27 +330,28 @@ Capacidade de uma classe herdar de duas ou mais superclasses. Ou seja, combinar 
 
 *Exemplo hipotético: Uma pessoa é um mamífero e um bípede.*
 
-![image-20210416200715502](../../imgs/3_Periodo/image-20210416200715502.png)
+Heranca_Multipla
+
+<img src="../../imgs/3_Periodo/POO/Heranca_Multipla.png" style="width:60%">
 
 *O que é foodtruck? Herança múltipla das calsses Caminhão e Restaurante :)*
 
 - Porém se herda de duas, depende de duas, ou seja, aumenta o acoplamento.
-
 - Outro problema é a ambiguidade, piora o encapsulamento: 
 
-![image-20210416202157077](../../imgs/3_Periodo/image-20210416202157077.png)
+<img src="../../imgs/3_Periodo/POO/Problema1_HerancaMultipla.png" style="width:90%">
 
 Mesmo se vc fizer um Override para unificar esse avançar, isso é ruim pois piora a abstração, muda a regra fixa da classe mãe.
 
 E...
 
-![image-20210416203207530](../../imgs/3_Periodo/image-20210416203207530.png)
+<img src="../../imgs/3_Periodo/POO/NaoAcabaPorAi_HerancaMultipla.png" style="width:90%">
 
 ##### Problema do diamante
 
 Qual equals ele vai  usar?
 
-![The perfect tyoe of Generalization And Specialization In Class Diagram](../../imgs/3_Periodo/class-multiple-inheritance-diamond.png)
+<img src="../../imgs/3_Periodo/POO/class-multiple-inheritance-diamond.png" style="width:30%">
 
 ##### Solução
 
@@ -358,5 +359,5 @@ Qual equals ele vai  usar?
 
 Porém, nem Java nem permite herança multipla :)
 
-![image-20210416203849075](../../imgs/3_Periodo/image-20210416203849075.png)
+<img src="../../imgs/3_Periodo/POO/Solucao_HerancaMultipla.png" style="width:80%">
 

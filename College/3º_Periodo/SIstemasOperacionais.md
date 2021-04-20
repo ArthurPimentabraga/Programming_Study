@@ -802,7 +802,7 @@ A soma dos requisidos de tempo real não podem dar mais que 1, pq se der mais n�
 
 **Considere um sistema de tempo real com duas chamadas de voz de periodicidade de 5ms cada, com tempo de uso de CPU de 1ms por chamada, e um stream de vídeo de periodicidade 33ms com tempo de CPU de 11ms por execução. Mostre como ficariam os 3 primeiros ciclos de execução destes processos em um sistema usando RMS e EDF.**
 
-![image-20210405204138617](../../imgs/3_Periodo/image-20210405204138617.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Resposta_Questao6.png" style="width:90%">
 
 #### Pergunta 7
 
@@ -860,17 +860,17 @@ Basicamente utiliza-se semáforo, monitores...
 
 #### Gerência de memória
 
-![image-20210419200757388](../../imgs/3_Periodo/image-20210419200757388.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Gerencia_Memoria.png" style="width:80%">
 
 Gerência de trocas -> Ta usando muito uma variável específica, então o sistema joga para a cache, entre outros exemplos.
 
-![image-20210419202035737](../../imgs/3_Periodo/image-20210419202035737.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Tecnicas_gerencia_trocas.png" style="width:80%">
 
 O SO para fazer qualquer coisa na memória, precisa de todos os tópicos acima, ou seja, depende do processador. 
 
 ##### Conceitos
 
-![image-20210419202523873](../../imgs/3_Periodo/image-20210419202523873.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Conceitos_Gerencia_Memoria.png" style="width:80%">
 
 - P = Pilha
 - D = Dados 
@@ -878,11 +878,11 @@ O SO para fazer qualquer coisa na memória, precisa de todos os tópicos acima, 
 
 Cada processo tem essas três áreas de forma independênte, cada processo só sabe dele mesmo.
 
-![image-20210419202735264](../../imgs/3_Periodo/image-20210419202735264.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Memoria-Fisica.png" style="width:80%">
 
 Para um processo entrar em execução, ele precisa estar na memória principal, na memória fisica.
 
-![image-20210419202906630](../../imgs/3_Periodo/image-20210419202906630.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/MMU.png" style="width:80%">
 
 A primeira coisa que o SO precisa fazer é o endereçamento de memória para começar a executar o procesos em algum endereço da memória principal. A **MMU** que faz a tradução, o mapeamento do endereço lógico para o físico.
 
@@ -894,12 +894,15 @@ Somente um processo executa por vez. E temos dois processos na memória (SO + 1 
 
 - Endereçamento simplificado: registrador de base -> Somar o valor da base ao endereço lógico
 
-Exemplo: ![image-20210419203427975](../../imgs/3_Periodo/image-20210419203427975.png)
+Exemplo: 
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Exemplo_Gerenica_MPrincipal.png" style="width:80%">
 
 - Gerência simples, quse inexistente. Porém ineficiênte.
 
 ##### Partições fixas
 
-![image-20210419203614474](../../imgs/3_Periodo/image-20210419203614474.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Particoes_Fixas.png" style="width:80%">
 
-![image-20210419203857887](../../imgs/3_Periodo/image-20210419203857887.png)inint
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Exemplo_Particoes_Fixas.png" style="width:70%">
+
