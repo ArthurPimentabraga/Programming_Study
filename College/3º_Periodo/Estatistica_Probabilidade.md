@@ -55,9 +55,9 @@ Seja X a distância/tempo entre contagens sucessivas de um processo de Poisson.
   - o tempo entre as chegadas de táxis a uma interseção movimentada.
   - o tempo entre as chegadas de aeronaves a um aeroporto específico.
 
-![image-20210420191831505](../../imgs/3_Periodo/image-20210420191831505.png)
+<img src="../../imgs/3_Periodo/Estatistica/Formula_Exponencial.png" style="width:80%">
 
 Exemplo:
 
-![image-20210420192413156](../../imgs/3_Periodo/image-20210420192413156.png)
+<img src="../../imgs/3_Periodo/Estatistica/Exemplo_Exponencial.png" style="width:80%">
 
