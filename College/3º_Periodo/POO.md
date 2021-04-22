@@ -1,5 +1,5 @@
 ---
-title: Programação orientada por objetos (Puc-Minas - 3º Período)
+<img src="../../imgs/3_Periodo/POO/Exemplo_UsoInterface.png" style="width:80%">title: Programação orientada por objetos (Puc-Minas - 3º Período)
 author: Arthur P. Braga
 ---
 
@@ -360,4 +360,82 @@ Qual equals ele vai  usar?
 Porém, nem Java nem permite herança multipla :)
 
 <img src="../../imgs/3_Periodo/POO/Solucao_HerancaMultipla.png" style="width:80%">
+
+---
+
+## Aula 20 - 22/04
+
+#### Interface
+
+Em seu significado conceitual é a "parte visível de um módulo a outros módulos". Tudo o que é *public* é a interface de uma classe.
+
+- Coesão: A interface deve oferecer um grupo de métodos coerentes;
+- Abstração: Se uma interface é definida e sempre é mantida, o sistema ganha em extensibilidade e em baixo acoplamento. Ou seja, se ela for atualizada... todas as classes que estiverem utilizando ela, utilizarão as atualizações.
+
+Exemplo mundo real: Um controle remoto, a parte visível são todos os botões para o usuário utilizar e controlar a televisão.
+
+##### what is
+
+É uma entidade do nosso projeto usada para definir um protocolo de comportamento que pode ser implementado por qualquer classe em qualquer hierarquia de classes.
+
+- São declaradas, mas não podem ser instanciadas.
+
+- Abstração: implementação fica a cargo de cada especialização da interface.
+
+Basicamente é um contrato que define **tudo o que uma classe deve fazer** se quiser ter um determinado **status**. Ou seja, obrigações que uma classe precisa fazer para ser considerada uma classe válida do tipo definido. Exemplo: Para a classe calculadora ser considerada realmente uma calculadora, ela precisa saber somar, dividir, multiplicar... Ex2: Para a classe Jogo ser considerada um jogo, ela deve saber calcular o preço dele...
+
+O **benefício** é que se temos classes com comportamento similares, logo temos o mesmo conjunto de métodos, mesmo que tenham implementações diferente. 
+
+> Então temos os mesmos métodos, com os mesmos nomes (com a mesma assinatura), porém com implementações particulares e específicos de cada classe que "assina esse contrato", que utiliza a interface. Isso é vantagem por que dessa forma temos uma **comunicação padronizada**. E isso facilita MUITO para o programador. Isso trás:
+>
+> - Flexibilidade
+> - "Polimorfismo"
+> - Baixo acoplamento. Utilizamos os "mesmos comandos" definidos pela interface para várias classes 
+
+##### Aplicação
+
+<img src="../../imgs/3_Periodo/POO/Exemplo_1UsoInterface.png" style="width:80%">
+
+Em Java:
+
+- Possuem prioritariamente declarações (assinaturas) de métodos e atributos constantes (public statis final). *Não é muito recomendável utilizar atributos na interface, aumenta o acoplamento;*
+- Podem incorporar outras interfaces, utilizando-se extends;
+- São 'assinadas' por meio do uso de *implements*;
+- Java permite implementação de múltiplas interfaces e combinação de herança.
+
+##### Utilizando interfaces
+
+*Como ela pode ajudar a resolver um problema :)*
+
+###### 1º exemplo
+
+"Um banco possui 4 tipos de funcionários: atendimento em caixa, analistas financeiros, gerentes de contas e diretores..."
+
+>  A primeira ideia é criar uma classe *Funcionario*, com classes para cada tipo de funcionário herdando dela.
+
+Evoluindo o sistema: "Agora o sistema interno do banco pode ser acessado por gerentes e diretores que desejam observar dados dos clientes ou indicativos de desempenho dos funcionários subordinados, Este acesso é feito por meio de uma senha numérica de 4 dígitos"
+
+> Logo pensamos em um método "autenticar" ou "login" para as duas classes (gerentes e diretores). Porém, dessa forma não podemos usar a funcionalidade com esse polimorfismo, pois a classe *Funcionario* não tem esse método.
+>
+> <img src="../../imgs/3_Periodo/POO/Erro_Polimorfismo.png" style="width:80%">
+>
+> Podemos resolver esse problema com uma sobrecarga, MAS se surgir um novo cargo com acesso ao login a manutenção fica o ó, vai ter que criar várias versões do método...
+>
+> Outra alternativa é um novo nível de abstração:
+>
+> <img src="../../imgs/3_Periodo/POO/Nivel_Abstracao.png" style="width:70%">
+>
+> Muito bom :)
+
+Evoluindo o sistema mais ainda: "Haverá uma integração dos sistemas e agora os clientes podem acessar os próprios dados usando o mesmo sistema."
+
+> Agora não tem como a classe *Cliente* herdar da classe de autenticação, pois ela não é um funcionário. Logo a proposta é criar um "contrato" que estabeleça o comportamento de qualquer classe autenticável (*Interface*).
+>
+> ```java
+> interface IAutenticavel {
+> 	boolean autenticar(String pwd)
+> }
+> ```
+>
+> <img src="../../imgs/3_Periodo/POO/Exemplo_UsoInterface.png" style="width:80%">
 
