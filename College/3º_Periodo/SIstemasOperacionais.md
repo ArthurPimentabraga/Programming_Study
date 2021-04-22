@@ -598,8 +598,6 @@ Precisa proteger em três cenários:
 2. Buffer vazio (consumidor) - Consumidor não pode executar;
 3. Escrita/retirada do buffer (ambos).
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!LISTA DO TRATAMENTO DOS 3 CENÁRIOS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Mutex.png" style="width:70%">
 
 É Eficiente e elegante (simples). Porém deve ser realizada com extremo cuidado, tracing e depuração de erros é muito difícil.
@@ -665,7 +663,11 @@ Metáfora para demonstrar a efetividade do uso de semáforos.
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Solucao_Aparente.png" style="width:50%">
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!     CÓDIGO     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/primary_code_jantarFilosofos.png" style="width:70%">
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/secondary_code_jantarFilosofos.png" style="width:70%">
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/tertiary_code_jantarFilosofos.png" style="width:70%">
 
 1. Thinking = processando, executando;
 2. Eating = Usando recursos compartilhados - Mexendo nos dados;
@@ -686,7 +688,7 @@ Modelo para situações de competição por acesso exclusivo a recursos comparti
 
 Situação na qual nenhum processo em um grupo consegue avançar, todos estão bloqueados, esperando. Ex: Programa congelado.
 
-> !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Lei de trens do Kansas !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+> A Legislatura do Estado do Kansas dos Estados Unidos da América aprovou um estatuto que decretou que “Quando dois trens se aproximarem um do outro em um cruzamento, ambos deverão parar completamente e nenhum dos dois deverá ser acionado até que o outro tenha partido”. Esse estatuto ilustra uma situação de *deadlock* ou impasse.
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Deadlocks.png" style="width:80%">
 
@@ -836,9 +838,15 @@ Monitores são uma solução com um alto nível de abstração e providas pela l
 
 **a) A receita federal libera mensalmente um novo lote de restituição de imposto de renda. Cerca de 25 milhões de contribuintes têm interesse em verificar, via Web, se suas restituições foram liberadas.** 
 
+​	Facilmente  identificamos  aqui  leitores  (contribuintes  que  querem  verificar  o  status  da  declaração)  e  escritores (servidores  da  receita  que atualizam  de  acordo  com  os  lotes).  O  ideal  seria  que,  na  data  da  atualização,  o  sistema  fique indisponível por um tempo para que os escritores possam atualizar toda a base de dados, sendo esta depoisliberada para os contribuintes. Não há problema em milhares de contribuintes consultarem seus dados simultaneamente.
+
 **b) Para o cômputo do resultado das eleições, devem ser enviados ao servidor e somados ao resultado os resultados parciais de todas as seções eleitorais do país. Os eleitores, a imprensa e os próprios candidatos podem consultar o resultado em tempo real.** 
 
+​	Podemos pensar, num primeiro momento, em outro problema de leitores (imprensa, candidatos, eleitores) e escritores (sistema atualizando o resultado da votação). Em algum momento, o resultado precisa ser bloqueado para consultaspara que o sistema de votação atualize o total recebido das seções eleitorais. Se cada seção eleitoral puder, por si só, atualizar o resultado, teremos  milhares  de  escritores.  Assim,  considerando  somente  os  processos  das seções  eleitorais,  podemos enxergar  também  uma variaçãodojantar filósofos:  as  seções  concorrem  com  algumas  seções “vizinhas”(totalização  porcidade ou estado, por exemplo) e concorrem também todas entre si para uma totalizaçãonacional, se for o caso.
+
 **c) Um gravador de discos Blu-ray deve ler dados do HD do sistema a uma taxa tal que permita que a escrita no disco óptico seja feita sem interrupções.** 
+
+​	Aqui  temos  um  clássico  de  produtor/consumidor. A  leitura do  discoproduzdados  em  memória  temporária,  os  quais serão  lidos  pelo  gravador  de  Blu-ray  para  gravar  o  disco (consumidor).  Neste  caso  em  específico,  o  ideal  é  garantir  uma memória  grande  o bastantepara  termos  um  bom  nível  de  confiança  de  que  o  consumidor  nunca  irá  bloquear:  se  isso acontecer, a gravação será interrompida e causará um erro, de acordo com adescrição do problema.
 
 ---
 
