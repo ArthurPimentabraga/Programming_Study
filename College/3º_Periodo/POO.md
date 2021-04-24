@@ -1,5 +1,5 @@
 ---
-<img src="../../imgs/3_Periodo/POO/Exemplo_UsoInterface.png" style="width:80%">title: Programação orientada por objetos (Puc-Minas - 3º Período)
+title: Programação orientada por objetos (Puc-Minas - 3º Período)
 author: Arthur P. Braga
 ---
 
@@ -438,4 +438,29 @@ Evoluindo o sistema mais ainda: "Haverá uma integração dos sistemas e agora o
 > ```
 >
 > <img src="../../imgs/3_Periodo/POO/Exemplo_UsoInterface.png" style="width:80%">
+
+---
+
+## Aula 21 - 23/04
+
+#### Substituindo herança por composição
+
+Com herânça ainda temos um certo nível de acoplamento e perde um pouco de encapsulamento. 
+
+Por meio do uso de interfaces e composição de classes, podemos **injetar** comportamento em classes. *(Injeção de dependência)*.
+
+- Delegação de responsabilidades;
+- Mudança de comportamento em tempo de execução.
+
+##### Exemplo
+
+Um banco oferece três tipos de contas a seus clientes: conta corrente, poupança e investimentos. Com 3 operações básicas: Sacar, depositar e consultar saldo.
+
+*Herança básica:*
+
+![image-20210423200450811](/home/arthur/snap/typora/33/.config/Typora/typora-user-images/image-20210423200450811.png)
+
+*Pra melhorar:*
+
+![image-20210423201627245](/home/arthur/snap/typora/33/.config/Typora/typora-user-images/image-20210423201627245.png)
 
