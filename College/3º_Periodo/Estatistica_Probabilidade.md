@@ -372,3 +372,56 @@ Exemplo:
 
 <img src="../../imgs/3_Periodo/Estatistica/Exemplo_Exponencial.png" style="width:80%">
 
+---
+
+## Aula 15 - 27/04
+
+#### Distribuição Normal
+
+*Utiliza-se a média e desvio padrão como parâmetros.*
+
+Em meados do século XIX, Frederick Gauss, com seus estudos sobre eventos da natureza, observou um comportamento padrão entre as amostras estudadas por ele.
+
+Esse comportamento, posteriormente foi apresentado como a Curva de Gauss. Que mostrava que grande parte dos eventos ficam em torno de um valor médio, com uma certa variabilidade.
+
+Uma distribuição estatística é uma função que define uma curva, e a área sob essa curva determina a probabilidade de ocorrer o evento por ela correlacionado. E o que é distribuição normal? Me arrisco dizer, que é a mais importante dentre as distribuições estatísticas.
+
+**A curva de distribuição normal representa o comportamento de diversos processos nas empresas e muitos fenômenos comuns, como por exemplo, altura ou peso de uma população, a pressão sanguínea de um grupo de pessoas, o tempo que um grupo de estudantes gasta para realizar uma prova.**
+
+A distribuição normal pode ser usada para aproximar distribuições discretas de probabilidade, como por exemplo a distribuição binomial. Além disso, a distribuição normal serve também como base para a inferência estatística clássica.
+
+Nela, a [média, mediana e moda](https://www.voitto.com.br/blog/artigo/media-moda-mediana) dos dados possuem o mesmo valor.
+
+> - Descrição de diversos processos e fenômenos;
+> - Pode ser utilizada para aproximar distribuições discretas;
+> - É a base da estatística inferencial.
+
+<img src="../../imgs/3_Periodo/Estatistica/Curva_Gauss.png" style="width:80%">
+
+<img src="../../imgs/3_Periodo/Estatistica/Grafico_CurvaGauss.png" style="width:50%">
+
+D = Desvio padrão **alto**;
+
+B = Desvio padrão **baixo**.
+
+##### Fórmula
+
+<img src="../../imgs/3_Periodo/Estatistica/Formula_principal_DNormal.png" style="width:50%">
+
+Serve para todo mundo:
+
+<img src="../../imgs/3_Periodo/Estatistica/Formula_Usavel_DNormal.png" style="width:50%">
+
+Chegado ao valor de *Z*, a probabilidade é obtida por meio da tabela dos escores da distribuição normal padronizada.
+
+#### Exemplo
+
+<img src="../../imgs/3_Periodo/Estatistica/EnunciadoExemplo_DNormal.png" style="width:80%">
+
+<img src="../../imgs/3_Periodo/Estatistica/ResolucaoExemplo_DNormal.png" style="width:80%">
+
+<img src="../../imgs/3_Periodo/Estatistica/Table_Prob_DNormal.png" style="width:80%">
+
+---
+
+## Aula 16 - XX/XX

@@ -896,9 +896,15 @@ A primeira coisa que o SO precisa fazer é o endereçamento de memória para com
 
 #### Técnicas básicas - Gerência M. Principal
 
+> Veremos que a evolução da gerência segue o mesmo caminho que aprendemos programação:
+> 1. Utilizará uma variável base para a gerência;
+> 2. Um vetor;
+> 3. Uma lista;
+> 4. Árvore/Hash
+
 ##### Monoprogramação
 
-Somente um processo executa por vez. E temos dois processos na memória (SO + 1 processo).
+Somente um processo, além do sistema, executa por vez. E temos dois processos na memória (SO + 1 processo).
 
 - Endereçamento simplificado: registrador de base -> Somar o valor da base ao endereço lógico
 
@@ -906,11 +912,73 @@ Exemplo:
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Exemplo_Gerenica_MPrincipal.png" style="width:80%">
 
-- Gerência simples, quse inexistente. Porém ineficiênte.
+- Gerência simples, quase inexistente. Porém ineficiênte.
 
 ##### Partições fixas
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Particoes_Fixas.png" style="width:80%">
 
-<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Exemplo_Particoes_Fixas.png" style="width:70%">
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Exemplo_ParticoesFixas.png" style="width:80%">
+
+Se um processo não ocupa a partição por completo, de duas uma. Ou ele usa para expandir-se futuramente, ou aquela memória fica meio que perdida/atoa.  
+
+###### Endereçamento
+
+Cada processo terá:
+
+- Registrador de base: marca o início da partição (processo) na memória principal;
+- Registrador de limite: marca o tamanho da partição na memória principal. (quantos bytes para frente a partição vai usar).
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ParticoesFixas_MMU.png" style="width:80%">
+
+Proteção primeiro - Relocação depois.
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/GerenciaParticoesFIxas.png" style="width:80%">
+
+*Obs: Caso não tenha partição que caiba um determinado processo, o mesmo não será alocado. Ou seja, esse tipo de gerência pode desperdiçar muita memória :(*
+
+###### Fragmentação de memória
+
+- Externa: Entre um processo e outro (entre duas partições usadas) há memória que não conseguimos usar (partição livre que não conseguimos usar).
+- Interna: Quando há memória dentro de uma partição utilizada que não será utilizado por mais ninguém.
+
+
+---
+
+## Aula 16 - 26/04
+
+#### Continuação - Gerência M. Principal
+
+##### Partições variáveis
+
+As partições são criadas à medida em que são necessárias pelos processos. **Partições livres vizinhas podem ser unificadas.**
+
+Para o cenário a seguir temos algumas alternativas: 
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Cenario_ParticoesVariaveis.png" style="width:80%">
+
+###### Alternativa 1: 
+
+Como são partições variáveis, é possível a relocação de processos para o processo *F* poder entrar. **Isso chama compactação de memória**:
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Alternativa1_ParticoesVariaveis.png" style="width:60%">
+
+> Porém1: É necessário parar todos os processos para a relocação.
+> Porém2: É necessário copiar byte por bype de cada processo para o endereçamento desejado. E isso pode levar tempo.
+
+*Utiliários para limpar memória do sistema, além de retirar o lixo da memória, ele realoca todo mundo.*
+
+###### Alternativa 2:
+
+Fazer a troca de memória (**SWAP**). Nesse caso, a troca de um processo inteiro, ou seja, se não tem lugar pra um processo prioritário, retira um da memória (coloca em bloqueio), e coloca o prioritário na memória.
+
+> Porém: Como pode ocorrer a fragmentação externa, por não fazer a relocação de memória.
+
+###### Endereçamento
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Gerencia_ParticoesVariaveis.png" style="width:80%">
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Estrutura_Lista_ParticoesVariaveis.png" style="width:80%">
+
+*A leitura é mais lenta que nas partições fixas :(*
 
