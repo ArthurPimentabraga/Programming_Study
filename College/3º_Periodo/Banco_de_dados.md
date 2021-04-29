@@ -230,3 +230,9 @@ Restrições
 <img src="../../imgs/3_Periodo/Banco_Dados/Boyce_Codd.png" style="width:80%">
 
 <img src="../../imgs/3_Periodo/Banco_Dados/Exemplo_BoyceCodd.png" style="width:80%">
+
+---
+
+## Aula 8 - 28/04
+
+#### SQL Básico

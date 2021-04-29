@@ -1,7 +1,4 @@
----
- title: Sistemas Operacionais (Puc-Minas - 3º Período)
-author: Arthur P. Braga
----
+
 
 ## Notes
 
@@ -942,6 +939,8 @@ Proteção primeiro - Relocação depois.
 - Externa: Entre um processo e outro (entre duas partições usadas) há memória que não conseguimos usar (partição livre que não conseguimos usar).
 - Interna: Quando há memória dentro de uma partição utilizada que não será utilizado por mais ninguém.
 
+*Obs: Em partições fixas pode ocorrer os dois tipos de fragmentação. Em partições variáveis, só da pra acontecer a fragmentação externa.*
+
 
 ---
 
@@ -972,7 +971,7 @@ Como são partições variáveis, é possível a relocação de processos para o
 
 Fazer a troca de memória (**SWAP**). Nesse caso, a troca de um processo inteiro, ou seja, se não tem lugar pra um processo prioritário, retira um da memória (coloca em bloqueio), e coloca o prioritário na memória.
 
-> Porém: Como pode ocorrer a fragmentação externa, por não fazer a relocação de memória.
+> Porém: Pode ocorrer a fragmentação externa, por não fazer a relocação de memória.
 
 ###### Endereçamento
 
@@ -982,3 +981,115 @@ Fazer a troca de memória (**SWAP**). Nesse caso, a troca de um processo inteiro
 
 *A leitura é mais lenta que nas partições fixas :(*
 
+---
+
+#### Paginação
+
+Para fugir de possíveis fragmentações utilizamos a paginação. Nada mais é que os processos divididos em páginas lógicas de tamanho **igual** e **fixo**. Ou seja, divide um processo em N páginas de mesmo tamanho.
+
+A memória principal é dividida em páginas físicas de tamanho igual ao das páginas lógicas. Chamadas de: *Molduras de memória* por ficarem vazias esperando encaixar uma página de dados la dentro.
+
+> Página lógica: Páginas do processos (dados do mesmo);
+> Páginas da memória principal onde os dados vão ser armazenados. 
+
+*Os processos são carregados página por página.*
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Carregamento_Paginacao.png" style="width:80%">
+
+-  Ainda pode ocorrer fragmentação interna, porém somente na última página, mas geralmente perde muito pouco. Ou seja, aproveitamento de quase 100% da memória principal;
+- E não temos fragmentação externa, toda página lógica pode entrar em qualquer página física.
+
+> Porém: A complexidade de endereçamento de páginas aumenta. Uma vez que o SO precisa encontrar a página lógica e física que ele quer (nº da página, posição dentro da página).
+>
+> Para isso precisamos de uma **tabela de páginas para cada processo.**
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Enderecamento_Paginacao.png" style="width:80%">
+
+- Calcular o nº da página = endereço lógico / tamanho da página
+- Deslocamento = endereço lógico % tamanho da página *(o deslocamento é "o quão pra frente" na página o processo está, ou seja, quantos bytes pra frentes ele está)*.
+
+Agora para encontrar o endereço físico o processo tem uma tabela de suas páginas para referenciar cada localização na memória física:
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Calculo_EnderecoFisico.png" style="width:80%">
+
+Esse rolê todo é o preço que se paga para resolver os problemas anteriores :) Tudo isso é feito de uma forma rápida (mais lento que os outros, porém ainda rápido). Geralmente, em um clock, é possível passar todo endereçamento de memória que precisamos. 
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Clock_Enderecamento_Paginacao.png" style="width:80%">
+
+
+---
+
+## Aula 17 - 28/04
+
+#### Memória virtual
+
+E se tivermos a necessidade de executar processos maiores que a memória principal? *R.: Será que precisamos de um processo inteiro em memória principal durante todo o tempo de sua execução? (Suponha um editor de textos...) Com certeza não!*
+
+A ideia da memória virtual é essa, nunca usamos tudo do processo ao mesmo tempo na memória. Logo, já temos o processo dividido em páginas, então mantemos em memória principal **somente o necessário** para a execução dos processos em um **dado momento**.
+
+> SO utiliza espaço em memória secundária (disco) para "complementar" a memória principal. Ex: **SWAP** do linux S2. Isso é uma memória virtual.
+>
+> Ou seja, é uma área reservada do sistema. Quando necessário, o SO faz a troca entre memória principal e memória virtual. (Execução de processos que excedam o tamanho da memória principal).
+
+No exemplo a seguir, meu sistema tem reservado 2GB do disco reservado para, se precisar, ser utilizado  como memória virtual.
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Exemplo_Swapfile.png" style="width:80%">
+
+---
+
+#### Algoritmos de paginação na memória virtual
+
+##### Substituição de páginas
+
+Em caso de uma página lógica não estar alocada em uma página física, e precisarmos alocar ela, se tiver página livre pode alocar em qualquer uma dessas páginas livres. Mas se não tiver, precisamos substituir uma página.
+
+Ou seja, se acontece uma falta de página e não há espaço na memória principal, é necessário substituir uma página da memória principal. E para isso precisamos de uma **regra de substituição**. E um bom algoritmo faz a melhor escolha possível para a retirada de uma página.
+
+###### Melhor escolha
+
+Tirar uma página que nunca mais será usada :) O problema é saber qual página seria essa. E a única forma de saber isso, é essa:
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Ver-o-futuro.png" style="width:25%">
+
+Logo, a alternativa é fazer um palpite levando em consideração os dados que temos agora.
+
+**Simulação:** Simular diferentes regras a partir de uma sequência de acessos de referência. Ou seja, escrever diversas regras (algoritmos) com um cenário simulado, e comparar com um algoritmo ótimo (um algoritmo fictício que sabe todas as páginas que vão ser usadas e quando vão ser usadas), mas também utilizando o mesmo cenário. Dessa forma sabemos qual regra mais se aproxima do algoritmo ótimo.
+
+###### Regra 1 - Algoritmo FIFO
+
+A primeira página a entrar será a primeira a sair. *Premissa: Quem entrou primeiro deixará de ser importante mais cedo.*
+
+O problema é que essa premissa nem sempre ta correta, e pode ocasionar em várias faltas de página. Exemplo, atributos *static*.
+
+###### Regra 2 - Algoritmo NRU
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/NRU.png" style="width:80%">
+
+Ou seja, retira a página mais antiga, a que foi utilizada a mais tempo.
+
+Exemplo:
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Exemplo_NRU.png" style="width:80%">
+
+*Legenda: 4 faltas de página.*
+
+###### Regra 3 - Algoritmo de Segunda chance
+
+Junta os dois último algoritmos:
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Algoritmo_SegundaChance.png" style="width:80%">
+
+Porém essa lógica mexe na memória, e ficar realocando é ruim. Logo:
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/SegundaChance+Relogio.png" style="width:80%">
+
+Ou seja, não realocamos as páginas para o fim da fila, só voltamos a verificar a medida que for executando. Exemplo:
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Exemplo_SChance+Relogio.png" style="width:80%">
+
+Mesmo tendo acabado com o mesmo nº de faltas do último algoritmos, em uma grande escala pode ser mais benéfico. Sem contar que é bem mais rápido, antes tinhamos que procurar quem tirar, agora é só retirar quem o relógio estiver apontando ou o seu vizinho.
+
+
+---
+
+## Aula 18 - XX/XX
