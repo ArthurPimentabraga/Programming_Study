@@ -1,7 +1,5 @@
----
 title: Programação orientada por objetos (Puc-Minas - 3º Período)
 author: Arthur P. Braga
----
 
 ## Notes
 
@@ -458,9 +456,15 @@ Um banco oferece três tipos de contas a seus clientes: conta corrente, poupanç
 
 *Herança básica:*
 
-![image-20210423200450811](/home/arthur/snap/typora/33/.config/Typora/typora-user-images/image-20210423200450811.png)
+<img src="../../imgs/3_Periodo/POO/Exemplo_HerancaBasica.png" style="width:80%">
 
 *Pra melhorar:*
 
-![image-20210423201627245](/home/arthur/snap/typora/33/.config/Typora/typora-user-images/image-20210423201627245.png)
+<img src="../../imgs/3_Periodo/POO/Exemplo_InjecaoComposicao.png" style="width:100%">
+
+---
+
+## Aula 22 - 29/04
+
+#### Prática de composição
 
