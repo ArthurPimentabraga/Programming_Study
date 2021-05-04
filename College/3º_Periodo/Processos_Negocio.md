@@ -294,3 +294,13 @@ https://camunda.com/bpmn/reference/#events-escalation
 **Visão**: Plenjamento à longo prazo, mas não é um passo a passo, é para inspirar.
 
 #### Exercício avaliativo - Erros na Gestão de Processos
+
+---
+
+## Aula 11 - 03/05 - "Presencial"
+
+#### Teoria da restrição
+
+A **Teoria das Restrições (TOC)** contribui para a identificação dos problemas em um processo e para a adoção de processo de aprimoramento contínuo.
+
+![image-20210503212626242](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210503212626242.png)

@@ -1,9 +1,9 @@
-title: Programação orientada por objetos (Puc-Minas - 3º Período)
+ title: Programação orientada por objetos (Puc-Minas - 3º Período)
 author: Arthur P. Braga
 
 ## Notes
 
-#### Pensar na hora de modelar a classe:
+####  Pensar na hora de modelar a classe:
 
 1. Atributo ou método?
 2. static? final?
@@ -448,7 +448,7 @@ Com herânça ainda temos um certo nível de acoplamento e perde um pouco de enc
 Por meio do uso de interfaces e composição de classes, podemos **injetar** comportamento em classes. *(Injeção de dependência)*.
 
 - Delegação de responsabilidades;
-- Mudança de comportamento em tempo de execução.
+- **Mudança de comportamento** em tempo de execução.
 
 ##### Exemplo
 
@@ -468,3 +468,23 @@ Um banco oferece três tipos de contas a seus clientes: conta corrente, poupanç
 
 #### Prática de composição
 
+---
+
+## Aula 23 - 20/04
+
+#### Para que usar interface?
+
+1. Capturar **similaridades** entre classes **não relacionadas;**
+2. **Declarar métodos** que uma ou mais classes devem **inevitavelmente** implementar;
+3. Revelar interfaces sem revelar os objetos que a implementam: útil em pacotes de componentes;
+4. Programação remota / uso de serviços.
+5. Alternativa para herança múltipla
+6. Composição 
+
+#### Herança x Interface: regras de Coad
+
+1. Subclasse denota "é um" e não "tem papel de" ou "tem um";
+2. Uma instância de uma subclasse nunca precisará mudar para outra subclasse;
+3. Uma subclasse deve estender, e não sobrescrever ou anular as responsabilidades da classe mãe. Ou seja, a subclasse deve ter coisas novas;
+4. Uma subclasse não estende as capacidades de uma classe utilitária (*ferramenta para problemas genéricos*);
+5. Para uma classe do rpoblema tratado, a subclasse especializa um papel, transação ou dispositivo.

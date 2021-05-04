@@ -1,4 +1,7 @@
-
+---
+title: Sistemas operacionais (Puc-Minas - 3º Período)
+author: Arthur P. Braga
+---
 
 ## Notes
 
@@ -1055,13 +1058,13 @@ Logo, a alternativa é fazer um palpite levando em consideração os dados que t
 
 **Simulação:** Simular diferentes regras a partir de uma sequência de acessos de referência. Ou seja, escrever diversas regras (algoritmos) com um cenário simulado, e comparar com um algoritmo ótimo (um algoritmo fictício que sabe todas as páginas que vão ser usadas e quando vão ser usadas), mas também utilizando o mesmo cenário. Dessa forma sabemos qual regra mais se aproxima do algoritmo ótimo.
 
-###### Regra 1 - Algoritmo FIFO
+###### Algoritmo 1 - FIFO
 
 A primeira página a entrar será a primeira a sair. *Premissa: Quem entrou primeiro deixará de ser importante mais cedo.*
 
 O problema é que essa premissa nem sempre ta correta, e pode ocasionar em várias faltas de página. Exemplo, atributos *static*.
 
-###### Regra 2 - Algoritmo NRU
+###### Algoritmo 2 - NRU
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/NRU.png" style="width:80%">
 
@@ -1073,7 +1076,7 @@ Exemplo:
 
 *Legenda: 4 faltas de página.*
 
-###### Regra 3 - Algoritmo de Segunda chance
+###### Algoritmo 3 - Segunda chance
 
 Junta os dois último algoritmos:
 
@@ -1087,9 +1090,71 @@ Ou seja, não realocamos as páginas para o fim da fila, só voltamos a verifica
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Exemplo_SChance+Relogio.png" style="width:80%">
 
-Mesmo tendo acabado com o mesmo nº de faltas do último algoritmos, em uma grande escala pode ser mais benéfico. Sem contar que é bem mais rápido, antes tinhamos que procurar quem tirar, agora é só retirar quem o relógio estiver apontando ou o seu vizinho.
+Mesmo tendo acabado com o mesmo nº de faltas do último algoritmos, em uma grande escala pode ser mais benéfico. Sem contar que é bem mais rápido, antes tinhamos que procurar quem tirar, agora **é só retirar quem o relógio estiver apontando ou o seu vizinho.**
+
+###### Algoritmo 4 - LFU - [Não funciona]
+
+A página menos frequente utilizada (Least Frequently Used) sai primeiro. Contador de acessos a cada página: sai a que tiver menor contador. *Premissa: uma página pouco usada até o momento provavelmente será pouco importante no futuro.* 
+
+> Essa lógica parece boa, mas não funciona nessa ideia básica.
+> - Problema 1: Quem acabou de entrar tem chance de sair de cara por ter o contador ainda em 1.
+> - Problema 2: Gasta memória por ter um contador.
+> - Problema 3: Pra atualizar o contador, a operação gasta tempo do processador, enquanto ele tiver incrementando, ele poderia estar processando um processo, perdendo desempenho.
+
+###### Algoritmo 5 - LFU com envelhecimento
+
+Para resolver os problemas anteriores. Ele não vai contar quantas vezes a página foi utilizada. Conta intervalos de uso (simulação do contador real).
+
+*Envelhecimento: tentativa de "esquecer" valores de acessos antigos. A página é importante se ocntinuar sendo utilizada.*
+
+- Uso do *bit R* para implementação. 
+
+![image-20210503193149686](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210503193149686.png)
+
+Dessa forma matamos os dois ultimos problemas, limitamos a memória, não gasta tempo incrementando contador...
+
+Ou seja, vai envelhecendo, perdendo valor com o tempo.
+
+Exemplo:
+
+![image-20210503193615684](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210503193615684.png)
+
+###### Existem 2 tipos de substituição:
+
+- Algoritmos globais: Escolhem uma página de qualquer processo em memória principal para substituir.
+- Algoritmos l,ocais: Escolhem uma página do próprio processo em memória principal para substituir.
+
+###### Algoritmo 6 - Conjunto de trabalho (working set)
+
+*Algoritmo local.*
+
+![image-20210503195137985](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210503195137985.png)
+
+###### Algoritmo 7 - WSClock
+
+![image-20210503195818224](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210503195818224.png)
+
+![image-20210503200553023](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210503200553023.png)
 
 
 ---
 
-## Aula 18 - XX/XX
+## Aula 18 - 03/05
+
+#### Algoritmos de paginação na MV [Continuação]
+
+---
+
+#### Projeto do sistema de paginação
+
+Antes do uso da paginação por parte do SO, seus projetistas precisam tomar uma série de decisões acerca de sua implementação e funcionamento.
+
+- Algoritmo de substituição;
+- Política de alocação;
+- Compartilhamento e limpeza de páginas;
+- Tamanho das páginas;
+- Informações armazenadas;
+- Implementação da tabela.
+
+##### Politica de alocação
+
