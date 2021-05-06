@@ -488,3 +488,133 @@ Um banco oferece três tipos de contas a seus clientes: conta corrente, poupanç
 3. Uma subclasse deve estender, e não sobrescrever ou anular as responsabilidades da classe mãe. Ou seja, a subclasse deve ter coisas novas;
 4. Uma subclasse não estende as capacidades de uma classe utilitária (*ferramenta para problemas genéricos*);
 5. Para uma classe do rpoblema tratado, a subclasse especializa um papel, transação ou dispositivo.
+
+---
+
+## Aula 24 - 06/05
+
+#### Polimorfismo [continuação]
+
+Existem 4 tipos de polimorfismo:
+
+- Polimorfismo universal
+  - de inclusão 
+  - Paramétrico
+- Polimorfismo ad hoc
+  - Coerção
+  - Sobrecarga
+
+---
+
+#### Polimorfismo ADHOC
+
+Alguma coisa sob demanda - se destina à um fim específico - fazemos para uma classe específica, e não necessáriamente funciona para classes além dessa.
+
+##### Polimorfismo Coerção (cast)
+
+Cast = Accio (Harry Potter) :zap:
+
+Conversão de tipo explícita definida pelo programador, ou seja, transforma um objeto de um tipo, em outro. Só será aceita se houver alguma relação de parentesco entre as classes. Exemplo:
+
+- Tipos básicos - Conversão de *int to double* 
+  - divisao = (double) num1/num2
+- Conversão classe mãe -> classe filha.
+
+```Java
+Figura x;
+Retangulo X;
+x = new Retangulo(4,5);
+y = (Retangulo)(x);
+System.out.println(y.getAltura());
+```
+
+:arrow_down:
+
+##### Polimorfismo Sobrecarga
+
+Criação de diversos método com o mesmo nome, mas diferentes parâmetros de entrada (e, algumas vezes, saída). *Ações diferentes!*
+
+Não é universal: somente para os tipos/classes para os quais foi implementada a sobrecarga.
+
+###### Sobrecarga de operadores
+
+```Java
+int a, b, c;
+String s, t;
+////////////////
+x = y + z;
+s = t + "ontem";
+```
+
+###### Sobrecarga de métodos
+
+``` java
+String nome = "Arthur";
+int resposta = 42; // Quem pegou a referência?
+System.out.println(nome);
+System.out.println(resposta);
+// &&
+int diffDias(Data a, Data b);
+int diffDias(Data outra);
+```
+
+---
+
+####  Polimorfismo universal
+
+##### Polimorfismo Paramétrico
+
+<img src="../../imgs/3_Periodo/POO/Cenario_PolimorfismoParametrico.png" style="width:100%">
+
+Logo, precisamos de uma abstração baseada em códigos genéricos:
+
+- Valores/objetos serão manipulados de forma similar independente do seu tipo/classe.
+
+A genericidade é atingida por:
+
+- Uso de classes ou tipos básicos como parâmetros em classes parametrizadas -> <T>
+- Mecanismo de implementação que substitua implícita ou explicitamente a operação parametrizada quando necessário.
+
+> Classes e métodos polimórficos - genéricos - usados explicitamente para que a classe genérica resolva suas operações.
+>
+> Substituição implícita (padrões) ou explícita (parâmetros) de métodos.
+
+Exemplo:
+
+``` java
+public class ListaGenerica<T extends Comparable<T>> {
+    private T[] dados;// Se criarem essa lista do tipo 'Pizza', será um array de pizzas
+    private int capacidade;
+    private int quantidade;
+    
+    public boolean addInList(T novo) {// Consigo add qualquer tipo na lista 
+        if (this.quantidade < this.capacidade) {
+            dados[this.quantidade] = novo;
+            this.quantidade++;
+            return true;
+        }
+        return false;
+    }
+    
+    public T search(T quem) {// Consigo buscar qualquer dado de qualquer tipo na lista
+        for(int i = 0; i < this.quantidade; i++) {
+            if (this.dados[i].equals(quem))
+                return this.dados[i];
+        }
+        return null;
+    }
+    
+    public T greatest() {
+        T aux = dados[0];
+        if (this.quantidade > 0) {
+            for(int i = 0; i < this.quantidade; i++) {
+                if (dados[i].compareTo(aux) > 0)
+                    aux = dados[i];
+            }
+        }
+        return aux;
+    }
+}
+```
+
+> O **Comparable** permite que você diga uma regra de comparação para a classe que implementar essa **interface**, como uma espécie de regra padrão ou regra oficial - implementada pelo método **compareTo** - enquanto que se você quiser fugir dessa regra padrão, você pode criar suas classes comparadoras, que vão extender a classe **Comparator** fazendo cada uma a sua própria.

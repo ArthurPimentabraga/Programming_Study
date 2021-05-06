@@ -1308,3 +1308,8 @@ Dados não são executados....
 ![image-20210505222623291](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505222623291.png)
 
 A partir daí é só fazer o mesmo cálculo para descobrir a página, deslocamento...
+
+---
+
+## Aula 20 - XX/05
+
