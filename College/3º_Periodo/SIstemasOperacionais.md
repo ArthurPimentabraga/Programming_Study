@@ -1105,7 +1105,7 @@ A página menos frequente utilizada (Least Frequently Used) sai primeiro. Contad
 
 Para resolver os problemas anteriores. Ele não vai contar quantas vezes a página foi utilizada. Conta intervalos de uso (simulação do contador real).
 
-*Envelhecimento: tentativa de "esquecer" valores de acessos antigos. A página é importante se ocntinuar sendo utilizada.*
+*Envelhecimento: tentativa de "esquecer" valores de acessos antigos. A página é importante se continuar sendo utilizada.*
 
 - Uso do *bit R* para implementação. 
 
@@ -1121,20 +1121,30 @@ Exemplo:
 
 ###### Existem 2 tipos de substituição:
 
-- Algoritmos globais: Escolhem uma página de qualquer processo em memória principal para substituir.
-- Algoritmos l,ocais: Escolhem uma página do próprio processo em memória principal para substituir.
+- Algoritmos globais: Escolhem uma página de qualquer processo em memória principal para substituir. Verifica páginas do sistema como um todo.
+- Algoritmos locais: Escolhem uma página do próprio processo em memória principal para substituir, ou seja, do proceso que teve falta de página. Ideia de conjunto de trabalho.
 
-###### Algoritmo 6 - Conjunto de trabalho (working set)
+###### Conjunto de trabalho (working set)
 
-*Algoritmo local.*
+*Algoritmo local.* Tenta prever o conjunto mínimo de páginas necessárias para que determinado processo faça seu trabalho. Exemplo: tal página precisará ser usada nos próximos 10s, logo ela irá fazer parte do conjunto mínimo de trabalho para que o processo seja capaz de fazer o que ele quer/está fazendo agora.
 
-![image-20210503195137985](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210503195137985.png)
+A estimativa é a partir de um intervalo de tempo passado, ou seja, somente as páginas utilizadas no último intervalo de tempo (igual ao que eu quero prever) são incluidas no conjunto de trabalho mínimo. Exemplo: Nos últimos 10s as páginas *1,5,8 e 10* foram utilizadas, logo para os próximos 10s elas fazem parte do meu conjunto de trabalho.
 
-###### Algoritmo 7 - WSClock
+Se meu processo quer utilizar um página que não esteja na MP, ele "olha" para esse intervalo de tempo, e caso meu processo tiver alguma página fora desse intervalo, ela é substituida.
 
-![image-20210503195818224](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210503195818224.png)
+> Proteção de uma página do conjunto com **Bit L (lock)**. Todas as páginas que estiverem no intervalo vão ser protegidas com esse bit.
+
+###### Algoritmo 6 - WSClock
+
+Usa o conceito de conjunto de trabalho e método de implementação do relógio (lista circular). *Essa lista circular é, provavelmente, bem menor que a lista circular original, pois a original é usada para toda a memória, já essa é utilizada só para o processo.*
+
+![image-20210505200020232](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505200020232.png)
+
+Se Bit M = 1, ele só marca a página "pronta para morrer", mas não é substituida de imediato, pois para ser marcada é necessário salvar seus dados em disco e isso demora, logo compensa mais procurar outra página mais pra frente com o Bit M = 0. Em outras palavras, ela está disponível para ser substituida, porém se tiver alguém melhor ainda para ser substituido, esse outro alguém é retirado. E outra, tem uma thread que quando o sistema tiver "menos coisas para fazer", ela passar verificando a existência de páginas marcadas setando o bit M delas para 0, e tais páginas, ou vão ser retiradas de uma vez da memória, ou ela permanece até ser a vez dela de sair.
 
 ![image-20210503200553023](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210503200553023.png)
+
+*Array [página, bit R, bit M, horário de uso]*
 
 
 ---
@@ -1150,11 +1160,151 @@ Exemplo:
 Antes do uso da paginação por parte do SO, seus projetistas precisam tomar uma série de decisões acerca de sua implementação e funcionamento.
 
 - Algoritmo de substituição;
-- Política de alocação;
+- Política de alocação (global ou local);
 - Compartilhamento e limpeza de páginas;
 - Tamanho das páginas;
 - Informações armazenadas;
 - Implementação da tabela.
 
+:arrow_down:
+
 ##### Politica de alocação
 
+Em geral, algoritmos globais têm melhor resultado, pois podem ter páginas de outros processos que não estão sendo usadas à muito tempo. Porém: 
+
+1. Não é adequado em alguns cenários (ex: WSClock). 
+2. A quantidade de páginas por processo pode gerar **thrashing**.
+
+> **Thrashing**: é um problema que consiste em processos que com poucas páginas na memória começam a sofrer perdas ou faltas dessas páginas, o tratamento de falta de páginas geralmente é lento e consome recursos de processamento. Fazer/refazer paginação demora muito mais do que o simples acesso à memória, ou seja, se um processo começa a ocupar muitas páginas, outro processo começa a sofrer muitas faltas de página, e isso necessita de várias operações de paginação. Ou até mesmo quando acaba o quantum do processo que estava ocupando a memória, e é necessário fazer toda a paginação dos processos que foram retirados e estão com falta de página, e isso precisa ser feito rápido, mas são operações demoradas. Resumindo: perde desempenho.
+
+Caso o sistema perceba que algum processo está causando thrashing, temos algumas soluções:
+
+1. Aumentar o conjunto de trabalho daquele processo (caso seja um processo prioritário, necessite de mais páginas...). Ou seja, se ele tiver mais páginas no seu grupo, consequentemente gera menos faltas de página;
+2. Priorizar um processo. Caso ele seja um processo prioritário, necessite de mais páginas... prioriza ele na memória para sair do estado de thrashing, termina logo e libera a MP para outros processos. *Estratégia muito usada pelo Linux.*;
+3. Suspender inteiramente um processo (trocar), ou seja, jogar para a memória virtual, abrindo espaço na MP para outros processos. E quando outros processos terminarem, ele volta para a MP. *Estratégia muito usada pelo Windows.*
+
+:arrow_down:
+
+##### Compartilhamento e limpeza da páginas
+
+Ainda pode ocorrer thrashing, logo temos algumas técnicas para evitar isso:
+
+###### Compartilhamento
+
+É natural que muitos processos utilizem algumas áreas de memória em comum (processo que querem fazer a mesma coisa). Exemplo: 
+
+- Muitos usuários acessando o Canvas;
+- Diversos programas enviando dados pela rede.
+
+Esse compartilhamento parece natural, mas nem toda página é compartilhável. Códigos e **dados** não têm a mesma política de compartilhamento.
+
+- Endereçamento de instruções e dados de forma separada: processos podem compartilhar **tabelas inteiras de páginas de dados**. Mas no caso de um algoritmo atuando num processo querer retirar páginas compartilhadas usadas por outro processo, isso precisa ser tratado.
+
+###### Limpeza
+
+Não é todo sistema que faz a limpeza das páginas igual ao WSClock, logo o sistema que não faz isso precisa implementar uma thread de serviço - daemon - de paginação, que roda periodicamente e seleciona molduras para uma lista de disponibilidade. Ou seja, pega aqueles processos "marcados para morrer" e grava os dados da página no disco, setando seu status para *disponível*. Tais páginas podem ser utilizadas novamente pelo fato de terem seus dados salvos, mas caso outra página precisar ser alocada, a substituição é feita. 
+
+Os status podem ser *livre* (moldura sem página alocada) - *ocupada* (moldura ocupada por página sendo utilizada) - *disponível* (moldura ocupa, porém acessível para troca).
+
+*A thread pode usar o mesmo algotirmo da substituição regular.*
+
+:arrow_down:
+
+##### Tamanho das páginas
+
+- Páginas pequenas
+  - Melhor aproveitamento da memória :blush:
+  - Porém, leva à tabelas de páginas maiores (que gastam memória) :cry:
+- Páginas maiores
+  - Leitura mais eficiente do disco :blush:
+  - Porém, lavem à mais fragmentação interna na última página :cry:
+
+###### Proposta
+
+![image-20210505212422599](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505212422599.png)
+
+###### Informações armazenadas na tabela de páginas
+
+A tabela tem mais informações do que a própria localização física e número da página. Informações necessárias para o algoritmo e para o sistema.
+
+Exemplo de uma tupla na tabela de páginas:
+
+![image-20210505213148150](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505213148150.png)
+
+##### Implementação da tabela de páginas 
+
+Simplesmente é um vetor com os registros, mas isso não é bom, não é muito performático, logo geralemente é implementado de outras formas.
+
+![image-20210505213949395](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505213949395.png)
+
+![image-20210505214233214](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505214233214.png)
+
+###### Tabelas multiníveis
+
+Árvore B+
+
+![image-20210505214654643](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505214654643.png)
+
+A vantagem é que só o índice fica na memória, o resto só ta na memória caso esteja sendo utilizado. Porém, demora mais para localizar a página.
+
+###### Tabelas invertidas
+
+É invertido, por que ao invés de procurar pelo índice, tu vai informar o valor, e ele te retorna um grupo de possibilidades, ai é só escolher um.
+
+![image-20210505214948723](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505214948723.png)
+
+![image-20210505215328471](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505215328471.png)
+
+Usa uma tabela hash para a tabela da MP, e informa a hash da página que quero encontrar, se der colisão só tratar.
+
+---
+
+## Aula 19 - 05/05
+
+#### Projeto do sistema de paginação [continuação]
+
+---
+
+#### Segmentação - Gerência de MP
+
+A paginação tem um problema: 
+
+![image-20210505215835568](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505215835568.png)
+
+![image-20210505220032029](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505220032029.png)
+
+> Cada "pedaço" do processo tem um idendificador.
+
+![image-20210505220432524](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505220432524.png)
+
+![image-20210505220532608](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505220532608.png)
+
+##### Benefícios
+
+Se aumentar a quantidade de armazenamento de um segmento, o resto não precisa ser recalculado.
+
+![image-20210505221112451](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505221112451.png)
+
+![image-20210505221152801](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505221152801.png)
+
+Dados não são executados....
+
+##### Problema
+
+![image-20210505221756977](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505221756977.png)
+
+![image-20210505221834218](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505221834218.png)
+
+##### Segmentação x Paginação
+
+![image-20210505221904517](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505221904517.png)
+
+![image-20210505222116732](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505222116732.png)
+
+![image-20210505222256891](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505222256891.png)
+
+![image-20210505222316298](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505222316298.png)
+
+![image-20210505222623291](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505222623291.png)
+
+A partir daí é só fazer o mesmo cálculo para descobrir a página, deslocamento...

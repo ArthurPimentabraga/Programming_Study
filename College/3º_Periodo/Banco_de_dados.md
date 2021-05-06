@@ -236,3 +236,12 @@ Restrições
 ## Aula 8 - 28/04
 
 #### SQL Básico
+
+---
+
+## Aula 9 - 05/05
+
+#### Comandos DML básicos
+
+![image-20210505194035392](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505194035392.png)
+
