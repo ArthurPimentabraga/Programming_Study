@@ -617,4 +617,42 @@ public class ListaGenerica<T extends Comparable<T>> {
 }
 ```
 
-> O **Comparable** permite que você diga uma regra de comparação para a classe que implementar essa **interface**, como uma espécie de regra padrão ou regra oficial - implementada pelo método **compareTo** - enquanto que se você quiser fugir dessa regra padrão, você pode criar suas classes comparadoras, que vão extender a classe **Comparator** fazendo cada uma a sua própria.
+> O **Comparable** permite que você diga uma regra de comparação para a classe que implementar essa **interface**, como uma espécie de regra padrão ou regra oficial - implementada pelo método **compareTo** - enquanto que se você quiser fugir dessa regra padrão, você pode criar suas classes comparadoras, que vão extender a classe **Comparator** fazendo cada uma a sua própria. *Comparação implícita.*
+
+Podemos também, usar o **Comparator** (comparação explícita), uma interface para criar uma ou mais regras de comparação. A única coisa necessária é criar uma classe que implementa ele, e escrever o/os método de comparação. E para utilizar é só passar sua instância e utilizar o método criado de comparação.
+
+E melhor ainda, para não ter que implementar uma classe inteira só para um objetivo tão específico, podemos utilizar a **função lambda** (programação funcionar). Exemplo:
+
+``` java
+Comparator<Pessoa> comparadorMatric = 
+    (Pessoa p1, Pessoa p2) -> (p1.geMatricula() - p2.getMatricula());
+//////////
+maiorPessoa = minhaTurma.greatest(comparadorMatric);
+```
+
+###### Comparator x Comparable
+
+**Comparable:** Se você tem controle sobre o código-fonte da classe, você pode implementar essa interface nela para definir uma estratégia de ordenação padrão. Exemplo: se você tem uma classe de *Pessoa*, você pode implementar *Comparable* nela definindo uma ordenação pelo nome, pois é um critério muito utilizado para ordenar *Pessoas*, logo, pode ser o padrão (natural).
+
+**Comparator:** É útil quando você precisa criar ordenações personalizadas. Você pode ter uma classe com uma estratégia de ordenação padrão (implementando *Comparable* nela) e em situações que forem necessárias ordenar de forma diferente, criar *n* classes que implementam *Comparator* para atender a esses casos que a ordenação padrão da classe não atenda. Seguindo o exemplo da classe *Pessoa* que ordena por padrão pelo nome, pode acontecer que em uma situação específica você precise ordenar, por exemplo, *Pessoas* por idade decrescente e pelo nome da mãe. Aí você implementa um *Comparator* para esta classe.
+
+Resumo:
+
+- Você tem uma estratégia padrão de ordenação e pode alterar a classe? **Comparable** é uma boa opção.
+- Você precisa definir várias estratégias de ordenação ou não tem condições de definir a estratégia padrão de ordenação na classe porquê não pode alterá-la? **Comparator**.
+
+---
+
+## Aula 25 - 07/05
+
+#### Polimorfismo na prática
+
+---
+
+#### Serializable
+
+A **serialização** em Java é o processo no qual a instância de um objeto é transformada em uma sequência de bytes e é útil quando precisamos enviar objetos pela rede, salvar no disco, ou comunicar de uma JVM com outra. Isso porque o estado atual do objeto é “congelado” e na outra “ponta” nós podemos “descongelar” este objeto sem perder nenhuma informação.
+
+Para habilitar a **serialização** de terminada classe você deve explicitamente implementar a interface Serializable. Esta interface é apenas de marcação, pois não tem nenhum método a ser implementado, serve apenas para que a JVM saiba que aquela determinada Classe está hábil para ser serializada.
+
+[Link DevMedia](https://www.devmedia.com.br/use-a-serializacao-em-java-com-seguranca/29012)

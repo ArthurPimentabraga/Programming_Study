@@ -1138,11 +1138,11 @@ Se meu processo quer utilizar um página que não esteja na MP, ele "olha" para 
 
 Usa o conceito de conjunto de trabalho e método de implementação do relógio (lista circular). *Essa lista circular é, provavelmente, bem menor que a lista circular original, pois a original é usada para toda a memória, já essa é utilizada só para o processo.*
 
-![image-20210505200020232](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505200020232.png)
+<img src="../../imgs/3_Periodo/Regras_WSClock.png" style="width:80%">
 
 Se Bit M = 1, ele só marca a página "pronta para morrer", mas não é substituida de imediato, pois para ser marcada é necessário salvar seus dados em disco e isso demora, logo compensa mais procurar outra página mais pra frente com o Bit M = 0. Em outras palavras, ela está disponível para ser substituida, porém se tiver alguém melhor ainda para ser substituido, esse outro alguém é retirado. E outra, tem uma thread que quando o sistema tiver "menos coisas para fazer", ela passar verificando a existência de páginas marcadas setando o bit M delas para 0, e tais páginas, ou vão ser retiradas de uma vez da memória, ou ela permanece até ser a vez dela de sair.
 
-![image-20210503200553023](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210503200553023.png)
+<img src="../../imgs/3_Periodo/Execucao_WSClock.png" style="width:80%">
 
 *Array [página, bit R, bit M, horário de uso]*
 
@@ -1311,5 +1311,54 @@ A partir daí é só fazer o mesmo cálculo para descobrir a página, deslocamen
 
 ---
 
-## Aula 20 - XX/05
+## Aula 20 - 10/05
 
+#### Sistemas de arquivos [M. secundária]
+
+- Armazenamento de grandes quantidades de informações;
+- Armazenamento não-volátil (longo prazo);
+- Acesso simultâneo.
+
+Arquivo pe um recurso de software que não existe no hardware.
+
+- Arquivos como sequência de bytes;
+- Blocos de disco x arquivos lógicos.
+
+![image-20210510192346380](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510192346380.png)
+
+O arquivo é uma abstração, uma sequência de bytes que usaremos depois.
+
+![image-20210510193208155](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510193208155.png)
+
+O usuário não precisa ser técnico em informática para saber utilizar arquivos, ou seja, fazer download, copiar e colar pastas, colocar arquivos dentro de pastas, renomeia um arquivo, deleta um arquivo...
+
+##### Arquivos
+
+De forma mais detalhada:
+
+- Arquivo para o usuário
+  - Abstração de dados reais, ou seja, mostra os arquivos da maneira mais leiga possível, mais fácil de ser manipulada e entendida possível.
+- Arquivo para o programa
+  - Dados estruturados. Ele precisa saber o que cada linha siguinifica, tira informações delas, precisa ler uma string, uma linha de texto entendível.
+- Arquivo para o SO
+  - Em geral, o conteúdo é indiferente, o SO não sabe se é um arquivo de música, foto... só um conjunto de bytes.
+
+![image-20210510194618617](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510194618617.png)
+
+![image-20210510200023517](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510200023517.png)
+
+Arquivo executáveis, quer dizer que estamos dizendo ao SO que ele pode usar aqueles bytes para serem processados no processados, e resultando na execução de um programa.
+
+![image-20210510200801421](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510200801421.png)
+
+![image-20210510201621231](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510201621231.png)
+
+- Acesso sequencial (linha por linha);
+
+![image-20210510201832047](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510201832047.png)
+
+Quanto mais atributos à definir, mais informações, porém mais trabalho para armazenar.
+
+![image-20210510202857182](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510202857182.png)
+
+![image-20210510203852715](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510203852715.png)
