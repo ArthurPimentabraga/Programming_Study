@@ -1,7 +1,4 @@
----
-title: Sistemas operacionais (Puc-Minas - 3º Período)
-author: Arthur P. Braga
----
+
 
 ## Notes
 
@@ -218,13 +215,11 @@ Processo multithread:
    - *Verificação ortográfica/correção automática;*
 - *Formatação de páginas não visíveis;*
 - *Cópias de segurança.*
-  
 
 *Exemplo 2: Servidor web.*
 
   - *Despachante;*
   - *Trabalhadores.*
-    
 
 *Exemplo 3: Save de arquivo, pode utilizar uma thread para ir salvando o arquivo aos poucos.*
 
@@ -1332,6 +1327,8 @@ O arquivo é uma abstração, uma sequência de bytes que usaremos depois.
 
 O usuário não precisa ser técnico em informática para saber utilizar arquivos, ou seja, fazer download, copiar e colar pastas, colocar arquivos dentro de pastas, renomeia um arquivo, deleta um arquivo...
 
+:arrow_down:
+
 ##### Arquivos
 
 De forma mais detalhada:
@@ -1362,3 +1359,114 @@ Quanto mais atributos à definir, mais informações, porém mais trabalho para 
 ![image-20210510202857182](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510202857182.png)
 
 ![image-20210510203852715](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510203852715.png)
+
+- Sistemas com grupos de usuário. Exemplo: Linux
+
+![image-20210512210949614](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512210949614.png)
+
+|      | 4        | 2         | 1             |
+| :--: | -------- | --------- | ------------- |
+|      | r = read | w = write | x = execution |
+|      |          |           |               |
+|      |          |           |               |
+|      |          |           |               |
+
+chmod = change mode
+
+- Sistemas com listas de permissões
+
+:arrow_down:
+
+##### Diretórios
+
+É um tipo de arquivo - arquivo especial do sistema. Com o objetivo de organização lógica dos arquivos no sistema, ou seja, basicamente seu conteúdo é um conjunto de referências à arquivos, é uma lista encadeada de arquivos. *Uma pasta dentro de outra pasta, é uma lista de lista.*
+
+###### Estrutura hierárquica
+
+Estrutura mais comum hoje. Utiliza-se **árvore genérica**:
+
+![image-20210512212102045](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512212102045.png)
+
+> Nome de caminha absoluto -> começa no diretório raiz. Exemplo:
+>
+> - /home/arthur/Documentos/aula1.pdf
+> - \Users\arthur\Documentos\aula1.pdf
+>
+> Por esse motivo podemos ter nomes igual de arquivos em diretórios diferentes, pois a path absoluta é diferente (o nome completo é diferente).
+>
+> Nome de caminho relativo e diretório de trabalho.
+>
+> - Diretório atual
+> - Diretório pai
+
+###### Operações com diretórios
+
+1. Criar
+2. Apagar
+3. Abrir
+4. Fechar
+5. Ler
+6. Renomear
+7. Link (atalho)
+   - ![image-20210512213808995](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512213808995.png)
+8. Unlink
+
+Igual aos arquivos, só conseguimos fazer tais operações por que o sistema operacional implementou essas chamadas de sistema.
+
+:arrow_down:
+
+##### Implementação do sistema de arquivos
+
+Primeira coisa que precisamos saber é que um sistema operacional pode controlar diversos sistemas de arquivos (para o SO, cada sistema de arquivos é *considerado* um disco diferente). 
+
+Cada sistema de arquivos estará em uma partição de memória secundária. Exemplo: Dualboot (Linux e Win), cada partição terá seu sistema de arquivos.
+
+![image-20210512214752425](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512214752425.png)
+
+> *MBR = Master boot record -> identifica como e onde um sistema operacional está localizado para que possa ser inicializado (carregado)*.
+>
+> *Boot block -> Código base do SO para carregar o kernel.*
+>
+> *Super block -> É essencialmente os metadados do sistema de arquivos e define o tipo, tamanho, status e informações do sistema de arquivos sobre outras estruturas de metadados* 
+
+![image-20210512215241111](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512215241111.png)
+
+Arquivos são formados por blocos, não compensa ler byte por byte, logo lemos um bloco.
+
+Super block -> tabela de descritores.
+
+![image-20210512215527534](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512215527534.png)
+
+![image-20210512215924664](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512215924664.png)
+
+![image-20210512220103464](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512220103464.png)
+
+##### Alocação de arquivos 
+
+###### Alocação Contígua
+
+![image-20210512221310143](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512221310143.png)
+
+É rapido, mas é como se fosse o esquema de partições fixas:
+
+![image-20210512221511118](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512221511118.png)
+
+![image-20210512221707479](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512221707479.png)
+
+Outra parte boa é a utilização dele para arquivos que não irão se modificar - **media de somente leitura** (cd de música, filme, arquivos de instalação...).
+
+###### Alocação por lista encadeada com tabela de índice
+
+![image-20210512222503701](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512222503701.png)
+
+Completamente inviável para o sistema principal, por ocupar muito espaço.
+
+---
+
+## Aula 21 - 12/05
+
+#### Arquivos [continuação]
+
+#### Diretórios
+
+#### Implementação do sistema de arquivos
