@@ -1314,14 +1314,20 @@ A partir daí é só fazer o mesmo cálculo para descobrir a página, deslocamen
 - Armazenamento não-volátil (longo prazo);
 - Acesso simultâneo.
 
-Arquivo pe um recurso de software que não existe no hardware.
+Arquivo de um recurso de software que não existe no hardware.
 
 - Arquivos como sequência de bytes;
 - Blocos de disco x arquivos lógicos.
 
-![image-20210510192346380](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510192346380.png)
+Papéis do SO / Sistema de arquivos:
 
-O arquivo é uma abstração, uma sequência de bytes que usaremos depois.
+- Gerência de espaço livre;
+- Armazenamento de blocos lógicos e localização posterior;
+- Acesso concorrente.
+
+E tudo isso da melhor forma possível.
+
+> **O arquivo é uma abstração, uma sequência de bytes que usaremos depois.**
 
 ![image-20210510193208155](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510193208155.png)
 
@@ -1340,11 +1346,33 @@ De forma mais detalhada:
 - Arquivo para o SO
   - Em geral, o conteúdo é indiferente, o SO não sabe se é um arquivo de música, foto... só um conjunto de bytes.
 
-![image-20210510194618617](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510194618617.png)
+###### Nomes
 
-![image-20210510200023517](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510200023517.png)
+São fundamentais para a abstração, igual às extensões. Em relação ao nome, cada sistema de arquivos terá sua regra de nomeação.
 
-Arquivo executáveis, quer dizer que estamos dizendo ao SO que ele pode usar aqueles bytes para serem processados no processados, e resultando na execução de um programa.
+###### Tipos (para o SO)
+
+1. Arquivos regulares ou arquivos de dados
+
+   - Contêm informações do usuário;
+
+   - São manipulados por programas aplicativos
+
+   - Exemplo: arquivo de imagem, pdf... é do usuário, e os dados são exibidos pelo mesmo por aplicativos.
+
+     > 
+
+2. Arquivos executáveis
+
+   - Quer dizer que estamos dizendo ao SO que ele pode usar aqueles bytes para serem processados no processados, e resultando na execução de um programa.
+
+3. Diretórios
+
+   - Arquivos do sistema para organizar arquivos de dados.
+
+4. Arquivos especiais de bloco ou caractere
+
+   - Usados para dar acesso a dispositivos
 
 ![image-20210510200801421](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510200801421.png)
 

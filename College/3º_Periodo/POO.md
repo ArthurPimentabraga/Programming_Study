@@ -656,3 +656,70 @@ A **serialização** em Java é o processo no qual a instância de um objeto é 
 Para habilitar a **serialização** de terminada classe você deve explicitamente implementar a interface Serializable. Esta interface é apenas de marcação, pois não tem nenhum método a ser implementado, serve apenas para que a JVM saiba que aquela determinada Classe está hábil para ser serializada.
 
 [Link DevMedia](https://www.devmedia.com.br/use-a-serializacao-em-java-com-seguranca/29012)
+
+---
+
+## Aula 26 - 13/05
+
+#### Prática
+
+---
+
+## Aula 27 - 14/05
+
+#### Programação defensiva
+
+Conceito baseado na noção de direção defenciva: *"Se alguém fizer algo perigoso, você está preparado para evitar consequências. (...) Você assume a responsabilidade pela sua saúde, mesmo que o erro seja do outro motorista."*
+
+Ideia principal na programação: Problemas inevitavelmente acontecerão. Seu código/programa estará preparado para lidar com eles.
+
+![image-20210514193058629](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210514193058629.png)
+
+##### Princípios de McConnell
+
+- "Garbage in, nothing out" (lixo entra, nada sai) - Muito comum em jogos;
+- "Garbage in, error message out" (lixo entra, mensagem de erro sai);
+- "No garbage allowed in" (Não deixamos nenhum lixo entrar).
+
+###### Verificar dados
+
+*Verificar dados de todas as fontes externas: Arquivos, usuários, rede || Faixas de valores para tipos numéricos (int, float, ...) || Formato de texto em Strings (comprimento, valores restritos, ...). Ou seja, se usar algo de fora, verifique.*
+
+###### Verificar parâmetros
+
+Verificar parâmetros nas chamadas de métodos. Semelhante ao anterior, mas dados vêm de outros locais: métodos, atributos de outras classes ... *Testar o parâmetro dentro da função*.
+
+Evita-se propagação de valores incorretos.
+
+###### Decida previamente o tratamento
+
+Decidir desde o momento do projeto como tratar as entradas que apresentem problemas. Assim que detectado o dado inválido, haja conforme planejado. Cada caso é um caso, diferentes abordagens se adequam a diferentes situações.
+
+:arrow_down:
+
+##### Programação por contrato
+
+Toda interfaces de componentes de software devem ser especificadas de maneira formal, precisa e verificável. No contrato tem especificando o tratamento de erro
+
+- Pré-condições - garante que só entrego o que pediu caso as entradas estiverem conforme o contrato (estipulado na interface). Ou seja, se recebeu tudo certo, deveria retornar corretamente. A premissa é: se eu sei o que receber, eu sei o que testar;
+- Pós-condições. A premissa é: se eu sei o que pode sair, eu sei o que testar.
+- Invariantes: Condições que não controlamos. Ex: Falha na conexão, servidor fora do ar, dados vazios...
+
+> 1. Método chamado (pré-condições) -> ou executa (pós-condições), ou falha.
+> 2. Falha: situação excepcional. *Tratamento varia com o tipo de erro.*
+
+![image-20210514200908130](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210514200908130.png)
+
+
+
+#### Exceções
+
+
+
+#### Tratamento de erros
+
+
+
+- localizarProduto -> classe agencia
+- Herança para produtos
+- Enumeradores
