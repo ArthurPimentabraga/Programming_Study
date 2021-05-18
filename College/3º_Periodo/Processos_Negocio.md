@@ -304,3 +304,10 @@ https://camunda.com/bpmn/reference/#events-escalation
 A **Teoria das Restrições (TOC)** contribui para a identificação dos problemas em um processo e para a adoção de processo de aprimoramento contínuo.
 
 ![image-20210503212626242](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210503212626242.png)
+
+---
+
+## Aula 12 - 17/05 - "Presencial"
+
+#### Apresentação de seminário
+

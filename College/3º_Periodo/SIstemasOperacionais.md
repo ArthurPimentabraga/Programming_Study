@@ -1489,6 +1489,24 @@ Outra parte boa é a utilização dele para arquivos que não irão se modificar
 
 Completamente inviável para o sistema principal, por ocupar muito espaço.
 
+FAT não tem atributo de proprietário (todos tem acesso).
+
+###### Alocação por nós-índice (i-node)
+
+![image-20210517192418668](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517192418668.png)
+
+sub-arquivo que contém a descrição do arquivo = Descritor
+
+> Um descritor por arquivo, ou seja, uma linha para cada arquivo, e não uma para cada parte da memória. Um índice por arquivo.
+
+![image-20210517192829941](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517192829941.png)
+
+É mais demorado, mas economiza espaço. *Lookup = localizar todas "as partes" do arquivo.*
+
+Flexível por índices indiretos. Usa qualquer posição que quiser, só registar no descritor.
+
+EXT3 é i-node
+
 ---
 
 ## Aula 21 - 12/05
@@ -1497,4 +1515,91 @@ Completamente inviável para o sistema principal, por ocupar muito espaço.
 
 #### Diretórios
 
-#### Implementação do sistema de arquivos
+#### Implementação do sistema de arquivos [continuação]
+
+---
+
+## Aula 22 - 17/05
+
+#### Implementação do sistema de arquivos [continuação]
+
+---
+
+#### Projeto de sistemas de arquivos
+
+![image-20210517193853022](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517193853022.png)
+
+**FAT**
+
+Usou 4KB do último bloco e sobrou 24KB no bloco, logo temos um desperdício de memória, fragmentação interna.
+
+![image-20210517193056590](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517193056590.png)
+
+Não é bom criar blocos muito grandes uma vez que o Tanenbaum fez uma pesquisa, e o resultado é:
+
+![image-20210517194414823](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517194414823.png)
+
+![image-20210517195137519](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517195137519.png)
+
+O equilíbrio também é ruim, pois o aproveitamento seria menor que 10%.
+
+##### Candidatos
+
+- Setor
+- Trilha
+- Cilindro
+- Tamanho da página de memória
+
+#### Compartilhamento de arquivos
+
+![image-20210517195828289](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517195828289.png)
+
+![image-20210517200018568](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517200018568.png)
+
+- Hard links (sistema i-node)
+
+Compartilhamento real, dois lugares apontando para o mesmo descritor, para o mesmo arquivo. Nos descritores teremos propriedades de compartilhamento. Ex: Cont.Ref:  2, ou seja, duas referências para esse mesmo arquivo. Essa propriedade serve até para não apagar um arquivo fisicamente quando somente um dos usuários deleta o arquivo. 
+
+![image-20210517200435562](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517200435562.png)
+
+Um efeito colateral é que se o proprietário deletar o link, ele continua sendo o proprietário, e caso o usuário B não tenha permissões...
+
+- Symbolic links
+
+Criamos uma referência para o diretório do proprietário, ao invés de um link direto para o arquivo. Porém se o proprietário apagar o arquivo, ele será excluido fisicamente. Ex: Atalho do windows.
+
+![image-20210517200758161](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517200758161.png)
+
+----
+
+#### Sistemas de arquivo com journaling
+
+![image-20210517201314002](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517201314002.png)
+
+Registra tudo que vai fazer antes de fazer. Depois que falar tudo oq vai fazer é que vai começar a fazer. Consequentemente é mais lento, porém mais seguro, pois se achar um problema no fluxo, ele trata o cenário.
+
+Quando ele finaliza ele 
+
+Dificuldades:
+
+- Operações idempotentes
+- Transações atômicas
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! estudar os dois tópicos acima
+
+Exemplos:
+
+- Windows: NTFS
+- Linux: ReiserFS, ext3 em diante
+- MaxOS: HFS+
+
+![image-20210517202824026](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517202824026.png)
+
+![image-20210517203001205](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517203001205.png)
+
+*A lixeira é um diretório especial do sistema, ou seja, mandar para a lixeira, é só mudar o diretório do arquivo.*
+
+
+
+
+
