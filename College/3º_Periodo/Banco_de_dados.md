@@ -245,3 +245,17 @@ Restrições
 
 ![image-20210505194035392](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505194035392.png)
 
+---
+
+## Aula 10 - 19/05
+
+#### VIEW
+
+<img src="../../imgs/3_Periodo/Banco_Dados/Definicao-VIEW.png" style="width:80%">
+
+<img src="../../imgs/3_Periodo/Banco_Dados/Caracteristicas-VIEW.png" style="width:80%">
+
+<img src="../../imgs/3_Periodo/Banco_Dados/Utilidade-VIEW.png" style="width:80%">
+
+#### Segurança e privilégios
+

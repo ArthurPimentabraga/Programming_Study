@@ -1599,7 +1599,158 @@ Exemplos:
 
 *A lixeira é um diretório especial do sistema, ou seja, mandar para a lixeira, é só mudar o diretório do arquivo.*
 
+---
 
+## Aula 23 - 19/05
 
+#### Segurança
 
+Segurança de computadores aplicada ao SO é de extrema importância. Dispositivos computacionais armazenam informações valiosas: Projetos comerciais, documentos legais, dados bancários, arquivos pessoais...
 
+Proteção contra acessos não autorizados e acidentes (danos físicos...).
+
+##### Complicadores
+
+- Sistemas inchados e novas funcionalidades
+  - Arquivos texto x documentos elaborados. Ou seja, temos aplicativos para visualizar/utilizar tais documentos, logo um software malicioso pode se passar por uma foto, por exemplo, para o SO *cair nessa* e executar o sistema.
+  - Páginas web estáticas x aplicativos web
+  - Práticas seguras x comodidade de execução. Ou seja, fazer as coisas de maneira segura é mais trabalhoso.
+- Sistemas em rede e aplicativos em nuvem
+- Dados compartilhados. *Para compartilhar dados, precisamos dar permissão para alguém, e podem tirar proveito disso.*
+- Cultura dos usuários. Ou seja, no mundo digital, as pessoas não são tão meticulosas... ​Não são educadas para utilizar de forma segura.​ ​
+
+##### Ameaças ao SO
+
+| Meta              | Ameaça                                     |
+| ----------------- | ------------------------------------------ |
+| Confidencialidade | Exposição e acesso não autorizado          |
+| Integridade       | Manipulação e alteração não autorizada     |
+| Disponibilidade   | Falha ou ataque de recusa de serviços      |
+| Privacidade       | Uso não autorizado de informações pessoais |
+
+##### Segurança e mecanismos de proteção
+
+- Segurança - Política de segurança (Planejado no momento do projeto do sistema)
+  - **O que** proteger? De **quem**?
+- Mecanismos de proteção
+  - **Como** proteger de acordo com as regras de segurança?
+
+##### Perda acidental de dados
+
+Casos em que não foram ocasionados propositalmente, como um ataque, por exemplo.
+
+- Catástrofes naturais
+
+- Erros humanos
+
+- Erros de software
+
+- Erros de hardware
+
+- Acidentes e backups
+
+    > Cópias de segurança (backup)
+    >
+    > - Sistema de arquivos pode oferecer serviço de backup
+    >
+    > Decisões:
+    >
+    > - Total (todos os arquivos do SO) ou parcial?
+    > - Completo ou incremental (guarda só o que foi modificado desde o último backup)? 
+    > - Dados originais ou comprimidos (possível de dar problemas)?
+    > - Cópia física (espelhamento) ou cópia lógica? *Na cópia física é copiado byte por byte. Na lógica copia o bloco armazenado, ou seja, se tiver fragmentação interna, ele copia também. :grimacing:* 
+    > 
+    > *O backup deve sempre ser feito em um disco ou local sem vínculo com o original. De preferência em outro local.*
+
+##### Invasões
+
+Ameaças às metas de confidencialidade e integridade.
+
+- Invasões passivas (quebra de confidencialidade);
+- Invasões ativas (quebra de integridade);
+  - Invasões ativas e backup
+
+*Não necessariamente um invasão é algo malicioso, pode ter quebras internas, como a visualização de áreas internas do sistema, por usuários que não deveriam ver.*
+
+##### Passos para segurança em SO
+
+Geralmente é implementada em duas fases:
+
+###### Autenticação
+
+Autorização do usuário para acessar o sistema.
+
+Sistemas computacionais podem ter acesso restrito.
+
+- Acesso físico. Ex: Funcionário tem acesso a um prédio do trampo dele. - Acesso à um celular.
+- Acesso lógico. Ex: Acesso aos dados...
+
+*Autenticar: certificar-se de que o usuário é quem ele diz ser. Teste de Turing :blush:*
+
+:arrow_down:
+
+**-- Senha --**
+
+Identificar o usuário por **algo que ele sabe.**
+
+>  O ponto positivo é que é **fácil de implementar** e de **entender e usar.** Porém, se outra pessoa saber sua senha, ele consegue acesso.
+
+Armazenamento criptografado de senhas. E melhor ainda, criptografia de mão única, ou seja, não sabe o dado original, toda vez que tentar logar, vai criptografar a entrada e ver se o resultado é igual.
+
+> A dificuldade é que a senha é totalmente dependente do usuário.
+
+Senhas **"fáceis"** e ataque de dicionário. Basicamente o cara tem um arquivo com zilhores de padrões de senhas possíveis, e ele mescla com informações possíveis de serem a senha desejada:
+
+- Sequencias de letras e/ou números
+- Dados pessoais
+- Palavras ou expressões conhecidas
+- Nomes próprios: cidades, esportistas, artistas, etc.
+- Senhas-padrão de fabricantes. Ex: admin admin :weary:
+
+> O problema de senhas difíceis é que, quanto mais difícil, mais provável que o usuário esqueça ou não erre facilmente. 
+>
+> Obs: Pegar uma palavra chave e trocar algumas letras por caracteres, não é definição de senha "difícil". O bom mesmo era pegar uma frase :grin: e embaralhar os caracteres. Quanto mais entropia melhor.
+
+Senhas e políticas de uso:
+
+- Forçar regras de entropia
+- Forçar mudanças periódicas
+- Senhas designadas pelo sistema
+- Senhas de uso único
+- Senha e desafio. *O problema que o desafio, geralmente envolvem dados pessoais, e dados pessoais são muito públicos hoje em dia. Ex: Qual era o nome do seu cachorro.*
+- Autenticação em dois passos
+- Execução periódica de um verificador de senhas. Ex: O próprio SO roda um verificador para saber se algum usuário está com uma senha muito fácil.
+
+:arrow_down:
+
+**-- Tokens --**
+
+*A thing serving as a visible or tangible representation of a fact, quality, feeling, etc.* Autenticar o usuário por **algo que ele possui.** Mesma ideia de fechadura + chave. *Associado à autenticação de dois passos, hoje em dia.*
+
+Ex: Tokens bancários - Smartcard; Dispositivos + app token
+
+:arrow_down:
+
+**-- Biometria --**
+
+Medição das características físicas. Autenticar o usuário por **algo que ele é**.
+
+Cadastro biométrico: Característica variada (entre usuários) e constante (para uma mesma pessoa).
+
+Nos últimos anos a biometria diminuiu seu custo. E expandiu, também, pela computação ubíqua, ou seja, até meu celular tem verificador biométrico.
+
+Métodos:
+
+- Comprimento de dedos
+- Leitura de digital
+- Análise de assinatura
+- Análise de retina
+- Reconhecimento facial
+
+> Biometrica não é 100% seguro, pode dar falsos negativos, falsos positivos. 
+
+###### Proteção
+
+- A partir da autenticação, controle das ações permitidas para aquele usuário.
+
+*Um ataque pode se passar pou um usuário para acessar como se fosse o mesmo.*
