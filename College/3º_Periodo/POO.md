@@ -710,16 +710,49 @@ Toda interfaces de componentes de software devem ser especificadas de maneira fo
 
 ![image-20210514200908130](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210514200908130.png)
 
+---
 
+## Aula 28 - 20/05
+
+#### Tratamento formal de falhas
+
+- Separa tratamento do erro do código esperado
+- Propaga erros na pilha de chamada de funções
+- Agrupa e diferencia tipos de erros
+- Pode-se produzir Exception ou Erro em Java
 
 #### Exceções
 
+Maneira específica de sinalizar erros ou eventos inesperados a um código. Ajudam a impedir que condições de erro sejam propagadas pelo código.
+
+> Não são ignoráveis
+
+Podem reduzir a complexidade do código e melhorar a legibilidade. *Centralizam o tratamento de problemas.*
+
+> Mas devem ser usadas responsavelmente. Não é só dar um log e seguir a vida.
+
+##### Tratamento de exceções
+
+``` Java
+try {
+    ... // bloco de código padrão
+}
+catch (Exception e) {
+    ... // bloco de tratamento de erros. Pode ter mais de um.
+}
+finally { // algumas linguagens oferencem finally
+    ... // bloco que será sempre executado
+}
+```
+
+##### Entendendo exceções
+
+1. Exceção é lançada - *É criado um objeto do tipo da exceção.*
+   - Ambiente de execução procura um catch para tratamento desta exceção.
+2. Método em execução não tem este catch 
+   - Procura-se o tratamento no método que chamou o método atual... e assim sucessivamente
+3. Não é encontrado nenhum bloco catch
+   - Mensagem de exceção sem tratamento para usuário. Interrompe-se a execução do programa.
 
 
-#### Tratamento de erros
 
-
-
-- localizarProduto -> classe agencia
-- Herança para produtos
-- Enumeradores
