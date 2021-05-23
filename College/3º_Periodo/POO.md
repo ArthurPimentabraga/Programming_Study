@@ -754,5 +754,59 @@ finally { // algumas linguagens oferencem finally
 3. Não é encontrado nenhum bloco catch
    - Mensagem de exceção sem tratamento para usuário. Interrompe-se a execução do programa.
 
+##### Como saber qual exception tratar?
 
+1. Ler a documentação da classe/métodos utilizados dentro do bloco que deseja tratar. Geralmente tem informando a exception que pode estourar.
+2. Entenda o cenário para conseguir prever o cenário ruim.
+3. Quebra a cara e descobre :kissing_closed_eyes:
+
+> Sempre é bom tratar exception em específico, tratamentos personalizados. No último cenário que colocamos um catch com a *Exception* genérica.
+
+![image-20210521200543038](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210521200543038.png)
+
+
+
+##### Se algo deu errado, o que fazer?
+
+Possíveis retorno e tratamentos (cada um terá seus cenários adequados de utilização):
+
+1. Retorno de valor neutro
+
+   - Ao acontecer o problema, retorne um valor neutro, válido, que não cause propagação de erro.
+
+   - Ex: String vazia; Inteiro de valor 0; Ponteiro para elemento *null*.
+
+2. Substituição pelo próximo valor válido
+
+   - Pule para a próxima ocorrência
+   - Ex: Playlist de áudio, vídeo ou imagens; Várias leituras de um dispositivo/sensor; Geração de listas e outros conjuntos.
+
+3. Retornar a última resposta válida
+
+   - Repetir a última....
+   - Ex: 
+
+![image-20210521201119418](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210521201119418.png)
+
+![image-20210521201409926](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210521201409926.png)
+
+![image-20210521201540819](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210521201540819.png)
+
+![image-20210521201645931](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210521201645931.png)
+
+##### Aspectos de desempenho
+
+![image-20210521201903619](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210521201903619.png)
+
+##### Projeto de tratamento de erro e exceção
+
+
+
+
+
+---
+
+## Aula 29 - 21/05
+
+#### [Exceções na prática]
 

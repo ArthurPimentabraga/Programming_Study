@@ -259,3 +259,47 @@ Restrições
 
 #### Segurança e privilégios
 
+![image-20210523152644916](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523152644916.png)
+
+![image-20210523152659475](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523152659475.png)
+
+![image-20210523152744283](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523152744283.png)
+
+![image-20210523152813441](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523152813441.png)
+
+![image-20210523152836753](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523152836753.png)
+
+![image-20210523152945462](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523152945462.png)
+
+![image-20210523153051974](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153051974.png)
+
+![image-20210523153242956](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153242956.png)
+
+![image-20210523153321381](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153321381.png)
+
+![image-20210523153403252](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153403252.png)
+
+![image-20210523153456740](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153456740.png)
+
+![image-20210523153520757](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153520757.png)
+
+![image-20210523153541061](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153541061.png)
+
+![image-20210523153550650](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153550650.png)
+
+![image-20210523153645275](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153645275.png)
+
+![image-20210523153653644](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153653644.png)
+
+![image-20210523153709788](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153709788.png)
+
+![image-20210523153740694](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153740694.png)
+
+![image-20210523153749432](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153749432.png)
+
+![image-20210523153837724](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153837724.png)
+
+![image-20210523153851602](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153851602.png)
+
+![image-20210523153933409](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153933409.png)
+
