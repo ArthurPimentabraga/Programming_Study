@@ -15,7 +15,7 @@ A instalação de rootkits na máquina alvo pode ser feita de várias formas, ge
 
 # Types
 
-Existem vários tipos de rootkits, cara um atingindo diferentes partes / níveis do sistema. Alguns podem funcionar em modo kernel - usado para alterar a própria estrutura do sistema -, ou agem na memória, em drivers, entre outros. Outros agem mais à nível de software, até desabilitando ou removendo por completo qualquer software antivírus ou anti-malware que esteja instalado no computador comprometido.
+Existem vários tipos de rootkits, cada um atingindo diferentes partes / níveis do sistema. Alguns podem funcionar em modo kernel - usado para alterar a própria estrutura do sistema -, ou agem na memória, em drivers, entre outros. Outros agem mais à nível de software, até desabilitando ou removendo por completo qualquer software antivírus ou anti-malware que esteja instalado no computador comprometido.
 
 > Quanto mais ao nível do núcleo está um rootkit, mais grave e difícil é de detectar.
 
@@ -23,37 +23,33 @@ Alguns tipos mais comuns são:
 
 1. Rootkits ao nível do utilizador
 
-   asdasdsa
+   Esse tipo de rootkit afetam somente o sotfware (motivo pelo qual é mais fácil de ser detectado). Eles substituem arquivos executáveis de programas usados com frequência pelos usuários, para que toda vez que o alvo utilizar o programa desejado com o executável manipulado, na verdade está dando acesso ao computador para o invasor. Isso tudo enquanto o usuário utiliza normalmente o programa. 
 
 2. Rootkits de Kernel
 
    asdas
 
-3. Rootkits ao nível do Bootloader
-
-   asdasd
-
-4. Rootkits de memória
+3. Rootkits de memória
 
    asdas
 
-   Se sua memória está constantemente ocupada, mesmo com poucos processos em andamento, a resposta pode ser esse malware.
-
-5. Rootkits de Firmware
-
-   asdasd
-
 # Examples
 
+- Em 2011, especialistas em cibersegurança descobriram o ZeroAccess, um rootkit de kernel que infetou mais de 2 milhões de computadores por todo o mundo. Em vez de afetar diretamente a funcionalidade do computador infetado, este rootkit descarrega e instala malware de forma silenciosa e força o computador a fazer parte de uma botnet à escala mundial usada por hackers para levar a cabo ciberataques. Apesar de várias tentativas para a desativar, o ZeroAccess continua ativa até aos dias de hoje.
 
+# How to detect a rootkit
 
-# How remove a rootkit
+sinais típicos de uma infeção. Estes incluem normalmente uma performance mais lenta e níveis de memória RAM livre baixos, data e hora incorretos no canto inferior direito do seu ecrã, bem como ocorrências frequentes do infame “Blue Screen of Death” (ecrã azul da morte). 
 
+*Se sua memória está constantemente ocupada, mesmo com poucos programas em andamento, a resposta pode ser esse malware.*
 
+software anti-vírus , anti-malware - Ou formata :)
 
 # Rootkit out of malicious context
 
+Um rootkit só é considerado um malware (software malicioso) quando é destinado a fins ilegais, para algum ataque, ou invasão criminosa. Porém, há usos de rootkit que podem ser legalmente corretos, por exemplo:
 
+O *Stalkerware* é uma classificação de rootkit com o objetivo de monitorar a atividade de alguém, ou controlar o conteúdo que a mesma consome. Esse tipo de rootkit é comercializado para pais, empregadores, entre outros. Porém, só é legal caso os envolvidos estejam de acordo. Sem contar que em vários países, tais práticas são ilegais, e não podem ser comercializados.
 
 # History
 
