@@ -27,11 +27,11 @@ Alguns tipos mais comuns são:
 
 2. Rootkits de Kernel
 
-   asdas
+   Como o próprio nome já dá a entender, esse tipo de rootkit ataca/atua no Kernel, no núcleo do sistema operacional. De forma furgiva consegue alterar as funcionalidades do sistema, adicionando o próprio código, dependendo do nível de acesso consegue alterar todo e qualquer sistema interno do sistema operacional.
 
 3. Rootkits de memória
 
-   asdas
+   Por atuarem na memória principal do computador, este tipo de rootkit não é permanente, ou seja, por atuar em uma memória volátil o malware é excluido assim que o sistema é reiniciado. Porém, ainda é muito perigoso, pois utiliza a RAM para disparar processos maliciosos que rodam em background no computador infectado. Sem contar que consome memória, logo afeta o desempenho do computador (um motivo para ser mais fácil de identificar).
 
 # Examples
 
