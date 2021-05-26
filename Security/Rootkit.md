@@ -39,15 +39,13 @@ Alguns tipos mais comuns são:
 
 # How to detect a rootkit
 
-sinais típicos de uma infeção. Estes incluem normalmente uma performance mais lenta e níveis de memória RAM livre baixos, data e hora incorretos no canto inferior direito do seu ecrã, bem como ocorrências frequentes do infame “Blue Screen of Death” (ecrã azul da morte). 
+Como citado anteriormente, os rootkits são software que estão em execução no computador infectado, e podem até estarem escondidos na memória RAM, lançando programas que estão em background no computador. Logo uma performance mais lenta, e memória RAM constantemente ocupado, mesmo não tendo muitos programas em execução, podem ser sinais de que um rootkit malicioso esteja instalado no computador. Até a “Blue Screen of Death” (tela azul da morte), se ocorrido com frequência, pode ser um sinal desse malware.
 
-*Se sua memória está constantemente ocupada, mesmo com poucos programas em andamento, a resposta pode ser esse malware.*
-
-software anti-vírus , anti-malware - Ou formata :)
+Pode-se detectar e até mesmo retirar um rootkit instalado na máquina com um bom anti-malware e/ou anti-vírus, mas em último caso formatar o disco rígido pode ser a solução.
 
 # Rootkit out of malicious context
 
-Um rootkit só é considerado um malware (software malicioso) quando é destinado a fins ilegais, para algum ataque, ou invasão criminosa. Porém, há usos de rootkit que podem ser legalmente corretos, por exemplo:
+Um rootkit pode, e também não pode ser considerado um malware (software malicioso). Tudo depende de como será utilizado. Rootkit só é considerado um malware quando é destinado a fins ilegais, para algum ataque, ou invasão criminosa. Porém, há usos de rootkit que podem ser legalmente corretos, por exemplo:
 
 O *Stalkerware* é uma classificação de rootkit com o objetivo de monitorar a atividade de alguém, ou controlar o conteúdo que a mesma consome. Esse tipo de rootkit é comercializado para pais, empregadores, entre outros. Porém, só é legal caso os envolvidos estejam de acordo. Sem contar que em vários países, tais práticas são ilegais, e não podem ser comercializados.
 
