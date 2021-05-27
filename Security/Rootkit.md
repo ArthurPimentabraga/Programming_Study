@@ -47,7 +47,7 @@ Pode-se detectar e até mesmo retirar um rootkit instalado na máquina com um bo
 
 Um rootkit pode, e também não pode ser considerado um malware (software malicioso). Tudo depende de como será utilizado. Rootkit só é considerado um malware quando é destinado a fins ilegais, para algum ataque, ou invasão criminosa. Porém, há usos de rootkit que podem ser legalmente corretos, por exemplo:
 
-O *Stalkerware* é uma classificação de rootkit com o objetivo de monitorar a atividade de alguém, ou controlar o conteúdo que a mesma consome. Esse tipo de rootkit é comercializado para pais, empregadores, entre outros. Porém, só é legal caso os envolvidos estejam de acordo. Sem contar que em vários países, tais práticas são ilegais, e não podem ser comercializados.
+O *Stalkerware* é uma classificação de rootkit com o objetivo de monitorar a atividade de alguém, ou controlar o conteúdo que a mesma consome. Esse tipo de rootkit é comercializado para pais, empregadores, entre outros. Porém, só é legal caso os envolvidos estejam de acordo. Sem contar que em vários países, tais práticas são ilegais, e não podem ser comercializados. 
 
 # History
 
