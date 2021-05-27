@@ -1,6 +1,4 @@
-
-
-## Notes
+Notes
 
 Primeira aula do semestre ja começa com uma abertura de fogos de artifício com trilha de star wars. Então meu prof abre a cam com fundo de um cruzador espacial (star wars), depois muda pra um fundo de Mordor.
 
@@ -1747,10 +1745,54 @@ Métodos:
 - Análise de retina
 - Reconhecimento facial
 
-> Biometrica não é 100% seguro, pode dar falsos negativos, falsos positivos. 
+> Biometrica não é 100% seguro, pode dar falsos negativos, falsos positivos. Além de ter sim formas de burlar a biometria, só é mais difícil.
 
 ###### Proteção
 
 - A partir da autenticação, controle das ações permitidas para aquele usuário.
 
-*Um ataque pode se passar pou um usuário para acessar como se fosse o mesmo.*
+*Um ataque pode se passar po um usuário para acessar como se fosse o mesmo.*
+
+Também tem a aceitação cultural, ou seja, algumas formas de autenticação biométrica pode não ser bem aceita dependendo da cultura do local onde ela será utilizada.
+
+##### Ameaças e ataques ao SO
+
+Ameaças e ataques mais comuns a SO são bem conhecidos. O que vimos, geralmente, são variações de falhas exploradas, e variações de complexidade e potencial de dano.
+
+Ataques internos (alguem de dentro) e externos (alguem de fora).
+
+###### Ataques via código-fonte
+
+Alguém interno (que trabalha no código) colocou *atalhos* no código fonte para facilitar o ataque.
+
+- Bombas lógicas (só eu sei resolver o problema, logo precisarão de mim);
+- Alçapão (trapdoor - atalho). Ex: Algum login, ou palavra chave escondida no código;
+
+> Importância de revisão de código e auditoria de sistemas de software.
+
+###### Ataques internos
+
+1. Fake login (página parecida com o login original);
+2. Requisição aleatória de páginas de memória principal ou blocos de disco.
+   - Áreas disponíveis podem conter "lixo" útil.
+3. Forçar o sistema com chamadas ilegais, incorretas e atitudes não recomendadas.
+4. Estouro de buffer
+   - Execução de código malicioso que tenta desviar o fluxo de execução para ganhar privilágios.
+   - Em geral, possível em linguagens que não verificam limites de memória (por exemplo, C).
+
+    ``` c
+    void A() {
+        char B[128]; /* reservar um buffer de 128 bytes */
+        printf("Digite mensagem para log: ");
+        gets(B); /* lê da entrada padrao para o buffer */
+        writeLog(B); /* enviar string formatada arquivo de log */
+    }
+    ```
+
+![image-20210526212653017](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210526212653017.png)
+
+###### Ataques externos
+
+1. Varredura de portas de rede
+2. Ataque a serviços disponíveis
+3. Malware - malicious software

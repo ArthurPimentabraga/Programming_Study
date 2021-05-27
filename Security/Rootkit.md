@@ -5,7 +5,7 @@ author: Arthur P. Braga
 
 # What is
 
-Rootkit é um pacote de softwares que asseguram e mantem a presença do invasor no computador comprometido. Com o intuito de dar acesso e controle sobre o alvo de forma furtiva, e muitas vezes gradativa. Ou seja, após a invasão é instalado um *kit* de programas/mecanismos que escondem o invasor do sistema comprometido, fazendo com que os sistemas de detecção não percebam sua presença enquanto consegue cada vez mais acesso e controle ao sistema, e alcança seu objetivo seja ele qual for.
+Rootkit é um pacote de softwares que assegura e mantém a presença do invasor no computador comprometido. Com o intuito de dar acesso e controle sobre o alvo de forma furtiva, e muitas vezes gradativa. Ou seja, após a invasão é instalado um *kit* de programas/mecanismos que escondem o invasor do sistema comprometido, fazendo com que os sistemas de detecção não percebam sua presença enquanto consegue cada vez mais acesso e controle ao sistema, e alcança seu objetivo seja ele qual for.
 
 > Obs: O invasor tem acesso ao computador alvo com privilégios de administrador (*root*). Ou seja, as operações e processos que esses programas fazem no computador comprometido é com privilégio de administrador, para que o sistema se engane achando que aquelas operações estão sendo feitas, realmente, pelo administrador do sistema. *Daí o nome rootkit.*
 
@@ -35,7 +35,7 @@ Alguns tipos mais comuns são:
 
 # Examples
 
-- Em 2011, especialistas em cibersegurança descobriram o ZeroAccess, um rootkit de kernel que infetou mais de 2 milhões de computadores por todo o mundo. Em vez de afetar diretamente a funcionalidade do computador infetado, este rootkit descarrega e instala malware de forma silenciosa e força o computador a fazer parte de uma botnet à escala mundial usada por hackers para levar a cabo ciberataques. Apesar de várias tentativas para a desativar, o ZeroAccess continua ativa até aos dias de hoje.
+Um exemplo real do uso de rootkit, foi o ZeroAccess, que foi descoberto em 2011. Esse malware tinha infectado mais de 2 milhões de computadores pelo mundo. Era um rootkit de kernel, porém ao invés de modificar as funcionalidades do sistema operacional, o mesmo forçou os computadores à fazerem parte de uma botnet em escala mundial. Ou seja, os criadores desse malware tinham um "exécito" de computadores ao seu dispor, para fazer ataque DDOS, enviar span, espalhar vírus, entre outras formas de utilização da botnet. E apesar de várias tentativas para desativar o malware, ele continua ativo até hoje.
 
 # How to detect a rootkit
 
