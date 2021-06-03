@@ -311,3 +311,8 @@ A **Teoria das Restrições (TOC)** contribui para a identificação dos problem
 
 #### Apresentação de seminário
 
+---
+
+## Aula 13 - 31/05 - "Presencial"
+
+#### Atividade avaliativa - Medição de desempenho

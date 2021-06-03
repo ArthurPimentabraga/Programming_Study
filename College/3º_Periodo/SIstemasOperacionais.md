@@ -1796,3 +1796,158 @@ Alguém interno (que trabalha no código) colocou *atalhos* no código fonte par
 1. Varredura de portas de rede
 2. Ataque a serviços disponíveis
 3. Malware - malicious software
+
+---
+
+## Aula 24 - 31/05
+
+#### Entrada e Saída
+
+Papéis do SO:
+
+- Emitir comandos para o dispositivos
+- Verificar interrupções
+- Tratar erros
+- Fornecer uma interface simples e de fácil uso
+
+Exemplo: Habilitar e desabilitar o bluetooth do celular, é uma forma simples e fácil para o usuário. Ou seja, ele não precisa saber o que ta rolando por debaixo dos panos.
+
+Para o SO ele só sabe o que fazer pq ele responde os pedidos de processos.
+
+Os dispositivos emitem a entrada, o SO verifica os pedidos de processos de acordo com essas entradas, e após a execução o SO emite a saída.
+
+Verificar interrupções de sistema.
+
+##### Para cumprir esses objetivos
+
+O SO vai precisar se organizar de alguma maneira:
+
+1. Independência de dispositivo
+   - Exemplo: Se queremos salvar um arquivo em um pendrive ou em um SSD, a única coisa que precisamos é escolher o lugar que queremos gravar, de resto o SO resolve pra gente.
+2. Tratamento de erro
+3. Leituras síncronas e assíncronas
+4. Buffer temporário
+
+
+
+![image-20210531202645993](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210531202645993.png)
+
+> - Device-independent: vai fazer toda a verificação necessária para a operação que foi requisitada pela camada superior.
+> - Device drivers: os hardwares podem ser diferentes, logo precisamos de drivers para a comunicação entre os comandos do dispositivo e o hardware. 
+
+![image-20210602205813979](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602205813979.png)
+
+> Cada dispositivo teá seu controlador respectivo. Exceto a alaca USB que é universal (*Universal Serial Bus* - transmite e recebe bytes). 
+>
+> Quanto mais específico for equipamento, mais importante é seu drive.
+
+##### Dispositivos de E/S
+
+A primeira coisa que o SO vai fazer é dividir os dispositivos em duas classificações.
+
+- Dispositivos de bloco: recebem e enviam blocos de bytes.
+  - Tipicamente, memória secundária
+    - Discos rígidos (HD)
+    - Discos de estado sólido (SSD)
+- Dispositivos de caractere: recebem e enviam dados em fluxos de bytes individuais (stream de bytes).
+  - A maioria dos dispositivos tem este comportamento
+    - Teclados
+    - Mouse
+    - Monitores de vídeo
+    - Impressoras - poderia ser considerado de bloco, mas sua comunicação é estilo produtor/consumidor.
+
+:arrow_down:
+
+###### Discos rígidos (HD)
+
+Dispositivos mais tradicional de armazenamento secundário. *Operação mecânica e magnética.*
+
+> Em dispositivos de menor porte, em franca substituição por discos de estado sólido.
+
+
+
+![image-20210602212312044](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602212312044.png)
+
+![image-20210602212433551](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602212433551.png)
+
+![image-20210602212731359](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602212731359.png)
+
+A imagem vista a cima ilustra a limitação que por muito tempo persistiu nos discos rígidos. *Muito pela física e mecânica.*
+
+E a imagem à baixo é uma evolução, passou a ser dividido por blocos lógicos.
+
+![image-20210602212938178](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602212938178.png)
+
+![image-20210602213400876](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602213400876.png)
+
+> O HD é mecânico, ou seja, tem uma agulha que passa pelas trilhas lendo e escrevendo, a agulha pecisa se "locomover", é uma operação mecânica, e isso gasta tempo. Sem contar que o disco precisa rotacionar para que a agulha chegue no endereço desejado (Latência retacional).
+
+
+
+**Algoritmos de leitura em disco:** Se não posso melhorar a física, organizo para que o trageto da agulha e disco não seja tão grande.
+
+A execução dos pedidos de leitura pode ser feita de maneiras diferentes pelo SO:
+
+**FCFS**
+
+![image-20210602214501278](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602214501278.png)
+
+**Deslocamente mais curto primeiro (SSF)**
+
+![image-20210602214528676](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602214528676.png)
+
+E se continuam aparecendo requisições próximas, o que acontece com as extremidades? Dependendo do cenário pode resultar em *starvation* (vai morrer de fome, ninguém executa). Ou seja, esse algoritmo não da garantia de execução.
+
+**Elevador** - Varredura
+
+![image-20210602215133411](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602215133411.png)
+
+Não da garantia de resultado, mas da garantia de atendimento.
+
+###### Acesso direto à memória - DMA
+
+Se a CPU precisar controlar a transferência de dados do disco para a memória, desperdiçará muitos ciclos de processamento.
+
+DMA: *direct memory access*
+
+- Técnica implementada com o uso de um controlador que tem acesso ao barramento sem depender da CPU.
+- Transferência de dados dos dispositivos diretamente para a memória.
+
+![image-20210602215928705](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602215928705.png)
+
+- Funcionamento em *word-at-a-time* - copia dado por dado
+  - Roubo de ciclos de CPU
+- Funcionamento *burst-mode* - envia uma rajada de dados
+
+###### Discos e memória secundária
+
+Nomeação e independência
+
+- F:\Dados\Aulas\SO\Aula12.pdf
+- /home/usuario/dados/aulas/SO/Aula12.pdf
+
+Operações de otimização:
+
+- Leitura antecipada (prefetch) - Se o sistema percebe um padrão de uso, ele já lê o provável endereço desejado. O problema é que isso é chute, logo pode gastar tempo de leitura atoa.
+- Escrita adiada (deferred write) - Mesma situação de cima, porém com escrita. Ele acumula pedidos de escrita frequêntes para escrever uma vez só um bloco maior de dados.
+- Chamada de sistema *sync* - de tempos em tempos ele realiza as operações de leitura e escrita.
+
+Buffer de memória do SO e do dispositivo - Primero os dados ficam salvos na memória do dispositivo, e depois vão para a memória..
+
+**Desfragmentação:**
+
+Executar o desfragmentador para organizar os blocos de memória
+
+![image-20210602221913172](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602221913172.png)
+
+:arrow_down:
+
+##### Discos de estado sólido (SSD)
+
+Utiliza circuitos eletrônicos para armazenamento de longo prazo.
+
+---
+
+## Aula 25 - 02/06
+
+#### Entrada e Saída [continuação]

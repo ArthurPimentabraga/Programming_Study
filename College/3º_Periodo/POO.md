@@ -810,3 +810,210 @@ Possíveis retorno e tratamentos (cada um terá seus cenários adequados de util
 
 #### [Exceções na prática]
 
+---
+
+## Aula 30 - 27/05
+
+#### Princípios SOLID
+
+Pilares da POO para que um projeto siga os princípios que nortearam o surgimento do paradigma.
+
+- Reúso
+- Manutenibilidade - Legibilidade
+- Flexibilidade
+- Extensibilidade
+
+![image-20210527191340959](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210527191340959.png)
+
+##### Single responsibility
+
+"Uma classe deve ter apenas um motivo para mudar"
+
+Uma classe deve ter uma única responsabilidade.
+
+- "Responsabilidade": motivo para mudança;
+- Coesão
+- Encapsulamento
+
+:arrow_down:
+
+##### Open/Closed principle
+
+Software deve ser aberto para extensão, mas fechado para modificação.
+
+- Mudanças apenas para correção de código;
+- Extensão: classes abstratas e interfaces
+
+> Refatoração é considerada melhoria.
+
+Relação com herança e polimorfismo
+
+:arrow_down:
+
+##### Liskov substitution
+
+Objetos que fazem parte de um programa podem ser substituídos por instâncias de seus subtipos sem prejuízo para a correção do programa. *Relação com herança.*
+
+- Programação por contrato
+  - Fornecedor provê produto mediante pagamento
+  - Cliente paga pelo produto e o recebe
+  - Ambas as partes devem obedecer certas regras
+- Fornecedor impõe pré-condições
+- Cliente tem a garantia de certas pós-condições
+- Invariantes (regras que não variam)
+
+> Violação comum do LSP: verificação de tipo em tempo de execução.
+>
+> Violação sutil: uso da herança desconsiderando o comportamento. Ex: quadrado herdando de retângulo.
+>
+> ``` Java
+> Rectangle x = new Square(5);
+> x.setHeight(8);
+> ```
+
+Em resumo: herança deve considerar "é-um" para **comportamento** do objeto.
+
+:arrow_down:
+
+##### Interface segregation
+
+Evitar interfaces "pesadas" (violação de coesão).
+
+O acúmulo de funções em uma interface pode torná-la não-coesa e forçar comportamentos não comuns a uma classe.
+
+Segregar o papel da interface
+
+- "Serviço" usado por um outro objeto
+
+> Atenção para herança, composição e associação
+
+![image-20210527200400306](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210527200400306.png)
+
+![image-20210527200611173](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210527200611173.png)
+
+Melhorou, mas uma porta não tem papel de temporizador.
+
+![image-20210527200912668](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210527200912668.png)
+
+:arrow_down:
+
+##### Dependency inversion
+
+"Módulo de alto nível não devem depender de módulos de baixo nível. Ambos devem depender de abstrações."
+
+- Nenhuma variável deve conter referência para uma classe concreta;
+- Nenhuma classe deve derivar de uma classe concreta;
+- Nenhum método deve sobrescrever métodos implementados em sua classe base. Somente abstratos.
+
+---
+
+## Aula 31 - 28/05
+
+#### Enumerações
+
+Conjunto de constantes nomeadas para definição de um tipo de dado. Recurso presente nas técnicas e linguagens mais básicas de programação, ou seja, não é algo próprio do POO.
+
+Em java, ganha características de tipo abstrato de dados.
+
+- Conjunto de constantes
+  - Um objeto do tipo enumerável só pode representar um dos valores definidos no conjunto.
+- Útil se um tipo possui um número fixo de valores + válidos pré-definidos.
+
+##### Exemplos
+
+1. Código de status
+   - Aluno aprovado, reprovado, em exame especial...
+   - Pedido faturado, pendente, em rota de entrega...
+2. Códigos de erro
+   - Sucesso, valor inválido, arquivo não encontrado...
+3. Valores conhecidos pré-definidos
+   - Dias da semana
+   - Meses do ano
+   - Classificação de livros (CDD)
+   - Cores/modelos de um produto
+
+#### Enum em Java
+
+Lista de identificadores de valores:
+
+- Identificadores são membros de classe público do tipo enumerável definido;
+- Tipo / classe dos identificadores é o mesmo tipo/classe definida pelo enum;
+- Por padrão, costuma-se usar letras maiúsculas nos nomes de valores enumeráveis. 
+
+``` Java
+public enum Naipe {
+    COPAS,
+    OURO,
+    PAUS,
+    ESPADAS
+}
+```
+
+##### Enum e TAD 
+
+*Tipo abstrato de dados*.
+
+Enumerações em Java são tipos de classe. Tem comportamento semelhante a classes de Java.
+
+Têm propriedades que enumerações não têm em outras linguagens de programação.
+
+- Construtores e outros métodos;
+- Atributos de instância;
+- Implementação de interfaces.
+
+> Em Java: Enumerações herdam implicitamente de *Enum*, que por sua vez implementa Serializable e Comparable.
+>
+> - ordinal()
+> - compareTo(enumeravel)
+> - valueOf(valor)
+>   - name()
+> - values()
+
+E melhor, podem ser declarados atributos para os tipos enumeráveis.
+
+- Construtores devem associar valores a estes atributos.
+- Construtores são executados no momento da declaração do enumerável na programa. :
+
+```Java
+public enum Naipe {
+    COPAS("♥"),
+    OURO("♦"),
+    PAUS("♣"),
+    ESPADAS("♠");
+    
+    private String simbolo;
+    private String cor;
+    
+    Naipe(String simb) {
+        this.simbolo = simb;
+    }
+    
+    @Override
+    public String toString() {
+        return this.simbolo;
+    }
+    
+    public String cor() {
+        String nome = this.name().toLowerCase();
+        
+        switch(nome) {
+            case "copas":
+            case "ouros":
+                return "Vermelho";
+            default:
+                return "Preto";
+        }
+    }
+}
+```
+
+##### Enumeráveis x constantes
+
+Se temos enumeráveis, continuamos usando valores constantes (static final)?
+
+SIM! São coisas diferentes:
+
+- Constantes: valor constante usado por objetos;
+- Enum: listas de valores possíveis.
+  - Operações associadas.
+
