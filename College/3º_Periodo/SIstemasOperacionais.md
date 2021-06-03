@@ -1131,11 +1131,11 @@ Se meu processo quer utilizar um página que não esteja na MP, ele "olha" para 
 
 Usa o conceito de conjunto de trabalho e método de implementação do relógio (lista circular). *Essa lista circular é, provavelmente, bem menor que a lista circular original, pois a original é usada para toda a memória, já essa é utilizada só para o processo.*
 
-<img src="../../imgs/3_Periodo/Regras_WSClock.png" style="width:80%">
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Regras_WSClock.png" style="width:80%">
 
 Se Bit M = 1, ele só marca a página "pronta para morrer", mas não é substituida de imediato, pois para ser marcada é necessário salvar seus dados em disco e isso demora, logo compensa mais procurar outra página mais pra frente com o Bit M = 0. Em outras palavras, ela está disponível para ser substituida, porém se tiver alguém melhor ainda para ser substituido, esse outro alguém é retirado. E outra, tem uma thread que quando o sistema tiver "menos coisas para fazer", ela passar verificando a existência de páginas marcadas setando o bit M delas para 0, e tais páginas, ou vão ser retiradas de uma vez da memória, ou ela permanece até ser a vez dela de sair.
 
-<img src="../../imgs/3_Periodo/Execucao_WSClock.png" style="width:80%">
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Execucao_WSClock.png" style="width:80%">
 
 *Array [página, bit R, bit M, horário de uso]*
 
