@@ -816,6 +816,8 @@ Possíveis retorno e tratamentos (cada um terá seus cenários adequados de util
 
 #### Princípios SOLID
 
+https://medium.com/desenvolvendo-com-paixao/o-que-%C3%A9-solid-o-guia-completo-para-voc%C3%AA-entender-os-5-princ%C3%ADpios-da-poo-2b937b3fc530
+
 Pilares da POO para que um projeto siga os princípios que nortearam o surgimento do paradigma.
 
 - Reúso
@@ -1016,4 +1018,52 @@ SIM! São coisas diferentes:
 - Constantes: valor constante usado por objetos;
 - Enum: listas de valores possíveis.
   - Operações associadas.
+
+---
+
+## Aula 32 - 04/06
+
+#### Coleções em Java - JCF Streams
+
+Coleções são objetos que representam um grupo de objetos tratados como uma única entidade. Ou seja, conseguimos fazer operações na coleção inteira.
+
+Java collection framework (JCF)
+
+- Arquitetura de componentes para permitir manipulação de coleções de maneira independente e abstrata.
+
+##### JCF Objetivos
+
+- Promoção do reuso de componentes de software
+- redução do esforço de programação
+- Favorecer desempenho
+- Interoperabilidade entre sistemas diferentes
+
+##### JCF Recursos
+
+- Interfaces e implementações genéricas (listas, tabelas, ... genéricas)
+- Implementações legadas (retrofit)
+- Implementações concorrentes
+- Algoritmos comuns (.sort, ...)
+
+![image-20210604192101198](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604192101198.png)
+
+![image-20210604192327145](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604192327145.png)
+
+#### Streams
+
+![image-20210604201831554](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604201831554.png)
+
+![image-20210604201928981](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604201928981.png)
+
+![image-20210604202056471](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604202056471.png)
+
+##### Streams x Coleções
+
+![image-20210604202039956](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604202039956.png)
+
+##### Exemplo 
+
+![image-20210604202324677](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604202324677.png)
+
+![image-20210604202611600](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604202611600.png)
 
