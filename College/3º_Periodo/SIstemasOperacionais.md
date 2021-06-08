@@ -1890,6 +1890,8 @@ A execução dos pedidos de leitura pode ser feita de maneiras diferentes pelo S
 
 **FCFS**
 
+Fazer a leitura na hora que ela chega.
+
 ![image-20210602214501278](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602214501278.png)
 
 **Deslocamente mais curto primeiro (SSF)**
@@ -1942,12 +1944,118 @@ Executar o desfragmentador para organizar os blocos de memória
 
 :arrow_down:
 
-##### Discos de estado sólido (SSD)
+###### Discos de estado sólido (SSD)
 
-Utiliza circuitos eletrônicos para armazenamento de longo prazo.
+Utiliza circuitos eletrônicos para armazenamento de longo prazo. *NAND Flash memory.*
+
+Operações eletrônicas: mais rápida e sem deslocamentos. Não tem operações mecânicas. Na velocidade da luz :smile:. 
+
+Acesso uniforme a dados: Qualquer posição da memória é acessada com o mesmo custo.
+
+Potencial perda de confiabilidade após certa quantidade de utilização. Ou seja, depois de muita leitura e escrita ele vai "descanstando".
+
+**Operação de re-escrita, apagamento e coleta de lixo**
+
+Hoje o ssd é formado por páginas e blocos.
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ssd1.png" style="width:80%">
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ssd2.png" style="width:80%">
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ssd3.png" style="width:80%">
+
+![image-20210607193031062](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210607193031062.png)
+
+![image-20210607193315130](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210607193315130.png)
+
+![image-20210607193325448](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210607193325448.png)
+
+- Problema:
+
+![image-20210607193626777](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210607193626777.png)
+
+Exclui do sistema de arquivo, mas não do disco.
+
+![image-20210607193947786](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210607193947786.png)
+
+- Solução: TRIM -> Na hora que apagar do sistema de arquivos, ele envia para o driver do ssd informando q tais arquivos foram retirados do sistema de arquivos.
+
+##### Dispositivos de caracteres
+
+Transmite ou recebe do sistema byte à byte.
+
+###### Teclado
+
+Driver de teclado: faz o processamento de códigos de entrada (código do dispositivo). Cada drive de teclado tem:
+
+- Tabela de codificação
+- Idioma
+
+Código de tecla x caractere x comando
+
+- Eco no monitor: tem um caminho longo até a tecla digitada aparecer na tela.
+
+Uso de teclas especiais
+
+- Bit de tecla pressionada
+
+Teclas multifunção 
+
+###### Mouse
+
+Driver do mouse: Detectar o deslocament ΔX e ΔY + o botão apertado (correspondência de movimento)
+
+- Trackball
+- Mouse óptico - Microcâmera que fica "tirando foto" e verificando a superfície que está, ai compara as fotos em sequência. Por isso a luz infra-vermelho, para ajudar na visibilidade.
+
+> A sensibilidade do mouse é definida no drive, ele transforma os milimetros de deslocamento capturados pelo sensor do mouse em pixels. E o mesmo funciona para a velocidade do clique, para ser considerado um clique. *Um Mickey*.
+
+Dizem que no futuro será um nicho, só para quem gosta. Principalmente pelo avanço do touch. (Eu não largarei o mouse :smile:)
+
+###### Monitores de vídeo / GUI
+
+Modelo WIMP - Janelas, ícones, menus, dispositivos apontador (window, icon, menu, pointing device).
+
+Placa gráfica, resolução e memória de vídeo
+
+- FullHD: 1920 x 1080 = 1,977M
+- Sistema RGBA: 4 bytes = 7,91MB
+
+Frequência de atualização: interpolada x prograssiva.
+
+- 75Hz = 75 x 7,91MB = 593MB/seg
+
+###### Relógio
+
+Nome historicamente usado para este dispositivo, apesar de ter um comportamente de *temporizador.*
+
+Relógio: dispositivo de bloco? De caractere? Nenhum dos dois, não é dispositivo de entrada e saída, só ta aqui por que tem um *driver*.
+
+![image-20210607203306491](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210607203306491.png)
+
+Driver de relógio: *timestamp* e manutenção da hora. A hora é feita com uma referência.
+
+- UTC
+- Fuso horário
+- Época/momento de referência
+- Bug do ano 2000 - para economizar espaço, todo mundo usada ano com 2 digitos, logo na virada do milenio o ano ficou igual à 00.
+- Bug do ano 2038 (Y2K38)
+
+Manutenção sem energia:
+
+- Pergunta para o usuário
+- Bateria para manutenção de hora sem energia
+- Sincronização com um servidor de hora (NTP)
 
 ---
 
 ## Aula 25 - 02/06
 
 #### Entrada e Saída [continuação]
+
+---
+
+## Aula 26 - 07/06
+
+#### SSD
+

@@ -355,7 +355,7 @@ Qual equals ele vai  usar?
 
 *O ornitorrinco é a prova de uma herança divina. Ou seja, há solução :)*
 
-Porém, nem Java nem permite herança multipla :)
+Porém, nem Java permite herança multipla :)
 
 <img src="../../imgs/3_Periodo/POO/Solucao_HerancaMultipla.png" style="width:80%">
 
@@ -487,7 +487,7 @@ Um banco oferece três tipos de contas a seus clientes: conta corrente, poupanç
 2. Uma instância de uma subclasse nunca precisará mudar para outra subclasse;
 3. Uma subclasse deve estender, e não sobrescrever ou anular as responsabilidades da classe mãe. Ou seja, a subclasse deve ter coisas novas;
 4. Uma subclasse não estende as capacidades de uma classe utilitária (*ferramenta para problemas genéricos*);
-5. Para uma classe do rpoblema tratado, a subclasse especializa um papel, transação ou dispositivo.
+5. Para uma classe do problema tratado, a subclasse especializa um papel, transação ou dispositivo.
 
 ---
 
@@ -764,7 +764,9 @@ finally { // algumas linguagens oferencem finally
 
 ![image-20210521200543038](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210521200543038.png)
 
-
+> throws -> Na assinatura do método pode ser especificado uma exception com o *throws*. Dessa forma estamos delegando o tratamento dessa exception para o método que utilizar este. 
+>
+> throw -> Lança uma exceção mas não exige que ela seja tratada por seus chamadores. Ele **transfere o controle do fluxo** para os métodos chamadores. Ele usa o que se chama *unckecked exception*, ou seja, uma exceção é lançada mas nada obriga ela ser tratada. É tratado em tempo de execução.
 
 ##### Se algo deu errado, o que fazer?
 
@@ -783,26 +785,32 @@ Possíveis retorno e tratamentos (cada um terá seus cenários adequados de util
 
 3. Retornar a última resposta válida
 
-   - Repetir a última....
-   - Ex: 
+   - Repetir a última resposta válida ou ignorar a tentativa atual, mantendo o estado do objeto.
+   - Ex: Escolha de um canal inexistente na TV; Usar a mesma textura anterior, caso falte uma textura (por exemplo, uma cena 3D); Manter uma nota em caso de alteração inválida.
 
-![image-20210521201119418](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210521201119418.png)
-
-![image-20210521201409926](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210521201409926.png)
-
-![image-20210521201540819](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210521201540819.png)
-
-![image-20210521201645931](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210521201645931.png)
+4. Atribuição de valor válido próximo
+   - Calcular um valor válido próximo e atribuir ao objeto, mantendo sua consistência.
+   - Ex: Tentar acertar o relógio para 22h75 -> 22h59; Mudar para um canal não existente (mudar para o primeiro ou para o último); Lançar nota maior que a máxima.
+5. Uso de códigos de erro
+   - Método usual quando não há exceções
+   - Problema principal: semântica do código
+   - Ex: Posição -1 ou exceção de objeto não encontrado em uma busca numa coleção?
+   - Uso de uma variável de estado e retorno do código de erro no método.
+6. Registro de erro em *logs*
+   - Caso seja uma condição não tratável:
+     - Capturar e tratar a exceção (robustez!)
+     - Gerar uma mensagem de log com a ocorrência
+   - Evitar:
+     - Log de "qualquer coisa"
+     - Gravar no log e propagar a exceção
 
 ##### Aspectos de desempenho
 
-![image-20210521201903619](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210521201903619.png)
+Tratamento de exceções é demorado. Se um erro pode ser processado localmente, trate-o, ao invés de lançar uma exceção.
 
-##### Projeto de tratamento de erro e exceção
+Propagação de exceções devem ser evitadas em **casos esperados**: fim de arquivo, por exemplo.
 
-
-
-
+Exceções são úteis quando dados de entrada não podem ser completamnete verificados.
 
 ---
 
@@ -817,6 +825,10 @@ Possíveis retorno e tratamentos (cada um terá seus cenários adequados de util
 #### Princípios SOLID
 
 https://medium.com/desenvolvendo-com-paixao/o-que-%C3%A9-solid-o-guia-completo-para-voc%C3%AA-entender-os-5-princ%C3%ADpios-da-poo-2b937b3fc530
+
+https://www.youtube.com/watch?v=6SfrO3D4dHM
+
+https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898
 
 Pilares da POO para que um projeto siga os princípios que nortearam o surgimento do paradigma.
 
@@ -833,7 +845,7 @@ Pilares da POO para que um projeto siga os princípios que nortearam o surgiment
 
 Uma classe deve ter uma única responsabilidade.
 
-- "Responsabilidade": motivo para mudança;
+-  "Responsabilidade": motivo para mudança;
 - Coesão
 - Encapsulamento
 
@@ -846,9 +858,11 @@ Software deve ser aberto para extensão, mas fechado para modificação.
 - Mudanças apenas para correção de código;
 - Extensão: classes abstratas e interfaces
 
+Ou seja, o código deve ser estruturado para que qualquer nova funcionalidade que venha ser necessário não tenha que alterar o código original, o fluxo original, somente agragar.
+
 > Refatoração é considerada melhoria.
 
-Relação com herança e polimorfismo
+*Relação com herança e polimorfismo*
 
 :arrow_down:
 
@@ -874,6 +888,8 @@ Objetos que fazem parte de um programa podem ser substituídos por instâncias d
 > ```
 
 Em resumo: herança deve considerar "é-um" para **comportamento** do objeto.
+
+![image-20210605181642627](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210605181642627.png)
 
 :arrow_down:
 
@@ -906,6 +922,86 @@ Melhorou, mas uma porta não tem papel de temporizador.
 - Nenhuma variável deve conter referência para uma classe concreta;
 - Nenhuma classe deve derivar de uma classe concreta;
 - Nenhum método deve sobrescrever métodos implementados em sua classe base. Somente abstratos.
+
+``` java
+// Violação DIP
+public class Interruptor
+{
+  private Ventilador _ventilador;
+  
+  public void Acionar()
+  {
+    if(!_ventilador.Ligado)
+      _ventilador.Ligar();
+    else
+      _ventilador.Desligar();
+  }
+}
+
+public class Ventilador
+{  
+  public bool Ligado {get; set; }
+  
+  public void Ligar() { ... }
+  
+  public void Desligar() { ... }
+}
+
+// Princípio aplicado
+interface IDispositivo
+{
+  bool Ligado { get; set; }
+  void Acionar();
+  void Ligar();
+  void Desligar();
+}
+
+public class Ventilador : IDispositivo
+{  
+  public bool Ligado { get; set; }
+  
+  public void Acionar ()
+  {
+    if (!this.Ligado)
+      this.Ligar();
+    else
+      this.Desligar();
+  }
+  
+  public void Ligar() { ... }
+  
+  public void Desligar() { ... }
+}
+
+public class Lampada : IDispositivo
+{  
+  public bool Ligado { get; set; }
+  
+  public void Acionar ()
+  {
+    if (!this.Ligado)
+      this.Ligar();
+    else
+      this.Desligar();
+  }
+  
+  public void Ligar() { ... }
+  
+  public void Desligar() { ... }
+}
+
+public class Interruptor
+{
+  private readonly IDispositivo _dispositivo;
+  
+  public void AcionarDispositivo()
+  {
+    _dispositivo.Acionar();
+  }
+}
+```
+
+
 
 ---
 
