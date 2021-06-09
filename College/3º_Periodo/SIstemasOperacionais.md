@@ -2059,3 +2059,9 @@ Manutenção sem energia:
 
 #### SSD
 
+#### Dispositivos de caracteres
+
+---
+
+## Aula 27 - 09/06
+
