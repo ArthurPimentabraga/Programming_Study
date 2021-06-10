@@ -1958,17 +1958,11 @@ Potencial perda de confiabilidade após certa quantidade de utilização. Ou sej
 
 Hoje o ssd é formado por páginas e blocos.
 
-<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ssd1.png" style="width:80%">
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ssd1.png" style="width:30%">
 
-<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ssd2.png" style="width:80%">
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ssd2.png" style="width:30%">
 
-<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ssd3.png" style="width:80%">
-
-![image-20210607193031062](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210607193031062.png)
-
-![image-20210607193315130](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210607193315130.png)
-
-![image-20210607193325448](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210607193325448.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ssd3.png" style="width:30%">
 
 - Problema:
 
@@ -2044,8 +2038,17 @@ Driver de relógio: *timestamp* e manutenção da hora. A hora é feita com uma 
 Manutenção sem energia:
 
 - Pergunta para o usuário
-- Bateria para manutenção de hora sem energia
+- Bateria para manutenção de hora sem energia - Quando o pc é desligado, essa bateria provê energia para o cristal continuar.
 - Sincronização com um servidor de hora (NTP)
+
+Papéis do *driver*:
+
+- Maanter o horário (tudo o que foi falado anteriormente)
+- Controlar tempo de execução de processos (*quantum*)
+- Contabilidade do uso da CPU - Além de servir para gerar estatísticas, hoje é muito comum o aluguel de SO, e paga-se por tempo de uso.
+- Tratar chamadas *alarm* de usuários - Disparo de processos feitos pelo programa, pelo usuário.
+- Tratar temporizadores *watchdog* para o SO - Disparo de processos programados pelo SO.
+- Coletar estatísticas e gerar perfis de execução
 
 ---
 
@@ -2064,4 +2067,74 @@ Manutenção sem energia:
 ---
 
 ## Aula 27 - 09/06
+
+#### Virtualização
+
+Uso específco do conceito de VM para atingir objetivos.
+
+##### Máquinas virtuais (VM)
+
+*Tem material no início do documento.*
+
+Cópias exatas do hardware. Interpretação das instruções do sistema hospedado virtualmente e xecução no hardware real.
+
+- Hipervisores (VMM - Monitor de máquina virtual) - Software que cria e roda VMs.
+- Surgimento na década de 1960
+- Várias reinterpretações ao longo da história da computação e dos SO's.
+
+##### VM redescobertas
+
+1. Uso é muito usado como **Caixas de areia (*sandboxing*)** e **isolamento de servidores**.
+   - Servidores físicos: tolerância a falhas e custo alto
+   - Servidor único com VM e tolerância a falhas. É um servidor bem mais poderoso que o anterior, mas ainda sim fica mais barato. Várias sandboxing isoladas e seguras. Um ataque, por exemplo, fica isolado à um sandboxing. 
+   - Necessidade de múltiplos SO em um mesmo ambiente de trabalho.
+
+2. Muito usado também para **testes** de novos sistemas e implementações. 
+   - Implantação de *contâiners* incluindo SOe SI.
+
+3. VM é excelente pra preservação de software antigo tmb. Não tem compatibilidade melhor para um programa antigo do que o SO original 😂
+4. Execução de software em SO obsoletos
+5. Desenvolvimento de aplicações portáveis
+   - Instalação de diversos sistemas físicos x virtualização
+6. Computação em nuvem
+   - Terceirização de infraestrutura e serviços
+   - Infraestrutura compartilhada
+7. Também serve para brincar com malwares 😂
+
+##### Requisitos para virtualização
+
+1. Requisito básico: capacidade de inicialização e instalação de sistemas diversos.
+2. Fidelidade: Comportamento idêntico à execução no hardware real.
+3. Eficiência: Poucas intervenções do hipervisor e bom desempenho.
+4. Segurança: Controle completo dos recursos virtualizados
+
+##### Segurança e eficiência
+
+- Segurança x eficiência: uso de interpretadores para execução de instruções.
+- Instruções seguras e execução direta. Ex: Incremento de uma variável.
+- Instruções supervisionadas e mapeamento. Ex: alteração na tabela de páginas.
+
+##### Fidelidade
+
+Dependente do suporte da arquitetura e dos modos de execução do processador.
+
+- Reescrita de instruções incompatíveis.
+- Retrocompatibilidade e dificuldades de virtualização
+
+Relembrando: modo núcle e modo usuário.
+
+*Tudo que vem da virtualização é considerado em modo usuário, pois é um programa executando no SO.*
+
+- Instruções sensíveis e instruções privilegiadas.
+- Interrupções, *trap* e chaveamento de modo.
+
+![image-20210609222045108](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210609222045108.png)
+
+##### Hipervisores tipo 1
+
+![image-20210609222325180](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210609222325180.png)
+
+##### Hipervisores tipo 2
+
+![image-20210609222438781](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210609222438781.png)
 
