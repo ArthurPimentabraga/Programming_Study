@@ -1270,10 +1270,6 @@ A paginação tem um problema:
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/ExemploPedacosArquivos.png" style="width:80%">
 
-<img src="../../imgs/3_Periodo/Sistemas_Operacionais/.png" style="width:80%">
-
-![image-20210505220432524](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505220432524.png)
-
 - Cada endereço passa a ser traduzido para (nº de segmento + deslocamento)
 - Segmentos são carregados para a memória conforme necessário
 
@@ -1293,10 +1289,6 @@ Dados não são executados....
 ##### Problema
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/ProblemaSegmentacaoMP.png" style="width:80%">
-
-<img src="../../imgs/3_Periodo/Sistemas_Operacionais/.png" style="width:80%">
-
-![image-20210505221756977](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505221756977.png)
 
 - Segmentos têm tamanhos variáveis
   - Códigos, dados, pilhas...
@@ -1509,8 +1501,6 @@ Super block -> tabela de descritores.
 É rapido, mas é como se fosse o esquema de partições fixas:
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/PoucoFlexivelAlocacaoContiqua.png" style="width:80%">
-
-<img src="../../imgs/3_Periodo/Sistemas_Operacionais/.png" style="width:80%">
 
 - Implementação simples
 - Favorece desempenho de leitura
