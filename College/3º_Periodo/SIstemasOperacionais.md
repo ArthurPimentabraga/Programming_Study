@@ -1023,11 +1023,11 @@ E se tivermos a necessidade de executar processos maiores que a memória princip
 
 A ideia da memória virtual é essa, nunca usamos tudo do processo ao mesmo tempo na memória. Logo, já temos o processo dividido em páginas, então mantemos em memória principal **somente o necessário** para a execução dos processos em um **dado momento**.
 
-> SO utiliza espaço em memória secundária (disco) para "complementar" a memória principal. Ex: **SWAP** do linux S2. Isso é uma memória virtual.
+> SO utiliza espaço em memória secundária (disco) para "complementar" a memória principal. Ex: **SWAP** do linux **❤**. Isso é uma memória virtual.
 >
 > Ou seja, é uma área reservada do sistema. Quando necessário, o SO faz a troca entre memória principal e memória virtual. (Execução de processos que excedam o tamanho da memória principal).
 
-No exemplo a seguir, meu sistema tem reservado 2GB do disco reservado para, se precisar, ser utilizado  como memória virtual.
+No exemplo a seguir, meu sistema tem reservado 2GB do disco para, se precisar, ser utilizado como memória virtual.
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Exemplo_Swapfile.png" style="width:80%">
 
@@ -1085,6 +1085,8 @@ Ou seja, não realocamos as páginas para o fim da fila, só voltamos a verifica
 
 Mesmo tendo acabado com o mesmo nº de faltas do último algoritmos, em uma grande escala pode ser mais benéfico. Sem contar que é bem mais rápido, antes tinhamos que procurar quem tirar, agora **é só retirar quem o relógio estiver apontando ou o seu vizinho.**
 
+*Obs: O bit M, nesse caso, é só para o sistema saber que precisa salvar o conteúdo modificado!*
+
 ###### Algoritmo 4 - LFU - [Não funciona]
 
 A página menos frequente utilizada (Least Frequently Used) sai primeiro. Contador de acessos a cada página: sai a que tiver menor contador. *Premissa: uma página pouco usada até o momento provavelmente será pouco importante no futuro.* 
@@ -1115,7 +1117,7 @@ Exemplo:
 ###### Existem 2 tipos de substituição:
 
 - Algoritmos globais: Escolhem uma página de qualquer processo em memória principal para substituir. Verifica páginas do sistema como um todo.
-- Algoritmos locais: Escolhem uma página do próprio processo em memória principal para substituir, ou seja, do proceso que teve falta de página. Ideia de conjunto de trabalho.
+- Algoritmos locais: Escolhem uma página do próprio processo em memória principal para substituir, ou seja, do processo que teve falta de página. Ideia de conjunto de trabalho.
 
 ###### Conjunto de trabalho (working set)
 
@@ -1133,7 +1135,7 @@ Usa o conceito de conjunto de trabalho e método de implementação do relógio 
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Regras_WSClock.png" style="width:80%">
 
-Se Bit M = 1, ele só marca a página "pronta para morrer", mas não é substituida de imediato, pois para ser marcada é necessário salvar seus dados em disco e isso demora, logo compensa mais procurar outra página mais pra frente com o Bit M = 0. Em outras palavras, ela está disponível para ser substituida, porém se tiver alguém melhor ainda para ser substituido, esse outro alguém é retirado. E outra, tem uma thread que quando o sistema tiver "menos coisas para fazer", ela passar verificando a existência de páginas marcadas setando o bit M delas para 0, e tais páginas, ou vão ser retiradas de uma vez da memória, ou ela permanece até ser a vez dela de sair.
+Se Bit M = 1, ele só marca a página "pronta para morrer", mas não é substituida de imediato, pois uma vez modificado seu conteúdo é necessário salvar seus dados em disco e isso demora, logo compensa mais procurar outra página mais pra frente com o Bit M = 0. Em outras palavras, ela está disponível para ser substituida, porém se tiver alguém melhor ainda para ser substituido, esse outro alguém é retirado. E outra, tem uma thread que quando o sistema tiver "menos coisas para fazer", ela passar verificando a existência de páginas marcadas setando o bit M delas para 0, e tais páginas, ou vão ser retiradas de uma vez da memória, ou ela permanece até ser a vez dela de sair.
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Execucao_WSClock.png" style="width:80%">
 
