@@ -1102,7 +1102,7 @@ Para resolver os problemas anteriores. Ele não vai contar quantas vezes a pági
 
 - Uso do *bit R* para implementação. 
 
-![image-20210503193149686](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210503193149686.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/LFU-envelhecimento.png" style="width:80%">
 
 Dessa forma matamos os dois ultimos problemas, limitamos a memória, não gasta tempo incrementando contador...
 
@@ -1110,7 +1110,7 @@ Ou seja, vai envelhecendo, perdendo valor com o tempo.
 
 Exemplo:
 
-![image-20210503193615684](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210503193615684.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ExemploLFUEnvelhecimento.png" style="width:80%">
 
 ###### Existem 2 tipos de substituição:
 
@@ -1214,7 +1214,7 @@ Os status podem ser *livre* (moldura sem página alocada) - *ocupada* (moldura o
 
 ###### Proposta
 
-![image-20210505212422599](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505212422599.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/PropostaSolucaotamanhoPaginas.png" style="width:80%">
 
 ###### Informações armazenadas na tabela de páginas
 
@@ -1222,21 +1222,21 @@ A tabela tem mais informações do que a própria localização física e númer
 
 Exemplo de uma tupla na tabela de páginas:
 
-![image-20210505213148150](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505213148150.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ExemploTuplatabelaPaginasArquivos.png" style="width:80%">
 
 ##### Implementação da tabela de páginas 
 
 Simplesmente é um vetor com os registros, mas isso não é bom, não é muito performático, logo geralemente é implementado de outras formas.
 
-![image-20210505213949395](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505213949395.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/MemoriaAssociativaTLB.png" style="width:80%">
 
-![image-20210505214233214](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505214233214.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/TabelasPaginaMemoriaBits.png" style="width:80%">
 
 ###### Tabelas multiníveis
 
 Árvore B+
 
-![image-20210505214654643](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505214654643.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ArvoreB+tabelasMultiniveis.png" style="width:80%">
 
 A vantagem é que só o índice fica na memória, o resto só ta na memória caso esteja sendo utilizado. Porém, demora mais para localizar a página.
 
@@ -1244,9 +1244,9 @@ A vantagem é que só o índice fica na memória, o resto só ta na memória cas
 
 É invertido, por que ao invés de procurar pelo índice, tu vai informar o valor, e ele te retorna um grupo de possibilidades, ai é só escolher um.
 
-![image-20210505214948723](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505214948723.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/TabelasInvertidascaracteristicas.png" style="width:80%">
 
-![image-20210505215328471](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505215328471.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ExemplotabelasInvertidas.png" style="width:80%">
 
 Usa uma tabela hash para a tabela da MP, e informa a hash da página que quero encontrar, se der colisão só tratar.
 
@@ -1262,43 +1262,66 @@ Usa uma tabela hash para a tabela da MP, e informa a hash da página que quero e
 
 A paginação tem um problema: 
 
-![image-20210505215835568](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505215835568.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ProblemasPaginacaoMP.png" style="width:80%">
 
-![image-20210505220032029](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505220032029.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ContinuacaoProblemasPaginacaoMP.png" style="width:80%">
 
 > Cada "pedaço" do processo tem um idendificador.
 
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ExemploPedacosArquivos.png" style="width:80%">
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/.png" style="width:80%">
+
 ![image-20210505220432524](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505220432524.png)
 
-![image-20210505220532608](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505220532608.png)
+- Cada endereço passa a ser traduzido para (nº de segmento + deslocamento)
+- Segmentos são carregados para a memória conforme necessário
 
 ##### Benefícios
 
 Se aumentar a quantidade de armazenamento de um segmento, o resto não precisa ser recalculado.
 
-![image-20210505221112451](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505221112451.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/BeneficiosArmazenamentoSegmento.png" style="width:80%">
 
-![image-20210505221152801](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505221152801.png)
+- Proteção é facilitada
+  - Leitura, escrita e execução
+- Compartilhamento é facilitado
+  - Bibliotecas de códigos, componentes do sistema...
 
 Dados não são executados....
 
 ##### Problema
 
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ProblemaSegmentacaoMP.png" style="width:80%">
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/.png" style="width:80%">
+
 ![image-20210505221756977](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505221756977.png)
 
-![image-20210505221834218](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505221834218.png)
+- Segmentos têm tamanhos variáveis
+  - Códigos, dados, pilhas...
+- Segmentos podem precisar de memória ao longo da execução
+  - Alocação de estruturas dinâmicas...
+- Voltamos ao problema da grafmentação externa!
 
 ##### Segmentação x Paginação
 
-![image-20210505221904517](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505221904517.png)
+O que seria melhor utilizar? Aceitamos a fragmentação? Aceitamos problemas de segurança e compartilhamento?
 
-![image-20210505222116732](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505222116732.png)
+###### Segmentação paginada
 
-![image-20210505222256891](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505222256891.png)
+Combina as duas técnicas de memória virtual.
 
-![image-20210505222316298](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505222316298.png)
+*Implementada pelo MULTICS e pela família Pentium e sucessores.*
 
-![image-20210505222623291](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505222623291.png)
+- Inicialmente, um processo é segmentado
+- Em seguida, cada segmento é paginado
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/SegmentacaoPaginadaExemploVisual.png" style="width:80%">
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/CaracteristicasSegmentacaoPaginada.png" style="width:80%">
+
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/EnderecamentoSegmentacaoPaginada.png" style="width:80%">
 
 A partir daí é só fazer o mesmo cálculo para descobrir a página, deslocamento...
 
@@ -1327,7 +1350,9 @@ E tudo isso da melhor forma possível.
 
 > **O arquivo é uma abstração, uma sequência de bytes que usaremos depois.**
 
-![image-20210510193208155](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510193208155.png)
+Abstração do sistema mais visível para o usuário final. 
+
+Visão do usuário x visão do projetista
 
 O usuário não precisa ser técnico em informática para saber utilizar arquivos, ou seja, fazer download, copiar e colar pastas, colocar arquivos dentro de pastas, renomeia um arquivo, deleta um arquivo...
 
@@ -1372,23 +1397,23 @@ São fundamentais para a abstração, igual às extensões. Em relação ao nome
 
    - Usados para dar acesso a dispositivos
 
-![image-20210510200801421](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510200801421.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/TiposArquivosSORegulares.png" style="width:80%">
 
-![image-20210510201621231](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510201621231.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/AcessoAosArquivosRegulares.png" style="width:80%">
 
 - Acesso sequencial (linha por linha);
 
-![image-20210510201832047](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510201832047.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/AtributosDeArquivosSequenciais.png" style="width:80%">
 
 Quanto mais atributos à definir, mais informações, porém mais trabalho para armazenar.
 
-![image-20210510202857182](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510202857182.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/OperacoesComArquivos.png" style="width:80%">
 
-![image-20210510203852715](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210510203852715.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ArquivosControleAcesso.png" style="width:80%">
 
 - Sistemas com grupos de usuário. Exemplo: Linux
 
-![image-20210512210949614](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512210949614.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/exemploSistemasGruposUsuariosLinux.png" style="width:80%">
 
 |      | 4        | 2         | 1             |
 | :--: | -------- | --------- | ------------- |
@@ -1411,7 +1436,7 @@ chmod = change mode
 
 Estrutura mais comum hoje. Utiliza-se **árvore genérica**:
 
-![image-20210512212102045](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512212102045.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/EstruturaHierarquicaArquivosLinux.png" style="width:80%">
 
 > Nome de caminha absoluto -> começa no diretório raiz. Exemplo:
 >
@@ -1428,13 +1453,21 @@ Estrutura mais comum hoje. Utiliza-se **árvore genérica**:
 ###### Operações com diretórios
 
 1. Criar
+
 2. Apagar
+
 3. Abrir
+
 4. Fechar
+
 5. Ler
+
 6. Renomear
+
 7. Link (atalho)
-   - ![image-20210512213808995](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512213808995.png)
+
+   - <img src="../../imgs/3_Periodo/Sistemas_Operacionais/ExemploLinkAtalhoArquivo.png" style="width:80%">
+
 8. Unlink
 
 Igual aos arquivos, só conseguimos fazer tais operações por que o sistema operacional implementou essas chamadas de sistema.
@@ -1447,7 +1480,7 @@ Primeira coisa que precisamos saber é que um sistema operacional pode controlar
 
 Cada sistema de arquivos estará em uma partição de memória secundária. Exemplo: Dualboot (Linux e Win), cada partição terá seu sistema de arquivos.
 
-![image-20210512214752425](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512214752425.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ImplementacaoSistemasArquivo.png" style="width:80%">
 
 > *MBR = Master boot record -> identifica como e onde um sistema operacional está localizado para que possa ser inicializado (carregado)*.
 >
@@ -1455,35 +1488,41 @@ Cada sistema de arquivos estará em uma partição de memória secundária. Exem
 >
 > *Super block -> É essencialmente os metadados do sistema de arquivos e define o tipo, tamanho, status e informações do sistema de arquivos sobre outras estruturas de metadados* 
 
-![image-20210512215241111](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512215241111.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/CaracteristicasImplementacaoSArquivos.png" style="width:80%">
 
 Arquivos são formados por blocos, não compensa ler byte por byte, logo lemos um bloco.
 
 Super block -> tabela de descritores.
 
-![image-20210512215527534](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512215527534.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/AberturaArquivosSolicitacoes.png" style="width:80%">
 
-![image-20210512215924664](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512215924664.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/AberturaArquivosTabelas.png" style="width:80%">
 
-![image-20210512220103464](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512220103464.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/MonitoramentoBlocosLivres.png" style="width:80%">
 
 ##### Alocação de arquivos 
 
 ###### Alocação Contígua
 
-![image-20210512221310143](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512221310143.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/AlocacaoArquivosDiscoGeral.png" style="width:80%">
 
 É rapido, mas é como se fosse o esquema de partições fixas:
 
-![image-20210512221511118](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512221511118.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/PoucoFlexivelAlocacaoContiqua.png" style="width:80%">
 
-![image-20210512221707479](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512221707479.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/.png" style="width:80%">
+
+- Implementação simples
+- Favorece desempenho de leitura
+
+- Problemas de aproveitamento de espaço
+- Pouco flexível para atualizações
 
 Outra parte boa é a utilização dele para arquivos que não irão se modificar - **media de somente leitura** (cd de música, filme, arquivos de instalação...).
 
 ###### Alocação por lista encadeada com tabela de índice
 
-![image-20210512222503701](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210512222503701.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/AlocacaoListaEncadeadaArquivos.png" style="width:80%">
 
 Completamente inviável para o sistema principal, por ocupar muito espaço.
 
@@ -1491,13 +1530,13 @@ FAT não tem atributo de proprietário (todos tem acesso).
 
 ###### Alocação por nós-índice (i-node)
 
-![image-20210517192418668](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517192418668.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/INODEARQUIVOS.png" style="width:80%">
 
 sub-arquivo que contém a descrição do arquivo = Descritor
 
 > Um descritor por arquivo, ou seja, uma linha para cada arquivo, e não uma para cada parte da memória. Um índice por arquivo.
 
-![image-20210517192829941](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517192829941.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/TabelaINODEArquivos.png" style="width:80%">
 
 É mais demorado, mas economiza espaço. *Lookup = localizar todas "as partes" do arquivo.*
 
@@ -1525,19 +1564,19 @@ EXT3 é i-node
 
 #### Projeto de sistemas de arquivos
 
-![image-20210517193853022](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517193853022.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/TamanhoBlocoArquivo.png" style="width:80%">
 
 **FAT**
 
 Usou 4KB do último bloco e sobrou 24KB no bloco, logo temos um desperdício de memória, fragmentação interna.
 
-![image-20210517193056590](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517193056590.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/TamanhoxTamanhoDiscoArquivos.png" style="width:80%">
 
 Não é bom criar blocos muito grandes uma vez que o Tanenbaum fez uma pesquisa, e o resultado é:
 
-![image-20210517194414823](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517194414823.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/TamanhoMediaArquivos.png" style="width:80%">
 
-![image-20210517195137519](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517195137519.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/DesempenhoxTamanhoArquivos.png" style="width:80%">
 
 O equilíbrio também é ruim, pois o aproveitamento seria menor que 10%.
 
@@ -1550,15 +1589,15 @@ O equilíbrio também é ruim, pois o aproveitamento seria menor que 10%.
 
 #### Compartilhamento de arquivos
 
-![image-20210517195828289](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517195828289.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/CompartilhamentoArquivos.png" style="width:80%">
 
-![image-20210517200018568](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517200018568.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ArvoreGrafosCompartilhamento.png" style="width:80%">
 
 - Hard links (sistema i-node)
 
 Compartilhamento real, dois lugares apontando para o mesmo descritor, para o mesmo arquivo. Nos descritores teremos propriedades de compartilhamento. Ex: Cont.Ref:  2, ou seja, duas referências para esse mesmo arquivo. Essa propriedade serve até para não apagar um arquivo fisicamente quando somente um dos usuários deleta o arquivo. 
 
-![image-20210517200435562](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517200435562.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/HardLinks.png" style="width:80%">
 
 Um efeito colateral é que se o proprietário deletar o link, ele continua sendo o proprietário, e caso o usuário B não tenha permissões...
 
@@ -1566,13 +1605,13 @@ Um efeito colateral é que se o proprietário deletar o link, ele continua sendo
 
 Criamos uma referência para o diretório do proprietário, ao invés de um link direto para o arquivo. Porém se o proprietário apagar o arquivo, ele será excluido fisicamente. Ex: Atalho do windows.
 
-![image-20210517200758161](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517200758161.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/SymbolicLinks.png" style="width:80%">
 
 ----
 
 #### Sistemas de arquivo com journaling
 
-![image-20210517201314002](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517201314002.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Journaling.png" style="width:80%">
 
 Registra tudo que vai fazer antes de fazer. Depois que falar tudo oq vai fazer é que vai começar a fazer. Consequentemente é mais lento, porém mais seguro, pois se achar um problema no fluxo, ele trata o cenário.
 
@@ -1591,9 +1630,9 @@ Exemplos:
 - Linux: ReiserFS, ext3 em diante
 - MaxOS: HFS+
 
-![image-20210517202824026](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517202824026.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/VerificacaoConsistenciaJournaling.png" style="width:80%">
 
-![image-20210517203001205](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210517203001205.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/EspacoLivreJournaling.png" style="width:80%">
 
 *A lixeira é um diretório especial do sistema, ou seja, mandar para a lixeira, é só mudar o diretório do arquivo.*
 
@@ -1789,7 +1828,7 @@ Alguém interno (que trabalha no código) colocou *atalhos* no código fonte par
     }
     ```
 
-![image-20210526212653017](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210526212653017.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/EstouroBuffer.png" style="width:80%">
 
 ###### Ataques externos
 
@@ -1828,14 +1867,12 @@ O SO vai precisar se organizar de alguma maneira:
 3. Leituras síncronas e assíncronas
 4. Buffer temporário
 
-
-
-![image-20210531202645993](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210531202645993.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/CamadasSoftwareES.png" style="width:80%">
 
 > - Device-independent: vai fazer toda a verificação necessária para a operação que foi requisitada pela camada superior.
 > - Device drivers: os hardwares podem ser diferentes, logo precisamos de drivers para a comunicação entre os comandos do dispositivo e o hardware. 
 
-![image-20210602205813979](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602205813979.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/DriversDispositivos.png" style="width:80%">
 
 > Cada dispositivo teá seu controlador respectivo. Exceto a alaca USB que é universal (*Universal Serial Bus* - transmite e recebe bytes). 
 >
@@ -1864,21 +1901,19 @@ Dispositivos mais tradicional de armazenamento secundário. *Operação mecânic
 
 > Em dispositivos de menor porte, em franca substituição por discos de estado sólido.
 
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/HD_Anatomia.png" style="width:80%">
 
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/HD_TrilhasCilindros.png" style="width:80%">
 
-![image-20210602212312044](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602212312044.png)
-
-![image-20210602212433551](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602212433551.png)
-
-![image-20210602212731359](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602212731359.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/HD_TrilhasSetores.png" style="width:80%">
 
 A imagem vista a cima ilustra a limitação que por muito tempo persistiu nos discos rígidos. *Muito pela física e mecânica.*
 
 E a imagem à baixo é uma evolução, passou a ser dividido por blocos lógicos.
 
-![image-20210602212938178](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602212938178.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/LBA_BlocoLogico.png" style="width:80%">
 
-![image-20210602213400876](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602213400876.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/TabelaDiscoRigido.png" style="width:80%">
 
 > O HD é mecânico, ou seja, tem uma agulha que passa pelas trilhas lendo e escrevendo, a agulha pecisa se "locomover", é uma operação mecânica, e isso gasta tempo. Sem contar que o disco precisa rotacionar para que a agulha chegue no endereço desejado (Latência retacional).
 
@@ -1892,17 +1927,17 @@ A execução dos pedidos de leitura pode ser feita de maneiras diferentes pelo S
 
 Fazer a leitura na hora que ela chega.
 
-![image-20210602214501278](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602214501278.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/FCFS_Arquivos_MS.png" style="width:80%">
 
 **Deslocamente mais curto primeiro (SSF)**
 
-![image-20210602214528676](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602214528676.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/SSF_MemoriaSegundaria.png" style="width:80%">
 
 E se continuam aparecendo requisições próximas, o que acontece com as extremidades? Dependendo do cenário pode resultar em *starvation* (vai morrer de fome, ninguém executa). Ou seja, esse algoritmo não da garantia de execução.
 
 **Elevador** - Varredura
 
-![image-20210602215133411](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602215133411.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ElevadorVarredura.png" style="width:80%">
 
 Não da garantia de resultado, mas da garantia de atendimento.
 
@@ -1915,7 +1950,7 @@ DMA: *direct memory access*
 - Técnica implementada com o uso de um controlador que tem acesso ao barramento sem depender da CPU.
 - Transferência de dados dos dispositivos diretamente para a memória.
 
-![image-20210602215928705](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602215928705.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/DMA_AcessoMemoria.png" style="width:80%">
 
 - Funcionamento em *word-at-a-time* - copia dado por dado
   - Roubo de ciclos de CPU
@@ -1940,7 +1975,7 @@ Buffer de memória do SO e do dispositivo - Primero os dados ficam salvos na mem
 
 Executar o desfragmentador para organizar os blocos de memória
 
-![image-20210602221913172](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210602221913172.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Desfragmentacao.png" style="width:80%">
 
 :arrow_down:
 
@@ -1966,11 +2001,11 @@ Hoje o ssd é formado por páginas e blocos.
 
 - Problema:
 
-![image-20210607193626777](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210607193626777.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/OperacaoTRIM.png" style="width:80%">
 
 Exclui do sistema de arquivo, mas não do disco.
 
-![image-20210607193947786](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210607193947786.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/ResultadoTRIM.png" style="width:30%">
 
 - Solução: TRIM -> Na hora que apagar do sistema de arquivos, ele envia para o driver do ssd informando q tais arquivos foram retirados do sistema de arquivos.
 
@@ -2025,7 +2060,7 @@ Nome historicamente usado para este dispositivo, apesar de ter um comportamente 
 
 Relógio: dispositivo de bloco? De caractere? Nenhum dos dois, não é dispositivo de entrada e saída, só ta aqui por que tem um *driver*.
 
-![image-20210607203306491](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210607203306491.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/OsciladorCristalRelogio.png" style="width:80%">
 
 Driver de relógio: *timestamp* e manutenção da hora. A hora é feita com uma referência.
 
@@ -2128,13 +2163,15 @@ Relembrando: modo núcle e modo usuário.
 - Instruções sensíveis e instruções privilegiadas.
 - Interrupções, *trap* e chaveamento de modo.
 
-![image-20210609222045108](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210609222045108.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/SistemaHipervisor1.png" style="width:80%">
+
+*Esse sistema à cima é do hipervisor do tipo 1.*
 
 ##### Hipervisores tipo 1
 
-![image-20210609222325180](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210609222325180.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Hipervisor1.png" style="width:80%">
 
 ##### Hipervisores tipo 2
 
-![image-20210609222438781](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210609222438781.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Hipervisor2.png" style="width:80%">
 

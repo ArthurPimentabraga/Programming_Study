@@ -179,6 +179,8 @@ O objeto é formado por outros objetos (está contido). Dependência do tempo de
 - Representação UML:  Losango preenchido (no lado do "todo");
 - Se o objeto todo for apagado, as partes também são.
 
+![image-20210610194007147](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210610194007147.png)
+
 ---
 
 ## Aula 10 - 05/03
@@ -304,9 +306,9 @@ Essa especialização tradicionalmente é implementada por meio do mecanismo de 
 
 #### Polimorfismo
 
-Definimos Polimorfismo como um princípio a partir do qual as classes derivadas de uma única classe base são capazes de invocar os métodos que, embora apresentem a mesma assinatura, comportam-se de maneira diferente para cada uma das classes derivadas.
+Definimos *Polimorfismo* como um princípio a partir do qual as classes derivadas de uma única classe base são capazes de invocar os métodos que, embora apresentem a mesma assinatura, comportam-se de maneira diferente para cada uma das classes derivadas.
 
-Com o **Polimorfismo**, os mesmos atributos e objetos podem ser utilizados em objetos distintos, porém, com implementações lógicas diferentes.
+Com o *Polimorfismo*, os mesmos atributos e objetos podem ser utilizados em objetos distintos, porém, com implementações lógicas diferentes.
 
 Em outras palavras: O polimorfismo permite que referências de tipos de classes mais abstratas representem o comportamento das classes concretas que referenciam. Assim, é possível tratar vários tipos de maneira homogênea. O termo polimorfismo é originário do grego e significa "muitas formas". 
 
@@ -332,18 +334,19 @@ Heranca_Multipla
 
 <img src="../../imgs/3_Periodo/POO/Heranca_Multipla.png" style="width:60%">
 
-*O que é foodtruck? Herança múltipla das calsses Caminhão e Restaurante :)*
+*O que é foodtruck? Herança múltipla das classes Caminhão e Restaurante :)*
 
 - Porém se herda de duas, depende de duas, ou seja, aumenta o acoplamento.
 - Outro problema é a ambiguidade, piora o encapsulamento: 
 
 <img src="../../imgs/3_Periodo/POO/Problema1_HerancaMultipla.png" style="width:90%">
 
-Mesmo se vc fizer um Override para unificar esse avançar, isso é ruim pois piora a abstração, muda a regra fixa da classe mãe.
+Mesmo se vc fizer um Override para unificar esse *avançar*, isso é ruim, pois piora a abstração, muda a regra fixa da classe mãe.
 
-E...
+E o problema não acaba por aí:
 
-<img src="../../imgs/3_Periodo/POO/NaoAcabaPorAi_HerancaMultipla.png" style="width:90%">
+- Métodos de nomes iguais e visibilidades diferentes.
+- Propriedades de mesmo nome.
 
 ##### Problema do diamante
 
@@ -365,7 +368,7 @@ Porém, nem Java permite herança multipla :)
 
 #### Interface
 
-Em seu significado conceitual é a "parte visível de um módulo a outros módulos". Tudo o que é *public* é a interface de uma classe.
+Em seu significado **conceitual** é a *"parte visível de um módulo a outros módulos"*. Tudo o que é *public* é a interface de uma classe.
 
 - Coesão: A interface deve oferecer um grupo de métodos coerentes;
 - Abstração: Se uma interface é definida e sempre é mantida, o sistema ganha em extensibilidade e em baixo acoplamento. Ou seja, se ela for atualizada... todas as classes que estiverem utilizando ela, utilizarão as atualizações.
@@ -443,7 +446,7 @@ Evoluindo o sistema mais ainda: "Haverá uma integração dos sistemas e agora o
 
 #### Substituindo herança por composição
 
-Com herânça ainda temos um certo nível de acoplamento e perde um pouco de encapsulamento. 
+Com herança ainda temos um certo nível de acoplamento e perde um pouco de encapsulamento. 
 
 Por meio do uso de interfaces e composição de classes, podemos **injetar** comportamento em classes. *(Injeção de dependência)*.
 
@@ -461,6 +464,8 @@ Um banco oferece três tipos de contas a seus clientes: conta corrente, poupanç
 *Pra melhorar:*
 
 <img src="../../imgs/3_Periodo/POO/Exemplo_InjecaoComposicao.png" style="width:100%">
+
+Isso permite que cada conta, obrigatoriamente, tenha os métodos definidos na interface (comportamento semelhante), porém com implementações diferente. Pois, a forma de saque é diferente entre uma conta corrente, investimento e poupança, por exemplo. Sem contar que podemos alterar o tipo da conta em tempo de execução, sem problemas.
 
 ---
 
@@ -619,7 +624,7 @@ public class ListaGenerica<T extends Comparable<T>> {
 
 > O **Comparable** permite que você diga uma regra de comparação para a classe que implementar essa **interface**, como uma espécie de regra padrão ou regra oficial - implementada pelo método **compareTo** - enquanto que se você quiser fugir dessa regra padrão, você pode criar suas classes comparadoras, que vão extender a classe **Comparator** fazendo cada uma a sua própria. *Comparação implícita.*
 
-Podemos também, usar o **Comparator** (comparação explícita), uma interface para criar uma ou mais regras de comparação. A única coisa necessária é criar uma classe que implementa ele, e escrever o/os método de comparação. E para utilizar é só passar sua instância e utilizar o método criado de comparação.
+**Comparator** (comparação explícita), uma interface para criar uma ou mais regras de comparação. A única coisa necessária é criar uma classe que implementa ele, e escrever o/os método de comparação. E para utilizar é só passar sua instância e utilizar o método criado de comparação.
 
 E melhor ainda, para não ter que implementar uma classe inteira só para um objetivo tão específico, podemos utilizar a **função lambda** (programação funcionar). Exemplo:
 
@@ -766,7 +771,7 @@ finally { // algumas linguagens oferencem finally
 
 > throws -> Na assinatura do método pode ser especificado uma exception com o *throws*. Dessa forma estamos delegando o tratamento dessa exception para o método que utilizar este. 
 >
-> throw -> Lança uma exceção mas não exige que ela seja tratada por seus chamadores. Ele **transfere o controle do fluxo** para os métodos chamadores. Ele usa o que se chama *unckecked exception*, ou seja, uma exceção é lançada mas nada obriga ela ser tratada. É tratado em tempo de execução.
+> throw -> Lança uma exceção, mas não exige que ela seja tratada por seus chamadores. Ele **transfere o controle do fluxo** para os métodos chamadores. Ele usa o que se chama *unchecked exception*, ou seja, uma exceção é lançada mas nada obriga ela ser tratada. É tratado em tempo de execução.
 
 ##### Se algo deu errado, o que fazer?
 
@@ -810,7 +815,7 @@ Tratamento de exceções é demorado. Se um erro pode ser processado localmente,
 
 Propagação de exceções devem ser evitadas em **casos esperados**: fim de arquivo, por exemplo.
 
-Exceções são úteis quando dados de entrada não podem ser completamnete verificados.
+Exceções são úteis quando dados de entrada não podem ser completamente verificados.
 
 ---
 
@@ -1162,4 +1167,16 @@ Java collection framework (JCF)
 ![image-20210604202324677](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604202324677.png)
 
 ![image-20210604202611600](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604202611600.png)
+
+
+
+---
+
+## Revisão atividades - 10/06
+
+![image-20210610194420517](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210610194420517.png)
+
+
+
+
 
