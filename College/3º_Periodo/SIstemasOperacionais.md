@@ -1201,7 +1201,7 @@ Não é todo sistema que faz a limpeza das páginas igual ao WSClock, logo o sis
 
 Os status podem ser *livre* (moldura sem página alocada) - *ocupada* (moldura ocupada por página sendo utilizada) - *disponível* (moldura ocupa, porém acessível para troca).
 
-*A thread pode usar o mesmo algotirmo da substituição regular.*
+*A thread pode usar o mesmo algoritmo da substituição regular.*
 
 :arrow_down:
 
@@ -1228,7 +1228,7 @@ Exemplo de uma tupla na tabela de páginas:
 
 ##### Implementação da tabela de páginas 
 
-Simplesmente é um vetor com os registros, mas isso não é bom, não é muito performático, logo geralemente é implementado de outras formas.
+Simplesmente é um vetor com os registros, mas isso não é bom, não é muito performático, logo geralmente é implementado de outras formas.
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/MemoriaAssociativaTLB.png" style="width:80%">
 
@@ -1296,7 +1296,7 @@ Dados não são executados....
   - Códigos, dados, pilhas...
 - Segmentos podem precisar de memória ao longo da execução
   - Alocação de estruturas dinâmicas...
-- Voltamos ao problema da grafmentação externa!
+- Voltamos ao problema da fragmentação externa!
 
 ##### Segmentação x Paginação
 
@@ -1359,7 +1359,7 @@ De forma mais detalhada:
 - Arquivo para o usuário
   - Abstração de dados reais, ou seja, mostra os arquivos da maneira mais leiga possível, mais fácil de ser manipulada e entendida possível.
 - Arquivo para o programa
-  - Dados estruturados. Ele precisa saber o que cada linha siguinifica, tira informações delas, precisa ler uma string, uma linha de texto entendível.
+  - Dados estruturados. Ele precisa saber o que cada linha significa, tira informações delas, precisa ler uma string, uma linha de texto entendível.
 - Arquivo para o SO
   - Em geral, o conteúdo é indiferente, o SO não sabe se é um arquivo de música, foto... só um conjunto de bytes.
 
@@ -1377,11 +1377,9 @@ São fundamentais para a abstração, igual às extensões. Em relação ao nome
 
    - Exemplo: arquivo de imagem, pdf... é do usuário, e os dados são exibidos pelo mesmo por aplicativos.
 
-     > 
-
 2. Arquivos executáveis
 
-   - Quer dizer que estamos dizendo ao SO que ele pode usar aqueles bytes para serem processados no processados, e resultando na execução de um programa.
+   - Quer dizer que estamos dizendo ao SO que ele pode usar aqueles bytes para serem processados no processador, e resultando na execução de um programa.
 
 3. Diretórios
 
@@ -1393,13 +1391,22 @@ São fundamentais para a abstração, igual às extensões. Em relação ao nome
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/TiposArquivosSORegulares.png" style="width:80%">
 
-<img src="../../imgs/3_Periodo/Sistemas_Operacionais/AcessoAosArquivosRegulares.png" style="width:80%">
+###### Acesso aos arquivos
 
-- Acesso sequencial (linha por linha);
+- Acesso sequencial (linha por linha). Ex: arquivos de texto.
+- Acesso aleatório. Chamada de sistema seek, ou seja, para uma melhor performance o SO implementa o seek, que procura o dado específico.
+
+###### Atributos de arquivos
+
+*Metadados são dados que falam sobre os dados do arquivo.* Metadado essecial -> nome do arquivo.  
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/AtributosDeArquivosSequenciais.png" style="width:80%">
 
 Quanto mais atributos à definir, mais informações, porém mais trabalho para armazenar.
+
+###### Operações com arquivos
+
+Só conseguimos fazer operações com os arquivos por que o SO implementou chamadas de sistema para isso.
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/OperacoesComArquivos.png" style="width:80%">
 
@@ -1409,12 +1416,11 @@ Quanto mais atributos à definir, mais informações, porém mais trabalho para 
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/exemploSistemasGruposUsuariosLinux.png" style="width:80%">
 
-|      | 4        | 2         | 1             |
-| :--: | -------- | --------- | ------------- |
-|      | r = read | w = write | x = execution |
-|      |          |           |               |
-|      |          |           |               |
-|      |          |           |               |
+A permissão é modificada passando o binário.
+
+| 4        | 2         | 1             |
+| -------- | --------- | ------------- |
+| r = read | w = write | x = execution |
 
 chmod = change mode
 
@@ -1432,12 +1438,12 @@ Estrutura mais comum hoje. Utiliza-se **árvore genérica**:
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/EstruturaHierarquicaArquivosLinux.png" style="width:80%">
 
-> Nome de caminha absoluto -> começa no diretório raiz. Exemplo:
+> Nome de caminho absoluto -> começa no diretório raiz. Exemplo:
 >
 > - /home/arthur/Documentos/aula1.pdf
 > - \Users\arthur\Documentos\aula1.pdf
 >
-> Por esse motivo podemos ter nomes igual de arquivos em diretórios diferentes, pois a path absoluta é diferente (o nome completo é diferente).
+> Por esse motivo podemos ter nomes iguais de arquivos em diretórios diferentes, pois a path absoluta é diferente (o nome completo é diferente).
 >
 > Nome de caminho relativo e diretório de trabalho.
 >
@@ -1476,19 +1482,21 @@ Cada sistema de arquivos estará em uma partição de memória secundária. Exem
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/ImplementacaoSistemasArquivo.png" style="width:80%">
 
-> *MBR = Master boot record -> identifica como e onde um sistema operacional está localizado para que possa ser inicializado (carregado)*.
+> *MBR = Master boot record -> Código básico, em conjunto com a BIOS, para reconhecer o hardware do sistema. Uma vez reconhecido, vai mandar o controle para o boot block. Ou seja, com auxílio da tabela de partições, identifica como e onde um sistema operacional está localizado para que possa ser inicializado (carregado)*.
 >
-> *Boot block -> Código base do SO para carregar o kernel.*
+> *Boot block -> Código básico do SO para carregar o kernel.*
 >
-> *Super block -> É essencialmente os metadados do sistema de arquivos e define o tipo, tamanho, status e informações do sistema de arquivos sobre outras estruturas de metadados* 
+> *Super block -> Tabela de índices do sistema de arquivos. Ou seja, é uma tabela de descritores (metadados do arquivo), cada índice dessa tabela aponta para um descritor, que por sua vez aponta para um arquivo (descreve um arquivo).
+>
+> *Free space mgmt -> Usa o espaço livre do disco para gerênciar o espaço livre do disco.*
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/CaracteristicasImplementacaoSArquivos.png" style="width:80%">
 
 Arquivos são formados por blocos, não compensa ler byte por byte, logo lemos um bloco.
 
-Super block -> tabela de descritores.
-
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/AberturaArquivosSolicitacoes.png" style="width:80%">
+
+> Lookup -> Olha no super block aonde que ta a informação do arquivo, e se o arquivo existe.
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/AberturaArquivosTabelas.png" style="width:80%">
 
@@ -1516,9 +1524,9 @@ Outra parte boa é a utilização dele para arquivos que não irão se modificar
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/AlocacaoListaEncadeadaArquivos.png" style="width:80%">
 
-Completamente inviável para o sistema principal, por ocupar muito espaço.
+Completamente inviável para o sistema principal, por ocupar muito espaço. Por outro lado é rápido, por que só precisamos ler o bloco que queremos.
 
-FAT não tem atributo de proprietário (todos tem acesso).
+>  FAT não tem atributo de proprietário (todos tem acesso).
 
 ###### Alocação por nós-índice (i-node)
 
@@ -1526,7 +1534,7 @@ FAT não tem atributo de proprietário (todos tem acesso).
 
 sub-arquivo que contém a descrição do arquivo = Descritor
 
-> Um descritor por arquivo, ou seja, uma linha para cada arquivo, e não uma para cada parte da memória. Um índice por arquivo.
+> Um descritor por arquivo, ou seja, uma linha para cada arquivo, e não uma para cada parte da memória. Um índice por arquivo. A localização do bloco está listado no descritor.
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/TabelaINODEArquivos.png" style="width:80%">
 
@@ -1534,7 +1542,7 @@ sub-arquivo que contém a descrição do arquivo = Descritor
 
 Flexível por índices indiretos. Usa qualquer posição que quiser, só registar no descritor.
 
-EXT3 é i-node
+>  EXT3 é i-node
 
 ---
 
@@ -1562,7 +1570,7 @@ EXT3 é i-node
 
 Usou 4KB do último bloco e sobrou 24KB no bloco, logo temos um desperdício de memória, fragmentação interna.
 
-<img src="../../imgs/3_Periodo/Sistemas_Operacionais/TamanhoxTamanhoDiscoArquivos.png" style="width:80%">
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/TamanhoxTamanhoDiscoArquivos.png" style="width:50%">
 
 Não é bom criar blocos muito grandes uma vez que o Tanenbaum fez uma pesquisa, e o resultado é:
 
@@ -1572,7 +1580,7 @@ Não é bom criar blocos muito grandes uma vez que o Tanenbaum fez uma pesquisa,
 
 O equilíbrio também é ruim, pois o aproveitamento seria menor que 10%.
 
-##### Candidatos
+##### Candidatos para tamanho do bloco
 
 - Setor
 - Trilha
@@ -1591,7 +1599,7 @@ Compartilhamento real, dois lugares apontando para o mesmo descritor, para o mes
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/HardLinks.png" style="width:80%">
 
-Um efeito colateral é que se o proprietário deletar o link, ele continua sendo o proprietário, e caso o usuário B não tenha permissões...
+Um efeito colateral é que se o proprietário deletar o link, ele continua sendo o proprietário, e caso o usuário B não tenha determinadas permissões... até não conseguir apagar o arquivo mais é possível. 
 
 - Symbolic links
 
@@ -1603,18 +1611,21 @@ Criamos uma referência para o diretório do proprietário, ao invés de um link
 
 #### Sistemas de arquivo com journaling
 
+O sistema de arquivos está sujeito à problemas, à erros. 
+
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Journaling.png" style="width:80%">
 
-Registra tudo que vai fazer antes de fazer. Depois que falar tudo oq vai fazer é que vai começar a fazer. Consequentemente é mais lento, porém mais seguro, pois se achar um problema no fluxo, ele trata o cenário.
+Registra tudo que vai fazer antes de fazer. Depois que falar tudo oq vai fazer é que vai começar a fazer, pois se achar um problema no fluxo, assim ele tem mais chance se voltar a ação, ou completa-la sem ter que "adivinhar nada". Naturalmente é mais lento.
 
-Quando ele finaliza ele 
+Quando ele finaliza de realizar as ações, avisa que finalizou (da um commit na operação). Se finalizou com exito é considerada uma operação de sucesso, se não vai ter que tentar corrigir da próxima vez que iniciar.
 
 Dificuldades:
 
-- Operações idempotentes
-- Transações atômicas
+- Operações idempotentes: Única alteração que o sistema consegue refazer. São operações que todas as vezes vão ter o mesmo resultado. 
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! estudar os dois tópicos acima
+> Por esse motivo que geralmente o sistema de Journaling volta a trás nas operações ao invés de tentar corrigir (parte do próximo tópico "transações atômicas") Ex: Tentou apagar um arquivo, e deu errado no meio -> o usuário vai ter que tentar de novo, os arquivos não irão para o bloco de livre. E caso já tenham ido, eles saem da lista de livres.
+
+- Transações atômicas: Operação, ou conjunto de operações, que deve ser executada completamente em caso de sucesso, ou ser abortada completamente em caso de erro. Exemplo: Transferência entre duas contas bancárias. No momento de uma transferência de valores de uma conta "A" para uma conta "B", que envolve pelo menos uma operações de ajuste no saldo para cada conta, se o computador responsável pela operação é desligado por falta de energia, espera-se que o saldo de ambas as contas não tenha se alterado. Neste caso são utilizados sistemas que suportam transações atômicas.
 
 Exemplos:
 
@@ -1687,7 +1698,7 @@ Casos em que não foram ocasionados propositalmente, como um ataque, por exemplo
     > - Total (todos os arquivos do SO) ou parcial?
     > - Completo ou incremental (guarda só o que foi modificado desde o último backup)? 
     > - Dados originais ou comprimidos (possível de dar problemas)?
-    > - Cópia física (espelhamento) ou cópia lógica? *Na cópia física é copiado byte por byte. Na lógica copia o bloco armazenado, ou seja, se tiver fragmentação interna, ele copia também. :grimacing:* 
+    > - Cópia física (espelhamento) ou cópia lógica? *Na cópia física é copiado byte por byte. Na lógica copia o bloco armazenado, ou seja, se tiver fragmentação interna, ele copia também.* :grimacing:
     > 
     > *O backup deve sempre ser feito em um disco ou local sem vínculo com o original. De preferência em outro local.*
 
@@ -1746,7 +1757,7 @@ Senhas e políticas de uso:
 - Forçar mudanças periódicas
 - Senhas designadas pelo sistema
 - Senhas de uso único
-- Senha e desafio. *O problema que o desafio, geralmente envolvem dados pessoais, e dados pessoais são muito públicos hoje em dia. Ex: Qual era o nome do seu cachorro.*
+- Senha e desafio. *O problema que o desafio, geralmente envolvem dados pessoais, e dados pessoais são muito públicos hoje em dia. Ex: Qual era o nome do seu cachorro?*
 - Autenticação em dois passos
 - Execução periódica de um verificador de senhas. Ex: O próprio SO roda um verificador para saber se algum usuário está com uma senha muito fácil.
 
@@ -1778,13 +1789,13 @@ Métodos:
 
 > Biometrica não é 100% seguro, pode dar falsos negativos, falsos positivos. Além de ter sim formas de burlar a biometria, só é mais difícil.
 
+Também tem a aceitação cultural, ou seja, algumas formas de autenticação biométrica pode não ser bem aceita dependendo da cultura do local onde ela será utilizada. Exemplo: No Brasil, ninguém irá aceitar cuspir em um pote para um dispositivo analisar seu DNA...
+
 ###### Proteção
 
 - A partir da autenticação, controle das ações permitidas para aquele usuário.
 
-*Um ataque pode se passar po um usuário para acessar como se fosse o mesmo.*
-
-Também tem a aceitação cultural, ou seja, algumas formas de autenticação biométrica pode não ser bem aceita dependendo da cultura do local onde ela será utilizada.
+*Um ataque pode se passar por um usuário para acessar como se fosse o mesmo.*
 
 ##### Ameaças e ataques ao SO
 
@@ -1808,7 +1819,7 @@ Alguém interno (que trabalha no código) colocou *atalhos* no código fonte par
    - Áreas disponíveis podem conter "lixo" útil.
 3. Forçar o sistema com chamadas ilegais, incorretas e atitudes não recomendadas.
 4. Estouro de buffer
-   - Execução de código malicioso que tenta desviar o fluxo de execução para ganhar privilágios.
+   - Execução de código malicioso que tenta desviar o fluxo de execução para ganhar privilégios.
    - Em geral, possível em linguagens que não verificam limites de memória (por exemplo, C).
 
     ``` c
@@ -1866,9 +1877,9 @@ O SO vai precisar se organizar de alguma maneira:
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/DriversDispositivos.png" style="width:80%">
 
-> Cada dispositivo teá seu controlador respectivo. Exceto a alaca USB que é universal (*Universal Serial Bus* - transmite e recebe bytes). 
+> Cada dispositivo terá seu controlador respectivo. Exceto a placa USB que é universal (*Universal Serial Bus* - transmite e recebe bytes). 
 >
-> Quanto mais específico for equipamento, mais importante é seu drive.
+> **Quanto mais específico for equipamento, mais importante é seu drive.**
 
 ##### Dispositivos de E/S
 
@@ -1907,11 +1918,11 @@ E a imagem à baixo é uma evolução, passou a ser dividido por blocos lógicos
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/TabelaDiscoRigido.png" style="width:80%">
 
-> O HD é mecânico, ou seja, tem uma agulha que passa pelas trilhas lendo e escrevendo, a agulha pecisa se "locomover", é uma operação mecânica, e isso gasta tempo. Sem contar que o disco precisa rotacionar para que a agulha chegue no endereço desejado (Latência retacional).
+> O HD é mecânico, ou seja, tem uma agulha que passa pelas trilhas lendo e escrevendo, a agulha precisa se "locomover", é uma operação mecânica, e isso gasta tempo. Sem contar que o disco precisa rotacionar para que a agulha chegue no endereço desejado (Latência rotacional).
 
 
 
-**Algoritmos de leitura em disco:** Se não posso melhorar a física, organizo para que o trageto da agulha e disco não seja tão grande.
+**Algoritmos de leitura em disco:** Se não posso melhorar a física, organizo para que o trajeto da agulha e disco não seja tão grande.
 
 A execução dos pedidos de leitura pode ser feita de maneiras diferentes pelo SO:
 
@@ -1925,7 +1936,7 @@ Fazer a leitura na hora que ela chega.
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/SSF_MemoriaSegundaria.png" style="width:80%">
 
-E se continuam aparecendo requisições próximas, o que acontece com as extremidades? Dependendo do cenário pode resultar em *starvation* (vai morrer de fome, ninguém executa). Ou seja, esse algoritmo não da garantia de execução.
+E se continuam aparecendo requisições próximas, o que acontece com as extremidades? Dependendo do cenário pode resultar em ***starvation*** (vai morrer de fome, ninguém executa). Ou seja, esse algoritmo não da garantia de execução.
 
 **Elevador** - Varredura
 
@@ -2070,7 +2081,7 @@ Manutenção sem energia:
 
 Papéis do *driver*:
 
-- Maanter o horário (tudo o que foi falado anteriormente)
+- Manter o horário (tudo o que foi falado anteriormente)
 - Controlar tempo de execução de processos (*quantum*)
 - Contabilidade do uso da CPU - Além de servir para gerar estatísticas, hoje é muito comum o aluguel de SO, e paga-se por tempo de uso.
 - Tratar chamadas *alarm* de usuários - Disparo de processos feitos pelo programa, pelo usuário.
@@ -2097,13 +2108,13 @@ Papéis do *driver*:
 
 #### Virtualização
 
-Uso específco do conceito de VM para atingir objetivos.
+Uso específico do conceito de VM para atingir objetivos.
 
 ##### Máquinas virtuais (VM)
 
 *Tem material no início do documento.*
 
-Cópias exatas do hardware. Interpretação das instruções do sistema hospedado virtualmente e xecução no hardware real.
+Cópias exatas do hardware. Interpretação das instruções do sistema hospedado virtualmente execução no hardware real.
 
 - Hipervisores (VMM - Monitor de máquina virtual) - Software que cria e roda VMs.
 - Surgimento na década de 1960
@@ -2117,7 +2128,7 @@ Cópias exatas do hardware. Interpretação das instruções do sistema hospedad
    - Necessidade de múltiplos SO em um mesmo ambiente de trabalho.
 
 2. Muito usado também para **testes** de novos sistemas e implementações. 
-   - Implantação de *contâiners* incluindo SOe SI.
+   - Implantação de *contâiners* incluindo SO e SI.
 
 3. VM é excelente pra preservação de software antigo tmb. Não tem compatibilidade melhor para um programa antigo do que o SO original 😂
 4. Execução de software em SO obsoletos
@@ -2148,22 +2159,78 @@ Dependente do suporte da arquitetura e dos modos de execução do processador.
 - Reescrita de instruções incompatíveis.
 - Retrocompatibilidade e dificuldades de virtualização
 
-Relembrando: modo núcle e modo usuário.
+Relembrando: modo núcleo e modo usuário.
 
-*Tudo que vem da virtualização é considerado em modo usuário, pois é um programa executando no SO.*
+Modo núcleo visual: *Tudo que vem da virtualização é considerado em modo usuário, pois é um programa executando no SO.*
 
-- Instruções sensíveis e instruções privilegiadas.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Estudar bem aqui pra baixo
+
+- Instruções sensíveis e instruções privilegiadas. -> o programa pede e o hipervisor gerencia. Se for do núcleo, o hipervisor já pode mandar para o hardware de verdade, se for de usuário o hipervisor verifica a tradução para enviar para o Kernel.
 - Interrupções, *trap* e chaveamento de modo.
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/SistemaHipervisor1.png" style="width:80%">
 
 *Esse sistema à cima é do hipervisor do tipo 1.*
 
+Hipervisores -> Atuam como supervisores da VM, controlam tudo.
+
 ##### Hipervisores tipo 1
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Hipervisor1.png" style="width:80%">
 
+Enviar para o processador as instruções traduzidas
+
 ##### Hipervisores tipo 2
 
-<img src="../../imgs/3_Periodo/Sistemas_Operacionais/Hipervisor2.png" style="width:80%">
+!!!!!!!!!!!!!!!! Por que surgiu o hipervisor do tipo 2 mesmo?
 
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/.png" style="width:80%"> -- Hipervisor2
+
+![image-20210614192437798](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210614192437798.png)
+
+Naturalmente é mais lento, pois a rota até a chamada para o hardware original é mais longa.
+
+Por muito tempo ele só foi um simples interpretador, com baixo desempenho. Hoje em dia ele pega cada bloco básico que será executado e verifica se tem alguma instrução sensível lá...................................
+
+##### Paravirtualização
+
+Incluir a virtualização no próprio SO.
+
+Qualquer chamada de instruções sensível vão ser trocadas por chamadas de hipervisor. 
+
+<img src="/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210614192853860.png" alt="image-20210614192853860" style="zoom:80%;" />
+
+<img src="/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210614193544585.png" alt="image-20210614193544585" style="zoom:80%;" />
+
+##### Paravistualização e portabilidade
+
+![image-20210614193617179](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210614193617179.png)
+
+###### Paravirtualização e VMI
+
+![image-20210614194343124](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210614194343124.png)
+
+##### Virtualiozação de memória
+
+![image-20210614195555029](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210614195555029.png)
+
+![image-20210614195642425](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210614195642425.png)
+
+Se mexer na tabela original, precisa atualizar a *shadow* na hora.
+
+Na verdade o sistema original só acha que ta mexendo diretamente na tabela original, mas na verdade ta usando um recurso do hipervisor, que no caso ta gerenciando as páginas principais e virtuais. Se tiver alteração ele bloqueia, atualiza as tabelas, e libera o sistema. Isso faz perder desempenho sim...
+
+##### Virtualização de E/S
+
+![image-20210614200949179](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210614200949179.png)
+
+###### Virtualização de E/S e hipervisores
+
+![image-20210614201804307](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210614201804307.png)
+
+Dúvida sobre matéria:
+- Estouro de buffer
+- DMA
+- Chamada de sistema *sync*
+- Re-escrita e coleta de lixo em ssd
+- Relógio -> Oscilador de cristal
