@@ -1,5 +1,11 @@
+---
+title: Code injection
+author: Pedro Henrique Faria Andrade
+---
+
 # Code injection
-Code injection, injeção de código em português, é um termo utilizado para a prática de injetar códigos maliciosos em aplicativos web. Esse tipo de ataque explora falhas em validações de entradas / saídas, como por exemplo o manuseio inadequado de dados não confiáveis. Tal prática se limita a funções de uma linguagem específica, ou seja, apenas a linguagem utilizada e não um aproveitamento total do código(command injection => contexto shell).
+
+Code injection, injeção de código em português, é um termo utilizado para a prática de injetar códigos maliciosos em aplicativos web. Esse tipo de ataque explora falhas em validações de entradas / saídas, como por exemplo o manuseio inadequado de dados não confiáveis. Tal prática se limita a funções de uma linguagem específica, ou seja, apenas a linguagem utilizada e não um aproveitamento total do código (command injection => contexto shell).
 
 ### Alguns exemplos de code injection:
 

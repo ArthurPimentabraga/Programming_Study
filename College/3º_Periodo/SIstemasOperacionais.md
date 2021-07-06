@@ -867,7 +867,7 @@ Gerência de trocas -> Ta usando muito uma variável específica, então o siste
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Tecnicas_gerencia_trocas.png" style="width:80%">
 
-O SO para fazer qualquer coisa na memória, precisa de todos os tópicos acima, ou seja, depende do processador. 
+O SO para fazer qualquer coisa na memória, precisa de todos os tópicos acima, ou seja, depende do processador.
 
 ##### Conceitos
 
@@ -1486,7 +1486,7 @@ Cada sistema de arquivos estará em uma partição de memória secundária. Exem
 >
 > *Boot block -> Código básico do SO para carregar o kernel.*
 >
-> *Super block -> Tabela de índices do sistema de arquivos. Ou seja, é uma tabela de descritores (metadados do arquivo), cada índice dessa tabela aponta para um descritor, que por sua vez aponta para um arquivo (descreve um arquivo).
+> *Super block -> Tabela de índices do sistema de arquivos. Ou seja, é uma tabela de descritores (metadados do arquivo), cada índice dessa tabela aponta para um descritor, que por sua vez aponta para um arquivo (descreve um arquivo).*
 >
 > *Free space mgmt -> Usa o espaço livre do disco para gerênciar o espaço livre do disco.*
 
@@ -2065,6 +2065,8 @@ Relógio: dispositivo de bloco? De caractere? Nenhum dos dois, não é dispositi
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/OsciladorCristalRelogio.png" style="width:80%">
 
+Tem o oscilador, que dentro dele tem um elemento (geralmente o quartzo) que fica repondo energia perdida ao oscilador, logo produzindo oscilações. Ai tem um circuito que determina a frequencia desse sinal ou oscilação que deve ser produzido.
+
 Driver de relógio: *timestamp* e manutenção da hora. A hora é feita com uma referência.
 
 - UTC
@@ -2116,7 +2118,7 @@ Uso específico do conceito de VM para atingir objetivos.
 
 Cópias exatas do hardware. Interpretação das instruções do sistema hospedado virtualmente execução no hardware real.
 
-- Hipervisores (VMM - Monitor de máquina virtual) - Software que cria e roda VMs.
+- Hipervisores (VMM - Monitor de máquina virtual) - Software que cria, roda e gerencia as VMs.
 - Surgimento na década de 1960
 - Várias reinterpretações ao longo da história da computação e dos SO's.
 
@@ -2125,8 +2127,9 @@ Cópias exatas do hardware. Interpretação das instruções do sistema hospedad
 1. Uso é muito usado como **Caixas de areia (*sandboxing*)** e **isolamento de servidores**.
    - Servidores físicos: tolerância a falhas e custo alto
    - Servidor único com VM e tolerância a falhas. É um servidor bem mais poderoso que o anterior, mas ainda sim fica mais barato. Várias sandboxing isoladas e seguras. Um ataque, por exemplo, fica isolado à um sandboxing. 
+   - Históricamente as falhas de software são mais frequêntes que as falhas em hardware.
    - Necessidade de múltiplos SO em um mesmo ambiente de trabalho.
-
+   
 2. Muito usado também para **testes** de novos sistemas e implementações. 
    - Implantação de *contâiners* incluindo SO e SI.
 
@@ -2149,8 +2152,10 @@ Cópias exatas do hardware. Interpretação das instruções do sistema hospedad
 ##### Segurança e eficiência
 
 - Segurança x eficiência: uso de interpretadores para execução de instruções.
-- Instruções seguras e execução direta. Ex: Incremento de uma variável.
+- Instruções seguras e execução direta. Ex: Incremento de uma variável; Operações matemáticas básicas.
+  - Operações simples podem ser passadas direto para o SO sem medo (a VM identificou que é uma operação inofenciva), ou até serem executadas direto no hipervisor. Tudo isso para melhorar a eficiência com segurança.
 - Instruções supervisionadas e mapeamento. Ex: alteração na tabela de páginas.
+  - Essas já são operações que necessitam passar para o SO hospedeiro, não necessáriamente são seguras.
 
 ##### Fidelidade
 
@@ -2161,20 +2166,24 @@ Dependente do suporte da arquitetura e dos modos de execução do processador.
 
 Relembrando: modo núcleo e modo usuário.
 
-Modo núcleo visual: *Tudo que vem da virtualização é considerado em modo usuário, pois é um programa executando no SO.*
+- Instruções sensíveis e instruções privilegiadas: Instruções que precisam usar alguma coisa do modo núcleo.
+  - Privilegiadas: O programa pede em modo usuário e ela é verificada e pode ser traduzida para o modo núcleo pelo hipervisor.
+  - Sensíveis: Somente o modo núcleo pode executar. Ou seja, essa instrução precisa ser jogada direta para o sistema hospedeiro executar.
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Estudar bem aqui pra baixo
-
-- Instruções sensíveis e instruções privilegiadas. -> o programa pede e o hipervisor gerencia. Se for do núcleo, o hipervisor já pode mandar para o hardware de verdade, se for de usuário o hipervisor verifica a tradução para enviar para o Kernel.
 - Interrupções, *trap* e chaveamento de modo.
+  - Trap: Interrupção gerada pela mudança de modo usuário para modo núcleo (privilegiada para sensível). Armadilha que dispara a conversão das instruções para modo núcleo (chaveamento de modo).
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/SistemaHipervisor1.png" style="width:80%">
 
 *Esse sistema à cima é do hipervisor do tipo 1.*
 
+Modo núcleo visual: *Tudo que vem da virtualização é considerado em modo usuário, pois é um programa executando no SO.*
+
 Hipervisores -> Atuam como supervisores da VM, controlam tudo.
 
 ##### Hipervisores tipo 1
+
+Software que gerencia diretamente o hardware.
 
 <img src="../../imgs/3_Periodo/Sistemas_Operacionais/Hipervisor1.png" style="width:80%">
 
@@ -2182,19 +2191,21 @@ Enviar para o processador as instruções traduzidas
 
 ##### Hipervisores tipo 2
 
-!!!!!!!!!!!!!!!! Por que surgiu o hipervisor do tipo 2 mesmo?
+Como o hipervisor 1 necessita de uma CPU que que dê suporte à virtualização, e na época não era comum (o que veio a ser posteriormente), surgiram os hipervisores do tipo 2. Ou seja, se não temos como virtualizar a instrução de processador, somos obrigados a ter o SO original conversando diretamente com o hardware, e o hipervisor 2 traduz do sistema hospedado para o sistema hospedeiro, executando como se fosse um programa qualquer. *O hipervisos vai ser um processo normal do sistema, como qualquer outro programa.*
 
-<img src="../../imgs/3_Periodo/Sistemas_Operacionais/.png" style="width:80%"> -- Hipervisor2
+Exemplo: VirtualBox.
 
 ![image-20210614192437798](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210614192437798.png)
 
 Naturalmente é mais lento, pois a rota até a chamada para o hardware original é mais longa.
 
-Por muito tempo ele só foi um simples interpretador, com baixo desempenho. Hoje em dia ele pega cada bloco básico que será executado e verifica se tem alguma instrução sensível lá...................................
+Por muito tempo ele só foi um simples interpretador, com baixo desempenho, pegava praticamente linha por linha verificando se a instrução era sensível para a tradução. Hoje em dia ele pega cada bloco básico (sequência de comandos sem alteração de execução - criação de variável...) que será executado e verifica se tem alguma instrução sensível lá, se sim ele já troca para **instruções de hipervisor** para pular o envio da instrução para o SO hospedado, enviando direto para o hipervisor.
+
+Algumas instruções podem ser emuladas ao invés de passar para o SO hospedeiro. Exemplo: Acesso de disco, o hipervisor pode controlar alguma parte do disco para não precisar passar para o SO hospedeiro.
 
 ##### Paravirtualização
 
-Incluir a virtualização no próprio SO.
+Incluir a virtualização no próprio SO para fugir da necessidade de qualquer tradução e perda de desempenho.
 
 Qualquer chamada de instruções sensível vão ser trocadas por chamadas de hipervisor. 
 
@@ -2207,6 +2218,8 @@ Qualquer chamada de instruções sensível vão ser trocadas por chamadas de hip
 ![image-20210614193617179](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210614193617179.png)
 
 ###### Paravirtualização e VMI
+
+Desacoplagem! :)
 
 ![image-20210614194343124](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210614194343124.png)
 
@@ -2228,9 +2241,3 @@ Na verdade o sistema original só acha que ta mexendo diretamente na tabela orig
 
 ![image-20210614201804307](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210614201804307.png)
 
-Dúvida sobre matéria:
-- Estouro de buffer
-- DMA
-- Chamada de sistema *sync*
-- Re-escrita e coleta de lixo em ssd
-- Relógio -> Oscilador de cristal

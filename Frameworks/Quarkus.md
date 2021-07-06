@@ -33,3 +33,7 @@ Por causa da compatibilidade avançada com o GraalVM é possível desenvolver um
 - GraalVM - https://www.zup.com.br/blog/graalvm
 - Compilação nativa - https://dev.to/lucasscharf/uma-breve-explicacao-sobre-o-modo-nativo-do-quarkus-1kn7
 - Red Hat (Kubernetes) - https://www.redhat.com/pt-br/topics/containers/what-is-kubernetes
+
+- https://quarkus.io/vision/continuum →Paradigmas
+
+- https://www.youtube.com/watch?v=spWnqkbFgH4 → Quarkus explication
