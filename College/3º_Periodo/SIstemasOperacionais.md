@@ -2239,5 +2239,5 @@ Na verdade o sistema original só acha que ta mexendo diretamente na tabela orig
 
 ###### Virtualização de E/S e hipervisores
 
-![image-20210614201804307](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210614201804307.png)
+<img src="../../imgs/3_Periodo/Sistemas_Operacionais/virtualizacaoES.png" style="width:80%">
 

@@ -678,7 +678,7 @@ Conceito baseado na noção de direção defenciva: *"Se alguém fizer algo peri
 
 Ideia principal na programação: Problemas inevitavelmente acontecerão. Seu código/programa estará preparado para lidar com eles.
 
-![image-20210514193058629](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210514193058629.png)
+<img src="../../imgs/3_Periodo/POO/programation-defencisa.png" style="width:90%">
 
 ##### Princípios de McConnell
 
@@ -713,7 +713,7 @@ Toda interfaces de componentes de software devem ser especificadas de maneira fo
 > 1. Método chamado (pré-condições) -> ou executa (pós-condições), ou falha.
 > 2. Falha: situação excepcional. *Tratamento varia com o tipo de erro.*
 
-![image-20210514200908130](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210514200908130.png)
+<img src="../../imgs/3_Periodo/POO/programation-por-contrato.png" style="width:90%">
 
 ---
 
@@ -767,7 +767,7 @@ finally { // algumas linguagens oferencem finally
 
 > Sempre é bom tratar exception em específico, tratamentos personalizados. No último cenário que colocamos um catch com a *Exception* genérica.
 
-![image-20210521200543038](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210521200543038.png)
+<img src="../../imgs/3_Periodo/POO/howException.png" style="width:90%">
 
 > throws -> Na assinatura do método pode ser especificado uma exception com o *throws*. Dessa forma estamos delegando o tratamento dessa exception para o método que utilizar este. 
 >
@@ -842,7 +842,7 @@ Pilares da POO para que um projeto siga os princípios que nortearam o surgiment
 - Flexibilidade
 - Extensibilidade
 
-![image-20210527191340959](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210527191340959.png)
+<img src="../../imgs/3_Periodo/POO/SOLID.png" style="width:90%">
 
 ##### Single responsibility
 
@@ -894,7 +894,7 @@ Objetos que fazem parte de um programa podem ser substituídos por instâncias d
 
 Em resumo: herança deve considerar "é-um" para **comportamento** do objeto.
 
-![image-20210605181642627](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210605181642627.png)
+<img src="../../imgs/3_Periodo/POO/liskov-substituition.png" style="width:90%">
 
 :arrow_down:
 
@@ -910,13 +910,13 @@ Segregar o papel da interface
 
 > Atenção para herança, composição e associação
 
-![image-20210527200400306](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210527200400306.png)
+<img src="../../imgs/3_Periodo/POO/interface-segregation-1.png" style="width:90%">
 
-![image-20210527200611173](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210527200611173.png)
+<img src="../../imgs/3_Periodo/POO/interface-segregation2.png" style="width:90%">
 
 Melhorou, mas uma porta não tem papel de temporizador.
 
-![image-20210527200912668](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210527200912668.png)
+<img src="../../imgs/3_Periodo/POO/interface-segregation3.png" style="width:90%">
 
 :arrow_down:
 
@@ -1146,37 +1146,31 @@ Java collection framework (JCF)
 - Implementações concorrentes
 - Algoritmos comuns (.sort, ...)
 
-![image-20210604192101198](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604192101198.png)
+<img src="../../imgs/3_Periodo/POO/jcf-colecoes.png" style="width:90%">
 
-![image-20210604192327145](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604192327145.png)
+<img src="../../imgs/3_Periodo/POO/JCF-Recursos.png" style="width:90%">
 
 #### Streams
 
-![image-20210604201831554](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604201831554.png)
+<img src="../../imgs/3_Periodo/POO/streams1.png" style="width:90%">
 
-![image-20210604201928981](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604201928981.png)
+<img src="../../imgs/3_Periodo/POO/streams2.png" style="width:90%">
 
-![image-20210604202056471](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604202056471.png)
+<img src="../../imgs/3_Periodo/POO/streams3.png" style="width:90%">
 
 ##### Streams x Coleções
 
-![image-20210604202039956](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604202039956.png)
+<img src="../../imgs/3_Periodo/POO/streams-colecoes.png" style="width:90%">
 
 ##### Exemplo 
 
-![image-20210604202324677](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604202324677.png)
+<img src="../../imgs/3_Periodo/POO/exemplo1_streams.png" style="width:90%">
 
-![image-20210604202611600](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210604202611600.png)
-
-
+<img src="../../imgs/3_Periodo/POO/exemplo2_stream.png" style="width:90%">
 
 ---
 
 ## Revisão atividades - 10/06
 
-![image-20210610194420517](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210610194420517.png)
-
-
-
-
+<img src="../../imgs/3_Periodo/POO/revisaoAtividades10-06.png" style="width:90%">
 

@@ -243,7 +243,7 @@ Restrições
 
 #### Comandos DML básicos
 
-![image-20210505194035392](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210505194035392.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/DML-basico-select.png" alt="Sistema-BD" style="width:75%" />
 
 ---
 
@@ -259,47 +259,46 @@ Restrições
 
 #### Segurança e privilégios
 
-![image-20210523152644916](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523152644916.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/DCL-DML.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523152659475](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523152659475.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/tipo-privilegios.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523152744283](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523152744283.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/privilegios-sistemas.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523152813441](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523152813441.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/privilegios-objetos.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523152836753](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523152836753.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/concessao-privilegios-objeto.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523152945462](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523152945462.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/seguranca-BD.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523153051974](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153051974.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/GRANT.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523153242956](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153242956.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/GRANT-OPTION.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523153321381](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153321381.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/REVOKE.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523153403252](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153403252.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Exemplos-REVOKE.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523153456740](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153456740.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/ROLE-PAPEL.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523153520757](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153520757.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/ROLE.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523153541061](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153541061.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Profile-PERFIL.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523153550650](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153550650.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Motivacoes-uso-perfil.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523153645275](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153645275.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/Criacao-remocao-perfil.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523153653644](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153653644.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/parametro-recursos.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523153709788](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153709788.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/parametros-recursos.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523153740694](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153740694.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/parametros-senha.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523153749432](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153749432.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/parametros-senha-2.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523153837724](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153837724.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/parametros-senha-continuacao.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523153851602](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153851602.png)
+<img src="../../imgs/3_Periodo/Banco_Dados/funcao-verificacao.png" alt="Sistema-BD" style="width:75%" />
 
-![image-20210523153933409](/home/arthur/Documentos/Programming_Study/imgs/3_Periodo/image-20210523153933409.png)
-
+<img src="../../imgs/3_Periodo/Banco_Dados/passos-uso-perfil.png" alt="Sistema-BD" style="width:75%" />
