@@ -14,5 +14,17 @@ period: 2/2021
 
 <img src="../../imgs/4_Periodo/Interacao_Humano_Computador/EngenhariaVsUX.png" style="width:1000%">
 
+### Benefícios de IHC e UX
+
+- Aumentar a qualidade de uso de sistemas computacionais interativos
+- Aumentar a produtividade dos usuários
+- Reduzir o número e a gravidade dos erros cometidos pelos usuários
+- Reduzir custo de treinamento
+- Reduzir o custo de suporte técnico
+- Aumentar as vendas e a fidelidade do cliente
+- Reduzir o custo de desenvolvimento
+
+---
+
 # Histórico de IHC
 
