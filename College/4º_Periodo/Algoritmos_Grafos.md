@@ -24,6 +24,8 @@ Passar por todas as pontes uma única vez e voltar para a área inicial.
 
 # Definições
 
+05/08 :watch:
+
 Grafo é uma estrutura abstrata que representa um conjunto de elementos denominados vértices (v) e suas relações de interdependências entre eles, ou chamados de arestas (e).
 
 > Exemplo: Vértice: Cidades - Arestas: Rodovias entre as cidades

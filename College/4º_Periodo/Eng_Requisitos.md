@@ -6,7 +6,7 @@ period: 2/2021
 
 # Introdução
 
-02/08 - 03/08
+02/08 - 03/08 :watch:
 
 **Software como produto/solução!**
 
@@ -41,3 +41,26 @@ Gerenciamento de requisitos trata-se de uma modelo sistemático para:
 - Coleta de dados sobre produtividadade inexistente ou insuficiente;
   - Comprometendo as estimativas de prazo, esforço e custo;
   - não permitindo a avaliação de novas ferramenteas, técnicas e padrões.
+
+---
+
+# ICEI Talks - Eng. Requisitos (Google)
+
+09/08 :watch:
+
+> Note: Utilização de métricas para medir a aceitação e utilização do produto/funcionalidades. em produção, com o produto lançado. Porém, geralmente isso é mais benéfico quando se deseja lançar rapidamente para ficar a frente dos concorrentes, pois se der errado, e não tiver muita adesão, pode ter sido um gasto muito grande de tempo e dinheiro. 
+
+### Etapas da criação de requisitos
+
+- Elicitação: Entender a dor do cliente, entender o problema dele, *descobrir os requisitos do software*. (Design thinking)
+  - *Sempre perguntar a dor do cliente, e não o que ele quer!* Se não, ficamos limitados ao que ele quer, não o que ele precisa.
+- Especificação: Descrever, documentar os requisitos levantados no tópico anterior. 
+- Análise: Analisar os requisitos documentados e procurar problemas, requisitos inclompletos, inconcistências, conflito entre requisitos, entre outros. 
+- Validação: Validar tudo que descreveu com o cliente. Uma boa ideia é prototipar, ajuda ao cliente entender a proposta.
+
+### Requisitos funcionais VS não funcionais
+
+**Requisitos funcionais:** Funcionalidades que o software tem que ter, *o que o software tem que fazer*. Exemplo: Gerar relatório.
+
+**Requisitos não funcionais:** Características de qualidade que  o software tem q ter, *como o software tem q fazer aquilo.* Exemplo: capacidade de suportar inúmeros clientes gerando relatório ao mesmo tempo.
+

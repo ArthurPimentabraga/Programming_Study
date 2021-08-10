@@ -42,9 +42,13 @@ Comunicação entre pares de máquinas individuais. Um pacote pode passar por um
 
 ### Redes de Difusão
 
-Canal único de comunicação compartilhado por todas as máquinas de rede. Mensagens são transmitidos na forma de pequenos pacotes e recebidos por todas as máquinas da rede.
+Canal único de comunicação compartilhado por todas as máquinas de rede. Mensagens são transmitidos na forma de pequenos pacotes e recebidos por todas as máquinas da rede. 
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PEGAR SLIDE DESSA AULA !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+<img src="../../imgs/4_Periodo/Redes1/UDP-TCP.png" style="width:90%">
 
 ---
+
+# HW e SW de rede
+
+11/08 :watch:
 
