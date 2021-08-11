@@ -64,3 +64,44 @@ Gerenciamento de requisitos trata-se de uma modelo sistemático para:
 
 **Requisitos não funcionais:** Características de qualidade que  o software tem q ter, *como o software tem q fazer aquilo.* Exemplo: capacidade de suportar inúmeros clientes gerando relatório ao mesmo tempo.
 
+---
+
+# Processo de desenvolvimento de software
+
+10/08 :watch:
+
+*Forma metódica para se desenvolver um software (desenvolvimento e manutenção). Sequência de passos executados com um determinado objetivo.*
+
+*Software como produto, como solução para uma necessidade negócio.*
+
+<img src="../../imgs/4_Periodo/Eng_Requisitos/fabrica_software.png" style="width:80%">
+
+#### Ciclo de vida de software
+
+- É concebido a partir de uma necessidade;
+- É desenvolvido e entregue a um cliente;
+- Entra em operação, sendo usado dentro de um processo de negócio e sujeito a manutenção;
+- É retirado de operação no final de sua vida útil.
+
+Geralmente acaba pela tecnologia, com a manutenção que não vale a pena mais (muito cara talvez), ou ficou muito desatualizada e limitada (não atende as necessidades mais).
+
+O ponto de partida para a arquitetura de um processo é a escola de um modelo de ciclo de vida, podendo ser eles:
+
+- Modelo em cascata
+
+<img src="../../imgs/4_Periodo/Eng_Requisitos/modelo_cascata.png" style="width:50%">
+
+- Modelo em espiral
+
+<img src="../../imgs/4_Periodo/Eng_Requisitos/modelo-espiral.png" style="width:50%">
+
+> Métodos ágeis, como o XP ‒ Extreme Programming e o Scrum, geralmente não contêm elementos suficientes para se qualificarem como processos completos. Na prática, os processos deles derivados também utilizam alguma das variantes do modelo em espiral.
+
+#### RUP 
+
+*RUP - Rational Unified Process*
+
+É uma metodologia que utiliza UML para ilustrar os processos. [O que é RUP?](https://www.treinaweb.com.br/blog/o-que-e-rup-rational-unified-process)
+
+<img src="https://i1.wp.com/www.diegomacedo.com.br/wp-content/uploads/2012/01/rup1.png" style="width:100%">
+

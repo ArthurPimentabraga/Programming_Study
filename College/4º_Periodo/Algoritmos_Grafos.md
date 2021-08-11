@@ -110,6 +110,8 @@ Em um grafo *não direcionado*, o grau de um vértice é igual ao nº de arestas
 - Vértice de grau 1 é chamado de **pendente.**
 - Um laço conta como duas arestas!
 
+> *Arestas paralelas contam também!*
+
 #### Teorema 1
 
 A soma dos graus de todos os vértices de um grafo G é duas vezes o nº de arestas de G.
@@ -167,4 +169,52 @@ Consiste de dois ou mais grafos conexos. Cada um dos *subgrafos* conexos é cham
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/grafo_desconexo.png" style="width:40%">
 
 ---
+
+# Representação e Operações
+
+10/08 :watch:
+
+Como representar um grafo em um algoritmo, em uma estrutura de dados?
+
+Principais estruturas:
+
+- Matriz de adjacência;
+- Lista de adjacência;
+- Matriz de incidência.
+
+## Matriz de adjacência
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/metriz-adjacencia.png" style="width:60%">
+
+> Se as arestas tiverem pesos (grafo valorado), suas posições na matriz poderiam ter os valores respectivos.
+
+Em um **grafo direcionado** a posição na matriz só recebe valor no vértice "de chegada".
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/matriz_grafo_direcionado.png" style="width:60%">
+
+## Lista de adjacência
+
+Como se fosse uma hash, uma lista de vetores, e cada vetor tem uma lista de adjacências.
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PEGAR IMAGEM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+## Matriz de incidência
+
+Não direcionado a gente só marca os vértices de incidência e origem.
+
+
+
+## Isomorfismo
+
+Grafos "idênticos" em relação ao nº de arestas, vértices, graus... Nesse caso são grafos *isomorfos*.
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ACABAR EXPLICAÇÃO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/isomorfismo.png" style="width:80%">
+
+## Grafo complementar
+
+> Arestas do grafo G não vão fazer parte do C(G), ou seja, G é um grafo que contém todas as arestas faltantes para G ser um grafo completo. 
 
