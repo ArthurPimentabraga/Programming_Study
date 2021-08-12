@@ -48,7 +48,86 @@ Canal único de comunicação compartilhado por todas as máquinas de rede. Mens
 
 ---
 
-# HW e SW de rede
+# Camada física
 
 11/08 :watch:
+
+*Transporte dos dados, na forma eletromagnética, através de um meio de transmissão (cabo par trançado, fibra...).*
+
+## Fundamentos de comunicação
+
+Geralmente os dados, inicialmente, não estão em um forma possível de transporte, então é necessário faer esse tratamento/transformação. Transformar em sinais eletromagnéticos.
+
+> Note: Analógicos = forma contínua
+
+Um sinal pode assumir uma de duas formas:
+
+- Periódico: Tem um padrão que se repete dentro de um intervalo de tempo.
+- Aperiódico: Não tem padrão, não se repete ao longo do tempo.
+
+> Ao chegar no "marco 0", fala-se que o sinal completou 1 ciclo.
+>
+> ![image-20210811210915663](/home/arthur/Documentos/PersonalFolder/Programming_Study/imgs/4_Periodo/image-20210811210915663.png)
+
+### Sinais analógicos
+
+Sinais analógicos periódicos podem ser classificados como: **simples ou compostos**. 
+
+#### Sinais simples (senoidal)
+
+Uma onda senoidal (simples) pode ser representada por 3 parâmetros:
+
+- Amplitude de pico:
+- Frequência: F = 1/T e T = 1/F (Frequência é o inverso do período)
+- Fase: 
+
+![image-20210811212042116](/home/arthur/Documentos/PersonalFolder/Programming_Study/imgs/4_Periodo/image-20210811212042116.png)
+
+- Comprimento da onde:
+
+##### Domínios do tempo e da frequência
+
+
+
+#### Sinais compostos
+
+
+
+##### Largura de banda
+
+
+
+### Sinais digitais
+
+> Taxa de transferência = Taxa de bits.
+
+#### Análise de Fourier
+
+
+
+### Transmissão de sinais digitais
+
+
+
+#### Transmissão em banda base
+
+
+
+#### Transmissão em banda larga
+
+
+
+## PERDA DE TRANSMISSÃO
+
+
+
+### Atenuação
+
+
+
+### Distorção 
+
+
+
+### Ruído
 
