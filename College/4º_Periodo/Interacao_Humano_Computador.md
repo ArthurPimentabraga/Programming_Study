@@ -70,9 +70,48 @@ No exemplo acima nós já entendemos que precisamos digitar algo no campo, apert
 
 ## Outros conceitos
 
-- Usabilidade: Está relacionada com a facilidade de aprendizado e uso da interface, bem como a satisfação do usuário com esse uso.
+- Usabilidade 
+  - Está relacionada com a facilidade de aprendizado e uso da interface, bem como a satisfação do usuário com esse uso.
   - Não precisa lembrar como usar, tem que ser fácil.
   - Deixar o usuário tranquilo, seguro de que não vai cometer erros.
-- Experiência do usuário (UX): 
+- Experiência do usuário (UX)
   - Teoria do fluxo (Flow Theory): Representa o sentimento do usuário com a utilização do sistema, podendo ser de prazer e realização, tédio, apatia...
 - Acessibilidade
+  - Não só para quem tem deficiência, mas para todos que podem utilizar o sistema em um momento que "vá ter a deficiência" temporariamente.
+- Comunicabilidade
+  - Relação com a usabilidade
+- Qualidade de uso em IHC
+  - 
+
+---
+
+# Fatores Humanos
+
+12/08 :watch:
+
+*Entender melhor essa parte "humano" da interação humano-computador.*
+
+Nós, como humanos, temos limitações, nós não lembramos de tudo, nos distraimos, cometemos erros muito facilmente, entre outros. E como isso pode afetar a interação? 
+
+## Percepção
+
+Informações adquiridas por meio de nossos sentidos e transformadas em experiências.
+
+>  Note: Para os que enxergam, a visão é o sentido dominante...
+
+Fatores que afetam a percepção:
+
+- asdsadasdasdsa
+
+### Princípios de Gestalt
+
+Como os seres humanos percebem as coisas, e como podemos utilizar ao nosso favor, deixar a interface mais perceptível à ideia dela em sí, mais fácil de entender o conteúdo da interface.
+
+### Implicações do design para melhor percepção
+
+
+
+#### Memória
+
+
+

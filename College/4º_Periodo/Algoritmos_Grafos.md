@@ -218,3 +218,61 @@ Grafos "idênticos" em relação ao nº de arestas, vértices, graus... Nesse ca
 
 > Arestas do grafo G não vão fazer parte do C(G), ou seja, G é um grafo que contém todas as arestas faltantes para G ser um grafo completo. 
 
+
+
+12/08 :watch:
+
+## Subgrafos
+
+
+
+### Subgrafos induzidos por arestas
+
+Exemplo: Mapear e manter somente as lanchonetes cuja distância é < 1km.
+
+### Subgrafos induzidos por vértices
+
+Exemplo: Manter somente os times que tem características em comum.
+
+### Subgrafos disjuntos de arestas
+
+
+
+### Subgrafos disjuntos de vértices
+
+
+
+## Operações
+
+### União1
+
+### Soma
+
+Todos os vértices de G1 vão ter arestas ligando a todos os vértices de G2.
+
+### Interseção
+
+### Ring sum
+
+### Remoção de aresta
+
+### Remoção de vértice
+
+Retira todas as arestas incidentes também.
+
+### Contração de aresta
+
+### Propriedades
+
+### Grafo transposto
+
+### Grafo bipartido
+
+> Um grafo é bipartido se e somente se todo ciclo de G possuir comprimento par.
+>
+> Obs: Ciclo -> 
+
+---
+
+
+
