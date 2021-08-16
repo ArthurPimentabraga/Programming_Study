@@ -142,7 +142,16 @@ A diferença é que em um sinal periódico temos todas as frequências definidas
 
 ### SINAIS DIGITAIS
 
-> Taxa de transferência = Taxa de bits.
+Valores discretos.
+
+- *Um bit 1 pode ser codificado como uma tensão positiva e um bit 0 como tensão nula.* 
+- *Um sinal digital pode ter mais de dois níveis: enviar mais de 1 bit com cada nível.*
+
+Agora não iremos falar mais sobre taxa de frequência para descrever esse sinal, e sim **taxa de transferência** (ou taxa de bits). A taxa de bits corresponde ao nº de bits enviados em **1s**, expressado em bits por segundo **(bps)**.
+
+> Exemplo: considere que precisamos receber documentos de texto a uma taxa de 100 páginas por segundo. Qual é a taxa de bits necessária para o canal? Uma página tem em média 24 linhas com 80 caracteres em cada uma. Se considerarmos que um caractere requer 8 bits, a taxa de bits será:
+>
+> 100 x 24 x 80 x 8 = 1.536.00 bps = 1.536 Mbps
 
 #### ANÁLISE DE FOURIER
 
