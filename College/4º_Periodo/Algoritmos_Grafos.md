@@ -194,17 +194,22 @@ Em um **grafo direcionado** a posição na matriz só recebe valor no vértice "
 
 ## Lista de adjacência
 
-Como se fosse uma hash, uma lista de vetores, e cada vetor tem uma lista de adjacências.
+Como se fosse uma hash, uma lista de vetores, e cada vetor tem uma lista de adjacências. Ou seja, cada elemento do vetor contém dois campos: a identificação de um vértice e um ponteiro para uma lista encadeada contendo os **vizinhos** do vértice correspondente.
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PEGAR IMAGEM !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+> - Cada vértice é um elemento de uma lista ;
+> - Cada vértice contém uma lista de arestas, indicando o outro par que a compõe.
 
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/lista_Adjacencia.png" style="width:80%">
 
+Grafos não direcionados também podem ser representados por uma lista de adjacência, só criar a sublista com todos os vetores vizinhos de cada vértice.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/list_adjacencia_2.png" style="width:80%">
 
 ## Matriz de incidência
 
 Não direcionado a gente só marca os vértices de incidência e origem.
 
-
+- 
 
 ## Isomorfismo
 
@@ -236,15 +241,15 @@ Exemplo: Manter somente os times que tem características em comum.
 
 ### Subgrafos disjuntos de arestas
 
-
+Dois (ou mais) subgrafos de G são disjuntos de arestas se ambos não tiverem arestas em comum.
 
 ### Subgrafos disjuntos de vértices
 
-
+Dois (ou mais) subgrafos de G são disjuntos de vértices se ambos não tiverem vértices em comum.
 
 ## Operações
 
-### União1
+### União
 
 ### Soma
 
@@ -268,7 +273,7 @@ Retira todas as arestas incidentes também.
 
 ### Grafo bipartido
 
-> Um grafo é bipartido se e somente se todo ciclo de G possuir comprimento par.
+> Um grafo é bipartido se, e somente se, todo ciclo de G possuir comprimento par.
 >
 > Obs: Ciclo -> 
 
