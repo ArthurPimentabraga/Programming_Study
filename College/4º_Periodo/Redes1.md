@@ -183,3 +183,130 @@ Agora não iremos falar mais sobre taxa de frequência para descrever esse sinal
 
 ### RUÍDO
 
+> Causado por campo eletromagnético (mais comum, o que mais interfere e causa ruído), mas tempos outros tipos de ruídos.
+
+
+
+16/08 :watch:
+
+## MEIOS DE TRANSMISSÃO
+
+- Meios guiados: Propagação direcionada. Exemplo: Cabos metálicos, par trançado e fibras óticas.
+
+- 
+
+### CABO PAR TRANÇADO
+
+Famoso cabo de rede :smile:
+
+*Barato, mas utilizado para distâncias curtas, até 100 metros (se quiser mais usa fibra).*
+
+Tipos:
+
+- UTP (Unshielded Twisted Pair - Par trançado sem blindagem)
+  - Geralmente o mais utilizado (nas nossas casas, empresas caseiras...)
+- STP (- Par trançado blindado)
+  - Blindagem simples, uma malha metálica (Gaiola de Faraday).
+- FTP ()
+  - Proteção extra, além de estar no cabo, ele tem a malha para cada cabo.
+- SSTP
+  - Além de ter a proteção em cada par, tem um cabo para o aterramento.
+
+Categorias:
+
+[PEGAR LINK SOBRE.... Não é necessário decorar!]
+
+Conectores:
+
+RJ45....
+
+### FIBRA ÓTICA
+
+Um cabo muito mais interessante atualmente, consegue velocidades muito mais altas. Trabalha com a refração da luz.
+
+Tipos:
+
+- Fibra ótima multimodo de índice degrau
+- Fibra ótima multimodo de índice gradual
+- Fibra ótima monomodo
+
+Janelas de transmissão:
+
+Sofre dopagem apra diminuir a atenuação.
+
+Vantagens da fibra:
+
+- Largura de banda gigantesca. Não há limite para o meio e sim para a tecnologia de geração e recepção de sinais;
+- Atenuação: Baixíssima atenuação;
+- Imunidade à interferência eletromagnética (Não estamos usando nenhum tipo de eletricidade);
+- Resistência à corrosão dos materiais (corrosão no vidro é praticamente nula);
+- Peso.
+
+Desvantagens da fibra:
+
+- Instalação/Manutenção:
+- Unidirecional:
+- Custo:
+
+Transmissores:
+
+Transformar os sinais em luz com Laser ou LED....
+
+<img src="../../imgs/4_Periodo/Redes1/transmissores_fibra.png" style="width:60%">
+
+### CABO COAXIAL
+
+Era o cabo mais utilizado em redes locais no passado.
+
+Sofre menos interferência eletromagnética, porém pela velocidade (máx de 10 Mbps), necessidade de muito repetidor (a cada 185m), e outros motivos entrou quase em desuso.
+
+> Frequência máxima de transmissão de 10 MHz.
+
+### REDE DE TELEFONIA
+
+Início na década de 80. Era puramente analogia (sinais analógicos para a transmissão da voz). 
+
+Baseada em circuitos virtuais (abre e fecha canal).
+
+>  Para transmitir dados além da voz (dados) foi preciso avançar na tecnologia (mesclagem de dados analógicos e digitais).
+
+Cabo par trançado ligando o telefone à central telefonica (central local).
+
+Tronco geralmente é fibra.
+
+Hierarquias:
+
+[COMPLETAR>>>>>>>>>>>>>>>>>>]
+
+Estações de comutação:
+
+[FOTO]
+
+Problemas:
+
+Atenuação..........
+
+#### MULTIPLEXAÇÃO
+
+(Divide) - Transportar mais de um sinal ao mesmo tempo (em paralelo).
+
+- **FDM** - Multiplexação
+  - Da um pedacinho da faixa de frequência (largura da banda - 3.100Hz) para cada canal.
+  - [FOTO]
+- **TDM** - Multiplexação por Divisão de Tempo
+  - (codec) converte sinal analógico em digital.....
+  - TIPO round robin.
+  - [FOTO]
+
+> Note: 7 bits para dados para cada canal, e 1 em comum para controle.
+
+### ADSL
+
+Linha digital do assinante assimétrica.
+
+> Assimétrico -> transmição de mais de 56 Kbps.
+>
+> Utilizamos mais canais no download que no upload (depende do provedor, pode ser personalizado). Por isso que é Assimétrico.
+
+### TV A CABO
+
