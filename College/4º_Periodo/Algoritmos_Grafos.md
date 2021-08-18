@@ -279,5 +279,35 @@ Retira todas as arestas incidentes também.
 
 ---
 
+# Caminhos e Circuitos
 
+17/08 :watch:
+
+> Vale lembrar os conceitos de:
+>
+> - Passeio
+> - Caminho
+>   - **Caminho fechado ou circuito**: nenhum vértice (exceto o 1º e o último) aparece mais de uma vez.
+
+## Grafos Eulerianos
+
+- Problema do explorador....
+
+> TEM QUE ESTAR CONEXO
+
+### Teorema
+
+Um grafo conexo, **não orientado** é euleriano se, e somente se, **todos** os seus vértices tiverem **grau par**.
+
+#### Lema 1
+
+> se não for simples, já não é euleriano?
+
+Se achar um ciclo que não passa por todas as arestas do grafo, verifica se os "subgrafos" são eulerianos também, se forem, o grafo é euleriano. 
+
+### Problema do dominó
+
+
+
+### Algoritmo de Hierholzer
 
