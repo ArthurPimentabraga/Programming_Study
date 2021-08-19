@@ -107,11 +107,87 @@ Fatores que afetam a percepção:
 
 Como os seres humanos percebem as coisas, e como podemos utilizar ao nosso favor, deixar a interface mais perceptível à ideia dela em sí, mais fácil de entender o conteúdo da interface.
 
+*Fazer projetos mais adequados aos seres humanos.*
+
 ### Implicações do design para melhor percepção
 
 
 
+#### Cognição 
+
 #### Memória
+
+- Chunking:
+
+#### Atenção
+
+Dar destaque em certas informações, agrupar.....
+
+#### Busca visual
+
+
+
+18/08 :watch:
+
+#### Erro humano
+
+Erros humanos são responsáveis por 60 a 90% dos acidentes.
+
+- Wizards: 
+  - Algo claro, bem feito;
+  - Opcional
+
+## Computação afetiva
+
+Detectar as emoções/reações e lidar com ele, comportar-se de acordo. 
+
+
+
+### Teorias psicológicas sobre emoção
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/teoria_emocao.png" style="width:90%">
+
+> Detectar é mais fácil, o difícil é relacionar com uma emoção específica.
+
+> Periféricos que captam a mudança de emoção para adaptação dos sistemas.
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/roda_emocoes.png" style="width:60%">
+
+### Expressar emoção
+
+O pc pode "sintetizar emoções", deixando tudo em capslock....
+
+É ético 
+
+### Interfaces expressivas
+
+Como faz isso com o que temos agora?
+
+interfaces frustantes...
+
+Causas possíveis:
+
+- asadsdas
+
+#### Interfaces expressivas x interfaces frustantes
+
+
+
+#### Mensagens de erro
+
+Não é pra condenar o usuário, é pra ser gentil, explicar o que é o erro, o que rolou.
+
+Computador deve pedir desculpas?
+
+#### Antropomorfismo
+
+
+
+
+
+> Computação afetiva e aprendizado
+
+---
 
 
 

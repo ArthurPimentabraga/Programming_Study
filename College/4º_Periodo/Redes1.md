@@ -92,11 +92,11 @@ Uma onda senoidal pode ser representada por 3 parâmetros:
 
   - F = 1/T e T = 1/F (Frequência é o inverso do período)
 
-  - Como a frequência é a taxa de mudança em relação ao tempo, uma mudança em curto espaço de tempo significa alta frequência. E mudanças ao longo de esaço de tempo prolongado significa baixa frequência.
+  - Como a frequência é a taxa de mudança em relação ao tempo, uma mudança em curto espaço de tempo significa alta frequência. E mudanças ao longo de espaço de tempo prolongado significa baixa frequência.
 
     <img src="../../imgs/4_Periodo/Redes1/frequencia.png" style="width:50%">
 
-- **Fase**: descreve a posição da forma de onda em relação ao instante de tempo 0. Medida em graus ou radianos (360º corresponde a 2π radianos). Vai nos dizer o estado do início do 1º ciclo da onda em um intervalo de tempo (a quantidade de deslocamento). Exemplo: Podemos dizer que ela está defazada em 90º, ou em 180º, e por ai vai.
+- **Fase**: descreve a posição da forma de onda em relação ao instante de tempo 0. Medida em graus ou radianos (360º corresponde a 2π radianos). Vai nos dizer o estado do início do 1º ciclo da onda em um intervalo de tempo (a quantidade de deslocamento). Exemplo: Podemos dizer que ela está defasada em 90º, ou em 180º, e por ai vai.
 
 <img src="../../imgs/4_Periodo/Redes1/sinal_analogico.png" style="width:80%">
 
@@ -308,5 +308,20 @@ Linha digital do assinante assimétrica.
 >
 > Utilizamos mais canais no download que no upload (depende do provedor, pode ser personalizado). Por isso que é Assimétrico.
 
+
+
+16/08 e 18/08 :watch:
+
 ### TV A CABO
+
+> Note: CATV usava coaxial de cabo à rabo. Por causa da atenuação, ter que usar muito amplificador... era tudo feito direcionalmente, sai da estação e vai para a casa do cliente. Porém com o avanço veio o Hybrid fiber - coaxial (trabalha tanto com fibra, quanto com coaxial).
+>
+> Utilização da rede de tv e telefonia para internet...
+>
+> Note: Para deixar o circuito oferecendo internet !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! (coaxial tem largura pequena de banda....)
+>
+> - Cable Modem (CM) (instalado na residência): 
+> - Cable Modem Termination System (CMTS) (instalado no provedor): 
+
+
 
