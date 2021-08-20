@@ -279,7 +279,7 @@ Retira todas as arestas incidentes também.
 
 ---
 
-# Caminhos e Circuitos
+# Caminhos e Circuitos - Parte 1-2
 
 17/08 :watch:
 
@@ -295,6 +295,8 @@ Retira todas as arestas incidentes também.
 
 > TEM QUE ESTAR CONEXO
 
+Trajeto fechado: ....
+
 ### Teorema
 
 Um grafo conexo, **não orientado** é euleriano se, e somente se, **todos** os seus vértices tiverem **grau par**.
@@ -309,5 +311,32 @@ Se achar um ciclo que não passa por todas as arestas do grafo, verifica se os "
 
 
 
-### Algoritmo de Hierholzer
+### Algoritmo de Hierholzer (1873)
+
+
+
+---
+
+# Caminhos e Circuitos - Parte 2-2
+
+19/08 :watch:
+
+Na programação sempre temos esses problemas famosos...............
+
+## Problema do carteiro chinês
+
+[Explicação]
+
+> Aplicabilidade em GPS...?
+
+- Se o grafo for Euleriano, basta seguir o caminho de euler;
+- Caso contrário....
+
+
+
+Arestas artificiais.............
+
+> O exemplo é um grafo unicursal..
+
+### Grafos semieulerianos ou unicursais
 

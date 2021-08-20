@@ -183,11 +183,34 @@ Computador deve pedir desculpas?
 
 
 
-
-
 > Computação afetiva e aprendizado
 
 ---
 
+# Abordagens teóricas em IHC
+
+19/08 :watch:
+
+Abordagens teóricas......
+
+## Abordagem da psicologia experimental
+
+### Lei de Hick-Hyman
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/hick_hyman.png" style="width:60%">
+
+A lei de Hick-Hyman estabelece o tempo de reação a partir do número de escolhas possíveis.
+
+Esta lei indica que uma pessoa subdivide o conjunto total de opções em categorias, eliminando aproximadamente metade das opções a cada passo, em vez de considerar todas as escolhas uma a uma.
+
+Aplicabilidade: Serve para.........................
+
+Com ela da para fazer uma estimativa de quanto tempo uma pessoa levará para encontrar uma dentre diversas opções disponíveis numa interface.
+
+[FORMULA.........................................................................................................................................................]
+
+### Lei de Fitts
 
 
+
+opções de ferramentas estão na lateral.................
