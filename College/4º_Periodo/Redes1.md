@@ -304,7 +304,7 @@ Atenuação..........
 
 Linha digital do assinante assimétrica.
 
-> Assimétrico -> transmição de mais de 56 Kbps.
+> Assimétrico -> transmissão de mais de 56 Kbps.
 >
 > Utilizamos mais canais no download que no upload (depende do provedor, pode ser personalizado). Por isso que é Assimétrico.
 
@@ -313,6 +313,8 @@ Linha digital do assinante assimétrica.
 16/08 e 18/08 :watch:
 
 ### TV A CABO
+
+Ler parte do livro!!!
 
 > Note: CATV usava coaxial de cabo à rabo. Por causa da atenuação, ter que usar muito amplificador... era tudo feito direcionalmente, sai da estação e vai para a casa do cliente. Porém com o avanço veio o Hybrid fiber - coaxial (trabalha tanto com fibra, quanto com coaxial).
 >

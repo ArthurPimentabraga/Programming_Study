@@ -275,33 +275,75 @@ Dois (ou mais) subgrafos de G são disjuntos de vértices se ambos não tiverem 
 
 ## Operações
 
-### União
+### União e Soma
 
-### Soma
+- União: Considerando dois grafos distintos, a união G1 ∪ G2 é formada pelo grafo que contém o conjunto de vértices V1 e V2, e o conjunto de arestas E1 e E2. Ou seja, basicamente dois grafos são considerados um.
+  - G: Vg= {1, 2}; Eg= {(1, 2)} 
+  - H: Vh= {3, 4}; Eh= { } 
+  - G ∪ H: Vg∪h = {1, 2, 3, 4}; Eg∪h = {(1, 2)}
+- Soma: É a união com todos os vértices de G1 vão ter arestas ligando a todos os vértices de G2.
+  - G: Vg= {1, 2}; Eg = {(1, 2)} 
+  - H: Vh = {3, 4}; Eh = { } 
+  - G + H: Vg+h = {1, 2, 3, 4};  Eg+h = {(1, 2), (1, 3), (1, 4), (2, 3), (2, 4)}
 
-Todos os vértices de G1 vão ter arestas ligando a todos os vértices de G2.
+<img src="https://slideplayer.com.br/slide/1732957/7/images/3/Exemplo+1+2+G+H+3+4+G+%EF%83%88+H+G+%2B+H.jpg" style="width:60%">
 
 ### Interseção
 
+Resulta em um grafo formado pela interseção das arestas e vértices, ou seja, só aqueles cujo ambos tenham. Ex.:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/intersecao.png" style="width:70%">
+
 ### Ring sum
 
-### Remoção de aresta
+Basicamente é a união de dois grafos sem incluir a interseção. Ex.:
 
-### Remoção de vértice
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/ringSum.png" style="width:75%">
 
-Retira todas as arestas incidentes também.
+### Remoção de aresta e vértice
+
+- **Remoção de aresta:** Se e é uma aresta de um grafo G, denota-se G-e o grafo obtidop pela remoção da aresta e de G.
+- **Remoção de vérice:** Mesma ideia, porém além de retirar o vértice, é necessário retirar todas as arestas incidentes nele.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/remocao_aresta.png" style="width:60%">
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/remocao_vertice.png" style="width:60%">
 
 ### Contração de aresta
 
+Retirar uma aresta desejada e unir os dois vértices incidentes nela.
+
+> Denota-se por **G/e** o grafo obtido pela contração da aresta *e*. Significa remover *e* de G e unir suas duas extremidades v, w de tal modo que o vértice resultante seja incidente às arestas originalmente incidentes a v e w.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/contracao_aresta.png" style="width:60%">
+
 ### Propriedades
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/propriedades_Operacoes.png" style="width:50%">
 
 ### Grafo transposto
 
+Seja um grafo direcionado (apenas direcionados) G = (V, E), seu grafo transposto Gt = (V, E1), cujo todas as arestas tem sentido oposto.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/transposto.png" style="width:70%">
+
 ### Grafo bipartido
 
-> Um grafo é bipartido se, e somente se, todo ciclo de G possuir comprimento par.
->
-> Obs: Ciclo -> 
+É um grafo não orientado que pode ser dividido em dois subconjuntos de vértices, cujo não possuem arestas ligando dois vértices do mesmo subconjunto.
+
+- Se diz bipartido um grafo G de tipo (p, q) se for um grafo simples de ordem p+q;
+
+Temos também o **grafo bipartido completo**, nada mais é que um grafo bipartido tal que cada vértice de um subconjunto está associado a cada vértice do outro subconjunto.
+
+> O grafo bipartido completo com partições de tamanho |V1| = m e |V2| = n é chamado Km,n.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/bipartido.png" style="width:60%">
+
+#### Teorema
+
+Um grafo é bipartido se, e somente se, todo ciclo de G possuir comprimento par.
+
+> Obs: Ciclo -> Todo caminho cujo vértice inicial e final são os mesmos sem repetição de vértice, ou seja, sai e volta pro mesmo vértice sem repetir nenhum a não ser o inicial.
 
 ---
 
@@ -313,33 +355,34 @@ Retira todas as arestas incidentes também.
 >
 > - Passeio
 > - Caminho
+>   - **Caminho aberto:** Vértices inicial e final são diferentes;
 >   - **Caminho fechado ou circuito**: nenhum vértice (exceto o 1º e o último) aparece mais de uma vez.
 
 ## Grafos Eulerianos
 
-- Problema do explorador....
+**Problema do explorador:** um explorador deseja explorar todas as estradas entre um nº de cidades. É possível encontrar um trajeto fechado que passe por cada estrada apenas uma vez e volte à cidade inicial? (Ex.: Pontes de Konigsberg).
 
-> TEM QUE ESTAR CONEXO
+Em grafos **conexos**, se é possível encontrar um trajeto fechado que passe por **todas** as arestas uma única vez, dizemos que G é um **grafo euleriano**.
 
-Trajeto fechado: ....
+- Um **trajeto fechado** que utilize todas as arestas de um grafo, uma única vez, é chamado de **percurso euleriano fechado**.
 
 ### Teorema
 
 Um grafo conexo, **não orientado** é euleriano se, e somente se, **todos** os seus vértices tiverem **grau par**.
 
-#### Lema 1
+> Bastante útil na produção de algoritmos de reconhecimento.
 
-> se não for simples, já não é euleriano?
+#### Lema 1 - Resultado auxiliar
 
-Se achar um ciclo que não passa por todas as arestas do grafo, verifica se os "subgrafos" são eulerianos também, se forem, o grafo é euleriano. 
+Se todos os vértices de G possuem grau >= 2, então G contém um ciclo.
 
-### Problema do dominó
-
-
+Se achar um ciclo que não passa por todas as arestas do grafo, podemos dividir esse ciclo do grafo, e  verificar se os componentes possuem um trajeto euleriano fechado, se possuirem, o grafo é euleriano. 
 
 ### Algoritmo de Hierholzer (1873)
 
+Algoritmo para encontrar o caminho euleriano:
 
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/hierholzer.png" style="width:90%">
 
 ---
 
@@ -347,22 +390,31 @@ Se achar um ciclo que não passa por todas as arestas do grafo, verifica se os "
 
 19/08 :watch:
 
-Na programação sempre temos esses problemas famosos...............
-
 ## Problema do carteiro chinês
 
-[Explicação]
+Um carteiro deseja entregar cartas ao longo de todas as ruas de uma cidade, e retornar ao ponto inicial. Como ele pode planejar as rotas de forma a minimizar o caminho andado? 
 
-> Aplicabilidade em GPS...?
+> Consiste em encontrar um caminho mais curto ou circuito fechado que visite cada aresta de um grafo não-direcionado..
 
-- Se o grafo for Euleriano, basta seguir o caminho de euler;
-- Caso contrário....
+- Se o grafo for euleriano, basta percorrer o ciclo de Euler.
+- Caso contrário, algumas arestas serão percorridas mais de uma vez. Será utilizado o conceito de arestas artificiais.
 
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/carteiro_chines.png" style="width:100%">
 
+> O exemplo acima é um grafo unicursal.
 
-Arestas artificiais.............
+### Grafos semi-eulerianos ou unicursais
 
-> O exemplo é um grafo unicursal..
+Um grafo é dito unicursal ou semi-euleriano se ele possui **pelo menos um Trajeto Euleriano aberto.**
 
-### Grafos semieulerianos ou unicursais
+> Se adicionarmos uma aresta conectando os vértices iniciais e finais do trajeto euleriano, o grafo passa a ser euleriano.
 
+- Um grafo é unicursal se, e somente se, ele possuir **exatamente 2 vértices de grau ímpar**.
+
+#### Teorema
+
+Em um grafo conexo G com exatamente 2K vértices de grau ímpar, existem K subgrafos disjuntos de arestas, todos eles unicursais, de maneira que juntos eles contêm todas as arestas de G. 
+
+Ex.: 2*3 = 6 vértices de grau ímpar = 3 subgrafos unicursais.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/unicrusal.png" style="width:40%">
