@@ -207,21 +207,36 @@ Grafos não direcionados também podem ser representados por uma lista de adjac�
 
 ## Matriz de incidência
 
-Não direcionado a gente só marca os vértices de incidência e origem.
+- Índice = +1, se a aresta tem **origem** no vértice i;
+- Índice = -1, se i é o vértice **destino** da aresta;
+- Índice = 0, se a aresta **não incide** no vértice i.
 
-- 
+![image-20210820213819194](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210820213819194.png)
+
+>  Em um grafo **não direcionado** a gente só marca os vértices de incidência e origem, com 0 ou 1.
 
 ## Isomorfismo
 
-Grafos "idênticos" em relação ao nº de arestas, vértices, graus... Nesse caso são grafos *isomorfos*.
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ACABAR EXPLICAÇÃO !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Grafos "idênticos" em relação ao nº de arestas, vértices, graus e nº de componentes. Porém só isso não basta, para o grafo ser isomorfo a relação de incidência precisa ser preservada.
 
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/isomorfismo.png" style="width:80%">
 
+Grafos que possuam todas as características menos a preservação de incidência:
+
+![image-20210820214601230](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210820214601230.png)
+
+Observe que é necessário associar o vértice X do grafo G ao vértice Y do grafo H, pois não existe nenhum outro vértice com grau 3 em H. Mas o vértice Y é adjacente a apenas um vértice de grau 1, enquanto que X em G é adjacente a dois vértices de grau 1.
+
 ## Grafo complementar
 
-> Arestas do grafo G não vão fazer parte do C(G), ou seja, G é um grafo que contém todas as arestas faltantes para G ser um grafo completo. 
+Um grafo é complementar de outro quando:
+
+- Todos os vértices de C(G) são todos os vértices de G;
+- E as arestas de C(G) são exatamente as arestas que faltam em G para formarmos um grafo completo.
+
+> Arestas do grafo G não vão fazer parte do C(G), ou seja, C(G) é um grafo que contém todas as arestas faltantes para G ser um grafo completo. 
+
+![image-20210820215231447](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210820215231447.png)
 
 
 
@@ -229,15 +244,28 @@ Grafos "idênticos" em relação ao nº de arestas, vértices, graus... Nesse ca
 
 ## Subgrafos
 
+Um grafo H é dito ser um *subgrafo* de um grafo G se todos os vértices e todas as arestas de H estão em G.
 
+- Todo grafo é subgrafo de si próprio;
+- O subgrafo de um subgrafo de G é subgrafo de G;
+- Um vértice simples de G é um subgrafo de G;
+- Uma aresta simples de G (com suas extremidades) é subgrafo de G.
 
 ### Subgrafos induzidos por arestas
 
-Exemplo: Mapear e manter somente as lanchonetes cuja distância é < 1km.
+Um subgrafo obtido por um subconjunto de arestas (e seus respectivos vértices).
+
+Ex.: Mapear e manter somente as lanchonetes cuja distância é < 1km.
+
+![image-20210820215717458](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210820215717458.png)
 
 ### Subgrafos induzidos por vértices
 
+Subgrafo obtido por um subconjunto de vértices (e suas respectivas arestas). 
+
 Exemplo: Manter somente os times que tem características em comum.
+
+![image-20210820215822124](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210820215822124.png)
 
 ### Subgrafos disjuntos de arestas
 
