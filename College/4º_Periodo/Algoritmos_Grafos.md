@@ -211,7 +211,7 @@ Grafos não direcionados também podem ser representados por uma lista de adjac�
 - Índice = -1, se i é o vértice **destino** da aresta;
 - Índice = 0, se a aresta **não incide** no vértice i.
 
-![image-20210820213819194](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210820213819194.png)
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/matriz_incidencia.png" style="width:60%">
 
 >  Em um grafo **não direcionado** a gente só marca os vértices de incidência e origem, com 0 ou 1.
 
@@ -223,7 +223,7 @@ Grafos "idênticos" em relação ao nº de arestas, vértices, graus e nº de co
 
 Grafos que possuam todas as características menos a preservação de incidência:
 
-![image-20210820214601230](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210820214601230.png)
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/grafos_nao_isomorfos.png" style="width:60%">
 
 Observe que é necessário associar o vértice X do grafo G ao vértice Y do grafo H, pois não existe nenhum outro vértice com grau 3 em H. Mas o vértice Y é adjacente a apenas um vértice de grau 1, enquanto que X em G é adjacente a dois vértices de grau 1.
 
@@ -236,13 +236,11 @@ Um grafo é complementar de outro quando:
 
 > Arestas do grafo G não vão fazer parte do C(G), ou seja, C(G) é um grafo que contém todas as arestas faltantes para G ser um grafo completo. 
 
-![image-20210820215231447](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210820215231447.png)
-
-
-
-12/08 :watch:
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/grafo_complementar.png" style="width:60%">
 
 ## Subgrafos
+
+12/08 :watch:
 
 Um grafo H é dito ser um *subgrafo* de um grafo G se todos os vértices e todas as arestas de H estão em G.
 
@@ -257,7 +255,7 @@ Um subgrafo obtido por um subconjunto de arestas (e seus respectivos vértices).
 
 Ex.: Mapear e manter somente as lanchonetes cuja distância é < 1km.
 
-![image-20210820215717458](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210820215717458.png)
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/subgrafo_aresta.png" style="width:60%">
 
 ### Subgrafos induzidos por vértices
 
@@ -265,7 +263,7 @@ Subgrafo obtido por um subconjunto de vértices (e suas respectivas arestas).
 
 Exemplo: Manter somente os times que tem características em comum.
 
-![image-20210820215822124](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210820215822124.png)
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/subgrafo_vertice.png" style="width:60%">
 
 ### Subgrafos disjuntos de arestas
 
