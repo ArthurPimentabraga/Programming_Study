@@ -153,6 +153,9 @@ Agora não iremos falar mais sobre taxa de frequência para descrever esse sinal
 >
 > 100 x 24 x 80 x 8 = 1.536.00 bps = 1.536 Mbps
 
+- **Comprimento de Bits:** é a distância que um bit ocupa no meio de transmissão.
+  - Comprimento = velocidade de propagação * duração dos bits.
+
 #### ANÁLISE DE FOURIER
 
 
@@ -171,21 +174,29 @@ Agora não iremos falar mais sobre taxa de frequência para descrever esse sinal
 
 ## PERDA DE TRANSMISSÃO
 
-
+Esses meios de transmissão não são perfeitos, logo podemos ter algumas perdas ao longo da transmissão dos dados, ou seja, *o que sai, não é o que chega*.
 
 ### ATENUAÇÃO
 
+Com atenuação nos referimos à **perda de energia**, ou seja, parte da energia é usada para superar a resistência do meio, seja elétrica, refração de luz... Isso é evidênte na amplitude da onda que diminui.
 
+- Amplificadores são usados para aumentar o sinal (equipamento eletrônico). Ex.: Repetidores, amplificadores dentro dos roteadores, entre outros.
+
+Para mostrar que um sinal ganhou ou perdeu força, usa-se o decibel (dB) - unidade que mede as forças relativas de dois sinais, ou de um mesmo sinal em dois pontos diferentes.
+
+- O decibel é negativo se o sinal for atenuado, e positivo se o sinal for amplificado.
+  - dB = 10 log10 (P2 / P1)
+  - P1 e P2 correspondem à potência de um sinal nos pontos 1 e 2.
 
 ### DISTORÇÃO 
 
-
+Refere-se quando um sinal chega ao seu ponto de destino em seu formato distorcido, diferente. Ou seja, um sinal composto, por exemplo, cada harmônico que o compõe tem uma frequência diferente, consequêntemente uma velocidade de propagação diferente, logo se temos algum problema no meio de transmissão, algum retardo, cada harmônico pode chegar mais rápido ou mais devagar no destido (um retardo diferente para cada fase). Ao chegar no destino, o sinal composto fica distorcido, não é o mesmo sinal que foi enviado.
 
 ### RUÍDO
 
-> Causado por campo eletromagnético (mais comum, o que mais interfere e causa ruído), mas tempos outros tipos de ruídos.
+Causado por campo eletromagnético (mais comum, o que mais interfere e causa ruído), mas tempos outros tipos de ruídos, como: Linha cruza (um fio sobre o outro), entre outros.
 
-
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 16/08 :watch:
 
