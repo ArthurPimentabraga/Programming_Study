@@ -105,5 +105,62 @@ O ponto de partida para a arquitetura de um processo é a escola de um modelo de
 
 <img src="https://i1.wp.com/www.diegomacedo.com.br/wp-content/uploads/2012/01/rup1.png" style="width:100%">
 
+---
 
+# Requisitos
+
+23/08 :watch:
+
+> Voltar no início.
+
+O que é:
+
+- São características que definem os **critérios de aceitação** de um produto, ou seja, como a funcionalidade tem que funcionar? Um carrinho que só cabe um produto em um e-commerce é aceitável?
+- Propriedade que um software deve exibir para resolver um problema do mundo real;
+- Condição ou capacidade que o sistema deve contemplar, que pode ser derivada diretamente das **necessidades do usuário** e/ou definida em contrato, padrão, especificação ou outro documento formal imposto;
+- Característica do sistema ou a descrição de **algo que o sistema é capaz de realizar** para atingir os seus objetivos;
+- Restrição.
+
+Para que servem:
+
+- 
+
+Por que são importantes:
+
+
+
+## Aspectos relevantes
+
+- **Domínio**: Tudo aquilo ligado ao ambiente em que a solução de software é executada, será aplicada. Ex.: Ambiente financeiro, entretenimento, entre outros.
+- Problema existe no mundo real, não no software. Ou seja, ......................................
+- Ter uma istinção clara entre problema e solução. Dessa forma podemos definir uma solução adequada para o problema.
+  - Sub............
+
+
+
+- Identificar as **partes interessadas**, ou seja, todas as pessoas envolvidas no projeto, para ter várias pespectivas diferentes.
+
+## Qualidade de software
+
+
+
+## Dificuldades na obtenção de requisitos
+
+
+
+## Qualidade dos requisitos
+
+> Rastreável: pq foi criado isso? quando? em qual versão? ainda é necessário?
+
+
+
+- Requisitos imprecisos (Ambíguos)
+- Requisistos mal escritos
+- Propriedades de um bom requisito
+
+
+
+De onde surgem os requisitos?
+
+Como identificar requisitos?
 

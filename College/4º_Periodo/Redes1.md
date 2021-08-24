@@ -42,7 +42,27 @@ Comunicação entre pares de máquinas individuais. Um pacote pode passar por um
 
 ### Redes de Difusão
 
-Canal único de comunicação compartilhado por todas as máquinas de rede. Mensagens são transmitidos na forma de pequenos pacotes e recebidos por todas as máquinas da rede. 
+Canal único de comunicação compartilhado por todas as máquinas de rede. Mensagens são transmitidos na forma de pequenos pacotes e recebidos por todas as máquinas da rede. Todas as máquinas recebem o pacote, e o processam ou não, dependendo do endereço.
+
+Algoritmo para recebimento de msgs executado por cada máquina:
+
+``` Java
+// Computador verifica endereço de destino;
+if(endereço no quadro = meu endereço) {
+    processa o quadro
+} else {
+	descarta o quadro	
+}
+```
+
+- É possível enviar mensagem para todos computadores da rede (mensagem de difusão)
+- Permite dois tipos de operação relacionadas ao campo endereço:
+  - **Broadcasting** ou difusão - a mensagem é endereçada a todas as máquinas da rede
+  - **Multicasting** ou multidifusão - a mensagem é endereçada a um grupo de máquinas da rede
+
+---
+
+> Restante da introdução no slide.
 
 <img src="../../imgs/4_Periodo/Redes1/UDP-TCP.png" style="width:90%">
 
@@ -158,7 +178,10 @@ Agora não iremos falar mais sobre taxa de frequência para descrever esse sinal
 
 #### ANÁLISE DE FOURIER
 
+De acordo com a análise de Fourier, um sinal digital corresponde a um **sinal analógico composto**, e podemos usá-la para decompor qualquer sinal digital em suas harmônicas.
 
+- Se o sinal for periódico a representação do sinal decomposto no domínio da frequência apresenta frequências **discretas**;
+- Se for aperiódico, o sinal decomposto apresenta frequências **contínuas**.
 
 ### TRANSMISSÃO DE SINAIS DIGITAIS
 
@@ -275,7 +298,15 @@ Sofre menos interferência eletromagnética, porém pela velocidade (máx de 10 
 
 ### REDE DE TELEFONIA
 
-Início na década de 80. Era puramente analogia (sinais analógicos para a transmissão da voz). 
+> [Página 86 da 5ª edição do livro Redes de Computadores by Andrew S. Tanenbaum]
+
+Em 1876 sugiu o 1º telefone, puramente analogico (sinais analógicos para a transmissão da voz). Os telefones eram vendidos em par e era necessário conectar fisicamente os dois, ou seja, se o proprietário de um telefone quisesse usar o aparelho para conversar com n outros proprietários de telefone, tinha de conectar fios em todas as n residências. Funcionavam manualmente, ou seja, o residente girava uma manivela, que emitia um som na companhia telefônica, e o operador conectava manualmente o emissor da chamada com o receptor.
+
+
+
+Continuar na pagina 90 do Tanenbaum....
+
+
 
 Baseada em circuitos virtuais (abre e fecha canal).
 
@@ -336,5 +367,47 @@ Ler parte do livro!!!
 > - Cable Modem (CM) (instalado na residência): 
 > - Cable Modem Termination System (CMTS) (instalado no provedor): 
 
+---
 
+## UTILIZAÇÃO DA LARGURA DE BANDA
+
+23/08 :watch:
+
+Precisamos fazer o uso racional... Eficiência...
+
+A eficiência pode ser atingida pela multiplexação... Espalhamento...
+
+- 
+
+
+
+>  Unificar os dois resumos de multiplexação
+
+### MULTIPLEXAÇÃO POR DIVISÃO DE FREQUÊNCIA
+
+> Podemos usar a técnica para a entrada de sinais digitais
+
+#### APLICAÇÕES FDM
+
+- Transmissão de rádio AM e FM;
+- Tranmissão televisiva;
+- Primeira geração de telefones celulares.
+
+### MULTIPLEXAÇÃO POR DIVISÃO DE COMPRIMENTO DE ONDA
+
+#### APLICAÇÕES
+
+- Rede Sonet.
+
+### MULTIPLEXAÇÃO POR DIVISÃO DE TEMPO
+
+Tipo round robin
+
+#### TDM SÍNCRONO
+
+Sincronização de frames...
+
+#### MULTIPLEXAÇÃO ESTATÍSTICA
+
+### ESPALHAMENTO ESPECTRAL
 
