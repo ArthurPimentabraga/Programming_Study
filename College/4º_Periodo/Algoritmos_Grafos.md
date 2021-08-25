@@ -362,7 +362,7 @@ Um grafo é bipartido se, e somente se, todo ciclo de G possuir comprimento par.
 
 **Problema do explorador:** um explorador deseja explorar todas as estradas entre um nº de cidades. É possível encontrar um trajeto fechado que passe por cada estrada apenas uma vez e volte à cidade inicial? (Ex.: Pontes de Konigsberg).
 
-Em grafos **conexos**, se é possível encontrar um trajeto fechado que passe por **todas** as arestas uma única vez, dizemos que G é um **grafo euleriano**.
+Em grafos **conexos**, se é possível encontrar um trajeto fechado que passe por **todas** as **arestas** uma única vez, dizemos que G é um **grafo euleriano**.
 
 - Um **trajeto fechado** que utilize todas as arestas de um grafo, uma única vez, é chamado de **percurso euleriano fechado**.
 
@@ -418,3 +418,33 @@ Em um grafo conexo G com exatamente 2K vértices de grau ímpar, existem K subgr
 Ex.: 2*3 = 6 vértices de grau ímpar = 3 subgrafos unicursais.
 
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/unicrusal.png" style="width:40%">
+
+
+
+## Grafos hamiltonianos
+
+24/08 :watch:
+
+n vértices, n arestas.
+
+euler passa por todas as arestas, e hamiltonianos passa por todos os vértices.
+
+Grafo simples, por loops e arestas paralelas obrigam a voltar no mesmo vértice.
+
+Não existe teorema para TODO grafo, e eficiente para acharmos o circuito hamiltoniano, igual temos Hierholzer para euler. Mas temos um técina para mostrar que NÃO possui um circuito Hamiltoniano.
+
+Teoremas..................
+
+### Problema do caixeiro viajante
+
+[Explicação]    Menor caminho...
+
+[Aplicações]
+
+[Uso de heurística] 
+
+[Heurística gulosa]
+
+Exercício:
+
+![image-20210824222315903](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210824222315903.png)

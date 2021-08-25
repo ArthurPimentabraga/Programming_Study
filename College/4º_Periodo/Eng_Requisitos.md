@@ -164,3 +164,18 @@ De onde surgem os requisitos?
 
 Como identificar requisitos?
 
+----
+
+# Tipos de requisitos
+
+24/08 :watch:
+
+O que o sistema tem que fazer e como deve fazer. Funcionais e não funcionais.
+
+## Requisitps de cliente x Requisitos de sistema.
+
+
+
+## Requisitps Funcionais x Não funcionais
+
+- Tipos......
