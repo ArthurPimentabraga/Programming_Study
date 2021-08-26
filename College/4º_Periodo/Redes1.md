@@ -2,7 +2,8 @@
 title: Redes de computadores 1 (Puc-Minas - 4º Período)
 author: Arthur P. Braga
 period: 2/2021
-books: Redes de Computadores by Andrew S. Tananbaum (5ª Edição)
+books: Redes de Computadores by Andrew S. Tanenbaum (5ª Edição)
+       Comunicação de Dados e Redes de Computadores by Forouzan, Behrouz A. (4ª Edição)
 ---
 
 # INTRODUÇÃO
@@ -154,7 +155,7 @@ Diferente dos sinais simples, o composto pode ser **periódico ou aperiódico**.
 
 ##### LARGURA DE BANDA
 
-A largura de banda de um sinal composto é a diferença entre a maior e a menor frequência contida nesse sinal.
+A largura de banda de um sinal composto é a diferença entre a maior e a menor frequência contida nesse sinal. Ou sjea, refere-se à quantidade de dados que podem ser transmitidos em um período de tempo fixo.
 
 <img src="../../imgs/4_Periodo/Redes1/largura_banda.png" style="width:60%">
 
@@ -185,15 +186,23 @@ De acordo com a análise de Fourier, um sinal digital corresponde a um **sinal a
 
 ### TRANSMISSÃO DE SINAIS DIGITAIS
 
-
+Como podemos transmitir um sinal digital de um ponto A para um ponto B? Podemos utilizar uma das duas abordagens: transmissão banda-base ou banda larga (usando modulação). 
 
 #### TRANSMISSÃO EM BANDA BASE
 
+A transmissão de um sinal digital em banda base nada mais é que o envio desse sinal por um canal sem transformar o sinal digital em analógico, ou seja, ele é injetado no canal sem mudança nenhuma.
 
+Essa transmissão requer um canal **passa-baixa**, um canal com uma banda que se inicie em zero. Toda a largura de banda do cabo é utilizada por um **único sinal** Ex.: Toda a largura de banda de um cabo que conecta dois computadores corresponde a um único canal, ou seja, um meio **dedicado** cuja largura de banda seja usada por um único canal.
+
+<img src="../../imgs/4_Periodo/Redes1/banda_base.png" style="width:60%">
 
 #### TRANSMISSÃO EM BANDA LARGA
 
+Há modulação do sinal, ou seja, o sinal digital é transformado em sinal analógico para a transmissão. Por esse motivo permite usar um canal **passa-faixa**, um canal com uma banda que não se inicia em zero (isso limita a frequência). Porém, é possível transmitir **múltiplos sinais** em múltiplas frequências simultâneamente usando um único canal.
 
+Ex.: Aqueles pacotes de internet, banda larga com fibra ótica, ou seja, é feita essa modulação do sinal, e de forma simultânea e unidirecional, vários sinais podem ser enviados em um único canal. 
+
+<img src="../../imgs/4_Periodo/Redes1/diferenca_base_larga.png" style="width:90%">
 
 ## PERDA DE TRANSMISSÃO
 
@@ -217,17 +226,37 @@ Refere-se quando um sinal chega ao seu ponto de destino em seu formato distorcid
 
 ### RUÍDO
 
-Causado por campo eletromagnético (mais comum, o que mais interfere e causa ruído), mas tempos outros tipos de ruídos, como: Linha cruza (um fio sobre o outro), entre outros.
+Temos vários tipos de ruídos, basicamente é a inserção de dado no nosso sinal por alguma interferência ou algo do tipo. 
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Tipos:
+
+- O ruído térmico é a movimentação aleatória
+  de elétrons em um fio que cria um sinal extra que não foi originalmente enviado pelo transmis-
+  sor. 
+- O ruído induzido (mais comum) provém de fontes como motores e aparelhos elétricos. Esses dispositivos
+  atuam como uma antena transmissora e o meio de transmissão como antena receptora. 
+- Linha cruzada é o efeito de um fio sobre o outro. Um fio atua como uma antena transmissora e o outro, como uma antena receptora. 
+- O ruído por impulso é um pico (um sinal com grande energia em um curtíssimo espaço de tempo) proveniente de cabos de força, relâmpagos e assim por diante.
+
+#### RELAÇÃO SINAL X RUÍDO
+
+*Signal-to-noise.* Para descobrir o **limite teórico da taxa de transferência**, precisamos conhecer a relação entre a potência do sinal e a potência do ruído.
+
+- SNR = Potência média do sinal / Potência média do ruído
+
+> Precisamos considerar a potência média do sinal e a potência média do ruído, pois estas
+> podem mudar com o tempo.
+
+SNR é, na verdade, a razão daquilo que é desejado (sinal) por aquilo que não é desejado (ruído). Um SNR alto significa que o sinal é menos afetado pelo ruído; um SNR baixo significa que o sinal é mais prejudicado pelo ruído. Ou seja, se a potência média do sinal for maior que a do ruído, o sinal será menos prejudicado que um cenário cuja potência do ruído é mais que a do sinal.
 
 16/08 :watch:
 
 ## MEIOS DE TRANSMISSÃO
 
-- Meios guiados: Propagação direcionada. Exemplo: Cabos metálicos, par trançado e fibras óticas.
+Um meio de transmissão, em termos gerais, pode ser definido como qualquer coisa capaz de transportar informações de uma origem a um destino. Para a comunicação de dados, podemos dividir em duas amplas categorias: 
 
-- 
+- **Meios guiados:** São aqueles que requerem um condutor físico para interligar um dispositivo a outro. Ex.: cabo de par trançado, cabo coaxial e cabo de fibra óptica. Um sinal trafegando por qualquer um desses meios é **direcionado** e contido por **limites físicos do meio**. Cabos de par trançado e coaxiais usam condutores metálicos (cobre) que aceitam e transportam sinais na forma de corrente elétrica. A fibra óptica é um cabo que aceita e tansporta sinais na forma de luz (refração).
+- **Meios não guiados:** Transportam ondas eletromagnéticas sem o uso de um condutor físico. Esse tipo de comunicação é, muitas vezes, conhecido como comunicação sem fio. Os sinais são normalmente transmitidos pelo espaço livre e, portanto, ficam disponíveis a qualquer um que tenha um dispositivo capaz de recebê-los.
 
 ### CABO PAR TRANÇADO
 
@@ -302,9 +331,9 @@ Sofre menos interferência eletromagnética, porém pela velocidade (máx de 10 
 
 Em 1876 sugiu o 1º telefone, puramente analogico (sinais analógicos para a transmissão da voz). Os telefones eram vendidos em par e era necessário conectar fisicamente os dois, ou seja, se o proprietário de um telefone quisesse usar o aparelho para conversar com n outros proprietários de telefone, tinha de conectar fios em todas as n residências. Funcionavam manualmente, ou seja, o residente girava uma manivela, que emitia um som na companhia telefônica, e o operador conectava manualmente o emissor da chamada com o receptor.
 
+ Com o passar do tempo surgiu a necessidade de transferir dados além da voz, porém utilizando a mesma estrutura já em uso da rede de telefonia (circuitos terminais). Essa estrutura é limitada ao canal de rede que era utilizada para transmissão de voz, mas grande parte já foi atualizada para tecnologias de banda larga, como ADSL.
 
-
-Continuar na pagina 90 do Tanenbaum....
+[Pag 90 - Tanenbaum]
 
 
 
@@ -410,4 +439,68 @@ Sincronização de frames...
 #### MULTIPLEXAÇÃO ESTATÍSTICA
 
 ### ESPALHAMENTO ESPECTRAL
+
+---
+
+# CAMADA DE ENLACE
+
+25/08 :watch:
+
+Principais funções:
+
+- Controle do próprio enlace  
+- Controle de acesso ao meio (como as máquinas vão acessar)
+
+Outras funções:
+
+- Controle de erros e fluxo -> software para o controle.
+- .............
+
+Presta serviço para camada de rede.
+
+Além do serviço básico, outros serviços que ela provê como objetivo: 
+
+- Entrega confiável
+- Half-duplex
+- .............
+
+[Protocolos de camada de enlace.....]
+
+[Tipos diferentesde canais de comunicação......]
+
+[Como funciona]
+
+[Serviços]
+
+> Tem resumo disso pra cima
+
+- não orientado (sem)
+  - Preciso de velocidade, logo não vou ficar verificando.
+  - Não vai ser feito para recuperar...
+- não orientado (com)
+  - Vou confirmar o recebimento de cada frame.
+- com conexão
+  - Vou fazer o estabelecimento prévio da conexão antes de transmitir.
+  - Estabelecer parâmetros na rede, solicitação de canal...
+
+Entrega confiável...........
+
+[Enquadramento]
+
+- por que é preciso?
+- orientado a caracter e a bit.....
+
+[contagem de caracteres]
+
+[controle de fluxo]
+
+Controle da quantidade de informação que pode ser enviado.
+
+Um dos principais papeis dessa camada.
+
+[Controle de erro]
+
+Detecção e correção dos erros.
+
+[código de detecção de erros]
 
