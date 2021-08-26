@@ -8,7 +8,7 @@ books: Redes de Computadores by Andrew S. Tanenbaum (5ª Edição) -
 
 # INTRODUÇÃO
 
-04/08
+04/08 :watch:
 
 Com a evolução da tecnologia, nós vimos a necessidade de transmitir informações, dados para outros lugares. *Redes: Conjunto de computadores autônomos interconectados por uma única tecnologia.*
 
