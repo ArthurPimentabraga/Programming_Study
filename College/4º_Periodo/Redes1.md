@@ -2,7 +2,7 @@
 title: Redes de computadores 1 (Puc-Minas - 4º Período)
 author: Arthur P. Braga
 period: 2/2021
-books: Redes de Computadores by Andrew S. Tanenbaum (5ª Edição)
+books: Redes de Computadores by Andrew S. Tanenbaum (5ª Edição) - 
        Comunicação de Dados e Redes de Computadores by Forouzan, Behrouz A. (4ª Edição)
 ---
 
