@@ -456,8 +456,8 @@ Há alguns teoremas que proveem **condições suficientes**, mas **não necessá
 
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/teorema_2.png" style="width:30%">
 
-3. Em um grafo **completo** com n vértices, **n ímpar** e (n ≥ 3), existem **(n-1) /2** circuitos hamiltonianos disjuntos de arestas.
-4. Em um grafo **completo** com n vértices, **n par** e (n ≥ 4), existem **(n-2) /2** circuitos hamiltonianos disjuntos de arestas
+3. Em um grafo **completo** com n vértices, **n ímpar** e (n ≥ 3), existem **(n-1) / 2** circuitos hamiltonianos disjuntos de arestas.
+4. Em um grafo **completo** com n vértices, **n par** e (n ≥ 4), existem **(n-2) / 2** circuitos hamiltonianos disjuntos de arestas.
 
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/teorema_3_4.png" style="width:70%">
 

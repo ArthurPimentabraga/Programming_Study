@@ -511,7 +511,7 @@ Tipos:
 
 Janelas de transmissão:
 
-Sofre dopagem apra diminuir a atenuação.
+Sofre dopagem para diminuir a atenuação.
 
 Vantagens da fibra:
 
