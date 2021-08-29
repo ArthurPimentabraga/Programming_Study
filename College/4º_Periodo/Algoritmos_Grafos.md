@@ -364,7 +364,7 @@ Um grafo é bipartido se, e somente se, todo ciclo de G possuir comprimento par.
 
 Em grafos **conexos**, se é possível encontrar um trajeto fechado que passe por **todas** as **arestas** uma única vez, dizemos que G é um **grafo euleriano**.
 
-- Um **trajeto fechado** que utilize todas as arestas de um grafo, uma única vez, é chamado de **percurso euleriano fechado**.
+- Um **trajeto fechado** que utilize todas as arestas de um grafo, **uma única vez**, é chamado de **percurso euleriano fechado**.
 
 ### Teorema
 
@@ -425,26 +425,113 @@ Ex.: 2*3 = 6 vértices de grau ímpar = 3 subgrafos unicursais.
 
 24/08 :watch:
 
-n vértices, n arestas.
+Um **Circuito de Hamilton** em um grafo conexo é um percurso que passa por todos os **vértices** do grafo **uma única vez**, voltando ao vértice inicial. Ou seja, euler passa por todas as arestas, e hamilton passa por todos os vértices.
 
-euler passa por todas as arestas, e hamiltonianos passa por todos os vértices.
+Uma vez que precisa passar por todos os vértices **uma única vez**, para grafos com **mais de 3 vértices**, só podemos ter um caminho de Hamilton se for um grafo simples, pois loops e arestas paralelas obrigam a voltar no mesmo vértice. 
 
-Grafo simples, por loops e arestas paralelas obrigam a voltar no mesmo vértice.
+> 1. O circuito de Hamilton em um grafo com n vértices, contém n arestas. 
+> 2. Se um grafo é hamiltoniano, então a inclusão de qualquer aresta não atrapalha essa condição.
 
-Não existe teorema para TODO grafo, e eficiente para acharmos o circuito hamiltoniano, igual temos Hierholzer para euler. Mas temos um técina para mostrar que NÃO possui um circuito Hamiltoniano.
+Não existe teorema para **TODO** grafo, e **eficiente** para acharmos o circuito hamiltoniano, igual temos Hierholzer para euler. Mas temos um técina para mostrar que um grafo **NÃO** possui um circuito Hamiltoniano (mas também **não garante** que não tenha).
 
-Teoremas..................
+Há um circuito hamiltoniano em G se:
+
+- Se G tem um circuito hamiltoniano, então G tem um subgrafo H que:
+  1. H contém cada vértice de G;
+  2. H é conexo;
+  3. H tem o mesmo nº de arestas e de vértices;
+  4. Cada vértice de H tem grau 2.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/circuito_hamiltoniano.png" style="width:40%">
+
+### Teoremas
+
+Há alguns teoremas que proveem **condições suficientes**, mas **não necessárias**.
+
+1. Seja G um grafo simples com n vértices  (n ≥ 3). Se para todo par de vértices não adjacentes v e w, a soma de seus graus for maior ou igual a n, então G é hamiltoniano.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/teorema_1_hamiltoniano.png" style="width:40%">
+
+2. Seja G um grafo simples com n vértices (n ≥ 3). Se o grau de cada vértice for n/2 no mínimo, G é hamiltoniano.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/teorema_2.png" style="width:30%">
+
+3. Em um grafo **completo** com n vértices, **n ímpar** e (n ≥ 3), existem **(n-1) /2** circuitos hamiltonianos disjuntos de arestas.
+4. Em um grafo **completo** com n vértices, **n par** e (n ≥ 4), existem **(n-2) /2** circuitos hamiltonianos disjuntos de arestas
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/teorema_3_4.png" style="width:70%">
 
 ### Problema do caixeiro viajante
 
-[Explicação]    Menor caminho...
+Dado um conjunto de cidades a serem visitadas por um vendedor, qual é o **caminho mínimo** que pode ser realizado sem repetir cidades e retornar ao ponto de partida? Menor ciclo hamiltoniano.
 
-[Aplicações]
+> Arestas ponderadas! (valoradas)
 
-[Uso de heurística] 
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/exemplo_carteiro_viajante.png" style="width:50%">
 
-[Heurística gulosa]
+Aplicações:
+
+- Entrega de encomendas / correspondências;
+- Recolhimento de objetos;
+- Planejamento de viagens;
+- Leitura de contadores de consumo (luz elétrica);
+- ...
+
+#### Uso de heurística
+
+Para resolver esse problema podemos utilizar força bruta, porém na maioria dos casos isso se torna inviável, logo podemos utilizar heurísticas para solucionar.
+
+> Heurística: Forma rápida de solucionar um problema, porém muitas vezes imperfeito. Algoritmos aproximados, acham uma resposta que pode não ser a solução ótima, mas pode ser próxima dela.
+
+Exemplo:
+
+1. escolha um vértice arbitrário como vértice atual.
+2. descubra a aresta de menor peso que seja conectada ao vértice atual e
+   a um vértice não visitado V.
+
+3. faça o vértice atual ser V.
+4. marque V como visitado.
+5. se todos os vértices no domínio estiverem visitados, encerre o algoritmo.
+6. Se não vá para o passo 2.
+7. A sequência dos vértices visitados é a saída do algoritmo.
+
+>  Isso é o que chamamos de **Heurística gulosa**, ou seja, que só se preocupa com a melhor forma para aquela instância, daquele momento.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/resolucao_heuristica.png" style="width:70%">
 
 Exercício:
 
-![image-20210824222315903](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210824222315903.png)
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/exercicio_hamiltoniano.png" style="width:70%">
+
+---
+
+# Caminhamentos
+
+24/08 :watch:
+
+[Propriedades de grafos]
+
+Algumas são de simples verificação, rodando alguns algoritmos da pra fazer essas verificações:
+
+- asdasd
+
+[Caminhar - Explicação]
+
+O que eu quero buscar? Algoritmos de busca:
+
+[Busca em grafos]
+
+[Aplicações]
+
+## Busca em largura
+
+[O que é]
+
+[Estados dos vértices]
+
+[Funcionamento]
+
+[Custo e Complexidade]
+
+## Busca em profundidade
+

@@ -33,7 +33,7 @@ Comunicação hierárquica. Servidores com hardware diferenciado e com centraliz
 
 ### Modelo Peer to Peer
 
-**P2P - Par a Par.** Não existe diferenciação entre clientes e servidores. Comunicação não hierárquica. Os usuários são cliente e servidores, podendo atuar como ambos ao mesmo tempo.
+**P2P - Par a Par.** Não existe diferenciação entre clientes e servidores. Comunicação não hierárquica. Os usuários são cliente e servidores, podendo atuar como ambos ao mesmo tempo. *Buscar e enviar um dado ao mesmo tempo.* 
 
 ## Tecnologia de Transmissão de Dados
 
@@ -41,9 +41,11 @@ Comunicação hierárquica. Servidores com hardware diferenciado e com centraliz
 
 Comunicação entre pares de máquinas individuais. Um pacote pode passar por uma ou mais máquinas até atingir o seu objetivo. Existem esquemas de roteamento que escolhe o melhor caminho entre os vários possíveis.
 
+<img src="../../imgs/4_Periodo/Redes1/Redes_ponto_ponto.png" style="width:40%">
+
 ### Redes de Difusão
 
-Canal único de comunicação compartilhado por todas as máquinas de rede. Mensagens são transmitidos na forma de pequenos pacotes e recebidos por todas as máquinas da rede. Todas as máquinas recebem o pacote, e o processam ou não, dependendo do endereço.
+Ao contrário da rede ponto a ponto, as redes de difusão terão um **único canal** de comunicação compartilhado por todas as máquinas de rede. Mensagens são transmitidos na forma de pequenos pacotes e recebidos por todas as máquinas da rede. Todas as máquinas recebem o pacote, e o processam ou não, dependendo do endereço.
 
 Algoritmo para recebimento de msgs executado por cada máquina:
 
@@ -61,11 +63,225 @@ if(endereço no quadro = meu endereço) {
   - **Broadcasting** ou difusão - a mensagem é endereçada a todas as máquinas da rede
   - **Multicasting** ou multidifusão - a mensagem é endereçada a um grupo de máquinas da rede
 
----
+## Escala
 
-> Restante da introdução no slide.
+<img src="../../imgs/4_Periodo/Redes1/ESCALA.png" style="width:60%">
+
+> **PAN-Exemplo:** Mouse sem fio; impressora sem fio; Entre outros.
+
+- **Local Area Network (LAN):** Redes privadas. Muito usada para conexão de micros e workstations em escritórios, fábricas e residências. Um cabo único ao qual todas as máquinas se conectam, entre 10 e 100 mbps de velocidade de transmissão e com poucos erros de transmissão.
+  - Topologia: Barramento ou Anel.
+- **Metropolitan Area Network (MAN)**: Abrangem uma cidade, TV (e Internet) a cabo.
+- **Wide Area Network (WAN)**
+  - Cobrem grandes áreas geográficas;
+  - Possuem uma coleção de máquinas (hosts) que executam aplicações e são conectadas por uma subrede (subnet).
+    - Subrede: pertence à operadora, transmite uma mensagem de um host para outro. É composta por linhas de transmissão (circuitos, canais ou troncos ) que movem os bits entre máquinas e elementos de comutação (roteador) que conectam duas ou mais linhas de transmissão.
+
+<img src="../../imgs/4_Periodo/Redes1/esquema_networks.png" style="width:80%">
+
+## Software de rede
+
+>  Essa hierarquia, conjunto de camadas, conjunto de protolos é que chamamos de arquitetura de redes.
+
+### Hierarquia de protocolos
+
+É necessário um *"acordo"* para as camadas, para definir como a comunicação será, e com isso temos os **protocolos**. Ou seja, os protocolos definem os formatos, a ordem das mensagens enviadas e recebidas pelas entidades de rede, e as ações a serem tomadas na transmissão e recepção de mensagens.
+
+> Organização da rede.
+
+<img src="../../imgs/4_Periodo/Redes1/protocolos.png" style="width:70%">
+
+#### Arquitetura em camadas
+
+- **Simplificação e independência**: Não interessa a determinada camada como as demais implementam o fornecimento de suas funções e serviços (Modularização).
+
+- **Facilidade de evolução**: Novas funções ou serviços podem ser implementadas em uma camada a partir de serviços já disponíveis nas camadas inferiores.
+
+- **Facilidade de manutenção**: Uma camada pode ser alterada sem alterar as demais, desde que os serviços que ela presta sejam alterados.
+
+#### Questões de projeto das camadas
+
+- **Endereçamento:** meio de identificar, dentre os muitos computadores e processos, aqueles com o qual se quer comunicar.
+- **Tipo de canal:** forma de tráfego dos dados na rede.
+  - **simplex:** dados trafegam numa única direção (existem dois canais, um para transmissão e outro para recepção - Estilo da fibra ótica);
+  - **half-duplex:** tráfego de dados em ambas direções, mas sem simultaneidade;
+  - **full-duplex:** tráfego em ambas direções, simultaneamente (feito atravéz de multiplexação).
+
+<img src="../../imgs/4_Periodo/Redes1/tipos_canal.png" style="width:60%">
+
+- **Detecção de erros:** receber aviso de erro e em seguida encontrar este erro.
+  - **Método de repetição:** Ao enviar uma mensagem, são enviados três repetições desta mensagem  e, a partir da comparação destas mensagens detecta se há ou não erro. Porém, é sucetível à ruído, então se tivemos um ruído no transmissor a mensagem será enviada de forma errada e não será detectado o erro.
+  - <img src="../../imgs/4_Periodo/Redes1/metodo_repeticao.png" style="width:60%">
+  - **Método de paridade:** Adiciona-se, pelo transmissor, um bit de redundância (bit de paridade) após ou antes da sequência de bits que pertence à mensagem. Porém, esse método só identifica que há um erro, mas não onde está. O bit adicionado segue a seguinte regra:
+    - Caso apareça o bit “1” um número ímpar de vezes é adicionado 1. 
+      - Exemplo: 0100101 paridade = 1.
+    - Caso apareça o bit “1” número par de vezes é adicionado 0.
+      - Exemplo: 010101010010100, paridade = 0.
+  - <img src="../../imgs/4_Periodo/Redes1/exemplo_PARIDADE.png" style="width:60%">
+  - **Checksum:** Serão utilizados 3 informações aqui, dois frames (conjuntos de bits), e o checksum invertido (soma dos 2 frames, com o resultado invertido). O receptor recebe essas 3 informações, realiza a soma dos dois frames, e soma o resultado com o checksum invertido recebido. Essa soma deve resultar em somente bits 1, se ocorrer algum bit 0, há falha.
+
+- **Correção de erros:** receber informações do erro e fazer sua correção.
+
+- **Garantia de entrega:** Sobre a camada de transporte, temos dois protocolos, TCP e UDP, com duas utilizações diferentes, sendo um confiável e outro não.
+
+> Confiável: Garante a entrega, e em ordem correta dos dados.
 
 <img src="../../imgs/4_Periodo/Redes1/UDP-TCP.png" style="width:90%">
+
+- **Controle de fluxo:** Tratar de tráfego de dados. Saber a quantidade de dados que oa transmissor está injetando na rede. Controle do envio de mensagens de um remetente rápido para um destino lento (congestionamento).
+- **Roteamento (camada de rede):** Decisão de qual caminho deve ser seguido pelos pacotes.
+
+#### Classificação de transmissão
+
+Conexão
+
+- Protocolo **orientado a conexão**: Existe um canal entre os dois pontos conectados durante toda a comunicação de dados. Ou seja, são feitas solicitações de envio, abertura do canal, confirmações de entrega, etc. Garante sequência, garante que os dados sejam entregues aos destinatários em ordem, e completos. Ex.: Rede de telefonia.
+- Protocolo **não orientado a conexão**: Cada mensagem possui o endereço do destinatário e é enviada separadamente. Neste tipo serviço não existe apresentação entre os sistemas finais. Quando um dos lados de uma aplicação quer enviar pacotes ao outro, ela simplesmente os envia, sem especificação do canal. Como não há apresentação os pacotes podem ser remetidos mais rapidamente, mais também não há confirmações de entrega. Ex.: Correio, só envia para o destinatário, e não sabemos nem a rota que será usada para a entrega.
+
+Confiabilidade
+
+- **Confiáveis:** garantem a entrega da mensagem. Utilizam de um sinal enviado pelo receptor, informando que recebeu a mensagem (acknowledge). Introduzem a necessidade de envio de sinais de controle juntamente com a mensagem de atrasos (overheads).
+- **Não confiáveis:** não há garantia de entrega da mensagem. Mais rápidos. Sujeitos a erros.
+
+<img src="../../imgs/4_Periodo/Redes1/request_confiavel_eNAO.png" style="width:70%">
+
+<img src="../../imgs/4_Periodo/Redes1/table_confiavel_conexao.png" style="width:60%">
+
+### Serviços e Protocolos
+
+**Serviços (entre camadas adjacentes de uma mesma máquina)**
+
+- Conjunto de primitivas (operações) entre camadas. Um serviço se relaciona a uma interface entre duas camadas em uma mesma máquina, sendo a camada inferior o fornecedor do serviço e a superior o usuário do serviço.
+
+**Protocolos (entre camadas de mesmo nível de máquinas diferentes)**
+
+- Conjunto de regras que controla o formato e o significado dos pacotes ou mensagens que são trocadas pelas entidades pares (peers) contidas em uma mesma camada de máquinas distintas.
+
+#### Modelos de referência
+
+- **Modelo OSI:** Muito utilizado para a descrição das camadas que compõem uma rede, mas 1uase não utilizam os protocolos a ele associados.
+- **Modelo TCP/IP:** Pouco utilizado para estudo do comportamento de uma rede, mas seus protocolos tem larga utilização nas redes atuais.
+
+##### Modelo OSI
+
+*OSI - Open Systems Interconection*
+
+- Constituida de 7 camadas, de forma a que cada uma execute funções bem definidas;
+- O propósido desse modelo é informar o que cada camada deve fazer;
+- As camadas permitem diferentes níveis de abstração;
+- A função desempenhada por uma camada se baseia nos protocolos internacionalmente padronizados;
+- Minimização do fluxo de informações entre as camadas.
+
+<img src="../../imgs/4_Periodo/Redes1/camadas_OSI-1.png" style="width:80%">
+
+Camadas:
+
+- **Física:** Essa camada fará todo transporte dos dados (bits) através de um meio de transmissão (cabo par trançado, fibra...).
+- **Enlace de dados:**
+  - Pega os dados da física e coloca alguns controles (erro e fluxo);
+  - Divisão da sequencia de bit vinda da física em quadros (frames) de dados e a definição do inicio e fim de um quadro;
+  - Controle do meio: controle de comunicação entre máquinas de uma rede.
+
+- **Rede:**
+  - Controlar por qual caminho o pacote vai passar, roteamento da origem ao destino (sendo de P2P);
+  - Controle de congestionamento;
+  - Conexão entre redes diferentes, roteadores;
+  - Não é completamente fim a fim, pois faz pedaço por pedaço.
+
+- **Transporte:**
+  - Numeração de dados;
+  - Garantia de entrega;
+  - Estabelecer conexão, circuitos;
+  - Isola os níveis (hardware e software);
+  - Fim a fim.
+
+- **Sessão:**
+  - Permissão de comunicação entre pares;
+  - Controle do sentido de tráfego;
+  - Controle de token, impendindo que duas máquinas executem operações críticas ao mesmo tempo;
+  - Sincronização para evitar perdas de sessão.
+
+- **Apresentação:**
+  - Codificação, sintaxe e semântica → transladar o formato do hospedeiro local para um formato independente de hospedeiro;
+  - Tipos de dados abstratos.
+  - <img src="../../imgs/4_Periodo/Redes1/camada_apresentacao.png" style="width:60%">
+
+- **Aplicação:**
+  - Promove abstrações para o usuário;
+  - Protocolos http, email, ftp, www.
+
+<img src="../../imgs/4_Periodo/Redes1/Camadas_OSI.png" style="width:70%">
+
+##### Modelo TCP/IP
+
+<img src="../../imgs/4_Periodo/Redes1/OSI-TCP.png" style="width:60%">
+
+- Entenderam que as camadas de apresentação e sessão poderiam ser juntadas a camada de aplicação;
+- Transporte, continuou distinta pelo poder de ser um divisor do modelo (hardware do software), tem os protocolos UDP e TCP como principais;
+- Rede foi transformada em internet (inter-redes), vai fazer o roteamento e chaveamento dos pacotes e a viagem desses pacotes por toda a rede (podendo ter rotas diferenciadas);
+- Dados e física, foi colocada em uma só (host/rede), pois não à a necessidade de definir nenhum protocolo específico, sendo exigido apenas o recebimento de pacotes IP e transmiti-los.
+
+### Exemplos de tecnologias de rede
+
+**Ethernet (802.3)**
+
+- Padrão de rede LAN em que os hosts estão interligados a um mesmo meio físico (cabo). Protocolo que fala como os dispositivos dentro da LAN se comunicam;
+- TCP/IP;
+- Segurança e confiabilidade para trocas de informações;
+- Curta distancia.
+
+**Internet**
+
+- Provedores de serviços (ISP);
+- Ponto de acesso de usuários aos roteadores ISP's (POP);
+- Canais nacionais e internacionais de alta velocidade (Backbones);
+- Ponto de convergência de backbones de diferentes operadoras (NAP);
+- Grupo de servidores que fornecem serviços aos usuários (server farm).
+
+**Frame Relay**
+
+- Transferência de dados de alta qualidade para redes de longa distância;
+- Não incorpora nenhum mecanismo para verificar se o quadro de dados chegou corretamente no destino (considera número de erros baixo, devido ao canal digital;
+- TCP/IP, responsável pela confirmação do recebimento.
+
+**MPLS (Multi Protocol Label Switching)**
+
+- Protocolo de roteamento baseado em pacotes rotulados: cada rótulo representa um índice na tabela de roteamento do próximo roteador;
+- Não tem como objetivo se conectar diretamente a sistemas finais, mas sim de transportar pacotes entre pontos de entrada e saída;
+- Longa distância.
+
+**ATM**
+
+- É uma rede que usa célula como unidade básica para troca de dados (rede celular);
+- Estabelece um circuito virtual à medida em que o primeiro pacote (célula ATM) passa pelos roteadores da rede e define o caminho que todas as demais células deverão percorrer;
+- Orientado a conexão e não confiável (garante sequência mas não garante entrega).
+
+**Rede de telefonia móvel**
+
+- Composta por células e MSC;
+
+- Célula:
+
+  - Cobre região geográfica
+  - Estação base (BS) semelhante a 802.11 AP
+
+  - Usuários moveis que se conectam à rede por BS
+
+  - Interface-ar, protocolo da camada física e enlace entre a estação móvel e BS
+
+- MSC
+
+  - Conecta células à rede remota
+
+  - Gerencia conf, chamada (adiante!)
+
+  - Trata da mobilidade (adiante!)
+
+Outros exemplos:
+
+- Wifi
+- Bluetooth
+- RFID
 
 ---
 
@@ -73,7 +289,7 @@ if(endereço no quadro = meu endereço) {
 
 11/08 :watch:
 
-*Essa camada fará todo transporte dos dados, na forma eletromagnética, através de um meio de transmissão (cabo par trançado, fibra...).*
+*Essa camada fará todo transporte dos dados através de um meio de transmissão (cabo par trançado, fibra...).*
 
 Geralmente os dados, inicialmente, não estão em um forma possível de transporte, então é necessário fazer esse tratamento/transformação. Transformar em sinais eletromagnéticos.
 

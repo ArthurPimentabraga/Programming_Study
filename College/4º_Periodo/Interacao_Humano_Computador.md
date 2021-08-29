@@ -214,3 +214,71 @@ Com ela da para fazer uma estimativa de quanto tempo uma pessoa levará para enc
 
 
 opções de ferramentas estão na lateral.................
+
+## Engenharia Cognitiva
+
+25/08 :watch:
+
+A engenharia cognitiva foi concebida por Norman (1986) como uma tentativa de aplicar conhecimentos de ciência cognitiva, psicologia cognitiva e fatores humanos ao design e construção de sistemas computacionais.
+
+![image-20210828162153092](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210828162153092.png)
+
+[Exemplos]
+
+### Teoria da ação - Golfos
+
+- Golfo de execução:
+- Golfo de avaliação: 
+
+## Abordagens Etnometodológicas
+
+
+
+## Teoria da Atividade
+
+
+
+26/08 :watch:
+
+
+
+
+
+## Cognição distribuída
+
+
+
+## Engenharia semiótica
+
+Signo: É uma coisa que serve para transmitir alguma informação.
+
+![image-20210828172526416](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210828172526416.png)
+
+> Sempre que há convenções sociais ou culturais que nos permitem interpretar signos, temos um sistema de significação e, portanto, um código. 
+
+Os produtores de signos podem utilizar:
+
+- signos conhecidos (culturalmente convencionados) de formas convencionais
+- signos conhecidos de formas criativas 
+- inventar signos
+
+A representação de um objeto pode ser: 
+
+- Icônica: baseada nas semelhanças e características comuns ao objeto a que se refere.
+  - Ex: desenho de uma impressora na interface de determinado software é um ícone para a impressora real e para a tarefa de imprimir. 
+- Indicial: guarda a relação de causa e efeito.
+  - Ex: fumaça usada para indicar fogo ou o desenho de uma ampulheta “significando” o correr do tempo.
+- Simbólica: baseada em convenções estabelecidas.
+  - Ex: linguagem natural, formalismos lógico e matemático, palavras reservadas em linguagens de programação.
+
+### Semiose
+
+O interpretante de um signo é, ele próprio, outro signo. Sendo assim, é passível de ser, ele próprio, interpretado, gerando outro interpretante, e assim sucessivamente. Esse processo interpretativo que nos leva a associar cadeias de significados (interpretantes) a um signo é denominado semiose. Trata-se de um processo potencialmente ilimitado.
+
+![image-20210828172749169](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210828172749169.png)
+
+Na prática, a semiose é interrompida quando o intérprete:
+
+- fica satisfeito com o interpretante gerado (i.e., o significado temporariamente atribuído ao signo) ou
+- não tem mais tempo ou 
+- não tem outro recurso necessário para continuar gerando novos significados. 
