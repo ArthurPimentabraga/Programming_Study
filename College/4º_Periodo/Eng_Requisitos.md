@@ -179,3 +179,79 @@ O que o sistema tem que fazer e como deve fazer. Funcionais e não funcionais.
 ## Requisitps Funcionais x Não funcionais
 
 - Tipos......
+
+---
+
+# Desenvolvimento dos requisitos
+
+[Definição]
+
+**Evolução dos requisitos:**
+
+![image-20210830192326254](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210830192326254.png)
+
+# Elicitação de requisitos
+
+30/08 :watch:
+
+Entender a dor do cliente, entender o problema dele, *descobrir os requisitos do software*.
+
+Busca **proativa** da obtenção dos requisitos a partir das fontes (cliente, normas, sistemas já usados...), considerando as **necessidades, expectativas e restrições** impostas pelo ciente.
+
+> *Sempre perguntar a dor do cliente, e não o que ele quer!* Se não, ficamos limitados ao que ele quer, não o que ele precisa.
+
+Essa atividade se inicia com a aplicação de técnicas apropriadas para identificar requisitos do cliente, considerando as necessidades, expectativas e restrições impostas pelo cliente.
+
+> **Atenção:** Evitar requisitos implícitos, ou seja, não está sub-entendido. Ex.: O cliente não falou que queria banheiro no projeto da casa por que achava que tava implícito.
+
+## O que fazer nessa etapa
+
+1. Definir as fontes de obtenção dos requisitos;
+   1. Ex.: Se um sistema vai substituir outro, uma fonte é o sistema antigo.
+   2. Legislação, ou seja, existem leis no campo de aplicação do sistema?
+2. Definir a forma de elicitação de requisitos;
+3. Levantar/descobrir/elicitar os requisitos.
+
+## Fontes
+
+[O que é]
+
+> Se não definir todas as fontes, podemos ter requisitos não identificados.
+
+[Fontes típicas]
+
+Uma fonte sempre presente é a LGPD.
+
+### Técnicas de elicitação de requisitos
+
+- **Brainstorming:** asdasd
+
+- **Brainwriting:** dgfsdfsd
+
+- **Entrevistas:** asdasdasd
+  - Pergunta básica: Essa solução vai substituir outra?
+
+- **JAD (Joint Application Development):** 
+- **Prototipagem:** 
+- **Questionários:** Com um grupo muito grande não da pra ficar fazendo reunião com todo mundo...
+- **Cenários:** 
+- **Observação - Etnografia:** Estudo Etnográfico é uma técnica em que o analista...
+
+Outras formas de levantar requisitos:
+
+- Tornar-se um aprendiz:
+- Documentos existentes:
+- Engenharia reversa:
+- Observação de produtos existentes:
+- Mudança de perspectiva:
+- Análise de redes sociais (Comunidades virtuais):
+- Modelagem de casos de uso:
+- Análise de informações internet:
+
+## O que levantar?
+
+[Tópicos]
+
+[Memórias de levantamento]
+
+[Registrar de alguma forma]

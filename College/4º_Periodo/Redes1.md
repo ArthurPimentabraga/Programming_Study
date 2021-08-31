@@ -317,7 +317,7 @@ A onda simples é a forma mais fundamental (base) de um sinal analógico periód
 
 #### SINAIS SIMPLES (ONDA SENOIDAL)
 
-> Aplicações: Envio de energia elétrica de um lugar para outro. Sensores de portão... Não são muitos casos.
+> Aplicações: Envio de energia elétrica de um lugar para outro. Sensores de portão, gravação de som e imagem, como em disco de vinil e fita cassete, entre outros. Não são muitos casos.
 
 Uma onda senoidal pode ser representada por 3 parâmetros:
 
@@ -417,6 +417,8 @@ Essa transmissão requer um canal **passa-baixa**, um canal com uma banda que se
 Há modulação do sinal, ou seja, o sinal digital é transformado em sinal analógico para a transmissão. Por esse motivo permite usar um canal **passa-faixa**, um canal com uma banda que não se inicia em zero (isso limita a frequência). Porém, é possível transmitir **múltiplos sinais** em múltiplas frequências simultâneamente usando um único canal.
 
 Ex.: Aqueles pacotes de internet, banda larga com fibra ótica, ou seja, é feita essa modulação do sinal, e de forma simultânea e unidirecional, vários sinais podem ser enviados em um único canal. 
+
+> **Modulação:** processo de conversão entre bits e sinais que os representam é chamado modulação digital.
 
 <img src="../../imgs/4_Periodo/Redes1/diferenca_base_larga.png" style="width:90%">
 
@@ -573,19 +575,7 @@ Problemas:
 
 Atenuação..........
 
-#### MULTIPLEXAÇÃO
-
-(Divide) - Transportar mais de um sinal ao mesmo tempo (em paralelo).
-
-- **FDM** - Multiplexação
-  - Da um pedacinho da faixa de frequência (largura da banda - 3.100Hz) para cada canal.
-  - [FOTO]
-- **TDM** - Multiplexação por Divisão de Tempo
-  - (codec) converte sinal analógico em digital.....
-  - TIPO round robin.
-  - [FOTO]
-
-> Note: 7 bits para dados para cada canal, e 1 em comum para controle.
+[Aqui falava sobre a multiplexação]
 
 ### ADSL
 
@@ -618,43 +608,84 @@ Ler parte do livro!!!
 
 23/08 :watch:
 
-Precisamos fazer o uso racional... Eficiência...
+Precisamos fazer o uso racional e eficiênte, sem desperdício, da banda para alcançar nossos objetivos. A eficiência pode ser atingida pela multiplexação, e a privacidade e a imunidade a interferências podem ser obtidas pelo espalhamento. Veremos os dois tópicos a seguir.
 
-A eficiência pode ser atingida pela multiplexação... Espalhamento...
+### MULTIPLEXAÇÃO
 
-- 
+Transportar mais de um sinal ao mesmo tempo (em paralelo). É o conjunto de técnicas que permite a transmissão simultânea de vários sinais por meio de um único link (meio físico) de dados, ou seja, aproveitando ainda mais a largura de banda. Ou seja, há uma divisão em "linhas" desse link, cada linha um sinal. Ex.: Full-duplex.
 
+![image-20210830233801840](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210830233801840.png)
 
+#### MULTIPLEXAÇÃO POR DIVISÃO DE FREQUÊNCIA - (FDM)
 
->  Unificar os dois resumos de multiplexação
+Basicamente pega os sinais de original e combina eles em um sinal composto para ser transmitido no meio. Lembrando que a quantidade de sinais é limitada pela largura de banda do link.
 
-### MULTIPLEXAÇÃO POR DIVISÃO DE FREQUÊNCIA
+![image-20210830234212819](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210830234212819.png)
 
-> Podemos usar a técnica para a entrada de sinais digitais
+![image-20210830235147961](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210830235147961.png)
 
-#### APLICAÇÕES FDM
+Em outras palavras: dá um pedacinho da faixa de frequência (largura da banda) para cada canal.
+
+>  Podemos usar a técnica para a entrada de sinais digitais também, só transformar em analógico.
+
+##### APLICAÇÕES FDM
 
 - Transmissão de rádio AM e FM;
-- Tranmissão televisiva;
+- Transmissão televisiva;
 - Primeira geração de telefones celulares.
 
-### MULTIPLEXAÇÃO POR DIVISÃO DE COMPRIMENTO DE ONDA
+#### MULTIPLEXAÇÃO POR DIVISÃO DE COMPRIMENTO DE ONDA - (WDM)
 
-#### APLICAÇÕES
+É uma técnica de multiplexação analógica para combinar sinais ópticos. *Criado para ser usado na fibra ótica.* Ou seja, a ideia é a mesma da FDM, combinar os sinais, porém agora vamos combinar **sinais ópticos** (faixas de luz, e de **alta frequência.**) que vão constituir uma faixa mais larga. 
+
+![image-20210831000933687](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210831000933687.png)
+
+**APLICAÇÕES**
 
 - Rede Sonet.
 
-### MULTIPLEXAÇÃO POR DIVISÃO DE TEMPO
+#### MULTIPLEXAÇÃO POR DIVISÃO DE TEMPO - (TDM)
 
-Tipo round robin
+É uma técnica de multiplexação **digital** que combina vários canais de baixa taxa de transmissão em um único canal de alta taxa. Ou seja, é a mesma ideia de antes, várias conexões compartilhando o mesmo link. É TIPO round-robin, pois vai fazendo uma rotação do uso das partições de cada conexão. 
 
-#### TDM SÍNCRONO
+![image-20210831002215460](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210831002215460.png)
 
-Sincronização de frames...
+> Podemos usar a mesma técnica para transmissão de sinais analógicos, basta converter.
 
-#### MULTIPLEXAÇÃO ESTATÍSTICA
+Podemos dividir o TDM em dois tipos: síncrono e estatístico:
+
+##### TDM SÍNCRONO
+
+Nesse tipo, cada conexão, cada fluxo de dados é dividido em unidades menores, que ocuparão o que chamamos de **time-slots**. Após isso, agrupamos um time-slot de cada fluxo em um **frame**, e de forma síncrona, os frames são transmitidos.
+
+![image-20210831003400346](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210831003400346.png)
+
+- Em uma transmissão com n conexões de entrada (n partições), eu terei n time-slots.
+- No TDM síncrono, a taxa de dados do link é n vezes mais rápida e aduração da unidade é n vezes mais curta.
+
+Porém, a implementação não é tão simples quanto a de um sinal analógico, pois precisamos ter uma exata sincronização de **tempo** na transferência dos frames. Ou seja, se os frames não estiverem sincronizados, podemos mandar informação errada. Para isso é inserido um bit em cada frame para controlar o padrão de sincronização, e assim é transmitido frame a frame de forma sincronizada.
+
+##### MULTIPLEXAÇÃO ESTATÍSTICA
+
+No TDM estatístico, slots são alocados **dinamicamente** para aumentar a eficiência da largura de banda. O nº de slots em cada frame é menor que o nº de linhas de entrada. Então o multiplexador só vai alocar a linha para a transmissão dos dados, quando houver dados a serem transmitidos naquela linha, caso contrário, pula para a próxima.
+
+##### SÍNCRONO VS ESTATÍSTICO
+
+Além da alocação dos slots, outra grande diferença entre essas duas formas é o endereçamento deles, ou seja, no síncrono só é enviado o bit de sincronização, e o estatístico é necessário enviar o endereço do slot (a linha à qual ele pertence).
+
+![image-20210831004618116](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210831004618116.png)
 
 ### ESPALHAMENTO ESPECTRAL
+
+SS - Spread Spectrum: combinamos sinais de diferentes fontes para se encaixarem em uma largura de banda de maior capacidade. *Compartilhamento do meio.* 
+
+Utilizado em aplicações wireless (sem fio) Para ambientes de redes LANs e WANs.
+
+Vou espalhar o espectro, espalhar as frequências gerando uma sequência de números que parecem aleatórios, mas tem um padrão (pseudo-aleatório). De forma que cada sinal esteja seguro, encapsulado. 
+
+Podemos fazer isso de duas formas: Saltos de frequência ou Sequência direta.
+
+- **Saltos de frequência:** Alternância entre as portadoras, que por sua vez tem frequências diferentes. Por esse motivo irão ter códigos de espalhamento diferentes, gerando códigos pseudo-aleatório.
 
 ---
 
