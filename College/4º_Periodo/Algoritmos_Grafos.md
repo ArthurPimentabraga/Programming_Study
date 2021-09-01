@@ -353,7 +353,7 @@ Um grafo é bipartido se, e somente se, todo ciclo de G possuir comprimento par.
 
 > Vale lembrar os conceitos de:
 >
-> - Passeio
+> - Passeio (pode voltar no mesmo vértice).
 > - Caminho
 >   - **Caminho aberto:** Vértices inicial e final são diferentes;
 >   - **Caminho fechado ou circuito**: nenhum vértice (exceto o 1º e o último) aparece mais de uma vez.

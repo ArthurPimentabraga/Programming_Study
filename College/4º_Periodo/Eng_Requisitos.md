@@ -225,14 +225,12 @@ Uma fonte sempre presente é a LGPD.
 ### Técnicas de elicitação de requisitos
 
 - **Brainstorming:** asdasd
-
 - **Brainwriting:** dgfsdfsd
-
 - **Entrevistas:** asdasdasd
   - Pergunta básica: Essa solução vai substituir outra?
-
 - **JAD (Joint Application Development):** 
 - **Prototipagem:** 
+  - Só nao pode dar entender que a aplicação ta pronta, pq pode ser só o front.
 - **Questionários:** Com um grupo muito grande não da pra ficar fazendo reunião com todo mundo...
 - **Cenários:** 
 - **Observação - Etnografia:** Estudo Etnográfico é uma técnica em que o analista...
@@ -254,4 +252,44 @@ Outras formas de levantar requisitos:
 
 [Memórias de levantamento]
 
-[Registrar de alguma forma]
+[**Registrar** de alguma forma] - Parte da **especificação**.
+
+---
+
+# Análise de requisitos
+
+31/08 :watch:
+
+Com os resultados e materiais gerados na primeira etapa, precisamos analisa-los. Verificar se tem algum problema, se está completo, se tem alguma inconsistência, algum conflito entre requisitos, entre outros problemas.
+
+Também vamos priorizar os requisitos.
+
+1. **Definição do escopo do projeto:** Limite do que a solução contempla.............
+
+## Negociação e priorização de requisitos
+
+Consiste no exame dos requisitos coletados e negociação com os stakeholders............
+
+[Esquema - Foto]
+
+[O que fazer?]
+
+- Resolver conflitos.....
+
+- Equilíbrio entre funcionalidades, recursos e tempo......
+- Priorização.....
+  - Garantir que o essencial seja entregue.
+
+### Priorização
+
+- IEEE:
+- Benjamin Kovitz:
+- MoSCoW:
+- Fotinha la:
+
+#### Técnicas de priorização
+
+- Comparações aos pares (Pairwise): Entre esse e esse, vai esse............... tendo 100$ para usar, e cada requisito custa um pouco. 
+  - Foda é em um sistema com muitos requisitos, ai fica dfícil.
+  - Vantagens, desvantagens.....
+- Modelo de Kano: 

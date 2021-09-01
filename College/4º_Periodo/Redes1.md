@@ -549,11 +549,11 @@ Sofre menos interferência eletromagnética, porém pela velocidade (máx de 10 
 
 Em 1876 sugiu o 1º telefone, puramente analogico (sinais analógicos para a transmissão da voz). Os telefones eram vendidos em par e era necessário conectar fisicamente os dois, ou seja, se o proprietário de um telefone quisesse usar o aparelho para conversar com n outros proprietários de telefone, tinha de conectar fios em todas as n residências. Funcionavam manualmente, ou seja, o residente girava uma manivela, que emitia um som na companhia telefônica, e o operador conectava manualmente o emissor da chamada com o receptor.
 
- Com o passar do tempo surgiu a necessidade de transferir dados além da voz, porém utilizando a mesma estrutura já em uso da rede de telefonia (circuitos terminais). Essa estrutura é limitada ao canal de rede que era utilizada para transmissão de voz, mas grande parte já foi atualizada para tecnologias de banda larga, como ADSL.
+Com o passar do tempo surgiu a necessidade de transferir dados além da voz, porém utilizando a mesma estrutura já em uso da rede de telefonia (circuitos terminais). Essa estrutura é limitada ao canal de rede que era utilizada para transmissão de voz, mas grande parte já foi atualizada para tecnologias de banda larga, como ADSL.
 
 [Pag 90 - Tanenbaum]
 
-
+<img src="../../imgs/4_Periodo/Redes1/ESTACOES_COMUTACAO.png" style="width:80%">
 
 Baseada em circuitos virtuais (abre e fecha canal).
 
@@ -581,17 +581,26 @@ Atenuação..........
 
 Linha digital do assinante assimétrica.
 
-> Assimétrico -> transmissão de mais de 56 Kbps.
->
+- Modens chegaram na transmissão máx, mesmo com multiplexação;
+- Velocidade mais alta;
+- Retirar o filtro padrão e substituir por um switch, permitindo assim que toda a largura de banda do cabo possa ser utilizada;
+- Permite a transmissão de mais de 56 Kbps, que era o cenário atual;
+
 > Utilizamos mais canais no download que no upload (depende do provedor, pode ser personalizado). Por isso que é Assimétrico.
 
+<img src="../../imgs/4_Periodo/Redes1/CANAIS_ADSL.png" style="width:70%">
 
+<img src="../../imgs/4_Periodo/Redes1/MODELO_ADSL.png" style="width:80%">
 
 16/08 e 18/08 :watch:
 
 ### TV A CABO
 
 Ler parte do livro!!!
+
+Surgiu pela necessidade de transmitir os sinais para pessoas que moram em locais montanhosos.
+
+<img src="../../imgs/4_Periodo/Redes1/CATV.png" style="width:70%">
 
 > Note: CATV usava coaxial de cabo à rabo. Por causa da atenuação, ter que usar muito amplificador... era tudo feito direcionalmente, sai da estação e vai para a casa do cliente. Porém com o avanço veio o Hybrid fiber - coaxial (trabalha tanto com fibra, quanto com coaxial).
 >
@@ -601,6 +610,10 @@ Ler parte do livro!!!
 >
 > - Cable Modem (CM) (instalado na residência): 
 > - Cable Modem Termination System (CMTS) (instalado no provedor): 
+
+Internet a cabo:
+
+<img src="../../imgs/4_Periodo/Redes1/internet_cabo.png" style="width:80%">
 
 ---
 
@@ -614,15 +627,15 @@ Precisamos fazer o uso racional e eficiênte, sem desperdício, da banda para al
 
 Transportar mais de um sinal ao mesmo tempo (em paralelo). É o conjunto de técnicas que permite a transmissão simultânea de vários sinais por meio de um único link (meio físico) de dados, ou seja, aproveitando ainda mais a largura de banda. Ou seja, há uma divisão em "linhas" desse link, cada linha um sinal. Ex.: Full-duplex.
 
-![image-20210830233801840](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210830233801840.png)
+<img src="../../imgs/4_Periodo/Redes1/MULTIPLEXACAO.png" style="width:80%">
 
 #### MULTIPLEXAÇÃO POR DIVISÃO DE FREQUÊNCIA - (FDM)
 
 Basicamente pega os sinais de original e combina eles em um sinal composto para ser transmitido no meio. Lembrando que a quantidade de sinais é limitada pela largura de banda do link.
 
-![image-20210830234212819](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210830234212819.png)
+<img src="../../imgs/4_Periodo/Redes1/INICIO_FDM.png" style="width:80%">
 
-![image-20210830235147961](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210830235147961.png)
+<img src="../../imgs/4_Periodo/Redes1/FIM_FDM.png" style="width:80%">
 
 Em outras palavras: dá um pedacinho da faixa de frequência (largura da banda) para cada canal.
 
@@ -638,7 +651,7 @@ Em outras palavras: dá um pedacinho da faixa de frequência (largura da banda) 
 
 É uma técnica de multiplexação analógica para combinar sinais ópticos. *Criado para ser usado na fibra ótica.* Ou seja, a ideia é a mesma da FDM, combinar os sinais, porém agora vamos combinar **sinais ópticos** (faixas de luz, e de **alta frequência.**) que vão constituir uma faixa mais larga. 
 
-![image-20210831000933687](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210831000933687.png)
+<img src="../../imgs/4_Periodo/Redes1/WDM.png" style="width:80%">
 
 **APLICAÇÕES**
 
@@ -648,7 +661,7 @@ Em outras palavras: dá um pedacinho da faixa de frequência (largura da banda) 
 
 É uma técnica de multiplexação **digital** que combina vários canais de baixa taxa de transmissão em um único canal de alta taxa. Ou seja, é a mesma ideia de antes, várias conexões compartilhando o mesmo link. É TIPO round-robin, pois vai fazendo uma rotação do uso das partições de cada conexão. 
 
-![image-20210831002215460](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210831002215460.png)
+<img src="../../imgs/4_Periodo/Redes1/TDM.png" style="width:80%">
 
 > Podemos usar a mesma técnica para transmissão de sinais analógicos, basta converter.
 
@@ -658,12 +671,14 @@ Podemos dividir o TDM em dois tipos: síncrono e estatístico:
 
 Nesse tipo, cada conexão, cada fluxo de dados é dividido em unidades menores, que ocuparão o que chamamos de **time-slots**. Após isso, agrupamos um time-slot de cada fluxo em um **frame**, e de forma síncrona, os frames são transmitidos.
 
-![image-20210831003400346](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210831003400346.png)
+<img src="../../imgs/4_Periodo/Redes1/TDM_SINCRONO.png" style="width:80%">
 
 - Em uma transmissão com n conexões de entrada (n partições), eu terei n time-slots.
 - No TDM síncrono, a taxa de dados do link é n vezes mais rápida e aduração da unidade é n vezes mais curta.
 
 Porém, a implementação não é tão simples quanto a de um sinal analógico, pois precisamos ter uma exata sincronização de **tempo** na transferência dos frames. Ou seja, se os frames não estiverem sincronizados, podemos mandar informação errada. Para isso é inserido um bit em cada frame para controlar o padrão de sincronização, e assim é transmitido frame a frame de forma sincronizada.
+
+<img src="../../imgs/4_Periodo/Redes1/divisao_FRAMES.png" style="width:80%">
 
 ##### MULTIPLEXAÇÃO ESTATÍSTICA
 
@@ -673,7 +688,7 @@ No TDM estatístico, slots são alocados **dinamicamente** para aumentar a efici
 
 Além da alocação dos slots, outra grande diferença entre essas duas formas é o endereçamento deles, ou seja, no síncrono só é enviado o bit de sincronização, e o estatístico é necessário enviar o endereço do slot (a linha à qual ele pertence).
 
-![image-20210831004618116](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210831004618116.png)
+<img src="../../imgs/4_Periodo/Redes1/sincrono_VS_Estatisto.png" style="width:80%">
 
 ### ESPALHAMENTO ESPECTRAL
 
