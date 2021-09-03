@@ -282,3 +282,72 @@ Na prática, a semiose é interrompida quando o intérprete:
 - fica satisfeito com o interpretante gerado (i.e., o significado temporariamente atribuído ao signo) ou
 - não tem mais tempo ou 
 - não tem outro recurso necessário para continuar gerando novos significados. 
+
+---
+
+# Processos de design de IHC
+
+01/09 :watch:
+
+[Contexto]
+
+​	[artefato]
+
+Artefato são os produtos artificiais, fruto da inteligência e do trabalho humano, construídos com um determinado prósito em mente.
+
+Um artefato pode trazer consequências positivas e negativas....
+
+[O que é design]
+
+​	[Processo iterativo]
+
+É um processo com três atividades básicas:
+
+- **Análise** da situação atual: estudar e interpretar a situação atual;
+  - ....
+- **Síntese** de uma intervenção: planejar e executar uma intervenção na situação atual;
+- **Avaliação** da nova situação.
+
+![image-20210901191945312](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210901191945312.png)
+
+[perspectivas de design]
+
+​	[reflexão em ação]
+
+[diferença - Cliente x Usuário]
+
+[Métricas]
+
+[Ciclos - Técnicas....]
+
+
+
+02/09 :watch:
+
+[IHC - ES]
+
+​	[Diferença]
+
+​	[Princípios-chave]
+
+​	[IHC e Métodos ágeis]
+
+---
+
+# Identificação de necessidade dos usuários
+
+Conhecer o usuário -> Coleta de dados
+
+[Relacionamento com participantes]
+
+[Triangulação]
+
+[Estudo-piloto]
+
+[Que dados coletar?]
+
+[De quem coletar?]
+
+[Aspectos éticos]
+
+[Entrevista]

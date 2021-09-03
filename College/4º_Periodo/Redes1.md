@@ -159,7 +159,7 @@ Confiabilidade
 
 #### Modelos de referência
 
-- **Modelo OSI:** Muito utilizado para a descrição das camadas que compõem uma rede, mas 1uase não utilizam os protocolos a ele associados.
+- **Modelo OSI:** Muito utilizado para a descrição das camadas que compõem uma rede, mas quase não utilizam os protocolos a ele associados.
 - **Modelo TCP/IP:** Pouco utilizado para estudo do comportamento de uma rede, mas seus protocolos tem larga utilização nas redes atuais.
 
 ##### Modelo OSI
@@ -339,7 +339,7 @@ Uma onda senoidal pode ser representada por 3 parâmetros:
 
 - **Comprimento da onda (λ)**: corresponde à distância que um sinal simples pode viajar em um período. Depende tanto da frequência, quanto do meio em que está sendo propagado. *Existe em qualquer tipo de sinal.*
   - **λ = c / f** = **c x T**
-  - c: velocidade de propagação (valocidade da luz)
+  - c: velocidade de propagação (velocidade da luz)
   - f: frequência
 
 ##### DOMÍNIOS DO TEMPO E DA FREQUÊNCIA
