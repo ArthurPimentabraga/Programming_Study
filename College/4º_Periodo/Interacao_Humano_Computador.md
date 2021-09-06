@@ -101,35 +101,143 @@ Informações adquiridas por meio de nossos sentidos e transformadas em experiê
 
 Fatores que afetam a percepção:
 
-- asdsadasdasdsa
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/fatores_percepcao.png" style="width:60%">
 
 ### Princípios de Gestalt
 
-Como os seres humanos percebem as coisas, e como podemos utilizar ao nosso favor, deixar a interface mais perceptível à ideia dela em sí, mais fácil de entender o conteúdo da interface.
+Como os seres humanos percebem as coisas, e como podemos utilizar ao nosso favor, deixar a interface mais perceptível à ideia dela em sí, **mais fácil de entender o conteúdo da interface.**
 
-*Fazer projetos mais adequados aos seres humanos.*
+*Fazer projetos mais adequados aos seres humanos, como identificação de padrões, etc.*
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/principios_gestalt.png" style="width:70%">
+
+- **Proximidade:** Entidades visuais que estão próximas umas das outras são percebidas como um grupo;
+
+  - Podemos relacionar esse tópico com a **Região comum**, que fala que objetos dentro de uma região espacial confinada (grupos, bordas...) são percebidos como um grupo.
+
+  <img src="../../imgs/4_Periodo/Interacao_Humano_Computador/regiao_comum.png" style="width:25%">
+
+- **Continuidade:** Traços contínuos são percebidos mais prontamente do que contornos que mudem de direção rapidamente;
+
+  - Podemos relacionar esse tópico com a **Conectividade**, que fala que objetos conectados por traços contínuos são percebidos como relacionados.
+
+  <img src="../../imgs/4_Periodo/Interacao_Humano_Computador/conectividade.png" style="width:30%">
+
+- **Simetria:** Objetos simétricos são mais prontamente percebidos do que objetos assimétricos;
+
+- **Similaridade:** Objetos semelhantes são percebidos como um grupo;
+
+- **Destino comum:** Objetos com a mesma direção são percebidos como um grupo;
+
+- **Fecho:** A mente tende a fechar contornos para completar figuras regulares.
+
+> Exemplo: As pessoas demoram menos tempo para localizar itens em informações agrupadas, as vezes muito espaço em branco dificulta o processo de pesquisa.
+>
+> - Para o agrupamento, utilização de borda (2ª opção), utilização de contraste (1ª opção).
+
+**Alguns exemplos:**
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/exemplo_gestalt_1.png" style="width:80%">
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/exemplo_gestalt_2.png" style="width:80%">
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/exemplo_gestal_3.png" style="width:80%">
 
 ### Implicações do design para melhor percepção
 
+- O texto deve ser legível;
+- Os ícones devem ser fáceis de distinguir e de entender o significado;
+- Fronteiras e espaçamento são formas visuais eficazes de agrupar informação;
+- Os sons devem ser audíveis e distinguíveis;
+- Pesquisar técnicas adequadas de contraste de cor ao conceber uma interface:
+  - Amarelo sobre preto ou azul é bom;
+  - Amarelo sobre verde ou branco não é bom.
+- Feedback tátil deve ser utilizado criteriosamente.
 
+## Cognição 
 
-#### Cognição 
+Está associada ao processo de aprendizagem e elaboração de conhecimento.  É a partir do processo cognitivo que o ser humano consegue desenvolver suas capacidades intelectuais e emocionais, isto é, atenção, percepção, memória, aprendizado, leitura, fala e audição, resolução de problemas, planejamento, raciocínio e tomada de decisões
 
-#### Memória
+## Memória
 
-- Chunking:
+- Envolve a recordação de vários tipos de conhecimentos que permitem às pessoas agirem adequadamente
+  - Por exemplo, reconhecer o rosto de alguém ou recordar o nome de alguém
+- Processo: primeiro codificar e depois recuperar conhecimentos
+- O contexto é importante quanto à forma como nos lembramos (isto é, onde, quando, como, etc.)
+- Não nos lembramos de tudo – envolve filtrar e processar o que é observado
 
-#### Atenção
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/memoria.png" style="width:100%">
 
-Dar destaque em certas informações, agrupar.....
+### Memória de longo prazo
 
-#### Busca visual
+Tem capacidade ilimitada e pode ser indelével (podedurar toda a vida)
 
+Tipos de codificações:
 
+- **Memória semântica:** a informação armazenada tem um significado, tem uma informação contida.
+  - Ex.: a codificação olfativa e gustatória permitem reconhecer comida estragada.
+- **Memória procedimental:** conhecimento de como fazer algo, ações que costumávamos fazer e armazenamos na memória.
+  - Ex.: andar de bicicleta, tocar piano.
+- **Memória biográfica:** lembranças de histórias pessoais.
+  - Ex.: dia da formatura, morte de um parente.
+
+### Memória de trabalho
+
+Mantém lembrançaspor aproximadamente 30s, se não houver ensaio. Tipo memória RAM, como é limitada, se for preciso acrescentar mais itens a essa memória será necessário eliminar alguns itens.
+
+A capacidade de memória de trabalho pode ser aumentada utilizando **chunking**, que consiste em organizar o material em grupos (chunks). Ex.: ao invés de pensar no número 993953072, pensar em 2 chunks 99395-3072.
+
+Há o problema do "7+-2", um estudo que diz que a capacidade de memória imediata das pessoas é limitada a 7+-2 itens, logo a ideia era mostrarno máximo 7 itens em um menu, por exemplo. Mas como a escolha de um itens em um menu não precisa ser lembrada, podemos ter mais itens. Porém, às vezes um pequeno nº de itens é bom dependendo da tarefa e do espaço de tela disponível.
+
+### Implicações de design
+
+- Reduzir a carga cognitiva, **evitando procedimentos longos e complicados** para a realização de tarefas;
+- Projetar interfaces que promovam o **reconhecimento** em vez de lembranças;
+  - Por exemplo: menus, ícones, objetos localizados em posições que façam sentido.
+- Fornecer aos usuários várias maneiras de **rotular informações** digitais para ajudá-los a identificá-las facilmente novamente.
+  - Por exemplo: pastas, categorias, cores.
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/processamento_memoria.png" style="width:80%">
+
+## Atenção
+
+Consite em selecionar elementos em que se concentrar, apresentar informações ou formas de apresentação que facilite o usuário a dar foco no que o interessa.
+
+- Ex.: buscar uma notícia sobre um assunto específico em uma página de jornal ou aguardar alguém falar o seu nome quando está em uma sala de espera.
+
+**Busca de um quarto nas sequintes listagens:**
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/atencao_1.png" style="width:30%">
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/atencao_2.png" style="width:50%">
+
+**Formas básicas de atenção:** Seletiva ou focalizada, dividida (multitarefa).
+
+### Implicações de design
+
+- Contexto: Tornar a informação saliente (evidente) quando precisa de ser atendida numa determinada fase de uma tarefa;
+- Utilizar técnicas como cor, ordenação, espaçamento, sublinhado e animação;
+- Evitar a desorganização das interfaces visuais com demasiada informação.
+  - Cor, som e gráficos demais distraem.
+
+## Carga de trabalho mental
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/carga_mental_1.png" style="width:80%">
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/carga_mental_2.png" style="width:80%">
+
+## Busca visual
+
+Não há um padrão para a busca de um elemento específico em um contexto, mas há estudos para aplicações específicas, como:
+
+- A busca tende a ser da esquerda para a direita. Será cultural?
+- Indícios de que operadores tendem a concentrar-se no centro do painel de exibição.
+
+A atenção visual será atraída por atributos **grandes, vivos e que mudam.**
 
 18/08 :watch:
 
-#### Erro humano
+## Erro humano
 
 Erros humanos são responsáveis por 60 a 90% dos acidentes.
 
