@@ -21,41 +21,10 @@ Em uma aula minha professora citou a seguinte frase: "De nada adianta a evoluç�
 
 > Aqui está a listagem de todo nosso conteúdo. O link o redirecionará para o arquivo respectivo. **Se sua contribuição incluir um novo arquivo, adicione a listagem do mesmo aqui para todos saberem a existência dele, e facilitar o acesso ao mesmo.**
 
-### Negócios
 
-| **Title** | Link      |
-| --------- | ---------------- |
-| Business | [Click here :nerd_face:](Business/Business.txt) |
-
-### Ferramentas
-
-| **Title** | Link |
-| --------- | ---------------- |
-| Git | [Click here :nerd_face:](Ferramentas/Git.md) |
-
-### Frameworks
-
-| **Title** | Link |
-| --------- | ---------------- |
-| Quarkus | [Click here :nerd_face:](Frameworks/Quarkus.md) |
-
-### Bibliotecas
-
-| **Title** | Link |
-| --------- | ---------------- |
-| React | [Click here :nerd_face:](Libs/React.md) |
-
-### Linguagens
-
-| **Title** | Link |
-| --------- | ---------------- |
-| CSS | [Click here :nerd_face:](Linguagens/CSS.md) |
-| HTML | [Click here :nerd_face:](Linguagens/HTML.md) |
-| Java | [Click here :nerd_face:](Linguagens/Java.md) |
-| Javascript | [Click here :nerd_face:](Linguagens/Javascript.md) |
-
-### Sistemas Operacionais
-
-| **Title** | Link |
-| --------- | ---------------- |
-| Linux | [Click here :nerd_face:](Sistemas_Operacionais/Linux.md) |
+| **Negócio** | **Frameworks** | **Ferramentas** | **Bibliotecas** | **Linguagens** | **Sistemas Operacionais** |
+| --- | --- | --- | --- | --- | --- |
+| [Business](Business/Business.txt) | [Quarkus](Frameworks/Quarkus.md) | [Git](Ferramentas/Git.md) | [React](Libs/React.md) | [CSS](Linguagens/CSS.md) | [Linux](Sistemas_Operacionais/Linux.md)
+||||| [HTML](Linguagens/HTML.md) |
+||||| [Java](Linguagens/Java.md) |
+||||| [Javascript](Linguagens/Javascript.md) |
