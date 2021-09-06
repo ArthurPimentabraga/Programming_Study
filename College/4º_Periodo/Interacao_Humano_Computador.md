@@ -95,6 +95,8 @@ Nós, como humanos, temos limitações, nós não lembramos de tudo, nos distrai
 
 ## Percepção
 
+Como os usuários entendem as informações dispostas no sistema, como fazer com que ele ache o que está procurando de forma mais rápida e intuitiva.
+
 Informações adquiridas por meio de nossos sentidos e transformadas em experiências.
 
 >  Note: Para os que enxergam, a visão é o sentido dominante...
@@ -125,7 +127,7 @@ Como os seres humanos percebem as coisas, e como podemos utilizar ao nosso favor
 
 - **Simetria:** Objetos simétricos são mais prontamente percebidos do que objetos assimétricos;
 
-- **Similaridade:** Objetos semelhantes são percebidos como um grupo;
+- **Similaridade:** Objetos semelhantes, com características visuais semelhantes, são percebidos como um grupo;
 
 - **Destino comum:** Objetos com a mesma direção são percebidos como um grupo;
 
@@ -160,11 +162,11 @@ Está associada ao processo de aprendizagem e elaboração de conhecimento.  É 
 
 ## Memória
 
-- Envolve a recordação de vários tipos de conhecimentos que permitem às pessoas agirem adequadamente
-  - Por exemplo, reconhecer o rosto de alguém ou recordar o nome de alguém
-- Processo: primeiro codificar e depois recuperar conhecimentos
-- O contexto é importante quanto à forma como nos lembramos (isto é, onde, quando, como, etc.)
-- Não nos lembramos de tudo – envolve filtrar e processar o que é observado
+- Envolve a recordação de vários tipos de conhecimentos que permitem às pessoas agirem adequadamente;
+  - Por exemplo, reconhecer o rosto de alguém ou recordar o nome de alguém.
+- Processo: primeiro codificar e depois recuperar conhecimentos;
+- O contexto é importante quanto à forma como nos lembramos (isto é, onde, quando, como, etc.);
+- Não nos lembramos de tudo – envolve filtrar e processar o que é observado.
 
 <img src="../../imgs/4_Periodo/Interacao_Humano_Computador/memoria.png" style="width:100%">
 
@@ -183,7 +185,7 @@ Tipos de codificações:
 
 ### Memória de trabalho
 
-Mantém lembrançaspor aproximadamente 30s, se não houver ensaio. Tipo memória RAM, como é limitada, se for preciso acrescentar mais itens a essa memória será necessário eliminar alguns itens.
+Mantém lembranças por aproximadamente 30s, se não houver ensaio. Tipo memória RAM, como é limitada, se for preciso acrescentar mais itens a essa memória será necessário eliminar alguns itens.
 
 A capacidade de memória de trabalho pode ser aumentada utilizando **chunking**, que consiste em organizar o material em grupos (chunks). Ex.: ao invés de pensar no número 993953072, pensar em 2 chunks 99395-3072.
 
@@ -194,7 +196,7 @@ Há o problema do "7+-2", um estudo que diz que a capacidade de memória imediat
 - Reduzir a carga cognitiva, **evitando procedimentos longos e complicados** para a realização de tarefas;
 - Projetar interfaces que promovam o **reconhecimento** em vez de lembranças;
   - Por exemplo: menus, ícones, objetos localizados em posições que façam sentido.
-- Fornecer aos usuários várias maneiras de **rotular informações** digitais para ajudá-los a identificá-las facilmente novamente.
+- Fornecer aos usuários várias maneiras de **rotular informações** digitais para ajudá-los a identificá-las facilmente novamente. Ou seja, deixar o usuário fazer sua própria organização.
   - Por exemplo: pastas, categorias, cores.
 
 <img src="../../imgs/4_Periodo/Interacao_Humano_Computador/processamento_memoria.png" style="width:80%">
@@ -239,59 +241,103 @@ A atenção visual será atraída por atributos **grandes, vivos e que mudam.**
 
 ## Erro humano
 
-Erros humanos são responsáveis por 60 a 90% dos acidentes.
+Erros humanos são responsáveis por 60 a 90% dos acidentes. Ou seja, devemos criar designs que minimizam as chances de ações que desviam do que o usuário pretendia (lapsos de ação). Um bom exemplo são os famosos tutoriais de instalação de programas, ou realização de tarefas (wizards - deve ser algo bem feito, claro, e opcional).
 
-- Wizards: 
-  - Algo claro, bem feito;
-  - Opcional
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:90%">
+
+![image-20210906132452261](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210906132452261.png)
 
 ## Computação afetiva
 
-Detectar as emoções/reações e lidar com ele, comportar-se de acordo. 
+Detectar as emoções/reações e lidar com ele, comportar-se de acordo. Criar sistemas que provoquem resposta emocional das pessoas ou que permitam que elas expressem emoções.
 
+*“O afeto preocupa-se em descrever toda a gama de emoções, sensações, sentimentos, ânimos e outros aspectos das pessoas que podem ser considerados como **não cognitivos** (que não procuram descrever como chegamos a conhecer e entender as coisas) e **não conativos** (que não procuram descrever intenção ou vontade).”*
 
+- Que humor combina com que tipos de interfaces?
+- Como você projetaria uma interface para quando alguém está feliz, bravo, triste, entediado ou concentrado?
+
+Ex.: Estresse e raiva estão entre os principais fatores de acidentes em estradas.
+
+- Sensores podem detectar se o motorista está zangado ou estressado, medindo pressão sanguínea e batimentos cardíacos.
+- O veículo pode oferecer aconselhamento ou recusar-se a dar partida ou telefonar para alguém.
 
 ### Teorias psicológicas sobre emoção
 
+Detectar mudanças é mais fácil, o difícil é relacionar com uma emoção específica.
+
 <img src="../../imgs/4_Periodo/Interacao_Humano_Computador/teoria_emocao.png" style="width:90%">
 
-> Detectar é mais fácil, o difícil é relacionar com uma emoção específica.
-
-> Periféricos que captam a mudança de emoção para adaptação dos sistemas.
+Oito emoções básicas ou primárias podem ser combinadas para produzir emoções secundárias. Por exemplo, Aceitação e Alegria se combinam para criar Amor. Podemos ver isso na roda das emoções:
 
 <img src="../../imgs/4_Periodo/Interacao_Humano_Computador/roda_emocoes.png" style="width:60%">
 
-### Expressar emoção
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:60%">
 
-O pc pode "sintetizar emoções", deixando tudo em capslock....
+![image-20210906133253674](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210906133253674.png)
 
-É ético 
+## Expressar emoção
 
-### Interfaces expressivas
+O sistema pode "sintetizar emoções", deixando tudo em capslock, por exemplo, fornecendo feedbacks reconfortantes que são divertidos e informativos (iFood); Cores, icones, elementos gráficos e animações são usados para tornar o "look and feel" (veja e sinta) de uma interface atraente.
 
-Como faz isso com o que temos agora?
+As pessoas estão preparadas para suportar certos aspectos de uma interface (por exemplo, taxa de downloadlenta) se o resultado final for atraente e estético.
 
-interfaces frustantes...
+### Interfaces frustantes
+
+Em algumas situações, interfaces podem causar respostas emocionais negativas. Isso é comum ocorrer quando algo que deveria ser simples se torna complexo. Ex.: Encontrar um botão desejado em um controle remoto; Alterar a hora em um relógio digital.
 
 Causas possíveis:
 
-- asadsdas
+- Quando uma aplicação não funciona corretamente ou falha;
+- Quando um sistema não faz o que o usuário quer que ele faça;
+- Quando as expectativas de um usuário não são atendidas;
+- Quando um sistema não fornece informações suficientes para permitir que o usuário saiba o que fazer;
+- Quando surgem mensagens de erro que são vagas ou condenatórias;
+- Quando a aparência de uma interface é espalhafatosa, paternalista ou chama a atenção porém sem valor real;
+- Quando um sistema exige que os usuários executem muitas etapas para realizar uma tarefa, apenas para descobrir que um erro foi cometido no começo e que eles precisam começar tudo de novo.
 
-#### Interfaces expressivas x interfaces frustantes
+### Interfaces expressivas x interfaces frustantes
 
+- Quando uma interface não é suficientemente clara e intuitiva, o usuário pode ter medo de realizar uma tarefa;
+- Se a interface possui excesso de elementos gráficos e cores, pode levar o usuário a sentir-se frustrado ou cansado;
+- Se o sistema enviar uma mensagem de erro justamente no momento em que o usuário estiver realizando uma tarefa importante, isso, sem dúvida, o fará ter raiva desse sistema;
+- Uma das principais vantagens competitivas da Apple, por exemplo, foi sempre apresentar interfaces à frente dos concorrentes.
 
+### Mensagens de erro
 
-#### Mensagens de erro
+Não é pra condenar o usuário, é pra ser gentil, explicar de forma clara o que é o erro, o que rolou.
 
-Não é pra condenar o usuário, é pra ser gentil, explicar o que é o erro, o que rolou.
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:60%">
 
-Computador deve pedir desculpas?
+![image-20210906134257287](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210906134257287.png)
 
-#### Antropomorfismo
+- Ao invés de explicar o que aconteceu, eles devem declarar a causa do problema e o que o usuário precisa fazer para resolvê-lo;
+- Ao invés de condenar os usuários, as mensagens devem ser gentis;
+- Evite usar termos como FATAL, INVALID, ILLEGAL ou BAD;
+- As mensagens devem ser precisas em vez de vagas;
+- Evite LETRAS MAIÚSCULAS e números de código longos;
+- Avisos de áudio devem estar sob o controle do usuário;
+- As mensagens devem permitir ajuda sensível ao contexto;
+- As mensagens devem ser fornecidas em vários níveis, para que mensagens curtas possam ser complementadas com explicações mais longas.
 
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:60%">
 
+![image-20210906134522118](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210906134522118.png)
 
-> Computação afetiva e aprendizado
+### Antropomorfismo
+
+Atribuição de qualidades humanas a objetos inanimados (por exemplo, carros ou computadores). Fazer as pessoas se sentirem à vontade, reduzindo a ansiedade. Aplicar simpatia e comunicação afetiva na interação com o usuário.
+
+> Início de atividade:
+>
+> - “Olá, Carlos! Prazer em vê-lo novamente. Então, o que estávamos fazendo da última vez? Oh sim, Exercício 5. Vamos começar de novo”.
+> - “Usuário 24, comece o Exercício 5”.
+>
+> Feedback
+>
+> - “Então, Carlos, isso não está certo. Você pode fazer melhor do que isso. Tente novamente”.
+> - “Incorreto. Tente de novo”.
+
+A emoção pode estar diretamente ligada ao aprendizado, ou seja, se o usuário se sente empolgado, encorajado e motivado, a probabilidade de aprender a utilizar o sistema é bem maior. Ex.: Um sistema de realização de atividade que utiliza de feedbacks que motivam o aluno, faz com que ele se sinta mais disposto a continuar com os exercícios.
 
 ---
 
