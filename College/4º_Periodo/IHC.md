@@ -496,46 +496,73 @@ Nós descobrimos se essa comunicação está boa justamente com o estudo de camp
 
 ## Teoria da Atividade
 
+Permite analisar a adequação de uma ferramenta para uma **prática**, bem como estudar de que maneira a introdução de um artefato particular modifica a prática e como a prática pode modificar o uso do artefato. Explica o comportamento humano em termos de nossa atividade prática com o mundo, muito ligado à prática de aprendizagem.
 
+Fornece um framework que focaliza a análise em torno do conceito de “atividade” e ajuda a identificar tensões entre os diferentes elementos do sistema.
 
-26/08 :watch:
+Possui dois modelos chave:
 
+- Um delineia o que constitui uma atividade
+- Outro modela o papel mediador dos artefatos. 
+  - Um artefato pode ser físico ou abstrato
 
+Conjunto de atividades/necessidades que são realizadas por ações, que por sua vez são completadas por operações. 
 
+Sempre que uma ação fica automatizada, ela se torna uma operação. E vise versa.
 
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/teoria_atividade.png" style="width:70%">
+
+Uma crítica é que não há prescrição clara de um procedimento, a identificação dos elementos dependerá da interpretação individual.
+
+Por outro lado, uma coisa boa é que permite identificar necessidades para uma nova ferramenta e analisar problemas existentes em um trabalho.
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/relacao_Atividade.png" style="width:50%">
+
+Perturbação (disturbance): Problemas identificados no modelo da atividade. Ex.: Para um agendamento de consulta Online, caso o médico não tenha agenda livre, o usuário terá que seguir um caminho diferente do que ele costuma traçar. Ele teria que entrar em um fila de espera ou buscar outro médico.
 
 ## Cognição distribuída
 
+26/08 :watch:
 
+Diferente das teorias cognitivas tradicionais, a cognição distribuída amplia a semântica de cognitivo para abranger as interações entre pessoas, recursos e materiais no ambiente.
+
+Surgiu de uma necessidade de entender o trabalho que extrapola o indivíduo, entender como o processamento de informação e a resolução de problemas incorporam o uso de ferramentas e envolvem outras pessoas. 
+
+Uma análise de cognição distribuída envolve:
+
+- descrever o contexto da atividade, os objetivos do sistema funcional e seus recursos disponíveis;
+- identificar as entradas e saídas do sistema funcional;
+- identificar as representações e os processos disponíveis;
+- identificar as atividades de transformação que ocorrem durante a resolução de problemas para atingir o objetivo do sistema funcional.
 
 ## Engenharia semiótica
 
 Signo: É uma coisa que serve para transmitir alguma informação.
 
-![image-20210828172526416](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210828172526416.png)
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/semiotica.png" style="width:70%">
 
 > Sempre que há convenções sociais ou culturais que nos permitem interpretar signos, temos um sistema de significação e, portanto, um código. 
 
 Os produtores de signos podem utilizar:
 
-- signos conhecidos (culturalmente convencionados) de formas convencionais
-- signos conhecidos de formas criativas 
-- inventar signos
+- signos conhecidos (culturalmente convencionados) de formas convencionais;
+- signos conhecidos de formas criativas ;
+- inventar signos.
 
 A representação de um objeto pode ser: 
 
 - Icônica: baseada nas semelhanças e características comuns ao objeto a que se refere.
-  - Ex: desenho de uma impressora na interface de determinado software é um ícone para a impressora real e para a tarefa de imprimir. 
+  - Ex.: desenho de uma impressora na interface de determinado software é um ícone para a impressora real e para a tarefa de imprimir. 
 - Indicial: guarda a relação de causa e efeito.
-  - Ex: fumaça usada para indicar fogo ou o desenho de uma ampulheta “significando” o correr do tempo.
+  - Ex.: fumaça usada para indicar fogo ou o desenho de uma ampulheta “significando” o correr do tempo.
 - Simbólica: baseada em convenções estabelecidas.
-  - Ex: linguagem natural, formalismos lógico e matemático, palavras reservadas em linguagens de programação.
+  - Ex.: linguagem natural, formalismos lógico e matemático, palavras reservadas em linguagens de programação.
 
 ### Semiose
 
 O interpretante de um signo é, ele próprio, outro signo. Sendo assim, é passível de ser, ele próprio, interpretado, gerando outro interpretante, e assim sucessivamente. Esse processo interpretativo que nos leva a associar cadeias de significados (interpretantes) a um signo é denominado semiose. Trata-se de um processo potencialmente ilimitado.
 
-![image-20210828172749169](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210828172749169.png)
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/semiose.png" style="width:50%">
 
 Na prática, a semiose é interrompida quando o intérprete:
 
@@ -549,65 +576,335 @@ Na prática, a semiose é interrompida quando o intérprete:
 
 01/09 :watch:
 
-[Contexto]
+Artefato são os produtos artificiais, fruto da inteligência e do trabalho humano, construídos com um determinado propósito em mente. Ex.: Bicicleta, geladeira, entre outros.
 
-​	[artefato]
+Um artefato pode trazer consequências positivas e negativas. Ex.: Adquirir uma bicicleta:
 
-Artefato são os produtos artificiais, fruto da inteligência e do trabalho humano, construídos com um determinado prósito em mente.
+- Aspectos positivos:
+  - economia de dinheiro gasto em outros meios de transporte; 
+  - a pratica de esportes para uma vida mais saudável; 
+  - a ajuda na preservação do meio ambiente.
+- Aspectos negativos:
+  - necessidade de reservar um local para guardá-la;
+  - necessidade de comprar um capacete e outros equipamentos para utilizar a bicicleta com segurança. 
 
-Um artefato pode trazer consequências positivas e negativas....
+## O que é design?
 
-[O que é design]
+Desde sua concepção e durante todo o seu desenvolvimento, um sistema interativo deve ter o propósito de **apoiar os usuários a alcançarem seus objetivos.**
 
-​	[Processo iterativo]
+O design de um sistema interativo é um processo iterativo de análise, síntese e avaliação, no qual artefatos são coletados e produzidos visando não apenas à construção do sistema, mas também à promoção de uma boa experiência de uso desse sistema.
 
-É um processo com três atividades básicas:
+É um processo com três atividades básicas: Análise, Síntese e Avaliação.
 
-- **Análise** da situação atual: estudar e interpretar a situação atual;
-  - ....
-- **Síntese** de uma intervenção: planejar e executar uma intervenção na situação atual;
-- **Avaliação** da nova situação.
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:50%">
 
 ![image-20210901191945312](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210901191945312.png)
 
-[perspectivas de design]
+### Análise
 
-​	[reflexão em ação]
+Análise da situação atual: estudar e interpretar a situação atual.
 
-[diferença - Cliente x Usuário]
+Busca conhecer os elementos envolvidos e suas relações, como: os assuntos tratados, os objetivos das pessoas envolvidas e o tempo, orçamento e mão de obra disponíveis.
 
-[Métricas]
+- Diferentes focos de análise contribuem para diferentes interpretações da situação atual.
+  - Se o objetivo de uma organização for aumentar a produtividade dos seus funcionários: a análise da situação atual pode concentrar esforços na investigação de atividades ineficientes.
+  - Se o objetivo da organização for compreender os motivos pelos quais seus funcionários não utilizam como esperado os sistemas computacionais oferecido: a análise da situação atual pode concentrar esforços em compreender a opinião dos funcionários sobre esses sistemas.PUC Minas 
 
-[Ciclos - Técnicas....]
+### Síntese
+
+Síntese de uma intervenção: planejar e executar uma intervenção na situação atual;
+
+A análise da situação atual aponta as necessidades e oportunidades de melhoria para as quais será projetada uma intervenção. 
+
+Razões para a intervenção costumam ser representadas por metas de design. Em IHC, metas de design referem-se aos objetivos dos usuários e aos critérios de qualidade de uso.
+
+Ex.: durante a análise de uma situação, percebeu-se que os usuários gastam muito tempo processando informações que um sistema computacional poderia fazer mais rapidamente.
+
+- Possível meta de design: aumentar a eficiência das atividades (ou tarefas) do usuário, que é um dos fatores de usabilidade. 
+
+> Intervenção = solução desejada.
+
+### Avaliação
+
+Uma vez definida uma intervenção, é preciso avaliar se ela modifica a situação atual da forma desejada.
+
+A avaliação de uma intervenção pode ocorrer em vários pontos do processo de desenvolvimento:
+
+- Durante a concepção e o desenvolvimento da intervenção, para tentar prever seus possíveis impactos na situação atual;
+  - Ex.: inspecionando as telas produzidas durante o projeto da interface com usuário.
+- Logo antes da introdução da intervenção, para identificar consequências negativas ou problemas que possam ser evitados;
+  - Ex.: fazendo testes com usuários e produzindo material de treinamento a partir dos seus resultados.
+- Depois da intervenção ter sido aplicada, para verificar os impactos ocorridos.
+  - Ex.: avaliando como os usuários se apropriaram do sistema interativo desenvolvido e quais mudanças ocorreram na sua prática de trabalho.
+
+Em IHC, os esforços de avaliação se concentram na experiência vivenciada pelos usuários durante a interação com a interface de um sistema interativo, ou seja, durante o uso do sistema. 
+
+Sempre que possível, deve-se avaliar a qualidade de uso desde o início do processo de design dos sistemas interativos, pois o custo de correção de eventuais problemas será menor.
+
+## Perspectivas de design
+
+São formas de interpretar a atividade de design.
+
+- Racionalismo técnico: Pensa e aplica o que a técnica diz. Busca uma solução geral.
+- Reflexão em ação: Pensar em soluções específicas para cada problema. Melhor solução para cada caso.
+
+### Reflexão em ação
+
+Durante a concepção de uma solução o designer explora várias diferentes ideias para poder compara-las.
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:50%">
+
+![image-20210907113400503](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210907113400503.png)
+
+Ex.: Busca filtrada por tags ou paginação?
+
+É como se o designer conversasse com sua solução: E se eu fizer isso? E se eu mudar isso? E assim vai.
+
+Caso não encontre uma solução satisfatória ele pode pensar em reformular tanto a solução, quanto a ideia do problema.
+
+É um processo que não acaba nunca, por que sempre pode ser melhorado, alterado.
+
+**Diferença entre cliente e usuário:** O cliente define o que quer no sistema, não necessáriamente vai utiliza-lo. O usuário é quem utiliza o sistema de fato.
+
+### Processos
+
+Cada processo de design detalha as atividades básicas, definindo:
+
+- como executar cada atividade;
+- a sequência em que elas devem ser executadas;
+- quais atividades podem se repetir e por quais motivos;
+- os artefatos consumidos e produzidos em cada uma delas.
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:50%">
+
+![image-20210907114629470](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210907114629470.png)
+
+A etapa de início é definida pelo designer:
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:50%">
+
+![image-20210907114903199](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210907114903199.png)
+
+Processos centrados no usuário seguem estes princípios: 
+
+- Foco no usuário:
+  - o designer deve projetar a interação e a interface de um sistema interativo para atender às necessidades dos usuários e ajudá-los a alcançarem seus objetivos. 
+  - o designer deve estudar quem serão os usuários do sistema, seus objetivos, suas características físicas, cognitivas e comportamentais, sua formação educacional e o que costumam fazer para alcançar seus objetivos.
+- Métricas observáveis:
+  - o processo de design deve permitir a realização de experimentos (estudos empíricos) em que representantes dos usuários usem simulações ou protótipos do sistema para realizarem suas atividades e alcançarem seus objetivos. 
+- Design iterativo:
+  - quando problemas forem encontrados durante os experimentos com usuários, eles deverão ser corrigidos.
+
+Quanto mais cedo os usuários forem envolvidos no processo de design, mais cedo será possível aprender sobre suas necessidades.
+
+### Tipos de processos
+
+#### Ciclo de vida simples
+
+Design centrado no usuário, pois desenvolve a partir das necessidades do usuário e pode envolve-lo no processo de avaliação. 
+
+Nesse modelo a Sintese foi dividida em duas etapas, o desing e a construção interativa, logo temos uma versão mais construida do design.
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:50%">
+
+![image-20210907115545099](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210907115545099.png)
+
+#### Ciclo de vida em estrela
+
+Como decidir por qual atividade começar? Depende do que estiver disponível quando iniciar o processo. Por exemplo, se a intenção for projetar uma nova versão do sistema, o designer pode começar o projeto da nova versão pela avaliação da versão atual. 
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:50%">
+
+![image-20210907115955254](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210907115955254.png)
+
+#### Engenharia de usabilidade de Nielsen
+
+Nielsen (1994) definiu engenharia de usabilidade como um conjunto de atividades que devem ocorrer, ressaltando que muitas delas ocorrem nos estágios iniciais do projeto, antes que a interface com usuário em si seja projetada. 
+
+Ele propõe o seguinte conjunto de atividades em seu ciclo de vida:
+
+- **Conheça seu usuário**
+  - Os usuários não serão os mesmos após a introdução do sistema. O sistema modifica os usuários e, à medida que isso ocorre, eles usarão o sistema de novas formas. Embora seja impossível prever todas as mudanças, um design mais flexível, adaptável ou extensível tem mais chances de apoiar esses novos usos.
+- **Realize uma análise competitiva**
+  - Aprender com o que já existe. A análise competitiva consiste em examinar produtos com funcionalidades semelhantes ou complementares. Como resultado, o designer pode obter um conjunto de informações sobre o que funciona e o que não funciona naquele domínio, o que pode ser aperfeiçoado e por quê.
+- **Defina as metas de usabilidade**
+  - Fatores de qualidade de uso (metas de usabilidade); Como serão avaliados ao longo do processo de design; Quais faixas de valores são inaceitáveis, aceitáveis e ideais para cada indicador de interesse.
+- **Faça designs paralelos**
+  - Consiste em elaborar diferentes alternativas de design, de preferência por três ou quatro designers trabalhando de forma independente, para então selecionar as que vão ser detalhadas nas atividades seguintes do processo.
+- **Adote o design participativo**
+  - Consiste em a equipe de design ter acesso permanente a um conjunto de usuários tidos como representativos da população-alvo. 
+- **Faça o design coordenado da interface como um todo**
+  - Para evitar inconsistências na interface com usuário projetada, é importante haver um responsável pelo design coordenado da interface.
+- **Aplique diretrizes e análise heurística**
+  - A equipe de design deve seguir diretrizes, princípios bem conhecidos para o design da interface. 
+  - À medida que a interface for projetada, deve ser feita uma avaliação heurística. 
+- **Faça protótipos**
+  - Podem ser desenvolvidos rapidamente e a um custo baixo, para que sejam avaliados junto a usuários e modificados. O mínimo para o usuário entender como será a utilização. Pode ser até em papel.
+- **Realize testes empíricos**
+  - Os testes empíricos consistem principalmente na observação dos usuários ao utilizarem os protótipos para realizar certas tarefas.
+- **Pratique design iterativo**
+  - A cada iteração de design e avaliação, alguns problemas são corrigidos (e infelizmente outros podem ser introduzidos) e o processo deve se repetir até que as metas de usabilidade tenham sido alcançadas. 
+  - É importante registrar as decisões tomadas para que, no futuro, não sejam tomadas decisões que sacrifiquem metas de usabilidade importantes ou que introduzam inconsistências por falta de informação sobre o histórico do projeto.
+
+#### Engenharia de usabilidade de Mayhew
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:50%">
+
+![image-20210907121835061](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210907121835061.png)
+
+#### Design contextual
+
+O design contextual (contextual design) é um processo de design de IHC que orienta o designer a compreender profundamente as necessidades dos usuários por meio de uma investigação minuciosa do contexto de uso.
+
+As atividades do design contextual são: 
+
+1. Investigação contextual;
+2. Modelagem do trabalho;
+3. Consolidação - Usado o diagrama de afinidade;
+4. Reprojeto do trabalho;
+5. Projeto do ambiente do usuário;
+6. Prototipação;
+7. Teste com usuários.
+
+#### Design thinking
+
+Design Thinking é um método de solução de problemas centrado no usuário. 
+
+Pilares importantes: 
+
+- Empatia
+  - Tentar compreender o que o usuário pensa e sente, seus interesses. 
+- Colaboração
+  - Trabalhoemequipe multidisciplinar.
+- Experimentação
+  - Fazer experimentos para diminuir o risco em fases mais avançadas da criação. 
 
 
 
 02/09 :watch:
 
-[IHC - ES]
-
-​	[Diferença]
-
-​	[Princípios-chave]
-
-​	[IHC e Métodos ágeis]
-
 ---
 
 # Identificação de necessidade dos usuários
 
-Conhecer o usuário -> Coleta de dados
+NoprocessodedesigndeIHC,oprincipal objetivo da atividade de análise é identificar os requisitos dos usuários e as metas de design de IHC.
 
-[Relacionamento com participantes]
+Pontos principais envolvidos na coleta de dados:
 
-[Triangulação]
+1. definição dos objetivos da coleta de dados;
+2. relacionamento com participantes;
+3. triangulação;
+4. estudos-piloto.
 
-[Estudo-piloto]
+## Definição dos objetivos
 
-[Que dados coletar?]
+Envolve identificar as razões para coleta de dados. Ex.: 
 
-[De quem coletar?]
+- como a tecnologia se encaixa no cotidiano de um grupo de pessoas;
+- quais dificuldades elas encontram no seu dia a dia que podem ser reduzidas com a introdução de novas tecnologias;
+- qual dentre duas ou mais alternativas de design melhor satisfaz os desejos de uma classe de usuários.
 
-[Aspectos éticos]
+Os objetivos da coleta de dados determinam **quais dados** devem ser coletados e **quais técnicas** de coletas de dados podem ser utilizadas. 
 
-[Entrevista]
+## Relacionamento com participantes
+
+Os participantes que fornecerão os dados devem ser informados sobre esses objetivos e consentir com a sua coleta, com as condições de privacidade e anonimato previstas, com a forma como os dados serão utilizados, por quem e para quê. 
+
+Esse esclarecimento ajuda a formar um relacionamento profissional entre as partes, bem como assegurar aos participantes o uso adequado das informações que eles forneçam. 
+
+Em geral, a autorização dos participantes e obtida através da assinatura de um formulário de consentimento. 
+
+## Triangulação
+
+É uma estratégia de utilizar mais do que uma técnica de coleta ou análise de dados para obter diferentes perspectivas e confirmar as descobertas, permitindo obter resultados mais rigorosos e válidos. 
+
+- Por exemplo: utilizar observação para entender o contexto de realização das tarefas, realizar entrevistas para endereçar grupos de usuários específicos e distribuir questionários para alcançar uma população mais ampla
+
+Com a triangulação descobrem-se complementaridades e inconsistências entre o que as pessoas dizem e o que elas fazem, revelando que uma única forma de coleta de análise de dados seria insuficiente para obter os resultados necessários.
+
+## Estudos piloto
+
+É uma pequena prévia do estudo principal, com o objetivo de assegurar que o estudo é viável e permitirá coletar os dados desejados e realizar as análises planejadas. 
+
+Idealmente, os participantes do estudo-piloto deveriam ser membros da população-alvo do estudo. Entretanto, ha situações em que o acesso à população-alvo é limitado. 
+
+Nesses casos, pode-se pedir para pessoas de perfil semelhante ou mesmo colegas participarem do estudo-piloto. É importante observar que qualquer pessoa envolvida num estudo-piloto não deve estar envolvida no estudo principal, pois poderão distorcer os resultados.
+
+## Que dados coletar?
+
+- O próprio usuário;
+  - Dados demográficos: idade, sexo, status socioeconômico;
+  - Educação: grau de instrução, área de formação, cursos realizados.  O quão bom seu usuário lê...
+  - Idiomas e jargões: que idiomas o usuário conhece e utiliza fluentemente?
+- Sua relação com tecnologia;
+  - Experiência com computadores;
+  - Experiência com um produto específico ou ferramentas semelhantes;
+  - Tecnologia disponível: hardware (tamanho da tela, velocidade de processamento...).
+- Seu conhecimento do domínio do produto;
+  - Conhecimento do domínio: o que e quanto o usuário conhece sobre o assunto em questão? É especialista? É esperado que se torne um especialista?
+- Seu conhecimento das tarefas que deverá realizar;
+  - Objetivos: como eles são alcançados atualmente?
+  - Tarefas: quais tarefas do usuário precisam ser apoiadas? Quais dessas são consideradas primárias e quais são secundárias? Há quanto tempo realiza essas tarefas? São tarefas frequentes ou infrequentes? São tarefas inovadoras? Que experiência ele possui em tarefas semelhantes?
+  - Experiência no cargo que ocupa: cargo atual, experiência nesse cargo, tempo na empresa, responsabilidades, trabalhos e cargos anteriores, plano de carreira;
+  - Gravidade dos erros: em geral, as possíveis consequências dos erros de um usuário.
+- Suas motivações e valores.
+  - Motivação para o trabalho: o usuário se limita a cumprir a carga horária ou trabalha além do expediente, por prazer? Gosta da interação social no local de trabalho? Tem ambição de ser promovido?
+  - Treinamento: o quanto o usuário valoriza treinamento? Prefere um estilo de aprendizado visual, auditivo ou outro? Pode investir tempo aprendendo a utilizar o produto em questão?
+  - Atitudes e valores: preferências de produto, medo de tecnologia etc. O usuário costuma assumir riscos e explorar novas formas de fazer o mesmo trabalho? Ou evita novas experiências, preferindo caminhos já percorridos e testados? Ou prefere que alguém lhes mostre cada passo de uma nova tarefa sendo aprendida?
+
+### De quem coletar?
+
+Dos usuários finais e de pessoas interessadas no sistema (stakeholders)
+
+Para identificar as partes interessadas que podem fornecer informações relevantes é importante investigar:
+
+- Quem utilizará o sistema? 
+- Quem será afetado por ele? 
+- Quem é responsável por decidir quais objetivos o sistema deve apoiar e quais funcionalidades ele deve ter? 
+- Quem definiu os processos a serem apoiados pelo sistema?
+
+Caso o projeto em questão seja de melhoria ou expansão de um sistema existente, é importante conhecer também: 
+
+- Quem utiliza o sistema atualmente? 
+- Além dos usuários atuais, quem passará a utilizá-lo?
+- Quem são os usuários satisfeitos com o sistema? E quem são os insatisfeitos? 
+- Quem concebeu o sistema?
+- Quem preparou a documentação do sistema? 
+- Quem dá treinamento aos usuários? 
+- Quem dá suporte aos usuários? 
+- Quem faz a manutenção do sistema? 
+- Quem projetou o sistema?
+
+Outros:
+
+- Feedback dos usuários;
+- Arquivos de log;
+- Análise competitiva;
+- Processos e normas
+
+## Aspectos éticos
+
+Precisamos cuidar dos aspectos éticos em qualquer pesquisa envolvendo pessoas direta ou indiretamente.
+
+> Resolução nº 66/2012 do Conselho Nacional de Saúde.
+
+Explicamos os objetivos aos participantes:
+
+- Garantimos a confidencialidade e a privacidade dos dados brutos coletados;
+- Garantimos o anonimato nos dados divulgados;
+- Solicitamos permissão para gravar dados dos usuários;
+- Realizamos o estudo apenas com o consentimento livre e esclarecido, geralmente atestado com um termo de consentimento assinado;
+- Asseguramos que os participantes têm o direito e a liberdade de recusar ou desistir de participar da pesquisa a qualquer momento.
+
+> No Brasil não é permitido qualquer remuneração ou brinde para os usuários que acordarem participar da pesquisa.
+
+## Como coletar dados dos usuários?
+
+- Entrevistas;
+  - Mais informações no resumo de "Engenharia de requisitos".
+- Questionários;
+- Grupos de Foco;
+- Brainstormingde Necessidades e Desejos dos Usuários;
+- Classificação de cartões (card sorting);
+- Estudos de Campo;
+- Investigação Contextual.
