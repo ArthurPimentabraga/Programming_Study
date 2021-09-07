@@ -180,6 +180,10 @@ O que o sistema tem que fazer e como deve fazer. Funcionais e não funcionais.
 
 - Tipos......
 
+
+
+
+
 ---
 
 # Desenvolvimento dos requisitos
@@ -228,6 +232,13 @@ Uma fonte sempre presente é a LGPD.
 - **Brainwriting:** dgfsdfsd
 - **Entrevistas:** asdasdasd
   - Pergunta básica: Essa solução vai substituir outra?
+  - Estruturada: Conduz na sequência planejada, segue o roteiro a risca. Garante que as mesmas perguntas serão feitas para todos.
+  - Não estruturada: O roteiro é só uma base, a medida que a entrevista acontece o entrevistador pode seguir caminhos diferentes.
+  - Estruturas
+    - Pirâmide: Inicia com questões fechadas, à medida que avança, questões abertas são colocadas. Usada para quebrar o gelo, ou quando o entrevistado parece relutante sobre um assunto.
+    - Funil: Inicia com questões abertas e à medida que abança, faz-se perguntas fechadas. O entrevistado precisa "desabafar" logo ou deseja ir direto ao ponto. Meio não ameaçador para começar.
+    - Diamante: Combinação das anteriores, inicia com fechadas, passa para abertas, e encerra a entrevista com questões fechadas. Em geral é a melhor forma de estruturar a entrevista. Contudo, tende a ser mais longa.
+  - Registros: Para não esquecer, e facilitar o compartilhamento dos resultados com a equipe. Papel é bom, mas tende a perder contado visual e o ritmo do diálogo. Gravador não interrompe, e traz um registro fiel e exato da entrevista, porém o entrevistado pode ficar desconfortável, e a documentação também fica mais demorada. E mesmo gravando precisa anotar as ideias...
 - **JAD (Joint Application Development):** 
 - **Prototipagem:** 
   - Só nao pode dar entender que a aplicação ta pronta, pq pode ser só o front.

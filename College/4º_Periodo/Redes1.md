@@ -766,3 +766,63 @@ Detecção e correção dos erros.
 
 [código de detecção de erros]
 
+
+
+06/09 :watch:
+
+Temos código de detecção de erros e códigos de correção de erros.
+
+### CORREÇÃO
+
+Grande redundância dos dados, suficiente para que o destino consiga corrigir os erros.
+
+#### DISTÂNCIA DE HAMMING
+
+[Identificação - bits de paridade e somas...]
+
+As paridades ficam em todas as posições das potências de 2. No resto dos bits são distribuidos os bits de dados à serem transferidos.
+
+Soma as casas, se for par coloca bit 0, se for ímpar bit 1.
+
+A soma é sempre pulando o nº de casas do número da paridade. Ex.: Pw vai pular 2 bits e verificar o próximo. A soma é feita de cada posição verificada.
+
+> Creio que a soma ta sendo feita em decimal arthur do futuro :)
+
+[Como corrigir?]
+
+Basta inverter o bit em comum que as paridades erradas verificam.
+
+### DETECÇÃO
+
+Menor redundância, pois só queremos detectar se tem erro. Ou seja, a carga de bits transmitidos é menor, pois não precisamos identificar o local do erro, os bits errados.
+
+#### CÓDIGO POLINOMIAL OU CRC
+
+*CRC - Cyclic Redundancy Check.*
+
+[Explicação]
+
+[Cálculo do crc]
+
+# SUB-CAMADA DE ACESSO AO MEIO
+
+[INTRODUÇÃO]
+
+A camada de enlace pode ser sub dividida em duas subcamadas, sendo elas: Controle de enlace de dados (LLC) e Controle de acesso múltiplo (MAC).
+
+Controle de comunicação entre máquinas de uma rede............
+
+[Protocolos de acesso múltiplo]
+
+Conceberam alguns protocolos para esse controle........
+
+​	[...........]
+
+​	[ALOHA]
+
+​		[ALOHA PURO]
+
+​		[SLOTTED ALOHA]
+
+​	[]
+

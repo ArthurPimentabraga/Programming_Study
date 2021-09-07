@@ -243,9 +243,7 @@ A atenção visual será atraída por atributos **grandes, vivos e que mudam.**
 
 Erros humanos são responsáveis por 60 a 90% dos acidentes. Ou seja, devemos criar designs que minimizam as chances de ações que desviam do que o usuário pretendia (lapsos de ação). Um bom exemplo são os famosos tutoriais de instalação de programas, ou realização de tarefas (wizards - deve ser algo bem feito, claro, e opcional).
 
-<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:90%">
-
-![image-20210906132452261](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210906132452261.png)
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/erro_humano.png" style="width:90%">
 
 ## Computação afetiva
 
@@ -271,9 +269,7 @@ Oito emoções básicas ou primárias podem ser combinadas para produzir emoçõ
 
 <img src="../../imgs/4_Periodo/Interacao_Humano_Computador/roda_emocoes.png" style="width:60%">
 
-<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:60%">
-
-![image-20210906133253674](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210906133253674.png)
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/potenciais_impactos_afetiva.png" style="width:80%">
 
 ## Expressar emoção
 
@@ -306,9 +302,7 @@ Causas possíveis:
 
 Não é pra condenar o usuário, é pra ser gentil, explicar de forma clara o que é o erro, o que rolou.
 
-<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:60%">
-
-![image-20210906134257287](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210906134257287.png)
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/mens_erros.png" style="width:80%">
 
 - Ao invés de explicar o que aconteceu, eles devem declarar a causa do problema e o que o usuário precisa fazer para resolvê-lo;
 - Ao invés de condenar os usuários, as mensagens devem ser gentis;
@@ -319,9 +313,7 @@ Não é pra condenar o usuário, é pra ser gentil, explicar de forma clara o qu
 - As mensagens devem permitir ajuda sensível ao contexto;
 - As mensagens devem ser fornecidas em vários níveis, para que mensagens curtas possam ser complementadas com explicações mais longas.
 
-<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:60%">
-
-![image-20210906134522118](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210906134522118.png)
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/antropormorfismo.png" style="width:60%">
 
 ### Antropomorfismo
 
@@ -345,9 +337,18 @@ A emoção pode estar diretamente ligada ao aprendizado, ou seja, se o usuário 
 
 19/08 :watch:
 
-Abordagens teóricas......
+Embora IHC seja uma área de cunho bastante prático, muitos dos métodos, modelos e técnicas utilizadas em IHC se baseiam em teorias de base:
+
+- Psicológica (principalmente cognitiva);
+- Etnográfica;
+- Semiótica.
 
 ## Abordagem da psicologia experimental
+
+Permitem mensurar e modelar o comportamento humano e prever o desempenho.
+
+- Lei de Hick-Hyman: tempo de reação de escolha;
+- Lei de Fitts: capacidade de processamento de informação do sistema motor humano.
 
 ### Lei de Hick-Hyman
 
@@ -357,36 +358,141 @@ A lei de Hick-Hyman estabelece o tempo de reação a partir do número de escolh
 
 Esta lei indica que uma pessoa subdivide o conjunto total de opções em categorias, eliminando aproximadamente metade das opções a cada passo, em vez de considerar todas as escolhas uma a uma.
 
-Aplicabilidade: Serve para.........................
+Esta lei pode ser utilizada para fazer uma estimativa de quanto tempo uma pessoa levará para encontrar uma dentre diversas opções disponíveis numa interface.
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/formula+HICK.png" style="width:50%">
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/aplicacao+HICK.png" style="width:40%">
+
+**Aplicabilidade:**
 
 Com ela da para fazer uma estimativa de quanto tempo uma pessoa levará para encontrar uma dentre diversas opções disponíveis numa interface.
 
-[FORMULA.........................................................................................................................................................]
+> Quando a complexidade das tarefas aumenta, a aplicabilidade da lei diminui. Ex.: a lei não se aplica a menus complexos ou hierarquias de opções.
+
+Quando precisar simplificar processos complexos, ai se aplica a lei. Ex.: Ao invés de mostrar o processo completo de pagamento, dividir em subprocessos.
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/exemplo_lei+Hick.png" style="width:90%">
 
 ### Lei de Fitts
 
+Relaciona o tempo (T) que uma pessoa leva para apontar para algo com o tamanho (S) e com a distância (D) entre a mão da pessoa e esse objeto-alvo.
 
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/lei_fitts.png" style="width:60%">
 
-opções de ferramentas estão na lateral.................
+Variações desta lei são utilizadas para modelar o tempo que leva para um mouse ou outro dispositivo de entrada semelhante atingir um objeto numa tela.
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/exemplo_lei_fitts.png" style="width:90%">
+
+Quanto maior o botão, mais fácil e rápido seu acesso.
+
+- Outro exemplo são as opções de ferramentas na lateral do sistema;
+
+- Ou acesso ao menu no topo da tela é, em média, em torno de cinco vezes mais rápido do que um menu semelhante em uma aplicação Windows;
+- Um menu pop-up circular (pie menu) tem como vantagem sobre um menu pop-up horizontal o fato de que todas as opções estão equidistantes e próximas do ponto em que o menu foi acionado;
+- Áreas clicáveis estendidas;
 
 ## Engenharia Cognitiva
 
 25/08 :watch:
 
-A engenharia cognitiva foi concebida por Norman (1986) como uma tentativa de aplicar conhecimentos de ciência cognitiva, psicologia cognitiva e fatores humanos ao design e construção de sistemas computacionais.
+A engenharia cognitiva foi concebida por Norman (1986) como uma tentativa de aplicar conhecimentos de ciência cognitiva, psicologia cognitiva e fatores humanos ao design e construção de sistemas computacionais. Centrado no modelo de processador humano de informações (MHP).
 
-![image-20210828162153092](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210828162153092.png)
+Ou seja, tenda entender o desempenho humano, e como ele age para desenvolver o design adequado, de forma que engaje os usuários de forma prazerosa.
+
+O MHP é composto de três subsistemas:
+
+- Perceptivo: transmite as sensações do mundo físico para representações mentais internas.
+- Cognitivo: recebe a informação codificada simbolicamente na memória de trabalho e utiliza informações previamente armazenadas na memória de longo prazo para tomar decisões.
+- Motor: traduz o pensamento em ação.
+
+Ou seja, ele recebe, entende e age.
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/engenharia_cognitiva.png" style="width:60%">
 
 [Exemplos]
 
 ### Teoria da ação - Golfos
 
-- Golfo de execução:
-- Golfo de avaliação: 
+Mede a dificuldade de atuação e avaliação para alcançar seu objetivo inicial.
+
+- Golfo de execução: se refere à dificuldade de atuar sobre o ambiente e ao grau de sucesso com que o artefato apoia essas ações. 
+- Golfo de avaliação: se refere à dificuldade de avaliar o estado do ambiente e ao grau de sucesso com que o artefato apoia a detecção e interpretação desse estado. 
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/esquema_Golfos.png" style="width:80%">
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/exemplo_golfos.png" style="width:100%">
+
+Considerações: 
+
+- Feedback é de extrema importância, pois se o usuário não conseguir identificar, de forma clara, qualquer mudança ou feedback após sua ação, ele interpreta como "nada aconteceu" e pode acabar desistindo de atingir seus objetivos iniciais.
+- Nem sempre a travessia dos golfos é iniciada pelo golfo de execução. Um usuário cuja atividade envolva monitorar alguma operação fica observando a saída do sistema até perceber que houve uma mudança. Quando alguma mudança ocorrer, o usuário deve diagnosticá-la e tomar as providências necessárias, percorrendo os golfos de execução e avaliação. Nesse caso, a avaliação inclui não apenas verificar se as ações desejadas foram executadas adequadamente e as intenções satisfeitas, mas se o diagnóstico original foi adequado.
+- O designer deve tentar abreviar os golfos de execução e de avaliação, reduzir a necessidade de treinamento tanto quanto possível.
+
+### Modelo mental
+
+Um modelo mental é uma representação do mundo real, uma abstração a partir da leitura que o sujeito faz do mundo. Em IHC, o usuário deve facilmente construir um modelo mental do sistema mais próximo possível da realidade.
+
+O modelo do usuário é o resultado da sua interpretação da imagem do sistema. Tudo o que o designer construir na imagem do sistema pode auxiliar ou prejudicar essa interpretação, tal como: elementos de interface (widgets) para entrada e saída de dados; documentação, instruções, ajuda on-line e mensagens de erro.
+
+> - Por que apertar o controle remoto com mais força quando a pilha está fraca?
+> - Por que apertar o botão do elevador mais vezes?
+> - Por que clicar em um ícone várias vezes, quando um programa demora para abrir?
+>   - Enfim, por que as pessoas constroem modelos mentais errados?
+>     - Pressionar, girar, bater mais vezes ou com mais força causa o efeito desejado em várias situações no mundo físico: abrir uma torneira, martelar um prego. 
+
+Ou seja, quanto menor a distância entre o "modelo de design" e o "modelo do usuário", maior a usabilidade do sistema.
+
+Como ajudar o usuário?
+
+- Instruções claras e fáceis de usar;
+- Tutoriais apropriados e orientação sensível ao contexto;
+- Fornecer vídeos on-line e janelas de chat para quando precisar de ajuda;
+- Usar metáforas:
+  - Apagar arquivo arrastando-o para uma lixeira;
+  - Mover arquivo de pasta arrastando-o de uma pasta para outra.
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/exemplo_modelo_mental.png" style="width:70%">
 
 ## Abordagens Etnometodológicas
 
+A ação humana têm uma relação essencial com suas circuntânicas concretas particulares e suas interações dinâmicas com o mundo material e social. Ou seja, deslocou o foco do usuário individual para o contexto social do uso do computador.
 
+Algumas das principais iniciativas:
+
+- ações situadas (Suchman) × ações planejadas (Norman);
+- análise da conversação entre pessoas;
+- estudo da comunicação usuário-sistema;
+- estudos de campo no trabalho, em casa, em movimento etc.
+
+### Ação planejada x situada
+
+- **Ação planejada:** Tudo vai ter um plano e as pessoas vão seguir esse plano. Para entender como as pessoas agem, bastaria entender como elas seguem um plano predefinido. 
+- **Ação situada:** Não da pra prever tudo, não é possível projetar em detalhes como um comportamento vai se desdobrar antes que os participantes se engajem nas suas interações sociais. A cada instante é feita uma avaliação das circunstâncias concretas particulares e do valor das ações mediante contingências. 
+  - Busca identificar recursos que possibilitam a comunicação bem sucessida, pois **a comunicação é sensível às circusntâncias.**
+
+### Análise da conversação
+
+Basicamente é analisar a comunicação humana, a conversa humana para aplicarmos isso aos sistemas. Ex.: Precisamos manter a coerência na conversa, assim como não começamos a falar sobre viagem quando alguém nos pergunta quantos anos tempos, um sistema quando o usuário pede para salvar o arquivo só deve perguntar o nome do arquivo, formato, etc. Não deve fugir disso para não correr uma ruptura na comunicação. 
+
+### Comunicação usuário-sistema
+
+Diferente de antigamente que os usuários eram como operadores que só precionavam botão, etc. Hoje, o sistema deve ser capax de se expressar, ou expressar a intenção por trás de suas ações. O designer controla unilateralmente a interação, mas de forma condicional às ações do usuário.
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/comunicacao_usuario_sismtea.png" style="width:70%">
+
+Da mesma forma que a comunicação humana, a usuário-sistema não é livre de problemas.
+
+### Estudo de campo
+
+Estudos fundamentados em etnometodologia têm sido aplicados em IHC de diversas maneiras:
+
+- para analisar o impacto que um sistema teve no trabalho realizado no ambiente em que o sistema é introduzido;
+- para analisar princípios e métodos organizacionais subjacentes a um domínio de trabalho;
+- para analisar os impactos de um sistema sobre esses métodos;
+- para criticar o design do sistema quando entra em conflito com esses métodos.
+
+Nós descobrimos se essa comunicação está boa justamente com o estudo de campo, abservar a utilização do sistema com os usuários, no dia a dia deles.
 
 ## Teoria da Atividade
 
