@@ -708,27 +708,47 @@ Podemos fazer isso de duas formas: Saltos de frequência ou Sequência direta.
 
 25/08 :watch:
 
-Principais funções:
+A camada de enlace de dados usa os serviços da camada física para enviar e receber bits pelos canais de comunicação. *Presta serviço para camada de rede.* 
 
-- Controle do próprio enlace  
-- Controle de acesso ao meio (como as máquinas vão acessar)
+Basicamente provê comunicação eficiente e confiável de frames (quadros - Unidade de informação) entre dois nós adjacentes.
 
-Outras funções:
+> - Quadros encapsulam datagramas da camada de rede;
+> - Nós adjacentes: Nós conectados fisicamente por um canal de comunicação, também chamado de enlace.
+>   - Enlace entrega bits ao destinatário na mesma ordem de envio (pode ser com fio ou sem fio).
 
-- Controle de erros e fluxo -> software para o controle.
-- .............
+Ela tem diversas funções, entre as quais:
 
-Presta serviço para camada de rede.
+- **Encapsulamento - Enquadramento** - Fornecer uma interface de serviço bem definida à camada de rede;
+- **Controle de Fluxo** - Regular o fluxo de dados de tal forma que receptores lentos não sejam atropelados por transmissores rápidos;
+- **Controle de Erros** - Lidar com erros de transmissão - Detecção e Correção;
+- **Endereçamento** (Físico - MAC).
+- **Controle de acesso ao meio**: como as máquinas vão acessar. Mas isso será tratado na **sub-camada de acesso ao meio**.
 
-Além do serviço básico, outros serviços que ela provê como objetivo: 
+> Resumindo é o **controle do próprio enlace**.
 
-- Entrega confiável
-- Half-duplex
-- .............
+Além desses serviços, ela provê: 
 
-[Protocolos de camada de enlace.....]
+- Entrega confiável;
+- Transmissão half-duplex e full-duplex.
 
-[Tipos diferentesde canais de comunicação......]
+*Protocolos de camada de enlace são responsáveis por oferecer tais serviços!*
+
+Para oferecer serviços, os protocolos devem considerar os tipos de canais de comunicação (enlace):
+
+- **Canal ponto-a-ponto:** Uma estação em cada extremidade. Requer controle simples de acesso, pois a transmissão é mais simples. Ex.: Redes de acesso domiciliares e redes entre roteadores.
+- **Canal de difusão (bradcast):** Várias estações conectadas ao mesmo canal. Requer controle de acesso ao meio para coordenar as transmissões. Ex.: Rede sem-fio, todas as máquinas juntas no enlace, que no caso é o ar.
+
+## COMO FUNCIONA
+
+Para alcançar esses objetivos, a camada de enlace de dados recebe os pacotes da camada de rede e os encapsula em quadros para transmissão. Cada quadro contém um cabeçalho (header) de quadro, um campo de carga útil, que conterá o pacote, e um final (trailer) de quadro.
+
+<img src="../../imgs/4_Periodo/Redes1/.png" style="width:80%">
+
+![image-20210908195623278](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210908195623278.png)
+
+## PROTOCOLOS 
+
+
 
 [Como funciona]
 
@@ -747,26 +767,26 @@ Além do serviço básico, outros serviços que ela provê como objetivo:
 
 Entrega confiável...........
 
-[Enquadramento]
+## ENQUADRAMENTO
+
+
 
 - por que é preciso?
 - orientado a caracter e a bit.....
 
 [contagem de caracteres]
 
-[controle de fluxo]
+## CONTROLE DE FLUXO
 
 Controle da quantidade de informação que pode ser enviado.
 
 Um dos principais papeis dessa camada.
 
-[Controle de erro]
+## CONTROLE DE ERROS
 
 Detecção e correção dos erros.
 
 [código de detecção de erros]
-
-
 
 06/09 :watch:
 
@@ -812,17 +832,47 @@ A camada de enlace pode ser sub dividida em duas subcamadas, sendo elas: Control
 
 Controle de comunicação entre máquinas de uma rede............
 
-[Protocolos de acesso múltiplo]
+## PROTOCOLOS DE ACESSO MÚLTIPLO
 
 Conceberam alguns protocolos para esse controle........
 
-​	[...........]
+​	[Primeiros protocolos falados...........]
 
-​	[ALOHA]
+### ALOHA
 
-​		[ALOHA PURO]
+[Explicação]
 
-​		[SLOTTED ALOHA]
+#### ALOHA PURO
 
-​	[]
+[Explicação]
+
+#### SLOTTED ALOHA
+
+[Explicação]
+
+
+
+08/09 :watch:
+
+### CSMA
+
+[Explicação]
+
+​	[Métodos de persistência]
+
+​		[Persistent]
+
+​		[Non-Persistent]
+
+​	[CSMA/CD]
+
+​	[CSMA/CA]
+
+### ACESSO CONTROLADO
+
+​	[Reservation]
+
+​	[Polling]
+
+​		Tem isso no bluetooth :) 
 
