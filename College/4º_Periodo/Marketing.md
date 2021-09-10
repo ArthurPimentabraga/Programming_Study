@@ -136,3 +136,57 @@ Essa fase é importante por que aqui descobrimos o que precisamos melhor no noss
 
 ---
 
+# Ciclo de Vida de Produto e Serviço
+
+Unidade 2 :smile:
+
+O ramo da tecnologia é uma das que mais muda e avança com velocidade. Logo precisamos estar à frente desse avanço.
+
+Uma técnica para isso é o ciclo de vida dos produtos e serviços: Ciclo de Vida de Produto ( CVP) é uma teoria que avalia os estágiosde desenvolvimento de um produto no tempo,tendo em vista o volume de vendas alcançado. Ela também pode ser aplicada para serviços, marcas e negócios.
+
+<img src="../../imgs/4_Periodo/MSP/image-20210910195655640.png" style="width:90%"/>
+
+## Introdução
+
+- Concentra-se na estratégia de avaliação e ajuste do produto/serviço, isso quer dizer na composição, embalagem, no processo de fazer o serviço.
+- A distribuição é controlada em praças/locais e canais de teste para posterior crescimento e expansão (não é tão importante agora).
+- A comunicação foca no lançamento – Cuida dos formadores de opinião , usa da comunicação para informação e aproximação do mercado com eventos.
+- A estratégia de preço dependerá do posicionamento que o produto terá- preço baixo, preço médio e preço alto.
+
+## Crescimento
+
+Após a análise de adequação, agora é tentar expandir.
+
+- Expansão da rede de distribuição (canais e cobertura).
+- Ampliação da frequência de mídia nos meios de comunicação.
+- Estratégia de manutenção de preço – podendo abrir a promoção para **indicação de amigos** para aumentar a base de clientes que vivencie a experiência de compra.
+- A estratégia de produto se mantém, avaliando a capacidade de atendimento.
+
+## Maturidade
+
+É um ponto em que as empresas estão preocupadas em dar longevidade para seu produto.
+
+- A estratégia de produto **amplia o portífólio**, seja na linha de produto com novos sabores, outros tipos de produtos, ampliação da oferta de embalagens.
+- Rejuvenescimento da marca e público alvo.
+- Realização de eventos, promoções, brindes, estratégias de envolvimento dos clientes com os produtos.
+
+## Declinio
+
+Quando a empresa ta perdendo volume de vendas, ta perdendo mercado.
+
+- Retirar o produto de mercado se a empresa se posicionar por inovação.
+- Colocar a peça em outlet em valor bem menor.
+- Ampliar a funcionalidade do produto.
+- Reposicionar o produto para um mercado menor, para atender um nicho.
+- Realizar promoção com desconto para retirada do produto do mercado caso tenha ainda estoque.
+
+## Matriz BCG
+
+Outra teoria para bater de frente com "Ciclo de vida de produto".
+
+<img src="../../imgs/4_Periodo/MSP/image-20210910201146143.png" style="width:70%"/>
+
+<img src="../../imgs/4_Periodo/MSP/image-20210910201307897.png" style="width:70%"/>
+
+> Podemos considerar também como Volume de venda (colunas) e Volume de investimento (Linhas).
+

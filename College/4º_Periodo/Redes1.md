@@ -750,13 +750,11 @@ A grosso modo funciona como uma interface da camada física para a parte lógica
 > - Nós adjacentes: Nós conectados fisicamente por um **canal de comunicação**, também chamado de enlace.
 >   - Enlace entrega bits ao destinatário na mesma ordem de envio (pode ser com fio ou sem fio).
 
-## PROTOCOLOS 
 
 
+## SERVIÇOS
 
-[Como funciona]
 
-[Serviços]
 
 > Tem resumo disso pra cima
 
@@ -827,6 +825,18 @@ Menor redundância, pois só queremos detectar se tem erro. Ou seja, a carga de 
 [Explicação]
 
 [Cálculo do crc]
+
+
+
+## PROTOCOLOS 
+
+
+
+[Como funciona]
+
+
+
+
 
 # SUB-CAMADA DE ACESSO AO MEIO
 

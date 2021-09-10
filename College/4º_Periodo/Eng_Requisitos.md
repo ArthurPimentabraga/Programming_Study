@@ -172,7 +172,7 @@ Como identificar requisitos?
 
 O que o sistema tem que fazer e como deve fazer. Funcionais e não funcionais.
 
-## Requisitps de cliente x Requisitos de sistema.
+## Requisitos de cliente x Requisitos de sistema.
 
 
 
@@ -192,7 +192,7 @@ O que o sistema tem que fazer e como deve fazer. Funcionais e não funcionais.
 
 **Evolução dos requisitos:**
 
-![image-20210830192326254](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210830192326254.png)
+<img src="../../imgs/4_Periodo/Eng_Requisitos/image-20210830192326254.png" style="width:80%">
 
 # Elicitação de requisitos
 
