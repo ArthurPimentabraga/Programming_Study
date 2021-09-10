@@ -708,13 +708,13 @@ Podemos fazer isso de duas formas: Saltos de frequência ou Sequência direta.
 
 25/08 :watch:
 
-A camada de enlace de dados usa os serviços da camada física para enviar e receber bits pelos canais de comunicação. *Presta serviço para camada de rede.* 
+> Links úteis: [Vídeo1](https://www.youtube.com/watch?v=myzFccYMoI8)
+
+A camada de enlace de dados usa os serviços da camada física para enviar e receber bits pelos canais de comunicação. Em outras palavras: Presta serviço para camada de rede, traduz as informações da camada de rede em bits para que então sejam enviadas pela camada física. 
 
 Basicamente provê comunicação eficiente e confiável de frames (quadros - Unidade de informação) entre dois nós adjacentes.
 
-> - Quadros encapsulam datagramas da camada de rede;
-> - Nós adjacentes: Nós conectados fisicamente por um canal de comunicação, também chamado de enlace.
->   - Enlace entrega bits ao destinatário na mesma ordem de envio (pode ser com fio ou sem fio).
+A camada de enlace pode ser sub dividida em duas subcamadas, sendo elas: Controle de enlace de dados (LLC) e Controle de acesso múltiplo (MAC).
 
 Ela tem diversas funções, entre as quais:
 
@@ -722,7 +722,7 @@ Ela tem diversas funções, entre as quais:
 - **Controle de Fluxo** - Regular o fluxo de dados de tal forma que receptores lentos não sejam atropelados por transmissores rápidos;
 - **Controle de Erros** - Lidar com erros de transmissão - Detecção e Correção;
 - **Endereçamento** (Físico - MAC).
-- **Controle de acesso ao meio**: como as máquinas vão acessar. Mas isso será tratado na **sub-camada de acesso ao meio**.
+- **Controle de acesso ao meio**: como as máquinas vão acessar. Mas isso será tratado na **sub-camada de acesso ao meio** (sub-camada dessa).
 
 > Resumindo é o **controle do próprio enlace**.
 
@@ -742,9 +742,13 @@ Para oferecer serviços, os protocolos devem considerar os tipos de canais de co
 
 Para alcançar esses objetivos, a camada de enlace de dados recebe os pacotes da camada de rede e os encapsula em quadros para transmissão. Cada quadro contém um cabeçalho (header) de quadro, um campo de carga útil, que conterá o pacote, e um final (trailer) de quadro.
 
-<img src="../../imgs/4_Periodo/Redes1/.png" style="width:80%">
+A grosso modo funciona como uma interface da camada física para a parte lógica do modelo. Ao mesmo tempo que pega as informações vindas das camadas superiores e transforma em algo coerente para ser transportado pelo meio físico, ela também pega os bits e transforma em informação (os frames).
 
-![image-20210908195623278](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210908195623278.png)
+<img src="../../imgs/4_Periodo/Redes1/enquadramento_1.png" style="width:80%">
+
+> - Quadros encapsulam datagramas da camada de rede;
+> - Nós adjacentes: Nós conectados fisicamente por um **canal de comunicação**, também chamado de enlace.
+>   - Enlace entrega bits ao destinatário na mesma ordem de envio (pode ser com fio ou sem fio).
 
 ## PROTOCOLOS 
 

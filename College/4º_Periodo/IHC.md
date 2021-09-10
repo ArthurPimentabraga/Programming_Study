@@ -596,9 +596,7 @@ O design de um sistema interativo é um processo iterativo de análise, síntese
 
 É um processo com três atividades básicas: Análise, Síntese e Avaliação.
 
-<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:50%">
-
-![image-20210901191945312](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210901191945312.png)
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/image-20210901191945312.png" style="width:50%">
 
 ### Análise
 
@@ -652,9 +650,7 @@ São formas de interpretar a atividade de design.
 
 Durante a concepção de uma solução o designer explora várias diferentes ideias para poder compara-las.
 
-<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:50%">
-
-![image-20210907113400503](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210907113400503.png)
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/image-20210907113400503.png" style="width:70%">
 
 Ex.: Busca filtrada por tags ou paginação?
 
@@ -675,15 +671,11 @@ Cada processo de design detalha as atividades básicas, definindo:
 - quais atividades podem se repetir e por quais motivos;
 - os artefatos consumidos e produzidos em cada uma delas.
 
-<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:50%">
-
-![image-20210907114629470](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210907114629470.png)
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/image-20210907114629470.png" style="width:90%">
 
 A etapa de início é definida pelo designer:
 
-<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:50%">
-
-![image-20210907114903199](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210907114903199.png)
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/image-20210907114903199.png" style="width:70%">
 
 Processos centrados no usuário seguem estes princípios: 
 
@@ -705,17 +697,13 @@ Design centrado no usuário, pois desenvolve a partir das necessidades do usuár
 
 Nesse modelo a Sintese foi dividida em duas etapas, o desing e a construção interativa, logo temos uma versão mais construida do design.
 
-<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:50%">
-
-![image-20210907115545099](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210907115545099.png)
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/image-20210907115545099.png" style="width:50%">
 
 #### Ciclo de vida em estrela
 
 Como decidir por qual atividade começar? Depende do que estiver disponível quando iniciar o processo. Por exemplo, se a intenção for projetar uma nova versão do sistema, o designer pode começar o projeto da nova versão pela avaliação da versão atual. 
 
-<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:50%">
-
-![image-20210907115955254](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210907115955254.png)
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/ciclo_vida_estrela.png" style="width:50%">
 
 #### Engenharia de usabilidade de Nielsen
 
@@ -748,9 +736,7 @@ Ele propõe o seguinte conjunto de atividades em seu ciclo de vida:
 
 #### Engenharia de usabilidade de Mayhew
 
-<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/.png" style="width:50%">
-
-![image-20210907121835061](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210907121835061.png)
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/Engenharia_usabilidade_Mayhew.png" style="width:70%">
 
 #### Design contextual
 
@@ -900,11 +886,102 @@ Explicamos os objetivos aos participantes:
 
 ## Como coletar dados dos usuários?
 
-- Entrevistas;
-  - Mais informações no resumo de "Engenharia de requisitos".
-- Questionários;
-- Grupos de Foco;
-- Brainstormingde Necessidades e Desejos dos Usuários;
-- Classificação de cartões (card sorting);
-- Estudos de Campo;
-- Investigação Contextual.
+**Entrevistas** -> Mais informações no resumo de "Engenharia de requisitos".
+
+09/09 :watch:
+
+### Grupos de Foco
+
+- Entrevista com um grupo de pessoas (3 à 10 pessoas geralmente).
+- Sendo que o moderador precisa ser experiente, pois precisa saber controlar a discussão, deixar todo mundo falar e manter o foco.
+- É bom pois gera mais informação, teoricamente, pois gera discussão. Ex.: Um pode lembrar de uma coisa que o outro não lembrou, opiniões diferentes, preferências diferentes...
+- Questões típicas: 
+  - um “dia típico” de um usuário ou o dia de trabalho mais recente;
+  - as tarefas que os usuários realizam e como eles as realizam;
+  - o domínio em geral (terminologia, procedimentos etc.);
+  - preferências e aversões dos usuários;
+  - resultados desejados ou objetivos dos usuários;
+  - reações, opiniões ou atitudes dos usuários sobre um determinado produto ou conceito.
+- Apresentar e discutir protótipos.
+- Evitar tópicos polêmicos, política e valores morais.
+- Bom que economiza tempo também, pois já entrevista várias pessoas de uma vez.
+
+### Questionários
+
+- Permite coletar rapidamente dados de muitos usuários;
+- Geralmente é mais fácil e barato (prático) se obter e analisar dados em **maior escala**;
+- Tende a ser menos detalhado e mais superficial, quando comparado a entrevistas e grupos de foco, pois não da pra tirar dúvidas, gerar discussões, etc;
+- Quem elaborar o questionário deve ser experiente para **evitar perguntas ambíguas** ou que **induzam certas respostas**;
+- Tipos de perguntas:
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/tipo_pergunta_Q1.png" style="width:90%">
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/tipo_pergunta_Q2.png" style="width:90%">
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/tipo_pergunta_Q3.png" style="width:90%">
+
+A opção A deixa mais "confortável" para responder, mas a B ajuda a trazer mais detalhes, uma resposta mais trabalhada.
+
+- Não se deve fazer muitas perguntas abertas, porque isso reduz a taxa de respostas. 
+- Em geral, questionários são usados quando se tem uma boa noção das respostas mais prováveis e deseja-se conhecer a proporção de respostas numa amostra mais ampla da população de usuários.
+- Muitas vezes os questionários são utilizados em conjunto com entrevistas. 
+- Questionários podem ser utilizados para corroborar os resultados das entrevistas.
+- Caso as estatísticas coletadas por meio de questionários sejam inesperadas, novas entrevistas podem ser formuladas para descobrir os motivos das “surpresas”.
+- A ordem das perguntas deve ser cuidadosamente projetada.
+  - Perguntas gerais costumam preceder perguntas específicas.
+- Quando um questionário é longo, suas perguntas podem ser **agrupadas em tópicos** relacionados, formando uma estrutura lógica e de preenchimento mais fácil. 
+- Quando se deseja obter informações de grupos distintos de usuários (e.g., professores e alunos, gerentes e técnicos), pode ser necessário elaborar um questionário diferente para cada grupo.
+- Colocar as frases sempre na afirmativa.
+- Que contenham apenas uma pergunta ou conceito.
+  - Contra-exemplo: *“A ferramenta CASE ajudou você ou a sua equipe na sua habilidade de especificar projetos complexos e a entender as especificações de outras equipes?”*
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/Exemplos_Questionario.png" style="width:90%">
+
+#### SUS - System Usability Scale
+
+- http://www.measuringux.com/SUS.pdf
+- Como analisar a pontuação?
+  - Para itens ímpares: subtraia 1 da resposta do usuário.
+  - Para itens pares: subtraia 5 menos as respostas do usuário 
+    - Este procedimento deixa todos os valores entre 0 e 4, sendo o 4 a resposta mais positiva.
+  - Some os resultados obtidos e multiplique por 2,5.
+    - Isso converte o intervalo de valores possíveis de 0 a 100 em vez de 0 a 40.
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/SUS.png" style="width:90%">
+
+- Questionários que alternam questões positivas e negativas são mais difíceis de serem respondidos.
+- Uma crítica aos questionários somente positivos é o usuário marcar, de forma aleatória, as opções de resposta
+- Há poucas evidências de que as supostas vantagens de incluir itens negativos e positivos em questionários de usabilidade superem as desvantagens.
+  - Deve-se evitar a inclusão de itens negativos.
+
+#### ASQ –After Scenario Questionnaire
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/ASQ.png" style="width:90%">
+
+#### User Experience Questionnaire
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/USER_Experience.png" style="width:60%">
+
+#### TAM – Technology Acceptance Model
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/TAM.png" style="width:60%">
+
+#### SAM –Self Assessment Manikin
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/SAM.png" style="width:90%">
+
+
+
+
+
+
+
+- **Brainstorming de Necessidades e Desejos dos Usuários;**
+- **Classificação de cartões (card sorting);**
+- **Estudos de Campo;s**
+- **Investigação Contextual.**
+
+# Identificação de necessidades do usuário 2
+
+/09 :watch:
+
