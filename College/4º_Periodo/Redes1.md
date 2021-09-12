@@ -719,8 +719,8 @@ A camada de enlace pode ser sub dividida em duas subcamadas, sendo elas: Control
 Ela tem diversas funções, entre as quais:
 
 - **Encapsulamento - Enquadramento** - Fornecer uma interface de serviço bem definida à camada de rede;
-- **Controle de Fluxo** - Regular o fluxo de dados de tal forma que receptores lentos não sejam atropelados por transmissores rápidos;
-- **Controle de Erros** - Lidar com erros de transmissão - Detecção e Correção;
+- **Controle de Fluxo** - Regular o fluxo de dados de tal forma que receptores lentos não sejam atropelados por transmissores rápidos. Ou seja, compatibilizar taxas de produção e consumo de quadros;
+- **Controle de Erros** - Lidar com erros de transmissão causados por atenuação do sinal e por ruído - Detecção e Correção;
 - **Endereçamento** (Físico - MAC).
 - **Controle de acesso ao meio**: como as máquinas vão acessar. Mas isso será tratado na **sub-camada de acesso ao meio** (sub-camada dessa).
 
@@ -729,7 +729,9 @@ Ela tem diversas funções, entre as quais:
 Além desses serviços, ela provê: 
 
 - Entrega confiável;
-- Transmissão half-duplex e full-duplex.
+- Transmissão:
+  - half-duplex: Um nó **não pode** transmitir e receber pacotes ao mesmo tempo;
+  - full-duplex: Um nó **pode** transmitir e receber pacotes ao mesmo tempo.
 
 *Protocolos de camada de enlace são responsáveis por oferecer tais serviços!*
 
@@ -750,33 +752,75 @@ A grosso modo funciona como uma interface da camada física para a parte lógica
 > - Nós adjacentes: Nós conectados fisicamente por um **canal de comunicação**, também chamado de enlace.
 >   - Enlace entrega bits ao destinatário na mesma ordem de envio (pode ser com fio ou sem fio).
 
-
-
 ## SERVIÇOS
 
+A função da camada de enlace de dados é fornecer serviços à camada de rede. O principal serviço é **transferir dados** da camada de rede da máquina de origem para a camada de rede da máquina de destino. Na camada de rede da máquina de origem há uma entidade, chamada processo, que entrega alguns bits à camada de enlace de dados para transmissão ao destino.
 
+<img src="../../imgs/4_Periodo/Redes1/image-20210911144040938.png" style="width:80%">
 
-> Tem resumo disso pra cima
+A camada de enlace de dados pode ser projetada de modo a oferecer diversos serviços. Os serviços reais oferecidos podem variar de um protocolo para outro. Três possibilidades razoáveis que consideraremos são:
 
-- não orientado (sem)
-  - Preciso de velocidade, logo não vou ficar verificando.
-  - Não vai ser feito para recuperar...
-- não orientado (com)
-  - Vou confirmar o recebimento de cada frame.
-- com conexão
-  - Vou fazer o estabelecimento prévio da conexão antes de transmitir.
-  - Estabelecer parâmetros na rede, solicitação de canal...
+- **Serviço não orientado a conexão (sem confirmação)**
+  - O serviço não orientado a conexões sem confirmação consiste em fazer a máquina de origem enviar quadros independentes à máquina de destino, sem que esta confirme o recebimento desses quadros. Sem estabelecimento prévio de uma conexão antes da transmissão;
+  - Se um frame for perdido, nada é feito para recuperá-lo;
+  - Aproprado onde a taxa de erro é muito pequena, deixando a tarefa de recuperação de erros para as camadas superiores.
+  - Encontrado na maioria das LANs, Ethernet, e em sistemas de tempo real e de voz, no qual os dados atrasados causam mais problemas que os dados recebidos com falhas.
+- **Serviço não orientado a conexão (com confirmação)**
+  - Quando esse serviço é oferecido, ainda não há conexões lógicas sendo usadas, mas cada quadro enviado é confirmado individualmente. Dessa forma, o transmissor sabe se um quadro chegou corretamente ou não.
+  - Caso não tenha chegado dentro de um intervalo específico, o quadro poderá ser enviado outra vez.
+  - Esse serviço é útil em canais **não confiáveis**, como os sistemas sem fio. O padrão 802.11 (WiFi) é um bom exemplo dessa classe de serviço.
 
-Entrega confiável...........
+> Talvez valha a pena destacar que oferecer recursos de confirmação no nível da camada de enlace de dados é uma questão de otimização, nunca uma exigência. A camada de rede sempre pode fazer esse papel de esperar a confirmação, e se for o caso realizar a retentativa. Porém, a camada de enlace tem todos os protocolos de controle de fluxo e erros, logo é mais eficaz, confiável e otimizado. 
+
+- **Serviço com conexão**
+  - O serviço mais sofisticado que a camada de enlace de dados é capaz de oferecer à camada de rede. Com ele, as máquinas de origem e destino **estabelecem uma conexão** entre elas antes da transmissão dos dados. 
+  - Cada quadro enviado pela conexão é **numerado**, e a camada de enlace de dados garante que cada quadro será, de fato, recebido. Além disso, essa camada **garante** que todos os quadros serão **recebidos uma única vez e na ordem correta**. Assim, os serviços orientados a conexões fornecem aos processos da camada de rede o equivalente a um **fluxo de bits confiável.**
+  - Se o serviço não orientado a conexões com confirmação fosse usado, é possível imaginar que as confirmações perdidas poderiam fazer com que um quadro fosse enviado e recebido várias vezes, desperdiçando largura de banda.
+  - Ex.: Isso é apropriado para enlaces longos, não confiáveis, como um canal de satélite ou um circuito telefônico interurbano.
+
+Os serviços da camada de enlace se resumem em seus objetivos listados no início do tópico, sendo eles: Controle de fluxo; Detecção e correção de erros; Half-duplex e full-duplex; Controle de acesso ao meio; Enquadramento; Entrega confiável entre nós adjacentes (similar aos mecanismos da camada de transporte. Pouco usada em canais com baixa taxa de erros, como fibra. E muito usada em canais sem-fio, cuja taxa de erros é alta).
 
 ## ENQUADRAMENTO
 
+Basicamente é o processo de encapsulamento explicado no último tópico. Logo também delimita onde começa e onde termina um quadro. 
+
+O serviço provido pela camada física não garante que o fluxo de bits seja livre de erros, logo podemos ter dados recebidos com valores de bits diferentes do que foram enviados, ou até em um número menor ou maior do que foi originalmente enviado. Logo, para fazer toda a detecção e, se necessário, a  correção de erros a camada de enlace divide os dados em frames para aplicar os algoritmos que farão esse trabalho posteriormente (verificação de erros por quadro).
+
+É nessa camada que o checksum geralmente é utilizado.
+
+### MÉTODOS PARA A MARCAÇÃO DE INÍCIO E FIM
+
+A divisão do fluxo de bits em quadros é mais difícil do que parece à primeira vista. Um bom projeto deve tornar fácil para um receptor encontrar o início de novos quadros enquanto usa pouca largura de banda. Alguns métodos para essa marcação são:
+
+- Contagem de caracteres;
+- Inserção de bytes de flags;
+- Inserção de flags no início e no final do quadro.
+
+#### CONTAGEM DE CARACTERES
+
+O primeiro método de enquadramento utiliza um campo no cabeçalho para especificar o número de bytes no quadro. Quando vê a contagem de caracteres, a camada de enlace de dados de destino sabe quantos bytes devem vir em seguida e, consequentemente, onde está o fim do quadro.
+
+O problema com esse algoritmo é que a contagem pode ser adulterada por um erro de transmissão. Por exemplo, se a contagem 5 no segundo quadro da Figura se tornar 7, em virtude da inversão de um único bit, o destino perderá a sincronização e não será capaz de localizar o início do quadro seguinte. Mesmo que o checksum esteja incorreto, de modo que o destino saiba que o quadro está defeituoso, ele ainda não terá informações suficientes para saber onde começa o quadro seguinte. Enviar um quadro de volta à origem solicitando retransmissão também não ajuda, pois o destino não sabe quantos caracteres deverão ser ignorados para chegar ao início da retransmissão. **Por essa razão, o método de contagem de caracteres quase não é mais usado.**
+
+<img src="../../imgs/4_Periodo/Redes1/image-20210911163132334.png" style="width:80%">
+
+#### INSERÇÃO DE BYTES DE FLAGS
+
+contorna o problema de ressincronização após um erro, fazendo cada quadro começar e terminar com bytes especiais. Normalmente o mesmo byte, chamado byte de flag, é usado como delimitador de início e de fim, como mostra a Figura, na qual ele é representado por FLAG. 
+
+Dois bytes de flag consecutivos indicam o fim de um quadro e o início do próximo. Assim, se o receptor perder a sincronização, ele poderá simplesmente procurar dois bytes de flag para encontrar ofinal do quadro atual e o início do seguinte.
+
+<img src="../../imgs/4_Periodo/Redes1/image-20210911163734337.png" style="width:80%">
+
+Porém ainda existe um problema, é possível que o byte de flag venha nos dados, no payload, especialemente quando são transmitidos dados binários, como fotografias ou músicas.
+
+Uma forma de solucionar esse problema é fazer com que a camada de enlace de dados do transmissor inclua um caractere de escape especial (ESC) imediatamente antes de cada byte de flag “acidental” nos dados. Assim, o byte de flag de enquadramento pode ser distinguido daquele nos dados pela ausência ou presença de um byte de escape antes dele. A camada de enlace de dados na extremidade receptora remove o byte de escape antes de entregar os dados à camada de rede (Técnica chamada de inserção de octetos ou inserção de caracteres - Usada no protocolo PPP).
+
+<img src="../../imgs/4_Periodo/Redes1/image-20210911164238424.png" style="width:80%">
+
+#### INSERÇÃO DE FLAGS NO INÍCIO E FIM DO FRAME
 
 
-- por que é preciso?
-- orientado a caracter e a bit.....
-
-[contagem de caracteres]
 
 ## CONTROLE DE FLUXO
 
@@ -785,6 +829,10 @@ Controle da quantidade de informação que pode ser enviado.
 Um dos principais papeis dessa camada.
 
 ## CONTROLE DE ERROS
+
+> Detecção: Sinaliza ao remetende a retransmissão ou descarta o quadro.
+>
+> Correção: Permite o **receptor** localizar e **corrigir** o(s) erro(s) sem precisar da retransmissão.
 
 Detecção e correção dos erros.
 
@@ -845,6 +893,12 @@ Menor redundância, pois só queremos detectar se tem erro. Ou seja, a carga de 
 A camada de enlace pode ser sub dividida em duas subcamadas, sendo elas: Controle de enlace de dados (LLC) e Controle de acesso múltiplo (MAC).
 
 Controle de comunicação entre máquinas de uma rede............
+
+Implementa o controle de acesso ao canal se meio for compartilhado.
+
+Endereços físicos (MAC) são usados nos cabeçalhos dos quadros para identificar origem e destino de quadros em enlaces multiponto 
+
+- Endereços diferentes do endereço IP. O **IP** é uma identificação que a rede atribui a cada aparelho conectado a ela(ou seja o **IP** pode mudar) já o **mac** address é um **endereço** único de cada aparelho que nunca muda e que a rede utiliza além de outras coisas para manter um registro de todos os aparelhos que já se conectaram a ela. 
 
 ## PROTOCOLOS DE ACESSO MÚLTIPLO
 
