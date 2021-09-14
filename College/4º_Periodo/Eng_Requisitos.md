@@ -305,3 +305,90 @@ Consiste no exame dos requisitos coletados e negociação com os stakeholders...
   - Foda é em um sistema com muitos requisitos, ai fica dfícil.
   - Vantagens, desvantagens.....
 - Modelo de Kano: 
+
+
+
+
+
+13/09 :watch:
+
+# Product Backlog
+
+- DEEP
+  - Detalhado
+  - Estimável
+  - Emergent
+  - Priorizado
+
+- No mínimo uma sprint.
+- Product Owner gerencia o Product Backlog
+
+# Histórias de Usuários
+
+**Manifesto ágil:** 
+
+![image-20210913192729440](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210913192729440.png)
+
+- Agilidade: 
+
+## Processos de desenvolvimento ágeis
+
+Caracterizados como informais e minimamente documentados. Dão mais destaque à comunicação verbal e social e à equipe de desenvolvimento. Ex.: XP; Scrum; LSD; AUP; ASD; DSDM; FDD.
+
+[Comunicação]
+
+- Equipe:
+  - Multifuncionais;
+  - Auto-organizadas
+- Processo iterativo e incremental
+  - ...
+- Papéis:
+  - PO
+  - ...
+- Artefatos:
+  - Visão
+  - ...
+- Reuniões/Cerimônias:
+  - Sprint Planning
+  - ....
+
+## Histórias - Características
+
+User Story ou “história de usuário” é uma descrição concisa de uma necessidade do usuário do produto (ou seja, de um “requisito”) sob o ponto de vista desse usuário. A User Story busca descrever essa necessidade de uma forma simples e leve.
+
+- Devem ser escritas de maneira a serem compreendidas por usuários e desenvolvedores (por todos do negócio);
+- Focam no valor definido pelo usuário em vez de uma decomposição hierárquica funcional;
+- Podem ser escritas em post it, pois o tamanho dele é pequeno, igual deve ser a história;
+- Detalhes do comportamento do sistema não aparecem na história;
+- Compõem o Product Backlog;
+- São escritas pelo PO;
+- Devem permitir a estimativa de prazo.
+
+Exemplos:
+
+![image-20210913195957232](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210913195957232.png)
+
+![image-20210913200024527](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210913200024527.png)
+
+[Estrutura]
+
+## Quem?
+
+Para definir **"quem"**  no user story é utilizado as personas do negócio.
+
+Personas são personagens fictícios criados a partir da pesquisa e observação dos comportamentos de usuários reais. Representam motivações, objetivos ............. e necessidades de um determinado grupo.
+
+![image-20210913201829915](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210913201829915.png)
+
+## Detalhamento
+
+
+
+## Processo completo de uso
+
+[INVEST]
+
+## Diretrizes para boas histórias
+
+
+

@@ -978,7 +978,7 @@ A opção A deixa mais "confortável" para responder, mas a B ajuda a trazer mai
 
 - **Brainstorming de Necessidades e Desejos dos Usuários;**
 - **Classificação de cartões (card sorting);**
-- **Estudos de Campo;s**
+- **Estudos de Campos;**
 - **Investigação Contextual.**
 
 # Identificação de necessidades do usuário 2

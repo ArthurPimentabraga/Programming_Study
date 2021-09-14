@@ -820,51 +820,71 @@ Uma forma de solucionar esse problema é fazer com que a camada de enlace de dad
 
 #### INSERÇÃO DE FLAGS NO INÍCIO E FIM DO FRAME
 
+Similar à inserção de caracteres. Contorna uma desvantagem do último método, que ao invés de inserir um byte inteiro o transmissor irá inserir um único bit (bit de escape) depois de uma sequência determinada de bits, e o receptor retira esse bit após as mesmas sequências. *Isso faz ter uma densidade mínica de transições, o que ajuda a camada física a manter a sincronização.* Ex.: A cada 5 bits "1" será inserido 1 bit "0".
 
+<img src="../../imgs/4_Periodo/Redes1/image-20210913223942224.png" style="width:80%">
+
+Porém, esse modelo também tem um efeito colateral, é que o comprimento de um frame agora depende exclusivamente do conteúdo dos dados que ele carrega. Ou seja, se entre meus dados à serem transportados só possuir bits que formem a sequência, logo teremos um grande e único frame para ser transportado. Por outro lado, se só possuir bits de escape, logo teremos que utilizar mais da nossa banda, pois teremos vários bits inseridos para delimitar os frames.
 
 ## CONTROLE DE FLUXO
 
-Controle da quantidade de informação que pode ser enviado.
+Um dos principais papeis dessa camada. Controla a quantidade de informação que pode ser enviado, ou seja, não permite que a fonte envie frames numa taxa maior que a capacidade de recepção do destino.
 
-Um dos principais papeis dessa camada.
+Estabelecer um protocolo em que o receptor habilite a fonte a enviar um nº definito de mensagens e aguardar a próxima liberação de envio.
 
 ## CONTROLE DE ERROS
 
-> Detecção: Sinaliza ao remetende a retransmissão ou descarta o quadro.
->
-> Correção: Permite o **receptor** localizar e **corrigir** o(s) erro(s) sem precisar da retransmissão.
+Após resolvermos o problema da delimitação do início e do fim de cada quadro, vamos ao problema seguinte: como ter certeza de que todos os quadros serão entregues na camada de rede de destino e na ordem apropriada?
 
-Detecção e correção dos erros.
+A garantia de entrega confiável é utilizada nos serviços **orientados à conexão**, pois nos serviços não orientado e sem confirmação, os quadros simplesmente podem continuar a serem enviados sem se preocupar se estão chegando corretamente.
 
-[código de detecção de erros]
+A forma mais comum de garantir uma entrega confiável é dar ao transmissor algum tipo de **feedback** sobre o que está acontecendo no outro extremo da linha. Normalmente, o protocolo solicita que o receptor retorne **frames especiais de controle** com confirmações positivas ou negativas sobre os quadros recebidos. Se receber uma confirmação positiva sobre um quadro, o transmissor saberá que o
+quadro chegou em segurança ao destino. Por outro lado, uma confirmação negativa significa que algo saiu errado e o quadro deve ser retransmitido.
 
-06/09 :watch:
+Também é usado **timers**, ou seja, tem a possibilidade de um frame se perder por completo, logo quando o transmissor envia um quadro, ele inicializa um timer. Se a confirmação vier antes do final desse timer, então :+1:, se não, o timer é desativado, alertando o transmissor do problema.
+
+Nesse caso podemos simplesmente reenviar o frame, mas ai caimos em um outro problema, que é o receptor poder aceitar o mesmo quadro várias vezes. Para evitar que isso aconteça, geralmente é preciso atribuir **números de sequência** aos quadros transmitidos, de modo que o receptor possa distinguir as retransmissões dos originais (**Controle da recepção de quadros repetidos**).
+
+
+
+Erros de transmissão são muito comuns, principalmente em um **tráfego em rajadas**, que são muitos dados transmitidos em um curto período de tempo, o que volta até ao problema de controle de fluxo, na qual o receptor não suporta a carga.
+
+Por outro lado erros nesse tipo de tráfego é mais fácil de detectar, pois temos MUITA informação em um curto período de tempo, uma grande quantidade de bits. Em compensação são mais difíceis de corrigir que um erro isolado.
+
+
+
+### CÓDIGOS DE DETECÇÃO vs CORREÇÃO DE ERROS
 
 Temos código de detecção de erros e códigos de correção de erros.
 
-### CORREÇÃO
+- Detecção
+  - **Menor redundância**, pois só queremos detectar se tem erro. Ou seja, a carga de bits transmitidos é menor, pois não precisamos identificar o local do erro, os bits errados;
+  - Usados em **canais confiáveis**, com baixas taxas de erro. Ex.: Fibra.
+  - Se houver erro, a origem deve retransmitir o quadro, pois a chance de dar erro de novo é pequena.
+- Correção
+  - **Grande redundância** dos dados, suficiente para que o destino consiga corrigir os erros.
+  - Usados em canais **não confiáveis**, que geram muitos erros de transmissão. Ex.: Enlace sem fio.
+  - Se houver erro, o destino deve corrigir o quadro, uma vez que a retransmissão poderá gerar novos erros durante o reenvio, e até gerar um congestionamento na rede.
 
-Grande redundância dos dados, suficiente para que o destino consiga corrigir os erros.
+06/09 :watch:
+
+### CORREÇÃO
 
 #### DISTÂNCIA DE HAMMING
 
-[Identificação - bits de paridade e somas...]
+A partir do dado (geralmente um byte) à ser transmitido, iremos inserir o código de hamming (bits de paridade) para gerar a "palavra código" que será os bits de dados + os bits de paridade (ou bits de redundância) e será enviado para posteriormente ser verificado no receptor.
 
-As paridades ficam em todas as posições das potências de 2. No resto dos bits são distribuidos os bits de dados à serem transferidos.
+Os bits de paridade ficam em todas as posições das potências de 2. No resto dos bits são distribuidos os bits de dados à serem transferidos. Para saber o valor a ser registrado em cada paridade fazemos uma soma dos bits respectivos aquela paridade, que serão sempre os bits pulando o nº de casas do nº da paridade. Ex.: Paridade2 vai pular 2 bits e somar o próximo. 
 
-Soma as casas, se for par coloca bit 0, se for ímpar bit 1.
+Caso a soma for **par** coloca bit 0, se for **ímpar** bit 1.
 
-A soma é sempre pulando o nº de casas do número da paridade. Ex.: Pw vai pular 2 bits e verificar o próximo. A soma é feita de cada posição verificada.
+<img src="../../imgs/4_Periodo/Redes1/image-20210913235244259.png" style="width:80%">
 
-> Creio que a soma ta sendo feita em decimal arthur do futuro :)
+Para verificar se ocorreu o erro a partir dessa *palavra código*, basta realizar as verificações soma novamente, como se fosse achar o valor das paridades, porém agora sem contar com o bit de paridade. Se o resultado for igual ao esperado, show, se não há um erro.
 
-[Como corrigir?]
-
-Basta inverter o bit em comum que as paridades erradas verificam.
+Para corrigir, basta inverter o bit em comum que as paridades erradas verificam.
 
 ### DETECÇÃO
-
-Menor redundância, pois só queremos detectar se tem erro. Ou seja, a carga de bits transmitidos é menor, pois não precisamos identificar o local do erro, os bits errados.
 
 #### CÓDIGO POLINOMIAL OU CRC
 
@@ -943,4 +963,18 @@ Conceberam alguns protocolos para esse controle........
 ​	[Polling]
 
 ​		Tem isso no bluetooth :) 
+
+13/09 :watch:
+
+​	[Token passing]
+
+### CANALIZAÇÃO
+
+
+
+
+
+
+
+[COISA PRA CRL DAQUI PRA BAIXO :cry: ]
 
