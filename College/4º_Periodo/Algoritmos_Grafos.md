@@ -509,6 +509,8 @@ Exercício:
 
 24/08 :watch:
 
+:building_construction:
+
 [Propriedades de grafos]
 
 Algumas são de simples verificação, rodando alguns algoritmos da pra fazer essas verificações:
@@ -525,13 +527,68 @@ O que eu quero buscar? Algoritmos de busca:
 
 ## Busca em largura
 
+> Notes: Também há uma explicação na aula do dia 14/09.
+
 [O que é]
 
-[Estados dos vértices]
+### Estados dos vértices
 
-[Funcionamento]
+:building_construction:
 
-[Custo e Complexidade]
+### Funcionamento
+
+:building_construction:
+
+### Custo e Complexidade
+
+:building_construction:
+
+14/09 :watch:
 
 ## Busca em profundidade
+
+[o que é]
+
+### Estados dos vértices
+
+:building_construction:
+
+### Funcionamento
+
+:building_construction:
+
+### Classificação de arestas
+
+:building_construction:
+
+## Ordenação topológica
+
+:building_construction:
+
+> Notes: Um vértice precisa do resultado de outro antes, para ir para um vértice precisa passar por outro antes.
+>
+> - VERIFICAR!!! -> impossível ser cíclico, pois não tem início, todo mundo depende de todo mundo....
+> - DAG -> Dígrafo acíclico.
+
+[O que é]
+
+### Teorema
+
+:building_construction:
+
+### Algorítmo de Kahn (1962)
+
+:building_construction:
+
+[Utilização da busca em profundidade]
+
+### Aplicações
+
+:building_construction:
+
+## Algoritmo de Dijkstra
+
+:building_construction:
+
+Baseado na busca em largura.
 

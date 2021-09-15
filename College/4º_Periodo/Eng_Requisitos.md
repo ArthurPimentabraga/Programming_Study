@@ -391,4 +391,3 @@ Personas são personagens fictícios criados a partir da pesquisa e observação
 ## Diretrizes para boas histórias
 
 
-

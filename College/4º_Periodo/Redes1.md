@@ -75,7 +75,7 @@ if(endereço no quadro = meu endereço) {
 - **Wide Area Network (WAN)**
   - Cobrem grandes áreas geográficas;
   - Possuem uma coleção de máquinas (hosts) que executam aplicações e são conectadas por uma subrede (subnet).
-    - Subrede: pertence à operadora, transmite uma mensagem de um host para outro. É composta por linhas de transmissão (circuitos, canais ou troncos ) que movem os bits entre máquinas e elementos de comutação (roteador) que conectam duas ou mais linhas de transmissão.
+    - Subrede: pertence à operadora, transmite uma mensagem de um host para outro. É composta por linhas de transmissão (circuitos, canais ou troncos) que movem os bits entre máquinas e elementos de comutação (roteador) que conectam duas ou mais linhas de transmissão.
 
 <img src="../../imgs/4_Periodo/Redes1/esquema_networks.png" style="width:80%">
 
@@ -888,7 +888,9 @@ Para corrigir, basta inverter o bit em comum que as paridades erradas verificam.
 
 #### CÓDIGO POLINOMIAL OU CRC
 
-*CRC - Cyclic Redundancy Check.*
+*CRC - Cyclic Redundancy Check - Verificação de redundância cíclica.*
+
+:building_construction:
 
 [Explicação]
 
@@ -898,7 +900,7 @@ Para corrigir, basta inverter o bit em comum que as paridades erradas verificam.
 
 ## PROTOCOLOS 
 
-
+:building_construction:
 
 [Como funciona]
 
@@ -907,6 +909,8 @@ Para corrigir, basta inverter o bit em comum que as paridades erradas verificam.
 
 
 # SUB-CAMADA DE ACESSO AO MEIO
+
+:building_construction:
 
 [INTRODUÇÃO]
 
@@ -921,6 +925,8 @@ Endereços físicos (MAC) são usados nos cabeçalhos dos quadros para identific
 - Endereços diferentes do endereço IP. O **IP** é uma identificação que a rede atribui a cada aparelho conectado a ela(ou seja o **IP** pode mudar) já o **mac** address é um **endereço** único de cada aparelho que nunca muda e que a rede utiliza além de outras coisas para manter um registro de todos os aparelhos que já se conectaram a ela. 
 
 ## PROTOCOLOS DE ACESSO MÚLTIPLO
+
+:building_construction:
 
 Conceberam alguns protocolos para esse controle........
 

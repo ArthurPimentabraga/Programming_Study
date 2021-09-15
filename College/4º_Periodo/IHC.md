@@ -1,4 +1,5 @@
 ---
+
 title: Interação humano-computador (Puc-Minas - 4º Período)
 author: Arthur P. Braga
 period: 2/2021
@@ -984,4 +985,3 @@ A opção A deixa mais "confortável" para responder, mas a B ajuda a trazer mai
 # Identificação de necessidades do usuário 2
 
 /09 :watch:
-
