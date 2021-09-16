@@ -890,13 +890,38 @@ Para corrigir, basta inverter o bit em comum que as paridades erradas verificam.
 
 *CRC - Cyclic Redundancy Check - Verificação de redundância cíclica.*
 
-:building_construction:
+Trata as cadeias de bits (os dados à serem transportados, os frames) como [polinômios](https://brasilescola.uol.com.br/o-que-e/matematica/o-que-e-polinomio.htm) com coeficientes 0 ou 1. 
 
-[Explicação]
+<img src="../../imgs/4_Periodo/Redes1/image-20210915211255795.png" style="width:50%">
 
-[Cálculo do crc]
+- A fonte e o destino devem possuir um mesmo polinômio gerador G(x). Sendo que um frame M(x) deve ser maior que o polinômio G(x).
 
+<img src="../../imgs/4_Periodo/Redes1/image-20210915211606684.png" style="width:80%">
 
+##### CÁLCULO DE CRC
+
+- **Envio dos dados:**
+
+  1. Bits de dados que deseja transportar;
+
+  2. Polinômio + a identificação do seu grau;
+
+  3. Acrescentar à direita dos bits de dados, X bits 0. Sendo X o grau do polinômio;
+
+  4. Dividir (XOR) a sequência de bits do último tópico pelo CRC. O CRC é montado colocando um bit 1 no coeficiente existente do polinômio, e um bit 0 no não existente. Ex.: 
+
+     ​	  <img src="../../imgs/4_Periodo/Redes1/image-20210915215932022.png" style="width:60%">
+
+  5. O resultado dessa divisão é acrescentado à direita dos bits de dado, e isso é o que será enviado.
+
+- **No recebimento:**
+
+  1. Dividir (XOR) os dados recebidos pelo CRC;
+  2. Se o resultado conter somente **bits 0**, logo existe uma grande possibilidade da mensagem estar correta.
+
+Exemplo da explicação:
+
+<img src="../../imgs/4_Periodo/Redes1/image-20210915220335893.png" style="width:70%">
 
 ## PROTOCOLOS 
 
@@ -906,41 +931,49 @@ Para corrigir, basta inverter o bit em comum que as paridades erradas verificam.
 
 
 
-
-
 # SUB-CAMADA DE ACESSO AO MEIO
 
-:building_construction:
+A camada de enlace pode ser dividida em duas sub-camadas, sendo elas: Controle de enlace de dados (LLC) e Controle de acesso múltiplo (MAC).
 
-[INTRODUÇÃO]
+Controle de comunicação entre máquinas de uma rede. Implementa o controle de acesso ao canal se meio for compartilhado. Se for um canal dedicado, não há necessidade de última subcamada.
 
-A camada de enlace pode ser sub dividida em duas subcamadas, sendo elas: Controle de enlace de dados (LLC) e Controle de acesso múltiplo (MAC).
+Endereços físicos (MAC) são usados nos cabeçalhos dos quadros para identificar origem e destino de quadros em enlaces multiponto.
 
-Controle de comunicação entre máquinas de uma rede............
+- Endereços diferentes do endereço IP. O **IP** é uma identificação que a rede atribui a cada aparelho conectado a ela (ou seja o **IP** pode mudar) já o **mac** address é um **endereço** único de cada aparelho que nunca muda e que a rede utiliza além de outras coisas para manter um registro de todos os aparelhos que já se conectaram a ela. 
 
-Implementa o controle de acesso ao canal se meio for compartilhado.
+Quando várias máquinas são conectadas e usam um enlace comum, chamado **enlace multi-ponto ou broadcast**, é preciso um **protocolo de acesso mútiplo** para coordenar o acesso ao meio físico (link).
 
-Endereços físicos (MAC) são usados nos cabeçalhos dos quadros para identificar origem e destino de quadros em enlaces multiponto 
-
-- Endereços diferentes do endereço IP. O **IP** é uma identificação que a rede atribui a cada aparelho conectado a ela(ou seja o **IP** pode mudar) já o **mac** address é um **endereço** único de cada aparelho que nunca muda e que a rede utiliza além de outras coisas para manter um registro de todos os aparelhos que já se conectaram a ela. 
+> Redes broadcast: competição pelo meio - necessidade de controle.
+>
+> A subcamada MAC está presente em quase todas as LANs e em WANs via satélite.
 
 ## PROTOCOLOS DE ACESSO MÚLTIPLO
 
+Foram concebidos diversos protocolos formais para fazer o controle de acesso a um enlace compartilhado. Estes são classificados em três grupos:
+
+<img src="../../imgs/4_Periodo/Redes1/image-20210915225432262.png" style="width:70%">
+
+### ACESSO RANDÔMICO (OU DE CONTENÇÃO)
+
+Não tem nenhum tipo de hierarquia entre as máquinas, logo não tem nenhuma permissão ou proibição para a transferência dos dados. 
+
+Sendo assim, as máquinas só irão utilizar os protocolos para saber se envia ou não os dados. Isso vai depender muito do meio, se ta livre ou ocupado, logo a máquina vai ficar *olhando* para esse meio, vão utilizar os protocolos para saber esses estados.
+
+Em outras palavras, qualquer máquina poderá transmitir quando desejar, desde que siga os protocolos utilizados.
+
+**COLISÃO:** Mais de uma máquina tenta enviar dados ao mesmo instante, isso faz com que ocorra um conflito no acesso. Podendo ter que retransmitir os dados destruidos.
+
+#### ALOHA
+
 :building_construction:
 
-Conceberam alguns protocolos para esse controle........
+[Explicação] -> 09:03
 
-​	[Primeiros protocolos falados...........]
-
-### ALOHA
+##### ALOHA PURO
 
 [Explicação]
 
-#### ALOHA PURO
-
-[Explicação]
-
-#### SLOTTED ALOHA
+##### SLOTTED ALOHA
 
 [Explicação]
 
@@ -948,7 +981,7 @@ Conceberam alguns protocolos para esse controle........
 
 08/09 :watch:
 
-### CSMA
+#### CSMA
 
 [Explicação]
 
@@ -958,23 +991,51 @@ Conceberam alguns protocolos para esse controle........
 
 ​		[Non-Persistent]
 
-​	[CSMA/CD]
+#### CSMA/CD
 
-​	[CSMA/CA]
+
+
+#### CSMA/CA
+
+
 
 ### ACESSO CONTROLADO
 
-​	[Reservation]
+Aqui os protocolos já vão verificar o estado do meio e **controlar** o acesso das máquinas. As máquinas terão um momento que poderão acessar, ou não, o meio. Ou seja, terá que ter uma **permissão** para o envio dos dados.
 
-​	[Polling]
+:building_construction:
 
-​		Tem isso no bluetooth :) 
+#### RESERVATION
+
+
+
+#### POLLING
+
+>  Note: Tem isso no bluetooth :) 
+
+
 
 13/09 :watch:
 
-​	[Token passing]
+#### TOKEN PASSING
 
-### CANALIZAÇÃO
+
+
+### PROTOCOLOS DE CANALIZAÇÃO
+
+Nesses tipos de protocolo nós teremos uma largura de banda específica, e o acesso ao meio entre as máquinas será compartilhado em função do tempo, ou da frequência, ou do código, tudo depende do protocolo utilizado.
+
+:building_construction:
+
+#### FDMA
+
+
+
+#### TDMA
+
+
+
+#### CDMA
 
 
 

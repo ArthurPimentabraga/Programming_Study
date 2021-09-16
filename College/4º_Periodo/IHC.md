@@ -1,9 +1,6 @@
----
-
 title: Interação humano-computador (Puc-Minas - 4º Período)
 author: Arthur P. Braga
 period: 2/2021
----
 
 # Introdução
 
@@ -971,17 +968,113 @@ A opção A deixa mais "confortável" para responder, mas a B ajuda a trazer mai
 
 <img src="../../imgs/4_Periodo/Interacao_Humano_Computador/SAM.png" style="width:90%">
 
+### Brainstorming de Necessidades e Desejos dos Usuários
+
+15/09 :watch:
+
+Busca levantar de forma bastatne **livre** um conjunto grande de opiniões dos participantes em torno de um tema. Diferentemente de um grupo de foco, que busca endereçar perguntas específicas, uma sessão de brainstorming busca levantar de forma bastante livre um conjunto grande e abrangente de opiniões dos participantes em torno de um tema.
+
+- Pode ser utilizado para aprender sobre as informações, tarefas ou características desejadas num produto;
+- Os participantes não devem se censurar ou aos outros - Cabeça aberta;
+- O objetivo é explorar necessidades e desejos dos usuários, e não projetar o sistema (não é design participativo);
+- Os resultados dessa atividade podem alimentar diretamente a especificação funcional e documentação de design;
+- Duração: em média 1 hora com usuários com perfis semelhantes.
+
+A pergunta inicial deve se referir ao “sistema ideal” para que os participantes não se limitem ao que eles acreditam que a tecnologia possa fazer.
+
+1. Para identificar as informações que os usuários querem ou precisam que o sistema forneça
+   - Que informações o sistema ideal deve fornecer?
+
+2. Para identificar os tipos de atividades ou ações que os usuários esperam realizar com o sistema
+   - Que tarefas você precisaria ou gostaria de realizar com o sistema ideal?
+
+3. Para identificar características como confiabilidade, rapidez, segurança
+   - Que características o sistema ideal deve apresentar?
+
+O moderador pode fazer perguntas sobre sugestões duplicadas. Quando um participante faz uma sugestão que parece semelhante a uma sugestão anterior, é possível que ele esteja querendo dizer algo um pouco diferente. 
+
+- Temos sempre que falar TUDO, mesmo que pareça óbvio!!
+
+- O resultado da análise também pode ajudar a reduzir a lista de funcionalidades especificadas para o produto. 
+
+
+
+Uma alternativa à sessão de brainstorming consiste em utilizar **diagramas de afinidade.** Um diagrama de afinidade e construído da seguinte maneira: 
+
+- Cada pessoa escreve cada item por ela levantado numa pequena folha de papel autocolante e a afixa num painel ou parede;
+- Em seguida, os participantes examinam as folhas afixadas por todos, agrupando os itens semelhantes ou fortemente relacionados;
+- Dependendo do objetivo do diagrama, pode-se acrescentar rótulos aos grupos identificados;
+- Para priorizar os itens, pode-se pedir que cada participante marque com três asteriscos o item que julgar mais importante, dois asteriscos o segundo mais importante e um único asterisco o terceiro item mais importante para ele.
+
+### Classificação de cartões (card sorting)
+
+Como as informações são organizadas. É um método para identificar a estrutura ou arquitetura de informação de uma lista não ordenada de ideias ou de outros itens. Ex.: Ajudar adeterminar aestrutura de menus e submenus em um aplicação; Ajudar a definir os índices de navegação em um website; Ajudar a decidir como organizar controle em uma interface.
+
+Um conjunto de cartões ou fichas são preparados com amostras ou descrições de conteúdo e fornecidos a um grupo de pessoas que devem organizá-los em grupos, de acordo com a similaridade entre os cartões
+
+Essa técnica pode ser utilizada para:
+
+- levantar diferentes modelos de classificação;
+- explorar como as pessoas pensam sobre certos tópicos;
+- descobrir que categorias parecem semelhantes ou complementares;
+- descobrir sobre o que pode ser agrupado e o que não pode;
+- coletar listas de palavras ou expressões que as pessoas utilizam para descrever grupos de informação.
+
+É bom para tentar entender como o usuário entenderia a organização! As pessoas encontram com facilidade as coisas no sistema?
+
+#### Classificação
+- Classificação de cartões **aberta**: os participantes descrevem os grupos de cartões que eles criaram, em geral criando cartões especiais representando o grupo.
+- Classificação de cartões **fechada**: são fornecidos também cartões que representam categorias. Os participantes devem classificar os cartões de conteúdo nessas categorias predefinidas.
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/image-20210915200453790.png" style="width:90%">
+
+#### Passos
+
+1. decidir o que se quer descobrir (objetivo);
+2. selecionar o método (individual ou em grupo; presencial ou remoto; manual ou por software);
+3. selecionar o conteúdo;
+4. selecionar e convidar os participantes;
+5. conduzir a sessão de classificação de cartões e registrar os dados;
+6. analisar os resultados;
+7. utilizar os resultados no seu projeto.
+
+#### Objetivos comuns
+
+- aprender sobre como as pessoas pensam sobre o conteúdo e seus principais agrupamentos e utilizar essa informação para criar categorias de alto nível e subcategorias;
+- entender melhor os relacionamentos entre os itens de conteúdo;
+- explorar se há um esquema principal de classificação para o conteúdo ou se há mais de um esquema. Utilizar essa informação para definir se as informações devem ser oferecidas de mais de uma maneira;
+- descobrir por que uma pequena seção do website não está funcionando ao explorar diferentes métodos de categorização. Utilizar essa informação para decidir se e como o conteúdo deve ser reorganizado;
+- coletar termos e expressões a serem utilizados para rotular grupos e categorias de conteúdo.
+
+#### Seleção de conteúdo
+
+Uma das principais causas para o insucesso de uma sessão de classificação de cartões é a seleção de conteúdo inadequado. 
+
+O conteúdo selecionado deve permitir atingir os objetivos do estudo.
+
+- No caso de websites, o conteúdo pode ser tópicos ou assuntos; páginas de conteúdo do próprio website; produtos de um catálogo; navegação ou páginas de índice.
+- No caso de aplicações, deve-se buscar tarefas e funções: itens de menu da aplicação; funcionalidades-chave da aplicação; passos em um processo; tarefas-chave.
+- Quando o objetivo principal é explorar uma ideia ou tópico, o conteúdo selecionado pode ser resultante de brainstorming ou de conteúdos disponíveis no domínio ou em produtos semelhantes. 
+- Deve-se assegurar que os itens selecionados sejam representativos e relevantes para os participantes, e que possam ser agrupados.Não incluir itens de conteúdo que já pareçam categorias (e.g., “Utilidades Domésticas").
+- Não abusar de termos que induzam os participantes a certas classificações (e.g., diversos cartões intitulados “Manual de...“).
+- Para evitar classificações indevidas, no caso de uma classificação fechada, os cartões que representem categorias devem ser bem diferenciados dos cartões que representam conteúdos (e.g., cores diferentes). 
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/image-20210915201403799.png" style="width:90%">
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/image-20210915201555957.png" style="width:90%">
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/image-20210915202055775.png" style="width:90%">
+
+<img src="../../imgs/4_Periodo/Interacao_Humano_Computador/image-20210915202114382.png" style="width:90%">
 
 
 
 
 
 
-- **Brainstorming de Necessidades e Desejos dos Usuários;**
-- **Classificação de cartões (card sorting);**
+
 - **Estudos de Campos;**
 - **Investigação Contextual.**
 
-# Identificação de necessidades do usuário 2
 
-/09 :watch:
+
