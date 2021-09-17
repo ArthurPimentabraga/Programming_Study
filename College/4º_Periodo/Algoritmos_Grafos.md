@@ -592,3 +592,21 @@ O que eu quero buscar? Algoritmos de busca:
 
 Baseado na busca em largura.
 
+
+
+# Conectividade
+
+:building_construction:
+
+16/09 :watch:
+
+> Notas: 
+>
+> - Um grafo é conexo quando existe **pelo menos** um caminho entre todos os vértices.
+>
+> - Um grafo desconexo e componentes conexos -> Cada componente de um grafo desconectado é chamado de componente conexo.
+
+
+
+[Algoritmo DFS - Principal (visita)]
+
