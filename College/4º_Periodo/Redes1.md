@@ -965,17 +965,53 @@ Em outras palavras, qualquer máquina poderá transmitir quando desejar, desde q
 
 #### ALOHA
 
-:building_construction:
+Surgiu na década de 70 no Havaí. Queriam trazer a rede para a ilha, conectar os usuários nas ilhas remotas ao computador principal em Honolulu. Logo, a ideia era criar uma LAN via rádio (sem fio - mas pode ser usado em qualquer meio de transmissão compartilhado). 
 
-[Explicação] -> 09:03
+Basicamente deixa os usuários transmitirem sempre que quiserem, porém isso faz com que ocorra colisões.
 
 ##### ALOHA PURO
 
-[Explicação]
+Protocolo original. Basicamente cada estação envia um frame toda vez que tiver um para enviar - Já viu a probabilidade de colisão ne? :astonished: Por isso vamos ter muito reenvio..
+
+<img src="../../imgs/4_Periodo/Redes1/image-20210917002656951.png" style="width:70%">
+
+Esse protocolo denpende de **confirmações** por parte do receptor, logo temos um time-out que o transmissor pode esperar a confirmação. Se não recebe-la, cada estação aguarda por um **tempo randômico** antes de tentar reenviar o frame: tempo **TB (back-off time).** Após um nº máximo de tentativas, uma estação deve desistir e tentar mais tarde.
+
+<img src="../../imgs/4_Periodo/Redes1/image-20210917003103673.png" style="width:70%">
+
+- O **período de time-out** é igual ao maior atraso possível de propagação: ida-e-volta, que é o dobro do tempo necessário para enviar um frame entre as duas estações mais afastadas (2 x Tp);
+- O **back-off time (TB)** é um valor randômico que normalmente depende de K (o **nº de tentativas de transmissões mal sucedidas**). Depende da implementação: uma forma comum é o *binaru exponential back-off*.
+- Para cada transmissão, um multiplicador no intervalo 0 a **2^k -1** é escolhido randomicamente e multiplicado por Tp ou Tfr.
+
+Exemplos:
+
+<img src="../../imgs/4_Periodo/Redes1/image-20210917003622025.png" style="width:80%">
+
+###### TEMPO DE VULNERABILIDADE
+
+Tempo no qual exista a **possibilidade de colisão**. Partimos do pressuposto de que as estações enviam frames de comprimento fixo com cada frame levando Tfr segundos para sua transmissão. 
+
+<img src="../../imgs/4_Periodo/Redes1/image-20210917003924902.png" style="width:70%">
+
+Exemplo:
+
+<img src="../../imgs/4_Periodo/Redes1/image-20210917003724117.png" style="width:90%">
+
+
 
 ##### SLOTTED ALOHA
 
-[Explicação]
+É uma forma de melhorar a eficiência do ALOHA puro, duplicar a capacidade. Basicamente divide o tempo em intervalor discretos, os **slots**, e cada máquina só pode trasmitir no ínicio de cada slots, ou seja se perder a oportunidade só poderá transmitir no início do próximo slot.
+
+Isso diminui pela metada o período de vulnerabilidade, pois antes um frame poderia colidir com o início de um, e o fim do outro, por exemplo, E isso é impossível agora. 
+
+- O tempo de vulnerabilidade é igual à Tfr. 
+
+<img src="../../imgs/4_Periodo/Redes1/image-20210917005349451.png" style="width:70%">
+
+Vulnerabilidade no ALOHA puro:
+
+<img src="../../imgs/4_Periodo/Redes1/image-20210917005411850.png" style="width:50%">
 
 
 
