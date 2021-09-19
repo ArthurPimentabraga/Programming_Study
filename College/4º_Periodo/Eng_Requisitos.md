@@ -121,44 +121,84 @@ O que é:
 - Característica do sistema ou a descrição de **algo que o sistema é capaz de realizar** para atingir os seus objetivos;
 - Restrição.
 
-Para que servem:
+## Para que servem
 
-- 
+- Provê a base para o plenejamento do projeto.
 
-Por que são importantes:
+- Podem ser utilizados como base:
+  - para que potenciais fornecedores apresentem suas propostas;
+    - descrição em alto nível.
+  - de um contrato;
+    - descrição em maior nível de detalhamento.
 
+## Por que são importantes
 
+- Nenhuma outra parte do trabalho prejudica tanto o sistema final, se feita incorretamente. Nenhuma outra parte do trabalho é mais difícil de se reparar a posteriori;
+- O que acontece quando os requisitos não estão ok?
+  - O sistema pode ser entregue com **atraso** e com **custos além do orçamento**;
+  - Os clientes podem não ficar satisfeitos e até **abandonar** o projeto ou mandar reconstruir;
+  - O sistema pode ficar inviável de ser utilizado devido aos **defeitos** apresentados;
+  - Se o sistema continuar em uso, o **custo** de **manter e evoluir** o sistema pode ser muito significativo.
+- Erros introduzidos durante a etapa de requisitos podem causar:
+  - prejuízos financeiros;
+  - atrasos nas entregas;
+  - aumento de riscos;
+  - baixa qualidade.
+
+<img src="../../imgs/4_Periodo/Eng_Requisitos/image-20210918190802895.png" style="width:80%">
 
 ## Aspectos relevantes
 
 - **Domínio**: Tudo aquilo ligado ao ambiente em que a solução de software é executada, será aplicada. Ex.: Ambiente financeiro, entretenimento, entre outros.
-- Problema existe no mundo real, não no software. Ou seja, ......................................
-- Ter uma istinção clara entre problema e solução. Dessa forma podemos definir uma solução adequada para o problema.
-  - Sub............
-
-
+- Problema existe no mundo real, não no software. Ou seja, requisitos descrevem os efeitos do sistema no ambiente, não o sistema em si!
+- Ter uma distinção clara entre problema e solução. Dessa forma podemos definir uma solução adequada para o problema.
+  - Falta de entendimento do problema real;
+  - Falta de capacidade de se definir o escopo do sistema e compreender as funções que devem ser incluídas;
+  - Discussões centradas no sistema (descritas em termos das soluções);
+  - Dificuldade de se encontrar soluções ótimas devido à falta de liberdade no projeto.
 
 - Identificar as **partes interessadas**, ou seja, todas as pessoas envolvidas no projeto, para ter várias pespectivas diferentes.
 
 ## Qualidade de software
 
+Conformidade com os respectivos requisitos! Cada requisito não atendido é um defeito.
 
+<img src="../../imgs/4_Periodo/Eng_Requisitos/image-20210918190630170.png" style="width:80%">
 
 ## Dificuldades na obtenção de requisitos
 
-
+Talvez... :building_construction:
 
 ## Qualidade dos requisitos
 
-> Rastreável: pq foi criado isso? quando? em qual versão? ainda é necessário?
+Qualidades de um requisito [IEEE-890-1998]
+
+- **Correta**: Requisito faz realmente parte do produto a ser construído;
+- **Precisa**: requisito possui uma única interpretação, aceita tanto pelos desenvolvedores quanto pelos usuários-chave;
+- **Completa**: Conjunto dos requisitos reflete todas as decisões de especificação tomadas;
+- **Consistente**: não há conflitos entre nenhum subconjunto de requisitos;
+- **Priorizado**: requisito é classificado de acordo com sua importância, estabilidade e complexidade;
+- **Verificável**: requisito é verificável;
+- **Modificável**: Organização dos requisitos permite a mudança de qualquer requisito, de maneira fácil, completa e consistente;
+- **Rastreável**: permite a fácil determinação dos antecedentes e as conseqüênciasdo requisito. pq foi criado isso? quando? em qual versão? ainda é necessário?
+- **Identificação única:** não existem dois requisitos com o mesmo identificador.
 
 
 
-- Requisitos imprecisos (Ambíguos)
-- Requisistos mal escritos
-- Propriedades de um bom requisito
+Aspectos negativos:
 
+- **Requisitos imprecisos (Ambíguos).** 
+  - Ex.: O sistema deve emitir uma mensagem de atenção visual ou auditiva no evento de falha do sistema de refrigeração.
+- **Requisistos mal escritos.**
+  - Ex.: Incompletos -> O sistema deve acompanhar os projetos.
+  - Múltiplos -> Cadastro das atividades de um projeto e produtos e funcionário alocados na atividade.
 
+Propriedades de um bom requisito:
+
+- Não ambíguo -> Ex.: O sistema não deve aceitar senhas mais longas que 15 caracteres.
+- Testável -> Ex.: O sistema deve porder ser utilizado por muitos usuários. Quantos são muitos? 100? 1000?
+
+:building_construction:
 
 De onde surgem os requisitos?
 
@@ -170,19 +210,27 @@ Como identificar requisitos?
 
 24/08 :watch:
 
-O que o sistema tem que fazer e como deve fazer. Funcionais e não funcionais.
-
 ## Requisitos de cliente x Requisitos de sistema.
 
+Um requisito basicamente é criado na visão do cliente, visando resolver seu problema, mas posteriormente ele precisa ser detalhado para prosseguirmos com seu desenvolvimento completo. Ou seja, os requisitos de usuário descrevem os problemas, as dores do cliente, as soluções, as características desejáveis, etc. Já os requisitos de sistema são mais detalhados, mais próximos à linguagem técnica, descrevem o comportamento do sistema, delimitam as interfaces, etc.
 
+Ex.:
 
-## Requisitps Funcionais x Não funcionais
+- Necessidades do cliente:
+  - Construir um sistema para predição do movimento do mercado de ações da BOVESPA com taxa de acerto de 70%.
+- Funcionalidades a serem cumpridas pelo sistema:
+  - Treinar o sistema com dados históricos;
+  - Gerar modeos matemáticos para conjunto de ações;
+  - Compilar portifólios;
+  - (...)
 
-- Tipos......
+## Requisitos Funcionais x Não funcionais
 
+O que o sistema tem que fazer e como deve fazer. Funcionais e não funcionais.
 
+Usando uma analogia: Compra de um carro:
 
-
+O comprador quer um carro para conseguir se deslocar dentro de sua cidade, e de uma forma confortável, ou seja, que tenha ar condicional, direção elétrica, entre outros. Agora podemos ver que a **necessidade** de se locomover é um requisito funcional, pois descreve o que o sistema/produto **deve** fazer, a dor que deseja resolver. E as características que descrevem o conforto que o comprador deseja são os **não funcionais,** pois descreve **como** o sistema/produto deve realizar as tarefas.
 
 ---
 
@@ -218,6 +266,8 @@ Essa atividade se inicia com a aplicação de técnicas apropriadas para identif
 
 ## Fontes
 
+:building_construction:
+
 [O que é]
 
 > Se não definir todas as fontes, podemos ter requisitos não identificados.
@@ -228,8 +278,12 @@ Uma fonte sempre presente é a LGPD.
 
 ### Técnicas de elicitação de requisitos
 
-- **Brainstorming:** asdasd
-- **Brainwriting:** dgfsdfsd
+- **Brainstorming:** Chuva de ideias. Geração de ideias em grupo. Levantamento dinâmico de ideias, onde nenhuma ideia deve ser descartada a priori. 
+  - Duas fases:
+    - Na fase de Geração de Ideias os participantes são encorajadosa propor ideias sem críticas pelos demais.
+    - Na fase da Consolidação é feita a avaliação de viabilidade e a priorização das ideias propostas.
+- **Brainwriting:** Geração de ideias em grupo na forma escrita ecompartilhada. Cada um dos 6 participantes começa escrevendo 3 ideias emum papel em 5 minutos. Após isso, ele repassa para o colega àesquerda e o prazo começa a contar novamente para escrevermais 3 ideias baseadas na que ele acabou de receber.
+  - Vantagem está na **equidade das ideias** e da **facilitação da participação** de pessoas tímidas
 - **Entrevistas:** asdasdasd
   - Pergunta básica: Essa solução vai substituir outra?
   - Estruturada: Conduz na sequência planejada, segue o roteiro a risca. Garante que as mesmas perguntas serão feitas para todos.
@@ -245,7 +299,12 @@ Uma fonte sempre presente é a LGPD.
   - Só nao pode dar entender que a aplicação ta pronta, pq pode ser só o front.
 - **Questionários:** Com um grupo muito grande não da pra ficar fazendo reunião com todo mundo...
 - **Cenários:** 
-- **Observação - Etnografia:** Estudo Etnográfico é uma técnica em que o analista...
+- **Observação - Etnografia:** Técnica em que o analista de requisitos se insere no meio onde funcionará o sistema e observa o que acontece:
+  - **Forma passiva:** o observador não interfere;
+  - **Forma ativa:** o observador solicita que se demonstre:
+    - como algo é feito;
+    - o que acontece em certas situações;
+    - criando cenários para facilitar o entendimento dos envolvidos.
 
 Outras formas de levantar requisitos:
 
@@ -260,6 +319,8 @@ Outras formas de levantar requisitos:
 
 ## O que levantar?
 
+:building_construction:
+
 [Tópicos]
 
 [Memórias de levantamento]
@@ -271,6 +332,8 @@ Outras formas de levantar requisitos:
 # Análise de requisitos
 
 31/08 :watch:
+
+:building_construction:
 
 Com os resultados e materiais gerados na primeira etapa, precisamos analisa-los. Verificar se tem algum problema, se está completo, se tem alguma inconsistência, algum conflito entre requisitos, entre outros problemas.
 
@@ -302,17 +365,15 @@ Consiste no exame dos requisitos coletados e negociação com os stakeholders...
 #### Técnicas de priorização
 
 - Comparações aos pares (Pairwise): Entre esse e esse, vai esse............... tendo 100$ para usar, e cada requisito custa um pouco. 
-  - Foda é em um sistema com muitos requisitos, ai fica dfícil.
+  - Foda é em um sistema com muitos requisitos, ai fica difícil.
   - Vantagens, desvantagens.....
 - Modelo de Kano: 
 
 
 
-
+# Product Backlog
 
 13/09 :watch:
-
-# Product Backlog
 
 - DEEP
   - Detalhado
@@ -323,36 +384,38 @@ Consiste no exame dos requisitos coletados e negociação com os stakeholders...
 - No mínimo uma sprint.
 - Product Owner gerencia o Product Backlog
 
-# Histórias de Usuários
+# Manifesto ágil
 
-**Manifesto ágil:** 
+<img src="../../imgs/4_Periodo/Eng_Requisitos/image-20210913192729440.png" style="width:80%">
 
-![image-20210913192729440](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210913192729440.png)
+1. Se as pessoas não trabalham juntas adequadamente, nem as melhores ferramentas e os melhores processos ajudarão;
+2. A maioria dos desenvolvedores prefere **escrever código** a documentos. O software funcionando é mais importante do que artefatos intermediários. *Nem sempre uma boa prática.;
+3. Somente **clientes** e usuários podem dizer o que eles realmente querem e precisam. Eles provavelmente não pedem as coisas certas da primeira vez. Contratos são importantes, mas o entendimento do papel de cada um, com adequada comunicação, é mais importante ainda;
+4. Pessoas mudam suas prioridades, mudança é uma realidade do desenvolvimento de software.
 
-- Agilidade: 
+
+
+**Agilidade:** 
+
+Agilidade tornou-se a palavra da moda quando se descreve um moderno processo de software. Todo mundo é agil. Uma equipe ágil é aquela rápida e capaz de responder apropriadamente a mudanças. Mudanças têm muito a ver com desenvolvimento de software. 
 
 ## Processos de desenvolvimento ágeis
 
 Caracterizados como informais e minimamente documentados. Dão mais destaque à comunicação verbal e social e à equipe de desenvolvimento. Ex.: XP; Scrum; LSD; AUP; ASD; DSDM; FDD.
 
-[Comunicação]
+- **Comunicação:**
+  - Ter o cliente disponível para ajudar a equipe de desenvolvimento e ser uma parte do mesmo processo;
+  - Esclarecimento e detalhamento das histórias de usuários;
+  - Priorização;
+  - Realização de testes de aceitação baseados nos “Critérios de Aceitação”,
 
-- Equipe:
+- **Equipe:**
   - Multifuncionais;
   - Auto-organizadas
-- Processo iterativo e incremental
-  - ...
-- Papéis:
-  - PO
-  - ...
-- Artefatos:
-  - Visão
-  - ...
-- Reuniões/Cerimônias:
-  - Sprint Planning
-  - ....
 
-## Histórias - Características
+<img src="../../imgs/4_Periodo/Eng_Requisitos/image-20210918205728111.png" style="width:70%">
+
+# Histórias de Usuários
 
 User Story ou “história de usuário” é uma descrição concisa de uma necessidade do usuário do produto (ou seja, de um “requisito”) sob o ponto de vista desse usuário. A User Story busca descrever essa necessidade de uma forma simples e leve.
 
@@ -366,9 +429,11 @@ User Story ou “história de usuário” é uma descrição concisa de uma nece
 
 Exemplos:
 
-![image-20210913195957232](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210913195957232.png)
+<img src="../../imgs/4_Periodo/Eng_Requisitos/image-20210913195957232.png" style="width:80%">
 
-![image-20210913200024527](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210913200024527.png)
+<img src="../../imgs/4_Periodo/Eng_Requisitos/image-20210913200024527.png" style="width:30%">
+
+:building_construction:
 
 [Estrutura]
 
@@ -378,16 +443,16 @@ Para definir **"quem"**  no user story é utilizado as personas do negócio.
 
 Personas são personagens fictícios criados a partir da pesquisa e observação dos comportamentos de usuários reais. Representam motivações, objetivos ............. e necessidades de um determinado grupo.
 
-![image-20210913201829915](/home/arthur/Documentos/Programming_Study/imgs/4_Periodo/image-20210913201829915.png)
+<img src="../../imgs/4_Periodo/Eng_Requisitos/image-20210913201829915.png" style="width:60%">
 
 ## Detalhamento
 
-
+:building_construction:
 
 ## Processo completo de uso
 
-[INVEST]
+[INVEST] :building_construction:
 
 ## Diretrizes para boas histórias
 
-
+:building_construction:
