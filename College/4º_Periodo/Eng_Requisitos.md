@@ -38,9 +38,9 @@ Gerenciamento de requisitos trata-se de uma modelo sistemático para:
 - Dependencia de **sistemas legados** que necessitam de modificações;
   - mas possuem código e/ou documentação ilegíveis ou inexistentes.
     - Manutenção difícil, cara e demorada de software já existente.
-- Coleta de dados sobre produtividadade inexistente ou insuficiente;
+- Coleta de dados sobre produtividade inexistente ou insuficiente;
   - Comprometendo as estimativas de prazo, esforço e custo;
-  - não permitindo a avaliação de novas ferramenteas, técnicas e padrões.
+  - não permitindo a avaliação de novas ferramentas, técnicas e padrões.
 
 ---
 
@@ -266,15 +266,15 @@ Essa atividade se inicia com a aplicação de técnicas apropriadas para identif
 
 ## Fontes
 
-:building_construction:
+Definem os representantes oficiais e canais apropriados para o surgimento dos requisitos.
 
-[O que é]
+> Se não definir todas as fontes, podemos ter requisitos não identificados!
 
-> Se não definir todas as fontes, podemos ter requisitos não identificados.
+**Fontes típicas:**
 
-[Fontes típicas]
-
-Uma fonte sempre presente é a LGPD.
+- Usuário e Cliente (Partes interessadas);
+- Documentos, leis, regimentos. Uma fonte sempre presente é a LGPD!
+- Sistemas existentes.
 
 ### Técnicas de elicitação de requisitos
 
@@ -282,7 +282,7 @@ Uma fonte sempre presente é a LGPD.
   - Duas fases:
     - Na fase de Geração de Ideias os participantes são encorajadosa propor ideias sem críticas pelos demais.
     - Na fase da Consolidação é feita a avaliação de viabilidade e a priorização das ideias propostas.
-- **Brainwriting:** Geração de ideias em grupo na forma escrita ecompartilhada. Cada um dos 6 participantes começa escrevendo 3 ideias emum papel em 5 minutos. Após isso, ele repassa para o colega àesquerda e o prazo começa a contar novamente para escrevermais 3 ideias baseadas na que ele acabou de receber.
+- **Brainwriting:** Geração de ideias em grupo na forma escrita e compartilhada. Cada um dos 6 participantes começa escrevendo 3 ideias emum papel em 5 minutos. Após isso, ele repassa para o colega à esquerda e o prazo começa a contar novamente para escrevermais 3 ideias baseadas na que ele acabou de receber.
   - Vantagem está na **equidade das ideias** e da **facilitação da participação** de pessoas tímidas
 - **Entrevistas:** asdasdasd
   - Pergunta básica: Essa solução vai substituir outra?
@@ -294,11 +294,30 @@ Uma fonte sempre presente é a LGPD.
     - Funil: Inicia com questões abertas e à medida que abança, faz-se perguntas fechadas. O entrevistado precisa "desabafar" logo ou deseja ir direto ao ponto. Meio não ameaçador para começar.
     - Diamante: Combinação das anteriores, inicia com fechadas, passa para abertas, e encerra a entrevista com questões fechadas. Em geral é a melhor forma de estruturar a entrevista. Contudo, tende a ser mais longa.
   - Registros: Para não esquecer, e facilitar o compartilhamento dos resultados com a equipe. Papel é bom, mas tende a perder contado visual e o ritmo do diálogo. Gravador não interrompe, e traz um registro fiel e exato da entrevista, porém o entrevistado pode ficar desconfortável, e a documentação também fica mais demorada. E mesmo gravando precisa anotar as ideias...
-- **JAD (Joint Application Development):** 
-- **Prototipagem:** 
-  - Só nao pode dar entender que a aplicação ta pronta, pq pode ser só o front.
-- **Questionários:** Com um grupo muito grande não da pra ficar fazendo reunião com todo mundo...
-- **Cenários:** 
+- **JAD (Joint Application Development):** Também chamados de workshops. 
+  - Modo rápido de elicitar requisitos;
+  - Benefício: resolução antecipada de conflitos;
+  - Participantes: Desenvolvedores; Usuários; Patrocinador (sponsor); Facilitador (mediador); Relator, que toma notas do que é discutido e decidido; Observadores.
+  - Pode ter o seguinte fluxo:
+    - Reunir os participantes em ambiente propício;
+    - Estruturar a reunião;
+    - Apresentar objetivos;
+    - Apresentar documento de requisitos iniciais ou conjunto de cenários;
+    - Encorajar críticas e interação entre grupos;
+    - Processar as alterações e sugestões;
+    - Produzir uma nova versão.
+- **Prototipagem:** “Eu sei o que quero quando vejo”. Físico ou digital.
+  - De grande valor quando sistemas são novos;
+  - Problemas:
+    - Desenvolvedores se entusiasmam e gastam muito tempo e esforço;
+    - Pode levar à discussão de detalhes de implementação;
+    - Só nao pode dar entender que a aplicação ta pronta, pq pode ser só o front.
+- **Questionários:** Com um grupo muito grande não da pra ficar fazendo reunião com todo mundo.
+  - Levantam muita informação com pouco tempo;
+  - Somente capaz de identificar requisitos que o Analista já conhece ou supõe.
+- **Cenários:** Orientado a pontos de vista. Um cenário começa com o esboço de uma interação. Durante o processo de elicitação, são adicionados detalhes ao esboço, para criar uma descrição completa dessa interação. 
+  - Pessoas geralmente acham mais fácil se relacionar com exemplos da vida real do que com descrições abstratas;
+  - Elas podem compreender e criticar um cenário de como elas podem interagir com um sistema de software.
 - **Observação - Etnografia:** Técnica em que o analista de requisitos se insere no meio onde funcionará o sistema e observa o que acontece:
   - **Forma passiva:** o observador não interfere;
   - **Forma ativa:** o observador solicita que se demonstre:
@@ -319,13 +338,35 @@ Outras formas de levantar requisitos:
 
 ## O que levantar?
 
-:building_construction:
+- Contexto onde a solução existe;
+- Objetivos do sistema;
+- Papéis que utilizam o sistema;
+- Requisitos funcionais;
+- Requisitos não-funcionais;
+- “Critérios de aceitação” da implementação dosrequisitos.
 
-[Tópicos]
+**Perguntas para se levantar requisitos:**
 
-[Memórias de levantamento]
+- Quais são alguns motivos pelos quais você e seus colegas usariam o novo sistema?
+- Que objetivos você tem em mente que esse sistema o ajudaria a cumprir?
+- Que aspecto do sistema você acha mais interessante?
+- Que aspecto terá mais valor para você? E menos valor?
+- Que problemas você espera que esse sistema resolva para você?
+- Que palavras você usaria para descrever o sistema?
+- Como você vai julgar se o sistema é um sucesso?
+- Em que aspectos você imagina que o sistema deva ser semelhante à forma como você trabalha hoje? Como ele deve ser diferente?
+- Que aspectos dos seus processos de negócios você quer manter? Quais você quer substituir?
+- Que eventos externos estão associados ao sistema?
+- Você pode descrever o ambiente onde o sistema vai ser usado?
+- Algumas partes do produto são mais importantes que outras por motivos de desempenho, segurança, robustez,  disponibilidade,  ou  alguma  outra característica?
+- Há alguma restrição ou regra a qual o sistema deve estar de acordo?
 
-[**Registrar** de alguma forma] - Parte da **especificação**.
+**Memórias de levantamento:**
+
+- Gravações;
+- Atas: registros de entendimentos;
+- E-mails;
+- Notas;
 
 ---
 
@@ -339,7 +380,20 @@ Com os resultados e materiais gerados na primeira etapa, precisamos analisa-los.
 
 Também vamos priorizar os requisitos.
 
-1. **Definição do escopo do projeto:** Limite do que a solução contempla.............
+Organizar a partir do exame, decomposição e síntese. Definição de:
+
+- Manter o fluxo operacional existente;
+- Inovar em relação ao fluxo operacional existente;
+- Modelar e usar modelos para refinar a informação;
+- Especificar para documentar os requisitos;
+- Verificar se o processo e os produtos observam boas práticas;
+- Validar se a solução satisfaz o cliente.
+
+
+
+**Definição do escopo do projeto:** Atendimento ao escopo identificado no levantamento X escopo necessário ao projeto.
+
+<img src="../../imgs/4_Periodo/Eng_Requisitos/image-20210918233744748.png" style="width:80%">
 
 ## Negociação e priorização de requisitos
 
@@ -431,11 +485,11 @@ Exemplos:
 
 <img src="../../imgs/4_Periodo/Eng_Requisitos/image-20210913195957232.png" style="width:80%">
 
+## Estrutura
+
+
+
 <img src="../../imgs/4_Periodo/Eng_Requisitos/image-20210913200024527.png" style="width:30%">
-
-:building_construction:
-
-[Estrutura]
 
 ## Quem?
 
@@ -447,12 +501,23 @@ Personas são personagens fictícios criados a partir da pesquisa e observação
 
 ## Detalhamento
 
-:building_construction:
+Detalhes são alcançados principalmente pela conversação. Se mais detalhes são necessários, podem ser providos por anexos (Mock-up, planilha ou algoritmos). Detalhes são coletados na medida em que se tornam necessários (just in time).
 
 ## Processo completo de uso
 
-[INVEST] :building_construction:
+Relacionada à abordagem de entrega de valorao cliente:
+
+1. Defina uma história de valor para o usuário;
+2. Implemente e teste em uma iteração curta;
+3. Demostre ou entregue para o usuário.
 
 ## Diretrizes para boas histórias
 
-:building_construction:
+**INVEST:**
+
+- **Independentes**: História pode ser desenvolvida, testada e até entregue isoladamente;
+- **Negociáveis**: Não são contrato de implementação de algo. Oportunidade de discussão dos requisitos. Processo de colaboração;
+- **Valor**: Backlogs são priorizados por valor.
+- **Estimáveis**: Equipe deve ser capaz de prover uma estimativa de sua complexidade e quantidade de trabalho necessário para terminar a história.
+- **São de tamanho pequeno (Small):** Histórias pequenas provêm maior agilidade.
+- **Testáveis**: TDD, abordagem de se escrever o teste antes. Se equipe sabe como testar uma história, eles sabem como codificá-la.
