@@ -521,3 +521,80 @@ Relacionada à abordagem de entrega de valorao cliente:
 - **Estimáveis**: Equipe deve ser capaz de prover uma estimativa de sua complexidade e quantidade de trabalho necessário para terminar a história.
 - **São de tamanho pequeno (Small):** Histórias pequenas provêm maior agilidade.
 - **Testáveis**: TDD, abordagem de se escrever o teste antes. Se equipe sabe como testar uma história, eles sabem como codificá-la.
+
+---
+
+# Documentação
+
+27/09 :watch:
+
+*Nem que seja no papel de pão com uma caneta Bic, mas documente!*
+
+## Para quê?
+
+Desenvolver uma visão da solução. Detalhar especificamente as tarefas e o comportamento do que se espera da solução.
+
+Provê:
+
+- Levantamento e avaliação dos requisitos do software - Antes que o projeto do sistema comece reduzindo o retrabalho na fase de construção;
+- uma base consistente para a realização de **estimativas** relacionadas ao produto e ao projeto;
+- Uma base para **manutenções futuras** e **melhoramento posterior** do software.
+
+Ou seja, já te trás o escopo (o que fazer), ajuda a orçar de forma mais acertiva, e também ajuda a melhorar o software em sí.
+
+## Como?
+
+- **Mínimo:** requisitos identificados no nível do objetivo do usuário, tipo histórias do usuário.
+
+Formas para especificação:
+
+- **Textuais:** Documentação de visão, histórias de usuário, descrições de UML, etc.
+- **Notações gráficas:** UML, Casos de uso, Decomposição funcional, fluxos de dados, Modelagem de processos, modelo de domínio, etc.
+
+### Documento de visão
+
+Trás as características e informações essenciais sobre o sistema. Ex.: Portal de notícias.
+
+Deve conter:
+
+- :building_construction:
+
+> **Estrutura:** Sujeito + verbo + objetivo do usuário
+
+#### Exemplos
+
+:building_construction:
+
+### Escrevendo requisitos
+
+1 requisito = 1 objetivo.
+
+A terminologia deve ser compreensível para todas as partes interessadas. Se necessário uso de glossário.
+
+:building_construction:
+
+Tipos: 
+
+- **Autônomos:** ""
+- **Interação com o usuário:** ""
+- **Requisitos de interface:** ""
+
+Características:
+
+- Evite longos textos;
+- Evite cláusulas de exclusão ("se necessário";
+- Evite especulação;
+- Evite palavras vagas (usualmente...);
+- Evite termos ambíguos (amigável...);
+- Evite ser extremamente otimista e agradável (100% confiável...).
+
+## Resultados 
+
+:building_construction:
+
+Resultados -> Lista de requisitos. Ainda não foram detalhados. Aspectos relevantes...........................
+
+## Qualidade
+
+- Correta
+- Consistente

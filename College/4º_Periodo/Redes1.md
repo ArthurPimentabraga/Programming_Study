@@ -1077,6 +1077,8 @@ Nesses tipos de protocolo nós teremos uma largura de banda específica, e o ace
 
 
 
+## ETHERNET
+
 
 
 [COISA PRA CRL DAQUI PRA BAIXO :cry: ]

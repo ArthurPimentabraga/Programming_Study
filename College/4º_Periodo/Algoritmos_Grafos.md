@@ -507,41 +507,70 @@ Exercício:
 
 # Caminhamentos
 
-24/08 :watch:
-
-:building_construction:
-
-[Propriedades de grafos]
+26/08 :watch:
 
 Algumas são de simples verificação, rodando alguns algoritmos da pra fazer essas verificações:
 
-- asdasd
+- Verificação de graus dos vértices;
+- Determinação se o grafo é euleriano;
+- Determinação se o grafo é compleo;
+- (...)
 
-[Caminhar - Explicação]
+Outras propriedades já são mais difíceis, são relacionadas às arestas e aos caminhos existes. **Caminhar** em um grafo é mover-se entre seus vértices, verificando propriedades enquanto se caminha. 
 
-O que eu quero buscar? Algoritmos de busca:
+Alguns algoritmos de busca proocuram caminhos com objetivos específicos, como:
 
-[Busca em grafos]
+- **Conectividade** - Busca de um vértice específico (estado);
+- **Caminho mínimo** - Existência de um caminho.
 
-[Aplicações]
+Uma busca em grafos nada mais é que tentar encontrar uma sequência de passos (caminhos/ações) para chegar à um objetivo
+
+### Aplicações
+
+- Rotas em redes de computadores;
+- Caixeiro viajante e variações;
+- Jogos digitais;
+- Navegação de robôs;
+- (...)
+
+*A busca de uma saída de um labirinto também é um problema de busca em grafos!* 
 
 ## Busca em largura
 
 > Notes: Também há uma explicação na aula do dia 14/09.
+>
+> [Link de vídeo aula](https://www.youtube.com/watch?v=u834GA3725M)
 
-[O que é]
+Basicamente mapea os caminhos (caminho mínimo) de um vértice de origem até qualquer outro vértice possível de ser alcançado, gerando uma árvore.
 
-### Estados dos vértices
+- Funciona em grafos e digrafos.
 
-:building_construction:
+### Propriedades dos vértices
+
+- Antecessor ou pai;
+- Estado: 
+  - **branco**: ainda não explorado;
+  - **cinza:** explorado, mas com vizinhos não explorados;
+  - **preto:** explorado e sem vizinhos explorados.
+- Distância até o vértice de origem.
 
 ### Funcionamento
 
-:building_construction:
+Inicialização: Seta os valores *default* para todos os meus vértices.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20210921213608759.png" style="width:70%">
+
+Busca principal: Basicamente verifica cada vizinho de cada vértice, a partir do inicial. Vai utilizar uma fila e dois arrays para auxilio e armazenamento dos resultados. Cada vizinho vai ser enfileirado, e desenfilerado quando for sua vez. Cara vizinho verificado vai contabilizar 1 + a distância ao vértice inicial.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20210921214336960.png" style="width:70%">
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20210921215253672.png" style="width:70%">
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20210921220433953.png" style="width:70%">
 
 ### Custo e Complexidade
 
-:building_construction:
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20210921220957215.png" style="width:70%">
 
 14/09 :watch:
 
