@@ -806,9 +806,9 @@ O problema com esse algoritmo é que a contagem pode ser adulterada por um erro 
 
 #### INSERÇÃO DE BYTES DE FLAGS
 
-contorna o problema de ressincronização após um erro, fazendo cada quadro começar e terminar com bytes especiais. Normalmente o mesmo byte, chamado byte de flag, é usado como delimitador de início e de fim, como mostra a Figura, na qual ele é representado por FLAG. 
+Contorna o problema de ressincronização após um erro, fazendo cada quadro começar e terminar com bytes especiais. Normalmente o mesmo byte, chamado byte de flag, é usado como delimitador de início e de fim, como mostra a Figura, na qual ele é representado por FLAG. 
 
-Dois bytes de flag consecutivos indicam o fim de um quadro e o início do próximo. Assim, se o receptor perder a sincronização, ele poderá simplesmente procurar dois bytes de flag para encontrar ofinal do quadro atual e o início do seguinte.
+Dois bytes de flag consecutivos indicam o fim de um quadro e o início do próximo. Assim, se o receptor perder a sincronização, ele poderá simplesmente procurar dois bytes de flag para encontrar o final do quadro atual e o início do seguinte.
 
 <img src="../../imgs/4_Periodo/Redes1/image-20210911163734337.png" style="width:80%">
 
@@ -1079,7 +1079,13 @@ Nesses tipos de protocolo nós teremos uma largura de banda específica, e o ace
 
 ## ETHERNET
 
+:building_construction:
+
+[COISA PRA CRL DAQUI PRA BAIXO :cry:]
 
 
-[COISA PRA CRL DAQUI PRA BAIXO :cry: ]
+
+# CAMADA DE REDE DA INTERNET
+
+:building_construction:
 
