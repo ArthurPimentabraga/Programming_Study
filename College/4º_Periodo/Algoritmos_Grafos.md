@@ -637,5 +637,10 @@ Baseado na busca em largura.
 
 
 
+[Conceitos básicos]
+
 [Algoritmo DFS - Principal (visita)]
 
+[...]
+
+[Floresta]
