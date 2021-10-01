@@ -1089,3 +1089,8 @@ Nesses tipos de protocolo nós teremos uma largura de banda específica, e o ace
 
 :building_construction:
 
+
+
+# CAMADA DE TRANSPORTE
+
+:building_construction:

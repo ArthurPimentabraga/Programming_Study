@@ -1,6 +1,8 @@
+---
 title: Interação humano-computador (Puc-Minas - 4º Período)
 author: Arthur P. Braga
 period: 2/2021
+---
 
 # Introdução
 
@@ -1069,12 +1071,45 @@ O conteúdo selecionado deve permitir atingir os objetivos do estudo.
 
 
 
+### Estudos de Campos
+
+23/09 :watch:
+
+:building_construction:
+
+### Investigação Contextual
+
+:building_construction:
+
+# Organização do espaço de problema
+
+:building_construction:
+
+## Perfil do usuário
+
+## Personas
+
+## Mapa de empatia
+
+
+
+---
+
+ # Design de IHC
+
+29/09 :watch:
+
+:building_construction:
+
+> Conteúdo no dia 23 ainda
 
 
 
 
-- **Estudos de Campos;**
-- **Investigação Contextual.**
 
 
+
+# Planejamento de avaliação de IHC
+
+30/09 :watch:
 

@@ -572,6 +572,8 @@ Busca principal: Basicamente verifica cada vizinho de cada vértice, a partir do
 
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20210921220957215.png" style="width:70%">
 
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20210930211620820.png" style="width:90%">
+
 14/09 :watch:
 
 ## Busca em profundidade
@@ -644,3 +646,11 @@ Baseado na busca em largura.
 [...]
 
 [Floresta]
+
+
+
+
+
+
+
+30/09 :watch:
