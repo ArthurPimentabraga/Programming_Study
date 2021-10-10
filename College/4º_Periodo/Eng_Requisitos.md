@@ -180,7 +180,7 @@ Qualidades de um requisito [IEEE-890-1998]
 - **Priorizado**: requisito é classificado de acordo com sua importância, estabilidade e complexidade;
 - **Verificável**: requisito é verificável;
 - **Modificável**: Organização dos requisitos permite a mudança de qualquer requisito, de maneira fácil, completa e consistente;
-- **Rastreável**: permite a fácil determinação dos antecedentes e as conseqüênciasdo requisito. pq foi criado isso? quando? em qual versão? ainda é necessário?
+- **Rastreável**: permite a fácil determinação dos antecedentes e as consequências do requisito. pq foi criado isso? quando? em qual versão? ainda é necessário?
 - **Identificação única:** não existem dois requisitos com o mesmo identificador.
 
 
@@ -582,7 +582,7 @@ Tipos:
 Características:
 
 - Evite longos textos;
-- Evite cláusulas de exclusão ("se necessário";
+- Evite cláusulas de exclusão ("se necessário");
 - Evite especulação;
 - Evite palavras vagas (usualmente...);
 - Evite termos ambíguos (amigável...);
@@ -598,3 +598,9 @@ Resultados -> Lista de requisitos. Ainda não foram detalhados. Aspectos relevan
 
 - Correta
 - Consistente
+
+
+
+# Ferramenta Case
+
+*“Ferramentas CASE (do inglês Computer-Aided Software Engineering) é uma classificação que abrange todas as ferramentas baseadas em computadores que auxiliam atividades de engenharia de software, desde análise de requisitos e modelagem até programação e testes. Podem ser consideradas como ferramentas automatizadas que tem como objetivo auxiliar o desenvolvedor de sistemas em uma ou várias etapas do ciclo, de desenvolvimento de software”.*

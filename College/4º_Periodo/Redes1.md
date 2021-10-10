@@ -1089,7 +1089,7 @@ Nesses tipos de protocolo nós teremos uma largura de banda específica, e o ace
 
 :building_construction:
 
-
+![Endereços IP Sem Classe, Endereços Privados e NAT. Prof. Othon M. N.  Batista Mestre em Informática - PDF Free Download](https://docplayer.com.br/docs-images/21/1270996/images/12-0.png)
 
 # CAMADA DE TRANSPORTE
 
