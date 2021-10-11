@@ -578,15 +578,24 @@ Busca principal: Basicamente verifica cada vizinho de cada vértice, a partir do
 
 ## Busca em profundidade
 
-[o que é]
+*Depth First Search (DFS)*
+
+A partir de um vértice de origem, busca *recursivamente* um vértice adjacente, até que não existam mais vértices a visitar.
+
+> Pode gerar várias árvores de profundidade (floresta de busca).
 
 ### Estados dos vértices
 
-:building_construction:
+Mantém os mesmos estados do algoritmo anterior, porém teremos mais duas novas propriedades: *timestamps* (tempo da busca). 
+
+- **Timestamp de descoberda** - Tempo em que eu chego no vértice;
+- **Timestamp de término** - Tempo em que eu pinto o vértice de preto.
 
 ### Funcionamento
 
-:building_construction:
+Inicialização:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211011152003382.png" style="width:5 0%">
 
 ### Classificação de arestas
 
