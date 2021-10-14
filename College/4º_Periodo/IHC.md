@@ -398,7 +398,7 @@ Quanto maior o botão, mais fácil e rápido seu acesso.
 
 A engenharia cognitiva foi concebida por Norman (1986) como uma tentativa de aplicar conhecimentos de ciência cognitiva, psicologia cognitiva e fatores humanos ao design e construção de sistemas computacionais. Centrado no modelo de processador humano de informações (MHP).
 
-Ou seja, tenda entender o desempenho humano, e como ele age para desenvolver o design adequado, de forma que engaje os usuários de forma prazerosa.
+Ou seja, tenta entender o desempenho humano, e como ele age para desenvolver o design adequado, de forma que engaje os usuários de forma prazerosa.
 
 O MHP é composto de três subsistemas:
 
@@ -1113,3 +1113,10 @@ O conteúdo selecionado deve permitir atingir os objetivos do estudo.
 
 30/09 :watch:
 
+
+
+
+
+# Heurísticas
+
+13/10 :watch:

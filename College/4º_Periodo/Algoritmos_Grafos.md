@@ -523,7 +523,7 @@ Alguns algoritmos de busca proocuram caminhos com objetivos específicos, como:
 - **Conectividade** - Busca de um vértice específico (estado);
 - **Caminho mínimo** - Existência de um caminho.
 
-Uma busca em grafos nada mais é que tentar encontrar uma sequência de passos (caminhos/ações) para chegar à um objetivo
+Uma busca em grafos nada mais é que tentar encontrar uma sequência de passos (caminhos/ações) para chegar à um objetivo.
 
 ### Aplicações
 
@@ -533,7 +533,7 @@ Uma busca em grafos nada mais é que tentar encontrar uma sequência de passos (
 - Navegação de robôs;
 - (...)
 
-*A busca de uma saída de um labirinto também é um problema de busca em grafos!* 
+*A busca de uma saída de um labirinto também é um problema de busca em grafos!*
 
 ## Busca em largura
 
@@ -541,14 +541,14 @@ Uma busca em grafos nada mais é que tentar encontrar uma sequência de passos (
 >
 > [Link de vídeo aula](https://www.youtube.com/watch?v=u834GA3725M)
 
-Basicamente mapea os caminhos (caminho mínimo) de um vértice de origem até qualquer outro vértice possível de ser alcançado, gerando uma árvore.
+Basicamente mapea os caminhos (caminho mínimo) de um vértice de origem até qualquer outro vértice possível de ser alcançado, gerando uma **árvore**.
 
-- Funciona em grafos e digrafos.
+- Funciona em grafos não direcionados e digrafos.
 
 ### Propriedades dos vértices
 
 - Antecessor ou pai;
-- Estado: 
+- Estado:
   - **branco**: ainda não explorado;
   - **cinza:** explorado, mas com vizinhos não explorados;
   - **preto:** explorado e sem vizinhos explorados.
@@ -586,7 +586,7 @@ A partir de um vértice de origem, busca *recursivamente* um vértice adjacente,
 
 ### Estados dos vértices
 
-Mantém os mesmos estados do algoritmo anterior, porém teremos mais duas novas propriedades: *timestamps* (tempo da busca). 
+Mantém os mesmos estados do algoritmo anterior, porém teremos mais duas novas propriedades: *timestamps* (tempo da busca).
 
 - **Timestamp de descoberda** - Tempo em que eu chego no vértice;
 - **Timestamp de término** - Tempo em que eu pinto o vértice de preto.
@@ -597,9 +597,22 @@ Inicialização:
 
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211011152003382.png" style="width:5 0%">
 
+Visita:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211013212438470.png" style="width:5 0%">
+
+Organização:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211013214451622.png" style="width:80%">
+
 ### Classificação de arestas
 
-:building_construction:
+- Arestas de árvore: Quando a aresta leva à um vértice branco, quando encontra um branco com ela.
+- Arestas de retorno: Fecha um ciclo na busca, ou seja, quando um vértice **cinza** encontra outro **cinza** (inclui loops).
+- Arestas de avanço: Não pertence à árvore de busca em profundidade, mas conecta um vértice a um descendente que pertence à árvore de busca. Ou seja, **quando encontra um vértice preto.**
+- Arestas de cruzamento: De um cinza para um preto.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211013222736500.png" style="width:80%">
 
 ## Ordenação topológica
 
@@ -658,7 +671,14 @@ Baseado na busca em largura.
 
 
 
+**Vértice de corte:** Vértice de um grafo conexo que, quando removido, produz mais de uma componente conexa. A remoção de um vértice implica a remoção de todas as arestas que incidem nele.
+obs: grafo conexo, existe um caminho entre cada par de vértices
 
+**Aresta de corte:** Aresta de um grafo conexo que, quando removida produz mais de uma componente convexa
+
+**Conjunto de corte:** Conjunto contendo vértices/arestas que ao serem removidas de um grafo conexo G produz mais de uma componente conexa
+
+**Cut-set:** particionar o grafo em dois subgrafos disjuntos. Também pode ser definido como o conjunto de arestas em um grafo conexo cuja remoção reduz o rank do grafo em 1 unidade.
 
 
 
