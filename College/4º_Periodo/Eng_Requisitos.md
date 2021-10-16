@@ -288,7 +288,7 @@ Definem os representantes oficiais e canais apropriados para o surgimento dos re
   - Pergunta básica: Essa solução vai substituir outra?
   - Estruturada: Conduz na sequência planejada, segue o roteiro a risca. Garante que as mesmas perguntas serão feitas para todos.
   - Não estruturada: O roteiro é só uma base, a medida que a entrevista acontece o entrevistador pode seguir caminhos diferentes.
-  - Semiestruturada:
+  - Semiestruturada: consiste em um modelo de **entrevista** flexível. Ou seja, ela possui um roteiro prévio, mas abre espaço para que o candidato e entrevistador façam perguntas fora do que havia sido planejado.
   - Estruturas
     - Pirâmide: Inicia com questões fechadas, à medida que avança, questões abertas são colocadas. Usada para quebrar o gelo, ou quando o entrevistado parece relutante sobre um assunto.
     - Funil: Inicia com questões abertas e à medida que abança, faz-se perguntas fechadas. O entrevistado precisa "desabafar" logo ou deseja ir direto ao ponto. Meio não ameaçador para começar.

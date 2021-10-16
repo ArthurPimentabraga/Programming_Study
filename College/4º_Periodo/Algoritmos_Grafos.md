@@ -616,28 +616,62 @@ Organização:
 
 ## Ordenação topológica
 
-:building_construction:
+Um vértice precisa do resultado de outro antes - Para ir para um vértice precisa passar por outro antes.
 
-> Notes: Um vértice precisa do resultado de outro antes, para ir para um vértice precisa passar por outro antes.
+- **Impossível ser cíclico**, pois não tem início, todo mundo depende de todo mundo.
+
+> Note: DAG -> Dígrafo acíclico. 
 >
-> - VERIFICAR!!! -> impossível ser cíclico, pois não tem início, todo mundo depende de todo mundo....
-> - DAG -> Dígrafo acíclico.
+> É necessário ser um dígrafo.
 
-[O que é]
+A ordenação topológica é a ordenação **linear** de vértices na qual cada vértice precede o conjunto que forma seu **fecho transitivo direto** (FTD - conjunto de todos os vértices que podem ser atingidos por algum caminho iniciado no vértice atual).
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211015205621254.png" style="width:60%">
 
 ### Teorema
 
-:building_construction:
+Se um grafo for acíclico, ou seja, não possuir cíclos, logo ele apresenta uma ou mais ordenações topológicas.
 
 ### Algorítmo de Kahn (1962)
 
-:building_construction:
+Existem algoritmos com complexidade linear para determinar uma ordenação topológica de um DAG, o algorítmo de Kahn é um deles.
 
-[Utilização da busca em profundidade]
+Retorna uma lista de ordenação topológica OU detecta a existência de um ciclo.
 
-### Aplicações
+Baseado em duas listas:
 
-:building_construction:
+- S: conjunto de vértices sem arcos de entrada, ou seja, vértices que não tem nenhuma aresta "chegando" nele.
+- L: lista de vértices ordenados topologicamente (inicialmente zerada).
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211015211456024.png" style="width:60%">
+
+> Legenda: "Remover arco v,w" -> significa remover a aresta do vértice v ao w.
+
+A ideia é ir removendo as arestas que saem dos vértices sem arcos de entrada primeiro, e ir adionando os vértices que ficam sem arco de entrada na lista de ordenação, dessa forma teremos uma "ordem de chamadas" de cada vértice, e no final uma lista que mostra essa ordem topológica. Ou um ciclo caso ainda possua aresta que não foi retirada.
+
+Exemplo resolvido:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211015212139548.png" style="width:60%">
+
+### DFS e ordenação
+
+Outro dos algoritmos citados no último tópico, porém utilizando da busca em profundidade, levemente alterada para o mesmo objetivo.
+
+Basta, ao finalizar um vértice preto, inseri-lo no início de uma lista L.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211015212814682.png" style="width:60%">
+
+Neste caso se eu tiver uma aresta de retorno, eu fecho um cíclo, logo não há ordenação topológica.
+
+> Os algorítmos podem gerar diferentes ordenações topológicas!
+
+### Aplicações de ordenação topológica
+
+- Planejamento e sequenciamento de tarefas;
+- Compilação de módulos;
+- Dicionários;
+- Pré-requisitos;
+- Verificação de dependências (bibliotecas, etc).
 
 ## Algoritmo de Dijkstra
 
