@@ -683,37 +683,98 @@ Baseado na busca em largura.
 
 # Conectividade
 
-:building_construction:
-
 16/09 :watch:
 
 > Notas: 
 >
 > - Um grafo é conexo quando existe **pelo menos** um caminho entre todos os vértices.
->
-> - Um grafo desconexo e componentes conexos -> Cada componente de um grafo desconectado é chamado de componente conexo.
+>- Um grafo desconexo e componentes conexos -> Cada componente de um grafo desconectado é chamado de componente conexo.
 
+- Como saber se um grafo é conexo? Ou, como saber quantos componentes conexos há em um grafo?
+- Busca em profundidade forma árvores. Esta informação pode ser utilizada para contarmos os componentes de um grafo.
+  - É só adionar um contador após cada "loop recursivo", ou seja, toda vez que ele voltar marcando os vértices de preto, conta +1, e assim sabemos a quantidade de componentes, consequentemente se ele é conexo ou não.
 
-
-[Conceitos básicos]
-
-[Algoritmo DFS - Principal (visita)]
-
-[...]
-
-[Floresta]
-
-
+## Conceitos básicos
 
 **Vértice de corte:** Vértice de um grafo conexo que, quando removido, produz mais de uma componente conexa. A remoção de um vértice implica a remoção de todas as arestas que incidem nele.
-obs: grafo conexo, existe um caminho entre cada par de vértices
+obs: grafo conexo, existe um caminho entre cada par de vértices;
 
-**Aresta de corte:** Aresta de um grafo conexo que, quando removida produz mais de uma componente convexa
+**Aresta de corte:** Aresta de um grafo conexo que, quando removida produz mais de uma componente convexa;
 
-**Conjunto de corte:** Conjunto contendo vértices/arestas que ao serem removidas de um grafo conexo G produz mais de uma componente conexa
+**Conjunto de corte:** Conjunto contendo vértices/arestas que ao serem removidas de um grafo conexo G produz mais de uma componente conexa;
+
+**Conectividade de vértice K(G):** menor número de vértices do grafo cuja remoção (em conjunto com suas arestas adjacentes) o desconecta;
+
+**Conectividadede aresta λ(G):** menor número de arestas do grafo cuja remoção o desconecta. É o número de arestas do menor cut-set;
 
 **Cut-set:** particionar o grafo em dois subgrafos disjuntos. Também pode ser definido como o conjunto de arestas em um grafo conexo cuja remoção reduz o rank do grafo em 1 unidade.
 
+**Rank ou posto:**
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018203251998.png" style="width:60%">
+
+---
+
+**Grafo K-conexo:** grafo de conectividade de vértice igual a K.
+
+**Grafo separável:** grafo com conectividade de vértice igual a 1.
+
+**Cut vertex:** Vértice que desconecta um grafo separável (também chamado cut vertex ou ponto de articulação);
+
+**Desconexo:** Um grafo é não-conexo ou desconexo se nem todo par de vértices é unido por uma cadeia;
+
+**S-conexo:** Um grafo é simplesmente conexo ou s-conexo se todo par de vértices é unido por ao menos um caminho no grafo correspondente não direcionado;
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018202551548.png" style="width:60%">
+
+**SF-conexo:** Um grafo é semi-fortemente conexo ou sf-conexo se em todo par de vértice do grafo, um deles é atingível a partir do outro (ou seja, entre eles existe um caminho em ao menos um dos dois sentidos possíveis);
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018202826181.png" style="width:30%">
+
+**F-conexo:** Grafo fortemente conexo ou f-conexo: é um grafo no qual todo par de vértices é mutuamente atingível. Assim, a todo par de vértices está associado a um par de caminhos de sentidos opostos.
+
+- Todo vértice é atingível a partir de um vértice dado e todo vértice atinge todo vértice dado.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018203008920.png" style="width:30%">
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018203104164.png" style="width:70%">
+
+## Teorema
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018202134904.png" style="width:80%">
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018202246932.png" style="width:80%">
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018202323974.png" style="width:80%">
+
+# Fluxo em rede
+
+Uma rede é um grafo no qual teremos um fluxo, podendo ser modelado para uma rede de distribuição de água, rede social com tráfego de informações, rodoviárias com o máximo de veículos possível de se locomover lá, etc.
+
+*Sempre queremos maximizar a quantidade de informações transmitidas, conseguir a maior capacidade do fluxo.*
+
+Nesse grafo as **arestas serão ponderadas** e seu peso indicará sua **capacidade** de transporte, o máximo de dados que pode para o próximo vértice.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018215421637.png" style="width:50%">
+
+Os dados percorrem uma rede desde uma **fonte** (source), onde ele é produzido, até um **sorvedouro** ou sumidouro (target), onde ele é **consumido**.
 
 
-30/09 :watch:
+
+
+
+
+
+- Corte
+- Algoritmo de Ford e Fulkerson
+  - Rede residual
+  - Caminhos de aumento
+
+# Árvores
+
+:building_construction:
+
+# Floresta
+
+:building_construction:
+
