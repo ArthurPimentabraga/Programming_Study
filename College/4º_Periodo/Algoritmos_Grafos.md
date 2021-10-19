@@ -759,13 +759,54 @@ Nesse grafo as **arestas serão ponderadas** e seu peso indicará sua **capacida
 
 Os dados percorrem uma rede desde uma **fonte** (source), onde ele é produzido, até um **sorvedouro** ou sumidouro (target), onde ele é **consumido**.
 
+**Fluxo máximo:** Calcular a maior taxa pela qual se pode despachar material da fonte até o sorvedouro sem infringir quaisquer restrições à capacidade.
+
+## Conceitos básicos
+
+- **Rede de fluxo:** É um grafo conexo dirigido ponderado (capacidade não negativa).
+  - Laços não são permitidos!
+- **Fluxo em grafos:** É uma função com restrições -> G = (V, E).
+  - O fluxo não pode exceder a capacidade de nenhum arco (aresta);
+  - O fluxo de entrada em um vértice é igual ao fluxo de saída (**conservação de fluxo**);
+    - Os dados podem se dividir entre as arestas de saída possíveis, porém **não podem se acumular**, ou seja, a  taxa de dados que chegou em um vértice, precisa ser a mesma taxa que irá sair do vértice.
+  - O somatório do fluxo em todos os vértices é o **valor total do fluxo**.
+
+## Corte
+
+O problema do fluxo máximo está relacionado ao conceito de **corte**: Um corte (S,T) - (Source, Target) em uma rede de fluxo G = (V, E) é uma partição de vértices em dois conjuntos S e T. Ou seja, eu vou desconectar o grafo em dois conjuntos, um conjunto de vértices que fazem parte do **source**, e um conjunto de vértices que fazem parte do **target**.
+
+O corte é basicamente um cut-set, ou seja, vai desconectar meu grafo e com isso já obtemos os dois conjuntos. Todos os vértices ligados ao source será desse grupo, e todos que levam ao target, será desse grupo.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018222401400.png" style="width:70%">
+
+A **capacidade do corte** será a soma das capacidades das arestas retiradas que se iniciam no conjunto S e terminam no conjunto T.
+
+Outro exemplo:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018222746107.png" style="width:70%">
+
+Já o próximo exemplo não é um corte, pois o conjunto de source consegue chegar ao conjunto do target:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018222830542.png" style="width:70%">
+
+### Fluxo total líquido pelo corte
+
+Consiste de fluxos positivos em ambas as direções. Ou seja, no momento da execução do fluxo teremos a quantidade de dados que passarão pelas arestas de corte, e fazemos uma conta para chegar ao **fluxo total líquido**, sendo: somar a quantidade atual de dados das arestas de corte que tem origem no conjunto source, e subtrair pela quantidade atual de dados das arestas de corte que tem origem no conjunto da target.
+
+Exemplo:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018230118445.png" style="width:70%">
 
 
 
 
 
 
-- Corte
+
+
+
+
+
 - Algoritmo de Ford e Fulkerson
   - Rede residual
   - Caminhos de aumento
