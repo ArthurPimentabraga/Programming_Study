@@ -797,19 +797,33 @@ Exemplo:
 
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018230118445.png" style="width:70%">
 
+## Teorema de Ford e Fulkerson
+
+A capacidade do corte mínimo é igual ao fluxo máximo - Fluxo máximo x Corte mínimo.
+
+Como encontrar o maior fluxo que pode percorrer um fluxo em redes (fluxo máximo)?
+
+- Iniciamos com um fluxo total nulo, ou seja, será menor do que a capacidade de qualquer corte.
+- Aumentamos gradativamente este fluxo e comparamos o seu valor com os das capacidades dos cortes. Em um momento o fluxo se tornará igual à capacidade de algum corte.
+  - **Corte de capacidade mínima:** Corte cuja capacidade pode se tornar igual ao valor de um fluxo.
+- A partir daí, o fluxo não pode aumentar mais, portanto este fluxo será máximo.
+
+### Funcionamento
+
+Depende de três ideias importântes:
+
+1. **Redes residuais:** Capacidade residual é a capacidade que você ainda consegue transmitir em determinada aresta para chegar à sua capacidade máxima. Uma rede residual consistem em arestas que podem admitir mais fluxo.
+   1. Capacidade residual do caminho é a menor capacidade residual entre os arcos desse caminho.
+2. **Caminhos de aumento:** Se nenhum arco do caminho está cheio (utilizando a capacidade máxima), então podemos chamá-lo de caminho de aumento, ou seja, ainda tem capacidade residual.
+3. **Cortes**
+
+A cada iteração aumenta-se o valor do fluxo em G determinando um "caminho de aumento" em uma "rede residual" associada.
+
+Isso se repete até que a rede residual não tenha mais caminhos aumentadores.
+
+> Se o fluxo em uma aresta é igual à sua capacidade dizemos que essa aresta está **saturada!**
 
 
-
-
-
-
-
-
-
-
-- Algoritmo de Ford e Fulkerson
-  - Rede residual
-  - Caminhos de aumento
 
 # Árvores
 
