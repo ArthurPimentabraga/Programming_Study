@@ -821,9 +821,9 @@ A cada iteração aumenta-se o valor do fluxo em G determinando um "caminho de a
 
 Isso se repete até que a rede residual não tenha mais caminhos aumentadores.
 
-> Se o fluxo em uma aresta é igual à sua capacidade dizemos que essa aresta está **saturada!**
-
-
+> - Se o fluxo em uma aresta é igual à sua capacidade dizemos que essa aresta está **saturada!**
+>
+> - Embora cada iteração aumente o valor do fluxo, o fluxo em algumas arestas pode diminuir.
 
 # Árvores
 
@@ -832,4 +832,91 @@ Isso se repete até que a rede residual não tenha mais caminhos aumentadores.
 # Floresta
 
 :building_construction:
+
+
+
+---
+
+# Planalidade
+
+21/09 :watch:
+
+:building_construction:
+
+[Problema das 3 casas]
+
+Um grafo é **planar** se existe uma representação gráfica de G no plano sem cruzamento de arestas (*vale redesenhar, só precisa ter a possibilidade*).
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211021210030027.png" style="width:70%">
+
+## Aplicações
+
+- Circuitos digitais;
+- Malhas de transporte terrestre;
+- Contrução de viadutos;
+- Malha de transporte aéreo.
+
+## Grafos planares e Kuratowski
+
+:building_construction:
+
+Existem grafos não planares que serão importantes (kuratowski)............................................
+
+São importantes, pois o K5 por exemplo, é um grafo não planar com o menor nº de vértices, ou seja, para um grafo completo ser planar ele precisa ter menos que 5 vértices.
+
+Outro exemplo, K3,3: é um grafo não planar com o menor nº de vértices também.
+
+Propriedades entre os dois grafos citados anteriormente:
+
+1. Ambos são regulares;
+2. Ambos são não planares;
+3. A remoção de uma aresta ou um vértice torna ambos os grafos planares.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211021210957096.png" style="width:70%">
+
+## Região (ou face)
+
+Uma representação gráfica planar de um grafo divide o plano em regiões ou faces. Cada região é caracterizada pelas arestas que a contornam.
+
+- Cada aresta de G pertence à fronteira de uma ou duas faces de G (faz fronteira com até duas regiões);
+- O grau (comprimento), de uma face f de G, representado por d(F) é igual ao nº de arestas da fronteira de F.
+- Cada face da representaçção planar de um grafo corresponde a um passeio fechado do grafo constituído pelos vértices e arestas que delimitam a face. Chamamos **grau da face**, d(f), ao comprimento do passeio correspondente.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211021211838662.png" style="width:70%">
+
+### Teorema 1 - Fórmula de Euler
+
+Seja G um grafo conexo planar com N vértices e E arestas. O nº de faces do grafo é: **f = 2 - N + E**
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211021212036731.png" style="width:70%">
+
+### Grau de uma região
+
+:building_construction:
+
+### Corolário - Fórmula de Euler
+
+:building_construction:
+
+[São dois corolários]
+
+[inequações]
+
+### Detecção de planaridade
+
+:building_construction:
+
+[Técnica de redução]
+
+### Contração de aresta
+
+:building_construction:
+
+### Detecção de planaridade: remoção de aresta
+
+[Outro]
+
+
+
+Trabalho prático:
 
