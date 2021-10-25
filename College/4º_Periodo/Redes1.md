@@ -1,10 +1,4 @@
----
-title: Redes de computadores 1 (Puc-Minas - 4º Período)
-author: Arthur P. Braga
-period: 2/2021
-books: Redes de Computadores by Andrew S. Tanenbaum (5ª Edição) - 
-       Comunicação de Dados e Redes de Computadores by Forouzan, Behrouz A. (4ª Edição)
----
+
 
 # INTRODUÇÃO
 
@@ -1059,31 +1053,61 @@ Aqui os protocolos já vão verificar o estado do meio e **controlar** o acesso 
 
 ### PROTOCOLOS DE CANALIZAÇÃO
 
-Nesses tipos de protocolo nós teremos uma largura de banda específica, e o acesso ao meio entre as máquinas será compartilhado em função do tempo, ou da frequência, ou do código, tudo depende do protocolo utilizado.
-
-:building_construction:
+Nesses tipos de protocolo nós teremos uma largura de banda específica, e o acesso ao meio entre as máquinas será compartilhado em função do **tempo**, ou da **frequência**, ou do **código**, tudo depende do protocolo utilizado.
 
 #### FDMA
 
+:building_construction:
 
+Vai ter uma feixa de frequência para cada estação para fazer o envio dos dados.
 
 #### TDMA
 
+:building_construction:
 
+Teremos um slot em que cada estação pode transmitir. Cada rodada uma estação controla um slot por um determinado período, porém pode ocorrer de nesse período uma determinada estação não utilizar seu slot por não ter o que transmitir, e nesse caso, na próxima rodada essa estação pode utilizar o slot que não foi utilizado juntamente com o slot da rodade atual, ou seja, o tamanho não é fixo
 
 #### CDMA
 
+:building_construction:
 
+Teremos 1 canal ocupando a largura de banda inteira. Esse protocolo tem como objetivo fazer o controle do acesso, o controle da comunicação de diversas estações em um canal Ethernet por meio dos nós, isto é, realizar o controle possibilitando transmitir e receber do mesmo canal, ao mesmo tempo, porém evitando colisão, permitindo a transmissão apenas quando estiver livre.
 
-
+Cada estação vai ter um código diferente, dependendo do código que a estação vai transmitir em determinado tempo, vai conseguir conversar com quem tem outro código X, etc. 
 
 ## ETHERNET
 
+<img src="../../imgs/4_Periodo/Redes1/image-20211025141818925.png" style="width:60%">
+
+> Evolução das gerações da Ethernet.
+
+### ETHERNET PADRÃO
+
+A Ethernet não dispôe de nenhum mecanismo de reconhecimento de frames recebidos, ou seja, ela não tem garantia de entrega: **meio não confiável**. Confirmações precisam ser implementadas nas camadas superiores.
+
+> A seguir um quadro ethernet 802.3
+
+<img src="../../imgs/4_Periodo/Redes1/image-20211025142358335.png" style="width:60%">
+
+- **Preâmbulo**: Alerta que o frame ta chegando pra poder sincronizar o clock. Adicionado na camada física, ou seja, não faz parte do frame em sí;
+- **SFD:** Fala que é o início do frame;
+- **Comprimento ou tipo:** Usava para falar qual o protocolo de rede que tava encapsulado ali;
+- **Dados e preenchimento:** Mínimo de 46 bytes e máximo de 1500 bytes. Essa é uma restrição, ou seja, esse comprimento mínimo do frame (isso é por causa da utilização do CSMA/CD);
+- **CRC:** Contém informações para a detecção de erros.
+
+#### ENDEREÇAMENTO
+
+Cada estação em uma rede Ethernet tem seu próprio NIC (Network Interface Card).
+
+<img src="../../imgs/4_Periodo/Redes1/image-20211025144743077.png" style="width:60%">
+
+#### CSMA/CD 1-PERSISTENT
+
+<img src="../../imgs/4_Periodo/Redes1/image-20211025145529390.png" style="width:60%">
+
+### FAST ETHERNET
+
 :building_construction:
-
-[COISA PRA CRL DAQUI PRA BAIXO :cry:]
-
-
 
 # CAMADA DE REDE DA INTERNET
 
