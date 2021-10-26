@@ -588,7 +588,7 @@ Características:
 - Evite termos ambíguos (amigável...);
 - Evite ser extremamente otimista e agradável (100% confiável...).
 
-## Resultados 
+## Resultados
 
 :building_construction:
 
@@ -604,3 +604,16 @@ Resultados -> Lista de requisitos. Ainda não foram detalhados. Aspectos relevan
 # Ferramenta Case
 
 *“Ferramentas CASE (do inglês Computer-Aided Software Engineering) é uma classificação que abrange todas as ferramentas baseadas em computadores que auxiliam atividades de engenharia de software, desde análise de requisitos e modelagem até programação e testes. Podem ser consideradas como ferramentas automatizadas que tem como objetivo auxiliar o desenvolvedor de sistemas em uma ou várias etapas do ciclo, de desenvolvimento de software”.*
+
+
+
+# Detalhamento de requisitos
+
+25/10 :watch:
+
+Detalhamento através de modelagem.
+
+## UML - Casos de Uso
+
+<img src="../../imgs/4_Periodo/Eng_Requisitos/image-20211025191932255.png" style="width:60%">
+

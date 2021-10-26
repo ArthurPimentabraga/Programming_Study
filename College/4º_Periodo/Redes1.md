@@ -778,7 +778,7 @@ Os serviços da camada de enlace se resumem em seus objetivos listados no iníci
 
 Basicamente é o processo de encapsulamento explicado no último tópico. Logo também delimita onde começa e onde termina um quadro. 
 
-O serviço provido pela camada física não garante que o fluxo de bits seja livre de erros, logo podemos ter dados recebidos com valores de bits diferentes do que foram enviados, ou até em um número menor ou maior do que foi originalmente enviado. Logo, para fazer toda a detecção e, se necessário, a  correção de erros a camada de enlace divide os dados em frames para aplicar os algoritmos que farão esse trabalho posteriormente (verificação de erros por quadro).
+O serviço provido pela camada física não garante que o fluxo de bits seja livre de erros, logo podemos ter dados recebidos com valores de bits diferentes do que foram enviados, ou até em um número menor ou maior do que foi originalmente enviado. Logo, para fazer toda a detecção e, se necessário, a correção de erros a camada de enlace divide os dados em frames para aplicar os algoritmos que farão esse trabalho posteriormente (verificação de erros por quadro).
 
 É nessa camada que o checksum geralmente é utilizado.
 
@@ -933,7 +933,7 @@ Controle de comunicação entre máquinas de uma rede. Implementa o controle de 
 
 Endereços físicos (MAC) são usados nos cabeçalhos dos quadros para identificar origem e destino de quadros em enlaces multiponto.
 
-- Endereços diferentes do endereço IP. O **IP** é uma identificação que a rede atribui a cada aparelho conectado a ela (ou seja o **IP** pode mudar) já o **mac** address é um **endereço** único de cada aparelho que nunca muda e que a rede utiliza além de outras coisas para manter um registro de todos os aparelhos que já se conectaram a ela. 
+- Endereços diferentes do endereço IP. O **IP** é uma identificação que a rede atribui a cada aparelho conectado a ela (ou seja o **IP** pode mudar) já o **mac** address é um **endereço** único de cada aparelho que nunca muda e que a rede utiliza além de outras coisas para manter um registro de todos os aparelhos que já se conectaram a ela.
 
 Quando várias máquinas são conectadas e usam um enlace comum, chamado **enlace multi-ponto ou broadcast**, é preciso um **protocolo de acesso mútiplo** para coordenar o acesso ao meio físico (link).
 
@@ -1104,6 +1104,8 @@ Cada estação em uma rede Ethernet tem seu próprio NIC (Network Interface Card
 #### CSMA/CD 1-PERSISTENT
 
 <img src="../../imgs/4_Periodo/Redes1/image-20211025145529390.png" style="width:60%">
+
+<img src="../../imgs/4_Periodo/Redes1/image-20211025170837956.png" style="width:60%">
 
 ### FAST ETHERNET
 
