@@ -839,7 +839,7 @@ Isso se repete até que a rede residual não tenha mais caminhos aumentadores.
 
 # Planalidade
 
-21/09 :watch:
+21/10 :watch:
 
 :building_construction:
 
@@ -884,17 +884,17 @@ Uma representação gráfica planar de um grafo divide o plano em regiões ou fa
 
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211021211838662.png" style="width:70%">
 
-### Teorema 1 - Fórmula de Euler
+## Teorema 1 - Fórmula de Euler
 
 Seja G um grafo conexo planar com N vértices e E arestas. O nº de faces do grafo é: **f = 2 - N + E**
 
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211021212036731.png" style="width:70%">
 
-### Grau de uma região
+## Grau de uma região
 
 :building_construction:
 
-### Corolário - Fórmula de Euler
+## Corolário - Fórmula de Euler
 
 :building_construction:
 
@@ -902,21 +902,40 @@ Seja G um grafo conexo planar com N vértices e E arestas. O nº de faces do gra
 
 [inequações]
 
-### Detecção de planaridade
+## Detecção de planaridade
 
 :building_construction:
 
 [Técnica de redução]
 
-### Contração de aresta
+## Contração de aresta
 
 :building_construction:
 
-### Detecção de planaridade: remoção de aresta
+## Detecção de planaridade: remoção de aresta
+
+:building_construction:
 
 [Outro]
 
 
 
-Trabalho prático:
+26/10 :watch:
 
+## Homeomorfismo
+
+:building_construction:
+
+### Teorema
+
+Um grafo G é planar se, e somente se, nenhum subgrafo seu for homeomorfo a K5................................
+
+## Dualidade
+
+:building_construction:
+
+Para cada face eu desenho um vértice.........
+
+# Coloração de grafos
+
+:building_construction:

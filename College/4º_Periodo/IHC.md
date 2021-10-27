@@ -1120,3 +1120,20 @@ O conteúdo selecionado deve permitir atingir os objetivos do estudo.
 # Heurísticas
 
 13/10 :watch:
+
+## Heutísticas de Nielsen
+
+Feedback - Jargão - Desfaça ações - Seguir convenções - Evitar erros - Instruções visiveis - Informações irrelevantes - Mens de erro claras - Ajuda sempre em mãos
+
+
+
+1. **Visibilidade do estado do sistema:** o sistema deve sempre manter os usuários informados sobre o que está acontecendo por meio de feedback (resposta às ações do usuário) adequado e no tempo certo;
+2. **Correspondência entre o sistema e o mundo real:** o sistema deve utilizar palavras, expressões e conceitos que são familiares aos usuários, em vez de utilizar termos orientados ao sistema ou jargão dos desenvolvedores. O designer deve seguir as convenções do mundo real, fazendo com que a informação apareça em uma ordem natural e lógica, conforme esperado pelos usuários;
+3. **Controle e liberdade do usuário:** os usuários frequentemente realizam ações equivocadas no sistema e precisam de uma “saída de emergência” claramente marcada para sair do estado indesejado sem ter de percorrer um diálogo extenso. A interface deve permitir que o usuário desfaça e refaça suas ações;
+4. **Consistência e padronização:** os usuários não devem ter de se perguntar se palavras, situações ou ações diferentes significam a mesma coisa. O designer deve seguir as convenções da plataforma ou do ambiente computacional;
+5. **Prevenção de erros:** melhor do que uma boa mensagem de erro é um projeto cuidadoso que evite que um problema ocorra, caso isso seja possível;
+6. **Reconhecimento em vez de memorização:** o designer deve tornar os objetos, as ações e opções visíveis. As instruções de uso do sistema devem estar visíveis ou facilmente acessíveis sempre que necessário;
+7. **Flexibilidade e eficiência de uso:** aceleradores podem tornar a interação do usuário mais rápida e eficiente, permitindo que o sistema consiga servir igualmente bem os usuários experientes e inexperiente;
+8. **Projeto estético e minimalista:** a interface não deve conter informação que seja irrelevante ou raramente necessária. Cada unidade extra de informação em uma interface reduz sua visibilidade relativa, pois compete com as demais unidades de informação pela atenção do usuário;
+9. **Ajude os usuários a reconhecerem, diagnosticarem e se recuperarem de erros:** as mensagens de erro devem ser expressas em linguagem simples (sem códigos indecifráveis), indicar precisamente o problema e sugerir uma solução de forma construtiva;
+10. **Ajuda e documentação:** é necessário oferecer ajuda e documentação de alta qualidade. Tais informações devem ser facilmente encontradas, focadas na tarefa do usuário, enumerar passos concretos a serem realizados e não ser muito extensas;
