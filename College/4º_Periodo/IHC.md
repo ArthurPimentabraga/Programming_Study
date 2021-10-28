@@ -1137,3 +1137,8 @@ Feedback - Jargão - Desfaça ações - Seguir convenções - Evitar erros - Ins
 8. **Projeto estético e minimalista:** a interface não deve conter informação que seja irrelevante ou raramente necessária. Cada unidade extra de informação em uma interface reduz sua visibilidade relativa, pois compete com as demais unidades de informação pela atenção do usuário;
 9. **Ajude os usuários a reconhecerem, diagnosticarem e se recuperarem de erros:** as mensagens de erro devem ser expressas em linguagem simples (sem códigos indecifráveis), indicar precisamente o problema e sugerir uma solução de forma construtiva;
 10. **Ajuda e documentação:** é necessário oferecer ajuda e documentação de alta qualidade. Tais informações devem ser facilmente encontradas, focadas na tarefa do usuário, enumerar passos concretos a serem realizados e não ser muito extensas;
+
+
+
+27/10 :watch:
+

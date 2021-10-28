@@ -1121,3 +1121,13 @@ Cada estação em uma rede Ethernet tem seu próprio NIC (Network Interface Card
 
 :building_construction:
 
+
+
+## FUNCIONAMENTO GERAL DO TCP
+
+27/10 :watch:
+
+
+
+# CAMADA DE APLICAÇÃO
+
