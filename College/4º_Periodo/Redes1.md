@@ -1,4 +1,9 @@
-
+---
+title: Redes de computadores 1 (Puc-Minas - 4º Período)
+author: Arthur P. Braga
+period: 2/2021
+books: Redes de Computadores by Andrew S. Tanenbaum (5ª Edição) - Comunicação de Dados e Redes de Computadores by Forouzan, Behrouz A. (4ª Edição)
+---
 
 # INTRODUÇÃO
 
@@ -1121,7 +1126,15 @@ Cada estação em uma rede Ethernet tem seu próprio NIC (Network Interface Card
 
 :building_construction:
 
+### ENDEREÇOS DE PORTA
 
+Como na camada de enlace é utilizado o endereço MAC para identificar um nó específico, a camada de transporte utiliza o endereço de porta para identificar um processo específico em execução no host de destino, e também não pode ser aleatório, se não o processo cliente não saberá qual endereço de porta utilizar. São menores pelo fato de definirem os processos em execução de um host definido por um endereço IP.
+
+### HANDSHAKE DE 3 VIAS
+
+O handshake de três vias é um mecanismo utilizado para estabelecimento de conexõesTCP, que são geralmente estabelecidas em três etapas, a primeira etapa é o envio de um pacote por parte do cliente com uma flag (disponibilização de bits em um pacote) de sincronização (SYN) ativa, a segunda etapa é a resposta do servidor com um pacote com a flag de sincronização (SYN) e a flag de reconhecimento (ACK) e por último temos a etapa onde o cliente responde o servidor enviando um pacote com a flag de reconhecimento (ACK). 
+
+O handshake se faz necessário pois ambas as partes precisam que suas flags de sincronização. Sem elas o servidor não saberá se o cliente já recebeu sua flag de sincronização, flag essa que é de suma importância ser enviada ao cliente.
 
 ## FUNCIONAMENTO GERAL DO TCP
 
@@ -1137,3 +1150,4 @@ Cada estação em uma rede Ethernet tem seu próprio NIC (Network Interface Card
 
 
 
+Também no dia -> 08/11 :watch:
