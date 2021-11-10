@@ -940,3 +940,14 @@ Para cada face eu desenho um vértice.........
 
 :building_construction:
 
+
+
+# Particionamento e Cobertura
+
+09/11 :watch:
+
+:building_construction:
+
+## Conjuntos independentes
+
+:building_construction:

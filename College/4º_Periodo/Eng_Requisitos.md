@@ -617,3 +617,5 @@ Detalhamento através de modelagem.
 
 <img src="../../imgs/4_Periodo/Eng_Requisitos/image-20211025191932255.png" style="width:60%">
 
+
+
