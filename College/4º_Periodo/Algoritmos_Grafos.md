@@ -951,3 +951,4 @@ Para cada face eu desenho um vértice.........
 ## Conjuntos independentes
 
 :building_construction:
+

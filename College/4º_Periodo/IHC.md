@@ -2289,5 +2289,3 @@ Feedback - Jargão - Desfaça ações - Seguir convenções - Evitar erros - Ins
 
 03/11 :watch:
 
-
-
