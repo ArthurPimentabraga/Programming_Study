@@ -619,3 +619,5 @@ Detalhamento através de modelagem.
 
 
 
+## Diagrama de classes
+

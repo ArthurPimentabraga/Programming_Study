@@ -940,6 +940,25 @@ Para cada face eu desenho um vértice.........
 
 :building_construction:
 
+Uma forma de rotular os vértices do grafo com "cores", sendo que vértices adjacentes não podem ter a mesma cor.
+
+- Coloração se dá em grafos conexos simples:  
+  - Desconsiderar  grafos  desconexos.  As  cores  utilizadas  em  um componente não têm efeito sobre as do outro  componente;
+  - Arestas paralelas não afetam a coloração;
+  - Grafo não pode ter loops, pois em um loop, um vértice é adjacente a ele mesmo;
+- **Número cromático:** O número cromático de um grafo  G,  X(G), é o menor número K para o qual G é K-colorido 
+
+## Aplicação
+
+1. Atribuição de frequências de rádio. Os vértices representam os transmissores das estações de  rádio. Duas  estações  são  adjacentes  quando  suas  áreas  de  transmissão se sobrepõem, o que resultaria em  interferência se elas usassem a mesma frequência. Cada cor contém estações que podem receber a mesma  frequência;
+2. Provas de uma universidade: Queremos que duas disciplinas com estudantes em comum não  tenham seus exames agendados para o mesmo horário. Qual o número mínimo de horários  necessários para agendar os exames? 
+
+## Teorema - Coloração de circuitos 
+
+Um  grafo  consistindo  simplesmente  de  um  circuito com n ≥ 3 vértices é **2-cromático** se n é par e **3-cromático** se n é impar.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211116221119277.png" style="width:70%">
+
 
 
 # Particionamento e Cobertura
@@ -948,7 +967,8 @@ Para cada face eu desenho um vértice.........
 
 :building_construction:
 
-## Conjuntos independentes
+Uma coloração de um grafo induz a um **particionamento** dos vértices em subconjuntos de vértices chamados de **conjuntos independentes**. Conjunto de vértices do grafo no qual nenhum par de  vértices do conjunto é adjacente.
 
-:building_construction:
+- Um conjunto independente é **maximal** quando não existe nenhum outro conjunto independente que o contenha (i.e.: um conjunto que não pode ser completado);
+- Um conjunto independente é **máximo** se todos os outros conjuntos independentes têm cardinalidade menor ou igual a ele.
 
