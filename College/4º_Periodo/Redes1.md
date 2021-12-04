@@ -1,9 +1,7 @@
----
 title: Redes de computadores 1 (Puc-Minas - 4º Período)
 author: Arthur P. Braga
 period: 2/2021
 books: Redes de Computadores by Andrew S. Tanenbaum (5ª Edição) - Comunicação de Dados e Redes de Computadores by Forouzan, Behrouz A. (4ª Edição)
----
 
 # INTRODUÇÃO
 
@@ -1126,6 +1124,10 @@ Cada estação em uma rede Ethernet tem seu próprio NIC (Network Interface Card
 
 :building_construction:
 
+A camada de transporte é responsável pela comunicação entre processos finais de uma mensagem inteira. Processo é um programa aplicativo em execução em um host. A camada de transporte se baseia na camada de rede para oferecer transporte de dados de um processo em uma máquina de origem a um processo em uma máquina de destino com um nível de confiabilidade desejado independentemente das redes físicas em uso no momento.
+
+O principal objetivo da camada de transporte é oferecer um serviço confiável, eficiente e econômico a seus usuários, que, em geral, são processos presentes na camada deaplicação.
+
 ### ENDEREÇOS DE PORTA
 
 Como na camada de enlace é utilizado o endereço MAC para identificar um nó específico, a camada de transporte utiliza o endereço de porta para identificar um processo específico em execução no host de destino, e também não pode ser aleatório, se não o processo cliente não saberá qual endereço de porta utilizar. São menores pelo fato de definirem os processos em execução de um host definido por um endereço IP.
@@ -1148,6 +1150,55 @@ O handshake se faz necessário pois ambas as partes precisam que suas flags de s
 
 :building_construction:
 
+[Vídeo explicativo.Endereços IP Sem Classe, Endereços Privados e NAT. Prof. Othon M. N.  Batista Mestre em Informática - PDF Free Download](https://www.youtube.com/watch?v=SOZ2PwLH3co)
+
+A camada de aplicação é responsável por fornecer serviços ao usuário final.
+
+Depois de passarmos por todas as camadas prelimi­nares, chegamos àquela em que são encontradas todas as aplicações. As camadas inferiores à camada de aplicação têm a função de oferecer um serviço de transporte confiá­vel, mas, na verdade, elas não executam nenhuma tare­fa para os usuários.
+
 
 
 Também no dia -> 08/11 :watch:
+
+## DNS
+
+:building_construction:
+
+DNS - sistema de nomes de domínios. Aplicação cliente/servidor.
+
+Embora os programas possam se referir em teoria a pá­ginas Web, caixas de correio e outros recursos que utilizam os endereços de rede (por exemplo, endereços IP) dos com­putadores em que estão armazenados, esses endereços são difíceis para as pessoas memorizarem. Além disso, navegar pelas páginas Web de uma empresa a partir de 128.111.24.41 significa que, se a empresa mudar o servidor Web para uma máquina diferente, com um endereço IP diferente, todos precisam ser informados sobre o novo endereço IP. Por isso, foram introduzidos nomes de alto nível, legíveis, a fim de desassociar os nomes das máquinas dos endereços dessas máquinas.
+
+Sendo assim, o programa envia o nome para o que chamamos de resolvedor (um procedimento de biblioteca), que por sua vez irá para um servidor DNS local, que faz a associação desse nome, com o endereço IP desejado. Por fim, o servidor retorna esse endereço ao resolvedor, que por sua vez retorna para o programa.
+
+### ESPAÇO DE NOMES 
+
+Espaço de nomes: define o conjunto de nomes possíveis. Pode ser organizado de duas maneiras: *plana* ou *hierárquica*.
+
+#### PLANA
+
+- Atribuído um nome a um endereço;
+- Um nome nesse espaço é uma sequência de caracteres sem estrutura;
+- Principal desvantagem: não poder ser usado em um sistema grande como a Internet.
+
+#### HIERÁRQUICA
+
+Cada nome é constituído por várias partes componentes.
+
+A vantagem da utilização de uma estrutura hierárquica é a possibilidade de ser utilizado em grande escala, uma vez que a montagem dos nomes pode ser espalhada em diversas zonas (servidores).
+
+#### DE DOMÍNIOS
+
+<img src="../../imgs/4_Periodo/Redes1/image-20211126213423292.png" style="width:60%">
+
+## FTP
+
+:building_construction:
+
+
+
+
+
+
+
+
+

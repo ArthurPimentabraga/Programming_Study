@@ -829,6 +829,49 @@ Isso se repete até que a rede residual não tenha mais caminhos aumentadores.
 
 :building_construction:
 
+Árvore é um grafo conexo T em que existe um, e somente um caminho entre qualquer par de vértices de T.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211203192341992.png" style="width:80%">
+
+## Árvore geradora
+
+Uma árvore geradora de G, é um sub-grafo de G que contém todos os vértices de G e é uma árvore. 
+
+- **Galho**: uma aresta de G em T 
+- **Corda**: uma aresta de G que não pertence a T
+- Grafos não conexos possuem florestas geradoras!
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211203194519396.png" style="width:50%">
+
+- **Floresta**: conjunto de árvores sem vértices em comum;
+- **Rank de G**: número de galhos em qualquer floresta geradora de G. Sendo k componentes, r = n - k;
+- **Nulidade de G**: número de cordas em qualquer floresta geradora de G. µ = e – n + k.
+
+### Teoremas
+
+1. Todo grafo conexo G possui pelo menos uma árvore geradora!
+2. Dados um grafo conexo G com N vértices, E arestas e uma árvore geradora T de G... G terá:
+   - Galhos = N - 1
+   - Cordas = E – N + 1
+
+### Árvore geradora mínima
+
+É a árvore geradora de menor peso em G. Dado um grafo G com pesos associados às arestas, encontrar uma árvore geradora mínima de G.
+
+Podemos utilizar 2 algoritmos para encontrar tal árvore: **Algoritmo de Prim** ou **Algoritmo de Kruskal**.
+
+#### Algoritmo de Prim
+
+:building_construction:
+
+#### Algoritmo de Kruskal
+
+:building_construction:
+
+Basicamente inicia com a AGM vazia, pega as menores arestas, e a cada passo adiciona a menor na árvore e liga as florestas existentes com, também, a menor aresta entre elas que não forma ciclo.
+
+> Algoritmo guloso.
+
 # Floresta
 
 :building_construction:
