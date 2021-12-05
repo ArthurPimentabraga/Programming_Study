@@ -941,9 +941,34 @@ Seja G um grafo conexo planar com N vértices e E arestas. O nº de faces do gra
 
 :building_construction:
 
-[São dois corolários]
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211204175834360.png" style="width:70%">
 
-[inequações]
+### Conceitos básicos
+
+:building_construction:
+
+### Inequações derivadas
+
+Inequações derivadas da Fórmula de Euler:
+
+- condições necessárias, mas não suficientes para um grafo ser planar;
+- se satisfeitas, não significa que o grafo é planar, mas podem ser usadas para mostrar que o grafo é não planar. Ou seja, se o grafo não satisfazer tais condições, podemos dizer que ele é não planar.
+
+#### Corolário 1
+
+Se G é um grafo **simples conexo** e planar, com E arestas e V vértices, com pelo menos 3 vértices (V >= 3), logo o número de arestas vai ser menor ou igual à 3 * V - 6.
+
+**E <= 3 * V - 6**
+
+#### Corolário 2
+
+Se G é um grafo **simples conexo** e planar, logo G tem, pelo menos, 1 vértice de grau <= 5;
+
+#### Corolário 3
+
+Se G é um grafo **simples conexo** e planar com E arestas e V vértices, sendo V ≥ 3, e **nenhum ciclo de comprimento três**, logo:
+
+**E <= 2 * V - 4**
 
 ## Detecção de planaridade
 
@@ -973,11 +998,15 @@ Seja G um grafo conexo planar com N vértices e E arestas. O nº de faces do gra
 
 Um grafo G é planar se, e somente se, nenhum subgrafo seu for homeomorfo a K5................................
 
-## Dualidade
+# Dualidade
 
 :building_construction:
 
-Para cada face eu desenho um vértice.........
+Dado um grafo G planar, o grafo G*, chamado dual de G, é construído da seguinte forma:
+
+- Para cada face de G, G* tem um vértice;
+- Os vértices de G* são unidos da seguinte forma:
+  - 
 
 # Coloração de grafos
 
@@ -986,10 +1015,12 @@ Para cada face eu desenho um vértice.........
 Uma forma de rotular os vértices do grafo com "cores", sendo que vértices adjacentes não podem ter a mesma cor.
 
 - Coloração se dá em grafos conexos simples:  
-  - Desconsiderar  grafos  desconexos.  As  cores  utilizadas  em  um componente não têm efeito sobre as do outro  componente;
+  - Desconsiderar grafos desconexos. As cores utilizadas em um componente não têm efeito sobre as do outro componente;
   - Arestas paralelas não afetam a coloração;
   - Grafo não pode ter loops, pois em um loop, um vértice é adjacente a ele mesmo;
-- **Número cromático:** O número cromático de um grafo  G,  X(G), é o menor número K para o qual G é K-colorido 
+- **Número cromático:** O número cromático de um grafo G, X(G), é o menor número K para o qual G é K-colorido 
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211204183434428.png" style="width:70%">
 
 ## Aplicação
 
@@ -998,11 +1029,57 @@ Uma forma de rotular os vértices do grafo com "cores", sendo que vértices adja
 
 ## Teorema - Coloração de circuitos 
 
+:building_construction:
+
 Um  grafo  consistindo  simplesmente  de  um  circuito com n ≥ 3 vértices é **2-cromático** se n é par e **3-cromático** se n é impar.
 
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211116221119277.png" style="width:70%">
 
+[Tem mais aqui................]
 
+## Coloração de arestas
+
+Uma coloração de arestas de um grafo simples G é uma atribuição de cores às arestas de G de maneira que cores diferentes são atribuídas a arestas adjacentes.
+
+- Se existe uma coloração de arestas para um grafo G que utiliza K cores, então, G é um grafo K-colorido de arestas.
+- **Índice cromático** de um grafo G, X’(G), é o menor número K (menor número de cores) para qual G é K-colorido de arestas.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211204184017147.png" style="width:50%">
+
+- Grafos com laços não serão considerados nas definições e algoritmos
+- Arestas paralelas **não podem ser ignoradas** na coloração de arestas
+
+### Aplicação
+
+**Primeira aplicação:**
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211204185642288.png" style="width:70%">
+
+**Segunda aplicação:**
+
+Organização de aulas.
+
+Uma escola tem professores t1, t2, ..., tm, para dar disciplinas s1, s2, ..., sn. Em particular, um professor tj deve ensinar sj,k seções de uma disciplina sk.
+
+Problema: Calcule o número mínimo de períodos de tempo necessários para organizar todas as disciplinas de forma que não haja duas seções de uma disciplina ofertadas em um mesmo horário.
+
+Solução: Formar um grafo bipartido. Se cada cor de aresta representar um horário, então uma coloração de arestas do grafo bipartido representa um horário possível.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211204185845878.png" style="width:50%">
+
+### Teorema
+
+Se G é um grafo simples cujo vértice de maior grau tem grau δ(G), então:
+
+> Lembrando: X’(G) = índice cromático.
+
+**δ(G) <= X’(G) <= δ(G) + 1**
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211204190248418.png" style="width:50%">
+
+## Coloração de grafos planares
+
+:building_construction:
 
 # Particionamento e Cobertura
 
