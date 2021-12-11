@@ -1081,6 +1081,29 @@ Se G é um grafo simples cujo vértice de maior grau tem grau δ(G), então:
 
 :building_construction:
 
+Basicamente gera o dual do grafo e colore os vértices do dual, ou seja, colorimos as faces, logo achamos a **coloracão de faces** daquele grafo.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211210195131659.png" style="width:70%">
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211210195246352.png" style="width:70%">
+
+### Teorema das 4 cores
+
+Dado um mapa plano, dividido em regiões, quatro cores são suficientes para colorir, de forma que regiões vizinhas não partilhem a mesma cor.
+
+- Condição: as regiões que só se tocam num ponto (vértice) não são consideradas vizinhas;
+- **Todo grafo planar é 4-face colorido!** 
+  - Ou seja, todo **mapa** é planar, logo o teorema se aplica.
+- Tal teorema não pode ser provado de forma matemática, ou de outra forma sem recorrer a um computador, então até hoje temos dúvida se realmente é um teorema ou só uma conjectura.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211210200325728.png" style="width:25%">
+
+#### Teorema
+
+Um grafo planar G pode ter as faces coloridas com **2 cores** se, e somente se, G for **Euleriano**.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211210200810077.png" style="width:50%">
+
 # Particionamento e Cobertura
 
 09/11 :watch:
@@ -1089,6 +1112,51 @@ Se G é um grafo simples cujo vértice de maior grau tem grau δ(G), então:
 
 Uma coloração de um grafo induz a um **particionamento** dos vértices em subconjuntos de vértices chamados de **conjuntos independentes**. Conjunto de vértices do grafo no qual nenhum par de  vértices do conjunto é adjacente.
 
-- Um conjunto independente é **maximal** quando não existe nenhum outro conjunto independente que o contenha (i.e.: um conjunto que não pode ser completado);
-- Um conjunto independente é **máximo** se todos os outros conjuntos independentes têm cardinalidade menor ou igual a ele.
+- Um conjunto independente é **maximal** quando não existe nenhum outro conjunto independente que o contenha (i.e.: um conjunto que não pode ser completado, ou seja, não pode acrescentar mais nenhum vértice, se não deixa de ser independente);
+- Um conjunto independente é **máximo** se todos os outros conjuntos independentes têm cardinalidade menor ou igual a ele;
+- O número de independência **α(G)** é a cardinalidade do conjunto independente máximo, ou seja, se pedir a medida de independência do grafo é só achar o conjunto máximo e sua cardinalidade.
+
+## Aplicação
+
+Exemplo: identificar localizações para instalação de franquias.
+
+- Duas localizações não podem estar perto o suficiente para competir entre si;
+- Solução: construir um grafo em que possíveis localizações são representadas por vértices, e arestas são criadas entre duas localizações que estão próximas o suficiente para interferir;
+- O maior conjunto independente fornece o maior número de franquias que podem ser concedidas sem prejudicar as vendas.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211210203339434.png" style="width:50%">
+
+## Clique
+
+:building_construction:
+
+## Algoritmos 
+
+### Conjunto Maximal
+
+Não é complicado, basta isso:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211210204008368.png" style="width:90%">
+
+### Conjunto Máximo
+
+Por outro lado, encontrar um conjunto independente máximo é complicado... NP-Difícil. Logo, usamos **heurísticas**.
+
+Podemos iniciar com um vértice de maior, ou menor grau e seguir com a lógica do algoritmo de conjunto maximal... Nada te dá certeza, mas pode chegar.
+
+## Conjunto dominante
+
+Conjunto dominante é um conjunto de vértices do grafo que “domina” todos os vértices do grafo. Ou seja, a partir dos vértices desse conjunto, eu consigo **alcançar** todos os vértices do grafo, logo:
+
+**UM VÉRTICE V PERTENCE AO CONJUNTO DOMINANTE OU É ADJACENTE A UM VÉRTICE QUE PERTENCE.**
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211210205133658.png" style="width:90%">
+
+> Lembrando que precisa alcançar de forma adjacente, ou seja, não pode ir de tabela!
+
+### Conjunto dominante mínimo
+
+É um conjunto dominante que contém o menor número de vértices possíveis para ser considerado um conjunto dominante. Porém, temos outro problema NP-Difícil...
+
+## Cobertura de vértices
 
