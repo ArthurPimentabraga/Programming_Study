@@ -1160,3 +1160,13 @@ Conjunto dominante é um conjunto de vértices do grafo que “domina” todos o
 
 ## Cobertura de vértices
 
+Em um grafo G, um conjunto g de vértices é chamado de cobertura de vértices se todas as arestas de G são incidentes a pelo menos um vértice de g.
+
+- Se este conjunto é o menor com tal propriedade dizemos que g é uma **cobertura mínima de vértices**. MENOR CONJUNTO DE VÉRTICES INCIDENTES A TODAS AS ARESTAS.
+- Se C é uma cobertura de vértices de um grafo G = (V,E), então V – C é um conjunto independente. E vice-versa: Se S é um conjunto independente, V – S é uma cobertura de vértice.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211213083507326.png" style="width:50%">
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211213083517382.png" style="width:50%">
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211213083717994.png" style="width:50%">
