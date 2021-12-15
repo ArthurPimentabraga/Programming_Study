@@ -1042,7 +1042,7 @@ Um  grafo  consistindo  simplesmente  de  um  circuito com n ≥ 3 vértices é 
 Uma coloração de arestas de um grafo simples G é uma atribuição de cores às arestas de G de maneira que cores diferentes são atribuídas a arestas adjacentes.
 
 - Se existe uma coloração de arestas para um grafo G que utiliza K cores, então, G é um grafo K-colorido de arestas.
-- **Índice cromático** de um grafo G, X’(G), é o menor número K (menor número de cores) para qual G é K-colorido de arestas.
+  - **Índice cromático** de um grafo G, X’(G), é o menor número K (menor número de cores) para qual G é K-colorido de arestas.
 
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211204184017147.png" style="width:50%">
 
@@ -1170,3 +1170,12 @@ Em um grafo G, um conjunto g de vértices é chamado de cobertura de vértices s
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211213083517382.png" style="width:50%">
 
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211213083717994.png" style="width:50%">
+
+### Emparelhamento
+
+Um emparelhamento num grafo G não-dirigido é um conjunto M de arestas com a seguinte propriedade:
+
+- Nenhum par de arestas é adjacente (cj. independente de arestas)
+
+### Casamento / Matching
+
