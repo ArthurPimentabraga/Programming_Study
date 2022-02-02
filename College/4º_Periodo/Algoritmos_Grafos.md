@@ -87,7 +87,7 @@ Somente em **grafos direcionados**!
 
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/sucessores_antecessores.png" style="width:70%">
 
-#### Incidência 
+#### Incidência
 
 Quando um vértice Vi é o vértice final de alguma aresta Ei, Vi e Ei são incidentes.
 
@@ -155,7 +155,7 @@ Para cada par de vértices existe uma aresta entre eles. Consequentemente, quais
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/grafo_completo.png" style="width:60%">
 
 > Como achar o grau dos vértices -> n-1
->
+> 
 > Como achar o nº de arestas -> (d * n) / 2
 
 #### Grafo conexo
@@ -352,7 +352,7 @@ Um grafo é bipartido se, e somente se, todo ciclo de G possuir comprimento par.
 17/08 :watch:
 
 > Vale lembrar os conceitos de:
->
+> 
 > - Passeio (pode voltar no mesmo vértice).
 > - Caminho
 >   - **Caminho aberto:** Vértices inicial e final são diferentes;
@@ -419,8 +419,6 @@ Ex.: 2*3 = 6 vértices de grau ímpar = 3 subgrafos unicursais.
 
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/unicrusal.png" style="width:40%">
 
-
-
 ## Grafos hamiltonianos
 
 24/08 :watch:
@@ -486,13 +484,18 @@ Para resolver esse problema podemos utilizar força bruta, porém na maioria dos
 Exemplo:
 
 1. escolha um vértice arbitrário como vértice atual.
+
 2. descubra a aresta de menor peso que seja conectada ao vértice atual e
    a um vértice não visitado V.
 
 3. faça o vértice atual ser V.
+
 4. marque V como visitado.
+
 5. se todos os vértices no domínio estiverem visitados, encerre o algoritmo.
+
 6. Se não vá para o passo 2.
+
 7. A sequência dos vértices visitados é a saída do algoritmo.
 
 >  Isso é o que chamamos de **Heurística gulosa**, ou seja, que só se preocupa com a melhor forma para aquela instância, daquele momento.
@@ -538,7 +541,7 @@ Uma busca em grafos nada mais é que tentar encontrar uma sequência de passos (
 ## Busca em largura
 
 > Notes: Também há uma explicação na aula do dia 14/09.
->
+> 
 > [Link de vídeo aula](https://www.youtube.com/watch?v=u834GA3725M)
 
 Basicamente mapea os caminhos (caminho mínimo) de um vértice de origem até qualquer outro vértice possível de ser alcançado, gerando uma **árvore**.
@@ -621,7 +624,7 @@ Um vértice precisa do resultado de outro antes - Para ir para um vértice preci
 - **Impossível ser cíclico**, pois não tem início, todo mundo depende de todo mundo.
 
 > Note: DAG -> Dígrafo acíclico. 
->
+> 
 > É necessário ser um dígrafo.
 
 A ordenação topológica é a ordenação **linear** de vértices na qual cada vértice precede o conjunto que forma seu **fecho transitivo direto** (FTD - conjunto de todos os vértices que podem ser atingidos por algum caminho iniciado no vértice atual).
@@ -679,16 +682,14 @@ Neste caso se eu tiver uma aresta de retorno, eu fecho um cíclo, logo não há 
 
 Baseado na busca em largura.
 
-
-
 # Conectividade
 
 16/09 :watch:
 
 > Notas: 
->
+> 
 > - Um grafo é conexo quando existe **pelo menos** um caminho entre todos os vértices.
->- Um grafo desconexo e componentes conexos -> Cada componente de um grafo desconectado é chamado de componente conexo.
+> - Um grafo desconexo e componentes conexos -> Cada componente de um grafo desconectado é chamado de componente conexo.
 
 - Como saber se um grafo é conexo? Ou, como saber quantos componentes conexos há em um grafo?
 - Busca em profundidade forma árvores. Esta informação pode ser utilizada para contarmos os componentes de um grafo.
@@ -822,7 +823,7 @@ A cada iteração aumenta-se o valor do fluxo em G determinando um "caminho de a
 Isso se repete até que a rede residual não tenha mais caminhos aumentadores.
 
 > - Se o fluxo em uma aresta é igual à sua capacidade dizemos que essa aresta está **saturada!**
->
+> 
 > - Embora cada iteração aumente o valor do fluxo, o fluxo em algumas arestas pode diminuir.
 
 # Árvores
@@ -875,8 +876,6 @@ Basicamente inicia com a AGM vazia, pega as menores arestas, e a cada passo adic
 # Floresta
 
 :building_construction:
-
-
 
 ---
 
@@ -986,8 +985,6 @@ Se G é um grafo **simples conexo** e planar com E arestas e V vértices, sendo 
 
 [Outro]
 
-
-
 26/10 :watch:
 
 ## Homeomorfismo
@@ -1006,7 +1003,7 @@ Dado um grafo G planar, o grafo G*, chamado dual de G, é construído da seguint
 
 - Para cada face de G, G* tem um vértice;
 - Os vértices de G* são unidos da seguinte forma:
-  - 
+  -
 
 # Coloração de grafos
 
@@ -1027,7 +1024,7 @@ Uma forma de rotular os vértices do grafo com "cores", sendo que vértices adja
 1. Atribuição de frequências de rádio. Os vértices representam os transmissores das estações de  rádio. Duas  estações  são  adjacentes  quando  suas  áreas  de  transmissão se sobrepõem, o que resultaria em  interferência se elas usassem a mesma frequência. Cada cor contém estações que podem receber a mesma  frequência;
 2. Provas de uma universidade: Queremos que duas disciplinas com estudantes em comum não  tenham seus exames agendados para o mesmo horário. Qual o número mínimo de horários  necessários para agendar os exames? 
 
-## Teorema - Coloração de circuitos 
+## Teorema - Coloração de circuitos
 
 :building_construction:
 
@@ -1130,7 +1127,7 @@ Exemplo: identificar localizações para instalação de franquias.
 
 :building_construction:
 
-## Algoritmos 
+## Algoritmos
 
 ### Conjunto Maximal
 
@@ -1178,4 +1175,3 @@ Um emparelhamento num grafo G não-dirigido é um conjunto M de arestas com a se
 - Nenhum par de arestas é adjacente (cj. independente de arestas)
 
 ### Casamento / Matching
-

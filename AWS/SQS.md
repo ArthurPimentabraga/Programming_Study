@@ -14,4 +14,3 @@ Se não quisermos que os consumers realizem requests para o pull das mensagens p
 [Micronaut listen/subscribe to AWS SQS](https://codersingh27.medium.com/micronaut-listen-subscribe-to-aws-sqs-ebde42ad3e65)
 
 ## SQS & SNS
-
