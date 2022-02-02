@@ -1,10 +1,7 @@
----
 title: Redes de computadores 1 (Puc-Minas - 4º Período)
 author: Arthur P. Braga
 period: 2/2021
-books: Redes de Computadores by Andrew S. Tanenbaum (5ª Edição) - 
-       Comunicação de Dados e Redes de Computadores by Forouzan, Behrouz A. (4ª Edição)
----
+books: Redes de Computadores by Andrew S. Tanenbaum (5ª Edição) - Comunicação de Dados e Redes de Computadores by Forouzan, Behrouz A. (4ª Edição)
 
 # INTRODUÇÃO
 
@@ -784,7 +781,7 @@ Os serviços da camada de enlace se resumem em seus objetivos listados no iníci
 
 Basicamente é o processo de encapsulamento explicado no último tópico. Logo também delimita onde começa e onde termina um quadro. 
 
-O serviço provido pela camada física não garante que o fluxo de bits seja livre de erros, logo podemos ter dados recebidos com valores de bits diferentes do que foram enviados, ou até em um número menor ou maior do que foi originalmente enviado. Logo, para fazer toda a detecção e, se necessário, a  correção de erros a camada de enlace divide os dados em frames para aplicar os algoritmos que farão esse trabalho posteriormente (verificação de erros por quadro).
+O serviço provido pela camada física não garante que o fluxo de bits seja livre de erros, logo podemos ter dados recebidos com valores de bits diferentes do que foram enviados, ou até em um número menor ou maior do que foi originalmente enviado. Logo, para fazer toda a detecção e, se necessário, a correção de erros a camada de enlace divide os dados em frames para aplicar os algoritmos que farão esse trabalho posteriormente (verificação de erros por quadro).
 
 É nessa camada que o checksum geralmente é utilizado.
 
@@ -806,9 +803,9 @@ O problema com esse algoritmo é que a contagem pode ser adulterada por um erro 
 
 #### INSERÇÃO DE BYTES DE FLAGS
 
-contorna o problema de ressincronização após um erro, fazendo cada quadro começar e terminar com bytes especiais. Normalmente o mesmo byte, chamado byte de flag, é usado como delimitador de início e de fim, como mostra a Figura, na qual ele é representado por FLAG. 
+Contorna o problema de ressincronização após um erro, fazendo cada quadro começar e terminar com bytes especiais. Normalmente o mesmo byte, chamado byte de flag, é usado como delimitador de início e de fim, como mostra a Figura, na qual ele é representado por FLAG. 
 
-Dois bytes de flag consecutivos indicam o fim de um quadro e o início do próximo. Assim, se o receptor perder a sincronização, ele poderá simplesmente procurar dois bytes de flag para encontrar ofinal do quadro atual e o início do seguinte.
+Dois bytes de flag consecutivos indicam o fim de um quadro e o início do próximo. Assim, se o receptor perder a sincronização, ele poderá simplesmente procurar dois bytes de flag para encontrar o final do quadro atual e o início do seguinte.
 
 <img src="../../imgs/4_Periodo/Redes1/image-20210911163734337.png" style="width:80%">
 
@@ -939,7 +936,7 @@ Controle de comunicação entre máquinas de uma rede. Implementa o controle de 
 
 Endereços físicos (MAC) são usados nos cabeçalhos dos quadros para identificar origem e destino de quadros em enlaces multiponto.
 
-- Endereços diferentes do endereço IP. O **IP** é uma identificação que a rede atribui a cada aparelho conectado a ela (ou seja o **IP** pode mudar) já o **mac** address é um **endereço** único de cada aparelho que nunca muda e que a rede utiliza além de outras coisas para manter um registro de todos os aparelhos que já se conectaram a ela. 
+- Endereços diferentes do endereço IP. O **IP** é uma identificação que a rede atribui a cada aparelho conectado a ela (ou seja o **IP** pode mudar) já o **mac** address é um **endereço** único de cada aparelho que nunca muda e que a rede utiliza além de outras coisas para manter um registro de todos os aparelhos que já se conectaram a ela.
 
 Quando várias máquinas são conectadas e usam um enlace comum, chamado **enlace multi-ponto ou broadcast**, é preciso um **protocolo de acesso mútiplo** para coordenar o acesso ao meio físico (link).
 
@@ -1059,27 +1056,149 @@ Aqui os protocolos já vão verificar o estado do meio e **controlar** o acesso 
 
 ### PROTOCOLOS DE CANALIZAÇÃO
 
-Nesses tipos de protocolo nós teremos uma largura de banda específica, e o acesso ao meio entre as máquinas será compartilhado em função do tempo, ou da frequência, ou do código, tudo depende do protocolo utilizado.
-
-:building_construction:
+Nesses tipos de protocolo nós teremos uma largura de banda específica, e o acesso ao meio entre as máquinas será compartilhado em função do **tempo**, ou da **frequência**, ou do **código**, tudo depende do protocolo utilizado.
 
 #### FDMA
 
+:building_construction:
 
+Vai ter uma feixa de frequência para cada estação para fazer o envio dos dados.
 
 #### TDMA
 
+:building_construction:
 
+Teremos um slot em que cada estação pode transmitir. Cada rodada uma estação controla um slot por um determinado período, porém pode ocorrer de nesse período uma determinada estação não utilizar seu slot por não ter o que transmitir, e nesse caso, na próxima rodada essa estação pode utilizar o slot que não foi utilizado juntamente com o slot da rodade atual, ou seja, o tamanho não é fixo
 
 #### CDMA
 
+:building_construction:
 
+Teremos 1 canal ocupando a largura de banda inteira. Esse protocolo tem como objetivo fazer o controle do acesso, o controle da comunicação de diversas estações em um canal Ethernet por meio dos nós, isto é, realizar o controle possibilitando transmitir e receber do mesmo canal, ao mesmo tempo, porém evitando colisão, permitindo a transmissão apenas quando estiver livre.
 
-
+Cada estação vai ter um código diferente, dependendo do código que a estação vai transmitir em determinado tempo, vai conseguir conversar com quem tem outro código X, etc. 
 
 ## ETHERNET
 
+<img src="../../imgs/4_Periodo/Redes1/image-20211025141818925.png" style="width:60%">
+
+> Evolução das gerações da Ethernet.
+
+### ETHERNET PADRÃO
+
+A Ethernet não dispôe de nenhum mecanismo de reconhecimento de frames recebidos, ou seja, ela não tem garantia de entrega: **meio não confiável**. Confirmações precisam ser implementadas nas camadas superiores.
+
+> A seguir um quadro ethernet 802.3
+
+<img src="../../imgs/4_Periodo/Redes1/image-20211025142358335.png" style="width:60%">
+
+- **Preâmbulo**: Alerta que o frame ta chegando pra poder sincronizar o clock. Adicionado na camada física, ou seja, não faz parte do frame em sí;
+- **SFD:** Fala que é o início do frame;
+- **Comprimento ou tipo:** Usava para falar qual o protocolo de rede que tava encapsulado ali;
+- **Dados e preenchimento:** Mínimo de 46 bytes e máximo de 1500 bytes. Essa é uma restrição, ou seja, esse comprimento mínimo do frame (isso é por causa da utilização do CSMA/CD);
+- **CRC:** Contém informações para a detecção de erros.
+
+#### ENDEREÇAMENTO
+
+Cada estação em uma rede Ethernet tem seu próprio NIC (Network Interface Card).
+
+<img src="../../imgs/4_Periodo/Redes1/image-20211025144743077.png" style="width:60%">
+
+#### CSMA/CD 1-PERSISTENT
+
+<img src="../../imgs/4_Periodo/Redes1/image-20211025145529390.png" style="width:60%">
+
+<img src="../../imgs/4_Periodo/Redes1/image-20211025170837956.png" style="width:60%">
+
+### FAST ETHERNET
+
+:building_construction:
+
+# CAMADA DE REDE DA INTERNET
+
+:building_construction:
+
+![Endereços IP Sem Classe, Endereços Privados e NAT. Prof. Othon M. N.  Batista Mestre em Informática - PDF Free Download](https://docplayer.com.br/docs-images/21/1270996/images/12-0.png)
+
+# CAMADA DE TRANSPORTE
+
+:building_construction:
+
+A camada de transporte é responsável pela comunicação entre processos finais de uma mensagem inteira. Processo é um programa aplicativo em execução em um host. A camada de transporte se baseia na camada de rede para oferecer transporte de dados de um processo em uma máquina de origem a um processo em uma máquina de destino com um nível de confiabilidade desejado independentemente das redes físicas em uso no momento.
+
+O principal objetivo da camada de transporte é oferecer um serviço confiável, eficiente e econômico a seus usuários, que, em geral, são processos presentes na camada deaplicação.
+
+### ENDEREÇOS DE PORTA
+
+Como na camada de enlace é utilizado o endereço MAC para identificar um nó específico, a camada de transporte utiliza o endereço de porta para identificar um processo específico em execução no host de destino, e também não pode ser aleatório, se não o processo cliente não saberá qual endereço de porta utilizar. São menores pelo fato de definirem os processos em execução de um host definido por um endereço IP.
+
+### HANDSHAKE DE 3 VIAS
+
+O handshake de três vias é um mecanismo utilizado para estabelecimento de conexõesTCP, que são geralmente estabelecidas em três etapas, a primeira etapa é o envio de um pacote por parte do cliente com uma flag (disponibilização de bits em um pacote) de sincronização (SYN) ativa, a segunda etapa é a resposta do servidor com um pacote com a flag de sincronização (SYN) e a flag de reconhecimento (ACK) e por último temos a etapa onde o cliente responde o servidor enviando um pacote com a flag de reconhecimento (ACK). 
+
+O handshake se faz necessário pois ambas as partes precisam que suas flags de sincronização. Sem elas o servidor não saberá se o cliente já recebeu sua flag de sincronização, flag essa que é de suma importância ser enviada ao cliente.
+
+## FUNCIONAMENTO GERAL DO TCP
+
+27/10 :watch:
+
+:building_construction:
 
 
-[COISA PRA CRL DAQUI PRA BAIXO :cry: ]
+
+# CAMADA DE APLICAÇÃO
+
+:building_construction:
+
+[Vídeo explicativo.Endereços IP Sem Classe, Endereços Privados e NAT. Prof. Othon M. N.  Batista Mestre em Informática - PDF Free Download](https://www.youtube.com/watch?v=SOZ2PwLH3co)
+
+A camada de aplicação é responsável por fornecer serviços ao usuário final.
+
+Depois de passarmos por todas as camadas prelimi­nares, chegamos àquela em que são encontradas todas as aplicações. As camadas inferiores à camada de aplicação têm a função de oferecer um serviço de transporte confiá­vel, mas, na verdade, elas não executam nenhuma tare­fa para os usuários.
+
+
+
+Também no dia -> 08/11 :watch:
+
+## DNS
+
+:building_construction:
+
+DNS - sistema de nomes de domínios. Aplicação cliente/servidor.
+
+Embora os programas possam se referir em teoria a pá­ginas Web, caixas de correio e outros recursos que utilizam os endereços de rede (por exemplo, endereços IP) dos com­putadores em que estão armazenados, esses endereços são difíceis para as pessoas memorizarem. Além disso, navegar pelas páginas Web de uma empresa a partir de 128.111.24.41 significa que, se a empresa mudar o servidor Web para uma máquina diferente, com um endereço IP diferente, todos precisam ser informados sobre o novo endereço IP. Por isso, foram introduzidos nomes de alto nível, legíveis, a fim de desassociar os nomes das máquinas dos endereços dessas máquinas.
+
+Sendo assim, o programa envia o nome para o que chamamos de resolvedor (um procedimento de biblioteca), que por sua vez irá para um servidor DNS local, que faz a associação desse nome, com o endereço IP desejado. Por fim, o servidor retorna esse endereço ao resolvedor, que por sua vez retorna para o programa.
+
+### ESPAÇO DE NOMES 
+
+Espaço de nomes: define o conjunto de nomes possíveis. Pode ser organizado de duas maneiras: *plana* ou *hierárquica*.
+
+#### PLANA
+
+- Atribuído um nome a um endereço;
+- Um nome nesse espaço é uma sequência de caracteres sem estrutura;
+- Principal desvantagem: não poder ser usado em um sistema grande como a Internet.
+
+#### HIERÁRQUICA
+
+Cada nome é constituído por várias partes componentes.
+
+A vantagem da utilização de uma estrutura hierárquica é a possibilidade de ser utilizado em grande escala, uma vez que a montagem dos nomes pode ser espalhada em diversas zonas (servidores).
+
+#### DE DOMÍNIOS
+
+<img src="../../imgs/4_Periodo/Redes1/image-20211126213423292.png" style="width:60%">
+
+## FTP
+
+:building_construction:
+
+
+
+
+
+
+
+
 

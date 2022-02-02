@@ -863,7 +863,7 @@ Software deve ser aberto para extensão, mas fechado para modificação.
 - Mudanças apenas para correção de código;
 - Extensão: classes abstratas e interfaces
 
-Ou seja, o código deve ser estruturado para que qualquer nova funcionalidade que venha ser necessário não tenha que alterar o código original, o fluxo original, somente agragar.
+Alterar o comportamento atual de uma classe afetará todos os sistemas que usam essa classe. Ou seja, o código deve ser estruturado para que qualquer nova funcionalidade que venha ser necessário não tenha que alterar o código original, o fluxo original, somente agregar.
 
 > Refatoração é considerada melhoria.
 

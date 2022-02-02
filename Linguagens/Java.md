@@ -29,3 +29,13 @@ O programa Java é compilado por uma forma intermediária denominada bytecode, q
 Arrays.asList() -> Converte um array em uma lista;
 .contains(x) -> Verifica se contém o x em uma lista, por exemplo;  
 ```
+
+# Java Reflection
+
+Java Reflection nada mais é que um conjunto de APIs da JVM que executam testes e alterações no código em tempo de execução.
+
+As annotations geram o código usando a API Java Reflection, logo frameworks como SpringBoot que tem como padrão o desenvolvimento com anotações é comum o alto uso de memória e um tempo de boot mais demorado, uma vez que ta sendo executado todos esses testes e alterações (necessário analizar todos os beans em busca de anotações e então gerar metadados para essas anotações que eram armazenados em memória.).
+
+O Micronaut, por exemplo, veio com a ideia de resolver esse problema, ele diminiu ao máximo o uso de reflection, mantendo só em casos específicos.
+
+Que alterações podem ser essas?

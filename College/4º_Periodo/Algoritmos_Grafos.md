@@ -523,7 +523,7 @@ Alguns algoritmos de busca proocuram caminhos com objetivos específicos, como:
 - **Conectividade** - Busca de um vértice específico (estado);
 - **Caminho mínimo** - Existência de um caminho.
 
-Uma busca em grafos nada mais é que tentar encontrar uma sequência de passos (caminhos/ações) para chegar à um objetivo
+Uma busca em grafos nada mais é que tentar encontrar uma sequência de passos (caminhos/ações) para chegar à um objetivo.
 
 ### Aplicações
 
@@ -533,7 +533,7 @@ Uma busca em grafos nada mais é que tentar encontrar uma sequência de passos (
 - Navegação de robôs;
 - (...)
 
-*A busca de uma saída de um labirinto também é um problema de busca em grafos!* 
+*A busca de uma saída de um labirinto também é um problema de busca em grafos!*
 
 ## Busca em largura
 
@@ -541,14 +541,14 @@ Uma busca em grafos nada mais é que tentar encontrar uma sequência de passos (
 >
 > [Link de vídeo aula](https://www.youtube.com/watch?v=u834GA3725M)
 
-Basicamente mapea os caminhos (caminho mínimo) de um vértice de origem até qualquer outro vértice possível de ser alcançado, gerando uma árvore.
+Basicamente mapea os caminhos (caminho mínimo) de um vértice de origem até qualquer outro vértice possível de ser alcançado, gerando uma **árvore**.
 
-- Funciona em grafos e digrafos.
+- Funciona em grafos não direcionados e digrafos.
 
 ### Propriedades dos vértices
 
 - Antecessor ou pai;
-- Estado: 
+- Estado:
   - **branco**: ainda não explorado;
   - **cinza:** explorado, mas com vizinhos não explorados;
   - **preto:** explorado e sem vizinhos explorados.
@@ -572,48 +572,106 @@ Busca principal: Basicamente verifica cada vizinho de cada vértice, a partir do
 
 <img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20210921220957215.png" style="width:70%">
 
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20210930211620820.png" style="width:90%">
+
 14/09 :watch:
 
 ## Busca em profundidade
 
-[o que é]
+*Depth First Search (DFS)*
+
+A partir de um vértice de origem, busca *recursivamente* um vértice adjacente, até que não existam mais vértices a visitar.
+
+> Pode gerar várias árvores de profundidade (floresta de busca).
 
 ### Estados dos vértices
 
-:building_construction:
+Mantém os mesmos estados do algoritmo anterior, porém teremos mais duas novas propriedades: *timestamps* (tempo da busca).
+
+- **Timestamp de descoberda** - Tempo em que eu chego no vértice;
+- **Timestamp de término** - Tempo em que eu pinto o vértice de preto.
 
 ### Funcionamento
 
-:building_construction:
+Inicialização:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211011152003382.png" style="width:5 0%">
+
+Visita:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211013212438470.png" style="width:5 0%">
+
+Organização:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211013214451622.png" style="width:80%">
 
 ### Classificação de arestas
 
-:building_construction:
+- Arestas de árvore: Quando a aresta leva à um vértice branco, quando encontra um branco com ela.
+- Arestas de retorno: Fecha um ciclo na busca, ou seja, quando um vértice **cinza** encontra outro **cinza** (inclui loops).
+- Arestas de avanço: Não pertence à árvore de busca em profundidade, mas conecta um vértice a um descendente que pertence à árvore de busca. Ou seja, **quando encontra um vértice preto.**
+- Arestas de cruzamento: De um cinza para um preto.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211013222736500.png" style="width:80%">
 
 ## Ordenação topológica
 
-:building_construction:
+Um vértice precisa do resultado de outro antes - Para ir para um vértice precisa passar por outro antes.
 
-> Notes: Um vértice precisa do resultado de outro antes, para ir para um vértice precisa passar por outro antes.
+- **Impossível ser cíclico**, pois não tem início, todo mundo depende de todo mundo.
+
+> Note: DAG -> Dígrafo acíclico. 
 >
-> - VERIFICAR!!! -> impossível ser cíclico, pois não tem início, todo mundo depende de todo mundo....
-> - DAG -> Dígrafo acíclico.
+> É necessário ser um dígrafo.
 
-[O que é]
+A ordenação topológica é a ordenação **linear** de vértices na qual cada vértice precede o conjunto que forma seu **fecho transitivo direto** (FTD - conjunto de todos os vértices que podem ser atingidos por algum caminho iniciado no vértice atual).
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211015205621254.png" style="width:60%">
 
 ### Teorema
 
-:building_construction:
+Se um grafo for acíclico, ou seja, não possuir cíclos, logo ele apresenta uma ou mais ordenações topológicas.
 
 ### Algorítmo de Kahn (1962)
 
-:building_construction:
+Existem algoritmos com complexidade linear para determinar uma ordenação topológica de um DAG, o algorítmo de Kahn é um deles.
 
-[Utilização da busca em profundidade]
+Retorna uma lista de ordenação topológica OU detecta a existência de um ciclo.
 
-### Aplicações
+Baseado em duas listas:
 
-:building_construction:
+- S: conjunto de vértices sem arcos de entrada, ou seja, vértices que não tem nenhuma aresta "chegando" nele.
+- L: lista de vértices ordenados topologicamente (inicialmente zerada).
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211015211456024.png" style="width:60%">
+
+> Legenda: "Remover arco v,w" -> significa remover a aresta do vértice v ao w.
+
+A ideia é ir removendo as arestas que saem dos vértices sem arcos de entrada primeiro, e ir adionando os vértices que ficam sem arco de entrada na lista de ordenação, dessa forma teremos uma "ordem de chamadas" de cada vértice, e no final uma lista que mostra essa ordem topológica. Ou um ciclo caso ainda possua aresta que não foi retirada.
+
+Exemplo resolvido:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211015212139548.png" style="width:60%">
+
+### DFS e ordenação
+
+Outro dos algoritmos citados no último tópico, porém utilizando da busca em profundidade, levemente alterada para o mesmo objetivo.
+
+Basta, ao finalizar um vértice preto, inseri-lo no início de uma lista L.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211015212814682.png" style="width:60%">
+
+Neste caso se eu tiver uma aresta de retorno, eu fecho um cíclo, logo não há ordenação topológica.
+
+> Os algorítmos podem gerar diferentes ordenações topológicas!
+
+### Aplicações de ordenação topológica
+
+- Planejamento e sequenciamento de tarefas;
+- Compilação de módulos;
+- Dicionários;
+- Pré-requisitos;
+- Verificação de dependências (bibliotecas, etc).
 
 ## Algoritmo de Dijkstra
 
@@ -625,17 +683,499 @@ Baseado na busca em largura.
 
 # Conectividade
 
-:building_construction:
-
 16/09 :watch:
 
 > Notas: 
 >
 > - Um grafo é conexo quando existe **pelo menos** um caminho entre todos os vértices.
+>- Um grafo desconexo e componentes conexos -> Cada componente de um grafo desconectado é chamado de componente conexo.
+
+- Como saber se um grafo é conexo? Ou, como saber quantos componentes conexos há em um grafo?
+- Busca em profundidade forma árvores. Esta informação pode ser utilizada para contarmos os componentes de um grafo.
+  - É só adionar um contador após cada "loop recursivo", ou seja, toda vez que ele voltar marcando os vértices de preto, conta +1, e assim sabemos a quantidade de componentes, consequentemente se ele é conexo ou não.
+
+## Conceitos básicos
+
+**Vértice de corte:** Vértice de um grafo conexo que, quando removido, produz mais de uma componente conexa. A remoção de um vértice implica a remoção de todas as arestas que incidem nele.
+obs: grafo conexo, existe um caminho entre cada par de vértices;
+
+**Aresta de corte:** Aresta de um grafo conexo que, quando removida produz mais de uma componente convexa;
+
+**Conjunto de corte:** Conjunto contendo vértices/arestas que ao serem removidas de um grafo conexo G produz mais de uma componente conexa;
+
+**Conectividade de vértice K(G):** menor número de vértices do grafo cuja remoção (em conjunto com suas arestas adjacentes) o desconecta;
+
+**Conectividadede aresta λ(G):** menor número de arestas do grafo cuja remoção o desconecta. É o número de arestas do menor cut-set;
+
+**Cut-set:** particionar o grafo em dois subgrafos disjuntos. Também pode ser definido como o conjunto de arestas em um grafo conexo cuja remoção reduz o rank do grafo em 1 unidade.
+
+**Rank ou posto:**
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018203251998.png" style="width:60%">
+
+---
+
+**Grafo K-conexo:** grafo de conectividade de vértice igual a K.
+
+**Grafo separável:** grafo com conectividade de vértice igual a 1.
+
+**Cut vertex:** Vértice que desconecta um grafo separável (também chamado cut vertex ou ponto de articulação);
+
+**Desconexo:** Um grafo é não-conexo ou desconexo se nem todo par de vértices é unido por uma cadeia;
+
+**S-conexo:** Um grafo é simplesmente conexo ou s-conexo se todo par de vértices é unido por ao menos um caminho no grafo correspondente não direcionado;
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018202551548.png" style="width:60%">
+
+**SF-conexo:** Um grafo é semi-fortemente conexo ou sf-conexo se em todo par de vértice do grafo, um deles é atingível a partir do outro (ou seja, entre eles existe um caminho em ao menos um dos dois sentidos possíveis);
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018202826181.png" style="width:30%">
+
+**F-conexo:** Grafo fortemente conexo ou f-conexo: é um grafo no qual todo par de vértices é mutuamente atingível. Assim, a todo par de vértices está associado a um par de caminhos de sentidos opostos.
+
+- Todo vértice é atingível a partir de um vértice dado e todo vértice atinge todo vértice dado.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018203008920.png" style="width:30%">
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018203104164.png" style="width:70%">
+
+## Teorema
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018202134904.png" style="width:80%">
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018202246932.png" style="width:80%">
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018202323974.png" style="width:80%">
+
+# Fluxo em rede
+
+Uma rede é um grafo no qual teremos um fluxo, podendo ser modelado para uma rede de distribuição de água, rede social com tráfego de informações, rodoviárias com o máximo de veículos possível de se locomover lá, etc.
+
+*Sempre queremos maximizar a quantidade de informações transmitidas, conseguir a maior capacidade do fluxo.*
+
+Nesse grafo as **arestas serão ponderadas** e seu peso indicará sua **capacidade** de transporte, o máximo de dados que pode para o próximo vértice.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018215421637.png" style="width:50%">
+
+Os dados percorrem uma rede desde uma **fonte** (source), onde ele é produzido, até um **sorvedouro** ou sumidouro (target), onde ele é **consumido**.
+
+**Fluxo máximo:** Calcular a maior taxa pela qual se pode despachar material da fonte até o sorvedouro sem infringir quaisquer restrições à capacidade.
+
+## Conceitos básicos
+
+- **Rede de fluxo:** É um grafo conexo dirigido ponderado (capacidade não negativa).
+  - Laços não são permitidos!
+- **Fluxo em grafos:** É uma função com restrições -> G = (V, E).
+  - O fluxo não pode exceder a capacidade de nenhum arco (aresta);
+  - O fluxo de entrada em um vértice é igual ao fluxo de saída (**conservação de fluxo**);
+    - Os dados podem se dividir entre as arestas de saída possíveis, porém **não podem se acumular**, ou seja, a  taxa de dados que chegou em um vértice, precisa ser a mesma taxa que irá sair do vértice.
+  - O somatório do fluxo em todos os vértices é o **valor total do fluxo**.
+
+## Corte
+
+O problema do fluxo máximo está relacionado ao conceito de **corte**: Um corte (S,T) - (Source, Target) em uma rede de fluxo G = (V, E) é uma partição de vértices em dois conjuntos S e T. Ou seja, eu vou desconectar o grafo em dois conjuntos, um conjunto de vértices que fazem parte do **source**, e um conjunto de vértices que fazem parte do **target**.
+
+O corte é basicamente um cut-set, ou seja, vai desconectar meu grafo e com isso já obtemos os dois conjuntos. Todos os vértices ligados ao source será desse grupo, e todos que levam ao target, será desse grupo.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018222401400.png" style="width:70%">
+
+A **capacidade do corte** será a soma das capacidades das arestas retiradas que se iniciam no conjunto S e terminam no conjunto T.
+
+Outro exemplo:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018222746107.png" style="width:70%">
+
+Já o próximo exemplo não é um corte, pois o conjunto de source consegue chegar ao conjunto do target:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018222830542.png" style="width:70%">
+
+### Fluxo total líquido pelo corte
+
+Consiste de fluxos positivos em ambas as direções. Ou seja, no momento da execução do fluxo teremos a quantidade de dados que passarão pelas arestas de corte, e fazemos uma conta para chegar ao **fluxo total líquido**, sendo: somar a quantidade atual de dados das arestas de corte que tem origem no conjunto source, e subtrair pela quantidade atual de dados das arestas de corte que tem origem no conjunto da target.
+
+Exemplo:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211018230118445.png" style="width:70%">
+
+## Teorema de Ford e Fulkerson
+
+A capacidade do corte mínimo é igual ao fluxo máximo - Fluxo máximo x Corte mínimo.
+
+Como encontrar o maior fluxo que pode percorrer um fluxo em redes (fluxo máximo)?
+
+- Iniciamos com um fluxo total nulo, ou seja, será menor do que a capacidade de qualquer corte.
+- Aumentamos gradativamente este fluxo e comparamos o seu valor com os das capacidades dos cortes. Em um momento o fluxo se tornará igual à capacidade de algum corte.
+  - **Corte de capacidade mínima:** Corte cuja capacidade pode se tornar igual ao valor de um fluxo.
+- A partir daí, o fluxo não pode aumentar mais, portanto este fluxo será máximo.
+
+### Funcionamento
+
+Depende de três ideias importântes:
+
+1. **Redes residuais:** Capacidade residual é a capacidade que você ainda consegue transmitir em determinada aresta para chegar à sua capacidade máxima. Uma rede residual consistem em arestas que podem admitir mais fluxo.
+   1. Capacidade residual do caminho é a menor capacidade residual entre os arcos desse caminho.
+2. **Caminhos de aumento:** Se nenhum arco do caminho está cheio (utilizando a capacidade máxima), então podemos chamá-lo de caminho de aumento, ou seja, ainda tem capacidade residual.
+3. **Cortes**
+
+A cada iteração aumenta-se o valor do fluxo em G determinando um "caminho de aumento" em uma "rede residual" associada.
+
+Isso se repete até que a rede residual não tenha mais caminhos aumentadores.
+
+> - Se o fluxo em uma aresta é igual à sua capacidade dizemos que essa aresta está **saturada!**
 >
-> - Um grafo desconexo e componentes conexos -> Cada componente de um grafo desconectado é chamado de componente conexo.
+> - Embora cada iteração aumente o valor do fluxo, o fluxo em algumas arestas pode diminuir.
+
+# Árvores
+
+:building_construction:
+
+Árvore é um grafo conexo T em que existe um, e somente um caminho entre qualquer par de vértices de T.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211203192341992.png" style="width:80%">
+
+## Árvore geradora
+
+Uma árvore geradora de G, é um sub-grafo de G que contém todos os vértices de G e é uma árvore. 
+
+- **Galho**: uma aresta de G em T 
+- **Corda**: uma aresta de G que não pertence a T
+- Grafos não conexos possuem florestas geradoras!
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211203194519396.png" style="width:50%">
+
+- **Floresta**: conjunto de árvores sem vértices em comum;
+- **Rank de G**: número de galhos em qualquer floresta geradora de G. Sendo k componentes, r = n - k;
+- **Nulidade de G**: número de cordas em qualquer floresta geradora de G. µ = e – n + k.
+
+### Teoremas
+
+1. Todo grafo conexo G possui pelo menos uma árvore geradora!
+2. Dados um grafo conexo G com N vértices, E arestas e uma árvore geradora T de G... G terá:
+   - Galhos = N - 1
+   - Cordas = E – N + 1
+
+### Árvore geradora mínima
+
+É a árvore geradora de menor peso em G. Dado um grafo G com pesos associados às arestas, encontrar uma árvore geradora mínima de G.
+
+Podemos utilizar 2 algoritmos para encontrar tal árvore: **Algoritmo de Prim** ou **Algoritmo de Kruskal**.
+
+#### Algoritmo de Prim
+
+:building_construction:
+
+#### Algoritmo de Kruskal
+
+:building_construction:
+
+Basicamente inicia com a AGM vazia, pega as menores arestas, e a cada passo adiciona a menor na árvore e liga as florestas existentes com, também, a menor aresta entre elas que não forma ciclo.
+
+> Algoritmo guloso.
+
+# Floresta
+
+:building_construction:
 
 
 
-[Algoritmo DFS - Principal (visita)]
+---
+
+# Planalidade
+
+21/10 :watch:
+
+:building_construction:
+
+[Problema das 3 casas]
+
+Um grafo é **planar** se existe uma representação gráfica de G no plano sem cruzamento de arestas (*vale redesenhar, só precisa ter a possibilidade*).
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211021210030027.png" style="width:70%">
+
+## Aplicações
+
+- Circuitos digitais;
+- Malhas de transporte terrestre;
+- Contrução de viadutos;
+- Malha de transporte aéreo.
+
+## Grafos planares e Kuratowski
+
+:building_construction:
+
+Existem grafos não planares que serão importantes (kuratowski)............................................
+
+São importantes, pois o K5 por exemplo, é um grafo não planar com o menor nº de vértices, ou seja, para um grafo completo ser planar ele precisa ter menos que 5 vértices.
+
+Outro exemplo, K3,3: é um grafo não planar com o menor nº de vértices também.
+
+Propriedades entre os dois grafos citados anteriormente:
+
+1. Ambos são regulares;
+2. Ambos são não planares;
+3. A remoção de uma aresta ou um vértice torna ambos os grafos planares.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211021210957096.png" style="width:70%">
+
+## Região (ou face)
+
+Uma representação gráfica planar de um grafo divide o plano em regiões ou faces. Cada região é caracterizada pelas arestas que a contornam.
+
+- Cada aresta de G pertence à fronteira de uma ou duas faces de G (faz fronteira com até duas regiões);
+- O grau (comprimento), de uma face f de G, representado por d(F) é igual ao nº de arestas da fronteira de F.
+- Cada face da representaçção planar de um grafo corresponde a um passeio fechado do grafo constituído pelos vértices e arestas que delimitam a face. Chamamos **grau da face**, d(f), ao comprimento do passeio correspondente.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211021211838662.png" style="width:70%">
+
+## Teorema 1 - Fórmula de Euler
+
+Seja G um grafo conexo planar com N vértices e E arestas. O nº de faces do grafo é: **f = 2 - N + E**
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211021212036731.png" style="width:70%">
+
+## Grau de uma região
+
+:building_construction:
+
+## Corolário - Fórmula de Euler
+
+:building_construction:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211204175834360.png" style="width:70%">
+
+### Conceitos básicos
+
+:building_construction:
+
+### Inequações derivadas
+
+Inequações derivadas da Fórmula de Euler:
+
+- condições necessárias, mas não suficientes para um grafo ser planar;
+- se satisfeitas, não significa que o grafo é planar, mas podem ser usadas para mostrar que o grafo é não planar. Ou seja, se o grafo não satisfazer tais condições, podemos dizer que ele é não planar.
+
+#### Corolário 1
+
+Se G é um grafo **simples conexo** e planar, com E arestas e V vértices, com pelo menos 3 vértices (V >= 3), logo o número de arestas vai ser menor ou igual à 3 * V - 6.
+
+**E <= 3 * V - 6**
+
+#### Corolário 2
+
+Se G é um grafo **simples conexo** e planar, logo G tem, pelo menos, 1 vértice de grau <= 5;
+
+#### Corolário 3
+
+Se G é um grafo **simples conexo** e planar com E arestas e V vértices, sendo V ≥ 3, e **nenhum ciclo de comprimento três**, logo:
+
+**E <= 2 * V - 4**
+
+## Detecção de planaridade
+
+:building_construction:
+
+[Técnica de redução]
+
+## Contração de aresta
+
+:building_construction:
+
+## Detecção de planaridade: remoção de aresta
+
+:building_construction:
+
+[Outro]
+
+
+
+26/10 :watch:
+
+## Homeomorfismo
+
+:building_construction:
+
+### Teorema
+
+Um grafo G é planar se, e somente se, nenhum subgrafo seu for homeomorfo a K5................................
+
+# Dualidade
+
+:building_construction:
+
+Dado um grafo G planar, o grafo G*, chamado dual de G, é construído da seguinte forma:
+
+- Para cada face de G, G* tem um vértice;
+- Os vértices de G* são unidos da seguinte forma:
+  - 
+
+# Coloração de grafos
+
+:building_construction:
+
+Uma forma de rotular os vértices do grafo com "cores", sendo que vértices adjacentes não podem ter a mesma cor.
+
+- Coloração se dá em grafos conexos simples:  
+  - Desconsiderar grafos desconexos. As cores utilizadas em um componente não têm efeito sobre as do outro componente;
+  - Arestas paralelas não afetam a coloração;
+  - Grafo não pode ter loops, pois em um loop, um vértice é adjacente a ele mesmo;
+- **Número cromático:** O número cromático de um grafo G, X(G), é o menor número K para o qual G é K-colorido 
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211204183434428.png" style="width:70%">
+
+## Aplicação
+
+1. Atribuição de frequências de rádio. Os vértices representam os transmissores das estações de  rádio. Duas  estações  são  adjacentes  quando  suas  áreas  de  transmissão se sobrepõem, o que resultaria em  interferência se elas usassem a mesma frequência. Cada cor contém estações que podem receber a mesma  frequência;
+2. Provas de uma universidade: Queremos que duas disciplinas com estudantes em comum não  tenham seus exames agendados para o mesmo horário. Qual o número mínimo de horários  necessários para agendar os exames? 
+
+## Teorema - Coloração de circuitos 
+
+:building_construction:
+
+Um  grafo  consistindo  simplesmente  de  um  circuito com n ≥ 3 vértices é **2-cromático** se n é par e **3-cromático** se n é impar.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211116221119277.png" style="width:70%">
+
+[Tem mais aqui................]
+
+## Coloração de arestas
+
+Uma coloração de arestas de um grafo simples G é uma atribuição de cores às arestas de G de maneira que cores diferentes são atribuídas a arestas adjacentes.
+
+- Se existe uma coloração de arestas para um grafo G que utiliza K cores, então, G é um grafo K-colorido de arestas.
+  - **Índice cromático** de um grafo G, X’(G), é o menor número K (menor número de cores) para qual G é K-colorido de arestas.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211204184017147.png" style="width:50%">
+
+- Grafos com laços não serão considerados nas definições e algoritmos
+- Arestas paralelas **não podem ser ignoradas** na coloração de arestas
+
+### Aplicação
+
+**Primeira aplicação:**
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211204185642288.png" style="width:70%">
+
+**Segunda aplicação:**
+
+Organização de aulas.
+
+Uma escola tem professores t1, t2, ..., tm, para dar disciplinas s1, s2, ..., sn. Em particular, um professor tj deve ensinar sj,k seções de uma disciplina sk.
+
+Problema: Calcule o número mínimo de períodos de tempo necessários para organizar todas as disciplinas de forma que não haja duas seções de uma disciplina ofertadas em um mesmo horário.
+
+Solução: Formar um grafo bipartido. Se cada cor de aresta representar um horário, então uma coloração de arestas do grafo bipartido representa um horário possível.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211204185845878.png" style="width:50%">
+
+### Teorema
+
+Se G é um grafo simples cujo vértice de maior grau tem grau δ(G), então:
+
+> Lembrando: X’(G) = índice cromático.
+
+**δ(G) <= X’(G) <= δ(G) + 1**
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211204190248418.png" style="width:50%">
+
+## Coloração de grafos planares
+
+:building_construction:
+
+Basicamente gera o dual do grafo e colore os vértices do dual, ou seja, colorimos as faces, logo achamos a **coloracão de faces** daquele grafo.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211210195131659.png" style="width:70%">
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211210195246352.png" style="width:70%">
+
+### Teorema das 4 cores
+
+Dado um mapa plano, dividido em regiões, quatro cores são suficientes para colorir, de forma que regiões vizinhas não partilhem a mesma cor.
+
+- Condição: as regiões que só se tocam num ponto (vértice) não são consideradas vizinhas;
+- **Todo grafo planar é 4-face colorido!** 
+  - Ou seja, todo **mapa** é planar, logo o teorema se aplica.
+- Tal teorema não pode ser provado de forma matemática, ou de outra forma sem recorrer a um computador, então até hoje temos dúvida se realmente é um teorema ou só uma conjectura.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211210200325728.png" style="width:25%">
+
+#### Teorema
+
+Um grafo planar G pode ter as faces coloridas com **2 cores** se, e somente se, G for **Euleriano**.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211210200810077.png" style="width:50%">
+
+# Particionamento e Cobertura
+
+09/11 :watch:
+
+:building_construction:
+
+Uma coloração de um grafo induz a um **particionamento** dos vértices em subconjuntos de vértices chamados de **conjuntos independentes**. Conjunto de vértices do grafo no qual nenhum par de  vértices do conjunto é adjacente.
+
+- Um conjunto independente é **maximal** quando não existe nenhum outro conjunto independente que o contenha (i.e.: um conjunto que não pode ser completado, ou seja, não pode acrescentar mais nenhum vértice, se não deixa de ser independente);
+- Um conjunto independente é **máximo** se todos os outros conjuntos independentes têm cardinalidade menor ou igual a ele;
+- O número de independência **α(G)** é a cardinalidade do conjunto independente máximo, ou seja, se pedir a medida de independência do grafo é só achar o conjunto máximo e sua cardinalidade.
+
+## Aplicação
+
+Exemplo: identificar localizações para instalação de franquias.
+
+- Duas localizações não podem estar perto o suficiente para competir entre si;
+- Solução: construir um grafo em que possíveis localizações são representadas por vértices, e arestas são criadas entre duas localizações que estão próximas o suficiente para interferir;
+- O maior conjunto independente fornece o maior número de franquias que podem ser concedidas sem prejudicar as vendas.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211210203339434.png" style="width:50%">
+
+## Clique
+
+:building_construction:
+
+## Algoritmos 
+
+### Conjunto Maximal
+
+Não é complicado, basta isso:
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211210204008368.png" style="width:90%">
+
+### Conjunto Máximo
+
+Por outro lado, encontrar um conjunto independente máximo é complicado... NP-Difícil. Logo, usamos **heurísticas**.
+
+Podemos iniciar com um vértice de maior, ou menor grau e seguir com a lógica do algoritmo de conjunto maximal... Nada te dá certeza, mas pode chegar.
+
+## Conjunto dominante
+
+Conjunto dominante é um conjunto de vértices do grafo que “domina” todos os vértices do grafo. Ou seja, a partir dos vértices desse conjunto, eu consigo **alcançar** todos os vértices do grafo, logo:
+
+**UM VÉRTICE V PERTENCE AO CONJUNTO DOMINANTE OU É ADJACENTE A UM VÉRTICE QUE PERTENCE.**
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211210205133658.png" style="width:90%">
+
+> Lembrando que precisa alcançar de forma adjacente, ou seja, não pode ir de tabela!
+
+### Conjunto dominante mínimo
+
+É um conjunto dominante que contém o menor número de vértices possíveis para ser considerado um conjunto dominante. Porém, temos outro problema NP-Difícil...
+
+## Cobertura de vértices
+
+Em um grafo G, um conjunto g de vértices é chamado de cobertura de vértices se todas as arestas de G são incidentes a pelo menos um vértice de g.
+
+- Se este conjunto é o menor com tal propriedade dizemos que g é uma **cobertura mínima de vértices**. MENOR CONJUNTO DE VÉRTICES INCIDENTES A TODAS AS ARESTAS.
+- Se C é uma cobertura de vértices de um grafo G = (V,E), então V – C é um conjunto independente. E vice-versa: Se S é um conjunto independente, V – S é uma cobertura de vértice.
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211213083507326.png" style="width:50%">
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211213083517382.png" style="width:50%">
+
+<img src="../../imgs/4_Periodo/Algoritmos_Grafos/image-20211213083717994.png" style="width:50%">
+
+### Emparelhamento
+
+Um emparelhamento num grafo G não-dirigido é um conjunto M de arestas com a seguinte propriedade:
+
+- Nenhum par de arestas é adjacente (cj. independente de arestas)
+
+### Casamento / Matching
 

@@ -180,7 +180,7 @@ Qualidades de um requisito [IEEE-890-1998]
 - **Priorizado**: requisito é classificado de acordo com sua importância, estabilidade e complexidade;
 - **Verificável**: requisito é verificável;
 - **Modificável**: Organização dos requisitos permite a mudança de qualquer requisito, de maneira fácil, completa e consistente;
-- **Rastreável**: permite a fácil determinação dos antecedentes e as conseqüênciasdo requisito. pq foi criado isso? quando? em qual versão? ainda é necessário?
+- **Rastreável**: permite a fácil determinação dos antecedentes e as consequências do requisito. pq foi criado isso? quando? em qual versão? ainda é necessário?
 - **Identificação única:** não existem dois requisitos com o mesmo identificador.
 
 
@@ -288,7 +288,7 @@ Definem os representantes oficiais e canais apropriados para o surgimento dos re
   - Pergunta básica: Essa solução vai substituir outra?
   - Estruturada: Conduz na sequência planejada, segue o roteiro a risca. Garante que as mesmas perguntas serão feitas para todos.
   - Não estruturada: O roteiro é só uma base, a medida que a entrevista acontece o entrevistador pode seguir caminhos diferentes.
-  - Semiestruturada:
+  - Semiestruturada: consiste em um modelo de **entrevista** flexível. Ou seja, ela possui um roteiro prévio, mas abre espaço para que o candidato e entrevistador façam perguntas fora do que havia sido planejado.
   - Estruturas
     - Pirâmide: Inicia com questões fechadas, à medida que avança, questões abertas são colocadas. Usada para quebrar o gelo, ou quando o entrevistado parece relutante sobre um assunto.
     - Funil: Inicia com questões abertas e à medida que abança, faz-se perguntas fechadas. O entrevistado precisa "desabafar" logo ou deseja ir direto ao ponto. Meio não ameaçador para começar.
@@ -582,13 +582,13 @@ Tipos:
 Características:
 
 - Evite longos textos;
-- Evite cláusulas de exclusão ("se necessário";
+- Evite cláusulas de exclusão ("se necessário");
 - Evite especulação;
 - Evite palavras vagas (usualmente...);
 - Evite termos ambíguos (amigável...);
 - Evite ser extremamente otimista e agradável (100% confiável...).
 
-## Resultados 
+## Resultados
 
 :building_construction:
 
@@ -598,3 +598,26 @@ Resultados -> Lista de requisitos. Ainda não foram detalhados. Aspectos relevan
 
 - Correta
 - Consistente
+
+
+
+# Ferramenta Case
+
+*“Ferramentas CASE (do inglês Computer-Aided Software Engineering) é uma classificação que abrange todas as ferramentas baseadas em computadores que auxiliam atividades de engenharia de software, desde análise de requisitos e modelagem até programação e testes. Podem ser consideradas como ferramentas automatizadas que tem como objetivo auxiliar o desenvolvedor de sistemas em uma ou várias etapas do ciclo, de desenvolvimento de software”.*
+
+
+
+# Detalhamento de requisitos
+
+25/10 :watch:
+
+Detalhamento através de modelagem.
+
+## UML - Casos de Uso
+
+<img src="../../imgs/4_Periodo/Eng_Requisitos/image-20211025191932255.png" style="width:60%">
+
+
+
+## Diagrama de classes
+
