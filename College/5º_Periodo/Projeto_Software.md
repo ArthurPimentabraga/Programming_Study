@@ -25,3 +25,5 @@ period: 1/2022
 
 
 Projeto de software é, basicamente, a ponte entre as necessidades/requisitos e a idealização do projeto. É o detalhamento técnico do projeto, do sistema que irá ser desenvolvido.
+
+

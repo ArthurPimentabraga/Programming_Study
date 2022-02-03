@@ -267,11 +267,12 @@ Se precisa ser ordenado:
 Da pra usar lista duplament encadeada tbm, mas não possiblitará a busca binária.*
 
 Skip Lists: Estrutura de dados composta que permite implementar estruturas de dicionário com mais eficiencia nas operações.
+
 - Se utiliza o fator aleatório para obter bons desempenhos nas operações;
 - Por ser composta ela usa 2 ou + estruturas para produzir uma;
 - É uma lista de listas. A 1ª lista do conjunto tem todos os dados ordenados. E o resto das listas contém um subconjunto aleatório dos dados
-Cada lista precisa ter dois sentinelas (valores -infinito e +infinito)
-Para cada item de uma lista, temos o sentinela de uma outra lista LDE (lista duplamente encadeada);
+  Cada lista precisa ter dois sentinelas (valores -infinito e +infinito)
+  Para cada item de uma lista, temos o sentinela de uma outra lista LDE (lista duplamente encadeada);
 
 ---
 
@@ -282,6 +283,7 @@ Para cada item de uma lista, temos o sentinela de uma outra lista LDE (lista dup
 - Gasta mais memória, mas a velocidade de busca é maior;
 
 **Tabela hash(picadinho):** Ela não vai comparar ninguém, ou seja, não tem busca sequencial, nem árvore binária... tbm chamado de tabelas de dispersão. Transformação aritmética da chave de pesquisa. Usa função com o id do dado, o resultado é o endereço do dado na tabela (tabela imagem). Ou seja, endereçamento direto, vai direto no endereço que ele quer.
+
 - O problema é que ela é bijetora, ou seja, para cada elemento de um, só tem um correspondente, só um resultado. Logo não tem como ter id duplicado ou que seus resultados vão ser iguais;
 - Os metodos de inserção e busca é a mesma;
 - Colisão: duas chaves vão para a mesma posição. Precisa trata-las.
@@ -289,6 +291,7 @@ Para cada item de uma lista, temos o sentinela de uma outra lista LDE (lista dup
 **Paradoxo do aniversário:** Cenário onde a gente acha q a probabilidade do resultado da conta ser igual é muito pequena, mas na vdd é bem grande. 
 
 **Funções hash comuns:** 
+
 - f(x)=x, o problema é o uso de espaços ociosos. Ex: quando usa nº de matrícula, cpf...
 - f(x) = x % N (N=tamanho da tabela), o problema é que de o valor de entrada for par o resto vai ser par, e a mesma coisa para valores ímpares, e isso prejudica a probabilidade. Além do perído de dar restos iguais. Recomenda-se escolher para N um nº primo. Se o dado não for numérico -> Transformação (unicode), mas precisa prestar atenção em casos de anagrama, nesse caso utiliza peso para os caracteres, suas posições...
 - Extrair dígitos da key.
@@ -354,4 +357,3 @@ Determina as posições parciais ou finais dos dados realizando um pré-processa
 **29ª Aula ->** Ordenação posicional
 
 DROZDEK, Adam. Estrutura de dados e algoritmos em C++
-

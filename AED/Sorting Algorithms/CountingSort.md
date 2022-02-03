@@ -9,6 +9,7 @@ author: Guilherme Dantas Caldeira Fagundes
 
 Parte da quantidade de vezes que um valor ocorre. Possui
 basicamente 3 vetores:
+
 * Array de Entrada
 * Array de Contagem -> Mapeia a quantidade que cada elemento aparece no vetor
 * Array de Saída
@@ -30,19 +31,18 @@ O algoritmo avalia quantas vezes um valor apareceu no valor de entrada e insere 
 
     [0,0,2,2,3,3,3,5] -> Array de Saída
 ```
- 
- 
- ## Implementação 
 
- ```java
-    int[] count = new int[getMaior() + 1];
-    int ordenado = new int[n];
+## Implementação
 
-    for(int i = 0; i < count.length; count[i] = 0, i++);
+```java
+   int[] count = new int[getMaior() + 1];
+   int ordenado = new int[n];
 
-    for(int i = 0; i < n; count[array[i]++, i++);
+   for(int i = 0; i < count.length; count[i] = 0, i++);
 
-    for(int i = ; i < count.length; count[i] += count[i - 1], i++);
+   for(int i = 0; i < n; count[array[i]++, i++);
+
+   for(int i = ; i < count.length; count[i] += count[i - 1], i++);
 ```
 
 ## Análise das Operações
