@@ -18,8 +18,4 @@ period: 1/2022
 
 - Teoria da Complexidade.
 
-
-
 Analisar e projetar soluções algorítmicas eficientes para as diferentes classes de problemas (ordenação...).
-
-

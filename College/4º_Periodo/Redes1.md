@@ -46,12 +46,12 @@ Ao contrário da rede ponto a ponto, as redes de difusão terão um **único can
 
 Algoritmo para recebimento de msgs executado por cada máquina:
 
-``` Java
+```Java
 // Computador verifica endereço de destino;
 if(endereço no quadro = meu endereço) {
     processa o quadro
 } else {
-	descarta o quadro	
+    descarta o quadro    
 }
 ```
 
@@ -107,6 +107,7 @@ if(endereço no quadro = meu endereço) {
 <img src="../../imgs/4_Periodo/Redes1/tipos_canal.png" style="width:60%">
 
 - **Detecção de erros:** receber aviso de erro e em seguida encontrar este erro.
+  
   - **Método de repetição:** Ao enviar uma mensagem, são enviados três repetições desta mensagem  e, a partir da comparação destas mensagens detecta se há ou não erro. Porém, é sucetível à ruído, então se tivemos um ruído no transmissor a mensagem será enviada de forma errada e não será detectado o erro.
   - <img src="../../imgs/4_Periodo/Redes1/metodo_repeticao.png" style="width:60%">
   - **Método de paridade:** Adiciona-se, pelo transmissor, um bit de redundância (bit de paridade) após ou antes da sequência de bits que pertence à mensagem. Porém, esse método só identifica que há um erro, mas não onde está. O bit adicionado segue a seguinte regra:
@@ -174,18 +175,22 @@ Confiabilidade
 Camadas:
 
 - **Física:** Essa camada fará todo transporte dos dados (bits) através de um meio de transmissão (cabo par trançado, fibra...).
+
 - **Enlace de dados:**
+  
   - Pega os dados da física e coloca alguns controles (erro e fluxo);
   - Divisão da sequencia de bit vinda da física em quadros (frames) de dados e a definição do inicio e fim de um quadro;
   - Controle do meio: controle de comunicação entre máquinas de uma rede.
 
 - **Rede:**
+  
   - Controlar por qual caminho o pacote vai passar, roteamento da origem ao destino (sendo de P2P);
   - Controle de congestionamento;
   - Conexão entre redes diferentes, roteadores;
   - Não é completamente fim a fim, pois faz pedaço por pedaço.
 
 - **Transporte:**
+  
   - Numeração de dados;
   - Garantia de entrega;
   - Estabelecer conexão, circuitos;
@@ -193,17 +198,20 @@ Camadas:
   - Fim a fim.
 
 - **Sessão:**
+  
   - Permissão de comunicação entre pares;
   - Controle do sentido de tráfego;
   - Controle de token, impendindo que duas máquinas executem operações críticas ao mesmo tempo;
   - Sincronização para evitar perdas de sessão.
 
 - **Apresentação:**
+  
   - Codificação, sintaxe e semântica → transladar o formato do hospedeiro local para um formato independente de hospedeiro;
   - Tipos de dados abstratos.
   - <img src="../../imgs/4_Periodo/Redes1/camada_apresentacao.png" style="width:60%">
 
 - **Aplicação:**
+  
   - Promove abstrações para o usuário;
   - Protocolos http, email, ftp, www.
 
@@ -258,20 +266,21 @@ Camadas:
 - Composta por células e MSC;
 
 - Célula:
-
+  
   - Cobre região geográfica
+  
   - Estação base (BS) semelhante a 802.11 AP
-
+  
   - Usuários moveis que se conectam à rede por BS
-
+  
   - Interface-ar, protocolo da camada física e enlace entre a estação móvel e BS
 
 - MSC
-
+  
   - Conecta células à rede remota
-
+  
   - Gerencia conf, chamada (adiante!)
-
+  
   - Trata da mobilidade (adiante!)
 
 Outros exemplos:
@@ -303,7 +312,7 @@ Tanto um sinal analógico quanto digital, pode assumir uma de duas formas:
 - Aperiódico: Não tem padrão ou ciclo que se repete ao longo do tempo.
 
 > Obs: Um ciclo é definido como um padrão da onde dentro de um intervalo de tempo (T). Exemplo: O sinal passa de positivo para negativo, e chega volta para o positivo.
->
+> 
 > <img src="../../imgs/4_Periodo/Redes1/ciclo.png" style="width:30%">
 
 ### SINAIS ANALÓGICOS
@@ -321,13 +330,13 @@ Uma onda senoidal pode ser representada por 3 parâmetros:
 - **Amplitude de pico (máx)**: corresponde ao valor absoluto de sua intensidade mais elevada. É proporcional à energia que o sinal transporta (topo e fundo da onda).
 
 - **Frequência**: medida em Hertz (Hz), refere-se ao nº de períodos em 1 segundo.
-
+  
   - Período: quantidade de tempo (seg.) que um sinal leva para completar um ciclo.
-
+  
   - F = 1/T e T = 1/F (Frequência é o inverso do período)
-
+  
   - Como a frequência é a taxa de mudança em relação ao tempo, uma mudança em curto espaço de tempo significa alta frequência. E mudanças ao longo de espaço de tempo prolongado significa baixa frequência.
-
+    
     <img src="../../imgs/4_Periodo/Redes1/frequencia.png" style="width:50%">
 
 - **Fase**: descreve a posição da forma de onda em relação ao instante de tempo 0. Medida em graus ou radianos (360º corresponde a 2π radianos). Vai nos dizer o estado do início do 1º ciclo da onda em um intervalo de tempo (a quantidade de deslocamento). Exemplo: Podemos dizer que ela está defasada em 90º, ou em 180º, e por ai vai.
@@ -384,7 +393,7 @@ Valores discretos.
 Agora não iremos falar mais sobre taxa de frequência para descrever esse sinal, e sim **taxa de transferência** (ou taxa de bits). A taxa de bits corresponde ao nº de bits enviados em **1s**, expressado em bits por segundo **(bps)**.
 
 > Exemplo: considere que precisamos receber documentos de texto a uma taxa de 100 páginas por segundo. Qual é a taxa de bits necessária para o canal? Uma página tem em média 24 linhas com 80 caracteres em cada uma. Se considerarmos que um caractere requer 8 bits, a taxa de bits será:
->
+> 
 > 100 x 24 x 80 x 8 = 1.536.00 bps = 1.536 Mbps
 
 - **Comprimento de Bits:** é a distância que um bit ocupa no meio de transmissão.
@@ -435,7 +444,7 @@ Para mostrar que um sinal ganhou ou perdeu força, usa-se o decibel (dB) - unida
   - dB = 10 log10 (P2 / P1)
   - P1 e P2 correspondem à potência de um sinal nos pontos 1 e 2.
 
-### DISTORÇÃO 
+### DISTORÇÃO
 
 Refere-se quando um sinal chega ao seu ponto de destino em seu formato distorcido, diferente. Ou seja, um sinal composto, por exemplo, cada harmônico que o compõe tem uma frequência diferente, consequêntemente uma velocidade de propagação diferente, logo se temos algum problema no meio de transmissão, algum retardo, cada harmônico pode chegar mais rápido ou mais devagar no destido (um retardo diferente para cada fase). Ao chegar no destino, o sinal composto fica distorcido, não é o mesmo sinal que foi enviado.
 
@@ -600,11 +609,11 @@ Surgiu pela necessidade de transmitir os sinais para pessoas que moram em locais
 <img src="../../imgs/4_Periodo/Redes1/CATV.png" style="width:70%">
 
 > Note: CATV usava coaxial de cabo à rabo. Por causa da atenuação, ter que usar muito amplificador... era tudo feito direcionalmente, sai da estação e vai para a casa do cliente. Porém com o avanço veio o Hybrid fiber - coaxial (trabalha tanto com fibra, quanto com coaxial).
->
+> 
 > Utilização da rede de tv e telefonia para internet...
->
+> 
 > Note: Para deixar o circuito oferecendo internet !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! (coaxial tem largura pequena de banda....)
->
+> 
 > - Cable Modem (CM) (instalado na residência): 
 > - Cable Modem Termination System (CMTS) (instalado no provedor): 
 
@@ -842,13 +851,9 @@ Também é usado **timers**, ou seja, tem a possibilidade de um frame se perder 
 
 Nesse caso podemos simplesmente reenviar o frame, mas ai caimos em um outro problema, que é o receptor poder aceitar o mesmo quadro várias vezes. Para evitar que isso aconteça, geralmente é preciso atribuir **números de sequência** aos quadros transmitidos, de modo que o receptor possa distinguir as retransmissões dos originais (**Controle da recepção de quadros repetidos**).
 
-
-
 Erros de transmissão são muito comuns, principalmente em um **tráfego em rajadas**, que são muitos dados transmitidos em um curto período de tempo, o que volta até ao problema de controle de fluxo, na qual o receptor não suporta a carga.
 
 Por outro lado erros nesse tipo de tráfego é mais fácil de detectar, pois temos MUITA informação em um curto período de tempo, uma grande quantidade de bits. Em compensação são mais difíceis de corrigir que um erro isolado.
-
-
 
 ### CÓDIGOS DE DETECÇÃO vs CORREÇÃO DE ERROS
 
@@ -898,21 +903,21 @@ Trata as cadeias de bits (os dados à serem transportados, os frames) como [poli
 ##### CÁLCULO DE CRC
 
 - **Envio dos dados:**
-
+  
   1. Bits de dados que deseja transportar;
-
+  
   2. Polinômio + a identificação do seu grau;
-
+  
   3. Acrescentar à direita dos bits de dados, X bits 0. Sendo X o grau do polinômio;
-
+  
   4. Dividir (XOR) a sequência de bits do último tópico pelo CRC. O CRC é montado colocando um bit 1 no coeficiente existente do polinômio, e um bit 0 no não existente. Ex.: 
-
-     ​	  <img src="../../imgs/4_Periodo/Redes1/image-20210915215932022.png" style="width:60%">
-
+     
+     ​      <img src="../../imgs/4_Periodo/Redes1/image-20210915215932022.png" style="width:60%">
+  
   5. O resultado dessa divisão é acrescentado à direita dos bits de dado, e isso é o que será enviado.
 
 - **No recebimento:**
-
+  
   1. Dividir (XOR) os dados recebidos pelo CRC;
   2. Se o resultado conter somente **bits 0**, logo existe uma grande possibilidade da mensagem estar correta.
 
@@ -920,13 +925,11 @@ Exemplo da explicação:
 
 <img src="../../imgs/4_Periodo/Redes1/image-20210915220335893.png" style="width:70%">
 
-## PROTOCOLOS 
+## PROTOCOLOS
 
 :building_construction:
 
 [Como funciona]
-
-
 
 # SUB-CAMADA DE ACESSO AO MEIO
 
@@ -941,7 +944,7 @@ Endereços físicos (MAC) são usados nos cabeçalhos dos quadros para identific
 Quando várias máquinas são conectadas e usam um enlace comum, chamado **enlace multi-ponto ou broadcast**, é preciso um **protocolo de acesso mútiplo** para coordenar o acesso ao meio físico (link).
 
 > Redes broadcast: competição pelo meio - necessidade de controle.
->
+> 
 > A subcamada MAC está presente em quase todas as LANs e em WANs via satélite.
 
 ## PROTOCOLOS DE ACESSO MÚLTIPLO
@@ -994,8 +997,6 @@ Exemplo:
 
 <img src="../../imgs/4_Periodo/Redes1/image-20210917003724117.png" style="width:90%">
 
-
-
 ##### SLOTTED ALOHA
 
 É uma forma de melhorar a eficiência do ALOHA puro, duplicar a capacidade. Basicamente divide o tempo em intervalor discretos, os **slots**, e cada máquina só pode trasmitir no ínicio de cada slots, ou seja se perder a oportunidade só poderá transmitir no início do próximo slot.
@@ -1010,27 +1011,21 @@ Vulnerabilidade no ALOHA puro:
 
 <img src="../../imgs/4_Periodo/Redes1/image-20210917005411850.png" style="width:50%">
 
-
-
 08/09 :watch:
 
 #### CSMA
 
 [Explicação]
 
-​	[Métodos de persistência]
+​    [Métodos de persistência]
 
-​		[Persistent]
+​        [Persistent]
 
-​		[Non-Persistent]
+​        [Non-Persistent]
 
 #### CSMA/CD
 
-
-
 #### CSMA/CA
-
-
 
 ### ACESSO CONTROLADO
 
@@ -1040,19 +1035,13 @@ Aqui os protocolos já vão verificar o estado do meio e **controlar** o acesso 
 
 #### RESERVATION
 
-
-
 #### POLLING
 
 >  Note: Tem isso no bluetooth :) 
 
-
-
 13/09 :watch:
 
 #### TOKEN PASSING
-
-
 
 ### PROTOCOLOS DE CANALIZAÇÃO
 
@@ -1144,8 +1133,6 @@ O handshake se faz necessário pois ambas as partes precisam que suas flags de s
 
 :building_construction:
 
-
-
 # CAMADA DE APLICAÇÃO
 
 :building_construction:
@@ -1155,8 +1142,6 @@ O handshake se faz necessário pois ambas as partes precisam que suas flags de s
 A camada de aplicação é responsável por fornecer serviços ao usuário final.
 
 Depois de passarmos por todas as camadas prelimi­nares, chegamos àquela em que são encontradas todas as aplicações. As camadas inferiores à camada de aplicação têm a função de oferecer um serviço de transporte confiá­vel, mas, na verdade, elas não executam nenhuma tare­fa para os usuários.
-
-
 
 Também no dia -> 08/11 :watch:
 
@@ -1170,7 +1155,7 @@ Embora os programas possam se referir em teoria a pá­ginas Web, caixas de corr
 
 Sendo assim, o programa envia o nome para o que chamamos de resolvedor (um procedimento de biblioteca), que por sua vez irá para um servidor DNS local, que faz a associação desse nome, com o endereço IP desejado. Por fim, o servidor retorna esse endereço ao resolvedor, que por sua vez retorna para o programa.
 
-### ESPAÇO DE NOMES 
+### ESPAÇO DE NOMES
 
 Espaço de nomes: define o conjunto de nomes possíveis. Pode ser organizado de duas maneiras: *plana* ou *hierárquica*.
 
@@ -1193,12 +1178,3 @@ A vantagem da utilização de uma estrutura hierárquica é a possibilidade de s
 ## FTP
 
 :building_construction:
-
-
-
-
-
-
-
-
-

@@ -36,13 +36,9 @@ E para essas tomadas de decisão podemos utilizar **modelos e ferramentas** como
 
 - E temos os modelos mais **gerais**, que podem servir para diversas situações, ou serem adaptados, ou servirem de inspiração para modelos mais específicos.
 
-
-
 ### DECISÃO COMPORTAMENTAL
 
 Mesmo sendo seres racionais ainda podemos nos deparar com uma situação em que duas pessoas tomam decisões diferentes para o mesmo problema. Com isso entra a decisão comportamental.
-
-
 
 ---
 

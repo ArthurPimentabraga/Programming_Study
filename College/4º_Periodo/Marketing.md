@@ -22,34 +22,34 @@ Geralmente as pessoas querem mais que o produto em sí, querem uma experiência.
 
 Porém esses atributos precisam ser percebidos pelo cliente para proporcionar valor ao cliente, se não, não é valor.
 
-## Hierarquia de valor 
+## Hierarquia de valor
 
 Para a composição do produto/serviço temos uma hierarquia de valor para o cliente:
 
 1. **Benefício central** - Foco principal do produto ou serviço - Motivo da compra.
-
+   
    - Ex.: Hotelaria -> Hospedar as pessoas.
 
 2. **Básico** - Básico necessário para produto ou serviço existir.
-
+   
    - A partir da necessidade central, eu agrego para se tornar *servível.*
-
+   
    - Ex.: Hotelaria -> Quarto, banheiro, toalhas...
 
 3. **Esperado** - Como o consumidor espera receber o produto ou serviço.
-
+   
    - Com um certo nível de exigência as pessoas esperam um certo nível de qualidade. Compôe toda a espectativa do cliente.
    - Ex.: Hotelaria -> Esperam uma cama arrumar, toalhas limpas, banheiro relativamente bom.
-
+   
    > Sempre bom fazer uma pesquisa para descobrir o que esperam, o quão exigêntes são.
 
 4. **Ampliado** - Quando agrega ao produto e ao serviço um **algo á mais** que o cliente não está esperando.
-
+   
    - Ex.1: Hotelaria -> Voltou 3 vezes, ganhou uma hospedagem de graça.
    - Ex.2: Produto com embalagem boa, com uma experiência de umboxing boa. Ou Um produto que chegou muito antes do previsto.
 
 5. **Potencial ou inesperado** - Acrescentar ao produto/serviço básico, esperado ou ampliado algo que o torne inesperado.
-
+   
    - Agrega algo muito diferenciado ao nível, vai muito além da concorrencia.
 
 <img src="../../imgs/4_Periodo/MSP/hierarquia_valor.png" style="width:50%">
@@ -117,8 +117,6 @@ Se descobrirmos algum gap, ou refutamos a ideia, ou remodelamos.
 ### Desenvolvimento do produto
 
 Após toda a análise, agora é hora de prototipar, materializar o produto. É a transformação do conceito de produto, em produto físico.
-
-
 
 ### Testes de marketing
 
@@ -189,4 +187,3 @@ Outra teoria para bater de frente com "Ciclo de vida de produto".
 <img src="../../imgs/4_Periodo/MSP/image-20210910201307897.png" style="width:70%"/>
 
 > Podemos considerar também como Volume de venda (colunas) e Volume de investimento (Linhas).
-

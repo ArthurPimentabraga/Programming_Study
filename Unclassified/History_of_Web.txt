@@ -23,9 +23,9 @@ Com a web em constante evolução surgiu o problema das tecnologias ultrapassada
 público alvo à serem atingidos pelas tecnologias. Exemplo: Protocolo HTTP, HTML e CSS, SVG, Ajax, XML, RDF... Resumindo a W3C gerencia os padrões da Web.
 
 W3C tem um processo de aprovação de tecnologias:
-	1º WD-> Working Draft, é um documento da tecnologia proposta, fase de review, mudanças nesse rascunho...;  
-	*-Director's approval - ou seja, precisa passar pela aprovação da diretoria da W3C;*
-	2º CR-> Candidate Release, após a aprovação, o mesmo se torna um candidato a ser padronizado;
-	*-Director's approval*
-	3º PR-> Proposed Recomendation, nessa fase a tecnologia já começa a aparecer na web e ganhar força no mercado;
-	4º REC-> Recomendation, enfim se torna uma tecnologia recomendada, um forma padronizada.
+    1º WD-> Working Draft, é um documento da tecnologia proposta, fase de review, mudanças nesse rascunho...;  
+    *-Director's approval - ou seja, precisa passar pela aprovação da diretoria da W3C;*
+    2º CR-> Candidate Release, após a aprovação, o mesmo se torna um candidato a ser padronizado;
+    *-Director's approval*
+    3º PR-> Proposed Recomendation, nessa fase a tecnologia já começa a aparecer na web e ganhar força no mercado;
+    4º REC-> Recomendation, enfim se torna uma tecnologia recomendada, um forma padronizada.
