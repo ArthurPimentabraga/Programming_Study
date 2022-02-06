@@ -57,3 +57,5 @@ Arquitetura de software é a **estrutura de um sistema**, compreendida por:
 Um desenho arquitetural representa os componentes, seus relacionamentos, etc.
 
 "Arquitetura é o conjunto de decisões significativas sobre a organização de um sistema de software."
+
+> Ler também a atividade: ED1 - Arquiteto de sw!
