@@ -4,4 +4,28 @@ author: Arthur Pimenta Braga
 period: 1/2022
 ---
 
-# Introdução
+# INTRODUÇÃO
+
+:calendar: 08/02
+
+ 
+
+
+
+---
+
+# VISÃO GERAL
+
+:computer: virtual
+
+<mark>Acabar aqui</mark>
+
+## HIERARQUIA DE NEGÓCIOS
+
+
+
+## ARQUITETURA DE TI X INFRAESTRUTURA DE TI
+
+
+
+## TIPOS DE ARQUITETURA DE TI
