@@ -39,22 +39,26 @@ Abrange um conjunto de princípios, conceitos e práticas que levam ao desenvolv
 - Conceitos: Entender o projeto antes de aplicar a prática;
 
 - Práticas: Modelos, formas de representações do software que servem de **guia** para o desenvolvimento.
+  
+  
 
 **Objetivo:** produzir um modelo que satisfaça aos requisitos. Um modelo de projeto que inclui representações de arquitetura, interface, componente e implantação. Mantendo uma avaliação pela equipe de software para ter certeza que fez corretamente (daily, por exemplo).
 
+Ou seja, usamos a daily, por exemplo, para fazer a **verificação** (determinar se contém erros, inconsistências...), e um alinhamento recorrente com o cliente para uma **validação** ("Estamos construindo o produto correto?").
+
+
+
 **Da análise ao projeto**: Análise (domínio do problema) x Projeto (domínio da solução). E após isso que partimos para a contrução (código).
-
-
 
 Principais atividades realizadas na fase de projeto: <mark>Acabar aqui</mark>
 
-1. asdas
+1. Detalhamento dos aspectos dinâmicos do sistema; ???
 
-2. asd
+2. Refinamento dos aspectos estáticos e estruturais do sistema; ???
 
-3. asd
+3. Detalhamento da arquitetura do sistema;
 
-4. asd
+4. Definição das estratégias para ..............
 
 5. asd
 
@@ -72,7 +76,7 @@ O projeto é necessário porque sem ele não conseguimos analisar/avaliar sua qu
 
 Com a elaboração de um projeto conseguimos estudar, prever e montar estratégias para contonar os impactos das limitações da tecnologia, como:
 
--  Custo;
+- Custo;
 
 - Capacidade de armazenamento;
 
@@ -80,9 +84,11 @@ Com a elaboração de um projeto conseguimos estudar, prever e montar estratégi
 
 - Serviço out;
 
+- Falibildade;
+
 - Etc.
-
-
+  
+  
 
 ## CONCEITOS BÁSICOS APLICADOS A PROJETOS
 
@@ -91,20 +97,66 @@ Com a elaboração de um projeto conseguimos estudar, prever e montar estratégi
 **Abstração:** É uma forma de nos concentrarmos em partes mais abstratas, com um nível maior de generalização dos problemas do software, para depois irmos refinando esse problema. *Uma forma de facilitar o entendimento e resolução do problema.*
 
 - **Abstração procedural:** ??? <mark>Acabar aqui</mark>
-
-
+  
+  
 
 **Arquitetura:** Basicamente é a estrutura, a organização dos componentes do sistema. Representa a interação entre esses elementos, etc.
 
-- Conjunto de propriedades <mark>Acabar aqui</mark>
+- Conjunto de propriedades que devem ser especificadas, como: estruturais (dados, classes...), não funcionais (segurança, desempenho...) e famílias de sistemas (client - server...).
+  
+  
+
+**Padrões:** <mark>Acabar aqui</mark> Os famosos Design Patters. Basicamente são padrões, formas de estrutura de código... que resolve algum tipo de problema. *Uma solução comprovada para problemas recorrentes em um contexto.*
 
 
 
-**Padrões:** <mark>Acabar aqui</mark>
+**Separação por interesses:** Modularizar ajuda a resolver um problema complexo mais facilmente. Ou seja, dividir responsabilidades permite o foco em partes menores do problema ao invés de ver como um todo. Ex.: MVC (Model - View - Controller); Microsserviços.
 
 
 
-**Separação por interesses:** Modularizar ajuda a resolver um problema complexo mais facilmente. Ou seja, dividir responsabilidades permite o foco em partes menores do problema ao invés de ver como um todo. Ex.: MVC (Model - View - Controller).
+:calendar: 09/02
+
+
+
+**Modularidade:** <mark>Acabar aqui</mark>
+
+
+
+**Ocultação de informações:** Basicamente é o princípio de encapsulamento, adapters, etc.
+
+
+
+**Independência funcional:** Junção de modularidade, abstração e ocultação para tornar o código menos aclopado, com uma facilitadade maior no reuso e na manutenção. Também minimiza a probabilidade da propagação de erros.
+
+- Coesão:
+
+- Acoplamento:
+
+
+
+**Refinamento:** Da pra lembrar de Clean code: nós disponibilizamos um método, ou um código mais abstrato, mais geral, e a medida que vai "entrando" a gente vai refinando, detalhando o código necessário. <mark>Não tenho certeza!!</mark>
+
+
+
+**Refatoração:** "É o processo de mudança de um sistema de tal maneira que não altere o comportamento externo do código e ainda melhora sua **estrutura interna**."
+
+- Ex.: Extract Method (dividir o código em outros métodos basicamente); Inline Method (Código muito repetido é unificado).
+
+
+
+
+
+Boas práticas em projeto: <mark>Acabar aqui</mark>
+
+- asd
+
+- asd
+
+- asd
+
+
+
+
 
 
 
