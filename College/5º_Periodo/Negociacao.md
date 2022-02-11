@@ -20,6 +20,8 @@ Uma negociação é uma decisão conjunta.
 
 ## UNIDADE 1 - MODELOS
 
+
+
 ### DECISÃO RACIONAL
 
 Uma decisão racional é aquela que **adequa meios a fins**. Ou seja, manipula variáveis que influênciam na tomada de decisão para escolher a opção mais eficaz e eficiente.
@@ -36,9 +38,27 @@ E para essas tomadas de decisão podemos utilizar **modelos e ferramentas** como
 
 - E temos os modelos mais **gerais**, que podem servir para diversas situações, ou serem adaptados, ou servirem de inspiração para modelos mais específicos.
 
+
+
 ### DECISÃO COMPORTAMENTAL
 
 Mesmo sendo seres racionais ainda podemos nos deparar com uma situação em que duas pessoas tomam decisões diferentes para o mesmo problema. Com isso entra a decisão comportamental.
+
+Por sermos seres humanos, estamos sujeitos a peculiaridades humanas que se tornam variáveis relevantes na tomada de decisão, logo temos os fatores/modelos  de decisão comportamental. E para entende-los, temos que entender o conceito de **recionalidade limitada**.
+
+#### RACIONALIDADE LIMITADA
+
+Como foi dito anteriormente estamos sujeitos à essas peculiaridades, ou seja, pessoas diferentes têm **informações diferentes**, percepsões e **entendimentos diferentes**. Estamos sujeitos à subjetividade, percebemos as mesmas coisas de formas diferentes, cada um possui **experiências diferentes**.
+
+E por mais que nosso cérebro seja uma "máquina" incrível, não seguimos um algortimo, todos possuimos atalhos mentais, heuristicas, etc.
+
+Agora tu pergunta, se somos tão diferentes, como caminhamos e evoluimos juntos? Bem, somos seres diferentes, mas também possuimos muitas similaridades: culturais, genéticos, etc. O que nos tornam semelhantes é muito maior que o que nos tornam diferentes. Logo, todos possuimos peculiaridades que afetam na tomada de decisão, mas não deixamos de ser serem racionais e de buscar a melhor opção. Ou seja, todos vamos escolher a melhor opção dentro do próprio âmbito, **dentro das próprias fronteiras**, uma racionalidade limitada às nossas fronteiras.
+
+
+
+### DECISÃO POLÍTICA
+
+
 
 ---
 
