@@ -7,5 +7,3 @@ period: 1/2022
 # INTRODUÇÃO
 
 :calendar: 08/02
-
-

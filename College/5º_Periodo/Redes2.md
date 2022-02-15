@@ -50,6 +50,18 @@ Basicamente a arquitetura de infraestrutura de TI é o projeto, a ciência de pr
 
 ---
 
-## XXX
+## MODELO DE INFRA. DE TI
 
 :computer: virtual
+
+Modelo proposto por Sjaak Laan:
+
+<img title="" src="../../imgs/5_Periodo/Redes2/2022-02-14-20-54-54-image.png" alt="" data-align="center" width="408">
+
+Os processos das empresas são *suportados* pelas aplicações, que por sua vez, junto com os Middleware, os bancos de dados... tudo isso utiliza recursos da infra, como por exemplo, um database está armazenado em um servidor. 
+
+Logo, a infra está ali para prover recursos com alta disponibilidade, performance e segurança para as aplicações que irão suportar os processos das empresas.
+
+> **Middleware:** software que fornece algum tipo de serviço comum para as aplicações, como: Gerenciamento de dados, Mensageria, Autenticação, entre outros.
+
+---

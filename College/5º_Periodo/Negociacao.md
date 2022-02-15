@@ -20,8 +20,6 @@ Uma negociação é uma decisão conjunta.
 
 ## UNIDADE 1 - MODELOS
 
-
-
 ### DECISÃO RACIONAL
 
 Uma decisão racional é aquela que **adequa meios a fins**. Ou seja, manipula variáveis que influênciam na tomada de decisão para escolher a opção mais eficaz e eficiente.
@@ -38,8 +36,6 @@ E para essas tomadas de decisão podemos utilizar **modelos e ferramentas** como
 
 - E temos os modelos mais **gerais**, que podem servir para diversas situações, ou serem adaptados, ou servirem de inspiração para modelos mais específicos.
 
-
-
 ### DECISÃO COMPORTAMENTAL
 
 Mesmo sendo seres racionais ainda podemos nos deparar com uma situação em que duas pessoas tomam decisões diferentes para o mesmo problema. Com isso entra a decisão comportamental.
@@ -54,11 +50,7 @@ E por mais que nosso cérebro seja uma "máquina" incrível, não seguimos um al
 
 Agora tu pergunta, se somos tão diferentes, como caminhamos e evoluimos juntos? Bem, somos seres diferentes, mas também possuimos muitas similaridades: culturais, genéticos, etc. O que nos tornam semelhantes é muito maior que o que nos tornam diferentes. Logo, todos possuimos peculiaridades que afetam na tomada de decisão, mas não deixamos de ser serem racionais e de buscar a melhor opção. Ou seja, todos vamos escolher a melhor opção dentro do próprio âmbito, **dentro das próprias fronteiras**, uma racionalidade limitada às nossas fronteiras.
 
-
-
 ### DECISÃO POLÍTICA
-
-
 
 ---
 

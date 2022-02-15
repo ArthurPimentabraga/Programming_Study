@@ -62,15 +62,9 @@ Um desenho arquitetural representa os componentes, seus relacionamentos, etc.
 
 > Note: Visões Arquiteturais (RUP)
 
-
-
 :calendar: 11/02
 
-
-
 **Stakeholders:** São as pessoas importantes, relevantes para a arquitetura do projeto, como: Gerentes, arquitetos, desenvolvedores, QAs, usuários, etc.
-
-
 
 ## DETALHAMENTO DA ARQUITETURA
 
@@ -81,8 +75,6 @@ Um desenho arquitetural representa os componentes, seus relacionamentos, etc.
 - **Microarquitetura:** ja é a comunicação entre eles.....
 
 > Note: Tem que passar pelo macro antes do micro pra melhor aproveitamento.
-
-
 
 ### ESCOPOS DE ARQUITETURA
 
@@ -96,11 +88,7 @@ Aplication scope -> Decisão de
 
 Component scope -> vai usar serviço de mesageria nesse projeto?....
 
-
-
 <mark><<<<<<<<<<< >>>>>>>>>>></mark>
-
-
 
 - **Meta-Arquitecture:** Guias de arquitetura, arquiteturas de referências, servem como base para a definição arquitetural da empresa....
 
@@ -108,17 +96,11 @@ Component scope -> vai usar serviço de mesageria nesse projeto?....
 
 - **Architecture Guidelines and Policies:** Documentos arquiteturais que servem para orientar as pessoas.
 
-
-
 Diagramas comportamentais e estruturais!!!
 
 Arquitetura no processo!!
 
-
-
 <mark><<<<<<<<<<< >>>>>>>>>>></mark>
-
-
 
 ## IMPORTÂNCIA DA ARQUITETURA
 
@@ -130,21 +112,15 @@ Arquitetura no processo!!
 
 - ...
 
-
-
 ## ARQUITETURA EM CAMADAS
 
 <mark>Acabar aqui</mark>
 
 É um tipo de.... um estilo de arquitetura?
 
-
-
 ## ARQUITETURA MVC
 
 <mark>Acabar aqui</mark>
-
-
 
 ## CONCEITOS
 

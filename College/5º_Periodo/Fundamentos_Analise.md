@@ -50,8 +50,6 @@ Análise de complexidade de algoritmo = prever os recursos necessários, como: M
 
 <mark>Acabar aqui</mark>
 
-
-
 ## CASOS
 
 <mark>Acabar aqui</mark>
