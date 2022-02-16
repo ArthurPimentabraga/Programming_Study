@@ -65,3 +65,23 @@ Logo, a infra está ali para prover recursos com alta disponibilidade, performan
 > **Middleware:** software que fornece algum tipo de serviço comum para as aplicações, como: Gerenciamento de dados, Mensageria, Autenticação, entre outros.
 
 ---
+
+# REVISÃO DE REDES I
+
+:calendar: 15/02
+
+> Estudar essa parte pelo slide. Aqui só tem anotações.
+
+
+
+**Computação ubíqua pervasiva:** Foi chegando no nosso dia a dia sem a gente "planejar", chegou de fininho. Ex.: Waze, iFood, Alexa, SmartWatch, Geladeira smart, etc.
+
+**Computação ubíqua científica.** Ex.: Nanorobôs no sangue, etc.
+
+
+
+Um **modelo hibrido** pode ser usado para solucionar problema geográfico, de latência. Por que tu pode ter as máquinas servidoras espalhadas geograficamente com um modelo P2P entre elas, e os usuários sendo os clientes.
+
+
+
+**NPS:** analogia com Fat32 e NTFS só que em rede.
