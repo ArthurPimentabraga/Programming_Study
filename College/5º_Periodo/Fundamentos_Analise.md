@@ -59,3 +59,29 @@ Análise de complexidade de algoritmo = prever os recursos necessários, como: M
 - Pior caso:
 
 - Caso médio:
+
+---
+
+# ANÁLISE DE COMPLEXIDADE
+
+:calendar: 16/02
+
+## DOMÍNIO ASSINTÓTICO
+
+<mark>????</mark>
+
+## COMPORTAMENTO ASSINTÓTICO DE FUNÇÕES
+
+<mark>Acabar aqui</mark>
+
+### NOTAÇÃO O
+
+<mark>Acabar aqui</mark>
+
+### NOTAÇÃO Ω
+
+<mark>Acabar aqui</mark>
+
+## CLASSES DE COMPORTAMENTO ASSINTÓTICO
+
+<mark>Acabar aqui</mark>

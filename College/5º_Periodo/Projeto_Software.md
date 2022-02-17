@@ -207,3 +207,59 @@ Procedimento de software:
 - Projeto preliminar: Importa mais com a visão geral dos dados e arquitetura...;
 
 - Projeto detalhado: concentra mais na interface e projeto procedimental...
+
+---
+
+# MODELO DE CASOS DE USO
+
+:calendar: 16/02 - *Pegar slide para estudar também!*
+
+É um representação visual do sistema e dos elementos externos que interagem com o mesmo.
+
+*Representa os requisitos funcionais do sistema.*
+
+Além de forçar os devs a moldar o sistema de acordo com as necessidades do usuário.
+
+Um caso de uso é a especificação de uma sequencia de interações entre um sistema e os agentes externos.
+
+<mark>...</mark>
+
+- Diagrama UML: <mark>Acabar aqui</mark>
+
+- Documentação MCU: <mark>Acabar aqui</mark>
+
+## COMPOSIÇÃO DO MCU
+
+É composto por uma parte **textual** e outra **gráfica**.
+
+O diagrama da UML utilizado na modelagem **gráfica** é o diagrama de casos de uso.
+
+## ELEMENTOS DE UM MCU
+
+**Atores:** Elemento externo que interage com o sistema.
+
+- <mark>...</mark>
+
+### RELACIONAMENTOS
+
+- **Comunicação (associação):** <mark>Acabar aqui</mark>
+
+- **Generalização:** <mark>Acabar aqui</mark>
+
+- **Inclusão:** <mark>Acabar aqui</mark>
+
+- **Extensão:** <mark>Acabar aqui</mark>
+
+## DOCUMENTAÇÃO DOS CASOS DE USO
+
+Detalhamento?
+
+- Pré-condições:
+
+- ...
+
+- Pós-condições:
+
+- Fluxos de eventos:
+
+Documentação suplementar
