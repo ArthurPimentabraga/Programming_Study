@@ -30,17 +30,31 @@ Analisar e projetar soluções algorítmicas eficientes para as diferentes class
 
 - **Problemas intratáveis:** São algoritmos que exigem tempo super-polinomial, ou seja, não determinado...  Mesma coisa de NP? <mark>Revisar aqui</mark>
 
+- **Algoritmo correto:** Para cada instância de entrada, ele para com a saída correta;
+
+- **Algoritmo incorreto:**  Pode não parar ou parar com resposta errada.
+
 Análise de complexidade de algoritmo = prever os recursos necessários, como: Memória; Hardware; tempo de execução, etc.
 
-> Cálculo de tempo de execução: <mark>Completar aqui</mark>
+> Cálculo de tempo de execução: **Tempo = (No de instruções/programa) x CPI médio x Clock**
+> 
+> - **T = f(n) / velocidade**
+>   
+>   - Ex.: **T = 2^n / 10⁴**
+>   
+>   - Sendo 2^n  a função de complexidade, o polinômio;
+>   
+>   - E 10⁴ a quantidade de operações por segundo que o computador é capaz.
+>   
+>   - **N** poderia ser o tamanho de um array que esse algoritmo exponencial, nesse PC, conseguiria processar em um valor T de tempo.
 
 ## ANÁLISE DE ALGORITMO
 
 <mark>Acabar aqui</mark>
 
-- Análise de um algoritmo particular:
+- **Análise de um algoritmo particular:** 
 
-- Análise de uma classe de algoritmos:
+- **Análise de uma classe de algoritmos:** 
 
 ## CUSTO DE UM ALGORITMO
 
