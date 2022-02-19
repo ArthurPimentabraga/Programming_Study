@@ -138,7 +138,7 @@ Arquitetura no processo!!
 
 - **Robustez:** capacidade do sistema funcionar mesmo em condições anormais;
 
-- **Cafiabilidade:** gerar respostas confiáveis, como previsto.
+- **Cafiabilidade:** gerar respostas confiáveis, como previsto;
 
 - **Portabilidade:** Capacidade de ser transferido de um host para outro;
 
@@ -146,8 +146,82 @@ Arquitetura no processo!!
 
 - **Eficiência:** Capacidade de fazer o que foi determinado com o menor custo computacional;
 
-- **Capilaridade:** Capacidade de cobertura, de penetração numa rede de computadores.
+- **Capilaridade:** Capacidade de cobertura, de penetração numa rede de computadores;
 
-- Granularidade: Grão grosso é que o componente faz muita coisa, e grão fino (microserviços...) faz coisas específicas.
+- **Granularidade:** Grão grosso é que o componente faz muita coisa, e grão fino (microserviços...) faz coisas específicas;
 
-- Resiliência: Capacidade de recuperação, em caso de erro ou falhas.
+- **Resiliência:** Capacidade de recuperação, em caso de erro ou falhas.
+
+
+
+:calendar:18/02
+
+
+
+## NORMA ISO-9126
+
+- **Funcionalidade:** Fala mais sobre os requisitos não funcionais, do que os funcionais;
+  
+  - Adequação: Presença de conjunto de funções e sua apropriação para as tarefas.
+    
+    - **Não fazer mais do que o usuário deseja.** por mais que supra a necessidade, tu ta abrindo mais possibilidades erro, mais horas de trabalho, maior cursto, etc. Isso tudo sem necessidade, pois os usuários podem nem usa. *Gastar 80% do tempo em 20% da oferta não vale a pena. - [Regra de Pareto]([Lei de Pareto: o que é o princípio, regra 80/20 - Significados](https://www.significados.com.br/lei-de-pareto/))*
+  
+  - Acurácia: Gera resultados corretos;
+  
+  - Interoperabilidade:  Capacidade de interagir com outros sistemas.
+  
+  - Conformidade:  Estar de acordo com normas, convenções e regulamentações. Compliance;
+  
+  - Segurança de acesso: Capacidade de evitar acesso não autorizado a programas e dados.
+
+- **Confiabilidade** 
+  
+  - Maturidade: Frequência de falhas;
+  
+  - Tolerância a falhas: Manter nível de desempenho em caso de falha. Perdemos dados se uum serviço ficar fora? O sistema todo para se tivermos uma falha?
+  
+  - Recuperabilidade: Capacidade de restabelecer e restaurar dados após falha.
+
+- **Usabilidade:** As três caracteristicas apontam para facilidade de uso.
+  
+  - Inteligibilidade: Facilidade de entender os conceitos utilizados. É intuitivo. Não preciso de um curso pra aprender;
+  
+  - Apreensibilidade: Facilidade de aprendizado;
+  
+  - Operacionalidade: Facilidade de operar e controlar a operação.
+
+- **Eficiência**
+  
+  - Comportamento em relação ao tempo: Tempo de resposta de processamento;
+  
+  - Comportamento em relação a recursos: Qunatidade de recursos utilizados.
+
+- **Manutenibilidade:** 
+  
+  - Analisabilidade: Facilidade de diagnóstigo;
+  
+  - Modificabilidade: Facilidade de modificação e remoção de defeitos;
+  
+  - Estabilidade: Ausência de riscos de efeitos inesperados;
+  
+  - Testabilidade: Facilidade de ser testado.
+
+- **Portabilidade:** Posso pegar meu sistema e colocar/instalar em outros lugares. Ex.: Java tem alta portabilidade.
+  
+  - Adaptabilidade
+  
+  - Capacidade para ser instalado
+  
+  - Conformidade: Acordo com padrẽs ou convenções de portabilidade;
+  
+  - Capacidade para substituir.
+
+
+
+## NORMA ISO-25010
+
+Substitui a anterior.
+
+Não atende a todos os aspectos cobertos pelos requisitos arquiteturais, pois podem ser aspectos muito específicos de cada caso.
+
+<mark>Acabar aqui</mark>
