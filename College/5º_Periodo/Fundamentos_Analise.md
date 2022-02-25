@@ -99,3 +99,7 @@ Análise de complexidade de algoritmo = prever os recursos necessários, como: M
 ## CLASSES DE COMPORTAMENTO ASSINTÓTICO
 
 <mark>Acabar aqui</mark>
+
+
+
+:calendar: 23/02

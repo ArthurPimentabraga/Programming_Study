@@ -60,6 +60,46 @@ Essas decisões podem ser tomadas por **consenso**, pela **maioria** (ex.: votos
 
 *"Indivíduos ou grupos de interesse tentam, apesar de interesses não coincidentes, chegar a uma decisão que atenda de maneira razoável os envolvidos diretos, e mesmo, envolvidos indiretos na desição."*
 
+### DECISÃO RESPONSÁVEL
+
+Dimensões a serem consideradas: 
+
+- **Cultural:** É a decisão alinha a princípios de sua cultura. Isso aumenta a chance de estar certo, pois naquele contexto de sua cultura, todos ao seu redor podem concordar com você, aumentando também a possibilidade de aceitação dessa decisão. Mas lembrando de equilibrar essa decisão com o racional.  
+
+- **Ética:** Uma decisão alinhada à ética também tem grande chance de ser bem aceita, uma vez que ao se analisar, todos perceberão que era ético, era certo.
+  
+  - Utilitarismo: Decisão é útil, prejudica menos, ajuda pessoas, ou o maior número de pessoas?
+    
+    - A preocupação com direitos e liberdades individuais?
+    
+    - A preocupação com justiça, imparcialidade, equidade?
+  
+  - Interesse coletivo;
+  
+  - Preocupação ambiental.
+
+- **Consciência moral:** Está muito alinhado a coerência interna, a manter uma justificativa/justiça interna. Sentimos responsabilidade pelos efeitos, assim afeta nosso controle interno, nossa saúde mental, mas pode proporcional satisfação individual.
+
+### OUTROS MODELOS DE TD
+
+- **Intuição:** Pensamento não consciente. Leva em consideração muitas variáveis, afetivo, emocional, experiências, etc. 
+  
+  - Importância em situações de pouco conhecimento ou que necessidade de uma resposta rápida.
+
+- **Incrementalismo/aprendizado:** Conserto, pequenas modificações ou melhorias.
+  
+  - Tipo criar um neǵocio mais genérico para testar no mercado, e depois vai nichando.
+
+- **Categorização:** É como definir soluções para problemas. Logo vamos **categorizar o problema**, fazer um diagnóstico, e depois a **a categorização da ação a ser realizada**, a solução.
+  
+  - Simplifica a decisão;
+  
+  - Mas a categorização em sí pode exigir um conhecimento da área;
+  
+  - E pode ter casos que fogem mais das categorias disponíveis, ficando preso em alguma.
+
+> Lembrando que todos os modelos falados até agora acabam se somando na hora de uma decisão, logo todo modelo pode ter influência de outro.
+
 ---
 
 ## UNIDADE 2 - PRÁTICA
