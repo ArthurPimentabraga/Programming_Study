@@ -152,11 +152,7 @@ Arquitetura no processo!!
 
 - **Resiliência:** Capacidade de recuperação, em caso de erro ou falhas.
 
-
-
 :calendar:18/02
-
-
 
 ## NORMA ISO-9126
 
@@ -216,12 +212,98 @@ Arquitetura no processo!!
   
   - Capacidade para substituir.
 
-
-
 ## NORMA ISO-25010
 
 Substitui a anterior.
 
 Não atende a todos os aspectos cobertos pelos requisitos arquiteturais, pois podem ser aspectos muito específicos de cada caso.
+
+<mark>Acabar aqui</mark>
+
+---
+
+# SISTEMAS DISTRIBUIDOS
+
+:calendar:25/02
+
+Oposto de sistemas monoliticos.
+
+- Monolitos
+  
+  - Basicamento toda a aplicação está centralizada.
+
+> Mainframe: Núcleo central, grande estrutura.
+> 
+> Note: Vários terminais podem se ligar a um mainframe. Ou seja, várias máquinas só recebem e exibem os dados.
+
+
+
+Sistemas distribuidos aumentam a complexidade, por poder se tratar de programação poliglota (podendo ser vantagem também!!), usa muito mais rede para se comunicar, uma infra maior, etc.
+
+Tanenbaum: *"Coleção de computadores independentes que se apresenta ao usuário como um sistema único e consistente."*
+
+
+
+![""](/home/arthur/Documentos/Programming_Study/imgs/5_Periodo/Aplicacoes_Distribuidas/2022-02-25-19-40-17-image.png)
+
+Escalabilidade sem distribuição?
+
+LAN - empresa pequena <mark>Acabar aqui</mark>
+
+monolito é seguro por ser fechado pra rede......
+
+
+
+ambiente fechado não permite acesso externo sem agregar camadas (SOAP, REST, GRAPHQL)
+
+Se tem essa interface, como não ta aberto na rede? Como ainda fica fechado? diminui o número de possibilidade de acesso!!! quanto mais camada, mais possiblidades.
+
+Blindar o core do sistema deixando poucas interfaces de aceso.....
+
+<mark>Acabar aqui</mark>
+
+
+
+Middleware: Mediador. Arch do Inter??  <mark>Acabar aqui</mark>
+
+
+
+Heterogeneidade <mark>Acabar aqui</mark>
+
+
+
+## ABERTURA
+
+<mark>Acabar aqui!!!</mark>
+
+
+
+## SEGURANÇA
+
+<mark>Acabar aqui</mark>
+
+
+
+## ESCALABILIDADE
+
+<mark>Acabar aqui</mark>
+
+gargalos??
+
+
+
+## MANIPULAÇÃO DE ERROS
+
+<mark>Acabar aqui</mark>
+
+
+
+## TRANSPARÊNCIA
+
+<mark>Acabar aqui</mark>
+
+
+
+## RECURSOS COMUNS EM SD
 
 <mark>Acabar aqui</mark>
