@@ -226,6 +226,8 @@ Não atende a todos os aspectos cobertos pelos requisitos arquiteturais, pois po
 
 :calendar:25/02
 
+> Estudar exercício de conceitos de SD!
+
 Oposto de sistemas monoliticos.
 
 - Monolitos
@@ -236,39 +238,33 @@ Oposto de sistemas monoliticos.
 > 
 > Note: Vários terminais podem se ligar a um mainframe. Ou seja, várias máquinas só recebem e exibem os dados.
 
-
-
 Sistemas distribuidos aumentam a complexidade, por poder se tratar de programação poliglota (podendo ser vantagem também!!), usa muito mais rede para se comunicar, uma infra maior, etc.
 
 Tanenbaum: *"Coleção de computadores independentes que se apresenta ao usuário como um sistema único e consistente."*
 
-
-
 ![""](/home/arthur/Documentos/Programming_Study/imgs/5_Periodo/Aplicacoes_Distribuidas/2022-02-25-19-40-17-image.png)
 
-Escalabilidade sem distribuição?
+<mark>Escalabilidade sem distribuição?</mark>
 
-LAN - empresa pequena <mark>Acabar aqui</mark>
+Basicamente, um sistema monolítico se caracteriza, principalmente, pelo grande acoplamento que ele possui, ou seja, ele é um grande bloco de código onde todas as funcionalidades estão. Ao contrário de uma aplicação distribuída que possui baixo acoplamento, mais integrações entre os sistemas, ou seja, uma granularidade maior.
 
-monolito é seguro por ser fechado pra rede......
+Temos cenários mais adequados para usar cada tipo de sistema, como:
+
+- Um sistema monolítico, por se tratar de um sistema fechado, ou seja, não possuir muitas interfaces de acesso… é mais seguro, logo podemos utilizá-lo no “core” de um sistema cujos processos são críticos. Ou em um cenário que seu acesso possa se restringir em uma rede local, deixando o sistema ainda mais seguro, como um sistema de controle de estoque, ou de uma barbearia, que não há a necessidade de acesso remoto e de um gasto financeiro maior com um sistema distribuído.
+
+- Já em uma aplicação distribuída podemos utilizar em cenários que precisam de uma alta escalabilidade, ou que podem sofrer com mudanças constantes em suas regras de negócio ou na própria aplicação.
+
+> Note: Um monolito é mais seguro por ter menos interfaces na rede, diminui o número de possibilidade de acesso, ou seja, quanto mais camada, mais possiblidades de acesso e mais vulnerável será.
 
 
-
-ambiente fechado não permite acesso externo sem agregar camadas (SOAP, REST, GRAPHQL)
-
-Se tem essa interface, como não ta aberto na rede? Como ainda fica fechado? diminui o número de possibilidade de acesso!!! quanto mais camada, mais possiblidades.
-
-Blindar o core do sistema deixando poucas interfaces de aceso.....
 
 <mark>Acabar aqui</mark>
 
+## MIDDLEWARE
 
+Middlewares são camadas intermediárias que, valendo-se da abstração, provêm coesão e integração para os sistemas distribuídos. Essa camada, ou camadas, de abstração é que permite que a heterogeneidade característica de sistemas distribuídos não seja um obstáculo.
 
-Middleware: Mediador. Arch do Inter??  <mark>Acabar aqui</mark>
-
-
-
-Heterogeneidade <mark>Acabar aqui</mark>
+> Note: Lembrar do Framework Arch do Inter, abstrái toda a parte de autenticação, log, tracers, etc.
 
 
 
@@ -276,13 +272,11 @@ Heterogeneidade <mark>Acabar aqui</mark>
 
 <mark>Acabar aqui!!!</mark>
 
-
+ambiente fechado não permite acesso externo sem agregar camadas (SOAP, REST, GRAPHQL)
 
 ## SEGURANÇA
 
 <mark>Acabar aqui</mark>
-
-
 
 ## ESCALABILIDADE
 
@@ -290,19 +284,13 @@ Heterogeneidade <mark>Acabar aqui</mark>
 
 gargalos??
 
-
-
 ## MANIPULAÇÃO DE ERROS
 
 <mark>Acabar aqui</mark>
 
-
-
 ## TRANSPARÊNCIA
 
 <mark>Acabar aqui</mark>
-
-
 
 ## RECURSOS COMUNS EM SD
 

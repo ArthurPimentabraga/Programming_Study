@@ -21,16 +21,14 @@ Em uma aula minha professora citou a seguinte frase: "De nada adianta a evoluç�
 
 > Aqui está a listagem de todo nosso conteúdo. O link o redirecionará para o arquivo respectivo. **Se sua contribuição incluir um novo arquivo, adicione a listagem do mesmo aqui para todos saberem a existência dele, e facilitar o acesso ao mesmo.**
 
-
-| **Negócio** | **Frameworks** | **Ferramentas** | **Bibliotecas** | **Linguagens** | **Sistemas Operacionais** |
-| --- | --- | --- | --- | --- | --- |
-| [Business](Business/Business.txt) | [Quarkus](Frameworks/Quarkus.md) | [Git](Ferramentas/Git.md) | [React](Libs/React.md) | [CSS](Linguagens/CSS.md) | [Linux](Sistemas_Operacionais/Linux.md)
-||||| [HTML](Linguagens/HTML.md) |
-||||| [Java](Linguagens/Java.md) |
-||||| [Javascript](Linguagens/Javascript.md) |
+| **Negócio**                       | **Frameworks**                   | **Ferramentas**           | **Bibliotecas**        | **Linguagens**                         | **Sistemas Operacionais**               |
+| --------------------------------- | -------------------------------- | ------------------------- | ---------------------- | -------------------------------------- | --------------------------------------- |
+| [Business](Business/Business.txt) | [Quarkus](Frameworks/Quarkus.md) | [Git](Ferramentas/Git.md) | [React](Libs/React.md) | [CSS](Linguagens/CSS.md)               | [Linux](Sistemas_Operacionais/Linux.md) |
+|                                   |                                  |                           |                        | [HTML](Linguagens/HTML.md)             |                                         |
+|                                   |                                  |                           |                        | [Java](Linguagens/Java.md)             |                                         |
+|                                   |                                  |                           |                        | [Javascript](Linguagens/Javascript.md) |                                         |
 
 | Security                                     |
 | -------------------------------------------- |
 | [Rootkit](Security/Rootkit.md)               |
 | [Code injection](Security/code_injection.md) |
-
