@@ -88,8 +88,32 @@ Um **modelo hibrido** pode ser usado para solucionar problema geográfico, de la
 
 <img title="" src="../../imgs/5_Periodo/Redes2/2022-02-17-20-22-34-image.png" alt="">
 
+---
+
 ## INFRA. NO CONTEXTO DE SOFTWARE
 
 :computer: virtual
 
 **Infraestrutura ágil** é considerada uma resposta ao um manifesto ágil, ou seja, criar uma infra, um conjunto de automações que permitem que façamos manutenções e modificações nos ambientes sem impactos na estabilidade e segurança (**Infraestrutura sob demanda**).
+
+---
+
+# UNIDADE 2
+
+## ENDEREÇAMENTO IP
+
+### CONVERSÃO BINÁRIA / DECIMAL
+
+:computer: virtual
+
+Vai colocando aonde cabe o número decimal, da esquerda pra direita:
+
+<img title="" src="../../imgs/5_Periodo/Redes2/2022-03-03-20-26-23-image.png" alt="">
+
+--
+
+### ENDEREÇAMENTO IPV4
+
+:computer: virtual
+
+*Protocolo de internet versão 4.*

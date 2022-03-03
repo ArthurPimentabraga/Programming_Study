@@ -152,9 +152,9 @@ asdasdasdasdasd
 
 Desenvolver uma **estrutura modular** e **relações de controle** entre os componentes <mark>...</mark>
 
-Particionamento estrutural: <mark>Acabar aqui</mark>
+Particionamento estrutural::building_construction:
 
-Arquitetura do software <mark>Acabar aqui</mark>
+Arquitetura do software :building_construction:
 
 - Unidades modulares
 
@@ -186,13 +186,13 @@ Arquitetura do software <mark>Acabar aqui</mark>
 
 #### INTERFACE
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 Estabelecer os mecanismos de interação....
 
 #### PROCEDIMENTAL
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 regras de negócio...
 
@@ -224,9 +224,9 @@ Um caso de uso é a especificação de uma sequencia de interações entre um si
 
 <mark>...</mark>
 
-- Diagrama UML: <mark>Acabar aqui</mark>
+- Diagrama UML: :building_construction:
 
-- Documentação MCU: <mark>Acabar aqui</mark>
+- Documentação MCU::building_construction:
 
 ## COMPOSIÇÃO DO MCU
 
@@ -242,13 +242,15 @@ O diagrama da UML utilizado na modelagem **gráfica** é o diagrama de casos de 
 
 ### RELACIONAMENTOS
 
-- **Comunicação (associação):** <mark>Acabar aqui</mark>
+:building_construction:
 
-- **Generalização:** <mark>Acabar aqui</mark>
+- **Comunicação (associação):**
 
-- **Inclusão:** <mark>Acabar aqui</mark>
+- **Generalização:**
 
-- **Extensão:** <mark>Acabar aqui</mark>
+- **Inclusão:**
+
+- **Extensão:** 
 
 ## DOCUMENTAÇÃO DOS CASOS DE USO
 

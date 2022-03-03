@@ -46,7 +46,7 @@ Por sermos seres humanos, estamos sujeitos a peculiaridades humanas que se torna
 
 Como foi dito anteriormente estamos sujeitos à essas peculiaridades, ou seja, pessoas diferentes têm **informações diferentes**, percepsões e **entendimentos diferentes**. Estamos sujeitos à subjetividade, percebemos as mesmas coisas de formas diferentes, cada um possui **experiências diferentes**.
 
-Um bom exemplo de como as experiências podem influênciar seria a decisão de dois moradores sobre como gastar um dinheiro com o prédio, um queria uma nova pintura, o outro um sistema de alarme, sendo que o primeiro iria vender o ap e isso iria valoriza-lo, e o segundo tinha sido assaltado recentemente.
+Um bom exemplo de como as experiências podem influênciar seria a decisão de dois moradores sobre como gastar um dinheiro com o prédio, um queria uma nova pintura, o outro um sistema de alarme, sendo que o segundo tinha sido assaltado recentemente.
 
 E por mais que nosso cérebro seja uma "máquina" incrível, não seguimos um algoritmo, todos possuimos atalhos mentais, heuristicas, etc.
 
@@ -56,9 +56,9 @@ Agora tu pergunta, se somos tão diferentes, como caminhamos e evoluimos juntos?
 
 Uma tomada de decisão de forma política é dada pela busca de **conciliação de interesses**. Pensando no exemplo do último tópico sobre o que fazer com o dinheiro no prédio, os dois moradores poderia propor um **acordo**, em que fariam ambas as melhorias pagando uma taxa extra cedida por todos os moradores, agradando razoavelmente a todos.
 
-Essas decisões podem ser tomadas por **consenso**, pela **maioria** (ex.: votos) ou por acordos.
+Essas decisões podem ser tomadas por **consenso**, pela **maioria** (ex.: votos) ou por **acordos**.
 
-*"Indivíduos ou grupos de interesse tentam, apesar de interesses não coincidentes, chegar a uma decisão que atenda de maneira razoável os envolvidos diretos, e mesmo, envolvidos indiretos na desição."*
+*"Indivíduos ou grupos de interesse tentam, apesar de interesses não coincidentes, chegar a uma decisão que atenda de maneira razoável os envolvidos diretos, e mesmo envolvidos indiretos na desição."*
 
 ### DECISÃO RESPONSÁVEL
 
@@ -78,13 +78,13 @@ Dimensões a serem consideradas:
   
   - Preocupação ambiental.
 
-- **Consciência moral:** Está muito alinhado a coerência interna, a manter uma justificativa/justiça interna. Sentimos responsabilidade pelos efeitos, assim afeta nosso controle interno, nossa saúde mental, mas pode proporcional satisfação individual.
+- **Consciência moral:** Está muito alinhado a coerência interna, a manter uma justificativa/justiça interna. Sentimos responsabilidade pelos efeitos, assim afeta nosso controle interno, nossa saúde mental, mas pode proporcionar satisfação individual.
 
 ### OUTROS MODELOS DE TD
 
 - **Intuição:** Pensamento não consciente. Leva em consideração muitas variáveis, afetivo, emocional, experiências, etc. 
   
-  - Importância em situações de pouco conhecimento ou que necessidade de uma resposta rápida.
+  - Importância em situações de pouco conhecimento ou que necessita de uma resposta rápida.
 
 - **Incrementalismo/aprendizado:** Conserto, pequenas modificações ou melhorias.
   

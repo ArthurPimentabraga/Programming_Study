@@ -50,7 +50,7 @@ Análise de complexidade de algoritmo = prever os recursos necessários, como: M
 
 ## ANÁLISE DE ALGORITMO
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 - **Análise de um algoritmo particular:** 
 
@@ -58,15 +58,15 @@ Análise de complexidade de algoritmo = prever os recursos necessários, como: M
 
 ## CUSTO DE UM ALGORITMO
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 ## FUNÇÃO DE COMPLEXIDADE
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 ## CASOS
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 - Melhor caso: 
 
@@ -86,20 +86,18 @@ Análise de complexidade de algoritmo = prever os recursos necessários, como: M
 
 ## COMPORTAMENTO ASSINTÓTICO DE FUNÇÕES
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 ### NOTAÇÃO O
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 ### NOTAÇÃO Ω
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 ## CLASSES DE COMPORTAMENTO ASSINTÓTICO
 
-<mark>Acabar aqui</mark>
-
-
+:building_construction:
 
 :calendar: 23/02

@@ -68,7 +68,7 @@ Um desenho arquitetural representa os componentes, seus relacionamentos, etc.
 
 ## DETALHAMENTO DA ARQUITETURA
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 - **Macroarquitetura:**  estilos arquiteturais (Ex.: microserviços....)
 
@@ -104,7 +104,7 @@ Arquitetura no processo!!
 
 ## IMPORTÂNCIA DA ARQUITETURA
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 - Facilita na comunicação entre os interessados no projeto, no desenvolvimento;
 
@@ -114,13 +114,13 @@ Arquitetura no processo!!
 
 ## ARQUITETURA EM CAMADAS
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 É um tipo de.... um estilo de arquitetura?
 
 ## ARQUITETURA MVC
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 ## CONCEITOS
 
@@ -218,7 +218,7 @@ Substitui a anterior.
 
 Não atende a todos os aspectos cobertos pelos requisitos arquiteturais, pois podem ser aspectos muito específicos de cada caso.
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 ---
 
@@ -256,9 +256,7 @@ Temos cenários mais adequados para usar cada tipo de sistema, como:
 
 > Note: Um monolito é mais seguro por ter menos interfaces na rede, diminui o número de possibilidade de acesso, ou seja, quanto mais camada, mais possiblidades de acesso e mais vulnerável será.
 
-
-
-<mark>Acabar aqui</mark>
+:building_construction:
 
 ## MIDDLEWARE
 
@@ -266,32 +264,30 @@ Middlewares são camadas intermediárias que, valendo-se da abstração, provêm
 
 > Note: Lembrar do Framework Arch do Inter, abstrái toda a parte de autenticação, log, tracers, etc.
 
-
-
 ## ABERTURA
 
-<mark>Acabar aqui!!!</mark>
+:building_construction:
 
 ambiente fechado não permite acesso externo sem agregar camadas (SOAP, REST, GRAPHQL)
 
 ## SEGURANÇA
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 ## ESCALABILIDADE
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 gargalos??
 
 ## MANIPULAÇÃO DE ERROS
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 ## TRANSPARÊNCIA
 
-<mark>Acabar aqui</mark>
+:building_construction:
 
 ## RECURSOS COMUNS EM SD
 
-<mark>Acabar aqui</mark>
+:building_construction:
