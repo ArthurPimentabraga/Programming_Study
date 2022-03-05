@@ -291,3 +291,147 @@ gargalos??
 ## RECURSOS COMUNS EM SD
 
 :building_construction:
+
+---
+
+# ESTILOS DE ARQUITETURIAS
+
+:calendar: 04/03
+
+:building_construction:
+
+Uma arquitetura pode ser classificada segundo estilos de arquitetura.
+
+<mark>Organizar o sistema</mark>
+
+<mark>Grau de uniformidade</mark>
+
+Um estilo é baseado **padrões** (Ex.: baseado em uml - poo, etc), **modelos** (Ex.: baseado em camadas, tipo do sistema, como se basear na arquitetura de um sistema de controle de estoque para criar outro) e **recursos** (Ex.: )
+
+Cada estilo de arquitetura lida com diferentes atributos de qualidade. Logo, precisamos conciliar os atributos relevantes de uma arquitetura que queremos construir, com os atributos dos estilos para escolher o mais adequado àquele cenário.
+
+Para elaborar uma arquitetura primeiro estudo as já existêntes, me baseio nela e faço as adequaões aos meus projetos.
+
+- Uma arquitetura pode ser baseada em mais de um estilo;
+
+- <mark>...</mark>
+
+
+
+Exemplos:
+
+- Cliente-Servidor
+
+- Camadas
+
+- Filtros e dutos (pipes and filters) (Lembrar do workflow)
+
+- Repositório
+
+- Orientado a eventos (publisher/subscriber)
+
+- Objetos distribuídos
+
+- Etc.
+
+
+
+## ESTILOS SEGUNDO PRESSMAN
+
+
+
+### ARQUITETURA CENTRADA EM DADOS
+
+:building_construction:
+
+### ARQUITETURA FLUXO DE DADOS
+
+Ao contrário do modelo anterior, esse tem foco do processo, e não nos dados.
+
+:building_construction:
+
+### ARQUITETURA CHAMADA-RETORNO
+
+:building_construction:
+
+Existe um programa gerenciador.
+
+### ARQUITETURA EM CAMADAS
+
+:building_construction:
+
+
+
+
+
+## ESTILOS SEGUNDO SOMMERVILLE
+
+
+
+### DADOS COMPARTILHADOS (REPOSITÓRIO)
+
+:building_construction:
+
+- Vantagens:
+  
+  - asd
+
+- Desvantagens:
+  
+  - asd
+
+### CLIENTE / SERVIDOR
+
+:building_construction:
+
+### CAMADAS
+
+:building_construction:
+
+### MODELO DECOMPOSIÇÃO MODULAR
+
+:building_construction:
+
+### ORIENTADO A OBJETOS
+
+:building_construction:
+
+- Vantagens:
+  
+  - asd
+
+- Desvantagens:
+  
+  - asd
+
+### FLUXO DE DADOS
+
+:building_construction:
+
+### MODELOS DE CONTROLE
+
+:building_construction:
+
+### CONTROLE CENTRALIZADO
+
+:building_construction:
+
+### CHAMADA / RETORNO
+
+:building_construction:
+
+### MODELOS DIRIGIDOS POR EVENTOS
+
+:building_construction:
+
+### MODELO DE TRANSMISSÃO
+
+:building_construction:
+
+### BROADCASTING
+
+:building_construction:
+
+### CONTROLADO POR INTERRUPÇÕES
+
+:building_construction:
