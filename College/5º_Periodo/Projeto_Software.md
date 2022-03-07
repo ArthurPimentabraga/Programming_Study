@@ -284,4 +284,10 @@ Documentação suplementar
 
 
 
-asdas
+- Relacionamentos:
+  
+  > Note: Olhar resumo de POO.
+  
+  - Associação;
+  
+  - <mark>...</mark>
