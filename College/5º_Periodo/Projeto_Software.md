@@ -278,4 +278,8 @@ Documentação suplementar
   
   - Modelo conceitual só abstrai os objetos do mundo real para um modelo, já o diagrama já é a UML em si, sua classes estruturadas com seus métodos e atributos, etc.
 
-- 
+- Em relação ao modelo conceitual, o DCP apresenta:
+  
+  - <mark>...</mark>
+  
+  - 
