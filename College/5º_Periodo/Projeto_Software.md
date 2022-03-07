@@ -265,3 +265,17 @@ Detalhamento?
 - Fluxos de eventos:
 
 Documentação suplementar
+
+---
+
+# REFINAMENTO DIAGRAMA DE CLASSE DE PROJETO
+
+:calendar: 07/03
+
+- Objetivos;
+
+- Modelo conceitual x Diagrama de classes de projeto;
+  
+  - Modelo conceitual só abstrai os objetos do mundo real para um modelo, já o diagrama já é a UML em si, sua classes estruturadas com seus métodos e atributos, etc.
+
+- 

@@ -316,8 +316,6 @@ Para elaborar uma arquitetura primeiro estudo as já existêntes, me baseio nela
 
 - <mark>...</mark>
 
-
-
 Exemplos:
 
 - Cliente-Servidor
@@ -334,11 +332,7 @@ Exemplos:
 
 - Etc.
 
-
-
 ## ESTILOS SEGUNDO PRESSMAN
-
-
 
 ### ARQUITETURA CENTRADA EM DADOS
 
@@ -360,13 +354,7 @@ Existe um programa gerenciador.
 
 :building_construction:
 
-
-
-
-
 ## ESTILOS SEGUNDO SOMMERVILLE
-
-
 
 ### DADOS COMPARTILHADOS (REPOSITÓRIO)
 
