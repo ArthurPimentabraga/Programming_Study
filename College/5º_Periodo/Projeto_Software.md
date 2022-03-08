@@ -282,8 +282,6 @@ Documentação suplementar
   
   - <mark>...</mark>
 
-
-
 - Relacionamentos:
   
   > Note: Olhar resumo de POO.
