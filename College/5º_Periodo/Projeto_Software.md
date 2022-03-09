@@ -288,4 +288,34 @@ Documentação suplementar
   
   - Associação;
   
+  - Agregação 
+    
+    - Compartilhada x Não compartilhada;
+  
   - <mark>...</mark>
+
+
+
+## DIAGRAMA DE SEQUÊNCIA
+
+:calendar: 09/03
+
+:building_construction:
+
+(Artigo no medium)
+
+> Note: Usar ele em conjunto com o diagrama de classes.
+
+
+
+## RELACIONAMENTOS DE DEPENDÊNCIA
+
+:building_construction:
+
+Mostrar a dependencia de uma classe por recursos de uma outra.
+
+Ai entra conceito de acoplamento, injeção, etc.
+
+Ajuda na análise das dependências, do nível de acoplamento no serviço, etc.
+
+<mark>Visibilidade local</mark>
