@@ -100,7 +100,7 @@ Um **modelo hibrido** pode ser usado para solucionar problema geográfico, de la
 
 # UNIDADE 2
 
-## ENDEREÇAMENTO IP
+## TEMA 1: ENDEREÇAMENTO
 
 ### CONVERSÃO BINÁRIA / DECIMAL
 
@@ -110,7 +110,7 @@ Vai colocando aonde cabe o número decimal, da esquerda pra direita:
 
 <img title="" src="../../imgs/5_Periodo/Redes2/2022-03-03-20-26-23-image.png" alt="">
 
---
+---
 
 ### ENDEREÇAMENTO IPV4
 

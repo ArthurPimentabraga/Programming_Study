@@ -36,7 +36,7 @@ Ou seja, um sistema distribuido em microserviços, camadas, por rede, IoT, mobil
 
 ## CONCEITOS
 
-- Arquitetura de software envolve estabelecer precissas, definir requisitos, padrões, recursos, etc.
+- Arquitetura de software envolve estabelecer precisas, definir requisitos, padrões, recursos, etc.
 
 - "Ponte" entre modelo conceitual e físico.
 
@@ -71,8 +71,12 @@ Um desenho arquitetural representa os componentes, seus relacionamentos, etc.
 :building_construction:
 
 - **Macroarquitetura:**  estilos arquiteturais (Ex.: microserviços....)
+  
+  - Feita no início do projeto;
 
 - **Microarquitetura:** ja é a comunicação entre eles.....
+  
+  - Vamos produzir ela quando tivermos os requisitos em mão, podendo modificar ao longo do desenvolvimento, etc.
 
 > Note: Tem que passar pelo macro antes do micro pra melhor aproveitamento.
 
@@ -262,6 +266,8 @@ Temos cenários mais adequados para usar cada tipo de sistema, como:
 
 Middlewares são camadas intermediárias que, valendo-se da abstração, provêm coesão e integração para os sistemas distribuídos. Essa camada, ou camadas, de abstração é que permite que a heterogeneidade característica de sistemas distribuídos não seja um obstáculo.
 
+Rabbit MQ é um exemplo de middleware de mensageria. Podemos ter camada de microserviço de middleware... tudo que prover uma interface que facilita algum processo, e faz a ligação de uma camada a outra, é considerado um middlware.
+
 > Note: Lembrar do Framework Arch do Inter, abstrái toda a parte de autenticação, log, tracers, etc.
 
 ## ABERTURA
@@ -302,6 +308,8 @@ gargalos??
 
 Uma arquitetura pode ser classificada segundo estilos de arquitetura.
 
+Taxonomia.
+
 <mark>Organizar o sistema</mark>
 
 <mark>Grau de uniformidade</mark>
@@ -310,7 +318,7 @@ Um estilo é baseado **padrões** (Ex.: baseado em uml - poo, etc), **modelos** 
 
 Cada estilo de arquitetura lida com diferentes atributos de qualidade. Logo, precisamos conciliar os atributos relevantes de uma arquitetura que queremos construir, com os atributos dos estilos para escolher o mais adequado àquele cenário.
 
-Para elaborar uma arquitetura primeiro estudo as já existêntes, me baseio nela e faço as adequaões aos meus projetos.
+Para elaborar uma arquitetura primeiro estudo as já existêntes, me baseio nela e faço as adequasões aos meus projetos.
 
 - Uma arquitetura pode ser baseada em mais de um estilo;
 
@@ -421,5 +429,69 @@ Existe um programa gerenciador.
 :building_construction:
 
 ### CONTROLADO POR INTERRUPÇÕES
+
+:building_construction:
+
+---
+
+# PADRÃO CAMADAS
+
+:calendar: 11/03
+
+## CONCEITO
+
+:building_construction:
+
+É uma forma de separar **fisicamente ou logicamente** os componentes de um sistema/aplicação distribuído.
+
+**Divisão de responsabilidades.**
+
+Exemplos: 
+
+- Camada física = hardware, organização das máquinas, equipamentos, etc;
+
+- Container é uma camada lógica;
+
+- Sistema operacional;
+
+- Banco de dados;
+
+- Modelo de dados ();
+
+- Microsserviços;
+
+- Visão;
+
+- Barramento de serviços;
+
+- Etc.
+
+Partições.......
+
+Uma camada: baixa escalabilidade, se eu quiser comprar alguma coisa na amazon teria que ter uma linha ponto a ponto com ela para o acesso, um terminal só meu..... linha telefonica
+
+- Não teria um SO para ser considerado outra camada não?
+
+Duas camadas: 
+
+- Uso da rede.
+
+- Separa os dados da aplicação, ou seja, a aplicação roda no cliente, e o servidor fica responsável pela manipulação dos dados através das requisições que recebe.
+
+- Cliente servidor 2 camdas x Cliente servidor web
+
+3 camadas:
+
+- Nova camada para a aplicação no servidor, agora o cliente não precisa se preocupar com as versões, etc.
+
+- AInda não é o suficiente para arquiteturas web/móvel;
+
+4 camadas:
+
+- Conexões TCP/IP com HTTO/HTML
+
+- Web se torna uma camada
+
+## CONCLUSÃO
 
 :building_construction:
