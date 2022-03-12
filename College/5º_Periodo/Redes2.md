@@ -117,3 +117,81 @@ Vai colocando aonde cabe o número decimal, da esquerda pra direita:
 :computer: virtual
 
 *Protocolo de internet versão 4.*
+
+É um identificador atribuído a cada máquina em uma rede IP. Possibilita a um host em uma rede comunicar-se com outro host de uma rede distinta e distante, e idependente do tipo de rede.
+
+E ai podemos ver a importância de projetar, implementar e gerenciar um plano de endereçamento IPv4, pois permite que a rede opere de forma correta, ou seja, que não falte IPs para nenhuma máquina, ou que máquinas destinadas à um objetivo não fique no mesmo bloco de IPs que outras de objetivos diferentes, etc.
+
+Cabeçalho IP:
+
+<img title="" src="../../imgs/5_Periodo/Redes2/2022-03-12-16-10-56-image.png" alt="">
+
+
+
+Cada endereço é representado por 32 bits divididos em 4 blocos de 1 byte.
+
+Cada endereço pode utilizar a noteção decimal, binária ou hexadecimal. Ex.:
+
+> 192.168.10.31
+> 
+> 11000000.10101000.00001010.00011111
+> 
+> C0 A0 0A 1F
+
+
+
+**Tipos de endereços IPv4:**
+
+- **Rede:** Endereço pelo qual nos referimos à rede, ou seja, é um endereço que não pode ser usado por uma máquina, os bits de host ficam com 0;
+
+- **Broadcast:** Endereço especial usado para enviar dados a todos os host da rede (os bits de host ficam com 1);
+
+- **Host:** Endereços designados ao dispositivos finais da rede (os bits destinados aos host ficam com qualquer combinação diferente das anteriores).
+
+
+
+Geralmente os **3 primeiros blocos** indentificam em qual rede **local** o host está, ou seja, é um conjunto de ips destinados aos hosts.
+
+O **último bloco** é o identificados de um **host específico** dentro daquela rede local, ou seja, de um equipamento específico, uma máquina, um roteador, etc.
+
+> Note: Normalmente o último bloco = .1 é destinado ao roteador, e as máquinas ficam entre 2 e 254.
+
+> Note: Até agora falamos em um divisão dos bits para rede e host, mas também podemos fazer uma divisão de rede, subrede e host.
+
+
+
+##### MÁSCARAS
+
+Mas como podemos saber de fato quantos bits são usados para rede, e quantos são usados para o host? A porção de definada pela **máscara!**
+
+Ex.: 255.255.255.0 = 24 bits para indentificar a rede, e 8 para o host.
+
+
+
+Para dividir essa porção já foi muito usado a divisão por classes, o que hoje não é tão usado mais:
+
+<img title="" src="../../imgs/5_Periodo/Redes2/2022-03-12-16-38-54-image.png" alt="">
+
+Número de possibilidades de IPs por classe:
+
+![](../../imgs/5_Periodo/Redes2/2022-03-12-16-43-58-image.png)
+
+
+
+Máscara default (em decimal):
+
+![](../../imgs/5_Periodo/Redes2/2022-03-12-16-49-56-image.png)
+
+
+
+#### IPV4 EM CLASSES
+
+Lorem Ipsum
+
+#### REDES - SUB-REDES, CIDR E NAT
+
+Lorem Ipsum
+
+#### ESGOTAMENTO IPV4
+
+Lorem Ipsum
