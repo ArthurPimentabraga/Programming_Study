@@ -294,8 +294,6 @@ Documentação suplementar
   
   - <mark>...</mark>
 
-
-
 ## DIAGRAMA DE SEQUÊNCIA
 
 :calendar: 09/03
@@ -305,8 +303,6 @@ Documentação suplementar
 (Artigo no medium)
 
 > Note: Usar ele em conjunto com o diagrama de classes.
-
-
 
 ## RELACIONAMENTOS DE DEPENDÊNCIA
 
@@ -319,3 +315,9 @@ Ai entra conceito de acoplamento, injeção, etc.
 Ajuda na análise das dependências, do nível de acoplamento no serviço, etc.
 
 <mark>Visibilidade local</mark>
+
+---
+
+
+
+:calendar:14/03

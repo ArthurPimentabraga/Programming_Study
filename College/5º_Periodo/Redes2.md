@@ -126,8 +126,6 @@ Cabeçalho IP:
 
 <img title="" src="../../imgs/5_Periodo/Redes2/2022-03-12-16-10-56-image.png" alt="">
 
-
-
 Cada endereço é representado por 32 bits divididos em 4 blocos de 1 byte.
 
 Cada endereço pode utilizar a noteção decimal, binária ou hexadecimal. Ex.:
@@ -138,8 +136,6 @@ Cada endereço pode utilizar a noteção decimal, binária ou hexadecimal. Ex.:
 > 
 > C0 A0 0A 1F
 
-
-
 **Tipos de endereços IPv4:**
 
 - **Rede:** Endereço pelo qual nos referimos à rede, ou seja, é um endereço que não pode ser usado por uma máquina, os bits de host ficam com 0;
@@ -147,8 +143,6 @@ Cada endereço pode utilizar a noteção decimal, binária ou hexadecimal. Ex.:
 - **Broadcast:** Endereço especial usado para enviar dados a todos os host da rede (os bits de host ficam com 1);
 
 - **Host:** Endereços designados ao dispositivos finais da rede (os bits destinados aos host ficam com qualquer combinação diferente das anteriores).
-
-
 
 Geralmente os **3 primeiros blocos** indentificam em qual rede **local** o host está, ou seja, é um conjunto de ips destinados aos hosts.
 
@@ -158,15 +152,11 @@ O **último bloco** é o identificados de um **host específico** dentro daquela
 
 > Note: Até agora falamos em um divisão dos bits para rede e host, mas também podemos fazer uma divisão de rede, subrede e host.
 
-
-
 ##### MÁSCARAS
 
 Mas como podemos saber de fato quantos bits são usados para rede, e quantos são usados para o host? A porção de definada pela **máscara!**
 
 Ex.: 255.255.255.0 = 24 bits para indentificar a rede, e 8 para o host.
-
-
 
 Para dividir essa porção já foi muito usado a divisão por classes, o que hoje não é tão usado mais:
 
@@ -176,21 +166,53 @@ Número de possibilidades de IPs por classe:
 
 ![](../../imgs/5_Periodo/Redes2/2022-03-12-16-43-58-image.png)
 
-
-
 Máscara default (em decimal):
 
 ![](../../imgs/5_Periodo/Redes2/2022-03-12-16-49-56-image.png)
 
-
-
-#### IPV4 EM CLASSES
-
-Lorem Ipsum
-
 #### REDES - SUB-REDES, CIDR E NAT
 
-Lorem Ipsum
+Um dos problemas dessa forma de divisão de redes por classes é o **disperdício de a endereços**, ou seja, se temos um escritório que só necessita de 5 máquinas, uma máscara do tipo C (a menor possível) ainda teria um desperdício de, aproximadamente, 248 endereços.
+
+Para solucionar isso temos algumas formas de configurar a rede.
+
+> Note: Sub-rede com CIDR e NAT não são "boas práticas", o ideal é migrar para o IPv6.
+
+<mark>Questões: IP -> Broadcast | Criar 4 subredes </mark>
+
+###### SUB-REDE COM CIRD
+
+A ideia é subdividir uma rede (Ex.: 192.168.0.0), para obter "redes" com menos host.
+
+![](../../imgs/5_Periodo/Redes2/2022-03-14-21-24-05-image.png)
+
+Para entender como subdividir uma rede podemos definir alguns passos:
+
+1. Defina quantas subredes deseja para descobrir quantos bits são necessários para representar essa quantidade.
+   
+   1. Ex.:
+
+
+
+<mark>Ainda há desperdício</mark>
+
+<mark>VLSM</mark>
+
+Ao invés de quebrar as subredes com o mesmo numero de hosts, passamos uma mascara diferente para cada, subredes variáveis, cada uma terá o número de hosts adequado.
+
+> Note: Só pra complicar a conta :)
+
+<mark>CIDR</mark>
+
+Roteamento sem classe - conceito para facilitar o rastreamento de IP no mundo
+
+###### NAT
+
+Forma de 
+
+###### IPV6
+
+asdas
 
 #### ESGOTAMENTO IPV4
 
