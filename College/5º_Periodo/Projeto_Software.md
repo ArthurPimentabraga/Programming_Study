@@ -300,6 +300,8 @@ Documentação suplementar
 
 :building_construction:
 
+<mark>RETIRAR ESSE TÓPICO??</mark>
+
 > [Artigo no medium](https://medium.com/documenta%C3%A7ao-uml/introdu%C3%A7%C3%A3o-ao-diagrama-de-sequ%C3%AAncia-1ea5e9563594)
 
 > Note: Usar ele em conjunto com o diagrama de classes.
@@ -328,12 +330,22 @@ Basicamente reflete toda a interação do ator com o sistema para realizar os ca
 
 Enquanto o diagrama de caso de uso passa uma visão de como os atores interagem com o sistema, o de interação passa uma visão mais interna, de como as coisas funcionam internamente, **como os componentes interagem entre si**.
 
-Os diagramas que compoẽm do modelo de interação são:
+Há 4 tipos de diagramas de interação:
 
 - Diagrama de sequência;
 
-- Modelo de classes de análise?
+- Diagrama de comunicação;
 
-- <mark>...</mark>
+- Diagrama de visão geral da interação;
+
+- Diagrama de temporização;
 
 > Note: Geralmente é feito um modelo de interação para cada caso de uso!
+
+
+
+<mark>Modelo de classes de análise?</mark>
+
+## DIAGRAMA DE SEQUÊNCIA
+
+:building_construction:
