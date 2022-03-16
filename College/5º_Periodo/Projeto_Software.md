@@ -318,6 +318,4 @@ Ajuda na análise das dependências, do nível de acoplamento no serviço, etc.
 
 ---
 
-
-
 :calendar:14/03

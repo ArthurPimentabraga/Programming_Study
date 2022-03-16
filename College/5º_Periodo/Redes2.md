@@ -178,8 +178,6 @@ Para solucionar isso temos algumas formas de configurar a rede.
 
 > Note: Sub-rede com CIDR e NAT não são "boas práticas", o ideal é migrar para o IPv6.
 
-<mark>Questões: IP -> Broadcast | Criar 4 subredes </mark>
-
 ###### SUB-REDE COM CIRD
 
 A ideia é subdividir uma rede (Ex.: 192.168.0.0), para obter "redes" com menos host.
@@ -192,8 +190,6 @@ Para entender como subdividir uma rede podemos definir alguns passos:
    
    1. Ex.:
 
-
-
 <mark>Ainda há desperdício</mark>
 
 <mark>VLSM</mark>
@@ -201,6 +197,14 @@ Para entender como subdividir uma rede podemos definir alguns passos:
 Ao invés de quebrar as subredes com o mesmo numero de hosts, passamos uma mascara diferente para cada, subredes variáveis, cada uma terá o número de hosts adequado.
 
 > Note: Só pra complicar a conta :)
+
+Para dividir sub-redes -> calcular a mascara de cada "grupo" isoladamente.
+
+1. Ordenar os grupos pela quantidade de host necessários;
+
+2. 
+
+<mark>Exemplo:</mark>
 
 <mark>CIDR</mark>
 
@@ -217,3 +221,13 @@ asdas
 #### ESGOTAMENTO IPV4
 
 Lorem Ipsum
+
+---
+
+# EXERCÍCIO
+
+:calendar: 15/03
+
+192.168.9.0/24
+
+    

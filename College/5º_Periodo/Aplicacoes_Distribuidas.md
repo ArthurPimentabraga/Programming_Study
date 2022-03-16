@@ -68,13 +68,11 @@ Um desenho arquitetural representa os componentes, seus relacionamentos, etc.
 
 ## DETALHAMENTO DA ARQUITETURA
 
-:building_construction:
-
-- **Macroarquitetura:**  estilos arquiteturais (Ex.: microserviços....)
+- **Macroarquitetura:**  Define a arquitetura em aspectos mais gerais, com o estilo arquitetural que seguirá (Ex.: Centrada a dados, em camadas, etc. Acredito que microserviços também pode ser considerado, por ser em camadas, etc).
   
   - Feita no início do projeto;
 
-- **Microarquitetura:** ja é a comunicação entre eles.....
+- **Microarquitetura:** É um refinamento da macro, já descreve a comunicação entre os componentes, seu nível de granularidade, etc. Sendo possível o desenvolvimento com ela.
   
   - Vamos produzir ela quando tivermos os requisitos em mão, podendo modificar ao longo do desenvolvimento, etc.
 
@@ -82,17 +80,31 @@ Um desenho arquitetural representa os componentes, seus relacionamentos, etc.
 
 ### ESCOPOS DE ARQUITETURA
 
-<mark>GUARDA CHUVA!!!!</mark>
+Para conseguirmos seguir corretamente, e sem muitos problemas, o projeto arquitetural nas fases de implementação é importante definirmos os escopos:
 
-Enterprise architecture decisions -> Ex.: Parceria com AWS.....
+![""](/home/arthur/Documentos/Programming_Study/imgs/5_Periodo/Aplicacoes_Distribuidas/2022-03-16-18-35-31-image.png)
 
-Domain Scope -> Ex.: Aplicação móveis - Aplicações Web
+- **Enterprise architecture decisions** (Arquitetura corporativa);
+  
+  -  Decisões técnicas que envolvem toda a empresa (ACHO);
+  
+  - Ex.: Parceria com AWS, etc.
 
-Aplication scope -> Decisão de 
+- **Domain Scope** (Arquitetura de domínio); 
+  
+  - Ex.: Aplicação móvel - Aplicação Web, etc.
 
-Component scope -> vai usar serviço de mesageria nesse projeto?....
+- **Aplication scope** (Arquitetura de aplicação); 
+  
+  - Decisão de<mark>.....</mark> 
 
-<mark><<<<<<<<<<< >>>>>>>>>>></mark>
+- **Component scope** (Arquitetura de componente);
+  
+  - Decisões limitadas aos componentes em específico, como: vai usar serviço de mesageria nesse projeto? Como será a comunição entre os microsserviços?
+
+### NÍVEIS DE DECISÃO
+
+:building_construction:
 
 - **Meta-Arquitecture:** Guias de arquitetura, arquiteturas de referências, servem como base para a definição arquitetural da empresa....
 
@@ -103,8 +115,6 @@ Component scope -> vai usar serviço de mesageria nesse projeto?....
 Diagramas comportamentais e estruturais!!!
 
 Arquitetura no processo!!
-
-<mark><<<<<<<<<<< >>>>>>>>>>></mark>
 
 ## IMPORTÂNCIA DA ARQUITETURA
 
