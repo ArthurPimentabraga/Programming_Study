@@ -300,7 +300,7 @@ Documentação suplementar
 
 :building_construction:
 
-(Artigo no medium)
+> [Artigo no medium](https://medium.com/documenta%C3%A7ao-uml/introdu%C3%A7%C3%A3o-ao-diagrama-de-sequ%C3%AAncia-1ea5e9563594)
 
 > Note: Usar ele em conjunto com o diagrama de classes.
 
@@ -318,4 +318,22 @@ Ajuda na análise das dependências, do nível de acoplamento no serviço, etc.
 
 ---
 
-:calendar:14/03
+# MODELO DE INTERAÇÃO
+
+:building_construction:
+
+:calendar:16/03
+
+Basicamente reflete toda a interação do ator com o sistema para realizar os casos de uso.
+
+Enquanto o diagrama de caso de uso passa uma visão de como os atores interagem com o sistema, o de interação passa uma visão mais interna, de como as coisas funcionam internamente, **como os componentes interagem entre si**.
+
+Os diagramas que compoẽm do modelo de interação são:
+
+- Diagrama de sequência;
+
+- Modelo de classes de análise?
+
+- <mark>...</mark>
+
+> Note: Geralmente é feito um modelo de interação para cada caso de uso!
