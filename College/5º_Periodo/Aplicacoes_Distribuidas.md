@@ -244,17 +244,15 @@ Não atende a todos os aspectos cobertos pelos requisitos arquiteturais, pois po
 
 Oposto de sistemas monoliticos.
 
-- Monolitos
-  
-  - Basicamento toda a aplicação está centralizada.
+- Monolitos: Basicamento toda a aplicação está centralizada.
 
 > Mainframe: Núcleo central, grande estrutura.
 > 
-> Note: Vários terminais podem se ligar a um mainframe. Ou seja, várias máquinas só recebem e exibem os dados.
+> Note: Vários terminais podem se ligar a um mainframe. Ou seja, várias máquinas, sem poder de processamento, só recebem e exibem os dados.
 
 Sistemas distribuidos aumentam a complexidade, por poder se tratar de programação poliglota (podendo ser vantagem também!!), usa muito mais rede para se comunicar, uma infra maior, etc.
 
-Tanenbaum: *"Coleção de computadores independentes que se apresenta ao usuário como um sistema único e consistente."*
+Definição por Tanenbaum: *"Coleção de computadores independentes que se apresenta ao usuário como um sistema único e consistente."*
 
 ![""](/home/arthur/Documentos/Programming_Study/imgs/5_Periodo/Aplicacoes_Distribuidas/2022-02-25-19-40-17-image.png)
 
@@ -276,7 +274,7 @@ Temos cenários mais adequados para usar cada tipo de sistema, como:
 
 Middlewares são camadas intermediárias que, valendo-se da abstração, provêm coesão e integração para os sistemas distribuídos. Essa camada, ou camadas, de abstração é que permite que a heterogeneidade característica de sistemas distribuídos não seja um obstáculo.
 
-Rabbit MQ é um exemplo de middleware de mensageria. Podemos ter camada de microserviço de middleware... tudo que prover uma interface que facilita algum processo, e faz a ligação de uma camada a outra, é considerado um middlware.
+Rabbit MQ é um exemplo de middleware de mensageria. Podemos ter camada de microserviço de middleware... tudo que prover uma interface que facilita algum processo, e faz a ligação de uma camada a outra, é considerado um middleware.
 
 > Note: Lembrar do Framework Arch do Inter, abstrái toda a parte de autenticação, log, tracers, etc.
 
@@ -328,7 +326,7 @@ Um estilo é baseado **padrões** (Ex.: baseado em uml - poo, etc), **modelos** 
 
 Cada estilo de arquitetura lida com diferentes atributos de qualidade. Logo, precisamos conciliar os atributos relevantes de uma arquitetura que queremos construir, com os atributos dos estilos para escolher o mais adequado àquele cenário.
 
-Para elaborar uma arquitetura primeiro estudo as já existêntes, me baseio nela e faço as adequasões aos meus projetos.
+Para elaborar uma arquitetura primeiro estudo as já existêntes, me baseio nela e faço as adequações aos meus projetos.
 
 - Uma arquitetura pode ser baseada em mais de um estilo;
 
@@ -459,8 +457,8 @@ Existe um programa gerenciador.
 Exemplos: 
 
 - Camada física = hardware, organização das máquinas, equipamentos, etc;
-
-- Container é uma camada lógica;
+  
+  - Container é uma camada lógica;
 
 - Sistema operacional;
 
@@ -476,13 +474,15 @@ Exemplos:
 
 - Etc.
 
-Partições.......
+<mark>Partições.......</mark>
 
-Uma camada: baixa escalabilidade, se eu quiser comprar alguma coisa na amazon teria que ter uma linha ponto a ponto com ela para o acesso, um terminal só meu..... linha telefonica
+## 1 CAMADA
+
+baixa escalabilidade, se eu quiser comprar alguma coisa na amazon teria que ter uma linha ponto a ponto com ela para o acesso, um terminal só meu..... linha telefonica
 
 - Não teria um SO para ser considerado outra camada não?
 
-Duas camadas: 
+## 2 CAMADAS
 
 - Uso da rede.
 
@@ -490,17 +490,19 @@ Duas camadas:
 
 - Cliente servidor 2 camdas x Cliente servidor web
 
-3 camadas:
+## 3 CAMADAS
 
 - Nova camada para a aplicação no servidor, agora o cliente não precisa se preocupar com as versões, etc.
 
 - AInda não é o suficiente para arquiteturas web/móvel;
 
-4 camadas:
+## 4 CAMADAS
 
 - Conexões TCP/IP com HTTO/HTML
 
 - Web se torna uma camada
+
+N camadas...
 
 ## CONCLUSÃO
 
