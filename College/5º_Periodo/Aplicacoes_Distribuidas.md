@@ -58,7 +58,7 @@ Um desenho arquitetural representa os componentes, seus relacionamentos, etc.
 
 "Arquitetura é o conjunto de decisões significativas sobre a organização de um sistema de software."
 
-> Ler também a atividade: ED1 - Arquiteto de sw!
+> Ler também a atividade: [ED1 - Arquiteto de sw!]([ED1 - Arquiteto de sw - Documentos Google](https://docs.google.com/document/d/1dNWyxJU68HNVZOogi6le2ELGNj_uMYcPmb3fgvw3AWs/edit?usp=sharing))
 
 > Note: Visões Arquiteturais (RUP)
 
@@ -86,7 +86,7 @@ Para conseguirmos seguir corretamente, e sem muitos problemas, o projeto arquite
 
 - **Enterprise architecture decisions** (Arquitetura corporativa);
   
-  -  Decisões técnicas que envolvem toda a empresa (ACHO);
+  - Decisões técnicas que envolvem toda a empresa (ACHO);
   
   - Ex.: Parceria com AWS, etc.
 
@@ -240,7 +240,7 @@ Não atende a todos os aspectos cobertos pelos requisitos arquiteturais, pois po
 
 :calendar:25/02
 
-> Estudar exercício de conceitos de SD!
+> Atividade relacionada: [Conceitos de SD!]([Exercicio - conceitos SD - Documentos Google](https://docs.google.com/document/d/1YRiFEcX1--wWD1fWuhEE_Ak3IcaQBjEyg7QqacitrX8/edit?usp=sharing))
 
 Oposto de sistemas monoliticos.
 
@@ -312,7 +312,11 @@ gargalos??
 
 :calendar: 04/03
 
+> Atividade relacionada: [Estilos de arquitetura de SW]([Ex. estilos de arquitetura de sw - Documentos Google](https://docs.google.com/document/d/1u8_gZwa95bwAlIOUkzXJpjFk2_zo3QZJCsMEkk7wq6c/edit?usp=sharing))
+
 :building_construction:
+
+Analogia com design pattern... forma de resolver um problema, chegar a um objetivo.
 
 Uma arquitetura pode ser classificada segundo estilos de arquitetura.
 
@@ -322,15 +326,17 @@ Taxonomia.
 
 <mark>Grau de uniformidade</mark>
 
-Um estilo é baseado **padrões** (Ex.: baseado em uml - poo, etc), **modelos** (Ex.: baseado em camadas, tipo do sistema, como se basear na arquitetura de um sistema de controle de estoque para criar outro) e **recursos** (Ex.: )
 
-Cada estilo de arquitetura lida com diferentes atributos de qualidade. Logo, precisamos conciliar os atributos relevantes de uma arquitetura que queremos construir, com os atributos dos estilos para escolher o mais adequado àquele cenário.
+
+*Um estilo é baseado **padrões** (Ex.: baseado em uml - poo, etc), **modelos** (Ex.: baseado em camadas, tipo do sistema, como se basear na arquitetura de um sistema de controle de estoque para criar outro) e **recursos** (Ex.: )*
+
+*Cada estilo de arquitetura lida com diferentes atributos de qualidade. Logo, precisamos conciliar os atributos relevantes de uma arquitetura que queremos construir, com os atributos dos estilos para escolher o mais adequado àquele cenário.*
+
+
 
 Para elaborar uma arquitetura primeiro estudo as já existêntes, me baseio nela e faço as adequações aos meus projetos.
 
 - Uma arquitetura pode ser baseada em mais de um estilo;
-
-- <mark>...</mark>
 
 Exemplos:
 
@@ -350,9 +356,17 @@ Exemplos:
 
 ## ESTILOS SEGUNDO PRESSMAN
 
+• Centrado em dados (Repositório) 
+• Fluxo de dados. 
+• Chamada-retorno. 
+• Orientada a objetos. 
+• Camadas.
+
 ### ARQUITETURA CENTRADA EM DADOS
 
 :building_construction:
+
+![](/home/arthur/Documentos/Programming_Study/imgs/5_Periodo/2022-03-17-20-53-31-image.png)
 
 ### ARQUITETURA FLUXO DE DADOS
 
@@ -360,21 +374,35 @@ Ao contrário do modelo anterior, esse tem foco do processo, e não nos dados.
 
 :building_construction:
 
+![](/home/arthur/Documentos/Programming_Study/imgs/5_Periodo/2022-03-17-20-54-48-image.png)
+
 ### ARQUITETURA CHAMADA-RETORNO
 
 :building_construction:
 
 Existe um programa gerenciador.
 
+Estrutura de programa relativamente fácil de modificar e ampliar,
+
+![](/home/arthur/Documentos/Programming_Study/imgs/5_Periodo/2022-03-17-20-55-08-image.png)
+
 ### ARQUITETURA EM CAMADAS
 
 :building_construction:
 
+![](/home/arthur/Documentos/Programming_Study/imgs/5_Periodo/2022-03-17-21-01-21-image.png)
+
 ## ESTILOS SEGUNDO SOMMERVILLE
+
+• Dados compartilhados. 
+• Serviços e servidores compartilhados. 
+• Máquina abstrata ou camadas
 
 ### DADOS COMPARTILHADOS (REPOSITÓRIO)
 
 :building_construction:
+
+Quando grandes quantidades de dados....
 
 - Vantagens:
   
@@ -388,57 +416,73 @@ Existe um programa gerenciador.
 
 :building_construction:
 
+![](/home/arthur/Documentos/Programming_Study/imgs/5_Periodo/2022-03-17-21-21-21-image.png)
+
 ### CAMADAS
 
 :building_construction:
+
+Mesma coisa...
 
 ### MODELO DECOMPOSIÇÃO MODULAR
 
 :building_construction:
 
-### ORIENTADO A OBJETOS
+- Modelo orientado a objetos;
+
+- Modelo de fluxo de dados.
+
+#### ORIENTADO A OBJETOS
 
 :building_construction:
+
+Decomposto em um conjunto de objetos que se comunicam (POO mesmo).
+
+#### FLUXO DE DADOS
+
+:building_construction:
+
+Modelo pipeline, é decomposto em módulos funcionais que transformam entradas de dados em saídas.
+
+Mesma coisa do Pressman.
+
+Não é muito adequado para sistemas iterativos, é mais para sistemas de transformações sequênciais, de processamento de dados.
 
 - Vantagens:
   
-  - asd
-
-- Desvantagens:
+  - Apoia o reuso de transformações;
   
-  - asd
+  - É intuitiva, pois pessoas pensam no sentido de entrada e saída;
+  
+  - Escalabilidade facilitada, ou seja, adição de novas transformações é direta;
+  
+  - Fácil de ser implementada tanto quanto um sistema concorrente ou sequêncial;
 
-### FLUXO DE DADOS
-
-:building_construction:
+- Desvantagem:
+  
+  - Formato comum/padrão para transferência de dados.
 
 ### MODELOS DE CONTROLE
 
 :building_construction:
 
-### CONTROLE CENTRALIZADO
+- **Controle centralizado:** Um subsistema é o manda-chuva, tem controle sobre os outros (gerenciar a execução dos outros).
+  
+  - **Modelo de retorno de chamadas:** O controle começa na parte superior da hierarquia e passa para níveis inferiores (chamada/retorno). Aplicável a sistemas sequênciais;
+    
+    - ![](/home/arthur/Documentos/Programming_Study/imgs/5_Periodo/2022-03-17-21-51-07-image.png)
+  
+  - **Modelo gerenciador:** A diferença é que a única hierarquia que existe é esse sistema gerenciador, e todos os outros o utilizam.
+    
+    - ![](/home/arthur/Documentos/Programming_Study/imgs/5_Periodo/2022-03-17-21-50-50-image.png)
 
-:building_construction:
-
-### CHAMADA / RETORNO
-
-:building_construction:
-
-### MODELOS DIRIGIDOS POR EVENTOS
-
-:building_construction:
-
-### MODELO DE TRANSMISSÃO
-
-:building_construction:
-
-### BROADCASTING
-
-:building_construction:
-
-### CONTROLADO POR INTERRUPÇÕES
-
-:building_construction:
+- **Controle baseado em eventos:** Cada subsistema pode responder por eventos/chamadas gerados por outros subsistemas ou do ambiente do sistema.
+  
+  - **Modelos de transmissão:** É um broadcast, o evento é transmitido para todos os subsistemas, e qualquer subsistema que puder manipular esse evento responderá a ele.
+  
+  - **Modelos orietados a interrupções:** Usado em sistemas de **tempo real**, quando ocorre um evento uma interrupção é lançada e o sistema já tem pré-definido o tratamento de cada interrupção, ou seja, já sabe para qual componente enviar para seguir o processamento adequado.
+    
+    - ![](/home/arthur/Documentos/Programming_Study/imgs/5_Periodo/2022-03-17-21-55-30-image.png)
 
 ---
 
@@ -474,13 +518,13 @@ Exemplos:
 
 - Etc.
 
-<mark>Partições.......</mark>
+## PARTIÇÕES
+
+Lorem Ipsum
 
 ## 1 CAMADA
 
 baixa escalabilidade, se eu quiser comprar alguma coisa na amazon teria que ter uma linha ponto a ponto com ela para o acesso, um terminal só meu..... linha telefonica
-
-- Não teria um SO para ser considerado outra camada não?
 
 ## 2 CAMADAS
 
@@ -488,7 +532,7 @@ baixa escalabilidade, se eu quiser comprar alguma coisa na amazon teria que ter 
 
 - Separa os dados da aplicação, ou seja, a aplicação roda no cliente, e o servidor fica responsável pela manipulação dos dados através das requisições que recebe.
 
-- Cliente servidor 2 camdas x Cliente servidor web
+- Cliente servidor 2 camadas x Cliente servidor web
 
 ## 3 CAMADAS
 
@@ -507,3 +551,15 @@ N camadas...
 ## CONCLUSÃO
 
 :building_construction:
+
+À medida que o número de camadas aumenta os sistemas ficam mais abertos e flexíveis...  
+• Porém, ficam mais vulneráveis (menos robustos e seguros).  
+• O crescimento do número de camadas proporcionou o desenvolvimento de aplicações distribuídas sofisticadas.  
+• A interface de usuário evolui com a separação das camadas.  
+• Pode-se aplicar o padrão Model-View-Controller a partir de 3 camadas.
+
+Um conselho: construa uma arquitetura tão  
+simples quanto seja possível, mas nunca se  
+esqueça que ela deve atender às necessidades  
+do negócio do cliente e que um dia toda  
+aplicação vai precisar de manutenção.
