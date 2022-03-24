@@ -224,10 +224,78 @@ Lorem Ipsum
 
 ---
 
-# EXERCÍCIO
+### ENDEREÇAMENTO IPV6
 
-:calendar: 15/03
+:computer: virtual
 
-192.168.9.0/24
+Solução definitiva para o problema de escassez do IPV4.
 
-    
+- Menor cabeçalho permitindo uma leitura mais rápida dos pacotes. E mesmo com menos campos nele, há como utilizar campos adicionais para não perder as funcionalidades.
+
+- Capacidade de criptografia.
+
+- Mudanças no cabeçalho para facilitar mecanismos de qualidade de serviço (tratamentos diferenciados).
+
+![](../../imgs/5_Periodo/Redes2/2022-03-24-19-47-12-image.png)
+
+Agora temos **128 bits** para os IPs, logo a estrutura muda: Ao invés de ter 4 blocos de 8 bits, temos **8 blocos de 16 bits**. Mas para não ficar uma infinidade de 0 e 1, convertemos para hexadecimal, chegando em 8 blocos de 4 caracteres em hexadecial.
+
+Exemplo:
+
+![](../../imgs/5_Periodo/Redes2/2022-03-24-19-50-58-image.png)
+
+<img src="../../imgs/5_Periodo/Redes2/2022-03-24-19-51-04-image.png" title="" alt="" width="275">
+
+#### CARACTERÍSTICAS
+
+- **Endereçamento Unicast Global:** permite a alocação de endereços IPs suficientes para cada dispositivo no mundo, sem a necessidade de NAT.
+  
+  > Para cada metro² do mundo temos mais de 1000 endereços disponíveis.
+
+- **Agregação Global de Rotas:** permite a alocaçõ de redes IPv6 de acordo com a região geográfica, evitando o crescimento desordenado das tabelas de roteamento no mundo.
+  
+  - Análogo com o telefone. Ex.: +55 31 = Brasil MG.
+  
+  - Para o Brasil prefixo 280/12.
+
+#### DIVISÃO DO ENDEREÇO IPV6:
+
+Os primeiros 64 bits:
+
+| 12 bits           | 20 bits  | 16 bits | 16 bits |
+| ----------------- | -------- | ------- | ------- |
+| Região do planeta | Provedor | Cliente | Subrede |
+
+Os outros 64 são para identificar os equipamentos :)
+
+#### CONVERÇÕES PARA REPRESENTAÇÃO
+
+![](../../imgs/5_Periodo/Redes2/2022-03-24-20-06-38-image.png)
+
+#### ATRIBUIÇÃO DE ENDEREÇOS
+
+- Estática (Manual);
+
+- Dinâmica com informação de estado (Stateful - DHCP - Automática);
+
+- Dinâmica sem informação de estado (Stateless)
+
+- ID de Interface com formato EUI-64 (a prórpia máquina passa esse endereço pra ela).
+  
+  - Para isso usa o endereço MAC.
+
+#### TIPOS DE ENDEREÇOS IPV6
+
+- **Unicast:** Endereços atribuídos em interfaces individuais;
+
+- **Multicast:** Endereço IP representa um grupo dinâmico de hosts;
+
+- **Anycast:** Mesma coisa do anterior, mas ao enviar um pacote, ele é enviado somente para a interface mais próximo.
+
+---
+
+## TEMA 2: CABEAMENTO
+
+### CABEAMENTO ESTRUTURADO
+
+:computer: virtual

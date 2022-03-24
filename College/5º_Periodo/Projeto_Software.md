@@ -342,10 +342,20 @@ Há 4 tipos de diagramas de interação:
 
 > Note: Geralmente é feito um modelo de interação para cada caso de uso!
 
-
-
 <mark>Modelo de classes de análise?</mark>
 
 ## DIAGRAMA DE SEQUÊNCIA
 
+:date: 21/03
+
 :building_construction:
+
+- Mensagem Self ou This: Autochamadas;
+
+- Mensagem de criação de instância;
+
+- Destruição de objetos;
+
+- Foco de controle ou ativação;
+
+- Modularização de interações: Operadores;
