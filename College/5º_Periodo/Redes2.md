@@ -299,3 +299,35 @@ Os outros 64 são para identificar os equipamentos :)
 ### CABEAMENTO ESTRUTURADO
 
 :computer: virtual
+
+Disposição organizada e padronizada de conectores e meios de transmissão para redes de informática e telefonia, de modo a tornar a infraestrutura de cabos autônoma quanto ao tipo de aplicação e de layout, permitindo a ligação a uma rede de: servidores, estações, impressoras, telefones, *switches*, *hubs* e roteadores.
+
+
+
+Temos 7 subsistemas importantes para a estruturação de uma empresa:
+
+1. **Entrada do edifício:** Conexão com o cabeamento da rua;
+
+2. **Sala de equipamentos:** Onde vão estar meus servidores, etc:
+
+3. **Sala de telecomunicações:** Sala que vai distribuir o cabeamento;
+   
+   1. 1 por andar.
+
+4. **Cabeamento Backbone:** Ou cabeamento vertical, é a conexão das salas de telecomunicações com a sala de equipamentos (fibra);
+
+5. **Cabeamento horizontal:** Cabeamento das salas de telecomunicações até as estações de trabalho (par trançado);
+
+6. **Área de trabalho:** Onde o colaborador vai trabalhar na sua máquina;
+
+7. **Administração:** Identificação de cada cabo/ponto, etc.
+
+![](../../imgs/5_Periodo/Redes2/2022-03-24-21-05-22-image.png)
+
+---
+
+## TEMA 3: EQUIPAMENTOS
+
+### EQUIPAMENTOS DE REDE
+
+:computer: virtual

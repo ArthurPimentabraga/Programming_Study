@@ -561,3 +561,53 @@ simples quanto seja possível, mas nunca se
 esqueça que ela deve atender às necessidades  
 do negócio do cliente e que um dia toda  
 aplicação vai precisar de manutenção.
+
+---
+
+# CLOUD COMPUTING
+
+:calendar: 25/03
+
+:building_construction:
+
+## CONCEITOS
+
+A arquitetura de microsserviços, por exemplo, conta com a nuvem (pelo menos) para a hospedagem dos serviços<mark>... olhar slide</mark>
+
+- Modelo que permite o acesso, através da rede, a uma gama de recursos configuráveis de hardware e software, sendo alocados virtualmente por meio de provedores de serviços;
+
+- Grande conjunto de recursos que podem ser dinamicamente escaláveis, ou seja, reconfigurados de forma fácil e acessível para aceitar cargas variáveis ao longo do tempo.
+
+> Pode ser considerado um estilo arquitetural! Pois dirige a forma como aplicações distribuidas são modeladas e desenvolvidas.
+
+- Existem os aspectos gerenciais e financeiros também, pelo fato de poder alocar os recursos somente quando necessário.
+
+Usos comuns:
+
+- asd
+
+- asd
+
+- asd
+
+- asd
+
+
+
+## TIPOS DE NUVEM
+
+- **Pública:** 
+
+- **Privada:**
+
+- **Híbrida:**
+
+
+
+## NÍVEIS DE ABSTRAÇÃO
+
+- **Infraestrutura como serviço:** 
+
+- asd
+
+- asd
