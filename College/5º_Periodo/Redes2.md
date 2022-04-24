@@ -331,3 +331,260 @@ Temos 7 subsistemas importantes para a estruturação de uma empresa:
 ### EQUIPAMENTOS DE REDE
 
 :computer: virtual
+
+---- EQUIPAMENTOS DE REDE ---- 
+
+Os dispositivos finais em uma rede precisam se ligar a infraestrutura por algum tipo de meio físico 
+(com ou sem fio) e em algum hardware que permita a interconexão. Esta interligação vai promover uma 
+topologia física e lógica.
+
+Hubs e Brieds (pontos)
+
+Topologias:
+Temos as físicas e as lógicas (como os frames viajam entrae os dispositivos)!
+PEGAR OS TIPOS!!!
+
+- Topologia HUB: Topologia física em estrela, mas a lógica é em barramento.
+	- CONCENTRADOR.
+	- A mensagem vem de um, e é transmitida igualmente para todas conectadas ao hub.
+	- Problemas: Máquinas recebendo sem precisar; colisão.
+
+- Bridges: Veio para melhorar a segurança em relação a colis"ão na comunicação com hubs, e o desempenho;
+	- PEGAR IMAGEM!
+	- Ele já atua na camada de enlace tbm, logo sabendo o endereço MAC ele sabe exatamente para
+qual máquina envia, diferente do HUB que envia para todos, e a máquina de destino aceita e as outras 
+descartem.
+
+Conceitos de LAN
+- Domínio de colisão: Um exemplo seria na topologia em barramento que tem 1 domínio desse, ou seja, 
+se duas máquinas transmitirem ao mesmo tempo, pode colidir;
+- Domínio de broadcast: É a segmentação em grupos que receberam as mensagens e, broadcast (pra não mandar
+pra MUITA gente).
+
+
+---- Switchs e Tecnologias LAN ----
+
+Para entender suas vantagens, quando comparado ao HUB, precisamos recordar o modelo de camadas. 
+Enquanto o hub implementa apenas a camada física, transmitindo os bits de uma porta para outra à 
+medida que eles vão chegando, o Switch implementa, pelo menos, até a camada de enlace o que o torna 
+capaz de identificar início e fim dos frames, calcular crc para checagem de erros e observar o endereços
+físicos de origem e destino do pacote. Com o endereço físico (MAC Address) o switch é capaz de 
+direcionar o quadro apenas para porta de destino correta, gerando uma série de vantagens.
+
+
+## SWITCHS
+
+
+Recursos de desempenho e segurança:
+
+## MÉTODOS DE ENCAMINHAMENTOS
+
+- Store-and-forward: Switch examina todo o quadro, calcula o CRC e encaminha para interface de saída;
+- Cut-Through: Encaminha o quadro antes de ser totalmente recebido, examinando o destino do MAC.
+
+## VAZÃO
+
+- Blocking: A soma das velocidades das portas do switch é maior do que o backplane, ou seja, se 
+todas as portas transmitirem na velocidade máxima, o switch não aguenta;
+- Non-blocking: A soma das velocidades das portas do switch é igual ou menor do que o backplane, aguenta
+o cenário anterior.
+
+
+## VLAN (Virtual Local Area network)
+
+É uma rede virtual que segmenta o domínio de Broadcast em uma LAN, Ex.: Rede administrativa e pública.
+
+Benefícios:
+- Segurança;
+- Redução de custos;
+- Desempenho;
+- Eficiência do pessoal de TI (simplifica o gerenciamento).
+
+Métodos para alocar as portas nas VLANs:
+- Estática: Configurada manualmente na interface do switch;
+- Dinâmica: Associação ocorre através de politicas de acesso na implementação do 802.1x;
+- VLAN de voz: Padrão a ser utilizado pela telefonia IP.
+
+## Trunk
+
+Para a VLAN funcionar corretamente entre mais de um switch precisamos configurar as portas que estão interligando os switch de 
+modo trunk, ou seja, é uma forma de identificar a vlan de origem.
+
+## STP (Spanning Tree Protocol)
+
+Uma forma de prever redundância de ligação á rede (switch em loop), permitindo que uma rede de comutação de camda 2 possa se recuperar
+de falhas, sem intervenção e em tempo hábil.
+
+## Etherchannel
+
+Cria uma agregação de canais, de interfaces de switch para criar um tubo gigante e aumentar o desempenho
+do tráfego de quadros.
+
+
+---- Roteadores e Tecnologias WAN ----
+
+Enquanto os switchs e access point são responsáveis em oferecer conectividade para os dispositivos 
+finais dos usuários, os roteadores são responsáveis em interligar uma rede local a outra. A ideia básica 
+é que o roteador tenha no mínimo uma interface de rede local e interfaces para conexão à longa distância.
+
+A operação básica do roteador é:
+
+- Montar tabelas de rotas, ou seja, construir uma tabela que servirá de base para tomada de decisão de 
+encaminhamento;
+- Ao receber um pacote por uma interface, comparar o endereço de destino com as regras da tabela de rotas;
+- Encaminhar o pacote pela interface de saída correta.
+
+O switch opera olhando o MAC Address e o roteador opera olhando o IP de origem e destino.
+
+
+## TECNOLOGIAS WAN
+
+WANs públicas e privadas: 
+
+### TOPOLOGIAS
+
+- Ponto-a-Ponto:
+
+- Hub-and-Spoke: 
+
+- Dual-homed: 
+
+- Totalmente em malha:
+
+- Parcialmente em malha: 
+
+### EVOLUÇÃO
+
+
+### OUTROS
+- Comunicação serial???
+- Comunicação comutada por circuito: 
+- Comunicação comutada por pacotes: 
+	- Frame Relay: Interconectar LANs corporativas.
+	- ATM: 
+
+### CONECTIVIDADE MODERNA
+(Pegar imagem slide -> 5:11)
+- Banda larga dedicada:
+- Comutação por pacotes:
+- Banda larga baseada na internet: 
+
+
+---- Software Defined Network ----
+
+PEGAR IMAGENS
+<<
+Para alcançar este objetivo o roteador atua em dois processos distintos, o primeiro conhecido como 
+plano de controle, onde algoritmos de roteamento permitem troca de informações entre os roteadores, 
+estas informações permitem a cada roteador montar um grafo de caminhos da rede e com o grafo da rede o 
+roteador consegue montar uma tabela de melhores caminhos, também conhecida como tabela de encaminhamento.
+
+O segundo processo operado pelos roteadores é conhecido como plano de dados, neste processo o roteador 
+compara cada pacote que chega nele com informações da tabela de encaminhamento para tomar a decisão de 
+por qual interface aquele pacote deve ser direcionado.
+
+Na figura 2, fica claro esta divisão, na parte acima da linha pontilhada ficam os algoritmos de 
+roteamento no plano de controle, gerando as tabelas de encaminhamento que ficam no plano de dados. 
+Ao chegar um pacote, neste exemplo, com endereço de destino 0111 é feita uma comparação com a tabela de 
+encaminhamento que recomenda mandar este pacote pela saída de número 2.  
+>>
+
+
+A lógica é definir a rede por software.
+
+PEGAR PRIMEIRA IMAGEM E EXPLICAÇÃO DO VÍDEO!!!!!!!!
+
+Todo o trabalho de criar as tabelas de controle de encaminhamento é delegado a um serviço diferente,
+e basta o roteador fazer o trabalho de encaminhar as mensagens.
+
+
+---- Redes sem fio ---
+Enquanto as redes sem fio infraestruturada possuem os pontos de acesso 
+interligados via cabo a rede principal, as redes adhoc possuem comunicação entre 
+os dispositivos sem a intermediação de um access point (ponto de acesso).
+
+- WPAN - Redes pessoais sem fio tem o objetivo de interligar dispositivos a poucos 
+metros, como, por exemplo, um fone de ouvido, um teclado, entre outros.
+- WLAN - Redes locais sem fio, também conhecido como wifi, tem o objetivo de 
+interligar dispositivos finais À rede de computadores com endereçamento IP, 
+permitindo o tráfego com a Internet.
+- WMAN - Redes sem fio metropolitana é uma solução voltada para alcance de até 
+50 km para concorrer com soluções de banda larga doméstica, tecnologia que não 
+evoluiu muito no Brasil.
+- WWAN - Redes sem fio mundial, nesta categoria podemos colocar os satélites e a 
+infraestrutura de telefonia celular.
+
+PEGAR IMAGEM DO ESPECTRO ELETROMAGNÉTICO!!!!
+
+## CONCEITOS
+- APs autônomos: Dispositivos independentes configurados por meio de uma 
+interface de linha de comando. Cada AP autônomo atua independente dos outros e é 
+configurado e gerenciado manualmente por um administrador.
+- APs baseados em controlador: Também conhecidos como APs leves (LAPs). Eles
+usam o protocolo Lightweight Access Point Protocol (LWAPP) para se comunicar
+com um controlador WLAN (WLC). Cada ponto de acesso é configurado e gerenciado 
+automaticamente pelo WLC.
+
+Tipos de antenas externas:
+- Omnidirecional: Fornece uma cobertura  de 360 graus. ideal em casas e áreas de 
+escritório.
+- Direcional: Focaliza o sinal. Ex.: Parabólica;
+- Multiple Input Multiple Output (MIMO): Usa várias antenas para aumentar a 
+largura de banda.
+
+## MODOS DE TOPOLOGIA SEM FIO
+- Modo ad hoc: Conectar clientes ponto a ponto sem AP;
+- Modo de infraestrutura: Conecta clientes através de um AP conectado de forma 
+cabeada com a infra;
+- Tethering: Variaçãoo da topologia ad hoc, quando um smartphone com acesso a 
+dados de celular é ativado para criar um ponto de acesso pessoal para um pc, 
+por exemplo.
+
+- Conjunto básico de serviços (BSS): Usa um único AP para conectar todos os clientes. 
+Clientes em BSSs diferentes não podem se comunicar;
+- Conjunto de serviços estendidos (ESS): União de dois ou mais BSSs. Ou seja, 
+ao transitar localmente pode passar de um BSS para outro sem perceber.
+Clientes em cada BSS podem se comunicar através do ESS.
+
+## MODO DE DESCOBERTA 
+- Modo passivo: O AP anuncia abertamente o seu serviço.
+- Modo ativo: Como forma de segurança, os clientes sem fio devem saber o nome 
+do SSID.
+
+
+---- Projeto de Redes de Computadores ----
+
+Uma vez que você já conhece cabeamento estruturado, endereçamento IP, 
+equipamentos de rede, redes sem fio e tecnologias de longa distância o próximo 
+passo é entender em qual momento cada um desses elementos deve ser usado durante
+o desenvolvimento de um projeto de Redes de Computadores.
+
+ 
+A Cisco propõem uma metodologia com 6 estágios, apresentados na figura 1. 
+Com certeza este não é o único modelo existente, o importante é observar que 
+alguma estratégia de desenvolvimento deve ser usada, para que ao final de sua 
+impletantação você obtenha sucesso.
+
+
+PEGAR IMAGEM DOS 6 ESTÁGIOS!!!
+
+1. Definir as metas de um projeto;
+2. Aspectos e requisitos-chave do projeto;
+3. Estágios
+	1. Analisar requisitos (e recursos);
+	2. Projetar a topologia (modelagem simples, sem marcas e modelos);
+	3. Esquema de End. e Naming;
+	4. Especificar o hardware;
+	5. Utilizar recursos de Routers e SW;
+	6. Implementar, Monitorar e GRC.
+4. Documentação;
+	- Resumo executivo;
+	- Objetivo do projeto;
+	- Escopo do projeto;
+	- Requisitos de projeto;
+	- Estado da rede atual;
+	- Projeto Lógico (topologia...)
+	- Projeto físico;
+	- Resultado de testes;
+	- Plano de implementação;
+	- Orçamento.
