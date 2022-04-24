@@ -192,6 +192,8 @@ Para entender como subdividir uma rede podemos definir alguns passos:
 
 <mark>Ainda há desperdício</mark>
 
+> Lembrar: se tu tiver a mascara, ou seja, a quantidade de bits usados para a rede, já da pra descobrir a quantidade de hosts. Ex.: /24 -> 32-24 = 8 -> 2^8 = 256 - 2 = 254 hosts
+
 <mark>VLSM</mark>
 
 Ao invés de quebrar as subredes com o mesmo numero de hosts, passamos uma mascara diferente para cada, subredes variáveis, cada uma terá o número de hosts adequado.
