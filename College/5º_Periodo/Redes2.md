@@ -590,3 +590,41 @@ PEGAR IMAGEM DOS 6 ESTÁGIOS!!!
 	- Resultado de testes;
 	- Plano de implementação;
 	- Orçamento.
+
+---
+
+# VIRTUALIZAÇÃO
+
+![image](https://user-images.githubusercontent.com/46171446/165870394-d0c4e777-6da8-433b-95c0-0a4218417c61.png)
+
+Existem vários tipos de virtualização, entre eles podemos citar a virtualização de:
+
+- Hardware (imagem da direita)
+- Aplicativos: Centralizar aplicações em uma máquina, e as outras usarem eles através da rede?
+- Desktops: Uma estação serve sõ de terminal, o so ta no servidorç
+- Redes: "Fingir que tem switch" por exemplo;
+- Storage: Ao invés de ter um servidor só para armazenamento, eu pego o armazenamento de cada máquina e compartilho entre todas. Config de uma pool de HDs.
+
+## MOTIVOS PARA USAR A VIRTUALIZALÇÃO
+
+- Melhor aproveitamento do hardware;
+- Economia de energia: é mais barato rodar um grande servidor, do que vários servidores tradicionais;
+- Redução de custos administrativos: Redução do custo com contratos ou pessoas responsáveis pela manutenção das máquinas;
+- Diminuição do espaço fisico;
+- Velocidade na implantação;
+- Eficiência na disponibilidade de sistemas.
+
+## GANHOS COM A VIRTUALIZAÇÃO
+![image](https://user-images.githubusercontent.com/46171446/165871276-b1992ae0-3ef9-4db3-8cee-6979a4015d0c.png)
+
+## LIMITAÇÕES
+![image](https://user-images.githubusercontent.com/46171446/165871318-737acf1f-9243-4bff-acc3-e5dd1964ce91.png)
+
+## PROPRIEDADES DE VMs
+![image](https://user-images.githubusercontent.com/46171446/165871368-cb8b1eea-de50-4c8a-a76a-82fc76d7f919.png)
+
+
+
+
+
+
