@@ -593,7 +593,10 @@ PEGAR IMAGEM DOS 6 ESTÁGIOS!!!
 
 ---
 
-# VIRTUALIZAÇÃO
+# UNIDADE 3
+
+## VIRTUALIZAÇÃO
+:computer: virtual
 
 ![image](https://user-images.githubusercontent.com/46171446/165870394-d0c4e777-6da8-433b-95c0-0a4218417c61.png)
 
@@ -605,7 +608,7 @@ Existem vários tipos de virtualização, entre eles podemos citar a virtualiza�
 - Redes: "Fingir que tem switch" por exemplo;
 - Storage: Ao invés de ter um servidor só para armazenamento, eu pego o armazenamento de cada máquina e compartilho entre todas. Config de uma pool de HDs.
 
-## MOTIVOS PARA USAR A VIRTUALIZALÇÃO
+### MOTIVOS PARA USAR A VIRTUALIZALÇÃO
 
 - Melhor aproveitamento do hardware;
 - Economia de energia: é mais barato rodar um grande servidor, do que vários servidores tradicionais;
@@ -614,14 +617,32 @@ Existem vários tipos de virtualização, entre eles podemos citar a virtualiza�
 - Velocidade na implantação;
 - Eficiência na disponibilidade de sistemas.
 
-## GANHOS COM A VIRTUALIZAÇÃO
+### GANHOS COM A VIRTUALIZAÇÃO
 ![image](https://user-images.githubusercontent.com/46171446/165871276-b1992ae0-3ef9-4db3-8cee-6979a4015d0c.png)
 
-## LIMITAÇÕES
+### LIMITAÇÕES
 ![image](https://user-images.githubusercontent.com/46171446/165871318-737acf1f-9243-4bff-acc3-e5dd1964ce91.png)
 
-## PROPRIEDADES DE VMs
+### PROPRIEDADES DE VMs
 ![image](https://user-images.githubusercontent.com/46171446/165871368-cb8b1eea-de50-4c8a-a76a-82fc76d7f919.png)
+
+---
+
+## COMPUTAÇÃO EM NUVEM
+:computer: virtual
+
+![image](https://user-images.githubusercontent.com/46171446/168441704-3cd3d18e-be2d-4505-b934-07e78b00df4e.png)
+![image](https://user-images.githubusercontent.com/46171446/168441785-76c5fe1b-f9ce-48b5-93aa-18eef596e859.png)
+![image](https://user-images.githubusercontent.com/46171446/168441831-f3a8c02e-1416-4eca-9168-57835fdbe95e.png)
+
+
+
+
+
+
+
+
+
 
 
 
