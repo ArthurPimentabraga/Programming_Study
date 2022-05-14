@@ -635,8 +635,29 @@ Existem vários tipos de virtualização, entre eles podemos citar a virtualiza�
 ![image](https://user-images.githubusercontent.com/46171446/168441785-76c5fe1b-f9ce-48b5-93aa-18eef596e859.png)
 ![image](https://user-images.githubusercontent.com/46171446/168441831-f3a8c02e-1416-4eca-9168-57835fdbe95e.png)
 
+---
 
+# UNIDADE 4 - GERÊNCIA DE REDES DE COMPUTADORES
 
+Área de estudo responsável em deixar os recursos de rede o máximo de tempo disponível, evitando e contornando falhas, além de outras funções.
+
+## CONCEITOS BÁSICOS
+
+“Gerenciamento de rede inclui a implantação, a integração e a coordenação de elementos de **hardware**, **software** e **humanos**, para monitorar, testar, consultar, configurar, analisar, avaliar e controlar os recursos da rede, e de elementos, para satisfazer às exigências operacionais, de desempenho e de qualidade de serviços em tempo real a um custo razoável.”
+
+Monitoração x Controle
+- Monitoração: relacionada com a tarefa de observação, é uma função de **leitura**;
+- Controle: relacionada a alteração de valores de parâmetros e execução de determinadas ações, é uma função de **escrita**.
+
+Administrar x Gerenciar
+- Administrar uma rede é disponibilizar novos serviços na infra;
+- Gerenciar é acompanhar e monitorar o funcionamento de uma infra.
+
+## ARQUITETURA
+
+![image](https://user-images.githubusercontent.com/46171446/168448940-2e16c21c-b0c1-45a6-a5d4-e92c34bc9b9b.png)
+![image](https://user-images.githubusercontent.com/46171446/168448949-70fa74c4-833b-462c-b0ed-6e5bdd0433ec.png)
+![image](https://user-images.githubusercontent.com/46171446/168448984-03f9747b-4084-4089-9c59-0d53b8ff5e0a.png)
 
 
 
