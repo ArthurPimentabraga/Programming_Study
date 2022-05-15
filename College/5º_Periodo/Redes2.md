@@ -659,6 +659,14 @@ Administrar x Gerenciar
 ![image](https://user-images.githubusercontent.com/46171446/168448949-70fa74c4-833b-462c-b0ed-6e5bdd0433ec.png)
 ![image](https://user-images.githubusercontent.com/46171446/168448984-03f9747b-4084-4089-9c59-0d53b8ff5e0a.png)
 
+---
+
+## ÁREAS FUNCIONAIS
+
+A Organização International de Nomalização (ISO), a mesma que definiu o modelo OSI de transmissão de dados com 7 camadas, orienta as empresas a organizar as ações de gerência de redes em 5 áreas funcionais. Uma forma de gravar quais áreas são é lembrando da sigla FCAPS.
+
+![image](https://user-images.githubusercontent.com/46171446/168491000-31a20520-7f4b-44e6-85b4-b9674bcf0d80.png)
+![image](https://user-images.githubusercontent.com/46171446/168491015-cd612821-19ed-47e0-a68e-45c73a498c4e.png)
 
 
 
