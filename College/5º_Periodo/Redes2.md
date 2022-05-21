@@ -668,7 +668,22 @@ A Organização International de Nomalização (ISO), a mesma que definiu o mode
 ![image](https://user-images.githubusercontent.com/46171446/168491000-31a20520-7f4b-44e6-85b4-b9674bcf0d80.png)
 ![image](https://user-images.githubusercontent.com/46171446/168491015-cd612821-19ed-47e0-a68e-45c73a498c4e.png)
 
+---
 
+## EQUIPES E METODOLOGIAS
+
+
+---
+
+## PROTOCOLOS
+
+---
+
+## SNIFFER
+
+---
+
+## FERRAMENTAS
 
 
 
