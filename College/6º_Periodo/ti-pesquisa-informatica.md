@@ -6,6 +6,5 @@ period: 2/2022
 
 # INTRODUÇÃO
 
- :calendar: 03/08
- 
- 
+:calendar: 03/08
+
